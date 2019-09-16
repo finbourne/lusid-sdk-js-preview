@@ -7121,7 +7121,7 @@
                 },
                 "values": [
                   {
-                    "instrumentUid": "LUID_89JG364K",
+                    "instrumentUid": "LUID_ZPID8AHP",
                     "holdingType": "P",
                     "units": 10,
                     "settledUnits": 10,
@@ -7502,7 +7502,7 @@
                       "instrumentIdentifiers": {
                         "Instrument/default/ClientInternal": "CLI-192836"
                       },
-                      "instrumentUid": "LUID_21FFGJ7N",
+                      "instrumentUid": "LUID_O2LST9ST",
                       "subHoldingKeys": {},
                       "properties": {},
                       "taxLots": [
@@ -7519,7 +7519,7 @@
                       "instrumentIdentifiers": {
                         "Instrument/default/ClientInternal": "CLI-462810"
                       },
-                      "instrumentUid": "LUID_6LYVIWDB",
+                      "instrumentUid": "LUID_PD0W5Z23",
                       "subHoldingKeys": {},
                       "properties": {},
                       "taxLots": [
@@ -7645,7 +7645,7 @@
                     "instrumentIdentifiers": {
                       "Instrument/default/RIC": "RIC.L"
                     },
-                    "instrumentUid": "LUID_LZXWC1U9",
+                    "instrumentUid": "LUID_YMMF8BL3",
                     "transactionDate": "2018-08-04T00:00:00+00:00",
                     "settlementDate": "2018-08-06T00:00:00+00:00",
                     "units": 1000,
