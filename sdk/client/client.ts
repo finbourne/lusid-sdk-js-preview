@@ -2,23 +2,19 @@
 import localVarRequest from 'request';
 import querystring from 'querystring'
 
+
 // Import a list of the LUSID APIs
 const lusid = require('../api');
-// Import each of the LUSID APIs
-import {
-  ApplicationMetadataApi,
-  DataTypesApi,
-  DerivedTransactionPortfoliosApi,
-  InstrumentsApi,
-  LoginApi,
-  PortfolioGroupsApi,
-  PortfoliosApi,
-  PropertyDefinitionsApi,
-  ReconciliationsApi,
-  ReferencePortfolioApi,
-  ScopesApi,
-  SystemConfigurationApi,
-  TransactionPortfoliosApi } from '../api/apis'
+
+/*
+The Api class exists to ensure that all the methods available on each of the
+LUSID APIs show up when using code editors and interactive development
+environments which have features such as IntelliSense.
+
+It contains a property for each of the LUSID APIs.
+*/
+import {Api} from "../apis";
+
 
 // Set the default path to the secrets file
 const secretsPath = './secrets.json'
@@ -112,29 +108,6 @@ class Oauth2 {
     this.tokenLastRefreshTime = tokenLastRefreshTime
     this.tokenLastRefreshCheckTime = tokenLastRefreshCheckTime
   }
-}
-
-/*
-The Api class exists to ensure that all the methods available on each of the
-LUSID APIs show up when using code editors and interactive development
-environments which have features such as IntelliSense.
-
-It contains a property for each of the LUSID APIs.
-*/
-class Api {
-  public applicationMetadata: ApplicationMetadataApi
-  public dataTypes: DataTypesApi
-  public derivedTransactionPortfolios: DerivedTransactionPortfoliosApi
-  public instruments: InstrumentsApi
-  public login: LoginApi
-  public portfolioGroups: PortfolioGroupsApi
-  public portfolios: PortfoliosApi
-  public propertyDefinitions: PropertyDefinitionsApi
-  public reconciliations: ReconciliationsApi
-  public referencePortfolio: ReferencePortfolioApi
-  public scopes: ScopesApi
-  public systemConfiguration: SystemConfigurationApi
-  public transactionPortfolios: TransactionPortfoliosApi
 }
 
 /*
