@@ -11,82 +11,37 @@
  */
 
 import { Link } from './link';
-import { ResourceId } from './resourceId';
+import { PortfolioGroup } from './portfolioGroup';
 
-/**
-* The time an entity was modified (amendment and/or historical correction).
-*/
-export class Change {
+export class PagedResourceListOfPortfolioGroup {
+    'nextPage'?: string;
+    'previousPage'?: string;
+    'values': Array<PortfolioGroup>;
     'href'?: string;
-    'entityId': ResourceId;
-    /**
-    * 
-    */
-    'corrected': boolean;
-    /**
-    * 
-    */
-    'correctionEffectiveAt'?: Date;
-    /**
-    * 
-    */
-    'correctionAsAt'?: object;
-    /**
-    * 
-    */
-    'amended': boolean;
-    /**
-    * 
-    */
-    'amendmentEffectiveAt'?: Date;
-    /**
-    * 
-    */
-    'amendmentAsAt'?: object;
     'links'?: Array<Link>;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "href",
-            "baseName": "href",
+            "name": "nextPage",
+            "baseName": "nextPage",
             "type": "string"
         },
         {
-            "name": "entityId",
-            "baseName": "entityId",
-            "type": "ResourceId"
+            "name": "previousPage",
+            "baseName": "previousPage",
+            "type": "string"
         },
         {
-            "name": "corrected",
-            "baseName": "corrected",
-            "type": "boolean"
+            "name": "values",
+            "baseName": "values",
+            "type": "Array<PortfolioGroup>"
         },
         {
-            "name": "correctionEffectiveAt",
-            "baseName": "correctionEffectiveAt",
-            "type": "Date"
-        },
-        {
-            "name": "correctionAsAt",
-            "baseName": "correctionAsAt",
-            "type": "object"
-        },
-        {
-            "name": "amended",
-            "baseName": "amended",
-            "type": "boolean"
-        },
-        {
-            "name": "amendmentEffectiveAt",
-            "baseName": "amendmentEffectiveAt",
-            "type": "Date"
-        },
-        {
-            "name": "amendmentAsAt",
-            "baseName": "amendmentAsAt",
-            "type": "object"
+            "name": "href",
+            "baseName": "href",
+            "type": "string"
         },
         {
             "name": "links",
@@ -95,7 +50,7 @@ export class Change {
         }    ];
 
     static getAttributeTypeMap() {
-        return Change.attributeTypeMap;
+        return PagedResourceListOfPortfolioGroup.attributeTypeMap;
     }
 }
 
