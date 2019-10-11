@@ -10,141 +10,35 @@
  * Do not edit the class manually.
  */
 
-import { CurrencyAndAmount } from './currencyAndAmount';
-import { PerpetualProperty } from './perpetualProperty';
-import { TransactionPrice } from './transactionPrice';
+import { Link } from './link';
+import { TransactionConfigurationData } from './transactionConfigurationData';
 
 /**
-* A list of transactions.
+* A collection of the data required to configure transaction types..
 */
-export class Transaction {
+export class TransactionSetConfigurationData {
     /**
-    * The unique identifier for the transaction.
+    * Collection of transaction type models
     */
-    'transactionId': string;
-    /**
-    * The type of the transaction e.g. \'Buy\', \'Sell\'. The transaction type should have been pre-configured via the System Configuration API endpoint.
-    */
-    'type': string;
-    /**
-    * The set of instrument identifiers that can be used to resolve the transaction to a unique instrument.
-    */
-    'instrumentIdentifiers'?: { [key: string]: string; };
-    /**
-    * The unqiue Lusid Instrument Id (LUID) of the instrument that the transaction is in.
-    */
-    'instrumentUid': string;
-    /**
-    * The date of the transaction.
-    */
-    'transactionDate': Date;
-    /**
-    * The settlement date of the transaction.
-    */
-    'settlementDate': Date;
-    /**
-    * The number of units transacted in the associated instrument.
-    */
-    'units': number;
-    'transactionPrice': TransactionPrice;
-    'totalConsideration': CurrencyAndAmount;
-    /**
-    * The exchange rate between the transaction and settlement currency. For example if the transaction currency is in USD and the settlement currency is in GBP this this the USD/GBP rate.
-    */
-    'exchangeRate'?: number;
-    /**
-    * The transaction currency.
-    */
-    'transactionCurrency'?: string;
-    /**
-    * Set of unique transaction properties and associated values to stored with the transaction. Each property will be from the \'Transaction\' domain.
-    */
-    'properties'?: { [key: string]: PerpetualProperty; };
-    /**
-    * The identifier for the counterparty of the transaction.
-    */
-    'counterpartyId'?: string;
-    /**
-    * The source of the transaction. This is used to look up the appropriate transaction group set in the transaction type configuration.
-    */
-    'source'?: string;
+    'transactionConfigs': Array<TransactionConfigurationData>;
+    'links'?: Array<Link>;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "transactionId",
-            "baseName": "transactionId",
-            "type": "string"
+            "name": "transactionConfigs",
+            "baseName": "transactionConfigs",
+            "type": "Array<TransactionConfigurationData>"
         },
         {
-            "name": "type",
-            "baseName": "type",
-            "type": "string"
-        },
-        {
-            "name": "instrumentIdentifiers",
-            "baseName": "instrumentIdentifiers",
-            "type": "{ [key: string]: string; }"
-        },
-        {
-            "name": "instrumentUid",
-            "baseName": "instrumentUid",
-            "type": "string"
-        },
-        {
-            "name": "transactionDate",
-            "baseName": "transactionDate",
-            "type": "Date"
-        },
-        {
-            "name": "settlementDate",
-            "baseName": "settlementDate",
-            "type": "Date"
-        },
-        {
-            "name": "units",
-            "baseName": "units",
-            "type": "number"
-        },
-        {
-            "name": "transactionPrice",
-            "baseName": "transactionPrice",
-            "type": "TransactionPrice"
-        },
-        {
-            "name": "totalConsideration",
-            "baseName": "totalConsideration",
-            "type": "CurrencyAndAmount"
-        },
-        {
-            "name": "exchangeRate",
-            "baseName": "exchangeRate",
-            "type": "number"
-        },
-        {
-            "name": "transactionCurrency",
-            "baseName": "transactionCurrency",
-            "type": "string"
-        },
-        {
-            "name": "properties",
-            "baseName": "properties",
-            "type": "{ [key: string]: PerpetualProperty; }"
-        },
-        {
-            "name": "counterpartyId",
-            "baseName": "counterpartyId",
-            "type": "string"
-        },
-        {
-            "name": "source",
-            "baseName": "source",
-            "type": "string"
+            "name": "links",
+            "baseName": "links",
+            "type": "Array<Link>"
         }    ];
 
     static getAttributeTypeMap() {
-        return Transaction.attributeTypeMap;
+        return TransactionSetConfigurationData.attributeTypeMap;
     }
 }
 

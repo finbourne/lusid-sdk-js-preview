@@ -131,7 +131,6 @@ export * from './resourceListOfQuote';
 export * from './resourceListOfReconciliationBreak';
 export * from './resourceListOfScopeDefinition';
 export * from './resourceListOfString';
-export * from './resourceListOfTransactionConfigurationData';
 export * from './resourceListOfValueType';
 export * from './resultDataSchema';
 export * from './results';
@@ -155,6 +154,8 @@ export * from './transactionPropertyMapping';
 export * from './transactionPropertyMappingRequest';
 export * from './transactionQueryParameters';
 export * from './transactionRequest';
+export * from './transactionSetConfigurationData';
+export * from './transactionSetConfigurationDataRequest';
 export * from './updateCutLabelDefinitionRequest';
 export * from './updateDataTypeRequest';
 export * from './updateInstrumentIdentifierRequest';
@@ -323,7 +324,6 @@ import { ResourceListOfQuote } from './resourceListOfQuote';
 import { ResourceListOfReconciliationBreak } from './resourceListOfReconciliationBreak';
 import { ResourceListOfScopeDefinition } from './resourceListOfScopeDefinition';
 import { ResourceListOfString } from './resourceListOfString';
-import { ResourceListOfTransactionConfigurationData } from './resourceListOfTransactionConfigurationData';
 import { ResourceListOfValueType } from './resourceListOfValueType';
 import { ResultDataSchema } from './resultDataSchema';
 import { Results } from './results';
@@ -347,6 +347,8 @@ import { TransactionPropertyMapping } from './transactionPropertyMapping';
 import { TransactionPropertyMappingRequest } from './transactionPropertyMappingRequest';
 import { TransactionQueryParameters } from './transactionQueryParameters';
 import { TransactionRequest } from './transactionRequest';
+import { TransactionSetConfigurationData } from './transactionSetConfigurationData';
+import { TransactionSetConfigurationDataRequest } from './transactionSetConfigurationDataRequest';
 import { UpdateCutLabelDefinitionRequest } from './updateCutLabelDefinitionRequest';
 import { UpdateDataTypeRequest } from './updateDataTypeRequest';
 import { UpdateInstrumentIdentifierRequest } from './updateInstrumentIdentifierRequest';
@@ -590,7 +592,6 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfReconciliationBreak": ResourceListOfReconciliationBreak,
     "ResourceListOfScopeDefinition": ResourceListOfScopeDefinition,
     "ResourceListOfString": ResourceListOfString,
-    "ResourceListOfTransactionConfigurationData": ResourceListOfTransactionConfigurationData,
     "ResourceListOfValueType": ResourceListOfValueType,
     "ResultDataSchema": ResultDataSchema,
     "Results": Results,
@@ -614,6 +615,8 @@ let typeMap: {[index: string]: any} = {
     "TransactionPropertyMappingRequest": TransactionPropertyMappingRequest,
     "TransactionQueryParameters": TransactionQueryParameters,
     "TransactionRequest": TransactionRequest,
+    "TransactionSetConfigurationData": TransactionSetConfigurationData,
+    "TransactionSetConfigurationDataRequest": TransactionSetConfigurationDataRequest,
     "UpdateCutLabelDefinitionRequest": UpdateCutLabelDefinitionRequest,
     "UpdateDataTypeRequest": UpdateDataTypeRequest,
     "UpdateInstrumentIdentifierRequest": UpdateInstrumentIdentifierRequest,
