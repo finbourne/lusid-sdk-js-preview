@@ -11,50 +11,20 @@
  */
 
 
-export class CorporateActionTransitionComponent {
-    /**
-    * Unique instrument identifiers
-    */
-    'instrumentIdentifiers': { [key: string]: string; };
-    /**
-    * LUSID\'s internal unique instrument identifier, resolved from the instrument identifiers
-    */
-    'instrumentUid': string;
-    /**
-    * 
-    */
-    'unitsFactor': number;
-    /**
-    * 
-    */
-    'costFactor': number;
+export class HttpMethod {
+    'method'?: string;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "instrumentIdentifiers",
-            "baseName": "instrumentIdentifiers",
-            "type": "{ [key: string]: string; }"
-        },
-        {
-            "name": "instrumentUid",
-            "baseName": "instrumentUid",
+            "name": "method",
+            "baseName": "method",
             "type": "string"
-        },
-        {
-            "name": "unitsFactor",
-            "baseName": "unitsFactor",
-            "type": "number"
-        },
-        {
-            "name": "costFactor",
-            "baseName": "costFactor",
-            "type": "number"
         }    ];
 
     static getAttributeTypeMap() {
-        return CorporateActionTransitionComponent.attributeTypeMap;
+        return HttpMethod.attributeTypeMap;
     }
 }
 
