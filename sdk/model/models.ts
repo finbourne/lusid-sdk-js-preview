@@ -89,6 +89,7 @@ export * from './perpetualProperty';
 export * from './portfolio';
 export * from './portfolioDetails';
 export * from './portfolioGroup';
+export * from './portfolioGroupProperties';
 export * from './portfolioHolding';
 export * from './portfolioProperties';
 export * from './portfolioReconciliationRequest';
@@ -282,6 +283,7 @@ import { PerpetualProperty } from './perpetualProperty';
 import { Portfolio } from './portfolio';
 import { PortfolioDetails } from './portfolioDetails';
 import { PortfolioGroup } from './portfolioGroup';
+import { PortfolioGroupProperties } from './portfolioGroupProperties';
 import { PortfolioHolding } from './portfolioHolding';
 import { PortfolioProperties } from './portfolioProperties';
 import { PortfolioReconciliationRequest } from './portfolioReconciliationRequest';
@@ -550,6 +552,7 @@ let typeMap: {[index: string]: any} = {
     "Portfolio": Portfolio,
     "PortfolioDetails": PortfolioDetails,
     "PortfolioGroup": PortfolioGroup,
+    "PortfolioGroupProperties": PortfolioGroupProperties,
     "PortfolioHolding": PortfolioHolding,
     "PortfolioProperties": PortfolioProperties,
     "PortfolioReconciliationRequest": PortfolioReconciliationRequest,
