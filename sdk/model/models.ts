@@ -49,6 +49,8 @@ export * from './executionRequest';
 export * from './expandedGroup';
 export * from './fieldSchema';
 export * from './fileResponse';
+export * from './fxForwardInstrument';
+export * from './fxOption';
 export * from './getInstrumentsResponse';
 export * from './getQuotesResponse';
 export * from './getRecipeResponse';
@@ -61,6 +63,7 @@ export * from './holdingsAdjustmentHeader';
 export * from './iUnitDefinitionDto';
 export * from './idSelectorDefinition';
 export * from './identifierPartSchema';
+export * from './inlineAggregationRequest';
 export * from './instrument';
 export * from './instrumentAnalytic';
 export * from './instrumentDefinition';
@@ -71,6 +74,7 @@ export * from './instrumentMatch';
 export * from './instrumentSearchProperty';
 export * from './link';
 export * from './listAggregationResponse';
+export * from './lusidInstrument';
 export * from './lusidProblemDetails';
 export * from './lusidValidationProblemDetails';
 export * from './marketContext';
@@ -189,6 +193,7 @@ export * from './versionSummaryDto';
 export * from './versionedResourceListOfOutputTransaction';
 export * from './versionedResourceListOfPortfolioHolding';
 export * from './versionedResourceListOfTransaction';
+export * from './weightedInstrument';
 
 import localVarRequest = require('request');
 
@@ -243,6 +248,8 @@ import { ExecutionRequest } from './executionRequest';
 import { ExpandedGroup } from './expandedGroup';
 import { FieldSchema } from './fieldSchema';
 import { FileResponse } from './fileResponse';
+import { FxForwardInstrument } from './fxForwardInstrument';
+import { FxOption } from './fxOption';
 import { GetInstrumentsResponse } from './getInstrumentsResponse';
 import { GetQuotesResponse } from './getQuotesResponse';
 import { GetRecipeResponse } from './getRecipeResponse';
@@ -255,6 +262,7 @@ import { HoldingsAdjustmentHeader } from './holdingsAdjustmentHeader';
 import { IUnitDefinitionDto } from './iUnitDefinitionDto';
 import { IdSelectorDefinition } from './idSelectorDefinition';
 import { IdentifierPartSchema } from './identifierPartSchema';
+import { InlineAggregationRequest } from './inlineAggregationRequest';
 import { Instrument } from './instrument';
 import { InstrumentAnalytic } from './instrumentAnalytic';
 import { InstrumentDefinition } from './instrumentDefinition';
@@ -265,6 +273,7 @@ import { InstrumentMatch } from './instrumentMatch';
 import { InstrumentSearchProperty } from './instrumentSearchProperty';
 import { Link } from './link';
 import { ListAggregationResponse } from './listAggregationResponse';
+import { LusidInstrument } from './lusidInstrument';
 import { LusidProblemDetails } from './lusidProblemDetails';
 import { LusidValidationProblemDetails } from './lusidValidationProblemDetails';
 import { MarketContext } from './marketContext';
@@ -383,6 +392,7 @@ import { VersionSummaryDto } from './versionSummaryDto';
 import { VersionedResourceListOfOutputTransaction } from './versionedResourceListOfOutputTransaction';
 import { VersionedResourceListOfPortfolioHolding } from './versionedResourceListOfPortfolioHolding';
 import { VersionedResourceListOfTransaction } from './versionedResourceListOfTransaction';
+import { WeightedInstrument } from './weightedInstrument';
 
 /* tslint:disable:no-unused-variable */
 let primitives = [
@@ -411,12 +421,15 @@ let enumsMap: {[index: string]: any} = {
         "DataType.ValueTypeEnum": DataType.ValueTypeEnum,
         "DataType.UnitSchemaEnum": DataType.UnitSchemaEnum,
         "FieldSchema.TypeEnum": FieldSchema.TypeEnum,
+        "FxForwardInstrument.InstrumentTypeEnum": FxForwardInstrument.InstrumentTypeEnum,
+        "FxOption.InstrumentTypeEnum": FxOption.InstrumentTypeEnum,
         "GetReferencePortfolioConstituentsResponse.WeightTypeEnum": GetReferencePortfolioConstituentsResponse.WeightTypeEnum,
         "GetReferencePortfolioConstituentsResponse.PeriodTypeEnum": GetReferencePortfolioConstituentsResponse.PeriodTypeEnum,
         "HoldingsAdjustment.UnmatchedHoldingMethodEnum": HoldingsAdjustment.UnmatchedHoldingMethodEnum,
         "HoldingsAdjustmentHeader.UnmatchedHoldingMethodEnum": HoldingsAdjustmentHeader.UnmatchedHoldingMethodEnum,
         "IUnitDefinitionDto.SchemaEnum": IUnitDefinitionDto.SchemaEnum,
         "Instrument.StateEnum": Instrument.StateEnum,
+        "LusidInstrument.InstrumentTypeEnum": LusidInstrument.InstrumentTypeEnum,
         "MarketContextSuppliers.CommodityEnum": MarketContextSuppliers.CommodityEnum,
         "MarketContextSuppliers.CreditEnum": MarketContextSuppliers.CreditEnum,
         "MarketContextSuppliers.EquityEnum": MarketContextSuppliers.EquityEnum,
@@ -510,6 +523,8 @@ let typeMap: {[index: string]: any} = {
     "ExpandedGroup": ExpandedGroup,
     "FieldSchema": FieldSchema,
     "FileResponse": FileResponse,
+    "FxForwardInstrument": FxForwardInstrument,
+    "FxOption": FxOption,
     "GetInstrumentsResponse": GetInstrumentsResponse,
     "GetQuotesResponse": GetQuotesResponse,
     "GetRecipeResponse": GetRecipeResponse,
@@ -522,6 +537,7 @@ let typeMap: {[index: string]: any} = {
     "IUnitDefinitionDto": IUnitDefinitionDto,
     "IdSelectorDefinition": IdSelectorDefinition,
     "IdentifierPartSchema": IdentifierPartSchema,
+    "InlineAggregationRequest": InlineAggregationRequest,
     "Instrument": Instrument,
     "InstrumentAnalytic": InstrumentAnalytic,
     "InstrumentDefinition": InstrumentDefinition,
@@ -532,6 +548,7 @@ let typeMap: {[index: string]: any} = {
     "InstrumentSearchProperty": InstrumentSearchProperty,
     "Link": Link,
     "ListAggregationResponse": ListAggregationResponse,
+    "LusidInstrument": LusidInstrument,
     "LusidProblemDetails": LusidProblemDetails,
     "LusidValidationProblemDetails": LusidValidationProblemDetails,
     "MarketContext": MarketContext,
@@ -650,6 +667,7 @@ let typeMap: {[index: string]: any} = {
     "VersionedResourceListOfOutputTransaction": VersionedResourceListOfOutputTransaction,
     "VersionedResourceListOfPortfolioHolding": VersionedResourceListOfPortfolioHolding,
     "VersionedResourceListOfTransaction": VersionedResourceListOfTransaction,
+    "WeightedInstrument": WeightedInstrument,
 }
 
 export class ObjectSerializer {
