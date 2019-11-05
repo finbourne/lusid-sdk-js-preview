@@ -141,8 +141,6 @@ export * from './resultDataSchema';
 export * from './results';
 export * from './schema';
 export * from './scopeDefinition';
-export * from './sideConfigurationData';
-export * from './sideConfigurationDataRequest';
 export * from './stream';
 export * from './structuredMarketData';
 export * from './structuredMarketDataId';
@@ -342,8 +340,6 @@ import { ResultDataSchema } from './resultDataSchema';
 import { Results } from './results';
 import { Schema } from './schema';
 import { ScopeDefinition } from './scopeDefinition';
-import { SideConfigurationData } from './sideConfigurationData';
-import { SideConfigurationDataRequest } from './sideConfigurationDataRequest';
 import { Stream } from './stream';
 import { StructuredMarketData } from './structuredMarketData';
 import { StructuredMarketDataId } from './structuredMarketDataId';
@@ -461,7 +457,9 @@ let enumsMap: {[index: string]: any} = {
         "ResourceListOfValueType.ValuesEnum": ResourceListOfValueType.ValuesEnum,
         "Results.FormatEnum": Results.FormatEnum,
         "TransactionConfigurationMovementData.MovementTypesEnum": TransactionConfigurationMovementData.MovementTypesEnum,
+        "TransactionConfigurationMovementData.SideEnum": TransactionConfigurationMovementData.SideEnum,
         "TransactionConfigurationMovementDataRequest.MovementTypesEnum": TransactionConfigurationMovementDataRequest.MovementTypesEnum,
+        "TransactionConfigurationMovementDataRequest.SideEnum": TransactionConfigurationMovementDataRequest.SideEnum,
         "TransactionConfigurationTypeAlias.TransactionRolesEnum": TransactionConfigurationTypeAlias.TransactionRolesEnum,
         "TransactionPrice.TypeEnum": TransactionPrice.TypeEnum,
         "TransactionQueryParameters.QueryModeEnum": TransactionQueryParameters.QueryModeEnum,
@@ -617,8 +615,6 @@ let typeMap: {[index: string]: any} = {
     "Results": Results,
     "Schema": Schema,
     "ScopeDefinition": ScopeDefinition,
-    "SideConfigurationData": SideConfigurationData,
-    "SideConfigurationDataRequest": SideConfigurationDataRequest,
     "Stream": Stream,
     "StructuredMarketData": StructuredMarketData,
     "StructuredMarketDataId": StructuredMarketDataId,
