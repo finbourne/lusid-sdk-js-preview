@@ -1,7 +1,5 @@
 export * from './aggregationApi';
 import { AggregationApi } from './aggregationApi';
-export * from './analyticsStoresApi';
-import { AnalyticsStoresApi } from './analyticsStoresApi';
 export * from './applicationMetadataApi';
 import { ApplicationMetadataApi } from './applicationMetadataApi';
 export * from './configurationRecipeApi';
@@ -48,4 +46,4 @@ export * from './systemConfigurationApi';
 import { SystemConfigurationApi } from './systemConfigurationApi';
 export * from './transactionPortfoliosApi';
 import { TransactionPortfoliosApi } from './transactionPortfoliosApi';
-export const APIS = [AggregationApi, AnalyticsStoresApi, ApplicationMetadataApi, ConfigurationRecipeApi, CorporateActionSourcesApi, CutLabelDefinitionsApi, DataTypesApi, DerivedTransactionPortfoliosApi, EntitiesApi, InstrumentsApi, LoginApi, PortfolioGroupsApi, PortfoliosApi, PropertyDefinitionsApi, QuotesApi, ReconciliationsApi, ReferencePortfolioApi, ResultsApi, SchemasApi, ScopesApi, SearchApi, StructuredMarketDataApi, StructuredResultDataApi, SystemConfigurationApi, TransactionPortfoliosApi];
+export const APIS = [AggregationApi, ApplicationMetadataApi, ConfigurationRecipeApi, CorporateActionSourcesApi, CutLabelDefinitionsApi, DataTypesApi, DerivedTransactionPortfoliosApi, EntitiesApi, InstrumentsApi, LoginApi, PortfolioGroupsApi, PortfoliosApi, PropertyDefinitionsApi, QuotesApi, ReconciliationsApi, ReferencePortfolioApi, ResultsApi, SchemasApi, ScopesApi, SearchApi, StructuredMarketDataApi, StructuredResultDataApi, SystemConfigurationApi, TransactionPortfoliosApi];
