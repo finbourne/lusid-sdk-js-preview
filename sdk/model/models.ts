@@ -8,6 +8,8 @@ export * from './aggregationContext';
 export * from './aggregationOptions';
 export * from './aggregationRequest';
 export * from './aggregationResponseNodeOfDictionaryOfStringToObject';
+export * from './analyticStore';
+export * from './analyticStoreKey';
 export * from './annulQuotesResponse';
 export * from './annulSingleStructuredDataResponse';
 export * from './annulStructuredDataResponse';
@@ -22,6 +24,7 @@ export * from './corporateActionTransition';
 export * from './corporateActionTransitionComponent';
 export * from './corporateActionTransitionComponentRequest';
 export * from './corporateActionTransitionRequest';
+export * from './createAnalyticStoreRequest';
 export * from './createCorporateActionSourceRequest';
 export * from './createCutLabelDefinitionRequest';
 export * from './createDataTypeRequest';
@@ -62,6 +65,7 @@ export * from './idSelectorDefinition';
 export * from './identifierPartSchema';
 export * from './inlineAggregationRequest';
 export * from './instrument';
+export * from './instrumentAnalytic';
 export * from './instrumentDefinition';
 export * from './instrumentEconomicDefinition';
 export * from './instrumentIdTypeDescriptor';
@@ -112,6 +116,7 @@ export * from './referencePortfolioConstituent';
 export * from './referencePortfolioConstituentRequest';
 export * from './resourceId';
 export * from './resourceListOfAccessControlledResource';
+export * from './resourceListOfAnalyticStoreKey';
 export * from './resourceListOfChange';
 export * from './resourceListOfConstituentsAdjustmentHeader';
 export * from './resourceListOfCorporateAction';
@@ -202,6 +207,8 @@ import { AggregationContext } from './aggregationContext';
 import { AggregationOptions } from './aggregationOptions';
 import { AggregationRequest } from './aggregationRequest';
 import { AggregationResponseNodeOfDictionaryOfStringToObject } from './aggregationResponseNodeOfDictionaryOfStringToObject';
+import { AnalyticStore } from './analyticStore';
+import { AnalyticStoreKey } from './analyticStoreKey';
 import { AnnulQuotesResponse } from './annulQuotesResponse';
 import { AnnulSingleStructuredDataResponse } from './annulSingleStructuredDataResponse';
 import { AnnulStructuredDataResponse } from './annulStructuredDataResponse';
@@ -216,6 +223,7 @@ import { CorporateActionTransition } from './corporateActionTransition';
 import { CorporateActionTransitionComponent } from './corporateActionTransitionComponent';
 import { CorporateActionTransitionComponentRequest } from './corporateActionTransitionComponentRequest';
 import { CorporateActionTransitionRequest } from './corporateActionTransitionRequest';
+import { CreateAnalyticStoreRequest } from './createAnalyticStoreRequest';
 import { CreateCorporateActionSourceRequest } from './createCorporateActionSourceRequest';
 import { CreateCutLabelDefinitionRequest } from './createCutLabelDefinitionRequest';
 import { CreateDataTypeRequest } from './createDataTypeRequest';
@@ -256,6 +264,7 @@ import { IdSelectorDefinition } from './idSelectorDefinition';
 import { IdentifierPartSchema } from './identifierPartSchema';
 import { InlineAggregationRequest } from './inlineAggregationRequest';
 import { Instrument } from './instrument';
+import { InstrumentAnalytic } from './instrumentAnalytic';
 import { InstrumentDefinition } from './instrumentDefinition';
 import { InstrumentEconomicDefinition } from './instrumentEconomicDefinition';
 import { InstrumentIdTypeDescriptor } from './instrumentIdTypeDescriptor';
@@ -306,6 +315,7 @@ import { ReferencePortfolioConstituent } from './referencePortfolioConstituent';
 import { ReferencePortfolioConstituentRequest } from './referencePortfolioConstituentRequest';
 import { ResourceId } from './resourceId';
 import { ResourceListOfAccessControlledResource } from './resourceListOfAccessControlledResource';
+import { ResourceListOfAnalyticStoreKey } from './resourceListOfAnalyticStoreKey';
 import { ResourceListOfChange } from './resourceListOfChange';
 import { ResourceListOfConstituentsAdjustmentHeader } from './resourceListOfConstituentsAdjustmentHeader';
 import { ResourceListOfCorporateAction } from './resourceListOfCorporateAction';
@@ -472,6 +482,8 @@ let typeMap: {[index: string]: any} = {
     "AggregationOptions": AggregationOptions,
     "AggregationRequest": AggregationRequest,
     "AggregationResponseNodeOfDictionaryOfStringToObject": AggregationResponseNodeOfDictionaryOfStringToObject,
+    "AnalyticStore": AnalyticStore,
+    "AnalyticStoreKey": AnalyticStoreKey,
     "AnnulQuotesResponse": AnnulQuotesResponse,
     "AnnulSingleStructuredDataResponse": AnnulSingleStructuredDataResponse,
     "AnnulStructuredDataResponse": AnnulStructuredDataResponse,
@@ -486,6 +498,7 @@ let typeMap: {[index: string]: any} = {
     "CorporateActionTransitionComponent": CorporateActionTransitionComponent,
     "CorporateActionTransitionComponentRequest": CorporateActionTransitionComponentRequest,
     "CorporateActionTransitionRequest": CorporateActionTransitionRequest,
+    "CreateAnalyticStoreRequest": CreateAnalyticStoreRequest,
     "CreateCorporateActionSourceRequest": CreateCorporateActionSourceRequest,
     "CreateCutLabelDefinitionRequest": CreateCutLabelDefinitionRequest,
     "CreateDataTypeRequest": CreateDataTypeRequest,
@@ -526,6 +539,7 @@ let typeMap: {[index: string]: any} = {
     "IdentifierPartSchema": IdentifierPartSchema,
     "InlineAggregationRequest": InlineAggregationRequest,
     "Instrument": Instrument,
+    "InstrumentAnalytic": InstrumentAnalytic,
     "InstrumentDefinition": InstrumentDefinition,
     "InstrumentEconomicDefinition": InstrumentEconomicDefinition,
     "InstrumentIdTypeDescriptor": InstrumentIdTypeDescriptor,
@@ -576,6 +590,7 @@ let typeMap: {[index: string]: any} = {
     "ReferencePortfolioConstituentRequest": ReferencePortfolioConstituentRequest,
     "ResourceId": ResourceId,
     "ResourceListOfAccessControlledResource": ResourceListOfAccessControlledResource,
+    "ResourceListOfAnalyticStoreKey": ResourceListOfAnalyticStoreKey,
     "ResourceListOfChange": ResourceListOfChange,
     "ResourceListOfConstituentsAdjustmentHeader": ResourceListOfConstituentsAdjustmentHeader,
     "ResourceListOfCorporateAction": ResourceListOfCorporateAction,
