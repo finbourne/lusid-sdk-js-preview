@@ -1,5 +1,4 @@
 import {AggregationApi} from './api/aggregationApi';
-import {AnalyticsStoresApi} from './api/analyticsStoresApi';
 import {ApplicationMetadataApi} from './api/applicationMetadataApi';
 import {ConfigurationRecipeApi} from './api/configurationRecipeApi';
 import {CorporateActionSourcesApi} from './api/corporateActionSourcesApi';
@@ -26,7 +25,6 @@ import {TransactionPortfoliosApi} from './api/transactionPortfoliosApi';
 
 export class Api {
     public aggregation:  AggregationApi
-    public analyticsStores:  AnalyticsStoresApi
     public applicationMetadata:  ApplicationMetadataApi
     public configurationRecipe:  ConfigurationRecipeApi
     public corporateActionSources:  CorporateActionSourcesApi
