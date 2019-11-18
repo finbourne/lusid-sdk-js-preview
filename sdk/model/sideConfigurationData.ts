@@ -10,39 +10,79 @@
  * Do not edit the class manually.
  */
 
+import { Link } from './link';
 
-export class CreateUnitDefinition {
-    'code': string;
-    'displayName': string;
-    'description': string;
-    'details'?: { [key: string]: string; };
+/**
+* Configuration needed to define a side. Sides are referenced by Label. Beyond that, other properties  can be used to reference either transaction fields, or transaction properties.
+*/
+export class SideConfigurationData {
+    /**
+    * The side\'s label.
+    */
+    'side': string;
+    /**
+    * The security, or instrument.
+    */
+    'security': string;
+    /**
+    * The currency.
+    */
+    'currency': string;
+    /**
+    * The rate.
+    */
+    'rate': string;
+    /**
+    * The units.
+    */
+    'units': string;
+    /**
+    * The amount.
+    */
+    'amount': string;
+    'links'?: Array<Link>;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "code",
-            "baseName": "code",
+            "name": "side",
+            "baseName": "side",
             "type": "string"
         },
         {
-            "name": "displayName",
-            "baseName": "displayName",
+            "name": "security",
+            "baseName": "security",
             "type": "string"
         },
         {
-            "name": "description",
-            "baseName": "description",
+            "name": "currency",
+            "baseName": "currency",
             "type": "string"
         },
         {
-            "name": "details",
-            "baseName": "details",
-            "type": "{ [key: string]: string; }"
+            "name": "rate",
+            "baseName": "rate",
+            "type": "string"
+        },
+        {
+            "name": "units",
+            "baseName": "units",
+            "type": "string"
+        },
+        {
+            "name": "amount",
+            "baseName": "amount",
+            "type": "string"
+        },
+        {
+            "name": "links",
+            "baseName": "links",
+            "type": "Array<Link>"
         }    ];
 
     static getAttributeTypeMap() {
-        return CreateUnitDefinition.attributeTypeMap;
+        return SideConfigurationData.attributeTypeMap;
     }
 }
 

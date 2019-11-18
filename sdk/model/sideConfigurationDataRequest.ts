@@ -11,38 +11,71 @@
  */
 
 
-export class CreateUnitDefinition {
-    'code': string;
-    'displayName': string;
-    'description': string;
-    'details'?: { [key: string]: string; };
+/**
+* Configuration needed to define a side. Sides are referenced by Label. Beyond that, other properties  can be used to reference either transaction fields, or transaction properties.
+*/
+export class SideConfigurationDataRequest {
+    /**
+    * The side\'s label.
+    */
+    'side': string;
+    /**
+    * The security, or instrument.
+    */
+    'security': string;
+    /**
+    * The currency.
+    */
+    'currency': string;
+    /**
+    * The rate.
+    */
+    'rate': string;
+    /**
+    * The units.
+    */
+    'units': string;
+    /**
+    * The amount.
+    */
+    'amount': string;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "code",
-            "baseName": "code",
+            "name": "side",
+            "baseName": "side",
             "type": "string"
         },
         {
-            "name": "displayName",
-            "baseName": "displayName",
+            "name": "security",
+            "baseName": "security",
             "type": "string"
         },
         {
-            "name": "description",
-            "baseName": "description",
+            "name": "currency",
+            "baseName": "currency",
             "type": "string"
         },
         {
-            "name": "details",
-            "baseName": "details",
-            "type": "{ [key: string]: string; }"
+            "name": "rate",
+            "baseName": "rate",
+            "type": "string"
+        },
+        {
+            "name": "units",
+            "baseName": "units",
+            "type": "string"
+        },
+        {
+            "name": "amount",
+            "baseName": "amount",
+            "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
-        return CreateUnitDefinition.attributeTypeMap;
+        return SideConfigurationDataRequest.attributeTypeMap;
     }
 }
 
