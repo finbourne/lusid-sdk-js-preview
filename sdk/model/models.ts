@@ -1,5 +1,6 @@
 export * from './accessControlledAction';
 export * from './accessControlledResource';
+export * from './accessMetadataValue';
 export * from './actionId';
 export * from './adjustHolding';
 export * from './adjustHoldingRequest';
@@ -104,6 +105,8 @@ export * from './propertyFilter';
 export * from './propertySchema';
 export * from './propertyValue';
 export * from './quote';
+export * from './quoteAccessMetadataRule';
+export * from './quoteAccessMetadataRuleId';
 export * from './quoteId';
 export * from './quoteSeriesId';
 export * from './realisedGainLoss';
@@ -128,6 +131,7 @@ export * from './resourceListOfPortfolioSearchResult';
 export * from './resourceListOfProcessedCommand';
 export * from './resourceListOfPropertyDefinition';
 export * from './resourceListOfQuote';
+export * from './resourceListOfQuoteAccessMetadataRule';
 export * from './resourceListOfReconciliationBreak';
 export * from './resourceListOfScopeDefinition';
 export * from './resourceListOfString';
@@ -171,6 +175,7 @@ export * from './upsertInstrumentPropertyRequest';
 export * from './upsertInstrumentsResponse';
 export * from './upsertPortfolioExecutionsResponse';
 export * from './upsertPortfolioTransactionsResponse';
+export * from './upsertQuoteAccessMetadataRuleRequest';
 export * from './upsertQuoteRequest';
 export * from './upsertQuotesResponse';
 export * from './upsertRecipeRequest';
@@ -196,6 +201,7 @@ import localVarRequest = require('request');
 
 import { AccessControlledAction } from './accessControlledAction';
 import { AccessControlledResource } from './accessControlledResource';
+import { AccessMetadataValue } from './accessMetadataValue';
 import { ActionId } from './actionId';
 import { AdjustHolding } from './adjustHolding';
 import { AdjustHoldingRequest } from './adjustHoldingRequest';
@@ -300,6 +306,8 @@ import { PropertyFilter } from './propertyFilter';
 import { PropertySchema } from './propertySchema';
 import { PropertyValue } from './propertyValue';
 import { Quote } from './quote';
+import { QuoteAccessMetadataRule } from './quoteAccessMetadataRule';
+import { QuoteAccessMetadataRuleId } from './quoteAccessMetadataRuleId';
 import { QuoteId } from './quoteId';
 import { QuoteSeriesId } from './quoteSeriesId';
 import { RealisedGainLoss } from './realisedGainLoss';
@@ -324,6 +332,7 @@ import { ResourceListOfPortfolioSearchResult } from './resourceListOfPortfolioSe
 import { ResourceListOfProcessedCommand } from './resourceListOfProcessedCommand';
 import { ResourceListOfPropertyDefinition } from './resourceListOfPropertyDefinition';
 import { ResourceListOfQuote } from './resourceListOfQuote';
+import { ResourceListOfQuoteAccessMetadataRule } from './resourceListOfQuoteAccessMetadataRule';
 import { ResourceListOfReconciliationBreak } from './resourceListOfReconciliationBreak';
 import { ResourceListOfScopeDefinition } from './resourceListOfScopeDefinition';
 import { ResourceListOfString } from './resourceListOfString';
@@ -367,6 +376,7 @@ import { UpsertInstrumentPropertyRequest } from './upsertInstrumentPropertyReque
 import { UpsertInstrumentsResponse } from './upsertInstrumentsResponse';
 import { UpsertPortfolioExecutionsResponse } from './upsertPortfolioExecutionsResponse';
 import { UpsertPortfolioTransactionsResponse } from './upsertPortfolioTransactionsResponse';
+import { UpsertQuoteAccessMetadataRuleRequest } from './upsertQuoteAccessMetadataRuleRequest';
 import { UpsertQuoteRequest } from './upsertQuoteRequest';
 import { UpsertQuotesResponse } from './upsertQuotesResponse';
 import { UpsertRecipeRequest } from './upsertRecipeRequest';
@@ -466,6 +476,7 @@ let enumsMap: {[index: string]: any} = {
 let typeMap: {[index: string]: any} = {
     "AccessControlledAction": AccessControlledAction,
     "AccessControlledResource": AccessControlledResource,
+    "AccessMetadataValue": AccessMetadataValue,
     "ActionId": ActionId,
     "AdjustHolding": AdjustHolding,
     "AdjustHoldingRequest": AdjustHoldingRequest,
@@ -570,6 +581,8 @@ let typeMap: {[index: string]: any} = {
     "PropertySchema": PropertySchema,
     "PropertyValue": PropertyValue,
     "Quote": Quote,
+    "QuoteAccessMetadataRule": QuoteAccessMetadataRule,
+    "QuoteAccessMetadataRuleId": QuoteAccessMetadataRuleId,
     "QuoteId": QuoteId,
     "QuoteSeriesId": QuoteSeriesId,
     "RealisedGainLoss": RealisedGainLoss,
@@ -594,6 +607,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfProcessedCommand": ResourceListOfProcessedCommand,
     "ResourceListOfPropertyDefinition": ResourceListOfPropertyDefinition,
     "ResourceListOfQuote": ResourceListOfQuote,
+    "ResourceListOfQuoteAccessMetadataRule": ResourceListOfQuoteAccessMetadataRule,
     "ResourceListOfReconciliationBreak": ResourceListOfReconciliationBreak,
     "ResourceListOfScopeDefinition": ResourceListOfScopeDefinition,
     "ResourceListOfString": ResourceListOfString,
@@ -637,6 +651,7 @@ let typeMap: {[index: string]: any} = {
     "UpsertInstrumentsResponse": UpsertInstrumentsResponse,
     "UpsertPortfolioExecutionsResponse": UpsertPortfolioExecutionsResponse,
     "UpsertPortfolioTransactionsResponse": UpsertPortfolioTransactionsResponse,
+    "UpsertQuoteAccessMetadataRuleRequest": UpsertQuoteAccessMetadataRuleRequest,
     "UpsertQuoteRequest": UpsertQuoteRequest,
     "UpsertQuotesResponse": UpsertQuotesResponse,
     "UpsertRecipeRequest": UpsertRecipeRequest,
