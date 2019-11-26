@@ -81,7 +81,11 @@ export * from './marketOptions';
 export * from './metricValue';
 export * from './modelSelection';
 export * from './nestedAggregationResponse';
+export * from './order';
 export * from './orderBySpec';
+export * from './orderRequest';
+export * from './orderSet';
+export * from './orderSetRequest';
 export * from './outputTransaction';
 export * from './pagedResourceListOfPortfolioGroup';
 export * from './pagedResourceListOfPortfolioSearchResult';
@@ -125,6 +129,7 @@ export * from './resourceListOfHoldingsAdjustmentHeader';
 export * from './resourceListOfIUnitDefinitionDto';
 export * from './resourceListOfInstrument';
 export * from './resourceListOfInstrumentIdTypeDescriptor';
+export * from './resourceListOfOrder';
 export * from './resourceListOfPortfolio';
 export * from './resourceListOfPortfolioGroup';
 export * from './resourceListOfPortfolioSearchResult';
@@ -173,6 +178,8 @@ export * from './upsertCorporateActionsResponse';
 export * from './upsertInstrumentPropertiesResponse';
 export * from './upsertInstrumentPropertyRequest';
 export * from './upsertInstrumentsResponse';
+export * from './upsertOrderPropertiesRequest';
+export * from './upsertOrderPropertiesResponse';
 export * from './upsertPortfolioExecutionsResponse';
 export * from './upsertPortfolioTransactionsResponse';
 export * from './upsertQuoteAccessMetadataRuleRequest';
@@ -282,7 +289,11 @@ import { MarketOptions } from './marketOptions';
 import { MetricValue } from './metricValue';
 import { ModelSelection } from './modelSelection';
 import { NestedAggregationResponse } from './nestedAggregationResponse';
+import { Order } from './order';
 import { OrderBySpec } from './orderBySpec';
+import { OrderRequest } from './orderRequest';
+import { OrderSet } from './orderSet';
+import { OrderSetRequest } from './orderSetRequest';
 import { OutputTransaction } from './outputTransaction';
 import { PagedResourceListOfPortfolioGroup } from './pagedResourceListOfPortfolioGroup';
 import { PagedResourceListOfPortfolioSearchResult } from './pagedResourceListOfPortfolioSearchResult';
@@ -326,6 +337,7 @@ import { ResourceListOfHoldingsAdjustmentHeader } from './resourceListOfHoldings
 import { ResourceListOfIUnitDefinitionDto } from './resourceListOfIUnitDefinitionDto';
 import { ResourceListOfInstrument } from './resourceListOfInstrument';
 import { ResourceListOfInstrumentIdTypeDescriptor } from './resourceListOfInstrumentIdTypeDescriptor';
+import { ResourceListOfOrder } from './resourceListOfOrder';
 import { ResourceListOfPortfolio } from './resourceListOfPortfolio';
 import { ResourceListOfPortfolioGroup } from './resourceListOfPortfolioGroup';
 import { ResourceListOfPortfolioSearchResult } from './resourceListOfPortfolioSearchResult';
@@ -374,6 +386,8 @@ import { UpsertCorporateActionsResponse } from './upsertCorporateActionsResponse
 import { UpsertInstrumentPropertiesResponse } from './upsertInstrumentPropertiesResponse';
 import { UpsertInstrumentPropertyRequest } from './upsertInstrumentPropertyRequest';
 import { UpsertInstrumentsResponse } from './upsertInstrumentsResponse';
+import { UpsertOrderPropertiesRequest } from './upsertOrderPropertiesRequest';
+import { UpsertOrderPropertiesResponse } from './upsertOrderPropertiesResponse';
 import { UpsertPortfolioExecutionsResponse } from './upsertPortfolioExecutionsResponse';
 import { UpsertPortfolioTransactionsResponse } from './upsertPortfolioTransactionsResponse';
 import { UpsertQuoteAccessMetadataRuleRequest } from './upsertQuoteAccessMetadataRuleRequest';
@@ -557,7 +571,11 @@ let typeMap: {[index: string]: any} = {
     "MetricValue": MetricValue,
     "ModelSelection": ModelSelection,
     "NestedAggregationResponse": NestedAggregationResponse,
+    "Order": Order,
     "OrderBySpec": OrderBySpec,
+    "OrderRequest": OrderRequest,
+    "OrderSet": OrderSet,
+    "OrderSetRequest": OrderSetRequest,
     "OutputTransaction": OutputTransaction,
     "PagedResourceListOfPortfolioGroup": PagedResourceListOfPortfolioGroup,
     "PagedResourceListOfPortfolioSearchResult": PagedResourceListOfPortfolioSearchResult,
@@ -601,6 +619,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfIUnitDefinitionDto": ResourceListOfIUnitDefinitionDto,
     "ResourceListOfInstrument": ResourceListOfInstrument,
     "ResourceListOfInstrumentIdTypeDescriptor": ResourceListOfInstrumentIdTypeDescriptor,
+    "ResourceListOfOrder": ResourceListOfOrder,
     "ResourceListOfPortfolio": ResourceListOfPortfolio,
     "ResourceListOfPortfolioGroup": ResourceListOfPortfolioGroup,
     "ResourceListOfPortfolioSearchResult": ResourceListOfPortfolioSearchResult,
@@ -649,6 +668,8 @@ let typeMap: {[index: string]: any} = {
     "UpsertInstrumentPropertiesResponse": UpsertInstrumentPropertiesResponse,
     "UpsertInstrumentPropertyRequest": UpsertInstrumentPropertyRequest,
     "UpsertInstrumentsResponse": UpsertInstrumentsResponse,
+    "UpsertOrderPropertiesRequest": UpsertOrderPropertiesRequest,
+    "UpsertOrderPropertiesResponse": UpsertOrderPropertiesResponse,
     "UpsertPortfolioExecutionsResponse": UpsertPortfolioExecutionsResponse,
     "UpsertPortfolioTransactionsResponse": UpsertPortfolioTransactionsResponse,
     "UpsertQuoteAccessMetadataRuleRequest": UpsertQuoteAccessMetadataRuleRequest,
