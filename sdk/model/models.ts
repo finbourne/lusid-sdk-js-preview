@@ -87,6 +87,7 @@ export * from './orderRequest';
 export * from './orderSet';
 export * from './orderSetRequest';
 export * from './outputTransaction';
+export * from './pagedResourceListOfInstrument';
 export * from './pagedResourceListOfPortfolioGroup';
 export * from './pagedResourceListOfPortfolioSearchResult';
 export * from './pagedResourceListOfPropertyDefinition';
@@ -127,7 +128,6 @@ export * from './resourceListOfCutLabelDefinition';
 export * from './resourceListOfDataType';
 export * from './resourceListOfHoldingsAdjustmentHeader';
 export * from './resourceListOfIUnitDefinitionDto';
-export * from './resourceListOfInstrument';
 export * from './resourceListOfInstrumentIdTypeDescriptor';
 export * from './resourceListOfOrder';
 export * from './resourceListOfPortfolio';
@@ -295,6 +295,7 @@ import { OrderRequest } from './orderRequest';
 import { OrderSet } from './orderSet';
 import { OrderSetRequest } from './orderSetRequest';
 import { OutputTransaction } from './outputTransaction';
+import { PagedResourceListOfInstrument } from './pagedResourceListOfInstrument';
 import { PagedResourceListOfPortfolioGroup } from './pagedResourceListOfPortfolioGroup';
 import { PagedResourceListOfPortfolioSearchResult } from './pagedResourceListOfPortfolioSearchResult';
 import { PagedResourceListOfPropertyDefinition } from './pagedResourceListOfPropertyDefinition';
@@ -335,7 +336,6 @@ import { ResourceListOfCutLabelDefinition } from './resourceListOfCutLabelDefini
 import { ResourceListOfDataType } from './resourceListOfDataType';
 import { ResourceListOfHoldingsAdjustmentHeader } from './resourceListOfHoldingsAdjustmentHeader';
 import { ResourceListOfIUnitDefinitionDto } from './resourceListOfIUnitDefinitionDto';
-import { ResourceListOfInstrument } from './resourceListOfInstrument';
 import { ResourceListOfInstrumentIdTypeDescriptor } from './resourceListOfInstrumentIdTypeDescriptor';
 import { ResourceListOfOrder } from './resourceListOfOrder';
 import { ResourceListOfPortfolio } from './resourceListOfPortfolio';
@@ -577,6 +577,7 @@ let typeMap: {[index: string]: any} = {
     "OrderSet": OrderSet,
     "OrderSetRequest": OrderSetRequest,
     "OutputTransaction": OutputTransaction,
+    "PagedResourceListOfInstrument": PagedResourceListOfInstrument,
     "PagedResourceListOfPortfolioGroup": PagedResourceListOfPortfolioGroup,
     "PagedResourceListOfPortfolioSearchResult": PagedResourceListOfPortfolioSearchResult,
     "PagedResourceListOfPropertyDefinition": PagedResourceListOfPropertyDefinition,
@@ -617,7 +618,6 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfDataType": ResourceListOfDataType,
     "ResourceListOfHoldingsAdjustmentHeader": ResourceListOfHoldingsAdjustmentHeader,
     "ResourceListOfIUnitDefinitionDto": ResourceListOfIUnitDefinitionDto,
-    "ResourceListOfInstrument": ResourceListOfInstrument,
     "ResourceListOfInstrumentIdTypeDescriptor": ResourceListOfInstrumentIdTypeDescriptor,
     "ResourceListOfOrder": ResourceListOfOrder,
     "ResourceListOfPortfolio": ResourceListOfPortfolio,
