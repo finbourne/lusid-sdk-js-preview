@@ -7,7 +7,7 @@ A generated version of the SDK is included in the `sdk` folder based on the Open
 The SDK can also be installed using `npm`:
 
 ```
-$ npm install @finbourne/lusid
+$ npm install @finbourne/lusid-preview
 ```
 
 # Generating the SDK
