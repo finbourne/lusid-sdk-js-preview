@@ -12,6 +12,8 @@ export * from './aggregationResponseNodeOfDictionaryOfStringToObject';
 export * from './annulQuotesResponse';
 export * from './annulSingleStructuredDataResponse';
 export * from './annulStructuredDataResponse';
+export * from './cdsDetailSpecifications';
+export * from './cdsInstrument';
 export * from './change';
 export * from './completePortfolio';
 export * from './configurationRecipe';
@@ -47,6 +49,7 @@ export * from './executionRequest';
 export * from './expandedGroup';
 export * from './fieldSchema';
 export * from './fileResponse';
+export * from './flowConventions';
 export * from './fxForwardInstrument';
 export * from './fxOption';
 export * from './getInstrumentsResponse';
@@ -69,6 +72,7 @@ export * from './instrumentIdTypeDescriptor';
 export * from './instrumentIdValue';
 export * from './instrumentMatch';
 export * from './instrumentSearchProperty';
+export * from './leg';
 export * from './link';
 export * from './listAggregationResponse';
 export * from './lusidInstrument';
@@ -152,8 +156,10 @@ export * from './structuredMarketData';
 export * from './structuredMarketDataId';
 export * from './structuredResultData';
 export * from './structuredResultDataId';
+export * from './swapInstrument';
 export * from './targetTaxLot';
 export * from './targetTaxLotRequest';
+export * from './tenor';
 export * from './transaction';
 export * from './transactionConfigurationData';
 export * from './transactionConfigurationDataRequest';
@@ -220,6 +226,8 @@ import { AggregationResponseNodeOfDictionaryOfStringToObject } from './aggregati
 import { AnnulQuotesResponse } from './annulQuotesResponse';
 import { AnnulSingleStructuredDataResponse } from './annulSingleStructuredDataResponse';
 import { AnnulStructuredDataResponse } from './annulStructuredDataResponse';
+import { CdsDetailSpecifications } from './cdsDetailSpecifications';
+import { CdsInstrument } from './cdsInstrument';
 import { Change } from './change';
 import { CompletePortfolio } from './completePortfolio';
 import { ConfigurationRecipe } from './configurationRecipe';
@@ -255,6 +263,7 @@ import { ExecutionRequest } from './executionRequest';
 import { ExpandedGroup } from './expandedGroup';
 import { FieldSchema } from './fieldSchema';
 import { FileResponse } from './fileResponse';
+import { FlowConventions } from './flowConventions';
 import { FxForwardInstrument } from './fxForwardInstrument';
 import { FxOption } from './fxOption';
 import { GetInstrumentsResponse } from './getInstrumentsResponse';
@@ -277,6 +286,7 @@ import { InstrumentIdTypeDescriptor } from './instrumentIdTypeDescriptor';
 import { InstrumentIdValue } from './instrumentIdValue';
 import { InstrumentMatch } from './instrumentMatch';
 import { InstrumentSearchProperty } from './instrumentSearchProperty';
+import { Leg } from './leg';
 import { Link } from './link';
 import { ListAggregationResponse } from './listAggregationResponse';
 import { LusidInstrument } from './lusidInstrument';
@@ -360,8 +370,10 @@ import { StructuredMarketData } from './structuredMarketData';
 import { StructuredMarketDataId } from './structuredMarketDataId';
 import { StructuredResultData } from './structuredResultData';
 import { StructuredResultDataId } from './structuredResultDataId';
+import { SwapInstrument } from './swapInstrument';
 import { TargetTaxLot } from './targetTaxLot';
 import { TargetTaxLotRequest } from './targetTaxLotRequest';
+import { Tenor } from './tenor';
 import { Transaction } from './transaction';
 import { TransactionConfigurationData } from './transactionConfigurationData';
 import { TransactionConfigurationDataRequest } from './transactionConfigurationDataRequest';
@@ -426,6 +438,9 @@ let primitives = [
                  
 let enumsMap: {[index: string]: any} = {
         "AggregateSpec.OpEnum": AggregateSpec.OpEnum,
+        "CdsDetailSpecifications.SeniorityEnum": CdsDetailSpecifications.SeniorityEnum,
+        "CdsDetailSpecifications.RestructuringTypeEnum": CdsDetailSpecifications.RestructuringTypeEnum,
+        "CdsInstrument.InstrumentTypeEnum": CdsInstrument.InstrumentTypeEnum,
         "CompletePortfolio.TypeEnum": CompletePortfolio.TypeEnum,
         "CreateDataTypeRequest.TypeValueRangeEnum": CreateDataTypeRequest.TypeValueRangeEnum,
         "CreateDataTypeRequest.ValueTypeEnum": CreateDataTypeRequest.ValueTypeEnum,
@@ -439,6 +454,8 @@ let enumsMap: {[index: string]: any} = {
         "DataType.ValueTypeEnum": DataType.ValueTypeEnum,
         "DataType.UnitSchemaEnum": DataType.UnitSchemaEnum,
         "FieldSchema.TypeEnum": FieldSchema.TypeEnum,
+        "FlowConventions.DayCountBasisEnum": FlowConventions.DayCountBasisEnum,
+        "FlowConventions.RollConventionEnum": FlowConventions.RollConventionEnum,
         "FxForwardInstrument.InstrumentTypeEnum": FxForwardInstrument.InstrumentTypeEnum,
         "FxOption.InstrumentTypeEnum": FxOption.InstrumentTypeEnum,
         "GetReferencePortfolioConstituentsResponse.WeightTypeEnum": GetReferencePortfolioConstituentsResponse.WeightTypeEnum,
@@ -474,6 +491,9 @@ let enumsMap: {[index: string]: any} = {
         "QuoteSeriesId.QuoteTypeEnum": QuoteSeriesId.QuoteTypeEnum,
         "ResourceListOfValueType.ValuesEnum": ResourceListOfValueType.ValuesEnum,
         "Results.FormatEnum": Results.FormatEnum,
+        "SwapInstrument.NotionalExchangeEnum": SwapInstrument.NotionalExchangeEnum,
+        "SwapInstrument.InstrumentTypeEnum": SwapInstrument.InstrumentTypeEnum,
+        "Tenor.UnitEnum": Tenor.UnitEnum,
         "TransactionConfigurationMovementData.MovementTypesEnum": TransactionConfigurationMovementData.MovementTypesEnum,
         "TransactionConfigurationMovementDataRequest.MovementTypesEnum": TransactionConfigurationMovementDataRequest.MovementTypesEnum,
         "TransactionConfigurationTypeAlias.TransactionRolesEnum": TransactionConfigurationTypeAlias.TransactionRolesEnum,
@@ -502,6 +522,8 @@ let typeMap: {[index: string]: any} = {
     "AnnulQuotesResponse": AnnulQuotesResponse,
     "AnnulSingleStructuredDataResponse": AnnulSingleStructuredDataResponse,
     "AnnulStructuredDataResponse": AnnulStructuredDataResponse,
+    "CdsDetailSpecifications": CdsDetailSpecifications,
+    "CdsInstrument": CdsInstrument,
     "Change": Change,
     "CompletePortfolio": CompletePortfolio,
     "ConfigurationRecipe": ConfigurationRecipe,
@@ -537,6 +559,7 @@ let typeMap: {[index: string]: any} = {
     "ExpandedGroup": ExpandedGroup,
     "FieldSchema": FieldSchema,
     "FileResponse": FileResponse,
+    "FlowConventions": FlowConventions,
     "FxForwardInstrument": FxForwardInstrument,
     "FxOption": FxOption,
     "GetInstrumentsResponse": GetInstrumentsResponse,
@@ -559,6 +582,7 @@ let typeMap: {[index: string]: any} = {
     "InstrumentIdValue": InstrumentIdValue,
     "InstrumentMatch": InstrumentMatch,
     "InstrumentSearchProperty": InstrumentSearchProperty,
+    "Leg": Leg,
     "Link": Link,
     "ListAggregationResponse": ListAggregationResponse,
     "LusidInstrument": LusidInstrument,
@@ -642,8 +666,10 @@ let typeMap: {[index: string]: any} = {
     "StructuredMarketDataId": StructuredMarketDataId,
     "StructuredResultData": StructuredResultData,
     "StructuredResultDataId": StructuredResultDataId,
+    "SwapInstrument": SwapInstrument,
     "TargetTaxLot": TargetTaxLot,
     "TargetTaxLotRequest": TargetTaxLotRequest,
+    "Tenor": Tenor,
     "Transaction": Transaction,
     "TransactionConfigurationData": TransactionConfigurationData,
     "TransactionConfigurationDataRequest": TransactionConfigurationDataRequest,
