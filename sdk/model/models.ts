@@ -96,6 +96,7 @@ export * from './pagedResourceListOfPortfolioGroup';
 export * from './pagedResourceListOfPortfolioSearchResult';
 export * from './pagedResourceListOfPropertyDefinition';
 export * from './perpetualProperty';
+export * from './person';
 export * from './portfolio';
 export * from './portfolioDetails';
 export * from './portfolioGroup';
@@ -186,6 +187,7 @@ export * from './upsertInstrumentPropertyRequest';
 export * from './upsertInstrumentsResponse';
 export * from './upsertOrderPropertiesRequest';
 export * from './upsertOrderPropertiesResponse';
+export * from './upsertPersonRequest';
 export * from './upsertPortfolioExecutionsResponse';
 export * from './upsertPortfolioTransactionsResponse';
 export * from './upsertQuoteAccessMetadataRuleRequest';
@@ -310,6 +312,7 @@ import { PagedResourceListOfPortfolioGroup } from './pagedResourceListOfPortfoli
 import { PagedResourceListOfPortfolioSearchResult } from './pagedResourceListOfPortfolioSearchResult';
 import { PagedResourceListOfPropertyDefinition } from './pagedResourceListOfPropertyDefinition';
 import { PerpetualProperty } from './perpetualProperty';
+import { Person } from './person';
 import { Portfolio } from './portfolio';
 import { PortfolioDetails } from './portfolioDetails';
 import { PortfolioGroup } from './portfolioGroup';
@@ -400,6 +403,7 @@ import { UpsertInstrumentPropertyRequest } from './upsertInstrumentPropertyReque
 import { UpsertInstrumentsResponse } from './upsertInstrumentsResponse';
 import { UpsertOrderPropertiesRequest } from './upsertOrderPropertiesRequest';
 import { UpsertOrderPropertiesResponse } from './upsertOrderPropertiesResponse';
+import { UpsertPersonRequest } from './upsertPersonRequest';
 import { UpsertPortfolioExecutionsResponse } from './upsertPortfolioExecutionsResponse';
 import { UpsertPortfolioTransactionsResponse } from './upsertPortfolioTransactionsResponse';
 import { UpsertQuoteAccessMetadataRuleRequest } from './upsertQuoteAccessMetadataRuleRequest';
@@ -606,6 +610,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfPortfolioSearchResult": PagedResourceListOfPortfolioSearchResult,
     "PagedResourceListOfPropertyDefinition": PagedResourceListOfPropertyDefinition,
     "PerpetualProperty": PerpetualProperty,
+    "Person": Person,
     "Portfolio": Portfolio,
     "PortfolioDetails": PortfolioDetails,
     "PortfolioGroup": PortfolioGroup,
@@ -696,6 +701,7 @@ let typeMap: {[index: string]: any} = {
     "UpsertInstrumentsResponse": UpsertInstrumentsResponse,
     "UpsertOrderPropertiesRequest": UpsertOrderPropertiesRequest,
     "UpsertOrderPropertiesResponse": UpsertOrderPropertiesResponse,
+    "UpsertPersonRequest": UpsertPersonRequest,
     "UpsertPortfolioExecutionsResponse": UpsertPortfolioExecutionsResponse,
     "UpsertPortfolioTransactionsResponse": UpsertPortfolioTransactionsResponse,
     "UpsertQuoteAccessMetadataRuleRequest": UpsertQuoteAccessMetadataRuleRequest,

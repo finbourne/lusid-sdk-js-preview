@@ -11,33 +11,58 @@
  */
 
 import { Property } from './property';
+import { Version } from './version';
 
-export class UpsertOrderPropertiesRequest {
+export class Person {
     /**
-    * Client-defined properties associated with this order.
+    * The specifc Uniform Resource Identifier (URI) for this resource at the requested effective and asAt datetime.
     */
-    'properties': Array<Property>;
+    'href'?: string;
     /**
-    * Uniquely identifies this order.
+    * The unique LUSID Person Identifier (LUPID) of the Person.
     */
-    'id': string;
+    'lusidPersonId'?: string;
+    /**
+    * Unique client-defined identifiers of the Person.
+    */
+    'identifiers'?: { [key: string]: Property; };
+    /**
+    * A set of properties associated to the Person. There can be multiple properties associated with a property key.
+    */
+    'properties'?: { [key: string]: Array<Property>; };
+    'version'?: Version;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "properties",
-            "baseName": "properties",
-            "type": "Array<Property>"
+            "name": "href",
+            "baseName": "href",
+            "type": "string"
         },
         {
-            "name": "id",
-            "baseName": "id",
+            "name": "lusidPersonId",
+            "baseName": "lusidPersonId",
             "type": "string"
+        },
+        {
+            "name": "identifiers",
+            "baseName": "identifiers",
+            "type": "{ [key: string]: Property; }"
+        },
+        {
+            "name": "properties",
+            "baseName": "properties",
+            "type": "{ [key: string]: Array<Property>; }"
+        },
+        {
+            "name": "version",
+            "baseName": "version",
+            "type": "Version"
         }    ];
 
     static getAttributeTypeMap() {
-        return UpsertOrderPropertiesRequest.attributeTypeMap;
+        return Person.attributeTypeMap;
     }
 }
 

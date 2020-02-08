@@ -12,32 +12,32 @@
 
 import { Property } from './property';
 
-export class UpsertOrderPropertiesRequest {
+export class UpsertPersonRequest {
     /**
-    * Client-defined properties associated with this order.
+    * The identifiers the person will be created with.
     */
-    'properties': Array<Property>;
+    'identifiers'?: { [key: string]: Property; };
     /**
-    * Uniquely identifies this order.
+    * A set of properties associated to the Person. There can be multiple properties associated with a property key.
     */
-    'id': string;
+    'properties'?: { [key: string]: Array<Property>; };
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "properties",
-            "baseName": "properties",
-            "type": "Array<Property>"
+            "name": "identifiers",
+            "baseName": "identifiers",
+            "type": "{ [key: string]: Property; }"
         },
         {
-            "name": "id",
-            "baseName": "id",
-            "type": "string"
+            "name": "properties",
+            "baseName": "properties",
+            "type": "{ [key: string]: Array<Property>; }"
         }    ];
 
     static getAttributeTypeMap() {
-        return UpsertOrderPropertiesRequest.attributeTypeMap;
+        return UpsertPersonRequest.attributeTypeMap;
     }
 }
 
