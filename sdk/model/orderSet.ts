@@ -10,42 +10,39 @@
  * Do not edit the class manually.
  */
 
+import { ErrorDetail } from './errorDetail';
+import { Link } from './link';
+import { Order } from './order';
 
-export class UpdateInstrumentIdentifierRequest {
-    /**
-    * The allowable instrument identifier to update, insert or remove e.g. \'Figi\'.
-    */
-    'type': string;
-    /**
-    * The new value of the allowable instrument identifier. If unspecified the identifier will be removed from the instrument.
-    */
-    'value'?: string;
-    /**
-    * The effective datetime from which the identifier should be updated, inserted or removed. Defaults to the current LUSID system datetime if not specified.
-    */
-    'effectiveAt'?: string;
+/**
+* A collection of details about Orders, partitioned in successful and unsuccessful sets.  Unsuccessful in this case indicates that the API call to create, upsert or retrieve them  was unsuccessful in some way (e.g. a specific order requested was not found).
+*/
+export class OrderSet {
+    'orders': Array<Order>;
+    'failures'?: Array<ErrorDetail>;
+    'links'?: Array<Link>;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "type",
-            "baseName": "type",
-            "type": "string"
+            "name": "orders",
+            "baseName": "orders",
+            "type": "Array<Order>"
         },
         {
-            "name": "value",
-            "baseName": "value",
-            "type": "string"
+            "name": "failures",
+            "baseName": "failures",
+            "type": "Array<ErrorDetail>"
         },
         {
-            "name": "effectiveAt",
-            "baseName": "effectiveAt",
-            "type": "string"
+            "name": "links",
+            "baseName": "links",
+            "type": "Array<Link>"
         }    ];
 
     static getAttributeTypeMap() {
-        return UpdateInstrumentIdentifierRequest.attributeTypeMap;
+        return OrderSet.attributeTypeMap;
     }
 }
 

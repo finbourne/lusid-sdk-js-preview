@@ -87,12 +87,11 @@ export * from './modelSelection';
 export * from './nestedAggregationResponse';
 export * from './order';
 export * from './orderBySpec';
-export * from './orderId';
 export * from './orderRequest';
+export * from './orderSet';
 export * from './orderSetRequest';
 export * from './outputTransaction';
 export * from './pagedResourceListOfInstrument';
-export * from './pagedResourceListOfOrder';
 export * from './pagedResourceListOfPortfolioGroup';
 export * from './pagedResourceListOfPortfolioSearchResult';
 export * from './pagedResourceListOfPropertyDefinition';
@@ -304,12 +303,11 @@ import { ModelSelection } from './modelSelection';
 import { NestedAggregationResponse } from './nestedAggregationResponse';
 import { Order } from './order';
 import { OrderBySpec } from './orderBySpec';
-import { OrderId } from './orderId';
 import { OrderRequest } from './orderRequest';
+import { OrderSet } from './orderSet';
 import { OrderSetRequest } from './orderSetRequest';
 import { OutputTransaction } from './outputTransaction';
 import { PagedResourceListOfInstrument } from './pagedResourceListOfInstrument';
-import { PagedResourceListOfOrder } from './pagedResourceListOfOrder';
 import { PagedResourceListOfPortfolioGroup } from './pagedResourceListOfPortfolioGroup';
 import { PagedResourceListOfPortfolioSearchResult } from './pagedResourceListOfPortfolioSearchResult';
 import { PagedResourceListOfPropertyDefinition } from './pagedResourceListOfPropertyDefinition';
@@ -603,12 +601,11 @@ let typeMap: {[index: string]: any} = {
     "NestedAggregationResponse": NestedAggregationResponse,
     "Order": Order,
     "OrderBySpec": OrderBySpec,
-    "OrderId": OrderId,
     "OrderRequest": OrderRequest,
+    "OrderSet": OrderSet,
     "OrderSetRequest": OrderSetRequest,
     "OutputTransaction": OutputTransaction,
     "PagedResourceListOfInstrument": PagedResourceListOfInstrument,
-    "PagedResourceListOfOrder": PagedResourceListOfOrder,
     "PagedResourceListOfPortfolioGroup": PagedResourceListOfPortfolioGroup,
     "PagedResourceListOfPortfolioSearchResult": PagedResourceListOfPortfolioSearchResult,
     "PagedResourceListOfPropertyDefinition": PagedResourceListOfPropertyDefinition,
