@@ -12,7 +12,7 @@ export * from './aggregationResponseNodeOfDictionaryOfStringToObject';
 export * from './annulQuotesResponse';
 export * from './annulSingleStructuredDataResponse';
 export * from './annulStructuredDataResponse';
-export * from './cdsDetailSpecifications';
+export * from './cdsDetailSpecification';
 export * from './cdsInstrument';
 export * from './change';
 export * from './completePortfolio';
@@ -70,9 +70,9 @@ export * from './instrumentDefinition';
 export * from './instrumentEconomicDefinition';
 export * from './instrumentIdTypeDescriptor';
 export * from './instrumentIdValue';
+export * from './instrumentLeg';
 export * from './instrumentMatch';
 export * from './instrumentSearchProperty';
-export * from './leg';
 export * from './link';
 export * from './listAggregationResponse';
 export * from './lusidInstrument';
@@ -228,7 +228,7 @@ import { AggregationResponseNodeOfDictionaryOfStringToObject } from './aggregati
 import { AnnulQuotesResponse } from './annulQuotesResponse';
 import { AnnulSingleStructuredDataResponse } from './annulSingleStructuredDataResponse';
 import { AnnulStructuredDataResponse } from './annulStructuredDataResponse';
-import { CdsDetailSpecifications } from './cdsDetailSpecifications';
+import { CdsDetailSpecification } from './cdsDetailSpecification';
 import { CdsInstrument } from './cdsInstrument';
 import { Change } from './change';
 import { CompletePortfolio } from './completePortfolio';
@@ -286,9 +286,9 @@ import { InstrumentDefinition } from './instrumentDefinition';
 import { InstrumentEconomicDefinition } from './instrumentEconomicDefinition';
 import { InstrumentIdTypeDescriptor } from './instrumentIdTypeDescriptor';
 import { InstrumentIdValue } from './instrumentIdValue';
+import { InstrumentLeg } from './instrumentLeg';
 import { InstrumentMatch } from './instrumentMatch';
 import { InstrumentSearchProperty } from './instrumentSearchProperty';
-import { Leg } from './leg';
 import { Link } from './link';
 import { ListAggregationResponse } from './listAggregationResponse';
 import { LusidInstrument } from './lusidInstrument';
@@ -442,8 +442,8 @@ let primitives = [
                  
 let enumsMap: {[index: string]: any} = {
         "AggregateSpec.OpEnum": AggregateSpec.OpEnum,
-        "CdsDetailSpecifications.SeniorityEnum": CdsDetailSpecifications.SeniorityEnum,
-        "CdsDetailSpecifications.RestructuringTypeEnum": CdsDetailSpecifications.RestructuringTypeEnum,
+        "CdsDetailSpecification.SeniorityEnum": CdsDetailSpecification.SeniorityEnum,
+        "CdsDetailSpecification.RestructuringTypeEnum": CdsDetailSpecification.RestructuringTypeEnum,
         "CdsInstrument.InstrumentTypeEnum": CdsInstrument.InstrumentTypeEnum,
         "CompletePortfolio.TypeEnum": CompletePortfolio.TypeEnum,
         "CreateDataTypeRequest.TypeValueRangeEnum": CreateDataTypeRequest.TypeValueRangeEnum,
@@ -458,7 +458,7 @@ let enumsMap: {[index: string]: any} = {
         "DataType.ValueTypeEnum": DataType.ValueTypeEnum,
         "DataType.UnitSchemaEnum": DataType.UnitSchemaEnum,
         "FieldSchema.TypeEnum": FieldSchema.TypeEnum,
-        "FlowConventions.DayCountBasisEnum": FlowConventions.DayCountBasisEnum,
+        "FlowConventions.DayCountConventionEnum": FlowConventions.DayCountConventionEnum,
         "FlowConventions.RollConventionEnum": FlowConventions.RollConventionEnum,
         "FxForwardInstrument.InstrumentTypeEnum": FxForwardInstrument.InstrumentTypeEnum,
         "FxOption.InstrumentTypeEnum": FxOption.InstrumentTypeEnum,
@@ -495,7 +495,7 @@ let enumsMap: {[index: string]: any} = {
         "QuoteSeriesId.QuoteTypeEnum": QuoteSeriesId.QuoteTypeEnum,
         "ResourceListOfValueType.ValuesEnum": ResourceListOfValueType.ValuesEnum,
         "Results.FormatEnum": Results.FormatEnum,
-        "SwapInstrument.NotionalExchangeEnum": SwapInstrument.NotionalExchangeEnum,
+        "SwapInstrument.NotionalExchangeTypeEnum": SwapInstrument.NotionalExchangeTypeEnum,
         "SwapInstrument.InstrumentTypeEnum": SwapInstrument.InstrumentTypeEnum,
         "Tenor.UnitEnum": Tenor.UnitEnum,
         "TransactionConfigurationMovementData.MovementTypesEnum": TransactionConfigurationMovementData.MovementTypesEnum,
@@ -526,7 +526,7 @@ let typeMap: {[index: string]: any} = {
     "AnnulQuotesResponse": AnnulQuotesResponse,
     "AnnulSingleStructuredDataResponse": AnnulSingleStructuredDataResponse,
     "AnnulStructuredDataResponse": AnnulStructuredDataResponse,
-    "CdsDetailSpecifications": CdsDetailSpecifications,
+    "CdsDetailSpecification": CdsDetailSpecification,
     "CdsInstrument": CdsInstrument,
     "Change": Change,
     "CompletePortfolio": CompletePortfolio,
@@ -584,9 +584,9 @@ let typeMap: {[index: string]: any} = {
     "InstrumentEconomicDefinition": InstrumentEconomicDefinition,
     "InstrumentIdTypeDescriptor": InstrumentIdTypeDescriptor,
     "InstrumentIdValue": InstrumentIdValue,
+    "InstrumentLeg": InstrumentLeg,
     "InstrumentMatch": InstrumentMatch,
     "InstrumentSearchProperty": InstrumentSearchProperty,
-    "Leg": Leg,
     "Link": Link,
     "ListAggregationResponse": ListAggregationResponse,
     "LusidInstrument": LusidInstrument,
