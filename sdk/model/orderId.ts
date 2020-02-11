@@ -10,80 +10,24 @@
  * Do not edit the class manually.
  */
 
-import { Property } from './property';
-import { ResourceId } from './resourceId';
 
-export class CreatePortfolioGroupRequest {
+export class OrderId {
     /**
-    * The code that the portfolio group will be created with. Together with the scope this uniquely identifies the portfolio group.
+    * String representation of the order id.
     */
-    'code': string;
-    /**
-    * The effective datetime at which the portfolio group was created. Defaults to the current LUSID system datetime if not specified.
-    */
-    'created'?: Date;
-    /**
-    * The resource identifiers of the portfolios to be contained within the portfolio group.
-    */
-    'values'?: Array<ResourceId>;
-    /**
-    * The resource identifiers of the portfolio groups to be contained within the portfolio group as sub groups.
-    */
-    'subGroups'?: Array<ResourceId>;
-    /**
-    * A set of unique group properties to add to the portfolio group. Each property must be from the \'PortfolioGroup\' domain and should be identified by its key which has the format {domain}/{scope}/{code}, e.g. \'PortfolioGroup/Manager/Id\'. These properties must be pre-defined.
-    */
-    'properties'?: { [key: string]: Property; };
-    /**
-    * The name of the portfolio group.
-    */
-    'displayName': string;
-    /**
-    * A long form description of the portfolio group.
-    */
-    'description'?: string;
+    'id'?: string;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "code",
-            "baseName": "code",
-            "type": "string"
-        },
-        {
-            "name": "created",
-            "baseName": "created",
-            "type": "Date"
-        },
-        {
-            "name": "values",
-            "baseName": "values",
-            "type": "Array<ResourceId>"
-        },
-        {
-            "name": "subGroups",
-            "baseName": "subGroups",
-            "type": "Array<ResourceId>"
-        },
-        {
-            "name": "properties",
-            "baseName": "properties",
-            "type": "{ [key: string]: Property; }"
-        },
-        {
-            "name": "displayName",
-            "baseName": "displayName",
-            "type": "string"
-        },
-        {
-            "name": "description",
-            "baseName": "description",
+            "name": "id",
+            "baseName": "id",
             "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
-        return CreatePortfolioGroupRequest.attributeTypeMap;
+        return OrderId.attributeTypeMap;
     }
 }
 
