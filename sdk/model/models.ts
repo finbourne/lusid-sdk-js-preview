@@ -126,6 +126,7 @@ export * from './referencePortfolioConstituent';
 export * from './referencePortfolioConstituentRequest';
 export * from './resourceId';
 export * from './resourceListOfAccessControlledResource';
+export * from './resourceListOfAccessMetadataValueOf';
 export * from './resourceListOfChange';
 export * from './resourceListOfConstituentsAdjustmentHeader';
 export * from './resourceListOfCorporateAction';
@@ -189,6 +190,7 @@ export * from './upsertInstrumentsResponse';
 export * from './upsertOrderPropertiesRequest';
 export * from './upsertOrderPropertiesResponse';
 export * from './upsertPersonRequest';
+export * from './upsertPortfolioAccessMetadataRequest';
 export * from './upsertPortfolioExecutionsResponse';
 export * from './upsertPortfolioTransactionsResponse';
 export * from './upsertQuoteAccessMetadataRuleRequest';
@@ -343,6 +345,7 @@ import { ReferencePortfolioConstituent } from './referencePortfolioConstituent';
 import { ReferencePortfolioConstituentRequest } from './referencePortfolioConstituentRequest';
 import { ResourceId } from './resourceId';
 import { ResourceListOfAccessControlledResource } from './resourceListOfAccessControlledResource';
+import { ResourceListOfAccessMetadataValueOf } from './resourceListOfAccessMetadataValueOf';
 import { ResourceListOfChange } from './resourceListOfChange';
 import { ResourceListOfConstituentsAdjustmentHeader } from './resourceListOfConstituentsAdjustmentHeader';
 import { ResourceListOfCorporateAction } from './resourceListOfCorporateAction';
@@ -406,6 +409,7 @@ import { UpsertInstrumentsResponse } from './upsertInstrumentsResponse';
 import { UpsertOrderPropertiesRequest } from './upsertOrderPropertiesRequest';
 import { UpsertOrderPropertiesResponse } from './upsertOrderPropertiesResponse';
 import { UpsertPersonRequest } from './upsertPersonRequest';
+import { UpsertPortfolioAccessMetadataRequest } from './upsertPortfolioAccessMetadataRequest';
 import { UpsertPortfolioExecutionsResponse } from './upsertPortfolioExecutionsResponse';
 import { UpsertPortfolioTransactionsResponse } from './upsertPortfolioTransactionsResponse';
 import { UpsertQuoteAccessMetadataRuleRequest } from './upsertQuoteAccessMetadataRuleRequest';
@@ -642,6 +646,7 @@ let typeMap: {[index: string]: any} = {
     "ReferencePortfolioConstituentRequest": ReferencePortfolioConstituentRequest,
     "ResourceId": ResourceId,
     "ResourceListOfAccessControlledResource": ResourceListOfAccessControlledResource,
+    "ResourceListOfAccessMetadataValueOf": ResourceListOfAccessMetadataValueOf,
     "ResourceListOfChange": ResourceListOfChange,
     "ResourceListOfConstituentsAdjustmentHeader": ResourceListOfConstituentsAdjustmentHeader,
     "ResourceListOfCorporateAction": ResourceListOfCorporateAction,
@@ -705,6 +710,7 @@ let typeMap: {[index: string]: any} = {
     "UpsertOrderPropertiesRequest": UpsertOrderPropertiesRequest,
     "UpsertOrderPropertiesResponse": UpsertOrderPropertiesResponse,
     "UpsertPersonRequest": UpsertPersonRequest,
+    "UpsertPortfolioAccessMetadataRequest": UpsertPortfolioAccessMetadataRequest,
     "UpsertPortfolioExecutionsResponse": UpsertPortfolioExecutionsResponse,
     "UpsertPortfolioTransactionsResponse": UpsertPortfolioTransactionsResponse,
     "UpsertQuoteAccessMetadataRuleRequest": UpsertQuoteAccessMetadataRuleRequest,

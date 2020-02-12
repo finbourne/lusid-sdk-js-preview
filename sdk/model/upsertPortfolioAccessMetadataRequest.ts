@@ -10,36 +10,25 @@
  * Do not edit the class manually.
  */
 
+import { AccessMetadataValue } from './accessMetadataValue';
 
-/**
-* The version metadata.
-*/
-export class Version {
+export class UpsertPortfolioAccessMetadataRequest {
     /**
-    * The effective datetime at which this version became valid. Only applies when a single entity is being interacted with.
+    * The access control metadata to assign to portfolios that match the identifier
     */
-    'effectiveFrom': Date;
-    /**
-    * The asAt datetime at which the data was committed to LUSID.
-    */
-    'asAtDate': Date;
+    'metadata': Array<AccessMetadataValue>;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "effectiveFrom",
-            "baseName": "effectiveFrom",
-            "type": "Date"
-        },
-        {
-            "name": "asAtDate",
-            "baseName": "asAtDate",
-            "type": "Date"
+            "name": "metadata",
+            "baseName": "metadata",
+            "type": "Array<AccessMetadataValue>"
         }    ];
 
     static getAttributeTypeMap() {
-        return Version.attributeTypeMap;
+        return UpsertPortfolioAccessMetadataRequest.attributeTypeMap;
     }
 }
 

@@ -10,36 +10,35 @@
  * Do not edit the class manually.
  */
 
+import { AccessMetadataValue } from './accessMetadataValue';
+import { Link } from './link';
 
-/**
-* The version metadata.
-*/
-export class Version {
-    /**
-    * The effective datetime at which this version became valid. Only applies when a single entity is being interacted with.
-    */
-    'effectiveFrom': Date;
-    /**
-    * The asAt datetime at which the data was committed to LUSID.
-    */
-    'asAtDate': Date;
+export class ResourceListOfAccessMetadataValueOf {
+    'values'?: Array<Array<AccessMetadataValue>>;
+    'href'?: string;
+    'links'?: Array<Link>;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "effectiveFrom",
-            "baseName": "effectiveFrom",
-            "type": "Date"
+            "name": "values",
+            "baseName": "values",
+            "type": "Array<Array<AccessMetadataValue>>"
         },
         {
-            "name": "asAtDate",
-            "baseName": "asAtDate",
-            "type": "Date"
+            "name": "href",
+            "baseName": "href",
+            "type": "string"
+        },
+        {
+            "name": "links",
+            "baseName": "links",
+            "type": "Array<Link>"
         }    ];
 
     static getAttributeTypeMap() {
-        return Version.attributeTypeMap;
+        return ResourceListOfAccessMetadataValueOf.attributeTypeMap;
     }
 }
 
