@@ -10,51 +10,26 @@
  * Do not edit the class manually.
  */
 
-import { AggregationResponseNodeOfDictionaryOfStringToObject } from './aggregationResponseNodeOfDictionaryOfStringToObject';
+import { GetRecipeResponse } from './getRecipeResponse';
 import { Link } from './link';
-import { ResultDataSchema } from './resultDataSchema';
 
-export class NestedAggregationResponse {
-    'aggregationEffectiveAt'?: Date;
-    'aggregationAsAt'?: Date;
+export class ResourceListOfGetRecipeResponse {
+    'values'?: Array<GetRecipeResponse>;
     'href'?: string;
-    'data'?: AggregationResponseNodeOfDictionaryOfStringToObject;
-    'aggregationCurrency'?: string;
-    'dataSchema'?: ResultDataSchema;
     'links'?: Array<Link>;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "aggregationEffectiveAt",
-            "baseName": "aggregationEffectiveAt",
-            "type": "Date"
-        },
-        {
-            "name": "aggregationAsAt",
-            "baseName": "aggregationAsAt",
-            "type": "Date"
+            "name": "values",
+            "baseName": "values",
+            "type": "Array<GetRecipeResponse>"
         },
         {
             "name": "href",
             "baseName": "href",
             "type": "string"
-        },
-        {
-            "name": "data",
-            "baseName": "data",
-            "type": "AggregationResponseNodeOfDictionaryOfStringToObject"
-        },
-        {
-            "name": "aggregationCurrency",
-            "baseName": "aggregationCurrency",
-            "type": "string"
-        },
-        {
-            "name": "dataSchema",
-            "baseName": "dataSchema",
-            "type": "ResultDataSchema"
         },
         {
             "name": "links",
@@ -63,7 +38,7 @@ export class NestedAggregationResponse {
         }    ];
 
     static getAttributeTypeMap() {
-        return NestedAggregationResponse.attributeTypeMap;
+        return ResourceListOfGetRecipeResponse.attributeTypeMap;
     }
 }
 

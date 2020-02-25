@@ -133,6 +133,7 @@ export * from './resourceListOfCorporateAction';
 export * from './resourceListOfCorporateActionSource';
 export * from './resourceListOfCutLabelDefinition';
 export * from './resourceListOfDataType';
+export * from './resourceListOfGetRecipeResponse';
 export * from './resourceListOfHoldingsAdjustmentHeader';
 export * from './resourceListOfIUnitDefinitionDto';
 export * from './resourceListOfInstrumentIdTypeDescriptor';
@@ -352,6 +353,7 @@ import { ResourceListOfCorporateAction } from './resourceListOfCorporateAction';
 import { ResourceListOfCorporateActionSource } from './resourceListOfCorporateActionSource';
 import { ResourceListOfCutLabelDefinition } from './resourceListOfCutLabelDefinition';
 import { ResourceListOfDataType } from './resourceListOfDataType';
+import { ResourceListOfGetRecipeResponse } from './resourceListOfGetRecipeResponse';
 import { ResourceListOfHoldingsAdjustmentHeader } from './resourceListOfHoldingsAdjustmentHeader';
 import { ResourceListOfIUnitDefinitionDto } from './resourceListOfIUnitDefinitionDto';
 import { ResourceListOfInstrumentIdTypeDescriptor } from './resourceListOfInstrumentIdTypeDescriptor';
@@ -653,6 +655,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfCorporateActionSource": ResourceListOfCorporateActionSource,
     "ResourceListOfCutLabelDefinition": ResourceListOfCutLabelDefinition,
     "ResourceListOfDataType": ResourceListOfDataType,
+    "ResourceListOfGetRecipeResponse": ResourceListOfGetRecipeResponse,
     "ResourceListOfHoldingsAdjustmentHeader": ResourceListOfHoldingsAdjustmentHeader,
     "ResourceListOfIUnitDefinitionDto": ResourceListOfIUnitDefinitionDto,
     "ResourceListOfInstrumentIdTypeDescriptor": ResourceListOfInstrumentIdTypeDescriptor,
