@@ -10,35 +10,25 @@
  * Do not edit the class manually.
  */
 
-import { Link } from './link';
-import { PortfolioSearchResult } from './portfolioSearchResult';
+import { AccessMetadataValue } from './accessMetadataValue';
 
-export class ResourceListOfPortfolioSearchResult {
-    'values'?: Array<PortfolioSearchResult>;
-    'href'?: string;
-    'links'?: Array<Link>;
+export class UpsertPortfolioGroupAccessMetadataRequest {
+    /**
+    * The access control metadata to assign to portfolio groups that match the identifier
+    */
+    'metadata': Array<AccessMetadataValue>;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "values",
-            "baseName": "values",
-            "type": "Array<PortfolioSearchResult>"
-        },
-        {
-            "name": "href",
-            "baseName": "href",
-            "type": "string"
-        },
-        {
-            "name": "links",
-            "baseName": "links",
-            "type": "Array<Link>"
+            "name": "metadata",
+            "baseName": "metadata",
+            "type": "Array<AccessMetadataValue>"
         }    ];
 
     static getAttributeTypeMap() {
-        return ResourceListOfPortfolioSearchResult.attributeTypeMap;
+        return UpsertPortfolioGroupAccessMetadataRequest.attributeTypeMap;
     }
 }
 

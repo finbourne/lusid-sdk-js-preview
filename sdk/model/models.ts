@@ -193,6 +193,7 @@ export * from './upsertOrderPropertiesResponse';
 export * from './upsertPersonRequest';
 export * from './upsertPortfolioAccessMetadataRequest';
 export * from './upsertPortfolioExecutionsResponse';
+export * from './upsertPortfolioGroupAccessMetadataRequest';
 export * from './upsertPortfolioTransactionsResponse';
 export * from './upsertQuoteAccessMetadataRuleRequest';
 export * from './upsertQuoteRequest';
@@ -413,6 +414,7 @@ import { UpsertOrderPropertiesResponse } from './upsertOrderPropertiesResponse';
 import { UpsertPersonRequest } from './upsertPersonRequest';
 import { UpsertPortfolioAccessMetadataRequest } from './upsertPortfolioAccessMetadataRequest';
 import { UpsertPortfolioExecutionsResponse } from './upsertPortfolioExecutionsResponse';
+import { UpsertPortfolioGroupAccessMetadataRequest } from './upsertPortfolioGroupAccessMetadataRequest';
 import { UpsertPortfolioTransactionsResponse } from './upsertPortfolioTransactionsResponse';
 import { UpsertQuoteAccessMetadataRuleRequest } from './upsertQuoteAccessMetadataRuleRequest';
 import { UpsertQuoteRequest } from './upsertQuoteRequest';
@@ -715,6 +717,7 @@ let typeMap: {[index: string]: any} = {
     "UpsertPersonRequest": UpsertPersonRequest,
     "UpsertPortfolioAccessMetadataRequest": UpsertPortfolioAccessMetadataRequest,
     "UpsertPortfolioExecutionsResponse": UpsertPortfolioExecutionsResponse,
+    "UpsertPortfolioGroupAccessMetadataRequest": UpsertPortfolioGroupAccessMetadataRequest,
     "UpsertPortfolioTransactionsResponse": UpsertPortfolioTransactionsResponse,
     "UpsertQuoteAccessMetadataRuleRequest": UpsertQuoteAccessMetadataRuleRequest,
     "UpsertQuoteRequest": UpsertQuoteRequest,
