@@ -87,7 +87,6 @@ export * from './modelSelection';
 export * from './nestedAggregationResponse';
 export * from './order';
 export * from './orderBySpec';
-export * from './orderId';
 export * from './orderRequest';
 export * from './orderSetRequest';
 export * from './outputTransaction';
@@ -308,7 +307,6 @@ import { ModelSelection } from './modelSelection';
 import { NestedAggregationResponse } from './nestedAggregationResponse';
 import { Order } from './order';
 import { OrderBySpec } from './orderBySpec';
-import { OrderId } from './orderId';
 import { OrderRequest } from './orderRequest';
 import { OrderSetRequest } from './orderSetRequest';
 import { OutputTransaction } from './outputTransaction';
@@ -611,7 +609,6 @@ let typeMap: {[index: string]: any} = {
     "NestedAggregationResponse": NestedAggregationResponse,
     "Order": Order,
     "OrderBySpec": OrderBySpec,
-    "OrderId": OrderId,
     "OrderRequest": OrderRequest,
     "OrderSetRequest": OrderSetRequest,
     "OutputTransaction": OutputTransaction,
