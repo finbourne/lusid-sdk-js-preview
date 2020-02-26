@@ -11,53 +11,23 @@
  */
 
 
-export class PropertyFilter {
-    'left'?: string;
-    'operator'?: PropertyFilter.OperatorEnum;
-    'right'?: object;
-    'rightOperandType'?: PropertyFilter.RightOperandTypeEnum;
+export class OrderId {
+    /**
+    * String representation of the order id.
+    */
+    'id'?: string;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "left",
-            "baseName": "left",
+            "name": "id",
+            "baseName": "id",
             "type": "string"
-        },
-        {
-            "name": "operator",
-            "baseName": "operator",
-            "type": "PropertyFilter.OperatorEnum"
-        },
-        {
-            "name": "right",
-            "baseName": "right",
-            "type": "object"
-        },
-        {
-            "name": "rightOperandType",
-            "baseName": "rightOperandType",
-            "type": "PropertyFilter.RightOperandTypeEnum"
         }    ];
 
     static getAttributeTypeMap() {
-        return PropertyFilter.attributeTypeMap;
+        return OrderId.attributeTypeMap;
     }
 }
 
-export namespace PropertyFilter {
-    export enum OperatorEnum {
-        Equals = <any> 'Equals',
-        NotEquals = <any> 'NotEquals',
-        GreaterThan = <any> 'GreaterThan',
-        GreaterThanOrEqualTo = <any> 'GreaterThanOrEqualTo',
-        LessThan = <any> 'LessThan',
-        LessThanOrEqualTo = <any> 'LessThanOrEqualTo',
-        In = <any> 'In'
-    }
-    export enum RightOperandTypeEnum {
-        Absolute = <any> 'Absolute',
-        Property = <any> 'Property'
-    }
-}
