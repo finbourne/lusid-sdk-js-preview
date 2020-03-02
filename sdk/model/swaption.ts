@@ -10,58 +10,70 @@
  * Do not edit the class manually.
  */
 
-import { AggregationContext } from './aggregationContext';
-import { MarketContext } from './marketContext';
-import { PricingContext } from './pricingContext';
-import { ResourceId } from './resourceId';
+import { LusidInstrument } from './lusidInstrument';
 
 /**
-* The Configuration or Calculation Recipe controls how LUSID processes a given request.  This can be used to change where market data used in pricing is loaded from and in what order, or which model is used to  price a given instrument as well as how aggregation will process the produced results.
+* A swaption, an option to enter into an interest rate swap.
 */
-export class ConfigurationRecipe {
+export class Swaption {
+    'startDate': Date;
     /**
-    * User given string name (code) to identify the recipe.
+    * True if on exercise the holder of the option enters the swap paying fixed, false if floating.
     */
-    'code': string;
-    'market'?: MarketContext;
-    'pricing'?: PricingContext;
-    'aggregation'?: AggregationContext;
+    'isPayerNotReceiver': boolean;
     /**
-    * A list of parent recipes (scope,code) that can be used to share functionality between recipes. For instance one might use common recipes to set up  pricing for individual asset classes, e.g. rates or credit, and then combine them into a single recipe to be used by an exotics desk in conjunction with  some overrides that it requires for models or other pricing options.
+    * True of the option is settled in cash false if by delivery of the swap.
     */
-    'inheritedRecipes'?: Array<ResourceId>;
+    'isDeliveryNotCash': boolean;
+    'swap': LusidInstrument;
+    /**
+    * Instrument type, must be property for JSON.
+    */
+    'instrumentType': Swaption.InstrumentTypeEnum;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "code",
-            "baseName": "code",
-            "type": "string"
+            "name": "startDate",
+            "baseName": "startDate",
+            "type": "Date"
         },
         {
-            "name": "market",
-            "baseName": "market",
-            "type": "MarketContext"
+            "name": "isPayerNotReceiver",
+            "baseName": "isPayerNotReceiver",
+            "type": "boolean"
         },
         {
-            "name": "pricing",
-            "baseName": "pricing",
-            "type": "PricingContext"
+            "name": "isDeliveryNotCash",
+            "baseName": "isDeliveryNotCash",
+            "type": "boolean"
         },
         {
-            "name": "aggregation",
-            "baseName": "aggregation",
-            "type": "AggregationContext"
+            "name": "swap",
+            "baseName": "swap",
+            "type": "LusidInstrument"
         },
         {
-            "name": "inheritedRecipes",
-            "baseName": "inheritedRecipes",
-            "type": "Array<ResourceId>"
+            "name": "instrumentType",
+            "baseName": "instrumentType",
+            "type": "Swaption.InstrumentTypeEnum"
         }    ];
 
     static getAttributeTypeMap() {
-        return ConfigurationRecipe.attributeTypeMap;
+        return Swaption.attributeTypeMap;
     }
 }
 
+export namespace Swaption {
+    export enum InstrumentTypeEnum {
+        QuotedSecurity = <any> 'QuotedSecurity',
+        InterestRateSwap = <any> 'InterestRateSwap',
+        FxForward = <any> 'FxForward',
+        Exotic = <any> 'Exotic',
+        FxOption = <any> 'FxOption',
+        CreditDefaultSwap = <any> 'CreditDefaultSwap',
+        InterestRateSwaption = <any> 'InterestRateSwaption',
+        Unknown = <any> 'Unknown'
+    }
+}

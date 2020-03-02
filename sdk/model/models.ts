@@ -160,6 +160,7 @@ export * from './structuredMarketDataId';
 export * from './structuredResultData';
 export * from './structuredResultDataId';
 export * from './swapInstrument';
+export * from './swaption';
 export * from './targetTaxLot';
 export * from './targetTaxLotRequest';
 export * from './tenor';
@@ -380,6 +381,7 @@ import { StructuredMarketDataId } from './structuredMarketDataId';
 import { StructuredResultData } from './structuredResultData';
 import { StructuredResultDataId } from './structuredResultDataId';
 import { SwapInstrument } from './swapInstrument';
+import { Swaption } from './swaption';
 import { TargetTaxLot } from './targetTaxLot';
 import { TargetTaxLotRequest } from './targetTaxLotRequest';
 import { Tenor } from './tenor';
@@ -505,6 +507,7 @@ let enumsMap: {[index: string]: any} = {
         "Results.FormatEnum": Results.FormatEnum,
         "SwapInstrument.NotionalExchangeTypeEnum": SwapInstrument.NotionalExchangeTypeEnum,
         "SwapInstrument.InstrumentTypeEnum": SwapInstrument.InstrumentTypeEnum,
+        "Swaption.InstrumentTypeEnum": Swaption.InstrumentTypeEnum,
         "Tenor.UnitEnum": Tenor.UnitEnum,
         "TransactionConfigurationMovementData.MovementTypesEnum": TransactionConfigurationMovementData.MovementTypesEnum,
         "TransactionConfigurationMovementDataRequest.MovementTypesEnum": TransactionConfigurationMovementDataRequest.MovementTypesEnum,
@@ -682,6 +685,7 @@ let typeMap: {[index: string]: any} = {
     "StructuredResultData": StructuredResultData,
     "StructuredResultDataId": StructuredResultDataId,
     "SwapInstrument": SwapInstrument,
+    "Swaption": Swaption,
     "TargetTaxLot": TargetTaxLot,
     "TargetTaxLotRequest": TargetTaxLotRequest,
     "Tenor": Tenor,
