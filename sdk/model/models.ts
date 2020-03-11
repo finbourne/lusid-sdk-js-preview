@@ -6,6 +6,7 @@ export * from './adjustHolding';
 export * from './adjustHoldingRequest';
 export * from './aggregateSpec';
 export * from './aggregationContext';
+export * from './aggregationMeasureFailureDetail';
 export * from './aggregationOptions';
 export * from './aggregationRequest';
 export * from './aggregationResponseNodeOfDictionaryOfStringToObject';
@@ -229,6 +230,7 @@ import { AdjustHolding } from './adjustHolding';
 import { AdjustHoldingRequest } from './adjustHoldingRequest';
 import { AggregateSpec } from './aggregateSpec';
 import { AggregationContext } from './aggregationContext';
+import { AggregationMeasureFailureDetail } from './aggregationMeasureFailureDetail';
 import { AggregationOptions } from './aggregationOptions';
 import { AggregationRequest } from './aggregationRequest';
 import { AggregationResponseNodeOfDictionaryOfStringToObject } from './aggregationResponseNodeOfDictionaryOfStringToObject';
@@ -536,6 +538,7 @@ let typeMap: {[index: string]: any} = {
     "AdjustHoldingRequest": AdjustHoldingRequest,
     "AggregateSpec": AggregateSpec,
     "AggregationContext": AggregationContext,
+    "AggregationMeasureFailureDetail": AggregationMeasureFailureDetail,
     "AggregationOptions": AggregationOptions,
     "AggregationRequest": AggregationRequest,
     "AggregationResponseNodeOfDictionaryOfStringToObject": AggregationResponseNodeOfDictionaryOfStringToObject,
