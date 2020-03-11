@@ -106,6 +106,7 @@ export * from './portfolioProperties';
 export * from './portfolioReconciliationRequest';
 export * from './portfolioSearchResult';
 export * from './portfoliosReconciliationRequest';
+export * from './portfoliosReconciliationRequestPreview';
 export * from './pricingContext';
 export * from './pricingOptions';
 export * from './processedCommand';
@@ -164,6 +165,7 @@ export * from './swaption';
 export * from './targetTaxLot';
 export * from './targetTaxLotRequest';
 export * from './tenor';
+export * from './tolerance';
 export * from './transaction';
 export * from './transactionConfigurationData';
 export * from './transactionConfigurationDataRequest';
@@ -327,6 +329,7 @@ import { PortfolioProperties } from './portfolioProperties';
 import { PortfolioReconciliationRequest } from './portfolioReconciliationRequest';
 import { PortfolioSearchResult } from './portfolioSearchResult';
 import { PortfoliosReconciliationRequest } from './portfoliosReconciliationRequest';
+import { PortfoliosReconciliationRequestPreview } from './portfoliosReconciliationRequestPreview';
 import { PricingContext } from './pricingContext';
 import { PricingOptions } from './pricingOptions';
 import { ProcessedCommand } from './processedCommand';
@@ -385,6 +388,7 @@ import { Swaption } from './swaption';
 import { TargetTaxLot } from './targetTaxLot';
 import { TargetTaxLotRequest } from './targetTaxLotRequest';
 import { Tenor } from './tenor';
+import { Tolerance } from './tolerance';
 import { Transaction } from './transaction';
 import { TransactionConfigurationData } from './transactionConfigurationData';
 import { TransactionConfigurationDataRequest } from './transactionConfigurationDataRequest';
@@ -509,6 +513,7 @@ let enumsMap: {[index: string]: any} = {
         "SwapInstrument.InstrumentTypeEnum": SwapInstrument.InstrumentTypeEnum,
         "Swaption.InstrumentTypeEnum": Swaption.InstrumentTypeEnum,
         "Tenor.UnitEnum": Tenor.UnitEnum,
+        "Tolerance.TypeEnum": Tolerance.TypeEnum,
         "TransactionConfigurationMovementData.MovementTypesEnum": TransactionConfigurationMovementData.MovementTypesEnum,
         "TransactionConfigurationMovementDataRequest.MovementTypesEnum": TransactionConfigurationMovementDataRequest.MovementTypesEnum,
         "TransactionConfigurationTypeAlias.TransactionRolesEnum": TransactionConfigurationTypeAlias.TransactionRolesEnum,
@@ -631,6 +636,7 @@ let typeMap: {[index: string]: any} = {
     "PortfolioReconciliationRequest": PortfolioReconciliationRequest,
     "PortfolioSearchResult": PortfolioSearchResult,
     "PortfoliosReconciliationRequest": PortfoliosReconciliationRequest,
+    "PortfoliosReconciliationRequestPreview": PortfoliosReconciliationRequestPreview,
     "PricingContext": PricingContext,
     "PricingOptions": PricingOptions,
     "ProcessedCommand": ProcessedCommand,
@@ -689,6 +695,7 @@ let typeMap: {[index: string]: any} = {
     "TargetTaxLot": TargetTaxLot,
     "TargetTaxLotRequest": TargetTaxLotRequest,
     "Tenor": Tenor,
+    "Tolerance": Tolerance,
     "Transaction": Transaction,
     "TransactionConfigurationData": TransactionConfigurationData,
     "TransactionConfigurationDataRequest": TransactionConfigurationDataRequest,

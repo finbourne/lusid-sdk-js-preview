@@ -10,31 +10,47 @@
  * Do not edit the class manually.
  */
 
-import { Link } from './link';
+import { PortfolioReconciliationRequest } from './portfolioReconciliationRequest';
+import { Tolerance } from './tolerance';
 
-export class UpsertInstrumentPropertiesResponse {
+export class PortfoliosReconciliationRequestPreview {
     /**
-    * The asAt datetime at which the properties were updated or inserted on the specified instruments.
+    * Tolerance to be included for the units and cost.
     */
-    'asAtDate': Date;
-    'links'?: Array<Link>;
+    'tolerance'?: { [key: string]: Tolerance; };
+    'left': PortfolioReconciliationRequest;
+    'right': PortfolioReconciliationRequest;
+    /**
+    * Instrument properties to be included with any identified breaks. These properties will be in the effective and AsAt dates of the left portfolio
+    */
+    'instrumentPropertyKeys': Array<string>;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "asAtDate",
-            "baseName": "asAtDate",
-            "type": "Date"
+            "name": "tolerance",
+            "baseName": "tolerance",
+            "type": "{ [key: string]: Tolerance; }"
         },
         {
-            "name": "links",
-            "baseName": "links",
-            "type": "Array<Link>"
+            "name": "left",
+            "baseName": "left",
+            "type": "PortfolioReconciliationRequest"
+        },
+        {
+            "name": "right",
+            "baseName": "right",
+            "type": "PortfolioReconciliationRequest"
+        },
+        {
+            "name": "instrumentPropertyKeys",
+            "baseName": "instrumentPropertyKeys",
+            "type": "Array<string>"
         }    ];
 
     static getAttributeTypeMap() {
-        return UpsertInstrumentPropertiesResponse.attributeTypeMap;
+        return PortfoliosReconciliationRequestPreview.attributeTypeMap;
     }
 }
 

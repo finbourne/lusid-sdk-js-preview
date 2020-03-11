@@ -10,31 +10,36 @@
  * Do not edit the class manually.
  */
 
-import { Link } from './link';
 
-export class UpsertInstrumentPropertiesResponse {
+export class Tolerance {
     /**
-    * The asAt datetime at which the properties were updated or inserted on the specified instruments.
+    * The numerical value of the property.
     */
-    'asAtDate': Date;
-    'links'?: Array<Link>;
+    'value'?: number;
+    'type'?: Tolerance.TypeEnum;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "asAtDate",
-            "baseName": "asAtDate",
-            "type": "Date"
+            "name": "value",
+            "baseName": "value",
+            "type": "number"
         },
         {
-            "name": "links",
-            "baseName": "links",
-            "type": "Array<Link>"
+            "name": "type",
+            "baseName": "type",
+            "type": "Tolerance.TypeEnum"
         }    ];
 
     static getAttributeTypeMap() {
-        return UpsertInstrumentPropertiesResponse.attributeTypeMap;
+        return Tolerance.attributeTypeMap;
     }
 }
 
+export namespace Tolerance {
+    export enum TypeEnum {
+        Absolute = <any> 'Absolute',
+        Relative = <any> 'Relative'
+    }
+}
