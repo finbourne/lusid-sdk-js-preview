@@ -13,6 +13,7 @@ export * from './aggregationResponseNodeOfDictionaryOfStringToObject';
 export * from './annulQuotesResponse';
 export * from './annulSingleStructuredDataResponse';
 export * from './annulStructuredDataResponse';
+export * from './bondInstrument';
 export * from './cdsDetailSpecification';
 export * from './cdsInstrument';
 export * from './change';
@@ -40,6 +41,7 @@ export * from './createUnitDefinition';
 export * from './currencyAndAmount';
 export * from './cutLabelDefinition';
 export * from './cutLocalTime';
+export * from './dataDefinition';
 export * from './dataMapping';
 export * from './dataType';
 export * from './deleteInstrumentPropertiesResponse';
@@ -150,6 +152,7 @@ export * from './resourceListOfReconciliationBreak';
 export * from './resourceListOfScopeDefinition';
 export * from './resourceListOfString';
 export * from './resourceListOfValueType';
+export * from './resultDataKeyRule';
 export * from './resultDataSchema';
 export * from './results';
 export * from './schema';
@@ -237,6 +240,7 @@ import { AggregationResponseNodeOfDictionaryOfStringToObject } from './aggregati
 import { AnnulQuotesResponse } from './annulQuotesResponse';
 import { AnnulSingleStructuredDataResponse } from './annulSingleStructuredDataResponse';
 import { AnnulStructuredDataResponse } from './annulStructuredDataResponse';
+import { BondInstrument } from './bondInstrument';
 import { CdsDetailSpecification } from './cdsDetailSpecification';
 import { CdsInstrument } from './cdsInstrument';
 import { Change } from './change';
@@ -264,6 +268,7 @@ import { CreateUnitDefinition } from './createUnitDefinition';
 import { CurrencyAndAmount } from './currencyAndAmount';
 import { CutLabelDefinition } from './cutLabelDefinition';
 import { CutLocalTime } from './cutLocalTime';
+import { DataDefinition } from './dataDefinition';
 import { DataMapping } from './dataMapping';
 import { DataType } from './dataType';
 import { DeleteInstrumentPropertiesResponse } from './deleteInstrumentPropertiesResponse';
@@ -374,6 +379,7 @@ import { ResourceListOfReconciliationBreak } from './resourceListOfReconciliatio
 import { ResourceListOfScopeDefinition } from './resourceListOfScopeDefinition';
 import { ResourceListOfString } from './resourceListOfString';
 import { ResourceListOfValueType } from './resourceListOfValueType';
+import { ResultDataKeyRule } from './resultDataKeyRule';
 import { ResultDataSchema } from './resultDataSchema';
 import { Results } from './results';
 import { Schema } from './schema';
@@ -458,6 +464,7 @@ let primitives = [
                  
 let enumsMap: {[index: string]: any} = {
         "AggregateSpec.OpEnum": AggregateSpec.OpEnum,
+        "BondInstrument.InstrumentTypeEnum": BondInstrument.InstrumentTypeEnum,
         "CdsDetailSpecification.SeniorityEnum": CdsDetailSpecification.SeniorityEnum,
         "CdsDetailSpecification.RestructuringTypeEnum": CdsDetailSpecification.RestructuringTypeEnum,
         "CdsInstrument.InstrumentTypeEnum": CdsInstrument.InstrumentTypeEnum,
@@ -510,6 +517,7 @@ let enumsMap: {[index: string]: any} = {
         "QuoteSeriesId.InstrumentIdTypeEnum": QuoteSeriesId.InstrumentIdTypeEnum,
         "QuoteSeriesId.QuoteTypeEnum": QuoteSeriesId.QuoteTypeEnum,
         "ResourceListOfValueType.ValuesEnum": ResourceListOfValueType.ValuesEnum,
+        "ResultDataKeyRule.SupplierEnum": ResultDataKeyRule.SupplierEnum,
         "Results.FormatEnum": Results.FormatEnum,
         "SwapInstrument.NotionalExchangeTypeEnum": SwapInstrument.NotionalExchangeTypeEnum,
         "SwapInstrument.InstrumentTypeEnum": SwapInstrument.InstrumentTypeEnum,
@@ -545,6 +553,7 @@ let typeMap: {[index: string]: any} = {
     "AnnulQuotesResponse": AnnulQuotesResponse,
     "AnnulSingleStructuredDataResponse": AnnulSingleStructuredDataResponse,
     "AnnulStructuredDataResponse": AnnulStructuredDataResponse,
+    "BondInstrument": BondInstrument,
     "CdsDetailSpecification": CdsDetailSpecification,
     "CdsInstrument": CdsInstrument,
     "Change": Change,
@@ -572,6 +581,7 @@ let typeMap: {[index: string]: any} = {
     "CurrencyAndAmount": CurrencyAndAmount,
     "CutLabelDefinition": CutLabelDefinition,
     "CutLocalTime": CutLocalTime,
+    "DataDefinition": DataDefinition,
     "DataMapping": DataMapping,
     "DataType": DataType,
     "DeleteInstrumentPropertiesResponse": DeleteInstrumentPropertiesResponse,
@@ -682,6 +692,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfScopeDefinition": ResourceListOfScopeDefinition,
     "ResourceListOfString": ResourceListOfString,
     "ResourceListOfValueType": ResourceListOfValueType,
+    "ResultDataKeyRule": ResultDataKeyRule,
     "ResultDataSchema": ResultDataSchema,
     "Results": Results,
     "Schema": Schema,

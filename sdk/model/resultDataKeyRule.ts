@@ -11,26 +11,82 @@
  */
 
 
-export class ResourceId {
-    'scope'?: string;
-    'code'?: string;
+/**
+* A rule that describes how we resolve (unit) result data.
+*/
+export class ResultDataKeyRule {
+    /**
+    * The result data key that identifies the address pattern that this is a rule for
+    */
+    'resourceKey': string;
+    /**
+    * the result resource supplier (where the data comes from)
+    */
+    'supplier': ResultDataKeyRule.SupplierEnum;
+    /**
+    * which is the scope in which the data should be found
+    */
+    'dataScope': string;
+    /**
+    * document code that defines which document is desired
+    */
+    'documentCode': string;
+    /**
+    * Shorthand for the time interval used to select result data.
+    */
+    'quoteInterval'?: string;
+    /**
+    * The AsAt predicate specification.
+    */
+    'asAt'?: Date;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "scope",
-            "baseName": "scope",
+            "name": "resourceKey",
+            "baseName": "resourceKey",
             "type": "string"
         },
         {
-            "name": "code",
-            "baseName": "code",
+            "name": "supplier",
+            "baseName": "supplier",
+            "type": "ResultDataKeyRule.SupplierEnum"
+        },
+        {
+            "name": "dataScope",
+            "baseName": "dataScope",
             "type": "string"
+        },
+        {
+            "name": "documentCode",
+            "baseName": "documentCode",
+            "type": "string"
+        },
+        {
+            "name": "quoteInterval",
+            "baseName": "quoteInterval",
+            "type": "string"
+        },
+        {
+            "name": "asAt",
+            "baseName": "asAt",
+            "type": "Date"
         }    ];
 
     static getAttributeTypeMap() {
-        return ResourceId.attributeTypeMap;
+        return ResultDataKeyRule.attributeTypeMap;
     }
 }
 
+export namespace ResultDataKeyRule {
+    export enum SupplierEnum {
+        DataScope = <any> 'DataScope',
+        Lusid = <any> 'Lusid',
+        Isda = <any> 'Isda',
+        Client = <any> 'Client',
+        Edi = <any> 'Edi',
+        TraderMade = <any> 'TraderMade',
+        FactSet = <any> 'FactSet'
+    }
+}

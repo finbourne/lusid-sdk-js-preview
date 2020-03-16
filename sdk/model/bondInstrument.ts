@@ -10,27 +10,83 @@
  * Do not edit the class manually.
  */
 
+import { FlowConventions } from './flowConventions';
 
-export class ResourceId {
-    'scope'?: string;
-    'code'?: string;
+/**
+* IL Bond Instrument; Lusid-ibor internal representation of a Bond instrument
+*/
+export class BondInstrument {
+    'startDate': Date;
+    'maturityDate': Date;
+    'domCcy': string;
+    /**
+    * simple coupon rate.
+    */
+    'couponRate': number;
+    /**
+    * The face-value or principal for the bond at outset.              This might be reduced through its lifetime in the event of amortization or similar.
+    */
+    'principal': number;
+    'flowConventions': FlowConventions;
+    /**
+    * Instrument type, must be property for JSON.
+    */
+    'instrumentType': BondInstrument.InstrumentTypeEnum;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "scope",
-            "baseName": "scope",
+            "name": "startDate",
+            "baseName": "startDate",
+            "type": "Date"
+        },
+        {
+            "name": "maturityDate",
+            "baseName": "maturityDate",
+            "type": "Date"
+        },
+        {
+            "name": "domCcy",
+            "baseName": "domCcy",
             "type": "string"
         },
         {
-            "name": "code",
-            "baseName": "code",
-            "type": "string"
+            "name": "couponRate",
+            "baseName": "couponRate",
+            "type": "number"
+        },
+        {
+            "name": "principal",
+            "baseName": "principal",
+            "type": "number"
+        },
+        {
+            "name": "flowConventions",
+            "baseName": "flowConventions",
+            "type": "FlowConventions"
+        },
+        {
+            "name": "instrumentType",
+            "baseName": "instrumentType",
+            "type": "BondInstrument.InstrumentTypeEnum"
         }    ];
 
     static getAttributeTypeMap() {
-        return ResourceId.attributeTypeMap;
+        return BondInstrument.attributeTypeMap;
     }
 }
 
+export namespace BondInstrument {
+    export enum InstrumentTypeEnum {
+        QuotedSecurity = <any> 'QuotedSecurity',
+        InterestRateSwap = <any> 'InterestRateSwap',
+        FxForward = <any> 'FxForward',
+        Exotic = <any> 'Exotic',
+        FxOption = <any> 'FxOption',
+        CreditDefaultSwap = <any> 'CreditDefaultSwap',
+        InterestRateSwaption = <any> 'InterestRateSwaption',
+        Bond = <any> 'Bond',
+        Unknown = <any> 'Unknown'
+    }
+}
