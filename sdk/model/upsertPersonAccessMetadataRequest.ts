@@ -10,61 +10,25 @@
  * Do not edit the class manually.
  */
 
-import { DataMapping } from './dataMapping';
+import { AccessMetadataValue } from './accessMetadataValue';
 
-/**
-* An item of structured result data that is to be inserted into Lusid. This will typically be a Json or Xml document that  contains a set of result data appropriate to a specific entity such as an instrument or potentially an index.
-*/
-export class StructuredResultData {
+export class UpsertPersonAccessMetadataRequest {
     /**
-    * The format of the accompanying document.
+    * The access control metadata to assign to a Person that matches the identifier
     */
-    'documentFormat': string;
-    /**
-    * The semantic version of the document format; MAJOR.MINOR.PATCH
-    */
-    'version'?: string;
-    /**
-    * The name or description for the document
-    */
-    'name'?: string;
-    /**
-    * The document that will be stored (or retrieved) and which describes a unit result data entity such as a set of prices or yields
-    */
-    'document': string;
-    'dataMap'?: DataMapping;
+    'metadata'?: Array<AccessMetadataValue>;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "documentFormat",
-            "baseName": "documentFormat",
-            "type": "string"
-        },
-        {
-            "name": "version",
-            "baseName": "version",
-            "type": "string"
-        },
-        {
-            "name": "name",
-            "baseName": "name",
-            "type": "string"
-        },
-        {
-            "name": "document",
-            "baseName": "document",
-            "type": "string"
-        },
-        {
-            "name": "dataMap",
-            "baseName": "dataMap",
-            "type": "DataMapping"
+            "name": "metadata",
+            "baseName": "metadata",
+            "type": "Array<AccessMetadataValue>"
         }    ];
 
     static getAttributeTypeMap() {
-        return StructuredResultData.attributeTypeMap;
+        return UpsertPersonAccessMetadataRequest.attributeTypeMap;
     }
 }
 

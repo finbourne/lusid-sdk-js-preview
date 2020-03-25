@@ -196,6 +196,7 @@ export * from './upsertInstrumentPropertyRequest';
 export * from './upsertInstrumentsResponse';
 export * from './upsertOrderPropertiesRequest';
 export * from './upsertOrderPropertiesResponse';
+export * from './upsertPersonAccessMetadataRequest';
 export * from './upsertPersonRequest';
 export * from './upsertPortfolioAccessMetadataRequest';
 export * from './upsertPortfolioExecutionsResponse';
@@ -423,6 +424,7 @@ import { UpsertInstrumentPropertyRequest } from './upsertInstrumentPropertyReque
 import { UpsertInstrumentsResponse } from './upsertInstrumentsResponse';
 import { UpsertOrderPropertiesRequest } from './upsertOrderPropertiesRequest';
 import { UpsertOrderPropertiesResponse } from './upsertOrderPropertiesResponse';
+import { UpsertPersonAccessMetadataRequest } from './upsertPersonAccessMetadataRequest';
 import { UpsertPersonRequest } from './upsertPersonRequest';
 import { UpsertPortfolioAccessMetadataRequest } from './upsertPortfolioAccessMetadataRequest';
 import { UpsertPortfolioExecutionsResponse } from './upsertPortfolioExecutionsResponse';
@@ -736,6 +738,7 @@ let typeMap: {[index: string]: any} = {
     "UpsertInstrumentsResponse": UpsertInstrumentsResponse,
     "UpsertOrderPropertiesRequest": UpsertOrderPropertiesRequest,
     "UpsertOrderPropertiesResponse": UpsertOrderPropertiesResponse,
+    "UpsertPersonAccessMetadataRequest": UpsertPersonAccessMetadataRequest,
     "UpsertPersonRequest": UpsertPersonRequest,
     "UpsertPortfolioAccessMetadataRequest": UpsertPortfolioAccessMetadataRequest,
     "UpsertPortfolioExecutionsResponse": UpsertPortfolioExecutionsResponse,
