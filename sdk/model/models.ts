@@ -84,6 +84,7 @@ export * from './lusidValidationProblemDetails';
 export * from './marketContext';
 export * from './marketContextSuppliers';
 export * from './marketDataKeyRule';
+export * from './marketDataManifest';
 export * from './marketOptions';
 export * from './metricValue';
 export * from './modelSelection';
@@ -216,6 +217,8 @@ export * from './upsertTransactionPropertiesResponse';
 export * from './user';
 export * from './valuationReconciliationRequest';
 export * from './valuationsReconciliationRequest';
+export * from './valueTupleOfMarketDataKeyRuleToQuote';
+export * from './valueTupleOfMarketDataKeyRuleToStructuredMarketData';
 export * from './vendorModelRule';
 export * from './version';
 export * from './versionSummaryDto';
@@ -312,6 +315,7 @@ import { LusidValidationProblemDetails } from './lusidValidationProblemDetails';
 import { MarketContext } from './marketContext';
 import { MarketContextSuppliers } from './marketContextSuppliers';
 import { MarketDataKeyRule } from './marketDataKeyRule';
+import { MarketDataManifest } from './marketDataManifest';
 import { MarketOptions } from './marketOptions';
 import { MetricValue } from './metricValue';
 import { ModelSelection } from './modelSelection';
@@ -444,6 +448,8 @@ import { UpsertTransactionPropertiesResponse } from './upsertTransactionProperti
 import { User } from './user';
 import { ValuationReconciliationRequest } from './valuationReconciliationRequest';
 import { ValuationsReconciliationRequest } from './valuationsReconciliationRequest';
+import { ValueTupleOfMarketDataKeyRuleToQuote } from './valueTupleOfMarketDataKeyRuleToQuote';
+import { ValueTupleOfMarketDataKeyRuleToStructuredMarketData } from './valueTupleOfMarketDataKeyRuleToStructuredMarketData';
 import { VendorModelRule } from './vendorModelRule';
 import { Version } from './version';
 import { VersionSummaryDto } from './versionSummaryDto';
@@ -503,6 +509,7 @@ let enumsMap: {[index: string]: any} = {
         "MarketDataKeyRule.QuoteTypeEnum": MarketDataKeyRule.QuoteTypeEnum,
         "MarketOptions.DefaultSupplierEnum": MarketOptions.DefaultSupplierEnum,
         "MarketOptions.DefaultInstrumentCodeTypeEnum": MarketOptions.DefaultInstrumentCodeTypeEnum,
+        "MarketOptions.ManifestLevelOfDetailEnum": MarketOptions.ManifestLevelOfDetailEnum,
         "ModelSelection.LibraryEnum": ModelSelection.LibraryEnum,
         "ModelSelection.ModelEnum": ModelSelection.ModelEnum,
         "OrderBySpec.SortOrderEnum": OrderBySpec.SortOrderEnum,
@@ -626,6 +633,7 @@ let typeMap: {[index: string]: any} = {
     "MarketContext": MarketContext,
     "MarketContextSuppliers": MarketContextSuppliers,
     "MarketDataKeyRule": MarketDataKeyRule,
+    "MarketDataManifest": MarketDataManifest,
     "MarketOptions": MarketOptions,
     "MetricValue": MetricValue,
     "ModelSelection": ModelSelection,
@@ -758,6 +766,8 @@ let typeMap: {[index: string]: any} = {
     "User": User,
     "ValuationReconciliationRequest": ValuationReconciliationRequest,
     "ValuationsReconciliationRequest": ValuationsReconciliationRequest,
+    "ValueTupleOfMarketDataKeyRuleToQuote": ValueTupleOfMarketDataKeyRuleToQuote,
+    "ValueTupleOfMarketDataKeyRuleToStructuredMarketData": ValueTupleOfMarketDataKeyRuleToStructuredMarketData,
     "VendorModelRule": VendorModelRule,
     "Version": Version,
     "VersionSummaryDto": VersionSummaryDto,

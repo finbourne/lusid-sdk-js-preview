@@ -10,30 +10,29 @@
  * Do not edit the class manually.
  */
 
+import { MarketDataKeyRule } from './marketDataKeyRule';
+import { StructuredMarketData } from './structuredMarketData';
 
-/**
-* An amount of a specific currency, specifying a value and an associated unit
-*/
-export class CurrencyAndAmount {
-    'amount'?: number;
-    'currency'?: string;
+export class ValueTupleOfMarketDataKeyRuleToStructuredMarketData {
+    'item1'?: MarketDataKeyRule;
+    'item2'?: StructuredMarketData;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "amount",
-            "baseName": "amount",
-            "type": "number"
+            "name": "item1",
+            "baseName": "item1",
+            "type": "MarketDataKeyRule"
         },
         {
-            "name": "currency",
-            "baseName": "currency",
-            "type": "string"
+            "name": "item2",
+            "baseName": "item2",
+            "type": "StructuredMarketData"
         }    ];
 
     static getAttributeTypeMap() {
-        return CurrencyAndAmount.attributeTypeMap;
+        return ValueTupleOfMarketDataKeyRuleToStructuredMarketData.attributeTypeMap;
     }
 }
 
