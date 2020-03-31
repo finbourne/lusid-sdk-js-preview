@@ -10,9 +10,6 @@ export * from './aggregationMeasureFailureDetail';
 export * from './aggregationOptions';
 export * from './aggregationRequest';
 export * from './aggregationResponseNodeOfDictionaryOfStringToObject';
-export * from './allocation';
-export * from './allocationRequest';
-export * from './allocationSetRequest';
 export * from './annulQuotesResponse';
 export * from './annulSingleStructuredDataResponse';
 export * from './annulStructuredDataResponse';
@@ -97,7 +94,6 @@ export * from './orderBySpec';
 export * from './orderRequest';
 export * from './orderSetRequest';
 export * from './outputTransaction';
-export * from './pagedResourceListOfAllocation';
 export * from './pagedResourceListOfInstrument';
 export * from './pagedResourceListOfOrder';
 export * from './pagedResourceListOfPortfolioGroup';
@@ -135,7 +131,6 @@ export * from './referencePortfolioConstituentRequest';
 export * from './resourceId';
 export * from './resourceListOfAccessControlledResource';
 export * from './resourceListOfAccessMetadataValueOf';
-export * from './resourceListOfAllocation';
 export * from './resourceListOfChange';
 export * from './resourceListOfConstituentsAdjustmentHeader';
 export * from './resourceListOfCorporateAction';
@@ -246,9 +241,6 @@ import { AggregationMeasureFailureDetail } from './aggregationMeasureFailureDeta
 import { AggregationOptions } from './aggregationOptions';
 import { AggregationRequest } from './aggregationRequest';
 import { AggregationResponseNodeOfDictionaryOfStringToObject } from './aggregationResponseNodeOfDictionaryOfStringToObject';
-import { Allocation } from './allocation';
-import { AllocationRequest } from './allocationRequest';
-import { AllocationSetRequest } from './allocationSetRequest';
 import { AnnulQuotesResponse } from './annulQuotesResponse';
 import { AnnulSingleStructuredDataResponse } from './annulSingleStructuredDataResponse';
 import { AnnulStructuredDataResponse } from './annulStructuredDataResponse';
@@ -333,7 +325,6 @@ import { OrderBySpec } from './orderBySpec';
 import { OrderRequest } from './orderRequest';
 import { OrderSetRequest } from './orderSetRequest';
 import { OutputTransaction } from './outputTransaction';
-import { PagedResourceListOfAllocation } from './pagedResourceListOfAllocation';
 import { PagedResourceListOfInstrument } from './pagedResourceListOfInstrument';
 import { PagedResourceListOfOrder } from './pagedResourceListOfOrder';
 import { PagedResourceListOfPortfolioGroup } from './pagedResourceListOfPortfolioGroup';
@@ -371,7 +362,6 @@ import { ReferencePortfolioConstituentRequest } from './referencePortfolioConsti
 import { ResourceId } from './resourceId';
 import { ResourceListOfAccessControlledResource } from './resourceListOfAccessControlledResource';
 import { ResourceListOfAccessMetadataValueOf } from './resourceListOfAccessMetadataValueOf';
-import { ResourceListOfAllocation } from './resourceListOfAllocation';
 import { ResourceListOfChange } from './resourceListOfChange';
 import { ResourceListOfConstituentsAdjustmentHeader } from './resourceListOfConstituentsAdjustmentHeader';
 import { ResourceListOfCorporateAction } from './resourceListOfCorporateAction';
@@ -569,9 +559,6 @@ let typeMap: {[index: string]: any} = {
     "AggregationOptions": AggregationOptions,
     "AggregationRequest": AggregationRequest,
     "AggregationResponseNodeOfDictionaryOfStringToObject": AggregationResponseNodeOfDictionaryOfStringToObject,
-    "Allocation": Allocation,
-    "AllocationRequest": AllocationRequest,
-    "AllocationSetRequest": AllocationSetRequest,
     "AnnulQuotesResponse": AnnulQuotesResponse,
     "AnnulSingleStructuredDataResponse": AnnulSingleStructuredDataResponse,
     "AnnulStructuredDataResponse": AnnulStructuredDataResponse,
@@ -656,7 +643,6 @@ let typeMap: {[index: string]: any} = {
     "OrderRequest": OrderRequest,
     "OrderSetRequest": OrderSetRequest,
     "OutputTransaction": OutputTransaction,
-    "PagedResourceListOfAllocation": PagedResourceListOfAllocation,
     "PagedResourceListOfInstrument": PagedResourceListOfInstrument,
     "PagedResourceListOfOrder": PagedResourceListOfOrder,
     "PagedResourceListOfPortfolioGroup": PagedResourceListOfPortfolioGroup,
@@ -694,7 +680,6 @@ let typeMap: {[index: string]: any} = {
     "ResourceId": ResourceId,
     "ResourceListOfAccessControlledResource": ResourceListOfAccessControlledResource,
     "ResourceListOfAccessMetadataValueOf": ResourceListOfAccessMetadataValueOf,
-    "ResourceListOfAllocation": ResourceListOfAllocation,
     "ResourceListOfChange": ResourceListOfChange,
     "ResourceListOfConstituentsAdjustmentHeader": ResourceListOfConstituentsAdjustmentHeader,
     "ResourceListOfCorporateAction": ResourceListOfCorporateAction,
