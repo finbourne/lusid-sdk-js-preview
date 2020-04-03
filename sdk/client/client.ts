@@ -258,7 +258,7 @@ export class Client {
     } else if (source = Source.Secrets) {
       // Try and import the credentials file
       try {
-        var credentials: any = require(this.secretsFilePath)
+        var credentials: any = require(this.secretsFilePath).api
       // If there are any problems throw an error
       } catch (e) {
         throw "File " + this.secretsFilePath + " could not be found/read, ensure that it exists in the client folder"
