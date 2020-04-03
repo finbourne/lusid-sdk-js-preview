@@ -17,11 +17,4 @@ import { Client, Source } from '../../client/client'
   Read from secrets.json
 */
 
-export var client = new Client(
-  [Source.Secrets, 'tokenUrl'],
-  [Source.Secrets, 'username'],
-  [Source.Secrets, 'password'],
-  [Source.Secrets, 'clientId'],
-  [Source.Secrets, 'clientSecret'],
-  [Source.Secrets, 'apiUrl']
-)
+export var client = new Client()

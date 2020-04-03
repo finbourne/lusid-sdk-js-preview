@@ -137,12 +137,12 @@ export class Client {
 
   // Constructor method which takes the details on where to find the credentials
   constructor(
-    tokenUrlDetails: [Source, string],
-    usernameDetails: [Source, string],
-    passwordDetails: [Source, string],
-    clientIdDetails: [Source, string],
-    clientSecretDetails: [Source, string],
-    apiUrlDetails: [Source, string],
+    tokenUrlDetails?: [Source, string],
+    usernameDetails?: [Source, string],
+    passwordDetails?: [Source, string],
+    clientIdDetails?: [Source, string],
+    clientSecretDetails?: [Source, string],
+    apiUrlDetails?: [Source, string],
     ) {
 
     // Set the path to the secrets file
@@ -201,9 +201,6 @@ export class Client {
       // Set the base path for the API
       this.basePath = this.fetchCredentials(Source.Secrets, 'apiUrl');
     }
-
-    // Set the base path for the API
-    // this.basePath = this.fetchCredentials(apiUrlDetails[0], apiUrlDetails[1])
 
     // Set the authentications to use oauth2
     this.authentications = {'oauth2': new Oauth2(undefined, 0,0,0,0)}
