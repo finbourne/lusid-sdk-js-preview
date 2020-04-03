@@ -305,7 +305,7 @@ export class Client {
         var credentials: any = require(this.secretsFilePath).api
       // If there are any problems throw an error
       } catch (e) {
-        throw "File " + this.secretsFilePath + " could not be found/read, ensure that it exists in the client folder"
+        throw "File " + this.secretsFilePath + " could not be found/read, or its structure is not valid as per LUSID's JSON format"
       }
       // If the property exists in the secrets file set the credential
       if (credentials.hasOwnProperty(value)) {
