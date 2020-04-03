@@ -1,5 +1,5 @@
 // Require the LUSID SDK and libraries
-import expect from 'expect'
+import mlog from 'mocha-logger';
 
 import {
   CreateTransactionPortfolioRequest, Portfolio } from "../../api";
@@ -51,7 +51,7 @@ describe('Create portfolios', () => {
     createTransactionPortfolio(uuid4(), createRequest)
     .then((res) => {
 
-      expect( res.id ).toBeInstanceOf( Object )
+      mlog.log( `Request log @ ${res.links.pop().href}` );
 
       this.portfolioData = res;
 
@@ -68,7 +68,7 @@ describe('Create portfolios', () => {
       this.portfolioData.id.code
     ).then( ( res ) => {
 
-      console.log( res );
+      mlog.log( `Request log @ ${res.links.pop().href}` );
 
       done()
     } )

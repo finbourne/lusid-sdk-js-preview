@@ -1,7 +1,7 @@
 // Require the libraries
 import localVarRequest from 'request';
-import querystring from 'querystring'
-
+import querystring from 'querystring';
+import fs from 'fs';
 
 // Import a list of the LUSID APIs
 const lusid = require('../api');
@@ -14,12 +14,6 @@ environments which have features such as IntelliSense.
 It contains a property for each of the LUSID APIs.
 */
 import {Api} from "../apis";
-
-
-// Set the default path to the secrets file
-const secretsPath = process.cwd() + '/secrets.json'
-// Set the default amount of seconds before token expiry to call a refresh
-const refreshLimit = 3580
 
 /*
 To authenticate with a third party identity provider, a number of credentials
@@ -124,83 +118,92 @@ export class Client {
   basePath: string
   // The available API endpoints
   api: Api
+
   // The path to the secrets file which may be used to store credentials
-  secretsFilePath: string
+  secretsFilePath: string = process.cwd() + '/secrets.json'
+  secretsFileContent: { api: {} }
+
   // The credential access details
   private tokenUrlDetails: [Source, string]
   private usernameDetails: [Source, string]
   private passwordDetails: [Source, string]
   private clientIdDetails: [Source, string]
   private clientSecretDetails: [Source, string]
+
   // The refresh limit in seconds before token expiry to trigger a refresh
-  refreshLimit: number = refreshLimit
+  refreshLimit: number = 3580
+
+  private loadSecretsFile(): object | null {
+
+    try
+    {
+      this.secretsFileContent = require( this.secretsFilePath );
+    }
+    catch( e )
+    {
+      // not necessarily a problem. even if the format of the source file is bad, this will reset the internal validation to an empty configuration
+
+      this.secretsFileContent = { api: {} };
+    }
+
+    return this.secretsFileContent;
+
+  }
 
   // Constructor method which takes the details on where to find the credentials
   constructor(
-    tokenUrlDetails?: [Source, string],
-    usernameDetails?: [Source, string],
-    passwordDetails?: [Source, string],
-    clientIdDetails?: [Source, string],
-    clientSecretDetails?: [Source, string],
-    apiUrlDetails?: [Source, string],
+      {
+        tokenUrlDetails,
+        usernameDetails,
+        passwordDetails,
+        clientIdDetails,
+        clientSecretDetails,
+        apiUrlDetails
+      }: {
+        tokenUrlDetails?: [Source, string],
+        usernameDetails?: [Source, string],
+        passwordDetails?: [Source, string],
+        clientIdDetails?: [Source, string],
+        clientSecretDetails?: [Source, string],
+        apiUrlDetails?: [Source, string],
+      } = {
+        tokenUrlDetails: [Source.Secrets, 'tokenUrl'],
+        usernameDetails: [Source.Secrets, 'username'],
+        passwordDetails: [Source.Secrets, 'password'],
+        clientIdDetails: [Source.Secrets, 'clientId'],
+        clientSecretDetails: [Source.Secrets, 'clientSecret'],
+        apiUrlDetails: [Source.Secrets, 'apiUrl']
+      }
     ) {
 
-    // Set the path to the secrets file
-    this.secretsFilePath = secretsPath
+    // attempt to get disk config by default. if it doesn't exist it is still fine
+    this.loadSecretsFile();
 
-    if(
-      !!tokenUrlDetails
-      && !!usernameDetails
-      && !!passwordDetails
-      && !!clientIdDetails
-      && !!clientSecretDetails
-      && !!apiUrlDetails
-    )
-    {
-      // Set the credential details inline
+    // provide init + default to environment vars below
+    this.tokenUrlDetails = !!tokenUrlDetails ? tokenUrlDetails : (
+      [Source.Environment, 'FBN_TOKEN_URL']
+    );
 
-      this.tokenUrlDetails = tokenUrlDetails
-      this.usernameDetails = usernameDetails
-      this.passwordDetails = passwordDetails
-      this.clientIdDetails = clientIdDetails
-      this.clientSecretDetails = clientSecretDetails
+    this.usernameDetails = !!usernameDetails ? usernameDetails : (
+      [Source.Environment, 'FBN_USERNAME']
+    );
 
-      // Set the base path for the API
-      this.basePath = this.fetchCredentials(apiUrlDetails[0], apiUrlDetails[1])
-    }
-    else if(
-      process.env.hasOwnProperty('FBN_TOKEN_URL')
-      && process.env.hasOwnProperty('FBN_USERNAME')
-      && process.env.hasOwnProperty('FBN_PASSWORD')
-      && process.env.hasOwnProperty('FBN_CLIENT_ID')
-      && process.env.hasOwnProperty('FBN_CLIENT_SECRET')
-      && process.env.hasOwnProperty('FBN_LUSID_API_URL')
-    )
-    {
-      // Set the credential details from environment
+    this.passwordDetails = !!passwordDetails ? passwordDetails : (
+      [Source.Environment, 'FBN_PASSWORD']
+    );
 
-      this.tokenUrlDetails = [Source.Environment, 'FBN_TOKEN_URL']
-      this.usernameDetails = [Source.Environment, 'FBN_USERNAME']
-      this.passwordDetails = [Source.Environment, 'FBN_PASSWORD']
-      this.clientIdDetails = [Source.Environment, 'FBN_CLIENT_ID']
-      this.clientSecretDetails = [Source.Environment, 'FBN_CLIENT_SECRET']
+    this.clientIdDetails = !!clientIdDetails ? clientIdDetails : (
+      [Source.Environment, 'FBN_CLIENT_ID']
+    );
 
-      // Set the base path for the API
-      this.basePath = this.fetchCredentials(Source.Environment, 'FBN_LUSID_API_URL')
-    }
-    else
-    {
-      // Set the credential details from the secrets file
+    this.clientSecretDetails = !!clientSecretDetails ? clientSecretDetails : (
+      [Source.Environment, 'FBN_CLIENT_SECRET']
+    );
 
-      this.tokenUrlDetails = [Source.Secrets, 'tokenUrl'];
-      this.usernameDetails = [Source.Secrets, 'username'];
-      this.passwordDetails = [Source.Secrets, 'password'];
-      this.clientIdDetails = [Source.Secrets, 'clientId'];
-      this.clientSecretDetails = [Source.Secrets, 'clientSecret'];
-
-      // Set the base path for the API
-      this.basePath = this.fetchCredentials(Source.Secrets, 'apiUrl');
-    }
+    // initialize base path at this moment, since it is needed below
+    this.basePath = !!apiUrlDetails ? this.fetchConfigurationItem( apiUrlDetails[0], apiUrlDetails[1] ) : (
+      this.fetchConfigurationItem( Source.Environment, 'FBN_CLIENT_SECRET' )
+    );
 
     // Set the authentications to use oauth2
     this.authentications = {'oauth2': new Oauth2(undefined, 0,0,0,0)}
@@ -240,30 +243,31 @@ export class Client {
   The function below is a wrapper function which wraps the input function
   'apiFunction' with token refresh logic to ensure uninterrupted access to LUSID.
   */
-  public apiFunctionWrapper(apiFunction, api, self) {
+  private apiFunctionWrapper(apiFunction, api, self) {
 
-    // Return a function
-    return function() {
-      // Collect the arguments passed into the wrapper to use later
-      var topLevelArguments = arguments
-      // Return a promise to ensure that the function remains 'thenable'
-      return new Promise(function(resolve, reject) {
+    // Return a function, thus not immediately invoking
+
+    return ( ...args ) => {
+
+      // Return a promise to ensure that the function remains '.then()-able'
+      return new Promise( (resolve, reject) => {
+
         // Trigger a token refresh
-        var oauthPopulated = self.refreshToken(
-          self.authentications['oauth2'],
-          self.refreshLimit,
-          self.tokenUrlDetails,
-          self.usernameDetails,
-          self.passwordDetails,
-          self.clientIdDetails,
-          self.clientSecretDetails
-        )
-        // Once this has completed pass the oauth2 details on
-        oauthPopulated.then(function(oauth2Details: Oauth2) {
+        this.refreshToken(
+          this.authentications.oauth2,
+          this.refreshLimit,
+          this.tokenUrlDetails,
+          this.usernameDetails,
+          this.passwordDetails,
+          this.clientIdDetails,
+          this.clientSecretDetails
+        ).then( (oauth2Details: Oauth2) => {
+
           // Update the clients oauth2 details
-          self.authentications.oauth2 = oauth2Details
+          this.authentications.oauth2 = oauth2Details
           // Update the access token of the api being called
-          api['authentications']['oauth2']['accessToken'] = self.authentications.oauth2.accessToken
+          api.authentications.oauth2.accessToken = this.authentications.oauth2.accessToken
+
           /*
           Resolve the promise with the function that was wrapped
           In this case api is the api that this function is a part of,
@@ -271,7 +275,9 @@ export class Client {
           in the right context. The second argument topLevelArguments
           is the arguments passed into the Wrapper
           */
-          resolve(apiFunction.apply(api, topLevelArguments))
+
+          resolve( apiFunction.apply( api, args ) );
+
         })
         // Error handling
         .catch((err) => reject(err))
@@ -279,52 +285,39 @@ export class Client {
     }
   }
 
-  /*
-  The fetchCredentials function gets the credentials from the specified source
-  */
-  private fetchCredentials(source: Source, value: string): string {
+  private fetchConfigurationItem( sourceType: Source, itemName: string ): string {
 
-    // Environment source
-    if (source == Source.Environment) {
-      // Set the credential using an environment variable
-      var credential: string = process.env[value] || 'MISSING'
-      // If it the environment variable does not exist then throw error
-      if (credential == 'MISSING') {
-        throw "Environment variable " + value + " has not been specified"
-      }
+    switch( sourceType )
+    {
+      case Source.Environment:
 
-    // Raw or variable source
-    } else if (source == Source.Raw) {
-      // Set the credential directly
-      var credential: string = value
+        if( !!process.env[ itemName ] )
+        {
+          return process.env[ itemName ];
+        }
 
-    // Secrets source
-    } else if (source = Source.Secrets) {
-      // Try and import the credentials file
-      try {
-        var credentials: any = require(this.secretsFilePath).api
-      // If there are any problems throw an error
-      } catch (e) {
-        throw "File " + this.secretsFilePath + " could not be found/read, or its structure is not valid as per LUSID's JSON format"
-      }
-      // If the property exists in the secrets file set the credential
-      if (credentials.hasOwnProperty(value)) {
-        var credential: string = credentials[value]
-      } else {
-        throw "The specified value " + value + " does not exist in the file"
-      }
+        throw `Environment variable ${itemName} has not been specified`;
 
-    // If the source is incorrectly specified
-    } else {
-      let availableSources: string[]
-      for (var availableSource in Source) {
-        availableSources.push(availableSource)
-      }
-      throw "Source is not valid, must be one of " + availableSources.toString()
+      break;
+      case Source.Raw:
+
+        return itemName;
+
+      break;
+      case Source.Secrets:
+
+        if( !!this.secretsFileContent.api[ itemName ] )
+        {
+          return this.secretsFileContent.api[ itemName ];
+        }
+
+      break;
+      default:
+
+        throw `Source is not valid, must be one of ${Object.keys( Source ).join( ", " )}`;
+
     }
 
-    // Return the credential
-    return credential
   }
 
   /*
@@ -357,11 +350,11 @@ export class Client {
 
           // If so, populate the credentials
           var credentials = new Credentials(
-            this.fetchCredentials(tokenUrlDetails[0], tokenUrlDetails[1]),
-            this.fetchCredentials(usernameDetails[0], usernameDetails[1]),
-            this.fetchCredentials(passwordDetails[0], passwordDetails[1]),
-            this.fetchCredentials(clientIdDetails[0], clientIdDetails[1]),
-            this.fetchCredentials(clientSecretDetails[0], clientSecretDetails[1])
+            this.fetchConfigurationItem(tokenUrlDetails[0], tokenUrlDetails[1]),
+            this.fetchConfigurationItem(usernameDetails[0], usernameDetails[1]),
+            this.fetchConfigurationItem(passwordDetails[0], passwordDetails[1]),
+            this.fetchConfigurationItem(clientIdDetails[0], clientIdDetails[1]),
+            this.fetchConfigurationItem(clientSecretDetails[0], clientSecretDetails[1])
           )
 
           // Get a new access token using these credentials
@@ -429,7 +422,8 @@ export class Client {
     clientId: string,
     clientSecret: string
   ): Promise<Oauth2> {
-    // Returns a rpomise
+
+    // Returns a promise
 
     return new Promise((resolve, reject) => {
 

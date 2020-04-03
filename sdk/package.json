@@ -25,9 +25,9 @@
   "devDependencies": {
     "@types/mocha": "^5.2.6",
     "@types/node": "^11.13.2",
-    "expect": "^25.2.7",
     "js-yaml": ">=3.13.1",
     "mocha": "^6.1.4",
+    "mocha-logger": "^1.0.6",
     "typescript": "^3.5.1"
   }
 }

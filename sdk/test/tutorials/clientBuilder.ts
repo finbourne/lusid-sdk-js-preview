@@ -1,3 +1,3 @@
 import { Client, Source } from '../../client/client'
 
-export var client = new Client()
+export var client = new Client();
