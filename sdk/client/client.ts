@@ -148,15 +148,62 @@ export class Client {
     // Set the path to the secrets file
     this.secretsFilePath = secretsPath
 
-    // Set the credential details
-    this.tokenUrlDetails = tokenUrlDetails
-    this.usernameDetails = usernameDetails
-    this.passwordDetails = passwordDetails
-    this.clientIdDetails = clientIdDetails
-    this.clientSecretDetails = clientSecretDetails
+    if(
+      !!tokenUrlDetails
+      && !!usernameDetails
+      && !!passwordDetails
+      && !!clientIdDetails
+      && !!clientSecretDetails
+      && !!apiUrlDetails
+    )
+    {
+      // Set the credential details inline
+
+      this.tokenUrlDetails = tokenUrlDetails
+      this.usernameDetails = usernameDetails
+      this.passwordDetails = passwordDetails
+      this.clientIdDetails = clientIdDetails
+      this.clientSecretDetails = clientSecretDetails
+
+      // Set the base path for the API
+      this.basePath = this.fetchCredentials(apiUrlDetails[0], apiUrlDetails[1])
+    }
+    else if(
+      process.env.hasOwnProperty('FBN_TOKEN_URL')
+      && process.env.hasOwnProperty('FBN_USERNAME')
+      && process.env.hasOwnProperty('FBN_PASSWORD')
+      && process.env.hasOwnProperty('FBN_CLIENT_ID')
+      && process.env.hasOwnProperty('FBN_CLIENT_SECRET')
+      && process.env.hasOwnProperty('FBN_LUSID_API_URL')
+    )
+    {
+      // Set the credential details from environment
+
+      this.tokenUrlDetails = [Source.Environment, 'FBN_TOKEN_URL']
+      this.usernameDetails = [Source.Environment, 'FBN_USERNAME']
+      this.passwordDetails = [Source.Environment, 'FBN_PASSWORD']
+      this.clientIdDetails = [Source.Environment, 'FBN_CLIENT_ID']
+      this.clientSecretDetails = [Source.Environment, 'FBN_CLIENT_SECRET']
+
+      // Set the base path for the API
+      this.basePath = this.fetchCredentials(Source.Environment, 'FBN_LUSID_API_URL')
+    }
+    else
+    {
+      // Set the credential details from the secrets file
+
+      this.tokenUrlDetails = [Source.Secrets, 'tokenUrl'];
+      this.usernameDetails = [Source.Secrets, 'username'];
+      this.passwordDetails = [Source.Secrets, 'password'];
+      this.clientIdDetails = [Source.Secrets, 'clientId'];
+      this.clientSecretDetails = [Source.Secrets, 'clientSecret'];
+
+      // Set the base path for the API
+      this.basePath = this.fetchCredentials(Source.Secrets, 'apiUrl');
+    }
 
     // Set the base path for the API
-    this.basePath = this.fetchCredentials(apiUrlDetails[0], apiUrlDetails[1])
+    // this.basePath = this.fetchCredentials(apiUrlDetails[0], apiUrlDetails[1])
 
     // Set the authentications to use oauth2
     this.authentications = {'oauth2': new Oauth2(undefined, 0,0,0,0)}
