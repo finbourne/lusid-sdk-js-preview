@@ -17,7 +17,7 @@ import {Api} from "../apis";
 
 
 // Set the default path to the secrets file
-const secretsPath = './secrets.json'
+const secretsPath = process.cwd() + '/secrets.json'
 // Set the default amount of seconds before token expiry to call a refresh
 const refreshLimit = 3580
 
