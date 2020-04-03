@@ -18,3 +18,23 @@ If you would prefer to generate the Javsscript SDK locally from the FINBOURNE Op
 - download the latest swagger.json file from https://api.lusid.com/swagger/index.html
 - save it in this directory as lusid.json
 - run `$ docker-compose up && docker-compose rm -f`
+
+# Working with the SDK
+
+The relevant tests are in sdk/test/tutorials
+
+You need to either create a sdk/secrets.json file, or set environment variables, based on your lusid installation. The configurations go into sdk/test/tutorials/clientBuilder.ts
+
+To generate the JS based on TS
+
+```
+$ cd sdk/
+$ npm i
+$ npm run-script build
+```
+
+To run all scripts in sdk/test/tutorials
+
+```
+$ npm test
+```
