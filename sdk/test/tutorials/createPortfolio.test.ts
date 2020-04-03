@@ -1,6 +1,7 @@
-// Require the LUSID SDK and libraries
+// Test specific libraries
 import mlog from 'mocha-logger';
 
+// Require the LUSID SDK and libraries
 import {
   CreateTransactionPortfolioRequest, Portfolio } from "../../api";
 
@@ -9,10 +10,10 @@ import { IncomingMessage } from "http";
 import { LusidProblemDetails, DeletedEntityResponse } from "../../model/models";
 const uuid4 = require('uuid/v4')
 
-function createTransactionPortfolio(
+const createTransactionPortfolio = (
   scope: string,
   createRequest: CreateTransactionPortfolioRequest
-  ) :Promise<Portfolio> {
+  ) :Promise<Portfolio> => {
     return new Promise((resolve, reject) => {
       client.api.transactionPortfolios.createPortfolio(
         scope,
@@ -25,10 +26,10 @@ function createTransactionPortfolio(
     })
   }
 
-function deletePortfolio(
+const deletePortfolio = (
   scope: string,
   code: string
-  ) :Promise<DeletedEntityResponse> {
+  ) :Promise<DeletedEntityResponse> => {
     return new Promise((resolve, reject) => {
       client.api.portfolios.deletePortfolio(
         scope,
