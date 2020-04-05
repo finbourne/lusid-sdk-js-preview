@@ -229,8 +229,8 @@ export class Client {
           // Wrap each method with token refresh logic
           this.api[apiName][prop] = this.apiFunctionWrapper(
             this.api[apiName][prop],
-            this.api[apiName],
-            this)
+            this.api[apiName]
+          )
         }
 
       }
@@ -242,7 +242,7 @@ export class Client {
   The function below is a wrapper function which wraps the input function
   'apiFunction' with token refresh logic to ensure uninterrupted access to LUSID.
   */
-  private apiFunctionWrapper(apiFunction, api, self) {
+  private apiFunctionWrapper(apiFunction, api ) {
 
     // Return a function, thus not immediately invoking
 
