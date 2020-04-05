@@ -1,20 +1,37 @@
 // Test specific libraries
 import mlog from 'mocha-logger';
+import uuidv4 from 'uuid/v4';
 
 // Require the LUSID SDK and libraries
 import {
-  CreateTransactionPortfolioRequest, Portfolio } from "../../api";
-
+  CreateTransactionPortfolioRequest,
+  Portfolio
+} from "../../api";
 import { client } from './clientBuilder'
+import {
+  LusidProblemDetails,
+  DeletedEntityResponse
+} from "../../model/models";
+
+// Lusid method handling libraries
 import { IncomingMessage } from "http";
-import { LusidProblemDetails, DeletedEntityResponse } from "../../model/models";
-const uuid4 = require('uuid/v4')
 
 const createTransactionPortfolio = (
   scope: string,
-  createRequest: CreateTransactionPortfolioRequest
   ) :Promise<Portfolio> => {
+
     return new Promise((resolve, reject) => {
+
+      const
+        createRequest = Object.assign(
+          new CreateTransactionPortfolioRequest(),
+          {
+            displayName: "UK Equities",
+            code: "UKEQTY",
+            baseCurrency: "GBP"
+          }
+        );
+
       client.api.transactionPortfolios.createPortfolio(
         scope,
         createRequest
@@ -23,7 +40,8 @@ const createTransactionPortfolio = (
         resolve( res.body )
       })
       .catch((err: {response: IncomingMessage; body: LusidProblemDetails}) => reject(err))
-    })
+
+    } );
   }
 
 const deletePortfolio = (
@@ -42,14 +60,9 @@ const deletePortfolio = (
     })
   }
 
-var createRequest = new CreateTransactionPortfolioRequest()
-createRequest.displayName = "UK Equities"
-createRequest.code = "UKEQTY"
-createRequest.baseCurrency = "GBP"
-
 describe('Create portfolios', () => {
-  it('Should create a portfolio', (done) => {
-    createTransactionPortfolio(uuid4(), createRequest)
+  it('Should create a transaction portfolio', (done) => {
+    createTransactionPortfolio(uuidv4())
     .then((res) => {
 
       mlog.log( `Request log @ ${res.links.pop().href}` );
@@ -62,7 +75,7 @@ describe('Create portfolios', () => {
     .catch((err) => console.log(err.response.statusCode, err.response.statusMessage))
   })
 
-  it('Should delete the portfolio', (done) => {
+  it('Should delete the transaction portfolio', (done) => {
 
     deletePortfolio(
       this.portfolioData.id.scope,

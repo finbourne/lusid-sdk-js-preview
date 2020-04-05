@@ -1,7 +1,6 @@
 // Require the libraries
 import localVarRequest from 'request';
 import querystring from 'querystring';
-import fs from 'fs';
 
 // Import a list of the LUSID APIs
 const lusid = require('../api');
