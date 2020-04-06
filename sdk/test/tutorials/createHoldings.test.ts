@@ -391,7 +391,7 @@ describe('Holdings', () => {
       done()
 
     })
-    .catch((err) => {console.log(err);mlog.error(err.response.statusCode, err.response.statusMessage, err.response.body.detail ) } )
+    .catch((err) => {mlog.error(err.response.statusCode, err.response.statusMessage, err.response.body.detail ) } )
   })
 
   it('Should upsert instruments', (done) => {
@@ -509,6 +509,7 @@ describe('Holdings', () => {
       instrumentIDs: this.instrumentIDs
     } ).then( ( res ) => {
 
+      // check the number of holdings returned
       assert.strictEqual( res.values.length, 4 );
 
       // Validate the cash position

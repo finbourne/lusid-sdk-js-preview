@@ -112,7 +112,7 @@ export const Transactions = {
           new CurrencyAndAmount(),
           {
             amount: units * price,
-            currency
+            currency: !!currency ? currency : "GBP"
           }
         ),
         source: "Broker"
