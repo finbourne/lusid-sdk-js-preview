@@ -180,28 +180,34 @@ export class Client {
 
     // provide init + default to environment vars below
     this.tokenUrlDetails = !!tokenUrlDetails ? tokenUrlDetails : (
-      [Source.Environment, 'FBN_TOKEN_URL']
+      // [Source.Environment, 'FBN_TOKEN_URL']
+      [Source.Secrets, 'tokenUrl']
     );
 
     this.usernameDetails = !!usernameDetails ? usernameDetails : (
-      [Source.Environment, 'FBN_USERNAME']
+      // [Source.Environment, 'FBN_USERNAME']
+      [Source.Secrets, 'username']
     );
 
     this.passwordDetails = !!passwordDetails ? passwordDetails : (
-      [Source.Environment, 'FBN_PASSWORD']
+      // [Source.Environment, 'FBN_PASSWORD']
+      [Source.Secrets, 'password']
     );
 
     this.clientIdDetails = !!clientIdDetails ? clientIdDetails : (
-      [Source.Environment, 'FBN_CLIENT_ID']
+      // [Source.Environment, 'FBN_CLIENT_ID']
+      [Source.Secrets, 'clientId']
     );
 
     this.clientSecretDetails = !!clientSecretDetails ? clientSecretDetails : (
-      [Source.Environment, 'FBN_CLIENT_SECRET']
+      // [Source.Environment, 'FBN_CLIENT_SECRET']
+      [Source.Secrets, 'clientSecret']
     );
 
     // initialize base path at this moment, since it is needed below
     this.basePath = !!apiUrlDetails ? this.fetchConfigurationItem( apiUrlDetails[0], apiUrlDetails[1] ) : (
-      this.fetchConfigurationItem( Source.Environment, 'FBN_CLIENT_SECRET' )
+      // this.fetchConfigurationItem( Source.Environment, 'FBN_CLIENT_SECRET' )
+      this.fetchConfigurationItem( Source.Secrets, 'apiUrl' )
     );
 
     // Set the authentications to use oauth2
@@ -309,6 +315,8 @@ export class Client {
         {
           return this.secretsFileContent.api[ itemName ];
         }
+
+        throw `Configuration item ${itemName} not found in secrets file`;
 
       break;
       default:
