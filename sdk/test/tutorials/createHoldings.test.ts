@@ -391,7 +391,7 @@ describe('Holdings', () => {
       done()
 
     })
-    .catch((err) => {mlog.error(err.response.statusCode, err.response.statusMessage, err.response.body.detail ) } )
+    .catch((err) => { mlog.error(err) } )
   })
 
   it('Should upsert instruments', (done) => {
@@ -431,7 +431,7 @@ describe('Holdings', () => {
       done()
 
     })
-    .catch((err) => { mlog.error(err.response.statusCode, err.response.statusMessage, err.response.body.detail ) } )
+    .catch((err) => { mlog.error(err) } )
   })
 
   it('Should upsert transactions', (done) => {
@@ -444,7 +444,7 @@ describe('Holdings', () => {
 
       done();
     } )
-    .catch((err) => mlog.error(err.response.statusCode, err.response.statusMessage, err.response.body.detail ) )
+    .catch((err) => { mlog.error(err) } )
   });
 
   it('Should get holdings', (done) => {
@@ -497,7 +497,7 @@ describe('Holdings', () => {
         throw err;
       }
 
-      mlog.error(err.response.statusCode, err.response.statusMessage, err.response.body.detail )
+      mlog.error(err);
 
     } )
   });
@@ -533,7 +533,7 @@ describe('Holdings', () => {
 
       done();
     } )
-    .catch((err) => mlog.error(err.response.statusCode, err.response.statusMessage, err.response.body.detail ) )
+    .catch((err) => { mlog.error(err) } )
   });
 
   it('Should delete the portfolio', (done) => {
@@ -547,7 +547,7 @@ describe('Holdings', () => {
 
       done()
     } )
-    .catch((err) => mlog.error(err.response.statusCode, err.response.statusMessage, err.response.body.detail ))
+    .catch((err) => { mlog.error(err) } )
   })
 })
 
