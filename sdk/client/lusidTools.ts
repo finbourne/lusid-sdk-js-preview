@@ -4,17 +4,10 @@ import moment, { Moment } from 'moment';
 
 // Require the LUSID SDK and libraries
 import {
-  CreateTransactionPortfolioRequest,
-  Portfolio
-} from "../api";
-import {
   TransactionRequest,
   CurrencyAndAmount,
   TransactionPrice,
 } from "../model/models";
-
-// Lusid method handling libraries
-import { IncomingMessage } from "http";
 
 export const Transactions = {
 
