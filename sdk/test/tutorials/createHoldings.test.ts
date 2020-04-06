@@ -509,7 +509,7 @@ describe('Holdings', () => {
       instrumentIDs: this.instrumentIDs
     } ).then( ( res ) => {
 
-      assert.strictEqual( res.values.length, 4 )
+      assert.strictEqual( res.values.length, 4 );
 
       // Validate the cash position
       assert.strictEqual( res.values[ 3 ].instrumentUid, `CCY_GBP` );
@@ -535,19 +535,19 @@ describe('Holdings', () => {
     .catch((err) => mlog.error(err.response.statusCode, err.response.statusMessage, err.response.body.detail ) )
   });
 
-  // it('Should delete the portfolio', (done) => {
+  it('Should delete the portfolio', (done) => {
 
-  //   deletePortfolio(
-  //     this.portfolioObject.id.scope,
-  //     this.portfolioObject.id.code
-  //   ).then( ( res ) => {
+    deletePortfolio(
+      this.portfolioObject.id.scope,
+      this.portfolioObject.id.code
+    ).then( ( res ) => {
 
-  //     mlog.log( `Request log @ ${res.links.pop().href}` );
+      mlog.log( `Request log @ ${res.links.pop().href}` );
 
-  //     done()
-  //   } )
-  //   .catch((err) => mlog.error(err.response.statusCode, err.response.statusMessage, err.response.body.detail ))
-  // })
+      done()
+    } )
+    .catch((err) => mlog.error(err.response.statusCode, err.response.statusMessage, err.response.body.detail ))
+  })
 })
 
 export {};
