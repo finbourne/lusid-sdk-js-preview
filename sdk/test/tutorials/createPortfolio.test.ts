@@ -532,7 +532,7 @@ const listScopes = (
 
 }
 
-describe('Create portfolios', () => {
+describe('Portfolios', () => {
 
   it('Should create a transaction portfolio', (done) => {
     createTransactionPortfolio(
