@@ -114,7 +114,7 @@ const upsertTransactions = (
           currency: portfolioObject.baseCurrency,
           transactionDate: moment([2018, 2, 5, 0, 0, 0]).utc(),
           settlementDate: moment([2018, 2, 5, 0, 0, 0]).utc(),
-          units: 10000
+          units: 100000
         } ),
 
         // Transactions on first day
@@ -238,8 +238,6 @@ describe('Holdings', () => {
 
       mlog.log( `Created portfolio ${res.displayName}` );
 
-      mlog.log( `Request log @ ${res.links.pop().href}` );
-
       done()
 
     })
@@ -270,19 +268,20 @@ describe('Holdings', () => {
     .then((res) => {
 
       this.instrumentsObject = res;
+      this.instrumentIDs = [];
 
       Object.keys( res.values ).forEach( ( insertedInstrument ) => {
 
         mlog.log( `Upserted instrument ${insertedInstrument} -> ${res.values[ insertedInstrument ].lusidInstrumentId}`)
 
-      } );
+        this.instrumentIDs.push( res.values[ insertedInstrument ].lusidInstrumentId )
 
-      mlog.log( `Request log @ ${res.links.pop().href}` );
+      } );
 
       done()
 
     })
-    .catch((err) =>mlog.error(err.response.statusCode, err.response.statusMessage, err.response.body.detail ) )
+    .catch((err) => { mlog.error(err.response.statusCode, err.response.statusMessage, err.response.body.detail ) } )
   })
 
   it('Should upsert transactions', (done) => {
@@ -304,20 +303,38 @@ describe('Holdings', () => {
       referenceDate: moment([2018, 2, 5, 0, 0, 0]).add( 10, "day" ).utc()
     } ).then( ( res ) => {
 
-      res.values.sort( ( a, b ) => {
-
-        return ( a.instrumentUid > b.instrumentUid ) ? 1 : -1
-
-      } );
-
       // check the number of holdings returned
       assert.strictEqual( res.values.length, 5 );
 
       // Check the cash balance
-      assert.strictEqual( res.values[ 0 ].instrumentUid, "CCY_GBP" );
+      assert.strictEqual( res.values[ 4 ].instrumentUid, "CCY_GBP" );
 
       // Validate the holdings
-      assert.strictEqual( res.values[ 0 ].holdingType, "B" );
+      assert.strictEqual( res.values[ 4 ].holdingType, "B" );
+
+      // First holding
+      assert.strictEqual( res.values[ 0 ].holdingType, "P", "Incorrect holding type" );
+      assert.strictEqual( res.values[ 0 ].instrumentUid, this.instrumentIDs[ 0 ], "Incorrect instrument id" );
+      assert.strictEqual( res.values[ 0 ].units, 100.0, "Incorrect units" );
+      assert.strictEqual( res.values[ 0 ].cost.amount, 10100.0, "Incorrect amount" );
+
+      // Second holding. This should be the sum of 2 transactions done above
+      assert.strictEqual( res.values[ 1 ].holdingType, "P", "Incorrect holding type" );
+      assert.strictEqual( res.values[ 1 ].instrumentUid, this.instrumentIDs[ 1 ], "Incorrect instrument id" );
+      assert.strictEqual( res.values[ 1 ].units, 200.0, "Incorrect units" );
+      assert.strictEqual( res.values[ 1 ].cost.amount, 20600.0, "Incorrect amount" );
+
+      // Third holding
+      assert.strictEqual( res.values[ 2 ].holdingType, "P", "Incorrect holding type" );
+      assert.strictEqual( res.values[ 2 ].instrumentUid, this.instrumentIDs[ 2 ], "Incorrect instrument id" );
+      assert.strictEqual( res.values[ 2 ].units, 100.0, "Incorrect units" );
+      assert.strictEqual( res.values[ 2 ].cost.amount, 10300.0, "Incorrect amount" );
+
+      // Fourth holding
+      assert.strictEqual( res.values[ 3 ].holdingType, "P", "Incorrect holding type" );
+      assert.strictEqual( res.values[ 3 ].instrumentUid, this.instrumentIDs[ 3 ], "Incorrect instrument id" );
+      assert.strictEqual( res.values[ 3 ].units, 100.0, "Incorrect units" );
+      assert.strictEqual( res.values[ 3 ].cost.amount, 10500.0, "Incorrect amount" );
 
       mlog.log( `Request log @ ${res.links.pop().href}` );
 
