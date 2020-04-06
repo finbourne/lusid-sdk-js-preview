@@ -553,7 +553,7 @@ describe('Portfolios', () => {
       done()
 
     })
-    .catch((err) => {mlog.error(err.response.statusCode, err.response.statusMessage, err.response.body.detail ) } )
+    .catch((err) => { mlog.error(err) } )
   })
 
   it('Should create a portfolio with properties', (done) => {
@@ -576,7 +576,7 @@ describe('Portfolios', () => {
       done()
 
     })
-    .catch((err) => {mlog.error(err.response.statusCode, err.response.statusMessage, err.response.body.detail ) } )
+    .catch((err) => { mlog.error(err) } )
   })
 
   it('Should upsert instruments', (done) => {
@@ -616,7 +616,7 @@ describe('Portfolios', () => {
       done()
 
     })
-    .catch((err) => { mlog.error(err.response.statusCode, err.response.statusMessage, err.response.body.detail ) } )
+    .catch((err) => { mlog.error(err) } )
   })
 
   it('Should add a transaction to the portfolio', (done) => {
@@ -636,7 +636,7 @@ describe('Portfolios', () => {
       done()
 
     })
-    .catch((err) => { mlog.error(err.response.statusCode, err.response.statusMessage, err.response.body.detail ) } )
+    .catch((err) => { mlog.error(err) } )
 
   })
 
@@ -658,7 +658,7 @@ describe('Portfolios', () => {
       done()
 
     })
-    .catch((err) => { mlog.error(err.response.statusCode, err.response.statusMessage, err.response.body.detail ) } )
+    .catch((err) => { mlog.error(err) } )
 
   })
 
@@ -674,7 +674,7 @@ describe('Portfolios', () => {
       done()
 
     })
-    .catch((err) => { mlog.error(err.response.statusCode, err.response.statusMessage, err.response.body.detail ) } )
+    .catch((err) => { mlog.error(err) } )
 
   })
 
@@ -693,7 +693,7 @@ describe('Portfolios', () => {
       done()
 
     })
-    .catch((err) => { console.log(err); mlog.error(err.response.statusCode, err.response.statusMessage, err.response.body.detail ) } )
+    .catch((err) => { mlog.error(err) } )
 
   })
 
