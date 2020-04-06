@@ -10,6 +10,7 @@ import {
   Portfolio
 } from "../../api";
 import { client } from './clientBuilder'
+import { Transactions } from '../../client/lusidTools'
 import {
   LusidProblemDetails,
   DeletedEntityResponse,
@@ -99,11 +100,9 @@ const upsertTransactions = (
     {
       portfolioObject,
       instrumentsObject,
-      units
     }: {
       portfolioObject: Portfolio,
       instrumentsObject: UpsertInstrumentsResponse,
-      units: Number
     }
   ) :Promise<UpsertPortfolioTransactionsResponse> => {
 
@@ -111,177 +110,61 @@ const upsertTransactions = (
 
       const transactionsToUpsert = [
 
-        // Starting Cash Position
-        Object.assign(
-          new TransactionRequest(),
-          {
-            transactionId: uuidv4(),
-            type: "FundsIn",
-            instrumentIdentifiers: {
-              "Instrument/default/Currency": portfolioObject.baseCurrency
-            },
-            transactionDate: moment([2018, 2, 5, 0, 0, 0]).utc(),
-            settlementDate: moment([2018, 2, 5, 0, 0, 0]).utc(),
-            units,
-            transactionPrice: Object.assign(
-              new TransactionPrice(),
-              {
-                price: 0.0
-              }
-            ),
-            totalConsideration: Object.assign(
-              new CurrencyAndAmount(),
-              {
-                currency: portfolioObject.baseCurrency
-              }
-            ),
-            source: "Client"
-          }
-        ),
+        Transactions.defineCashFundsInRequest( {
+          currency: portfolioObject.baseCurrency,
+          transactionDate: moment([2018, 2, 5, 0, 0, 0]).utc(),
+          settlementDate: moment([2018, 2, 5, 0, 0, 0]).utc(),
+          units: 10000
+        } ),
 
-        // Initial transaction on day_t1
+        // Transactions on first day
 
-        Object.assign(
-          new TransactionRequest(),
-          {
-            transactionId: uuidv4(),
-            type: "Buy",
-            instrumentIdentifiers: {
-              "Instrument/default/LusidInstrumentId": Object.entries( instrumentsObject.values )[ 0 ][ 1 ].lusidInstrumentId
-            },
-            transactionDate: moment([2018, 2, 5, 0, 0, 0]).utc(),
-            settlementDate: moment([2018, 2, 5, 0, 0, 0]).utc(),
-            units: 100.0,
-            transactionPrice: Object.assign(
-              new TransactionPrice(),
-              {
-                price: 101.0
-              }
-            ),
-            totalConsideration: Object.assign(
-              new CurrencyAndAmount(),
-              {
-                amount: 101.0 * 100.0,
-                currency: portfolioObject.baseCurrency
-              }
-            ),
-            source: "Broker"
-          }
-        ),
+        Transactions.defineBuyRequest( {
+          lusidInstrumentId: Object.entries( instrumentsObject.values )[ 0 ][ 1 ].lusidInstrumentId,
+          currency: portfolioObject.baseCurrency,
+          transactionDate: moment([2018, 2, 5, 0, 0, 0]).utc(),
+          settlementDate: moment([2018, 2, 5, 0, 0, 0]).utc(),
+          units: 100.0,
+          price: 101.0
+        } ),
 
-        Object.assign(
-          new TransactionRequest(),
-          {
-            transactionId: uuidv4(),
-            type: "Buy",
-            instrumentIdentifiers: {
-              "Instrument/default/LusidInstrumentId": Object.entries( instrumentsObject.values )[ 1 ][ 1 ].lusidInstrumentId
-            },
-            transactionDate: moment([2018, 2, 5, 0, 0, 0]).utc(),
-            settlementDate: moment([2018, 2, 5, 0, 0, 0]).utc(),
-            units: 100.0,
-            transactionPrice: Object.assign(
-              new TransactionPrice(),
-              {
-                price: 102.0
-              }
-            ),
-            totalConsideration: Object.assign(
-              new CurrencyAndAmount(),
-              {
-                amount: 102.0 * 100.0,
-                currency: portfolioObject.baseCurrency
-              }
-            ),
-            source: "Broker"
-          }
-        ),
+        Transactions.defineBuyRequest( {
+          lusidInstrumentId: Object.entries( instrumentsObject.values )[ 1 ][ 1 ].lusidInstrumentId,
+          currency: portfolioObject.baseCurrency,
+          transactionDate: moment([2018, 2, 5, 0, 0, 0]).utc(),
+          settlementDate: moment([2018, 2, 5, 0, 0, 0]).utc(),
+          units: 100.0,
+          price: 102.0
+        } ),
 
-        Object.assign(
-          new TransactionRequest(),
-          {
-            transactionId: uuidv4(),
-            type: "Buy",
-            instrumentIdentifiers: {
-              "Instrument/default/LusidInstrumentId": Object.entries( instrumentsObject.values )[ 2 ][ 1 ].lusidInstrumentId
-            },
-            transactionDate: moment([2018, 2, 5, 0, 0, 0]).utc(),
-            settlementDate: moment([2018, 2, 5, 0, 0, 0]).utc(),
-            units: 100.0,
-            transactionPrice: Object.assign(
-              new TransactionPrice(),
-              {
-                price: 103.0
-              }
-            ),
-            totalConsideration: Object.assign(
-              new CurrencyAndAmount(),
-              {
-                amount: 103.0 * 100.0,
-                currency: portfolioObject.baseCurrency
-              }
-            ),
-            source: "Broker"
-          }
-        ),
+        Transactions.defineBuyRequest( {
+          lusidInstrumentId: Object.entries( instrumentsObject.values )[ 2 ][ 1 ].lusidInstrumentId,
+          currency: portfolioObject.baseCurrency,
+          transactionDate: moment([2018, 2, 5, 0, 0, 0]).utc(),
+          settlementDate: moment([2018, 2, 5, 0, 0, 0]).utc(),
+          units: 100.0,
+          price: 103.0
+        } ),
 
-        // Transaction on day_t1 + 5
+        // Transactions on first day + 5
 
-        Object.assign(
-          new TransactionRequest(),
-          {
-            transactionId: uuidv4(),
-            type: "Buy",
-            instrumentIdentifiers: {
-              "Instrument/default/LusidInstrumentId": Object.entries( instrumentsObject.values )[ 1 ][ 1 ].lusidInstrumentId
-            },
-            transactionDate: moment([2018, 2, 5, 0, 0, 0]).add( 5, "day" ).utc(),
-            settlementDate: moment([2018, 2, 5, 0, 0, 0]).add( 5, "day" ).utc(),
-            units: 100.0,
-            transactionPrice: Object.assign(
-              new TransactionPrice(),
-              {
-                price: 104.0
-              }
-            ),
-            totalConsideration: Object.assign(
-              new CurrencyAndAmount(),
-              {
-                amount: 104.0 * 100.0,
-                currency: portfolioObject.baseCurrency
-              }
-            ),
-            source: "Broker"
-          }
-        ),
+        Transactions.defineBuyRequest( {
+          lusidInstrumentId: Object.entries( instrumentsObject.values )[ 1 ][ 1 ].lusidInstrumentId,
+          currency: portfolioObject.baseCurrency,
+          transactionDate: moment([2018, 2, 5, 0, 0, 0]).add( 5, "day" ).utc(),
+          settlementDate: moment([2018, 2, 5, 0, 0, 0]).add( 5, "day" ).utc(),
+          units: 100.0,
+          price: 104.0
+        } ),
 
-        Object.assign(
-          new TransactionRequest(),
-          {
-            transactionId: uuidv4(),
-            type: "Buy",
-            instrumentIdentifiers: {
-              "Instrument/default/LusidInstrumentId": Object.entries( instrumentsObject.values )[ 3 ][ 1 ].lusidInstrumentId
-            },
-            transactionDate: moment([2018, 2, 5, 0, 0, 0]).add( 5, "day" ).utc(),
-            settlementDate: moment([2018, 2, 5, 0, 0, 0]).add( 5, "day" ).utc(),
-            units: 100.0,
-            transactionPrice: Object.assign(
-              new TransactionPrice(),
-              {
-                price: 105.0
-              }
-            ),
-            totalConsideration: Object.assign(
-              new CurrencyAndAmount(),
-              {
-                amount: 105.0 * 100.0,
-                currency: portfolioObject.baseCurrency
-              }
-            ),
-            source: "Broker"
-          }
-        ),
+        Transactions.defineBuyRequest( {
+          lusidInstrumentId: Object.entries( instrumentsObject.values )[ 3 ][ 1 ].lusidInstrumentId,
+          currency: portfolioObject.baseCurrency,
+          transactionDate: moment([2018, 2, 5, 0, 0, 0]).add( 5, "day" ).utc(),
+          settlementDate: moment([2018, 2, 5, 0, 0, 0]).add( 5, "day" ).utc(),
+          units: 100.0,
+          price: 105.0
+        } ),
 
       ];
 
@@ -406,7 +289,6 @@ describe('Holdings', () => {
     upsertTransactions( {
       portfolioObject: this.portfolioObject,
       instrumentsObject: this.instrumentsObject,
-      units: 10000
     } ).then( ( res ) => {
 
       mlog.log( `Request log @ ${res.links.pop().href}` );
