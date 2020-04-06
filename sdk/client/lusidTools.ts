@@ -31,7 +31,7 @@ export const Transactions = {
       units?: Number
     } = {
       transactionDate: moment(),
-      settlementDate: moment(),
+      settlementDate: null,
       currency: "GBP",
       units: 100
     }
@@ -46,7 +46,7 @@ export const Transactions = {
           "Instrument/default/Currency": currency
         },
         transactionDate,
-        settlementDate,
+        settlementDate: !!settlementDate ? settlementDate : transactionDate,
         units,
         transactionPrice: Object.assign(
           new TransactionPrice(),
@@ -84,7 +84,7 @@ export const Transactions = {
     } = {
       lusidInstrumentId: null,
       transactionDate: moment(),
-      settlementDate: moment(),
+      settlementDate: null,
       currency: "GBP",
       units: 100,
       price: 101
@@ -100,7 +100,7 @@ export const Transactions = {
           "Instrument/default/LusidInstrumentId": lusidInstrumentId
         },
         transactionDate,
-        settlementDate,
+        settlementDate: !!settlementDate ? settlementDate : transactionDate,
         units,
         transactionPrice: Object.assign(
           new TransactionPrice(),

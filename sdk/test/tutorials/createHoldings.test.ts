@@ -14,14 +14,15 @@ import { Transactions } from '../../client/lusidTools'
 import {
   LusidProblemDetails,
   DeletedEntityResponse,
-  TransactionRequest,
   CurrencyAndAmount,
-  TransactionPrice,
   UpsertPortfolioTransactionsResponse,
   InstrumentDefinition,
   InstrumentIdValue,
   UpsertInstrumentsResponse,
-  VersionedResourceListOfPortfolioHolding
+  VersionedResourceListOfPortfolioHolding,
+  AdjustHoldingRequest,
+  TargetTaxLotRequest,
+  AdjustHolding
 } from "../../model/models";
 
 // Lusid method handling libraries
@@ -224,6 +225,155 @@ const deletePortfolio = (
 
   }
 
+const adjustHoldings = (
+  {
+    portfolioObject,
+    currency,
+    instrumentIDs
+  }: {
+    portfolioObject: Portfolio,
+    currency: String,
+    instrumentIDs: Array<String>
+  }
+) :Promise<VersionedResourceListOfPortfolioHolding> => {
+
+  return new Promise((resolve, reject) => {
+
+    const holdingsAdjustments = [
+
+      Object.assign(
+        new AdjustHoldingRequest(),
+        {
+          instrumentIdentifiers: {
+            "Instrument/default/Currency": currency
+          },
+          taxLots: [
+            Object.assign(
+              new TargetTaxLotRequest(),
+              {
+                units: 100000.0
+              }
+            )
+          ]
+        }
+      ),
+
+      Object.assign(
+        new AdjustHoldingRequest(),
+        {
+          instrumentIdentifiers: {
+            "Instrument/default/LusidInstrumentId": instrumentIDs[ 0 ]
+          },
+          taxLots: [
+            Object.assign(
+              new TargetTaxLotRequest(),
+              {
+                units: 100.0,
+                price: 101.0,
+                cost:  Object.assign(
+                  new CurrencyAndAmount(),
+                  {
+                    amount: 10100.0,
+                    currency
+                  }
+                ),
+                portfolioCost: 10100.0,
+                purchaseDate: moment([2018, 1, 1, 0, 0, 0]).utc(),
+                settlementDate: moment([2018, 1, 1, 0, 0, 0]).utc(),
+              }
+            )
+          ]
+        }
+      ),
+
+      Object.assign(
+        new AdjustHoldingRequest(),
+        {
+          instrumentIdentifiers: {
+            "Instrument/default/LusidInstrumentId": instrumentIDs[ 1 ]
+          },
+          taxLots: [
+            Object.assign(
+              new TargetTaxLotRequest(),
+              {
+                units: 100.0,
+                price: 102.0,
+                cost:  Object.assign(
+                  new CurrencyAndAmount(),
+                  {
+                    amount: 10200.0,
+                    currency
+                  }
+                ),
+                portfolioCost: 10200.0,
+                purchaseDate: moment([2018, 1, 1, 0, 0, 0]).utc(),
+                settlementDate: moment([2018, 1, 1, 0, 0, 0]).utc(),
+              }
+            )
+          ]
+        }
+      ),
+
+    ]
+
+    client.api.transactionPortfolios.setHoldings(
+      portfolioObject.id.scope,
+      portfolioObject.id.code,
+      moment([2018, 1, 1, 0, 0, 0]).utc().format(),
+      holdingsAdjustments,
+    )
+    .then((res: {response: IncomingMessage, body: AdjustHolding}) => {
+
+      const transactions = [
+
+        Transactions.defineBuyRequest(
+          {
+            lusidInstrumentId: instrumentIDs[ 0 ],
+            units: 100.0,
+            price: 104.0,
+            currency,
+            transactionDate: moment([2018, 1, 5, 0, 0, 0]).utc()
+          }
+        ),
+
+        Transactions.defineBuyRequest(
+          {
+            lusidInstrumentId: instrumentIDs[ 2 ],
+            units: 100.0,
+            price: 103.0,
+            currency,
+            transactionDate: moment([2018, 1, 5, 0, 0, 0]).utc()
+          }
+        ),
+
+      ];
+
+      client.api.transactionPortfolios.upsertTransactions(
+        portfolioObject.id.scope,
+        portfolioObject.id.code,
+        transactions
+      )
+      .then((res: {response: IncomingMessage, body: UpsertPortfolioTransactionsResponse}) => {
+
+        client.api.transactionPortfolios.getHoldings(
+          portfolioObject.id.scope,
+          portfolioObject.id.code,
+          moment([2018, 1, 5, 0, 0, 0]).utc().format()
+        )
+        .then((res: {response: IncomingMessage, body: VersionedResourceListOfPortfolioHolding}) => {
+          resolve( res.body )
+        })
+        .catch((err: {response: IncomingMessage; body: LusidProblemDetails}) => reject(err))
+
+      } )
+      .catch((err) => mlog.error(err.response.statusCode, err.response.statusMessage, err.response.body.detail ) )
+
+    })
+    .catch((err: {response: IncomingMessage; body: LusidProblemDetails}) => reject(err))
+  });
+
+}
+
 //
 // Unit Test block
 //
@@ -350,6 +500,39 @@ describe('Holdings', () => {
       mlog.error(err.response.statusCode, err.response.statusMessage, err.response.body.detail )
 
     } )
+  });
+
+  it('Should adjust holdings', (done) => {
+    adjustHoldings( {
+      portfolioObject: this.portfolioObject,
+      currency: "GBP",
+      instrumentIDs: this.instrumentIDs
+    } ).then( ( res ) => {
+
+      assert.strictEqual( res.values.length, 4 )
+
+      // Validate the cash position
+      assert.strictEqual( res.values[ 3 ].instrumentUid, `CCY_GBP` );
+      assert.strictEqual( res.values[ 3 ].units, 79300 );
+
+      // First Instrument
+      assert.strictEqual( res.values[ 0 ].instrumentUid, this.instrumentIDs[ 0 ] );
+      assert.strictEqual( res.values[ 0 ].units, 200.0 );
+      assert.strictEqual( res.values[ 0 ].cost.amount, 20500.0 );
+
+      // Second Instrument
+      assert.strictEqual( res.values[ 1 ].instrumentUid, this.instrumentIDs[ 1 ] );
+      assert.strictEqual( res.values[ 1 ].units, 100.0 );
+      assert.strictEqual( res.values[ 1 ].cost.amount, 10200.0 );
+
+      // Third Instrument
+      assert.strictEqual( res.values[ 2 ].instrumentUid, this.instrumentIDs[ 2 ] );
+      assert.strictEqual( res.values[ 2 ].units, 100.0 );
+      assert.strictEqual( res.values[ 2 ].cost.amount, 10300.0 );
+
+      done();
+    } )
+    .catch((err) => mlog.error(err.response.statusCode, err.response.statusMessage, err.response.body.detail ) )
   });
 
   // it('Should delete the portfolio', (done) => {
