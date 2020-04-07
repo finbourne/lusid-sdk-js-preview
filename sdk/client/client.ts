@@ -362,10 +362,16 @@ export class Client {
         }
 
         const
-          configurationObject = _ObjectFromEntries( this.configurationMapping ),
-          equivalentConfiguration = configurationObject[ Source.Environment ][ configurationObject[ sourceType ].indexOf( itemName ) ];
+          configurationObject = _ObjectFromEntries( this.configurationMapping );
 
-        this.fetchConfigurationItem( Source.Environment, equivalentConfiguration, true )
+        // fallback to searching for the equivalent configurarion in the environment variables
+        this.fetchConfigurationItem(
+          Source.Environment,
+          configurationObject[ Source.Environment ][
+            configurationObject[ sourceType ].indexOf( itemName )
+          ],
+          true
+        );
 
       break;
       default:
