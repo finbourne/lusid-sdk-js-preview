@@ -195,21 +195,21 @@ export class Client {
   // The refresh limit in seconds before token expiry to trigger a refresh
   private refreshLimit: number = 3580
 
-  private loadSecretsFile( filePath: string ): object {
+  private loadSecretsFile( secretsFilePath?: string ): object {
 
     try
     {
-      return this.secretsFileContent = require( !!filePath ? filePath : this.configuration.secretsFilePath ).api;
+      return this.secretsFileContent = require( !!secretsFilePath ? secretsFilePath : this.configuration.secretsFilePath ).api;
     }
     catch( e )
     {
       if( e.code === 'MODULE_NOT_FOUND' )
       {
-        if( !!filePath )
+        if( !!secretsFilePath )
         {
           // a specific path was requested
 
-          throw `Configuration file ${filePath} was not found`;
+          throw `Configuration file ${secretsFilePath} was not found`;
         }
 
         // no specific path requested, ergo it went with the default path
@@ -249,7 +249,6 @@ export class Client {
       }
     ) {
 
-    // set the secrets file before anything
     this.configuration.secretsFilePath = !!secretsFilePath
       ? secretsFilePath
       : this.configuration.secretsFilePath
