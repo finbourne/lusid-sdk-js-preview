@@ -3,7 +3,7 @@ import localVarRequest from 'request';
 import querystring from 'querystring';
 
 // Import a list of the LUSID APIs
-const lusid = require('../api');
+import { APIS } from '../api';
 
 /*
 The Api class exists to ensure that all the methods available on each of the
@@ -37,35 +37,61 @@ export enum Source {
   Raw
 }
 
+// polyfill for Object.fromEntries until Typescript has ES2019 included
+const _ObjectFromEntries = ( iter ): Object => {
+  const obj = {};
+
+  for (const pair of iter) {
+    if (Object(pair) !== pair) {
+      throw new TypeError('iterable for fromEntries should yield objects');
+    }
+
+    // Consistency with Map: contract is that entry has "0" and "1" keys, not
+    // that it is an array or iterable.
+
+    const { '0': key, '1': val } = pair;
+
+    Object.defineProperty(obj, key, {
+      configurable: true,
+      enumerable: true,
+      writable: true,
+      value: val,
+    });
+  }
+
+  return obj;
+}
+
+
 /*
 To ensure that you have all the credentials correctly populated we use a
 Credentials class. This class is only ever used inside function calls. This
 means that the sensitive credentials are never stored and are only pulled from
 their sources when required.
 */
-class Credentials {
-  // The credentials
-  public tokenUrl: string
-  public username: string
-  public password: string
-  public clientId: string
-  public clientSecret: string
+// class Credentials {
+//   // The credentials
+//   public tokenUrl: string
+//   public username: string
+//   public password: string
+//   public clientId: string
+//   public clientSecret: string
 
-  constructor(
-    tokenUrl: string,
-    username: string,
-    password: string,
-    clientId: string,
-    clientSecret: string
-  ) {
-      this.tokenUrl = tokenUrl
-      this.username = username
-      this.password = password
-      this.clientId = clientId
-      this.clientSecret = clientSecret
-  }
+//   constructor(
+//     tokenUrl: string,
+//     username: string,
+//     password: string,
+//     clientId: string,
+//     clientSecret: string
+//   ) {
+//       this.tokenUrl = tokenUrl
+//       this.username = username
+//       this.password = password
+//       this.clientId = clientId
+//       this.clientSecret = clientSecret
+//   }
 
-}
+// }
 
 /*
 The LUSID API uses OAuth2.0 for authentication. The access token generated
@@ -109,6 +135,17 @@ the Client class below. This class handles storage of the location of each
 of the credentials, OAuth2.0 token refresh logic and is populated with every
 one of LUSIDs APIs and their methods.
 */
+interface configurationDefinition {
+  tokenUrlDetails: string | null,
+  usernameDetails: string | null,
+  passwordDetails: string | null,
+  clientIdDetails: string | null,
+  clientSecretDetails: string | null,
+
+  // The path to the secrets file which may be used to store credentials
+  secretsFilePath: string,
+}
+
 export class Client {
 
   // Authentications object to hold the oauth2 details
@@ -118,34 +155,74 @@ export class Client {
   // The available API endpoints
   api: Api
 
-  // The path to the secrets file which may be used to store credentials
-  secretsFilePath: string = process.cwd() + '/secrets.json'
-  secretsFileContent: { api: {} }
-
   // The credential access details
-  private tokenUrlDetails: [Source, string]
-  private usernameDetails: [Source, string]
-  private passwordDetails: [Source, string]
-  private clientIdDetails: [Source, string]
-  private clientSecretDetails: [Source, string]
+  private configuration: configurationDefinition = {
+    tokenUrlDetails: null,
+    usernameDetails: null,
+    passwordDetails: null,
+    clientIdDetails: null,
+    clientSecretDetails: null,
+    secretsFilePath: `${process.cwd()}/secrets.json`
+  }
+
+  secretsFileContent: Object
+
+  private configurationMapping: Array<Array<number|Array<string>>> = [
+    [
+      Source.Environment,
+      [
+        'FBN_TOKEN_URL',
+        'FBN_USERNAME',
+        'FBN_PASSWORD',
+        'FBN_CLIENT_ID',
+        'FBN_CLIENT_SECRET',
+        'FBN_LUSID_API_URL'
+      ]
+    ],
+    [
+      Source.Secrets,
+      [
+        'tokenUrl',
+        'username',
+        'password',
+        'clientId',
+        'clientSecret',
+        'apiUrl'
+      ]
+    ]
+  ]
 
   // The refresh limit in seconds before token expiry to trigger a refresh
-  refreshLimit: number = 3580
+  private refreshLimit: number = 3580
 
-  private loadSecretsFile(): object | null {
+  private loadSecretsFile( filePath: string ): object {
 
     try
     {
-      this.secretsFileContent = require( this.secretsFilePath );
+      return this.secretsFileContent = require( !!filePath ? filePath : this.configuration.secretsFilePath ).api;
     }
     catch( e )
     {
-      // not necessarily a problem. even if the format of the source file is bad, this will reset the internal validation to an empty configuration
+      if( e.code === 'MODULE_NOT_FOUND' )
+      {
+        if( !!filePath )
+        {
+          // a specific path was requested
 
-      this.secretsFileContent = { api: {} };
+          throw `Configuration file ${filePath} was not found`;
+        }
+
+        // no specific path requested, ergo it went with the default path
+        // a secrets file not found is not necessarily a problem
+        // this will reset the internal validation to an empty configuration
+
+        return this.secretsFileContent = {};
+      }
+
+      // module was found but there's some other (random) error
+
+      throw e;
     }
-
-    return this.secretsFileContent;
 
   }
 
@@ -157,58 +234,54 @@ export class Client {
         passwordDetails,
         clientIdDetails,
         clientSecretDetails,
-        apiUrlDetails
+        apiUrlDetails,
+        secretsFilePath,
       }: {
-        tokenUrlDetails?: [Source, string],
-        usernameDetails?: [Source, string],
-        passwordDetails?: [Source, string],
-        clientIdDetails?: [Source, string],
-        clientSecretDetails?: [Source, string],
-        apiUrlDetails?: [Source, string],
+        tokenUrlDetails?: string,
+        usernameDetails?: string,
+        passwordDetails?: string,
+        clientIdDetails?: string,
+        clientSecretDetails?: string,
+        apiUrlDetails?: string,
+        secretsFilePath?: string
       } = {
-        tokenUrlDetails: [Source.Secrets, 'tokenUrl'],
-        usernameDetails: [Source.Secrets, 'username'],
-        passwordDetails: [Source.Secrets, 'password'],
-        clientIdDetails: [Source.Secrets, 'clientId'],
-        clientSecretDetails: [Source.Secrets, 'clientSecret'],
-        apiUrlDetails: [Source.Secrets, 'apiUrl']
+        // empty object by default, thus triggering an auto failover
       }
     ) {
 
+    // set the secrets file before anything
+    this.configuration.secretsFilePath = !!secretsFilePath
+      ? secretsFilePath
+      : this.configuration.secretsFilePath
+
     // attempt to get disk config by default. if it doesn't exist it is still fine
-    this.loadSecretsFile();
+    this.loadSecretsFile( secretsFilePath )
 
     // provide init + default to environment vars below
-    this.tokenUrlDetails = !!tokenUrlDetails ? tokenUrlDetails : (
-      // [Source.Environment, 'FBN_TOKEN_URL']
-      [Source.Secrets, 'tokenUrl']
-    );
+    this.configuration.tokenUrlDetails = !!tokenUrlDetails
+      ? this.fetchConfigurationItem( Source.Raw, tokenUrlDetails, true )
+      : this.fetchConfigurationItem( Source.Secrets, 'tokenUrl' );
 
-    this.usernameDetails = !!usernameDetails ? usernameDetails : (
-      // [Source.Environment, 'FBN_USERNAME']
-      [Source.Secrets, 'username']
-    );
+    this.configuration.usernameDetails = !!usernameDetails
+      ? this.fetchConfigurationItem( Source.Raw, usernameDetails, true )
+      : this.fetchConfigurationItem( Source.Secrets, 'username' );
 
-    this.passwordDetails = !!passwordDetails ? passwordDetails : (
-      // [Source.Environment, 'FBN_PASSWORD']
-      [Source.Secrets, 'password']
-    );
+    this.configuration.passwordDetails = !!passwordDetails
+      ? this.fetchConfigurationItem( Source.Raw, passwordDetails, true )
+      : this.fetchConfigurationItem( Source.Secrets, 'password' );
 
-    this.clientIdDetails = !!clientIdDetails ? clientIdDetails : (
-      // [Source.Environment, 'FBN_CLIENT_ID']
-      [Source.Secrets, 'clientId']
-    );
+    this.configuration.clientIdDetails = !!clientIdDetails
+      ? this.fetchConfigurationItem( Source.Raw, clientIdDetails, true )
+      : this.fetchConfigurationItem( Source.Secrets, 'clientId' );
 
-    this.clientSecretDetails = !!clientSecretDetails ? clientSecretDetails : (
-      // [Source.Environment, 'FBN_CLIENT_SECRET']
-      [Source.Secrets, 'clientSecret']
-    );
+    this.configuration.clientSecretDetails = !!clientSecretDetails
+      ? this.fetchConfigurationItem( Source.Raw, clientSecretDetails, true )
+      : this.fetchConfigurationItem( Source.Secrets, 'clientSecret' );
 
     // initialize base path at this moment, since it is needed below
-    this.basePath = !!apiUrlDetails ? this.fetchConfigurationItem( apiUrlDetails[0], apiUrlDetails[1] ) : (
-      // this.fetchConfigurationItem( Source.Environment, 'FBN_CLIENT_SECRET' )
-      this.fetchConfigurationItem( Source.Secrets, 'apiUrl' )
-    );
+    this.basePath = !!apiUrlDetails
+      ? this.fetchConfigurationItem( Source.Raw, apiUrlDetails, true )
+      : this.fetchConfigurationItem( Source.Secrets, 'apiUrl' );
 
     // Set the authentications to use oauth2
     this.authentications = {'oauth2': new Oauth2(undefined, 0,0,0,0)}
@@ -216,7 +289,7 @@ export class Client {
     // Create a new instance of the API
     this.api = new Api()
     // Iterate over the API endpoints and add each to our client
-    lusid.APIS.forEach((api: any) => {
+    APIS.forEach((api: any) => {
       // Create a new instance of the api endpoint
       let apiInstance = new api(this.basePath)
       // Get the name of the API
@@ -260,12 +333,12 @@ export class Client {
         // Trigger a token refresh
         this.refreshToken(
           this.authentications.oauth2,
-          this.refreshLimit,
-          this.tokenUrlDetails,
-          this.usernameDetails,
-          this.passwordDetails,
-          this.clientIdDetails,
-          this.clientSecretDetails
+          // this.refreshLimit,
+          // this.tokenUrlDetails,
+          // this.usernameDetails,
+          // this.passwordDetails,
+          // this.clientIdDetails,
+          // this.clientSecretDetails
         ).then( (oauth2Details: Oauth2) => {
 
           // Update the clients oauth2 details
@@ -290,7 +363,7 @@ export class Client {
     }
   }
 
-  private fetchConfigurationItem( sourceType: Source, itemName: string ): string {
+  private fetchConfigurationItem( sourceType: Source, itemName: string, failOnNotExistent: boolean = false ): string {
 
     switch( sourceType )
     {
@@ -306,17 +379,31 @@ export class Client {
       break;
       case Source.Raw:
 
-        return itemName;
+        if( !!itemName )
+        {
+          return itemName;
+        }
+
+        throw `Raw value ${itemName} has not been specified`;
 
       break;
       case Source.Secrets:
 
-        if( !!this.secretsFileContent.api[ itemName ] )
+        if( !!this.secretsFileContent[ itemName ] )
         {
-          return this.secretsFileContent.api[ itemName ];
+          return this.secretsFileContent[ itemName ];
         }
 
-        throw `Configuration item ${itemName} not found in secrets file`;
+        if( failOnNotExistent )
+        {
+          throw `Configuration item ${itemName} not found in secrets file`;
+        }
+
+        const
+          configurationObject = _ObjectFromEntries( this.configurationMapping ),
+          equivalentConfiguration = configurationObject[ Source.Environment ][ configurationObject[ sourceType ].indexOf( itemName ) ];
+
+        this.fetchConfigurationItem( Source.Environment, equivalentConfiguration, true )
 
       break;
       default:
@@ -342,47 +429,53 @@ export class Client {
   */
   private async refreshToken(
     oauth2: Oauth2,
-    refreshLimit: number,
-    tokenUrlDetails: [Source, string],
-    usernameDetails: [Source, string],
-    passwordDetails: [Source, string],
-    clientIdDetails: [Source, string],
-    clientSecretDetails: [Source, string]
+    // refreshLimit: number,
+    // tokenUrlDetails: [Source, string],
+    // usernameDetails: [Source, string],
+    // passwordDetails: [Source, string],
+    // clientIdDetails: [Source, string],
+    // clientSecretDetails: [Source, string]
   ): Promise<Oauth2> {
-      // Return a promise
-      return new Promise((resolve, reject) => {
 
-        // Check if the token needs a refresh
-        if (this.checkTokenRefresh(oauth2, refreshLimit)) {
+    return new Promise( (resolve, reject) => {
 
-          // If so, populate the credentials
-          var credentials = new Credentials(
-            this.fetchConfigurationItem(tokenUrlDetails[0], tokenUrlDetails[1]),
-            this.fetchConfigurationItem(usernameDetails[0], usernameDetails[1]),
-            this.fetchConfigurationItem(passwordDetails[0], passwordDetails[1]),
-            this.fetchConfigurationItem(clientIdDetails[0], clientIdDetails[1]),
-            this.fetchConfigurationItem(clientSecretDetails[0], clientSecretDetails[1])
-          )
+      // Check if the token needs a refresh
+      if(
+        this.checkTokenRefresh(oauth2, this.refreshLimit)
+      ) {
 
-          // Get a new access token using these credentials
-          this.getAccessToken(
-            credentials.tokenUrl,
-            credentials.username,
-            credentials.password,
-            credentials.clientId,
-            credentials.clientSecret
-          )
-          // Return the oauth object to avoid nested promises in return
-          .then((oauthObject: Oauth2) => {
-            // Resolve the promise
-            resolve(oauthObject)
-          })
-          .catch((err) => reject(err))
-        } else {
-          // If no refresh required just return the oauth object
-          resolve(oauth2)
-        }
-    })
+        // If so, populate the credentials
+        // var credentials = new Credentials(
+        //   this.fetchConfigurationItem(tokenUrlDetails[0], tokenUrlDetails[1]),
+        //   this.fetchConfigurationItem(usernameDetails[0], usernameDetails[1]),
+        //   this.fetchConfigurationItem(passwordDetails[0], passwordDetails[1]),
+        //   this.fetchConfigurationItem(clientIdDetails[0], clientIdDetails[1]),
+        //   this.fetchConfigurationItem(clientSecretDetails[0], clientSecretDetails[1])
+        // )
+
+        // Get a new access token using these credentials
+        this.getAccessToken(
+          this.configuration.tokenUrlDetails,
+          this.configuration.usernameDetails,
+          this.configuration.passwordDetails,
+          this.configuration.clientIdDetails,
+          this.configuration.clientSecretDetails
+        )
+        // Return the oauth object to avoid nested promises in return
+        .then((oauthObject: Oauth2) => {
+          // Resolve the promise
+          resolve(oauthObject)
+        })
+        .catch((err) => reject(err))
+
+        return;
+      }
+
+      // If no refresh required just return the oauth object
+
+      resolve(oauth2);
+
+    } );
   }
 
   /*
