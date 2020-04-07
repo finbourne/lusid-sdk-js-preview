@@ -481,7 +481,6 @@ const addTransactionWithPropertiesToPortfolio = (
         })
         .catch((err: {response: IncomingMessage; body: LusidProblemDetails}) => reject(err))
 
-
       })
       .catch((err: {response: IncomingMessage; body: LusidProblemDetails}) => reject(err))
 
