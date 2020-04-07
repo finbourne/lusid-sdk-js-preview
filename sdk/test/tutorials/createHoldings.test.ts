@@ -10,7 +10,7 @@ import {
   Portfolio
 } from "../../api";
 import { client } from './clientBuilder'
-import { Transactions } from '../../client/lusidTools'
+import { Transactions } from '../../client/lusidUtilities'
 import {
   LusidProblemDetails,
   DeletedEntityResponse,
