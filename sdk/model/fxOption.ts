@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from '../api';
 
 /**
 * Lusid-ibor DTO representation of a plain vanilla FX Option instrument.

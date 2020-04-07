@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from '../api';
 import { AggregateSpec } from './aggregateSpec';
 import { ConfigurationRecipe } from './configurationRecipe';
 import { OrderBySpec } from './orderBySpec';

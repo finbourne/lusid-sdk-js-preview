@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from '../api';
 import { ModelSelection } from './modelSelection';
 import { PricingOptions } from './pricingOptions';
 import { ResultDataKeyRule } from './resultDataKeyRule';

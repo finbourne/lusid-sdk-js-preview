@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from '../api';
 
 /**
 * A rule that describes how we resolve (unit) result data.

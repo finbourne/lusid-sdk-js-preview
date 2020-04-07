@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from '../api';
 
 /**
 * It is possible to control which supplier is used for a given asset class.

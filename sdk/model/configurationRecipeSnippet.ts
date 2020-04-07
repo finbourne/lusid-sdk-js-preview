@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from '../api';
 import { AggregationOptions } from './aggregationOptions';
 import { ConfigurationRecipe } from './configurationRecipe';
 import { MarketDataKeyRule } from './marketDataKeyRule';

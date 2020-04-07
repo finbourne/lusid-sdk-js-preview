@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from '../api';
 
 /**
 * An identifier that uniquely describes an item of structured result data such as the risk to an interest curve or a set of yields or analytics on an index.

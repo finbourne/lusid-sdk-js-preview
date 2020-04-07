@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from '../api';
 
 /**
 * An identifier that uniquely identifies a set of Quote access control metadata.
