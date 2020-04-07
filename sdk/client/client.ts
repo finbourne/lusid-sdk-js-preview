@@ -252,7 +252,9 @@ export class Client {
       : this.fetchConfigurationItem( Source.Secrets, 'apiUrl', false );
 
     // Set the authentications to use oauth2
-    this.authentications = {'oauth2': new Oauth2(undefined, 0,0,0,0)}
+    this.authentications = {
+      oauth2: new Oauth2(undefined, 0,0,0,0)
+    }
 
     // Create a new instance of the API
     this.api = new Api()
