@@ -262,7 +262,7 @@ export class Client {
     // Iterate over the API endpoints and add each to our client
     APIS.forEach((api: any) => {
       // Create a new instance of the api endpoint
-      let apiInstance = new api(this.basePath)
+      const apiInstance = new api(this.basePath)
       // Get the name of the API
       let apiName: string = apiInstance.constructor.name
       // Shorten the api name slightly by removing API at the end
@@ -355,7 +355,7 @@ export class Client {
           throw `Environment variable ${itemName} has not been specified`;
         }
 
-        // fallback to searching for the equivalent configurarion in the configuration file
+        // fallback to searching for the equivalent configuration in the secrets file
         this.fetchConfigurationItem(
           Source.Secrets,
           configurationObject[ Source.Secrets ][
@@ -387,7 +387,7 @@ export class Client {
           throw `Configuration item ${itemName} not found in secrets file`;
         }
 
-        // fallback to searching for the equivalent configurarion in the environment variables
+        // fallback to searching for the equivalent configuration in the environment variables
         this.fetchConfigurationItem(
           Source.Environment,
           configurationObject[ Source.Environment ][
