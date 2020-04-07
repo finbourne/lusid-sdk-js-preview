@@ -223,7 +223,7 @@ export class Client {
       : this.configuration.secretsFilePath
 
     // attempt to get disk config by default. if it doesn't exist it is still fine
-    this.loadSecretsFile( secretsFilePath )
+    this.loadSecretsFile( secretsFilePath );
 
     // provide init + default to environment vars below
     this.configuration.tokenUrlDetails = !!tokenUrlDetails
@@ -258,6 +258,7 @@ export class Client {
 
     // Create a new instance of the API
     this.api = new Api()
+
     // Iterate over the API endpoints and add each to our client
     APIS.forEach((api: any) => {
       // Create a new instance of the api endpoint
@@ -272,15 +273,23 @@ export class Client {
       this.api[apiName] = apiInstance
 
       // For each function on the API
-      for (var prop in this.api[apiName]) {
-        // Exclude two non-api specific functions
-        if (typeof(this.api[apiName][prop]) == 'function' && !['setDefaultAuthentication', 'setApiKey'].includes(prop)) {
-          // Wrap each method with token refresh logic
-          this.api[apiName][prop] = this.apiFunctionWrapper(
-            this.api[apiName][prop],
-            this.api[apiName]
-          )
+      for( const prop in this.api[apiName] ) {
+
+        if(
+          typeof this.api[apiName][prop] !== 'function'
+          || ['setDefaultAuthentication', 'setApiKey'].includes( prop )
+        ) {
+
+          // Exclude two non-api specific functions or non
+          continue;
+
         }
+
+        // Wrap each method with token refresh logic
+        this.api[apiName][prop] = this.apiFunctionWrapper(
+          this.api[apiName][prop],
+          this.api[apiName]
+        );
 
       }
 
