@@ -62,37 +62,6 @@ const _ObjectFromEntries = ( iter ): Object => {
   return obj;
 }
 
-
-/*
-To ensure that you have all the credentials correctly populated we use a
-Credentials class. This class is only ever used inside function calls. This
-means that the sensitive credentials are never stored and are only pulled from
-their sources when required.
-*/
-// class Credentials {
-//   // The credentials
-//   public tokenUrl: string
-//   public username: string
-//   public password: string
-//   public clientId: string
-//   public clientSecret: string
-
-//   constructor(
-//     tokenUrl: string,
-//     username: string,
-//     password: string,
-//     clientId: string,
-//     clientSecret: string
-//   ) {
-//       this.tokenUrl = tokenUrl
-//       this.username = username
-//       this.password = password
-//       this.clientId = clientId
-//       this.clientSecret = clientSecret
-//   }
-
-// }
-
 /*
 The LUSID API uses OAuth2.0 for authentication. The access token generated
 through the OAuth2.0 flow expires after a given period of time. To ensure
@@ -332,12 +301,6 @@ export class Client {
         // Trigger a token refresh
         this.refreshToken(
           this.authentications.oauth2,
-          // this.refreshLimit,
-          // this.tokenUrlDetails,
-          // this.usernameDetails,
-          // this.passwordDetails,
-          // this.clientIdDetails,
-          // this.clientSecretDetails
         ).then( (oauth2Details: Oauth2) => {
 
           // Update the clients oauth2 details
@@ -428,12 +391,6 @@ export class Client {
   */
   private async refreshToken(
     oauth2: Oauth2,
-    // refreshLimit: number,
-    // tokenUrlDetails: [Source, string],
-    // usernameDetails: [Source, string],
-    // passwordDetails: [Source, string],
-    // clientIdDetails: [Source, string],
-    // clientSecretDetails: [Source, string]
   ): Promise<Oauth2> {
 
     return new Promise( (resolve, reject) => {
@@ -442,15 +399,6 @@ export class Client {
       if(
         this.checkTokenRefresh(oauth2, this.refreshLimit)
       ) {
-
-        // If so, populate the credentials
-        // var credentials = new Credentials(
-        //   this.fetchConfigurationItem(tokenUrlDetails[0], tokenUrlDetails[1]),
-        //   this.fetchConfigurationItem(usernameDetails[0], usernameDetails[1]),
-        //   this.fetchConfigurationItem(passwordDetails[0], passwordDetails[1]),
-        //   this.fetchConfigurationItem(clientIdDetails[0], clientIdDetails[1]),
-        //   this.fetchConfigurationItem(clientSecretDetails[0], clientSecretDetails[1])
-        // )
 
         // Get a new access token using these credentials
         this.getAccessToken(
