@@ -228,28 +228,28 @@ export class Client {
     // provide init + default to environment vars below
     this.configuration.tokenUrlDetails = !!tokenUrlDetails
       ? this.fetchConfigurationItem( Source.Raw, tokenUrlDetails, true )
-      : this.fetchConfigurationItem( Source.Secrets, 'tokenUrl' );
+      : this.fetchConfigurationItem( Source.Secrets, 'tokenUrl', false );
 
     this.configuration.usernameDetails = !!usernameDetails
       ? this.fetchConfigurationItem( Source.Raw, usernameDetails, true )
-      : this.fetchConfigurationItem( Source.Secrets, 'username' );
+      : this.fetchConfigurationItem( Source.Secrets, 'username', false );
 
     this.configuration.passwordDetails = !!passwordDetails
       ? this.fetchConfigurationItem( Source.Raw, passwordDetails, true )
-      : this.fetchConfigurationItem( Source.Secrets, 'password' );
+      : this.fetchConfigurationItem( Source.Secrets, 'password', false );
 
     this.configuration.clientIdDetails = !!clientIdDetails
       ? this.fetchConfigurationItem( Source.Raw, clientIdDetails, true )
-      : this.fetchConfigurationItem( Source.Secrets, 'clientId' );
+      : this.fetchConfigurationItem( Source.Secrets, 'clientId', false );
 
     this.configuration.clientSecretDetails = !!clientSecretDetails
       ? this.fetchConfigurationItem( Source.Raw, clientSecretDetails, true )
-      : this.fetchConfigurationItem( Source.Secrets, 'clientSecret' );
+      : this.fetchConfigurationItem( Source.Secrets, 'clientSecret', false );
 
     // initialize base path at this moment, since it is needed below
     this.basePath = !!apiUrlDetails
       ? this.fetchConfigurationItem( Source.Raw, apiUrlDetails, true )
-      : this.fetchConfigurationItem( Source.Secrets, 'apiUrl' );
+      : this.fetchConfigurationItem( Source.Secrets, 'apiUrl', false );
 
     // Set the authentications to use oauth2
     this.authentications = {'oauth2': new Oauth2(undefined, 0,0,0,0)}
@@ -327,6 +327,9 @@ export class Client {
 
   private fetchConfigurationItem( sourceType: Source, itemName: string, failOnNotExistent: boolean = false ): string {
 
+    const
+      configurationObject = _ObjectFromEntries( this.configurationMapping );
+
     switch( sourceType )
     {
       case Source.Environment:
@@ -336,7 +339,19 @@ export class Client {
           return process.env[ itemName ];
         }
 
-        throw `Environment variable ${itemName} has not been specified`;
+        if( failOnNotExistent )
+        {
+          throw `Environment variable ${itemName} has not been specified`;
+        }
+
+        // fallback to searching for the equivalent configurarion in the configuration file
+        this.fetchConfigurationItem(
+          Source.Secrets,
+          configurationObject[ Source.Secrets ][
+            configurationObject[ sourceType ].indexOf( itemName )
+          ],
+          true
+        );
 
       break;
       case Source.Raw:
@@ -360,9 +375,6 @@ export class Client {
         {
           throw `Configuration item ${itemName} not found in secrets file`;
         }
-
-        const
-          configurationObject = _ObjectFromEntries( this.configurationMapping );
 
         // fallback to searching for the equivalent configurarion in the environment variables
         this.fetchConfigurationItem(
