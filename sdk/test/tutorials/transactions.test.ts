@@ -406,7 +406,7 @@ describe('Transactions', () => {
 
   it('Should create a transaction portfolio', (done) => {
 
-    this.referenceDate = moment([2018, 1, 1, 0, 0, 0]).utc();
+    this.referenceDate = moment([2018, 0, 1, 0, 0, 0]).utc();
 
     createTransactionPortfolio(
       {
