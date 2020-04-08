@@ -18,7 +18,9 @@ import {
   UpsertInstrumentsResponse,
   InstrumentDefinition,
   InstrumentIdValue,
-  LusidProblemDetails
+  LusidProblemDetails,
+  InstrumentEconomicDefinition,
+  DeletedEntityResponse
 } from "../../model/models";
 
 // Lusid method handling libraries
@@ -119,6 +121,95 @@ const loadOneInstrument = (
   } );
 }
 
+const loadOTCInstrument = (
+  {
+    referenceDate,
+    portfolioObject
+  }: {
+    referenceDate: Moment,
+    portfolioObject: Portfolio
+  }
+) :Promise<{
+  transactions:VersionedResourceListOfTransaction,
+  transactionDefinition: TransactionRequest
+}> => {
+
+  return new Promise((resolve, reject) => {
+
+    const
+      swapDefinition = Object.assign(
+        new InstrumentDefinition(),
+        {
+          name: "10mm 5Y Fixed",
+          identifiers: {
+            "ClientInternal": Object.assign(
+              new InstrumentIdValue(),
+              {
+                value: "SW-1"
+              }
+            )
+          },
+          definition: Object.assign(
+            new InstrumentEconomicDefinition(),
+            {
+              instrumentFormat: "CustomFormat",
+              content: "<customFormat>upload in custom xml or JSON format</customFormat>"
+            }
+          )
+        }
+      );
+
+    client.api.instruments.upsertInstruments(
+      {
+        request: swapDefinition
+      }
+    )
+    .then((res: {response: IncomingMessage; body: UpsertInstrumentsResponse}) => {
+
+      const
+        swapID = res.body.values.request.lusidInstrumentId,
+        transactionsToUpsert = [
+
+          Transactions.defineBuyRequest( {
+            lusidInstrumentId: swapID,
+            transactionDate: referenceDate,
+            units: 1.0,
+            price: 0.0
+          } )
+
+        ];
+
+      client.api.transactionPortfolios.upsertTransactions(
+        portfolioObject.id.scope,
+        portfolioObject.id.code,
+        transactionsToUpsert
+      )
+      .then((resUpsertTransactions: {response: IncomingMessage; body: UpsertPortfolioTransactionsResponse}) => {
+
+        client.api.transactionPortfolios.getTransactions(
+          portfolioObject.id.scope,
+          portfolioObject.id.code,
+          referenceDate.format()
+        )
+        .then((resTransactions: {response: IncomingMessage; body: VersionedResourceListOfTransaction}) => {
+
+          resolve( {
+            transactions: resTransactions.body,
+            transactionDefinition: transactionsToUpsert[ 0 ]
+          } )
+
+        } )
+        .catch((err: {response: IncomingMessage; body: LusidProblemDetails}) => reject(err))
+
+      })
+      .catch((err: {response: IncomingMessage; body: LusidProblemDetails}) => reject(err))
+
+    })
+    .catch((err: {response: IncomingMessage; body: LusidProblemDetails}) => reject(err));
+
+  } );
+}
+
 const upsertInstruments = (
   identifiers: Object = {}
 ) :Promise<UpsertInstrumentsResponse> => {
@@ -152,6 +243,120 @@ const upsertInstruments = (
       resolve( res.body )
     })
     .catch((err: {response: IncomingMessage; body: LusidProblemDetails}) => reject(err));
+
+  } );
+
+}
+
+const cancelTransactions = (
+  {
+    referenceDate,
+    lusidInstrumentIds,
+    portfolioObject
+  }: {
+    referenceDate: Moment,
+    lusidInstrumentIds: Array<String>
+    portfolioObject: Portfolio
+  }
+) :Promise<{
+  transactions: VersionedResourceListOfTransaction
+}> => {
+
+  return new Promise( (resolve, reject) => {
+
+    const
+      transactionsToUpsert = [
+
+        Transactions.defineBuyRequest( {
+          lusidInstrumentId: lusidInstrumentIds[ 0 ],
+          transactionType: "StockIn",
+          transactionDate: referenceDate,
+          units: 100,
+          price: 101
+        } ),
+
+        Transactions.defineBuyRequest( {
+          lusidInstrumentId: lusidInstrumentIds[ 1 ],
+          transactionType: "StockIn",
+          transactionDate: referenceDate,
+          units: 100,
+          price: 102
+        } ),
+
+        Transactions.defineBuyRequest( {
+          lusidInstrumentId: lusidInstrumentIds[ 2 ],
+          transactionType: "StockIn",
+          transactionDate: referenceDate,
+          units: 100,
+          price: 103
+        } ),
+
+      ];
+
+    client.api.transactionPortfolios.upsertTransactions(
+      portfolioObject.id.scope,
+      portfolioObject.id.code,
+      transactionsToUpsert
+    )
+    .then((resUpsertTransactions: {response: IncomingMessage; body: UpsertPortfolioTransactionsResponse}) => {
+
+      // transactions successfully upserted
+
+      client.api.transactionPortfolios.getTransactions(
+        portfolioObject.id.scope,
+        portfolioObject.id.code,
+        referenceDate.format()
+      )
+      .then((resTransactions: {response: IncomingMessage; body: VersionedResourceListOfTransaction}) => {
+
+        // got the 3 transactions upserted above
+
+        let
+          transactionIDs = [];
+
+        resTransactions.body.values.forEach( ( transaction ) => {
+
+          transactionIDs.push( transaction.transactionId );
+
+        } );
+
+        client.api.transactionPortfolios.useQuerystring = true;
+        client.api.transactionPortfolios.cancelTransactions(
+          portfolioObject.id.scope,
+          portfolioObject.id.code,
+          transactionIDs
+        )
+        .then((resCancelTransactions: {response: IncomingMessage; body: DeletedEntityResponse}) => {
+
+          // transactions cancelled successfully
+
+          client.api.transactionPortfolios.getTransactions(
+            portfolioObject.id.scope,
+            portfolioObject.id.code,
+            referenceDate.format()
+          )
+          .then((resTransactions: {response: IncomingMessage; body: VersionedResourceListOfTransaction}) => {
+
+            // got all transactions given the reference date
+            // should be a total of zero
+
+            resolve(
+              {
+                transactions: resTransactions.body
+              }
+            );
+
+          } )
+          .catch((err: {response: IncomingMessage; body: LusidProblemDetails}) => reject(err))
+
+        } )
+        .catch((err: {response: IncomingMessage; body: LusidProblemDetails}) => reject(err))
+
+      } )
+      .catch((err: {response: IncomingMessage; body: LusidProblemDetails}) => reject(err))
+
+    })
+    .catch((err: {response: IncomingMessage; body: LusidProblemDetails}) => reject(err))
 
   } );
 
@@ -213,7 +418,7 @@ describe('Transactions', () => {
 
       assert.strictEqual( res.portfolio.id.code, res.createRequest.code );
 
-      mlog.log( `Created portfolio ${res.portfolio.displayName}` );
+      mlog.log( `Created portfolio ${res.portfolio.displayName} with scope ${res.portfolio.id.scope} and code ${res.portfolio.id.code}` );
 
       this.portfolioObject = res.portfolio;
 
@@ -246,6 +451,50 @@ describe('Transactions', () => {
 
     })
     .catch((err) => { mlog.error(err) } )
+  })
+
+  it('Should load over the counter (OTC) instrument transaction', (done) => {
+
+    this.referenceDate = moment([2018, 2, 1, 0, 0, 0]).utc();
+
+    loadOTCInstrument(
+      {
+        referenceDate: this.referenceDate,
+        portfolioObject: this.portfolioObject
+      }
+    )
+    .then((res) => {
+
+      // Validate that this test went well
+      assert.strictEqual( res.transactions.values.length, 1 );
+      assert.strictEqual( res.transactions.values[ 0 ].transactionId, res.transactionDefinition.transactionId );
+
+      done()
+
+    })
+    .catch((err) => { mlog.error(err) } )
+  })
+
+  it('Should cancel transactions', (done) => {
+
+    this.referenceDate = moment([2018, 3, 1, 0, 0, 0]).utc();
+
+    cancelTransactions(
+      {
+        referenceDate: this.referenceDate,
+        lusidInstrumentIds: this.instrumentIDs,
+        portfolioObject: this.portfolioObject
+      }
+    )
+    .then((res) => {
+
+      // Validate that this test went well
+      assert.strictEqual( res.transactions.values.length, 0 );
+
+      done()
+
+    })
+    .catch((err) => { console.log(err) } )
   })
 
 })

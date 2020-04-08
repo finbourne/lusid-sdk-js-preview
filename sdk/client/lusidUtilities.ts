@@ -7,6 +7,8 @@ import {
   TransactionRequest,
   CurrencyAndAmount,
   TransactionPrice,
+  InstrumentIdValue,
+  Property
 } from "../model/models";
 
 export const Transactions = {
@@ -67,20 +69,23 @@ export const Transactions = {
       currency,
       units,
       price,
+      transactionType,
     }: {
       lusidInstrumentId?: String,
       transactionDate?: Moment,
       settlementDate?: Moment,
       currency?: String,
       units?: number,
-      price?: number
+      price?: number,
+      transactionType?: String
     } = {
       lusidInstrumentId: null,
       transactionDate: moment(),
       settlementDate: null,
       currency: "GBP",
       units: 100,
-      price: 101
+      price: 101,
+      transactionType: "Buy"
     }
   ) :TransactionRequest => {
 
@@ -88,7 +93,7 @@ export const Transactions = {
       new TransactionRequest(),
       {
         transactionId: uuidv4(),
-        type: "Buy",
+        type: !!transactionType ? transactionType : "Buy",
         instrumentIdentifiers: {
           "Instrument/default/LusidInstrumentId": lusidInstrumentId
         },
