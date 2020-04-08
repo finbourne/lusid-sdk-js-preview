@@ -34,7 +34,7 @@ import {
 // Lusid method handling libraries
 import { IncomingMessage } from "http";
 
-// polyfill for Object.fromEntries until Typescript has ES2019 included
+// polyfill for Object.fromEntries - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries - until Typescript has ES2019 included
 const _ObjectFromEntries = ( iter ): Object => {
   const obj = {};
 

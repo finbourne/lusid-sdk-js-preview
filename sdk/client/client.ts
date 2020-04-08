@@ -136,7 +136,7 @@ export class Client {
 
   secretsFileContent: Object
 
-  private configurationMapping: Array<Array<number|Array<string>>> = [
+  private configurationMapping: Array<Array<Source|Array<string>>> = [
     [
       Source.Environment,
       [
@@ -168,7 +168,14 @@ export class Client {
 
     try
     {
-      return this.secretsFileContent = require( !!secretsFilePath ? secretsFilePath : this.configuration.secretsFilePath ).api;
+      this.secretsFileContent = require( !!secretsFilePath ? secretsFilePath : this.configuration.secretsFilePath ).api;
+
+      // update the secretsFilePath at this point, since the above line has finished successfully
+      this.configuration.secretsFilePath = !!secretsFilePath
+        ? secretsFilePath
+        : this.configuration.secretsFilePath
+
+      return this.secretsFileContent;
     }
     catch( e )
     {
@@ -217,10 +224,6 @@ export class Client {
         // empty object by default, thus triggering an auto failover
       }
     ) {
-
-    this.configuration.secretsFilePath = !!secretsFilePath
-      ? secretsFilePath
-      : this.configuration.secretsFilePath
 
     // attempt to get disk config by default. if it doesn't exist it is still fine
     this.loadSecretsFile( secretsFilePath );
