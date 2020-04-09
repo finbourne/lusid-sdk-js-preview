@@ -23,7 +23,8 @@ import {
   DeletedEntityResponse,
   CutLocalTime,
   CutLabelDefinition,
-  CreateCutLabelDefinitionRequest
+  CreateCutLabelDefinitionRequest,
+  AdjustHolding
 } from "../../model/models";
 
 // Lusid method handling libraries
@@ -158,7 +159,7 @@ const createCutLabels = (
                 }
             );
 
-        codeDictionary.set( displayName, cutLabelDefinition.description );
+        codeDictionary.set( displayName, cutLabelDefinition.code );
 
         return client.api.cutLabelDefinitions.createCutLabelDefinition(
             cutLabelDefinition
@@ -166,6 +167,53 @@ const createCutLabels = (
         .catch((err: {response: IncomingMessage; body: LusidProblemDetails}) => reject(err));
 
     }
+
+    const _cutLabelFormat = ( date:Moment, code:string ) :string => {
+
+      return date.format( 'YYYY-MM-DDTHH:mm:ss.SSSSSSS' ).concat( 'N', code );
+
+    }
+
+    const holdingsAdjustments = [
+
+      Transactions.defineCashFundsInAdjustHoldingsRequest(
+        {
+          currency: portfolioObject.baseCurrency,
+          units: 100000
+        }
+      ),
+
+      Transactions.defineAdjustHoldingsRequest(
+        {
+          lusidInstrumentId: lusidInstrumentIds[ 0 ],
+          currency: portfolioObject.baseCurrency,
+          units: 100.0,
+          price: 101.0,
+          purchaseDate: null
+        }
+      ),
+
+      Transactions.defineAdjustHoldingsRequest(
+        {
+          lusidInstrumentId: lusidInstrumentIds[ 1 ],
+          currency: portfolioObject.baseCurrency,
+          units: 100.0,
+          price: 102.0,
+          purchaseDate: null
+        }
+      ),
+
+      Transactions.defineAdjustHoldingsRequest(
+        {
+          lusidInstrumentId: lusidInstrumentIds[ 2 ],
+          currency: portfolioObject.baseCurrency,
+          units: 100.0,
+          price: 99.0,
+          purchaseDate: null
+        }
+      ),
+
+    ];
 
     let
         codeDictionary = new Map();
@@ -223,6 +271,19 @@ const createCutLabels = (
                             timeZone: "America/New_York",
                             codeDictionary
                         } ).then( () => {
+
+                          client.api.transactionPortfolios.setHoldings(
+                            portfolioObject.id.scope,
+                            portfolioObject.id.code,
+                            _cutLabelFormat( moment().subtract( 5, 'days' ), codeDictionary.get( 'LondonOpen' ) ),
+                            holdingsAdjustments,
+                          )
+                          .then((res: {response: IncomingMessage, body: AdjustHolding }) => {
+
+                            console.log( res.body )
+
+                          })
+                          .catch((err: {response: IncomingMessage; body: LusidProblemDetails}) => reject(err))
 
                         } );
 

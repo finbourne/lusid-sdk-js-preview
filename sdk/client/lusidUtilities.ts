@@ -7,11 +7,50 @@ import {
   TransactionRequest,
   CurrencyAndAmount,
   TransactionPrice,
-  InstrumentIdValue,
-  Property
+  TargetTaxLotRequest,
+  AdjustHoldingRequest
 } from "../model/models";
 
 export const Transactions = {
+
+  defineCashFundsInAdjustHoldingsRequest: (
+    {
+      currency,
+      units
+    }: {
+      currency?: String,
+      units?: Number
+    } = {
+      currency: "GBP",
+      units: 100
+    }
+  ) :AdjustHoldingRequest => {
+
+    return Object.assign(
+      new AdjustHoldingRequest(),
+      {
+        instrumentIdentifiers: {
+          "Instrument/default/Currency": currency
+        },
+        taxLots: [
+
+          Object.assign(
+            new TargetTaxLotRequest(),
+            {
+              units,
+              price: null,
+              cost: null,
+              portfolioCost: null,
+              purchaseDate: null,
+              settlementDate: null,
+            }
+          )
+
+        ]
+      }
+    );
+
+  },
 
   defineCashFundsInRequest: (
     {
@@ -114,6 +153,66 @@ export const Transactions = {
           }
         ),
         source: "Broker"
+      }
+    );
+
+  },
+
+  defineAdjustHoldingsRequest: (
+    {
+      lusidInstrumentId,
+      purchaseDate,
+      settlementDate,
+      currency,
+      units,
+      price,
+      transactionType,
+    }: {
+      lusidInstrumentId?: String,
+      purchaseDate?: Moment,
+      settlementDate?: Moment,
+      currency?: String,
+      units?: number,
+      price?: number,
+      transactionType?: String
+    } = {
+      lusidInstrumentId: null,
+      purchaseDate: null,
+      settlementDate: null,
+      currency: "GBP",
+      units: 100,
+      price: 101,
+      transactionType: "Buy"
+    }
+  ) :AdjustHoldingRequest => {
+
+    return Object.assign(
+      new AdjustHoldingRequest(),
+      {
+        instrumentIdentifiers: {
+          "Instrument/default/LusidInstrumentId": lusidInstrumentId
+        },
+        taxLots: [
+
+          Object.assign(
+            new TargetTaxLotRequest(),
+            {
+              units,
+              price,
+              cost: Object.assign(
+                new CurrencyAndAmount(),
+                {
+                  amount: units * price,
+                  currency: !!currency ? currency : "GBP"
+                }
+              ),
+              portfolioCost: units * price,
+              purchaseDate: !!purchaseDate ? purchaseDate : null,
+              settlementDate: !!settlementDate ? settlementDate : null,
+            }
+          )
+
+        ]
       }
     );
 
