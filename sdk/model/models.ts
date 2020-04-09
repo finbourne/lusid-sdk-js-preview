@@ -17,8 +17,10 @@ export * from './annulQuotesResponse';
 export * from './annulSingleStructuredDataResponse';
 export * from './annulStructuredDataResponse';
 export * from './bondInstrument';
+export * from './bondInstrumentAllOf';
 export * from './cdsDetailSpecification';
 export * from './cdsInstrument';
+export * from './cdsInstrumentAllOf';
 export * from './change';
 export * from './completePortfolio';
 export * from './configurationRecipe';
@@ -57,7 +59,9 @@ export * from './fieldSchema';
 export * from './fileResponse';
 export * from './flowConventions';
 export * from './fxForwardInstrument';
+export * from './fxForwardInstrumentAllOf';
 export * from './fxOption';
+export * from './fxOptionAllOf';
 export * from './getInstrumentsResponse';
 export * from './getQuotesResponse';
 export * from './getRecipeResponse';
@@ -82,6 +86,7 @@ export * from './instrumentSearchProperty';
 export * from './link';
 export * from './listAggregationResponse';
 export * from './lusidInstrument';
+export * from './lusidInstrumentDefinition';
 export * from './lusidProblemDetails';
 export * from './lusidValidationProblemDetails';
 export * from './marketContext';
@@ -171,7 +176,9 @@ export * from './structuredMarketDataId';
 export * from './structuredResultData';
 export * from './structuredResultDataId';
 export * from './swapInstrument';
+export * from './swapInstrumentAllOf';
 export * from './swaption';
+export * from './swaptionAllOf';
 export * from './targetTaxLot';
 export * from './targetTaxLotRequest';
 export * from './tenor';
@@ -253,8 +260,10 @@ import { AnnulQuotesResponse } from './annulQuotesResponse';
 import { AnnulSingleStructuredDataResponse } from './annulSingleStructuredDataResponse';
 import { AnnulStructuredDataResponse } from './annulStructuredDataResponse';
 import { BondInstrument } from './bondInstrument';
+import { BondInstrumentAllOf } from './bondInstrumentAllOf';
 import { CdsDetailSpecification } from './cdsDetailSpecification';
 import { CdsInstrument } from './cdsInstrument';
+import { CdsInstrumentAllOf } from './cdsInstrumentAllOf';
 import { Change } from './change';
 import { CompletePortfolio } from './completePortfolio';
 import { ConfigurationRecipe } from './configurationRecipe';
@@ -293,7 +302,9 @@ import { FieldSchema } from './fieldSchema';
 import { FileResponse } from './fileResponse';
 import { FlowConventions } from './flowConventions';
 import { FxForwardInstrument } from './fxForwardInstrument';
+import { FxForwardInstrumentAllOf } from './fxForwardInstrumentAllOf';
 import { FxOption } from './fxOption';
+import { FxOptionAllOf } from './fxOptionAllOf';
 import { GetInstrumentsResponse } from './getInstrumentsResponse';
 import { GetQuotesResponse } from './getQuotesResponse';
 import { GetRecipeResponse } from './getRecipeResponse';
@@ -318,6 +329,7 @@ import { InstrumentSearchProperty } from './instrumentSearchProperty';
 import { Link } from './link';
 import { ListAggregationResponse } from './listAggregationResponse';
 import { LusidInstrument } from './lusidInstrument';
+import { LusidInstrumentDefinition } from './lusidInstrumentDefinition';
 import { LusidProblemDetails } from './lusidProblemDetails';
 import { LusidValidationProblemDetails } from './lusidValidationProblemDetails';
 import { MarketContext } from './marketContext';
@@ -407,7 +419,9 @@ import { StructuredMarketDataId } from './structuredMarketDataId';
 import { StructuredResultData } from './structuredResultData';
 import { StructuredResultDataId } from './structuredResultDataId';
 import { SwapInstrument } from './swapInstrument';
+import { SwapInstrumentAllOf } from './swapInstrumentAllOf';
 import { Swaption } from './swaption';
+import { SwaptionAllOf } from './swaptionAllOf';
 import { TargetTaxLot } from './targetTaxLot';
 import { TargetTaxLotRequest } from './targetTaxLotRequest';
 import { Tenor } from './tenor';
@@ -483,9 +497,11 @@ let primitives = [
 let enumsMap: {[index: string]: any} = {
         "AggregateSpec.OpEnum": AggregateSpec.OpEnum,
         "BondInstrument.InstrumentTypeEnum": BondInstrument.InstrumentTypeEnum,
+        "BondInstrumentAllOf.InstrumentTypeEnum": BondInstrumentAllOf.InstrumentTypeEnum,
         "CdsDetailSpecification.SeniorityEnum": CdsDetailSpecification.SeniorityEnum,
         "CdsDetailSpecification.RestructuringTypeEnum": CdsDetailSpecification.RestructuringTypeEnum,
         "CdsInstrument.InstrumentTypeEnum": CdsInstrument.InstrumentTypeEnum,
+        "CdsInstrumentAllOf.InstrumentTypeEnum": CdsInstrumentAllOf.InstrumentTypeEnum,
         "CompletePortfolio.TypeEnum": CompletePortfolio.TypeEnum,
         "CreateDataTypeRequest.TypeValueRangeEnum": CreateDataTypeRequest.TypeValueRangeEnum,
         "CreateDataTypeRequest.ValueTypeEnum": CreateDataTypeRequest.ValueTypeEnum,
@@ -502,7 +518,9 @@ let enumsMap: {[index: string]: any} = {
         "FlowConventions.DayCountConventionEnum": FlowConventions.DayCountConventionEnum,
         "FlowConventions.RollConventionEnum": FlowConventions.RollConventionEnum,
         "FxForwardInstrument.InstrumentTypeEnum": FxForwardInstrument.InstrumentTypeEnum,
+        "FxForwardInstrumentAllOf.InstrumentTypeEnum": FxForwardInstrumentAllOf.InstrumentTypeEnum,
         "FxOption.InstrumentTypeEnum": FxOption.InstrumentTypeEnum,
+        "FxOptionAllOf.InstrumentTypeEnum": FxOptionAllOf.InstrumentTypeEnum,
         "GetReferencePortfolioConstituentsResponse.WeightTypeEnum": GetReferencePortfolioConstituentsResponse.WeightTypeEnum,
         "GetReferencePortfolioConstituentsResponse.PeriodTypeEnum": GetReferencePortfolioConstituentsResponse.PeriodTypeEnum,
         "HoldingsAdjustment.UnmatchedHoldingMethodEnum": HoldingsAdjustment.UnmatchedHoldingMethodEnum,
@@ -540,7 +558,10 @@ let enumsMap: {[index: string]: any} = {
         "Results.FormatEnum": Results.FormatEnum,
         "SwapInstrument.NotionalExchangeTypeEnum": SwapInstrument.NotionalExchangeTypeEnum,
         "SwapInstrument.InstrumentTypeEnum": SwapInstrument.InstrumentTypeEnum,
+        "SwapInstrumentAllOf.NotionalExchangeTypeEnum": SwapInstrumentAllOf.NotionalExchangeTypeEnum,
+        "SwapInstrumentAllOf.InstrumentTypeEnum": SwapInstrumentAllOf.InstrumentTypeEnum,
         "Swaption.InstrumentTypeEnum": Swaption.InstrumentTypeEnum,
+        "SwaptionAllOf.InstrumentTypeEnum": SwaptionAllOf.InstrumentTypeEnum,
         "Tenor.UnitEnum": Tenor.UnitEnum,
         "Tolerance.TypeEnum": Tolerance.TypeEnum,
         "TransactionConfigurationMovementData.MovementTypesEnum": TransactionConfigurationMovementData.MovementTypesEnum,
@@ -576,8 +597,10 @@ let typeMap: {[index: string]: any} = {
     "AnnulSingleStructuredDataResponse": AnnulSingleStructuredDataResponse,
     "AnnulStructuredDataResponse": AnnulStructuredDataResponse,
     "BondInstrument": BondInstrument,
+    "BondInstrumentAllOf": BondInstrumentAllOf,
     "CdsDetailSpecification": CdsDetailSpecification,
     "CdsInstrument": CdsInstrument,
+    "CdsInstrumentAllOf": CdsInstrumentAllOf,
     "Change": Change,
     "CompletePortfolio": CompletePortfolio,
     "ConfigurationRecipe": ConfigurationRecipe,
@@ -616,7 +639,9 @@ let typeMap: {[index: string]: any} = {
     "FileResponse": FileResponse,
     "FlowConventions": FlowConventions,
     "FxForwardInstrument": FxForwardInstrument,
+    "FxForwardInstrumentAllOf": FxForwardInstrumentAllOf,
     "FxOption": FxOption,
+    "FxOptionAllOf": FxOptionAllOf,
     "GetInstrumentsResponse": GetInstrumentsResponse,
     "GetQuotesResponse": GetQuotesResponse,
     "GetRecipeResponse": GetRecipeResponse,
@@ -641,6 +666,7 @@ let typeMap: {[index: string]: any} = {
     "Link": Link,
     "ListAggregationResponse": ListAggregationResponse,
     "LusidInstrument": LusidInstrument,
+    "LusidInstrumentDefinition": LusidInstrumentDefinition,
     "LusidProblemDetails": LusidProblemDetails,
     "LusidValidationProblemDetails": LusidValidationProblemDetails,
     "MarketContext": MarketContext,
@@ -730,7 +756,9 @@ let typeMap: {[index: string]: any} = {
     "StructuredResultData": StructuredResultData,
     "StructuredResultDataId": StructuredResultDataId,
     "SwapInstrument": SwapInstrument,
+    "SwapInstrumentAllOf": SwapInstrumentAllOf,
     "Swaption": Swaption,
+    "SwaptionAllOf": SwaptionAllOf,
     "TargetTaxLot": TargetTaxLot,
     "TargetTaxLotRequest": TargetTaxLotRequest,
     "Tenor": Tenor,
