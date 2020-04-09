@@ -24,7 +24,8 @@ import {
   CutLocalTime,
   CutLabelDefinition,
   CreateCutLabelDefinitionRequest,
-  AdjustHolding
+  AdjustHolding,
+  VersionedResourceListOfPortfolioHolding
 } from "../../model/models";
 
 // Lusid method handling libraries
@@ -170,7 +171,7 @@ const createCutLabels = (
 
     const _cutLabelFormat = ( date:Moment, code:string ) :string => {
 
-      return date.format( 'YYYY-MM-DDTHH:mm:ss.SSSSSSS' ).concat( 'N', code );
+      return date.format( 'YYYY-MM-DD' ).concat( 'N', code );
 
     }
 
@@ -280,7 +281,16 @@ const createCutLabels = (
                           )
                           .then((res: {response: IncomingMessage, body: AdjustHolding }) => {
 
-                            console.log( res.body )
+                            client.api.transactionPortfolios.getHoldings(
+                              portfolioObject.id.scope,
+                              portfolioObject.id.code,
+                              _cutLabelFormat( moment(), codeDictionary.get( 'LondonOpen' ) )
+                            )
+                            .then((res: {response: IncomingMessage, body: VersionedResourceListOfPortfolioHolding}) => {
+
+
+                            })
+                            .catch((err: {response: IncomingMessage; body: LusidProblemDetails}) => reject(err))
 
                           })
                           .catch((err: {response: IncomingMessage; body: LusidProblemDetails}) => reject(err))
@@ -369,22 +379,24 @@ describe('Cut Labels', () => {
     .catch((err) => { mlog.error(err) } )
   })
 
-  it('Should create cut labels', (done) => {
+  // the test below is partly done. It requires alignment with the equivalent python SDK test
 
-    createCutLabels(
-      {
-        portfolioObject: this.portfolioObject,
-        referenceDate: this.referenceDate,
-        lusidInstrumentIds: this.instrumentIDs
-      }
-    )
-    .then((res) => {
+  // it('Should create cut labels', (done) => {
 
-      done()
+  //   createCutLabels(
+  //     {
+  //       portfolioObject: this.portfolioObject,
+  //       referenceDate: this.referenceDate,
+  //       lusidInstrumentIds: this.instrumentIDs
+  //     }
+  //   )
+  //   .then((res) => {
 
-    })
-    .catch((err) => { console.log(err);mlog.error(err) } )
-  })
+  //     done()
+
+  //   })
+  //   .catch((err) => { console.log(err);mlog.error(err) } )
+  // })
 
 })
 
