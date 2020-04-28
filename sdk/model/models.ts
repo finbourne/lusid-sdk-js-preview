@@ -52,6 +52,8 @@ export * from './dataType';
 export * from './deleteInstrumentPropertiesResponse';
 export * from './deleteInstrumentResponse';
 export * from './deletedEntityResponse';
+export * from './equityOption';
+export * from './equityOptionAllOf';
 export * from './errorDetail';
 export * from './executionRequest';
 export * from './expandedGroup';
@@ -295,6 +297,8 @@ import { DataType } from './dataType';
 import { DeleteInstrumentPropertiesResponse } from './deleteInstrumentPropertiesResponse';
 import { DeleteInstrumentResponse } from './deleteInstrumentResponse';
 import { DeletedEntityResponse } from './deletedEntityResponse';
+import { EquityOption } from './equityOption';
+import { EquityOptionAllOf } from './equityOptionAllOf';
 import { ErrorDetail } from './errorDetail';
 import { ExecutionRequest } from './executionRequest';
 import { ExpandedGroup } from './expandedGroup';
@@ -514,6 +518,8 @@ let enumsMap: {[index: string]: any} = {
         "DataType.TypeValueRangeEnum": DataType.TypeValueRangeEnum,
         "DataType.ValueTypeEnum": DataType.ValueTypeEnum,
         "DataType.UnitSchemaEnum": DataType.UnitSchemaEnum,
+        "EquityOption.InstrumentTypeEnum": EquityOption.InstrumentTypeEnum,
+        "EquityOptionAllOf.InstrumentTypeEnum": EquityOptionAllOf.InstrumentTypeEnum,
         "FieldSchema.TypeEnum": FieldSchema.TypeEnum,
         "FlowConventions.DayCountConventionEnum": FlowConventions.DayCountConventionEnum,
         "FlowConventions.RollConventionEnum": FlowConventions.RollConventionEnum,
@@ -632,6 +638,8 @@ let typeMap: {[index: string]: any} = {
     "DeleteInstrumentPropertiesResponse": DeleteInstrumentPropertiesResponse,
     "DeleteInstrumentResponse": DeleteInstrumentResponse,
     "DeletedEntityResponse": DeletedEntityResponse,
+    "EquityOption": EquityOption,
+    "EquityOptionAllOf": EquityOptionAllOf,
     "ErrorDetail": ErrorDetail,
     "ExecutionRequest": ExecutionRequest,
     "ExpandedGroup": ExpandedGroup,

@@ -11,29 +11,109 @@
  */
 
 
-/**
-* An amount of a specific currency, specifying a value and an associated unit
-*/
-export class CurrencyAndAmount {
-    'amount'?: number;
-    'currency'?: string;
+export class EquityOptionAllOf {
+    /**
+    * The reset code of the option.
+    */
+    'code': string;
+    /**
+    * The start date of the option.
+    */
+    'startDate': Date;
+    /**
+    * The maturity date of the option.
+    */
+    'optionMaturityDate': Date;
+    /**
+    * The settlement date of the option.
+    */
+    'optionSettlementDate': Date;
+    /**
+    * True of the option is settled in cash false if delivery.
+    */
+    'isDeliveryNotCash': boolean;
+    /**
+    * True if the option is a call, false if the option is a put.
+    */
+    'isCallNotPut': boolean;
+    /**
+    * The strike of the option.
+    */
+    'strike': number;
+    /**
+    * The domestic currency.
+    */
+    'domCcy': string;
+    /**
+    * Instrument type, must be property for JSON.
+    */
+    'instrumentType': EquityOptionAllOf.InstrumentTypeEnum;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "amount",
-            "baseName": "amount",
+            "name": "code",
+            "baseName": "code",
+            "type": "string"
+        },
+        {
+            "name": "startDate",
+            "baseName": "startDate",
+            "type": "Date"
+        },
+        {
+            "name": "optionMaturityDate",
+            "baseName": "optionMaturityDate",
+            "type": "Date"
+        },
+        {
+            "name": "optionSettlementDate",
+            "baseName": "optionSettlementDate",
+            "type": "Date"
+        },
+        {
+            "name": "isDeliveryNotCash",
+            "baseName": "isDeliveryNotCash",
+            "type": "boolean"
+        },
+        {
+            "name": "isCallNotPut",
+            "baseName": "isCallNotPut",
+            "type": "boolean"
+        },
+        {
+            "name": "strike",
+            "baseName": "strike",
             "type": "number"
         },
         {
-            "name": "currency",
-            "baseName": "currency",
+            "name": "domCcy",
+            "baseName": "domCcy",
             "type": "string"
+        },
+        {
+            "name": "instrumentType",
+            "baseName": "instrumentType",
+            "type": "EquityOptionAllOf.InstrumentTypeEnum"
         }    ];
 
     static getAttributeTypeMap() {
-        return CurrencyAndAmount.attributeTypeMap;
+        return EquityOptionAllOf.attributeTypeMap;
     }
 }
 
+export namespace EquityOptionAllOf {
+    export enum InstrumentTypeEnum {
+        QuotedSecurity = <any> 'QuotedSecurity',
+        InterestRateSwap = <any> 'InterestRateSwap',
+        FxForward = <any> 'FxForward',
+        Exotic = <any> 'Exotic',
+        FxOption = <any> 'FxOption',
+        CreditDefaultSwap = <any> 'CreditDefaultSwap',
+        InterestRateSwaption = <any> 'InterestRateSwaption',
+        Bond = <any> 'Bond',
+        EquityOption = <any> 'EquityOption',
+        Unknown = <any> 'Unknown'
+    }
+}
