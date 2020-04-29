@@ -10,127 +10,43 @@
  * Do not edit the class manually.
  */
 
-import { CreateUnitDefinition } from './createUnitDefinition';
+import { AggregationResult } from './aggregationResult';
 
-export class CreateDataTypeRequest {
-    'scope': string;
-    'code': string;
-    'typeValueRange': CreateDataTypeRequest.TypeValueRangeEnum;
-    'displayName': string;
-    'description': string;
-    'valueType': CreateDataTypeRequest.ValueTypeEnum;
-    'acceptableValues'?: Array<string>;
-    'unitSchema'?: CreateDataTypeRequest.UnitSchemaEnum;
-    'acceptableUnits'?: Array<CreateUnitDefinition>;
+export class QueryableEntitiesResponse {
+    /**
+    * The set of addresses that can be accessed via (an aggregation) query.
+    */
+    'addressKeys'?: Array<string>;
+    /**
+    * The descriptions for each address key to explain exactly what they are and mean.
+    */
+    'descriptions'?: Array<string>;
+    /**
+    * The definitions of the the results returned for a given key with information on whether it is scaled with quantity of holdings and what type it is.
+    */
+    'definitions'?: Array<AggregationResult>;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "scope",
-            "baseName": "scope",
-            "type": "string"
-        },
-        {
-            "name": "code",
-            "baseName": "code",
-            "type": "string"
-        },
-        {
-            "name": "typeValueRange",
-            "baseName": "typeValueRange",
-            "type": "CreateDataTypeRequest.TypeValueRangeEnum"
-        },
-        {
-            "name": "displayName",
-            "baseName": "displayName",
-            "type": "string"
-        },
-        {
-            "name": "description",
-            "baseName": "description",
-            "type": "string"
-        },
-        {
-            "name": "valueType",
-            "baseName": "valueType",
-            "type": "CreateDataTypeRequest.ValueTypeEnum"
-        },
-        {
-            "name": "acceptableValues",
-            "baseName": "acceptableValues",
+            "name": "addressKeys",
+            "baseName": "addressKeys",
             "type": "Array<string>"
         },
         {
-            "name": "unitSchema",
-            "baseName": "unitSchema",
-            "type": "CreateDataTypeRequest.UnitSchemaEnum"
+            "name": "descriptions",
+            "baseName": "descriptions",
+            "type": "Array<string>"
         },
         {
-            "name": "acceptableUnits",
-            "baseName": "acceptableUnits",
-            "type": "Array<CreateUnitDefinition>"
+            "name": "definitions",
+            "baseName": "definitions",
+            "type": "Array<AggregationResult>"
         }    ];
 
     static getAttributeTypeMap() {
-        return CreateDataTypeRequest.attributeTypeMap;
+        return QueryableEntitiesResponse.attributeTypeMap;
     }
 }
 
-export namespace CreateDataTypeRequest {
-    export enum TypeValueRangeEnum {
-        Open = <any> 'Open',
-        Closed = <any> 'Closed'
-    }
-    export enum ValueTypeEnum {
-        String = <any> 'String',
-        Int = <any> 'Int',
-        Decimal = <any> 'Decimal',
-        DateTime = <any> 'DateTime',
-        Boolean = <any> 'Boolean',
-        Map = <any> 'Map',
-        List = <any> 'List',
-        PropertyArray = <any> 'PropertyArray',
-        Percentage = <any> 'Percentage',
-        BenchmarkType = <any> 'BenchmarkType',
-        Code = <any> 'Code',
-        Id = <any> 'Id',
-        Uri = <any> 'Uri',
-        ArrayOfIds = <any> 'ArrayOfIds',
-        ArrayOfTransactionAliases = <any> 'ArrayOfTransactionAliases',
-        ArrayofTransactionMovements = <any> 'ArrayofTransactionMovements',
-        ArrayofUnits = <any> 'ArrayofUnits',
-        StringArray = <any> 'StringArray',
-        CurrencyAndAmount = <any> 'CurrencyAndAmount',
-        TradePrice = <any> 'TradePrice',
-        UnitCreation = <any> 'UnitCreation',
-        Currency = <any> 'Currency',
-        UserId = <any> 'UserId',
-        MetricValue = <any> 'MetricValue',
-        QuoteId = <any> 'QuoteId',
-        QuoteSeriesId = <any> 'QuoteSeriesId',
-        ResourceId = <any> 'ResourceId',
-        ResultValue = <any> 'ResultValue',
-        CutLocalTime = <any> 'CutLocalTime',
-        DateOrCutLabel = <any> 'DateOrCutLabel',
-        Transition = <any> 'Transition',
-        StructuredData = <any> 'StructuredData',
-        StructuredDataId = <any> 'StructuredDataId',
-        ConfigurationRecipe = <any> 'ConfigurationRecipe',
-        ConfigurationRecipeSnippet = <any> 'ConfigurationRecipeSnippet',
-        StructuredResultDataId = <any> 'StructuredResultDataId',
-        StructuredResultData = <any> 'StructuredResultData',
-        DataMapping = <any> 'DataMapping',
-        LusidInstrument = <any> 'LusidInstrument',
-        WeightedInstrument = <any> 'WeightedInstrument',
-        Tenor = <any> 'Tenor',
-        CdsDetailSpecifications = <any> 'CdsDetailSpecifications',
-        FlowConventions = <any> 'FlowConventions',
-        OrderId = <any> 'OrderId'
-    }
-    export enum UnitSchemaEnum {
-        NoUnits = <any> 'NoUnits',
-        Basic = <any> 'Basic',
-        Iso4217Currency = <any> 'Iso4217Currency'
-    }
-}

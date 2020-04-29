@@ -10,6 +10,7 @@ export * from './aggregationMeasureFailureDetail';
 export * from './aggregationOptions';
 export * from './aggregationRequest';
 export * from './aggregationResponseNodeOfDictionaryOfStringToObject';
+export * from './aggregationResult';
 export * from './allocation';
 export * from './allocationRequest';
 export * from './allocationSetRequest';
@@ -130,6 +131,7 @@ export * from './propertyDefinition';
 export * from './propertyFilter';
 export * from './propertySchema';
 export * from './propertyValue';
+export * from './queryableEntitiesResponse';
 export * from './quote';
 export * from './quoteAccessMetadataRule';
 export * from './quoteAccessMetadataRuleId';
@@ -255,6 +257,7 @@ import { AggregationMeasureFailureDetail } from './aggregationMeasureFailureDeta
 import { AggregationOptions } from './aggregationOptions';
 import { AggregationRequest } from './aggregationRequest';
 import { AggregationResponseNodeOfDictionaryOfStringToObject } from './aggregationResponseNodeOfDictionaryOfStringToObject';
+import { AggregationResult } from './aggregationResult';
 import { Allocation } from './allocation';
 import { AllocationRequest } from './allocationRequest';
 import { AllocationSetRequest } from './allocationSetRequest';
@@ -375,6 +378,7 @@ import { PropertyDefinition } from './propertyDefinition';
 import { PropertyFilter } from './propertyFilter';
 import { PropertySchema } from './propertySchema';
 import { PropertyValue } from './propertyValue';
+import { QueryableEntitiesResponse } from './queryableEntitiesResponse';
 import { Quote } from './quote';
 import { QuoteAccessMetadataRule } from './quoteAccessMetadataRule';
 import { QuoteAccessMetadataRuleId } from './quoteAccessMetadataRuleId';
@@ -500,6 +504,7 @@ let primitives = [
                  
 let enumsMap: {[index: string]: any} = {
         "AggregateSpec.OpEnum": AggregateSpec.OpEnum,
+        "AggregationResult.ValueTypeEnum": AggregationResult.ValueTypeEnum,
         "BondInstrument.InstrumentTypeEnum": BondInstrument.InstrumentTypeEnum,
         "BondInstrumentAllOf.InstrumentTypeEnum": BondInstrumentAllOf.InstrumentTypeEnum,
         "CdsDetailSpecification.SeniorityEnum": CdsDetailSpecification.SeniorityEnum,
@@ -596,6 +601,7 @@ let typeMap: {[index: string]: any} = {
     "AggregationOptions": AggregationOptions,
     "AggregationRequest": AggregationRequest,
     "AggregationResponseNodeOfDictionaryOfStringToObject": AggregationResponseNodeOfDictionaryOfStringToObject,
+    "AggregationResult": AggregationResult,
     "Allocation": Allocation,
     "AllocationRequest": AllocationRequest,
     "AllocationSetRequest": AllocationSetRequest,
@@ -716,6 +722,7 @@ let typeMap: {[index: string]: any} = {
     "PropertyFilter": PropertyFilter,
     "PropertySchema": PropertySchema,
     "PropertyValue": PropertyValue,
+    "QueryableEntitiesResponse": QueryableEntitiesResponse,
     "Quote": Quote,
     "QuoteAccessMetadataRule": QuoteAccessMetadataRule,
     "QuoteAccessMetadataRuleId": QuoteAccessMetadataRuleId,

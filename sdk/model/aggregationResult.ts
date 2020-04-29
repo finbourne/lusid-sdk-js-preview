@@ -10,78 +10,37 @@
  * Do not edit the class manually.
  */
 
-import { CreateUnitDefinition } from './createUnitDefinition';
 
-export class CreateDataTypeRequest {
-    'scope': string;
-    'code': string;
-    'typeValueRange': CreateDataTypeRequest.TypeValueRangeEnum;
-    'displayName': string;
-    'description': string;
-    'valueType': CreateDataTypeRequest.ValueTypeEnum;
-    'acceptableValues'?: Array<string>;
-    'unitSchema'?: CreateDataTypeRequest.UnitSchemaEnum;
-    'acceptableUnits'?: Array<CreateUnitDefinition>;
+export class AggregationResult {
+    'displayName'?: string;
+    'scalesWithHoldingQuantity'?: boolean;
+    'valueType'?: AggregationResult.ValueTypeEnum;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-        {
-            "name": "scope",
-            "baseName": "scope",
-            "type": "string"
-        },
-        {
-            "name": "code",
-            "baseName": "code",
-            "type": "string"
-        },
-        {
-            "name": "typeValueRange",
-            "baseName": "typeValueRange",
-            "type": "CreateDataTypeRequest.TypeValueRangeEnum"
-        },
         {
             "name": "displayName",
             "baseName": "displayName",
             "type": "string"
         },
         {
-            "name": "description",
-            "baseName": "description",
-            "type": "string"
+            "name": "scalesWithHoldingQuantity",
+            "baseName": "scalesWithHoldingQuantity",
+            "type": "boolean"
         },
         {
             "name": "valueType",
             "baseName": "valueType",
-            "type": "CreateDataTypeRequest.ValueTypeEnum"
-        },
-        {
-            "name": "acceptableValues",
-            "baseName": "acceptableValues",
-            "type": "Array<string>"
-        },
-        {
-            "name": "unitSchema",
-            "baseName": "unitSchema",
-            "type": "CreateDataTypeRequest.UnitSchemaEnum"
-        },
-        {
-            "name": "acceptableUnits",
-            "baseName": "acceptableUnits",
-            "type": "Array<CreateUnitDefinition>"
+            "type": "AggregationResult.ValueTypeEnum"
         }    ];
 
     static getAttributeTypeMap() {
-        return CreateDataTypeRequest.attributeTypeMap;
+        return AggregationResult.attributeTypeMap;
     }
 }
 
-export namespace CreateDataTypeRequest {
-    export enum TypeValueRangeEnum {
-        Open = <any> 'Open',
-        Closed = <any> 'Closed'
-    }
+export namespace AggregationResult {
     export enum ValueTypeEnum {
         String = <any> 'String',
         Int = <any> 'Int',
@@ -127,10 +86,5 @@ export namespace CreateDataTypeRequest {
         CdsDetailSpecifications = <any> 'CdsDetailSpecifications',
         FlowConventions = <any> 'FlowConventions',
         OrderId = <any> 'OrderId'
-    }
-    export enum UnitSchemaEnum {
-        NoUnits = <any> 'NoUnits',
-        Basic = <any> 'Basic',
-        Iso4217Currency = <any> 'Iso4217Currency'
     }
 }
