@@ -10,105 +10,40 @@
  * Do not edit the class manually.
  */
 
-import { Property } from './property';
-import { ResourceId } from './resourceId';
+import { InlineValuationReconciliationRequest } from './inlineValuationReconciliationRequest';
 
-export class CreateTransactionPortfolioRequest {
+/**
+* Specification for the reconciliation request. Left and Right hand sides are constructed. Each consists of a valuation of a inline set of instruments  using an inline aggregation request. The results of this can then be compared to each other. The difference, which is effectively a risk based  difference allows comparison of the effects of changing a recipe, valuation date, or (though it may or may not make logical sense) a set of instruments.
+*/
+export class InlineValuationsReconciliationRequest {
+    'left': InlineValuationReconciliationRequest;
+    'right': InlineValuationReconciliationRequest;
     /**
-    * The name of the transaction portfolio.
+    * Instrument properties to be included with any identified breaks. These properties will be in the effective and AsAt dates of the left portfolio
     */
-    'displayName': string;
-    /**
-    * A long form description of the transaction portfolio.
-    */
-    'description'?: string;
-    /**
-    * The code that the transaction portfolio will be created with. Together with the scope this uniquely identifies the transaction portfolio.
-    */
-    'code': string;
-    /**
-    * The effective datetime at which the transaction portfolio will be created. No transactions can be added to the transaction portfolio before this date. Defaults to the current LUSID system datetime if not specified.
-    */
-    'created'?: Date;
-    /**
-    * The base currency of the transaction portfolio.
-    */
-    'baseCurrency': string;
-    'corporateActionSourceId'?: ResourceId;
-    /**
-    * Determines the accounting treatment given to the transaction portfolio\'s tax lots.
-    */
-    'accountingMethod'?: CreateTransactionPortfolioRequest.AccountingMethodEnum;
-    /**
-    * A set of unique transaction properties to group the transaction portfolio\'s holdings by. Each property must be from the \'Transaction\' domain and should be identified by its key which has the format {domain}/{scope}/{code}, e.g. \'Transaction/strategies/quantsignal\'.
-    */
-    'subHoldingKeys'?: Array<string>;
-    /**
-    * A set of unique portfolio properties to add to the transaction portfolio. Each property must be from the \'Portfolio\' domain and should be identified by its key which has the format {domain}/{scope}/{code}, e.g. \'Portfolio/Manager/Id\'. These properties must be pre-defined.
-    */
-    'properties'?: { [key: string]: Property; };
+    'instrumentPropertyKeys': Array<string>;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "displayName",
-            "baseName": "displayName",
-            "type": "string"
+            "name": "left",
+            "baseName": "left",
+            "type": "InlineValuationReconciliationRequest"
         },
         {
-            "name": "description",
-            "baseName": "description",
-            "type": "string"
+            "name": "right",
+            "baseName": "right",
+            "type": "InlineValuationReconciliationRequest"
         },
         {
-            "name": "code",
-            "baseName": "code",
-            "type": "string"
-        },
-        {
-            "name": "created",
-            "baseName": "created",
-            "type": "Date"
-        },
-        {
-            "name": "baseCurrency",
-            "baseName": "baseCurrency",
-            "type": "string"
-        },
-        {
-            "name": "corporateActionSourceId",
-            "baseName": "corporateActionSourceId",
-            "type": "ResourceId"
-        },
-        {
-            "name": "accountingMethod",
-            "baseName": "accountingMethod",
-            "type": "CreateTransactionPortfolioRequest.AccountingMethodEnum"
-        },
-        {
-            "name": "subHoldingKeys",
-            "baseName": "subHoldingKeys",
+            "name": "instrumentPropertyKeys",
+            "baseName": "instrumentPropertyKeys",
             "type": "Array<string>"
-        },
-        {
-            "name": "properties",
-            "baseName": "properties",
-            "type": "{ [key: string]: Property; }"
         }    ];
 
     static getAttributeTypeMap() {
-        return CreateTransactionPortfolioRequest.attributeTypeMap;
+        return InlineValuationsReconciliationRequest.attributeTypeMap;
     }
 }
 
-export namespace CreateTransactionPortfolioRequest {
-    export enum AccountingMethodEnum {
-        Default = <any> 'Default',
-        AverageCost = <any> 'AverageCost',
-        FirstInFirstOut = <any> 'FirstInFirstOut',
-        LastInFirstOut = <any> 'LastInFirstOut',
-        HighestCostFirst = <any> 'HighestCostFirst',
-        LowestCostFirst = <any> 'LowestCostFirst'
-    }
-}

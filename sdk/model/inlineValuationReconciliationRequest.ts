@@ -10,105 +10,34 @@
  * Do not edit the class manually.
  */
 
-import { Property } from './property';
-import { ResourceId } from './resourceId';
+import { InlineAggregationRequest } from './inlineAggregationRequest';
 
-export class CreateTransactionPortfolioRequest {
+/**
+* Specification for the parameters that define how to perform a reconciliation between two sets of instruments. This defines  the specification for one half of that request, namely how to find and perform an aggregation request on one of the sets.
+*/
+export class InlineValuationReconciliationRequest {
     /**
-    * The name of the transaction portfolio.
+    * The id of the portfolio on which to run the aggregation request
     */
-    'displayName': string;
-    /**
-    * A long form description of the transaction portfolio.
-    */
-    'description'?: string;
-    /**
-    * The code that the transaction portfolio will be created with. Together with the scope this uniquely identifies the transaction portfolio.
-    */
-    'code': string;
-    /**
-    * The effective datetime at which the transaction portfolio will be created. No transactions can be added to the transaction portfolio before this date. Defaults to the current LUSID system datetime if not specified.
-    */
-    'created'?: Date;
-    /**
-    * The base currency of the transaction portfolio.
-    */
-    'baseCurrency': string;
-    'corporateActionSourceId'?: ResourceId;
-    /**
-    * Determines the accounting treatment given to the transaction portfolio\'s tax lots.
-    */
-    'accountingMethod'?: CreateTransactionPortfolioRequest.AccountingMethodEnum;
-    /**
-    * A set of unique transaction properties to group the transaction portfolio\'s holdings by. Each property must be from the \'Transaction\' domain and should be identified by its key which has the format {domain}/{scope}/{code}, e.g. \'Transaction/strategies/quantsignal\'.
-    */
-    'subHoldingKeys'?: Array<string>;
-    /**
-    * A set of unique portfolio properties to add to the transaction portfolio. Each property must be from the \'Portfolio\' domain and should be identified by its key which has the format {domain}/{scope}/{code}, e.g. \'Portfolio/Manager/Id\'. These properties must be pre-defined.
-    */
-    'properties'?: { [key: string]: Property; };
+    'scope': string;
+    'aggregation': InlineAggregationRequest;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "displayName",
-            "baseName": "displayName",
+            "name": "scope",
+            "baseName": "scope",
             "type": "string"
         },
         {
-            "name": "description",
-            "baseName": "description",
-            "type": "string"
-        },
-        {
-            "name": "code",
-            "baseName": "code",
-            "type": "string"
-        },
-        {
-            "name": "created",
-            "baseName": "created",
-            "type": "Date"
-        },
-        {
-            "name": "baseCurrency",
-            "baseName": "baseCurrency",
-            "type": "string"
-        },
-        {
-            "name": "corporateActionSourceId",
-            "baseName": "corporateActionSourceId",
-            "type": "ResourceId"
-        },
-        {
-            "name": "accountingMethod",
-            "baseName": "accountingMethod",
-            "type": "CreateTransactionPortfolioRequest.AccountingMethodEnum"
-        },
-        {
-            "name": "subHoldingKeys",
-            "baseName": "subHoldingKeys",
-            "type": "Array<string>"
-        },
-        {
-            "name": "properties",
-            "baseName": "properties",
-            "type": "{ [key: string]: Property; }"
+            "name": "aggregation",
+            "baseName": "aggregation",
+            "type": "InlineAggregationRequest"
         }    ];
 
     static getAttributeTypeMap() {
-        return CreateTransactionPortfolioRequest.attributeTypeMap;
+        return InlineValuationReconciliationRequest.attributeTypeMap;
     }
 }
 
-export namespace CreateTransactionPortfolioRequest {
-    export enum AccountingMethodEnum {
-        Default = <any> 'Default',
-        AverageCost = <any> 'AverageCost',
-        FirstInFirstOut = <any> 'FirstInFirstOut',
-        LastInFirstOut = <any> 'LastInFirstOut',
-        HighestCostFirst = <any> 'HighestCostFirst',
-        LowestCostFirst = <any> 'LowestCostFirst'
-    }
-}

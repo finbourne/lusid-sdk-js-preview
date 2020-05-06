@@ -78,6 +78,8 @@ export * from './iUnitDefinitionDto';
 export * from './idSelectorDefinition';
 export * from './identifierPartSchema';
 export * from './inlineAggregationRequest';
+export * from './inlineValuationReconciliationRequest';
+export * from './inlineValuationsReconciliationRequest';
 export * from './instrument';
 export * from './instrumentDefinition';
 export * from './instrumentEconomicDefinition';
@@ -325,6 +327,8 @@ import { IUnitDefinitionDto } from './iUnitDefinitionDto';
 import { IdSelectorDefinition } from './idSelectorDefinition';
 import { IdentifierPartSchema } from './identifierPartSchema';
 import { InlineAggregationRequest } from './inlineAggregationRequest';
+import { InlineValuationReconciliationRequest } from './inlineValuationReconciliationRequest';
+import { InlineValuationsReconciliationRequest } from './inlineValuationsReconciliationRequest';
 import { Instrument } from './instrument';
 import { InstrumentDefinition } from './instrumentDefinition';
 import { InstrumentEconomicDefinition } from './instrumentEconomicDefinition';
@@ -669,6 +673,8 @@ let typeMap: {[index: string]: any} = {
     "IdSelectorDefinition": IdSelectorDefinition,
     "IdentifierPartSchema": IdentifierPartSchema,
     "InlineAggregationRequest": InlineAggregationRequest,
+    "InlineValuationReconciliationRequest": InlineValuationReconciliationRequest,
+    "InlineValuationsReconciliationRequest": InlineValuationsReconciliationRequest,
     "Instrument": Instrument,
     "InstrumentDefinition": InstrumentDefinition,
     "InstrumentEconomicDefinition": InstrumentEconomicDefinition,
