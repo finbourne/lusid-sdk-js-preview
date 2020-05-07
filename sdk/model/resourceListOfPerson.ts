@@ -10,69 +10,26 @@
  * Do not edit the class manually.
  */
 
-import { IUnitDefinitionDto } from './iUnitDefinitionDto';
 import { Link } from './link';
-import { ResourceId } from './resourceId';
+import { Person } from './person';
 
-export class DataType {
+export class ResourceListOfPerson {
+    'values': Array<Person>;
     'href'?: string;
-    'typeValueRange': DataType.TypeValueRangeEnum;
-    'id': ResourceId;
-    'displayName': string;
-    'description': string;
-    'valueType': DataType.ValueTypeEnum;
-    'acceptableValues'?: Array<string>;
-    'unitSchema'?: DataType.UnitSchemaEnum;
-    'acceptableUnits'?: Array<IUnitDefinitionDto>;
     'links'?: Array<Link>;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
+            "name": "values",
+            "baseName": "values",
+            "type": "Array<Person>"
+        },
+        {
             "name": "href",
             "baseName": "href",
             "type": "string"
-        },
-        {
-            "name": "typeValueRange",
-            "baseName": "typeValueRange",
-            "type": "DataType.TypeValueRangeEnum"
-        },
-        {
-            "name": "id",
-            "baseName": "id",
-            "type": "ResourceId"
-        },
-        {
-            "name": "displayName",
-            "baseName": "displayName",
-            "type": "string"
-        },
-        {
-            "name": "description",
-            "baseName": "description",
-            "type": "string"
-        },
-        {
-            "name": "valueType",
-            "baseName": "valueType",
-            "type": "DataType.ValueTypeEnum"
-        },
-        {
-            "name": "acceptableValues",
-            "baseName": "acceptableValues",
-            "type": "Array<string>"
-        },
-        {
-            "name": "unitSchema",
-            "baseName": "unitSchema",
-            "type": "DataType.UnitSchemaEnum"
-        },
-        {
-            "name": "acceptableUnits",
-            "baseName": "acceptableUnits",
-            "type": "Array<IUnitDefinitionDto>"
         },
         {
             "name": "links",
@@ -81,64 +38,7 @@ export class DataType {
         }    ];
 
     static getAttributeTypeMap() {
-        return DataType.attributeTypeMap;
+        return ResourceListOfPerson.attributeTypeMap;
     }
 }
 
-export namespace DataType {
-    export enum TypeValueRangeEnum {
-        Open = <any> 'Open',
-        Closed = <any> 'Closed'
-    }
-    export enum ValueTypeEnum {
-        String = <any> 'String',
-        Int = <any> 'Int',
-        Decimal = <any> 'Decimal',
-        DateTime = <any> 'DateTime',
-        Boolean = <any> 'Boolean',
-        Map = <any> 'Map',
-        List = <any> 'List',
-        PropertyArray = <any> 'PropertyArray',
-        Percentage = <any> 'Percentage',
-        BenchmarkType = <any> 'BenchmarkType',
-        Code = <any> 'Code',
-        Id = <any> 'Id',
-        Uri = <any> 'Uri',
-        ArrayOfIds = <any> 'ArrayOfIds',
-        ArrayOfTransactionAliases = <any> 'ArrayOfTransactionAliases',
-        ArrayofTransactionMovements = <any> 'ArrayofTransactionMovements',
-        ArrayofUnits = <any> 'ArrayofUnits',
-        StringArray = <any> 'StringArray',
-        CurrencyAndAmount = <any> 'CurrencyAndAmount',
-        TradePrice = <any> 'TradePrice',
-        UnitCreation = <any> 'UnitCreation',
-        Currency = <any> 'Currency',
-        UserId = <any> 'UserId',
-        MetricValue = <any> 'MetricValue',
-        QuoteId = <any> 'QuoteId',
-        QuoteSeriesId = <any> 'QuoteSeriesId',
-        ResourceId = <any> 'ResourceId',
-        ResultValue = <any> 'ResultValue',
-        CutLocalTime = <any> 'CutLocalTime',
-        DateOrCutLabel = <any> 'DateOrCutLabel',
-        Transition = <any> 'Transition',
-        StructuredData = <any> 'StructuredData',
-        StructuredDataId = <any> 'StructuredDataId',
-        ConfigurationRecipe = <any> 'ConfigurationRecipe',
-        ConfigurationRecipeSnippet = <any> 'ConfigurationRecipeSnippet',
-        StructuredResultDataId = <any> 'StructuredResultDataId',
-        StructuredResultData = <any> 'StructuredResultData',
-        DataMapping = <any> 'DataMapping',
-        LusidInstrument = <any> 'LusidInstrument',
-        WeightedInstrument = <any> 'WeightedInstrument',
-        Tenor = <any> 'Tenor',
-        CdsDetailSpecifications = <any> 'CdsDetailSpecifications',
-        FlowConventions = <any> 'FlowConventions',
-        OrderId = <any> 'OrderId'
-    }
-    export enum UnitSchemaEnum {
-        NoUnits = <any> 'NoUnits',
-        Basic = <any> 'Basic',
-        Iso4217Currency = <any> 'Iso4217Currency'
-    }
-}

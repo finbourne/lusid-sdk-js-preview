@@ -158,6 +158,7 @@ export * from './resourceListOfHoldingsAdjustmentHeader';
 export * from './resourceListOfIUnitDefinitionDto';
 export * from './resourceListOfInstrumentIdTypeDescriptor';
 export * from './resourceListOfOrder';
+export * from './resourceListOfPerson';
 export * from './resourceListOfPortfolio';
 export * from './resourceListOfPortfolioGroup';
 export * from './resourceListOfPortfolioSearchResult';
@@ -407,6 +408,7 @@ import { ResourceListOfHoldingsAdjustmentHeader } from './resourceListOfHoldings
 import { ResourceListOfIUnitDefinitionDto } from './resourceListOfIUnitDefinitionDto';
 import { ResourceListOfInstrumentIdTypeDescriptor } from './resourceListOfInstrumentIdTypeDescriptor';
 import { ResourceListOfOrder } from './resourceListOfOrder';
+import { ResourceListOfPerson } from './resourceListOfPerson';
 import { ResourceListOfPortfolio } from './resourceListOfPortfolio';
 import { ResourceListOfPortfolioGroup } from './resourceListOfPortfolioGroup';
 import { ResourceListOfPortfolioSearchResult } from './resourceListOfPortfolioSearchResult';
@@ -753,6 +755,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfIUnitDefinitionDto": ResourceListOfIUnitDefinitionDto,
     "ResourceListOfInstrumentIdTypeDescriptor": ResourceListOfInstrumentIdTypeDescriptor,
     "ResourceListOfOrder": ResourceListOfOrder,
+    "ResourceListOfPerson": ResourceListOfPerson,
     "ResourceListOfPortfolio": ResourceListOfPortfolio,
     "ResourceListOfPortfolioGroup": ResourceListOfPortfolioGroup,
     "ResourceListOfPortfolioSearchResult": ResourceListOfPortfolioSearchResult,
