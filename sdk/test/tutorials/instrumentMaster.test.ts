@@ -213,6 +213,7 @@ function buildUpsertInstrumentPropertiesRequest(
       )
     ]
     list.push(instrumentPropertyRequest)
+
     return list
   }, [])
 }
