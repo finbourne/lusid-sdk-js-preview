@@ -60,6 +60,9 @@ export * from './executionRequest';
 export * from './expandedGroup';
 export * from './fieldSchema';
 export * from './fileResponse';
+export * from './fixedLeg';
+export * from './fixedLegAllOf';
+export * from './floatingLeg';
 export * from './flowConventions';
 export * from './fxForwardInstrument';
 export * from './fxForwardInstrumentAllOf';
@@ -77,6 +80,7 @@ export * from './holdingsAdjustmentHeader';
 export * from './iUnitDefinitionDto';
 export * from './idSelectorDefinition';
 export * from './identifierPartSchema';
+export * from './indexConvention';
 export * from './inlineAggregationRequest';
 export * from './inlineValuationReconciliationRequest';
 export * from './inlineValuationsReconciliationRequest';
@@ -88,6 +92,7 @@ export * from './instrumentIdValue';
 export * from './instrumentLeg';
 export * from './instrumentMatch';
 export * from './instrumentSearchProperty';
+export * from './legDefinition';
 export * from './link';
 export * from './listAggregationResponse';
 export * from './lusidInstrument';
@@ -310,6 +315,9 @@ import { ExecutionRequest } from './executionRequest';
 import { ExpandedGroup } from './expandedGroup';
 import { FieldSchema } from './fieldSchema';
 import { FileResponse } from './fileResponse';
+import { FixedLeg } from './fixedLeg';
+import { FixedLegAllOf } from './fixedLegAllOf';
+import { FloatingLeg } from './floatingLeg';
 import { FlowConventions } from './flowConventions';
 import { FxForwardInstrument } from './fxForwardInstrument';
 import { FxForwardInstrumentAllOf } from './fxForwardInstrumentAllOf';
@@ -327,6 +335,7 @@ import { HoldingsAdjustmentHeader } from './holdingsAdjustmentHeader';
 import { IUnitDefinitionDto } from './iUnitDefinitionDto';
 import { IdSelectorDefinition } from './idSelectorDefinition';
 import { IdentifierPartSchema } from './identifierPartSchema';
+import { IndexConvention } from './indexConvention';
 import { InlineAggregationRequest } from './inlineAggregationRequest';
 import { InlineValuationReconciliationRequest } from './inlineValuationReconciliationRequest';
 import { InlineValuationsReconciliationRequest } from './inlineValuationsReconciliationRequest';
@@ -338,6 +347,7 @@ import { InstrumentIdValue } from './instrumentIdValue';
 import { InstrumentLeg } from './instrumentLeg';
 import { InstrumentMatch } from './instrumentMatch';
 import { InstrumentSearchProperty } from './instrumentSearchProperty';
+import { LegDefinition } from './legDefinition';
 import { Link } from './link';
 import { ListAggregationResponse } from './listAggregationResponse';
 import { LusidInstrument } from './lusidInstrument';
@@ -532,6 +542,9 @@ let enumsMap: {[index: string]: any} = {
         "EquityOption.InstrumentTypeEnum": EquityOption.InstrumentTypeEnum,
         "EquityOptionAllOf.InstrumentTypeEnum": EquityOptionAllOf.InstrumentTypeEnum,
         "FieldSchema.TypeEnum": FieldSchema.TypeEnum,
+        "FixedLeg.InstrumentTypeEnum": FixedLeg.InstrumentTypeEnum,
+        "FixedLegAllOf.InstrumentTypeEnum": FixedLegAllOf.InstrumentTypeEnum,
+        "FloatingLeg.InstrumentTypeEnum": FloatingLeg.InstrumentTypeEnum,
         "FlowConventions.DayCountConventionEnum": FlowConventions.DayCountConventionEnum,
         "FlowConventions.RollConventionEnum": FlowConventions.RollConventionEnum,
         "FxForwardInstrument.InstrumentTypeEnum": FxForwardInstrument.InstrumentTypeEnum,
@@ -543,7 +556,12 @@ let enumsMap: {[index: string]: any} = {
         "HoldingsAdjustment.UnmatchedHoldingMethodEnum": HoldingsAdjustment.UnmatchedHoldingMethodEnum,
         "HoldingsAdjustmentHeader.UnmatchedHoldingMethodEnum": HoldingsAdjustmentHeader.UnmatchedHoldingMethodEnum,
         "IUnitDefinitionDto.SchemaEnum": IUnitDefinitionDto.SchemaEnum,
+        "IndexConvention.DayCountConventionEnum": IndexConvention.DayCountConventionEnum,
         "Instrument.StateEnum": Instrument.StateEnum,
+        "InstrumentLeg.InstrumentTypeEnum": InstrumentLeg.InstrumentTypeEnum,
+        "LegDefinition.StubTypeEnum": LegDefinition.StubTypeEnum,
+        "LegDefinition.PayReceiveEnum": LegDefinition.PayReceiveEnum,
+        "LegDefinition.NotionalExchangeTypeEnum": LegDefinition.NotionalExchangeTypeEnum,
         "LusidInstrument.InstrumentTypeEnum": LusidInstrument.InstrumentTypeEnum,
         "MarketContextSuppliers.CommodityEnum": MarketContextSuppliers.CommodityEnum,
         "MarketContextSuppliers.CreditEnum": MarketContextSuppliers.CreditEnum,
@@ -573,11 +591,13 @@ let enumsMap: {[index: string]: any} = {
         "ResourceListOfValueType.ValuesEnum": ResourceListOfValueType.ValuesEnum,
         "ResultDataKeyRule.SupplierEnum": ResultDataKeyRule.SupplierEnum,
         "Results.FormatEnum": Results.FormatEnum,
-        "SwapInstrument.NotionalExchangeTypeEnum": SwapInstrument.NotionalExchangeTypeEnum,
         "SwapInstrument.InstrumentTypeEnum": SwapInstrument.InstrumentTypeEnum,
-        "SwapInstrumentAllOf.NotionalExchangeTypeEnum": SwapInstrumentAllOf.NotionalExchangeTypeEnum,
         "SwapInstrumentAllOf.InstrumentTypeEnum": SwapInstrumentAllOf.InstrumentTypeEnum,
+        "Swaption.PayOrReceiveFixedEnum": Swaption.PayOrReceiveFixedEnum,
+        "Swaption.DeliveryMethodEnum": Swaption.DeliveryMethodEnum,
         "Swaption.InstrumentTypeEnum": Swaption.InstrumentTypeEnum,
+        "SwaptionAllOf.PayOrReceiveFixedEnum": SwaptionAllOf.PayOrReceiveFixedEnum,
+        "SwaptionAllOf.DeliveryMethodEnum": SwaptionAllOf.DeliveryMethodEnum,
         "SwaptionAllOf.InstrumentTypeEnum": SwaptionAllOf.InstrumentTypeEnum,
         "Tenor.UnitEnum": Tenor.UnitEnum,
         "Tolerance.TypeEnum": Tolerance.TypeEnum,
@@ -657,6 +677,9 @@ let typeMap: {[index: string]: any} = {
     "ExpandedGroup": ExpandedGroup,
     "FieldSchema": FieldSchema,
     "FileResponse": FileResponse,
+    "FixedLeg": FixedLeg,
+    "FixedLegAllOf": FixedLegAllOf,
+    "FloatingLeg": FloatingLeg,
     "FlowConventions": FlowConventions,
     "FxForwardInstrument": FxForwardInstrument,
     "FxForwardInstrumentAllOf": FxForwardInstrumentAllOf,
@@ -674,6 +697,7 @@ let typeMap: {[index: string]: any} = {
     "IUnitDefinitionDto": IUnitDefinitionDto,
     "IdSelectorDefinition": IdSelectorDefinition,
     "IdentifierPartSchema": IdentifierPartSchema,
+    "IndexConvention": IndexConvention,
     "InlineAggregationRequest": InlineAggregationRequest,
     "InlineValuationReconciliationRequest": InlineValuationReconciliationRequest,
     "InlineValuationsReconciliationRequest": InlineValuationsReconciliationRequest,
@@ -685,6 +709,7 @@ let typeMap: {[index: string]: any} = {
     "InstrumentLeg": InstrumentLeg,
     "InstrumentMatch": InstrumentMatch,
     "InstrumentSearchProperty": InstrumentSearchProperty,
+    "LegDefinition": LegDefinition,
     "Link": Link,
     "ListAggregationResponse": ListAggregationResponse,
     "LusidInstrument": LusidInstrument,
