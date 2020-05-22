@@ -10,35 +10,125 @@
  * Do not edit the class manually.
  */
 
-import { GetRecipeResponse } from './getRecipeResponse';
-import { Link } from './link';
+import { AggregateSpec } from './aggregateSpec';
+import { ConfigurationRecipe } from './configurationRecipe';
+import { OrderBySpec } from './orderBySpec';
+import { PropertyFilter } from './propertyFilter';
+import { ResourceId } from './resourceId';
 
-export class ResourceListOfGetRecipeResponse {
-    'values': Array<GetRecipeResponse>;
-    'href'?: string;
-    'links'?: Array<Link>;
+/**
+* Specification class to request for the creation/supplementing of a configuration recipe
+*/
+export class CreateRecipeRequest {
+    /**
+    * The scopes in which the recipe creation would look for quotes/data.
+    */
+    'recipeCreationMarketDataScopes'?: Array<string>;
+    'recipeId'?: ResourceId;
+    'inlineRecipe'?: ConfigurationRecipe;
+    /**
+    * The asAt date to use
+    */
+    'asAt'?: Date;
+    /**
+    * If present, the EffectiveFrom and EffectiveAt dates are interpreted as a range of dates for which to perform a valuation.  In this case, valuation is calculated for the portfolio(s) for each date that is a business day in the given range.
+    */
+    'effectiveFrom'?: string;
+    /**
+    * The market data time, i.e. the time to run the aggregation request effective of.
+    */
+    'effectiveAt': string;
+    /**
+    * The set of specifications for items to calculate or retrieve during the aggregation and present in the results.  This is logically equivalent to the set of operations in a Sql select statement  select [operation1(field1), operation2(field2), ... ] from results
+    */
+    'metrics': Array<AggregateSpec>;
+    /**
+    * The set of items by which to perform grouping. This primarily matters when one or more of the metric operators is a mapping  that reduces set size, e.g. sum or proportion. The group-by statement determines the set of keys by which to break the results out.
+    */
+    'groupBy'?: Array<string>;
+    /**
+    * A set of filters to use to reduce the data found in a request. Equivalent to the \'where ...\' part of a Sql select statement.  For example, filter a set of values within a given range or matching a particular value.
+    */
+    'filters'?: Array<PropertyFilter>;
+    /**
+    * limit the results to a particular number of values.
+    */
+    'limit'?: number;
+    /**
+    * A (possibly empty/null) set of specifications for how to order the results.
+    */
+    'sort'?: Array<OrderBySpec>;
+    /**
+    * Three letter ISO currency string indicating what currency to report in for ReportCcy denominated queries.  If not present then the currency of the relevant portfolio will be used in its place where relevant.
+    */
+    'reportCcy'?: string;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "values",
-            "baseName": "values",
-            "type": "Array<GetRecipeResponse>"
+            "name": "recipeCreationMarketDataScopes",
+            "baseName": "recipeCreationMarketDataScopes",
+            "type": "Array<string>"
         },
         {
-            "name": "href",
-            "baseName": "href",
+            "name": "recipeId",
+            "baseName": "recipeId",
+            "type": "ResourceId"
+        },
+        {
+            "name": "inlineRecipe",
+            "baseName": "inlineRecipe",
+            "type": "ConfigurationRecipe"
+        },
+        {
+            "name": "asAt",
+            "baseName": "asAt",
+            "type": "Date"
+        },
+        {
+            "name": "effectiveFrom",
+            "baseName": "effectiveFrom",
             "type": "string"
         },
         {
-            "name": "links",
-            "baseName": "links",
-            "type": "Array<Link>"
+            "name": "effectiveAt",
+            "baseName": "effectiveAt",
+            "type": "string"
+        },
+        {
+            "name": "metrics",
+            "baseName": "metrics",
+            "type": "Array<AggregateSpec>"
+        },
+        {
+            "name": "groupBy",
+            "baseName": "groupBy",
+            "type": "Array<string>"
+        },
+        {
+            "name": "filters",
+            "baseName": "filters",
+            "type": "Array<PropertyFilter>"
+        },
+        {
+            "name": "limit",
+            "baseName": "limit",
+            "type": "number"
+        },
+        {
+            "name": "sort",
+            "baseName": "sort",
+            "type": "Array<OrderBySpec>"
+        },
+        {
+            "name": "reportCcy",
+            "baseName": "reportCcy",
+            "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
-        return ResourceListOfGetRecipeResponse.attributeTypeMap;
+        return CreateRecipeRequest.attributeTypeMap;
     }
 }
 

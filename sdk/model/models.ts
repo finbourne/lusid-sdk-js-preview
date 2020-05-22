@@ -40,6 +40,7 @@ export * from './createDerivedTransactionPortfolioRequest';
 export * from './createPortfolioDetails';
 export * from './createPortfolioGroupRequest';
 export * from './createPropertyDefinitionRequest';
+export * from './createRecipeRequest';
 export * from './createReferencePortfolioRequest';
 export * from './createResults';
 export * from './createTransactionPortfolioRequest';
@@ -296,6 +297,7 @@ import { CreateDerivedTransactionPortfolioRequest } from './createDerivedTransac
 import { CreatePortfolioDetails } from './createPortfolioDetails';
 import { CreatePortfolioGroupRequest } from './createPortfolioGroupRequest';
 import { CreatePropertyDefinitionRequest } from './createPropertyDefinitionRequest';
+import { CreateRecipeRequest } from './createRecipeRequest';
 import { CreateReferencePortfolioRequest } from './createReferencePortfolioRequest';
 import { CreateResults } from './createResults';
 import { CreateTransactionPortfolioRequest } from './createTransactionPortfolioRequest';
@@ -659,6 +661,7 @@ let typeMap: {[index: string]: any} = {
     "CreatePortfolioDetails": CreatePortfolioDetails,
     "CreatePortfolioGroupRequest": CreatePortfolioGroupRequest,
     "CreatePropertyDefinitionRequest": CreatePropertyDefinitionRequest,
+    "CreateRecipeRequest": CreateRecipeRequest,
     "CreateReferencePortfolioRequest": CreateReferencePortfolioRequest,
     "CreateResults": CreateResults,
     "CreateTransactionPortfolioRequest": CreateTransactionPortfolioRequest,
