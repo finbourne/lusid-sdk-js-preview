@@ -62,6 +62,7 @@ export * from './fieldSchema';
 export * from './fileResponse';
 export * from './fixedLeg';
 export * from './fixedLegAllOf';
+export * from './fixedLegAllOfOverrides';
 export * from './floatingLeg';
 export * from './flowConventions';
 export * from './fxForwardInstrument';
@@ -317,6 +318,7 @@ import { FieldSchema } from './fieldSchema';
 import { FileResponse } from './fileResponse';
 import { FixedLeg } from './fixedLeg';
 import { FixedLegAllOf } from './fixedLegAllOf';
+import { FixedLegAllOfOverrides } from './fixedLegAllOfOverrides';
 import { FloatingLeg } from './floatingLeg';
 import { FlowConventions } from './flowConventions';
 import { FxForwardInstrument } from './fxForwardInstrument';
@@ -679,6 +681,7 @@ let typeMap: {[index: string]: any} = {
     "FileResponse": FileResponse,
     "FixedLeg": FixedLeg,
     "FixedLegAllOf": FixedLegAllOf,
+    "FixedLegAllOfOverrides": FixedLegAllOfOverrides,
     "FloatingLeg": FloatingLeg,
     "FlowConventions": FlowConventions,
     "FxForwardInstrument": FxForwardInstrument,

@@ -10,55 +10,30 @@
  * Do not edit the class manually.
  */
 
-import { Link } from './link';
-import { Version } from './version';
 
-export class Results {
-    'version'?: Version;
-    'href'?: string;
-    'values'?: string;
-    'format'?: Results.FormatEnum;
-    'links'?: Array<Link>;
+/**
+* Any overriding data for notionals, spreads or rates that would affect generation of a leg.              This supports the case where an amortization schedule is given but otherwise generation is allowed as usual.
+*/
+export class FixedLegAllOfOverrides {
+    'amortization'?: Array<number>;
+    'spreads'?: Array<number>;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "version",
-            "baseName": "version",
-            "type": "Version"
+            "name": "amortization",
+            "baseName": "Amortization",
+            "type": "Array<number>"
         },
         {
-            "name": "href",
-            "baseName": "href",
-            "type": "string"
-        },
-        {
-            "name": "values",
-            "baseName": "values",
-            "type": "string"
-        },
-        {
-            "name": "format",
-            "baseName": "format",
-            "type": "Results.FormatEnum"
-        },
-        {
-            "name": "links",
-            "baseName": "links",
-            "type": "Array<Link>"
+            "name": "spreads",
+            "baseName": "Spreads",
+            "type": "Array<number>"
         }    ];
 
     static getAttributeTypeMap() {
-        return Results.attributeTypeMap;
+        return FixedLegAllOfOverrides.attributeTypeMap;
     }
 }
 
-export namespace Results {
-    export enum FormatEnum {
-        DataReader = <any> 'DataReader',
-        Portfolio = <any> 'Portfolio',
-        Csv = <any> 'Csv',
-        Unknown = <any> 'Unknown'
-    }
-}
