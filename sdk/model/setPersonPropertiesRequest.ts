@@ -10,111 +10,25 @@
  * Do not edit the class manually.
  */
 
+import { Property } from './property';
 
-/**
-* A market data key rule describes a mapping for satisfying a particular market dependency. The supplier, scope, quote type and price side  information define the quote in the market and which Vendor for market data would be used to perform the lookup.  The market data key defines what dependency this satisfies. The key is a rule that describes the asset class, its identifier and any other  specifics required to uniquely describe a specific economic entity (e.g. an Fx currency pair, equity name or credit curve).
-*/
-export class MarketDataKeyRule {
+export class SetPersonPropertiesRequest {
     /**
-    * The market data key pattern which this is a rule for. A dot separated string (A.B.C.D.*)
+    * Properties to set for a Person. All time-variant properties must have same EffectiveFrom date. Properties not included in the request will not be amended.
     */
-    'key': string;
-    /**
-    * The market data supplier (where the data comes from)
-    */
-    'supplier': MarketDataKeyRule.SupplierEnum;
-    /**
-    * The scope in which the data should be found when using this rule.
-    */
-    'dataScope': string;
-    /**
-    * Is the quote to be looked for a price, yield etc.
-    */
-    'quoteType': MarketDataKeyRule.QuoteTypeEnum;
-    /**
-    * The conceptual qualification for the field, such as bid, mid, or ask.   The field must be one of a defined set for the given supplier, in the same way as it  is for the Finbourne.WebApi.Interface.Dto.Quotes.QuoteSeriesId
-    */
-    'field': string;
-    /**
-    * Shorthand for the time interval used to select market data.
-    */
-    'quoteInterval'?: string;
-    /**
-    * The AsAt predicate specification.
-    */
-    'asAt'?: Date;
-    /**
-    * The source of the quote. For a given provider/supplier of market data there may be an additional qualifier, e.g. the exchange or bank that provided the quote
-    */
-    'priceSource'?: string;
+    'properties'?: { [key: string]: Array<Property>; };
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "key",
-            "baseName": "key",
-            "type": "string"
-        },
-        {
-            "name": "supplier",
-            "baseName": "supplier",
-            "type": "MarketDataKeyRule.SupplierEnum"
-        },
-        {
-            "name": "dataScope",
-            "baseName": "dataScope",
-            "type": "string"
-        },
-        {
-            "name": "quoteType",
-            "baseName": "quoteType",
-            "type": "MarketDataKeyRule.QuoteTypeEnum"
-        },
-        {
-            "name": "field",
-            "baseName": "field",
-            "type": "string"
-        },
-        {
-            "name": "quoteInterval",
-            "baseName": "quoteInterval",
-            "type": "string"
-        },
-        {
-            "name": "asAt",
-            "baseName": "asAt",
-            "type": "Date"
-        },
-        {
-            "name": "priceSource",
-            "baseName": "priceSource",
-            "type": "string"
+            "name": "properties",
+            "baseName": "properties",
+            "type": "{ [key: string]: Array<Property>; }"
         }    ];
 
     static getAttributeTypeMap() {
-        return MarketDataKeyRule.attributeTypeMap;
+        return SetPersonPropertiesRequest.attributeTypeMap;
     }
 }
 
-export namespace MarketDataKeyRule {
-    export enum SupplierEnum {
-        DataScope = <any> 'DataScope',
-        Lusid = <any> 'Lusid',
-        Isda = <any> 'Isda',
-        Client = <any> 'Client',
-        Edi = <any> 'Edi',
-        TraderMade = <any> 'TraderMade',
-        FactSet = <any> 'FactSet'
-    }
-    export enum QuoteTypeEnum {
-        Price = <any> 'Price',
-        Spread = <any> 'Spread',
-        Rate = <any> 'Rate',
-        LogNormalVol = <any> 'LogNormalVol',
-        NormalVol = <any> 'NormalVol',
-        ParSpread = <any> 'ParSpread',
-        IsdaSpread = <any> 'IsdaSpread',
-        Upfront = <any> 'Upfront'
-    }
-}

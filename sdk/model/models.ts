@@ -182,6 +182,8 @@ export * from './resultDataSchema';
 export * from './results';
 export * from './schema';
 export * from './scopeDefinition';
+export * from './setPersonIdentifiersRequest';
+export * from './setPersonPropertiesRequest';
 export * from './sideConfigurationData';
 export * from './sideConfigurationDataRequest';
 export * from './stream';
@@ -439,6 +441,8 @@ import { ResultDataSchema } from './resultDataSchema';
 import { Results } from './results';
 import { Schema } from './schema';
 import { ScopeDefinition } from './scopeDefinition';
+import { SetPersonIdentifiersRequest } from './setPersonIdentifiersRequest';
+import { SetPersonPropertiesRequest } from './setPersonPropertiesRequest';
 import { SideConfigurationData } from './sideConfigurationData';
 import { SideConfigurationDataRequest } from './sideConfigurationDataRequest';
 import { Stream } from './stream';
@@ -803,6 +807,8 @@ let typeMap: {[index: string]: any} = {
     "Results": Results,
     "Schema": Schema,
     "ScopeDefinition": ScopeDefinition,
+    "SetPersonIdentifiersRequest": SetPersonIdentifiersRequest,
+    "SetPersonPropertiesRequest": SetPersonPropertiesRequest,
     "SideConfigurationData": SideConfigurationData,
     "SideConfigurationDataRequest": SideConfigurationDataRequest,
     "Stream": Stream,
