@@ -19,9 +19,10 @@ export * from './annulSingleStructuredDataResponse';
 export * from './annulStructuredDataResponse';
 export * from './bondInstrument';
 export * from './bondInstrumentAllOf';
-export * from './cdsDetailSpecification';
+export * from './cdsFlowConventions';
 export * from './cdsInstrument';
 export * from './cdsInstrumentAllOf';
+export * from './cdsProtectionDetailSpecification';
 export * from './change';
 export * from './completePortfolio';
 export * from './configurationRecipe';
@@ -278,9 +279,10 @@ import { AnnulSingleStructuredDataResponse } from './annulSingleStructuredDataRe
 import { AnnulStructuredDataResponse } from './annulStructuredDataResponse';
 import { BondInstrument } from './bondInstrument';
 import { BondInstrumentAllOf } from './bondInstrumentAllOf';
-import { CdsDetailSpecification } from './cdsDetailSpecification';
+import { CdsFlowConventions } from './cdsFlowConventions';
 import { CdsInstrument } from './cdsInstrument';
 import { CdsInstrumentAllOf } from './cdsInstrumentAllOf';
+import { CdsProtectionDetailSpecification } from './cdsProtectionDetailSpecification';
 import { Change } from './change';
 import { CompletePortfolio } from './completePortfolio';
 import { ConfigurationRecipe } from './configurationRecipe';
@@ -531,10 +533,12 @@ let enumsMap: {[index: string]: any} = {
         "AggregationResult.ValueTypeEnum": AggregationResult.ValueTypeEnum,
         "BondInstrument.InstrumentTypeEnum": BondInstrument.InstrumentTypeEnum,
         "BondInstrumentAllOf.InstrumentTypeEnum": BondInstrumentAllOf.InstrumentTypeEnum,
-        "CdsDetailSpecification.SeniorityEnum": CdsDetailSpecification.SeniorityEnum,
-        "CdsDetailSpecification.RestructuringTypeEnum": CdsDetailSpecification.RestructuringTypeEnum,
+        "CdsFlowConventions.DayCountConventionEnum": CdsFlowConventions.DayCountConventionEnum,
+        "CdsFlowConventions.RollConventionEnum": CdsFlowConventions.RollConventionEnum,
         "CdsInstrument.InstrumentTypeEnum": CdsInstrument.InstrumentTypeEnum,
         "CdsInstrumentAllOf.InstrumentTypeEnum": CdsInstrumentAllOf.InstrumentTypeEnum,
+        "CdsProtectionDetailSpecification.SeniorityEnum": CdsProtectionDetailSpecification.SeniorityEnum,
+        "CdsProtectionDetailSpecification.RestructuringTypeEnum": CdsProtectionDetailSpecification.RestructuringTypeEnum,
         "CompletePortfolio.TypeEnum": CompletePortfolio.TypeEnum,
         "CreateDataTypeRequest.TypeValueRangeEnum": CreateDataTypeRequest.TypeValueRangeEnum,
         "CreateDataTypeRequest.ValueTypeEnum": CreateDataTypeRequest.ValueTypeEnum,
@@ -650,9 +654,10 @@ let typeMap: {[index: string]: any} = {
     "AnnulStructuredDataResponse": AnnulStructuredDataResponse,
     "BondInstrument": BondInstrument,
     "BondInstrumentAllOf": BondInstrumentAllOf,
-    "CdsDetailSpecification": CdsDetailSpecification,
+    "CdsFlowConventions": CdsFlowConventions,
     "CdsInstrument": CdsInstrument,
     "CdsInstrumentAllOf": CdsInstrumentAllOf,
+    "CdsProtectionDetailSpecification": CdsProtectionDetailSpecification,
     "Change": Change,
     "CompletePortfolio": CompletePortfolio,
     "ConfigurationRecipe": ConfigurationRecipe,

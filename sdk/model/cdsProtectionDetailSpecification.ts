@@ -10,35 +10,73 @@
  * Do not edit the class manually.
  */
 
-import { Link } from './link';
-import { Version } from './version';
 
-export class UpsertReferencePortfolioConstituentsResponse {
-    'href'?: string;
-    'version'?: Version;
-    'links'?: Array<Link>;
+/**
+* CDSs generally conform to fairly standard definitions, but can be tweaked in a number of different ways.  This class gathers a number of common features which may deviate. These will default to the market standard when  no overrides are provided
+*/
+export class CdsProtectionDetailSpecification {
+    /**
+    * The seniority level of the CDS
+    */
+    'seniority': CdsProtectionDetailSpecification.SeniorityEnum;
+    /**
+    * The restructuring clause
+    */
+    'restructuringType': CdsProtectionDetailSpecification.RestructuringTypeEnum;
+    /**
+    * Does the protection leg pay out in the case of default on the start date
+    */
+    'protectStartDay': boolean;
+    /**
+    * Should accrued interest on the premium leg be paid if a credit event occurs
+    */
+    'payAccruedInterestOnDefault': boolean;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "href",
-            "baseName": "href",
-            "type": "string"
+            "name": "seniority",
+            "baseName": "seniority",
+            "type": "CdsProtectionDetailSpecification.SeniorityEnum"
         },
         {
-            "name": "version",
-            "baseName": "version",
-            "type": "Version"
+            "name": "restructuringType",
+            "baseName": "restructuringType",
+            "type": "CdsProtectionDetailSpecification.RestructuringTypeEnum"
         },
         {
-            "name": "links",
-            "baseName": "links",
-            "type": "Array<Link>"
+            "name": "protectStartDay",
+            "baseName": "protectStartDay",
+            "type": "boolean"
+        },
+        {
+            "name": "payAccruedInterestOnDefault",
+            "baseName": "payAccruedInterestOnDefault",
+            "type": "boolean"
         }    ];
 
     static getAttributeTypeMap() {
-        return UpsertReferencePortfolioConstituentsResponse.attributeTypeMap;
+        return CdsProtectionDetailSpecification.attributeTypeMap;
     }
 }
 
+export namespace CdsProtectionDetailSpecification {
+    export enum SeniorityEnum {
+        Unknown = <any> 'Unknown',
+        SNR = <any> 'SNR',
+        SUB = <any> 'SUB',
+        JRSUBUT2 = <any> 'JRSUBUT2',
+        PREFT1 = <any> 'PREFT1',
+        SECDOM = <any> 'SECDOM',
+        SNRFOR = <any> 'SNRFOR',
+        SUBLT2 = <any> 'SUBLT2'
+    }
+    export enum RestructuringTypeEnum {
+        Unknown = <any> 'Unknown',
+        CR = <any> 'CR',
+        MR = <any> 'MR',
+        MM = <any> 'MM',
+        XR = <any> 'XR'
+    }
+}

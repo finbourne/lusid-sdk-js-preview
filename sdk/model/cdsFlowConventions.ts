@@ -10,35 +10,101 @@
  * Do not edit the class manually.
  */
 
-import { Link } from './link';
-import { Version } from './version';
+import { Tenor } from './tenor';
 
-export class UpsertReferencePortfolioConstituentsResponse {
-    'href'?: string;
-    'version'?: Version;
-    'links'?: Array<Link>;
+export class CdsFlowConventions {
+    'rollFrequency': Tenor;
+    /**
+    * Currency of the flow convention.
+    */
+    'currency': string;
+    'paymentFrequency': Tenor;
+    /**
+    * when calculating the fraction of a year between two dates, what convention is used to represent the number of days in a year  and difference between them.
+    */
+    'dayCountConvention': CdsFlowConventions.DayCountConventionEnum;
+    /**
+    * when generating a set of dates, what convention should be used for adjusting dates that coincide with a non-business day.
+    */
+    'rollConvention': CdsFlowConventions.RollConventionEnum;
+    /**
+    * An array of strings denoting holiday calendars that apply to generation and payment.
+    */
+    'holidayCalendars': Array<string>;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "href",
-            "baseName": "href",
+            "name": "rollFrequency",
+            "baseName": "rollFrequency",
+            "type": "Tenor"
+        },
+        {
+            "name": "currency",
+            "baseName": "currency",
             "type": "string"
         },
         {
-            "name": "version",
-            "baseName": "version",
-            "type": "Version"
+            "name": "paymentFrequency",
+            "baseName": "paymentFrequency",
+            "type": "Tenor"
         },
         {
-            "name": "links",
-            "baseName": "links",
-            "type": "Array<Link>"
+            "name": "dayCountConvention",
+            "baseName": "dayCountConvention",
+            "type": "CdsFlowConventions.DayCountConventionEnum"
+        },
+        {
+            "name": "rollConvention",
+            "baseName": "rollConvention",
+            "type": "CdsFlowConventions.RollConventionEnum"
+        },
+        {
+            "name": "holidayCalendars",
+            "baseName": "holidayCalendars",
+            "type": "Array<string>"
         }    ];
 
     static getAttributeTypeMap() {
-        return UpsertReferencePortfolioConstituentsResponse.attributeTypeMap;
+        return CdsFlowConventions.attributeTypeMap;
     }
 }
 
+export namespace CdsFlowConventions {
+    export enum DayCountConventionEnum {
+        Actual360 = <any> 'Actual360',
+        Act360 = <any> 'Act360',
+        MoneyMarket = <any> 'MoneyMarket',
+        Actual365 = <any> 'Actual365',
+        Act365 = <any> 'Act365',
+        Thirty360 = <any> 'Thirty360',
+        ThirtyU360 = <any> 'ThirtyU360',
+        Bond = <any> 'Bond',
+        ThirtyE360 = <any> 'ThirtyE360',
+        EuroBond = <any> 'EuroBond',
+        ActAct = <any> 'ActAct',
+        ActualActual = <any> 'ActualActual',
+        ActActIsda = <any> 'ActActIsda',
+        Invalid = <any> 'Invalid'
+    }
+    export enum RollConventionEnum {
+        NoAdjustment = <any> 'NoAdjustment',
+        None = <any> 'None',
+        Previous = <any> 'Previous',
+        P = <any> 'P',
+        Following = <any> 'Following',
+        F = <any> 'F',
+        ModifiedPrevious = <any> 'ModifiedPrevious',
+        MP = <any> 'MP',
+        ModifiedFollowing = <any> 'ModifiedFollowing',
+        MF = <any> 'MF',
+        EndOfMonth = <any> 'EndOfMonth',
+        EOM = <any> 'EOM',
+        EndOfMonthPrevious = <any> 'EndOfMonthPrevious',
+        EOMP = <any> 'EOMP',
+        EndOfMonthFollowing = <any> 'EndOfMonthFollowing',
+        EOMF = <any> 'EOMF',
+        Invalid = <any> 'Invalid'
+    }
+}
