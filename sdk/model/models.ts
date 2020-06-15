@@ -8,9 +8,9 @@ export * from './aggregateSpec';
 export * from './aggregationContext';
 export * from './aggregationMeasureFailureDetail';
 export * from './aggregationOptions';
+export * from './aggregationQuery';
 export * from './aggregationRequest';
 export * from './aggregationResponseNodeOfDictionaryOfStringToObject';
-export * from './aggregationResult';
 export * from './allocation';
 export * from './allocationRequest';
 export * from './allocationSetRequest';
@@ -141,7 +141,6 @@ export * from './propertyDefinition';
 export * from './propertyFilter';
 export * from './propertySchema';
 export * from './propertyValue';
-export * from './queryableEntitiesResponse';
 export * from './quote';
 export * from './quoteAccessMetadataRule';
 export * from './quoteAccessMetadataRuleId';
@@ -154,6 +153,7 @@ export * from './referencePortfolioConstituentRequest';
 export * from './resourceId';
 export * from './resourceListOfAccessControlledResource';
 export * from './resourceListOfAccessMetadataValueOf';
+export * from './resourceListOfAggregationQuery';
 export * from './resourceListOfAllocation';
 export * from './resourceListOfChange';
 export * from './resourceListOfConstituentsAdjustmentHeader';
@@ -268,9 +268,9 @@ import { AggregateSpec } from './aggregateSpec';
 import { AggregationContext } from './aggregationContext';
 import { AggregationMeasureFailureDetail } from './aggregationMeasureFailureDetail';
 import { AggregationOptions } from './aggregationOptions';
+import { AggregationQuery } from './aggregationQuery';
 import { AggregationRequest } from './aggregationRequest';
 import { AggregationResponseNodeOfDictionaryOfStringToObject } from './aggregationResponseNodeOfDictionaryOfStringToObject';
-import { AggregationResult } from './aggregationResult';
 import { Allocation } from './allocation';
 import { AllocationRequest } from './allocationRequest';
 import { AllocationSetRequest } from './allocationSetRequest';
@@ -401,7 +401,6 @@ import { PropertyDefinition } from './propertyDefinition';
 import { PropertyFilter } from './propertyFilter';
 import { PropertySchema } from './propertySchema';
 import { PropertyValue } from './propertyValue';
-import { QueryableEntitiesResponse } from './queryableEntitiesResponse';
 import { Quote } from './quote';
 import { QuoteAccessMetadataRule } from './quoteAccessMetadataRule';
 import { QuoteAccessMetadataRuleId } from './quoteAccessMetadataRuleId';
@@ -414,6 +413,7 @@ import { ReferencePortfolioConstituentRequest } from './referencePortfolioConsti
 import { ResourceId } from './resourceId';
 import { ResourceListOfAccessControlledResource } from './resourceListOfAccessControlledResource';
 import { ResourceListOfAccessMetadataValueOf } from './resourceListOfAccessMetadataValueOf';
+import { ResourceListOfAggregationQuery } from './resourceListOfAggregationQuery';
 import { ResourceListOfAllocation } from './resourceListOfAllocation';
 import { ResourceListOfChange } from './resourceListOfChange';
 import { ResourceListOfConstituentsAdjustmentHeader } from './resourceListOfConstituentsAdjustmentHeader';
@@ -530,7 +530,7 @@ let primitives = [
                  
 let enumsMap: {[index: string]: any} = {
         "AggregateSpec.OpEnum": AggregateSpec.OpEnum,
-        "AggregationResult.ValueTypeEnum": AggregationResult.ValueTypeEnum,
+        "AggregationQuery.TypeEnum": AggregationQuery.TypeEnum,
         "BondInstrument.InstrumentTypeEnum": BondInstrument.InstrumentTypeEnum,
         "BondInstrumentAllOf.InstrumentTypeEnum": BondInstrumentAllOf.InstrumentTypeEnum,
         "CdsFlowConventions.DayCountConventionEnum": CdsFlowConventions.DayCountConventionEnum,
@@ -643,9 +643,9 @@ let typeMap: {[index: string]: any} = {
     "AggregationContext": AggregationContext,
     "AggregationMeasureFailureDetail": AggregationMeasureFailureDetail,
     "AggregationOptions": AggregationOptions,
+    "AggregationQuery": AggregationQuery,
     "AggregationRequest": AggregationRequest,
     "AggregationResponseNodeOfDictionaryOfStringToObject": AggregationResponseNodeOfDictionaryOfStringToObject,
-    "AggregationResult": AggregationResult,
     "Allocation": Allocation,
     "AllocationRequest": AllocationRequest,
     "AllocationSetRequest": AllocationSetRequest,
@@ -776,7 +776,6 @@ let typeMap: {[index: string]: any} = {
     "PropertyFilter": PropertyFilter,
     "PropertySchema": PropertySchema,
     "PropertyValue": PropertyValue,
-    "QueryableEntitiesResponse": QueryableEntitiesResponse,
     "Quote": Quote,
     "QuoteAccessMetadataRule": QuoteAccessMetadataRule,
     "QuoteAccessMetadataRuleId": QuoteAccessMetadataRuleId,
@@ -789,6 +788,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceId": ResourceId,
     "ResourceListOfAccessControlledResource": ResourceListOfAccessControlledResource,
     "ResourceListOfAccessMetadataValueOf": ResourceListOfAccessMetadataValueOf,
+    "ResourceListOfAggregationQuery": ResourceListOfAggregationQuery,
     "ResourceListOfAllocation": ResourceListOfAllocation,
     "ResourceListOfChange": ResourceListOfChange,
     "ResourceListOfConstituentsAdjustmentHeader": ResourceListOfConstituentsAdjustmentHeader,
