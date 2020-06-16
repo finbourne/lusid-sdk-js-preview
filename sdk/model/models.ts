@@ -1,28 +1,30 @@
 export * from './accessControlledAction';
 export * from './accessControlledResource';
 export * from './accessMetadataValue';
+export * from './accountingMethod';
 export * from './actionId';
 export * from './adjustHolding';
 export * from './adjustHoldingRequest';
 export * from './aggregateSpec';
 export * from './aggregationContext';
 export * from './aggregationMeasureFailureDetail';
+export * from './aggregationOp';
 export * from './aggregationOptions';
 export * from './aggregationQuery';
 export * from './aggregationRequest';
-export * from './aggregationResponseNodeOfDictionaryOfStringToObject';
+export * from './aggregationResponseNode';
+export * from './aggregationType';
 export * from './allocation';
 export * from './allocationRequest';
 export * from './allocationSetRequest';
 export * from './annulQuotesResponse';
 export * from './annulSingleStructuredDataResponse';
 export * from './annulStructuredDataResponse';
-export * from './bondInstrument';
-export * from './bondInstrumentAllOf';
+export * from './businessDayConvention';
 export * from './cdsFlowConventions';
-export * from './cdsInstrument';
-export * from './cdsInstrumentAllOf';
 export * from './cdsProtectionDetailSpecification';
+export * from './cdsRestructuringType';
+export * from './cdsSeniority';
 export * from './change';
 export * from './completePortfolio';
 export * from './configurationRecipe';
@@ -52,25 +54,18 @@ export * from './cutLocalTime';
 export * from './dataDefinition';
 export * from './dataMapping';
 export * from './dataType';
+export * from './dataTypeValueRange';
+export * from './dayCountConvention';
 export * from './deleteInstrumentPropertiesResponse';
 export * from './deleteInstrumentResponse';
 export * from './deletedEntityResponse';
-export * from './equityOption';
-export * from './equityOptionAllOf';
+export * from './deliveryType';
 export * from './errorDetail';
 export * from './executionRequest';
 export * from './expandedGroup';
 export * from './fieldSchema';
 export * from './fileResponse';
-export * from './fixedLeg';
-export * from './fixedLegAllOf';
-export * from './fixedLegAllOfOverrides';
-export * from './floatingLeg';
 export * from './flowConventions';
-export * from './fxForwardInstrument';
-export * from './fxForwardInstrumentAllOf';
-export * from './fxOption';
-export * from './fxOptionAllOf';
 export * from './getInstrumentsResponse';
 export * from './getQuotesResponse';
 export * from './getRecipeResponse';
@@ -92,9 +87,9 @@ export * from './instrumentDefinition';
 export * from './instrumentEconomicDefinition';
 export * from './instrumentIdTypeDescriptor';
 export * from './instrumentIdValue';
-export * from './instrumentLeg';
 export * from './instrumentMatch';
 export * from './instrumentSearchProperty';
+export * from './instrumentType';
 export * from './legDefinition';
 export * from './link';
 export * from './listAggregationResponse';
@@ -106,10 +101,17 @@ export * from './marketContext';
 export * from './marketContextSuppliers';
 export * from './marketDataKeyRule';
 export * from './marketDataManifest';
+export * from './marketIdentifier';
+export * from './marketManifestLevelOfDetail';
 export * from './marketOptions';
 export * from './metricValue';
 export * from './modelSelection';
+export * from './movementType';
 export * from './nestedAggregationResponse';
+export * from './notionalExchangeType';
+export * from './operandType';
+export * from './operator';
+export * from './optionType';
 export * from './order';
 export * from './orderBySpec';
 export * from './orderRequest';
@@ -121,6 +123,9 @@ export * from './pagedResourceListOfOrder';
 export * from './pagedResourceListOfPortfolioGroup';
 export * from './pagedResourceListOfPortfolioSearchResult';
 export * from './pagedResourceListOfPropertyDefinition';
+export * from './payReceive';
+export * from './periodType';
+export * from './perpetualEntityState';
 export * from './perpetualProperty';
 export * from './person';
 export * from './portfolio';
@@ -131,25 +136,33 @@ export * from './portfolioHolding';
 export * from './portfolioProperties';
 export * from './portfolioReconciliationRequest';
 export * from './portfolioSearchResult';
+export * from './portfolioType';
 export * from './portfoliosReconciliationRequest';
 export * from './portfoliosReconciliationRequestPreview';
 export * from './pricingContext';
+export * from './pricingModel';
 export * from './pricingOptions';
 export * from './processedCommand';
 export * from './property';
 export * from './propertyDefinition';
+export * from './propertyDomain';
 export * from './propertyFilter';
+export * from './propertyLifeTime';
 export * from './propertySchema';
+export * from './propertyType';
 export * from './propertyValue';
 export * from './quote';
 export * from './quoteAccessMetadataRule';
 export * from './quoteAccessMetadataRuleId';
 export * from './quoteId';
+export * from './quoteInstrumentIdType';
 export * from './quoteSeriesId';
+export * from './quoteType';
 export * from './realisedGainLoss';
 export * from './reconciliationBreak';
 export * from './referencePortfolioConstituent';
 export * from './referencePortfolioConstituentRequest';
+export * from './referencePortfolioWeightType';
 export * from './resourceId';
 export * from './resourceListOfAccessControlledResource';
 export * from './resourceListOfAccessMetadataValueOf';
@@ -178,8 +191,10 @@ export * from './resourceListOfReconciliationBreak';
 export * from './resourceListOfScopeDefinition';
 export * from './resourceListOfString';
 export * from './resourceListOfValueType';
+export * from './resourceSupplier';
 export * from './resultDataKeyRule';
 export * from './resultDataSchema';
+export * from './resultFormat';
 export * from './results';
 export * from './schema';
 export * from './scopeDefinition';
@@ -187,19 +202,19 @@ export * from './setPersonIdentifiersRequest';
 export * from './setPersonPropertiesRequest';
 export * from './sideConfigurationData';
 export * from './sideConfigurationDataRequest';
+export * from './sortOrder';
 export * from './stream';
 export * from './structuredMarketData';
 export * from './structuredMarketDataId';
 export * from './structuredResultData';
 export * from './structuredResultDataId';
-export * from './swapInstrument';
-export * from './swapInstrumentAllOf';
-export * from './swaption';
-export * from './swaptionAllOf';
+export * from './stubType';
 export * from './targetTaxLot';
 export * from './targetTaxLotRequest';
 export * from './tenor';
+export * from './tenorUnit';
 export * from './tolerance';
+export * from './toleranceEnum';
 export * from './transaction';
 export * from './transactionConfigurationData';
 export * from './transactionConfigurationDataRequest';
@@ -207,12 +222,18 @@ export * from './transactionConfigurationMovementData';
 export * from './transactionConfigurationMovementDataRequest';
 export * from './transactionConfigurationTypeAlias';
 export * from './transactionPrice';
+export * from './transactionPriceType';
 export * from './transactionPropertyMapping';
 export * from './transactionPropertyMappingRequest';
+export * from './transactionQueryMode';
 export * from './transactionQueryParameters';
 export * from './transactionRequest';
+export * from './transactionRoles';
 export * from './transactionSetConfigurationData';
 export * from './transactionSetConfigurationDataRequest';
+export * from './transactionStatus';
+export * from './unitSchema';
+export * from './unmatchedHoldingMethod';
 export * from './updateCutLabelDefinitionRequest';
 export * from './updateDataTypeRequest';
 export * from './updateInstrumentIdentifierRequest';
@@ -248,6 +269,8 @@ export * from './valuationReconciliationRequest';
 export * from './valuationsReconciliationRequest';
 export * from './valueTupleOfMarketDataKeyRuleToQuote';
 export * from './valueTupleOfMarketDataKeyRuleToStructuredMarketData';
+export * from './valueType';
+export * from './vendorLibrary';
 export * from './vendorModelRule';
 export * from './version';
 export * from './versionSummaryDto';
@@ -261,28 +284,30 @@ import localVarRequest = require('request');
 import { AccessControlledAction } from './accessControlledAction';
 import { AccessControlledResource } from './accessControlledResource';
 import { AccessMetadataValue } from './accessMetadataValue';
+import { AccountingMethod } from './accountingMethod';
 import { ActionId } from './actionId';
 import { AdjustHolding } from './adjustHolding';
 import { AdjustHoldingRequest } from './adjustHoldingRequest';
 import { AggregateSpec } from './aggregateSpec';
 import { AggregationContext } from './aggregationContext';
 import { AggregationMeasureFailureDetail } from './aggregationMeasureFailureDetail';
+import { AggregationOp } from './aggregationOp';
 import { AggregationOptions } from './aggregationOptions';
 import { AggregationQuery } from './aggregationQuery';
 import { AggregationRequest } from './aggregationRequest';
-import { AggregationResponseNodeOfDictionaryOfStringToObject } from './aggregationResponseNodeOfDictionaryOfStringToObject';
+import { AggregationResponseNode } from './aggregationResponseNode';
+import { AggregationType } from './aggregationType';
 import { Allocation } from './allocation';
 import { AllocationRequest } from './allocationRequest';
 import { AllocationSetRequest } from './allocationSetRequest';
 import { AnnulQuotesResponse } from './annulQuotesResponse';
 import { AnnulSingleStructuredDataResponse } from './annulSingleStructuredDataResponse';
 import { AnnulStructuredDataResponse } from './annulStructuredDataResponse';
-import { BondInstrument } from './bondInstrument';
-import { BondInstrumentAllOf } from './bondInstrumentAllOf';
+import { BusinessDayConvention } from './businessDayConvention';
 import { CdsFlowConventions } from './cdsFlowConventions';
-import { CdsInstrument } from './cdsInstrument';
-import { CdsInstrumentAllOf } from './cdsInstrumentAllOf';
 import { CdsProtectionDetailSpecification } from './cdsProtectionDetailSpecification';
+import { CdsRestructuringType } from './cdsRestructuringType';
+import { CdsSeniority } from './cdsSeniority';
 import { Change } from './change';
 import { CompletePortfolio } from './completePortfolio';
 import { ConfigurationRecipe } from './configurationRecipe';
@@ -312,25 +337,18 @@ import { CutLocalTime } from './cutLocalTime';
 import { DataDefinition } from './dataDefinition';
 import { DataMapping } from './dataMapping';
 import { DataType } from './dataType';
+import { DataTypeValueRange } from './dataTypeValueRange';
+import { DayCountConvention } from './dayCountConvention';
 import { DeleteInstrumentPropertiesResponse } from './deleteInstrumentPropertiesResponse';
 import { DeleteInstrumentResponse } from './deleteInstrumentResponse';
 import { DeletedEntityResponse } from './deletedEntityResponse';
-import { EquityOption } from './equityOption';
-import { EquityOptionAllOf } from './equityOptionAllOf';
+import { DeliveryType } from './deliveryType';
 import { ErrorDetail } from './errorDetail';
 import { ExecutionRequest } from './executionRequest';
 import { ExpandedGroup } from './expandedGroup';
 import { FieldSchema } from './fieldSchema';
 import { FileResponse } from './fileResponse';
-import { FixedLeg } from './fixedLeg';
-import { FixedLegAllOf } from './fixedLegAllOf';
-import { FixedLegAllOfOverrides } from './fixedLegAllOfOverrides';
-import { FloatingLeg } from './floatingLeg';
 import { FlowConventions } from './flowConventions';
-import { FxForwardInstrument } from './fxForwardInstrument';
-import { FxForwardInstrumentAllOf } from './fxForwardInstrumentAllOf';
-import { FxOption } from './fxOption';
-import { FxOptionAllOf } from './fxOptionAllOf';
 import { GetInstrumentsResponse } from './getInstrumentsResponse';
 import { GetQuotesResponse } from './getQuotesResponse';
 import { GetRecipeResponse } from './getRecipeResponse';
@@ -352,9 +370,9 @@ import { InstrumentDefinition } from './instrumentDefinition';
 import { InstrumentEconomicDefinition } from './instrumentEconomicDefinition';
 import { InstrumentIdTypeDescriptor } from './instrumentIdTypeDescriptor';
 import { InstrumentIdValue } from './instrumentIdValue';
-import { InstrumentLeg } from './instrumentLeg';
 import { InstrumentMatch } from './instrumentMatch';
 import { InstrumentSearchProperty } from './instrumentSearchProperty';
+import { InstrumentType } from './instrumentType';
 import { LegDefinition } from './legDefinition';
 import { Link } from './link';
 import { ListAggregationResponse } from './listAggregationResponse';
@@ -366,10 +384,17 @@ import { MarketContext } from './marketContext';
 import { MarketContextSuppliers } from './marketContextSuppliers';
 import { MarketDataKeyRule } from './marketDataKeyRule';
 import { MarketDataManifest } from './marketDataManifest';
+import { MarketIdentifier } from './marketIdentifier';
+import { MarketManifestLevelOfDetail } from './marketManifestLevelOfDetail';
 import { MarketOptions } from './marketOptions';
 import { MetricValue } from './metricValue';
 import { ModelSelection } from './modelSelection';
+import { MovementType } from './movementType';
 import { NestedAggregationResponse } from './nestedAggregationResponse';
+import { NotionalExchangeType } from './notionalExchangeType';
+import { OperandType } from './operandType';
+import { Operator } from './operator';
+import { OptionType } from './optionType';
 import { Order } from './order';
 import { OrderBySpec } from './orderBySpec';
 import { OrderRequest } from './orderRequest';
@@ -381,6 +406,9 @@ import { PagedResourceListOfOrder } from './pagedResourceListOfOrder';
 import { PagedResourceListOfPortfolioGroup } from './pagedResourceListOfPortfolioGroup';
 import { PagedResourceListOfPortfolioSearchResult } from './pagedResourceListOfPortfolioSearchResult';
 import { PagedResourceListOfPropertyDefinition } from './pagedResourceListOfPropertyDefinition';
+import { PayReceive } from './payReceive';
+import { PeriodType } from './periodType';
+import { PerpetualEntityState } from './perpetualEntityState';
 import { PerpetualProperty } from './perpetualProperty';
 import { Person } from './person';
 import { Portfolio } from './portfolio';
@@ -391,25 +419,33 @@ import { PortfolioHolding } from './portfolioHolding';
 import { PortfolioProperties } from './portfolioProperties';
 import { PortfolioReconciliationRequest } from './portfolioReconciliationRequest';
 import { PortfolioSearchResult } from './portfolioSearchResult';
+import { PortfolioType } from './portfolioType';
 import { PortfoliosReconciliationRequest } from './portfoliosReconciliationRequest';
 import { PortfoliosReconciliationRequestPreview } from './portfoliosReconciliationRequestPreview';
 import { PricingContext } from './pricingContext';
+import { PricingModel } from './pricingModel';
 import { PricingOptions } from './pricingOptions';
 import { ProcessedCommand } from './processedCommand';
 import { Property } from './property';
 import { PropertyDefinition } from './propertyDefinition';
+import { PropertyDomain } from './propertyDomain';
 import { PropertyFilter } from './propertyFilter';
+import { PropertyLifeTime } from './propertyLifeTime';
 import { PropertySchema } from './propertySchema';
+import { PropertyType } from './propertyType';
 import { PropertyValue } from './propertyValue';
 import { Quote } from './quote';
 import { QuoteAccessMetadataRule } from './quoteAccessMetadataRule';
 import { QuoteAccessMetadataRuleId } from './quoteAccessMetadataRuleId';
 import { QuoteId } from './quoteId';
+import { QuoteInstrumentIdType } from './quoteInstrumentIdType';
 import { QuoteSeriesId } from './quoteSeriesId';
+import { QuoteType } from './quoteType';
 import { RealisedGainLoss } from './realisedGainLoss';
 import { ReconciliationBreak } from './reconciliationBreak';
 import { ReferencePortfolioConstituent } from './referencePortfolioConstituent';
 import { ReferencePortfolioConstituentRequest } from './referencePortfolioConstituentRequest';
+import { ReferencePortfolioWeightType } from './referencePortfolioWeightType';
 import { ResourceId } from './resourceId';
 import { ResourceListOfAccessControlledResource } from './resourceListOfAccessControlledResource';
 import { ResourceListOfAccessMetadataValueOf } from './resourceListOfAccessMetadataValueOf';
@@ -438,8 +474,10 @@ import { ResourceListOfReconciliationBreak } from './resourceListOfReconciliatio
 import { ResourceListOfScopeDefinition } from './resourceListOfScopeDefinition';
 import { ResourceListOfString } from './resourceListOfString';
 import { ResourceListOfValueType } from './resourceListOfValueType';
+import { ResourceSupplier } from './resourceSupplier';
 import { ResultDataKeyRule } from './resultDataKeyRule';
 import { ResultDataSchema } from './resultDataSchema';
+import { ResultFormat } from './resultFormat';
 import { Results } from './results';
 import { Schema } from './schema';
 import { ScopeDefinition } from './scopeDefinition';
@@ -447,19 +485,19 @@ import { SetPersonIdentifiersRequest } from './setPersonIdentifiersRequest';
 import { SetPersonPropertiesRequest } from './setPersonPropertiesRequest';
 import { SideConfigurationData } from './sideConfigurationData';
 import { SideConfigurationDataRequest } from './sideConfigurationDataRequest';
+import { SortOrder } from './sortOrder';
 import { Stream } from './stream';
 import { StructuredMarketData } from './structuredMarketData';
 import { StructuredMarketDataId } from './structuredMarketDataId';
 import { StructuredResultData } from './structuredResultData';
 import { StructuredResultDataId } from './structuredResultDataId';
-import { SwapInstrument } from './swapInstrument';
-import { SwapInstrumentAllOf } from './swapInstrumentAllOf';
-import { Swaption } from './swaption';
-import { SwaptionAllOf } from './swaptionAllOf';
+import { StubType } from './stubType';
 import { TargetTaxLot } from './targetTaxLot';
 import { TargetTaxLotRequest } from './targetTaxLotRequest';
 import { Tenor } from './tenor';
+import { TenorUnit } from './tenorUnit';
 import { Tolerance } from './tolerance';
+import { ToleranceEnum } from './toleranceEnum';
 import { Transaction } from './transaction';
 import { TransactionConfigurationData } from './transactionConfigurationData';
 import { TransactionConfigurationDataRequest } from './transactionConfigurationDataRequest';
@@ -467,12 +505,18 @@ import { TransactionConfigurationMovementData } from './transactionConfiguration
 import { TransactionConfigurationMovementDataRequest } from './transactionConfigurationMovementDataRequest';
 import { TransactionConfigurationTypeAlias } from './transactionConfigurationTypeAlias';
 import { TransactionPrice } from './transactionPrice';
+import { TransactionPriceType } from './transactionPriceType';
 import { TransactionPropertyMapping } from './transactionPropertyMapping';
 import { TransactionPropertyMappingRequest } from './transactionPropertyMappingRequest';
+import { TransactionQueryMode } from './transactionQueryMode';
 import { TransactionQueryParameters } from './transactionQueryParameters';
 import { TransactionRequest } from './transactionRequest';
+import { TransactionRoles } from './transactionRoles';
 import { TransactionSetConfigurationData } from './transactionSetConfigurationData';
 import { TransactionSetConfigurationDataRequest } from './transactionSetConfigurationDataRequest';
+import { TransactionStatus } from './transactionStatus';
+import { UnitSchema } from './unitSchema';
+import { UnmatchedHoldingMethod } from './unmatchedHoldingMethod';
 import { UpdateCutLabelDefinitionRequest } from './updateCutLabelDefinitionRequest';
 import { UpdateDataTypeRequest } from './updateDataTypeRequest';
 import { UpdateInstrumentIdentifierRequest } from './updateInstrumentIdentifierRequest';
@@ -508,6 +552,8 @@ import { ValuationReconciliationRequest } from './valuationReconciliationRequest
 import { ValuationsReconciliationRequest } from './valuationsReconciliationRequest';
 import { ValueTupleOfMarketDataKeyRuleToQuote } from './valueTupleOfMarketDataKeyRuleToQuote';
 import { ValueTupleOfMarketDataKeyRuleToStructuredMarketData } from './valueTupleOfMarketDataKeyRuleToStructuredMarketData';
+import { ValueType } from './valueType';
+import { VendorLibrary } from './vendorLibrary';
 import { VendorModelRule } from './vendorModelRule';
 import { Version } from './version';
 import { VersionSummaryDto } from './versionSummaryDto';
@@ -531,12 +577,8 @@ let primitives = [
 let enumsMap: {[index: string]: any} = {
         "AggregateSpec.OpEnum": AggregateSpec.OpEnum,
         "AggregationQuery.TypeEnum": AggregationQuery.TypeEnum,
-        "BondInstrument.InstrumentTypeEnum": BondInstrument.InstrumentTypeEnum,
-        "BondInstrumentAllOf.InstrumentTypeEnum": BondInstrumentAllOf.InstrumentTypeEnum,
         "CdsFlowConventions.DayCountConventionEnum": CdsFlowConventions.DayCountConventionEnum,
         "CdsFlowConventions.RollConventionEnum": CdsFlowConventions.RollConventionEnum,
-        "CdsInstrument.InstrumentTypeEnum": CdsInstrument.InstrumentTypeEnum,
-        "CdsInstrumentAllOf.InstrumentTypeEnum": CdsInstrumentAllOf.InstrumentTypeEnum,
         "CdsProtectionDetailSpecification.SeniorityEnum": CdsProtectionDetailSpecification.SeniorityEnum,
         "CdsProtectionDetailSpecification.RestructuringTypeEnum": CdsProtectionDetailSpecification.RestructuringTypeEnum,
         "CompletePortfolio.TypeEnum": CompletePortfolio.TypeEnum,
@@ -551,24 +593,9 @@ let enumsMap: {[index: string]: any} = {
         "DataType.TypeValueRangeEnum": DataType.TypeValueRangeEnum,
         "DataType.ValueTypeEnum": DataType.ValueTypeEnum,
         "DataType.UnitSchemaEnum": DataType.UnitSchemaEnum,
-        "EquityOption.OptionTypeEnum": EquityOption.OptionTypeEnum,
-        "EquityOption.DeliveryTypeEnum": EquityOption.DeliveryTypeEnum,
-        "EquityOption.UnderlyingIdentifierEnum": EquityOption.UnderlyingIdentifierEnum,
-        "EquityOption.InstrumentTypeEnum": EquityOption.InstrumentTypeEnum,
-        "EquityOptionAllOf.OptionTypeEnum": EquityOptionAllOf.OptionTypeEnum,
-        "EquityOptionAllOf.DeliveryTypeEnum": EquityOptionAllOf.DeliveryTypeEnum,
-        "EquityOptionAllOf.UnderlyingIdentifierEnum": EquityOptionAllOf.UnderlyingIdentifierEnum,
-        "EquityOptionAllOf.InstrumentTypeEnum": EquityOptionAllOf.InstrumentTypeEnum,
         "FieldSchema.TypeEnum": FieldSchema.TypeEnum,
-        "FixedLeg.InstrumentTypeEnum": FixedLeg.InstrumentTypeEnum,
-        "FixedLegAllOf.InstrumentTypeEnum": FixedLegAllOf.InstrumentTypeEnum,
-        "FloatingLeg.InstrumentTypeEnum": FloatingLeg.InstrumentTypeEnum,
         "FlowConventions.DayCountConventionEnum": FlowConventions.DayCountConventionEnum,
         "FlowConventions.RollConventionEnum": FlowConventions.RollConventionEnum,
-        "FxForwardInstrument.InstrumentTypeEnum": FxForwardInstrument.InstrumentTypeEnum,
-        "FxForwardInstrumentAllOf.InstrumentTypeEnum": FxForwardInstrumentAllOf.InstrumentTypeEnum,
-        "FxOption.InstrumentTypeEnum": FxOption.InstrumentTypeEnum,
-        "FxOptionAllOf.InstrumentTypeEnum": FxOptionAllOf.InstrumentTypeEnum,
         "GetReferencePortfolioConstituentsResponse.WeightTypeEnum": GetReferencePortfolioConstituentsResponse.WeightTypeEnum,
         "GetReferencePortfolioConstituentsResponse.PeriodTypeEnum": GetReferencePortfolioConstituentsResponse.PeriodTypeEnum,
         "HoldingsAdjustment.UnmatchedHoldingMethodEnum": HoldingsAdjustment.UnmatchedHoldingMethodEnum,
@@ -576,16 +603,10 @@ let enumsMap: {[index: string]: any} = {
         "IUnitDefinitionDto.SchemaEnum": IUnitDefinitionDto.SchemaEnum,
         "IndexConvention.DayCountConventionEnum": IndexConvention.DayCountConventionEnum,
         "Instrument.StateEnum": Instrument.StateEnum,
-        "InstrumentLeg.InstrumentTypeEnum": InstrumentLeg.InstrumentTypeEnum,
         "LegDefinition.StubTypeEnum": LegDefinition.StubTypeEnum,
         "LegDefinition.PayReceiveEnum": LegDefinition.PayReceiveEnum,
         "LegDefinition.NotionalExchangeTypeEnum": LegDefinition.NotionalExchangeTypeEnum,
         "LusidInstrument.InstrumentTypeEnum": LusidInstrument.InstrumentTypeEnum,
-        "MarketContextSuppliers.CommodityEnum": MarketContextSuppliers.CommodityEnum,
-        "MarketContextSuppliers.CreditEnum": MarketContextSuppliers.CreditEnum,
-        "MarketContextSuppliers.EquityEnum": MarketContextSuppliers.EquityEnum,
-        "MarketContextSuppliers.FxEnum": MarketContextSuppliers.FxEnum,
-        "MarketContextSuppliers.RatesEnum": MarketContextSuppliers.RatesEnum,
         "MarketDataKeyRule.SupplierEnum": MarketDataKeyRule.SupplierEnum,
         "MarketDataKeyRule.QuoteTypeEnum": MarketDataKeyRule.QuoteTypeEnum,
         "MarketOptions.DefaultSupplierEnum": MarketOptions.DefaultSupplierEnum,
@@ -606,17 +627,8 @@ let enumsMap: {[index: string]: any} = {
         "PropertyFilter.RightOperandTypeEnum": PropertyFilter.RightOperandTypeEnum,
         "QuoteSeriesId.InstrumentIdTypeEnum": QuoteSeriesId.InstrumentIdTypeEnum,
         "QuoteSeriesId.QuoteTypeEnum": QuoteSeriesId.QuoteTypeEnum,
-        "ResourceListOfValueType.ValuesEnum": ResourceListOfValueType.ValuesEnum,
         "ResultDataKeyRule.SupplierEnum": ResultDataKeyRule.SupplierEnum,
         "Results.FormatEnum": Results.FormatEnum,
-        "SwapInstrument.InstrumentTypeEnum": SwapInstrument.InstrumentTypeEnum,
-        "SwapInstrumentAllOf.InstrumentTypeEnum": SwapInstrumentAllOf.InstrumentTypeEnum,
-        "Swaption.PayOrReceiveFixedEnum": Swaption.PayOrReceiveFixedEnum,
-        "Swaption.DeliveryMethodEnum": Swaption.DeliveryMethodEnum,
-        "Swaption.InstrumentTypeEnum": Swaption.InstrumentTypeEnum,
-        "SwaptionAllOf.PayOrReceiveFixedEnum": SwaptionAllOf.PayOrReceiveFixedEnum,
-        "SwaptionAllOf.DeliveryMethodEnum": SwaptionAllOf.DeliveryMethodEnum,
-        "SwaptionAllOf.InstrumentTypeEnum": SwaptionAllOf.InstrumentTypeEnum,
         "Tenor.UnitEnum": Tenor.UnitEnum,
         "Tolerance.TypeEnum": Tolerance.TypeEnum,
         "TransactionConfigurationMovementData.MovementTypesEnum": TransactionConfigurationMovementData.MovementTypesEnum,
@@ -636,28 +648,30 @@ let typeMap: {[index: string]: any} = {
     "AccessControlledAction": AccessControlledAction,
     "AccessControlledResource": AccessControlledResource,
     "AccessMetadataValue": AccessMetadataValue,
+    "AccountingMethod": AccountingMethod,
     "ActionId": ActionId,
     "AdjustHolding": AdjustHolding,
     "AdjustHoldingRequest": AdjustHoldingRequest,
     "AggregateSpec": AggregateSpec,
     "AggregationContext": AggregationContext,
     "AggregationMeasureFailureDetail": AggregationMeasureFailureDetail,
+    "AggregationOp": AggregationOp,
     "AggregationOptions": AggregationOptions,
     "AggregationQuery": AggregationQuery,
     "AggregationRequest": AggregationRequest,
-    "AggregationResponseNodeOfDictionaryOfStringToObject": AggregationResponseNodeOfDictionaryOfStringToObject,
+    "AggregationResponseNode": AggregationResponseNode,
+    "AggregationType": AggregationType,
     "Allocation": Allocation,
     "AllocationRequest": AllocationRequest,
     "AllocationSetRequest": AllocationSetRequest,
     "AnnulQuotesResponse": AnnulQuotesResponse,
     "AnnulSingleStructuredDataResponse": AnnulSingleStructuredDataResponse,
     "AnnulStructuredDataResponse": AnnulStructuredDataResponse,
-    "BondInstrument": BondInstrument,
-    "BondInstrumentAllOf": BondInstrumentAllOf,
+    "BusinessDayConvention": BusinessDayConvention,
     "CdsFlowConventions": CdsFlowConventions,
-    "CdsInstrument": CdsInstrument,
-    "CdsInstrumentAllOf": CdsInstrumentAllOf,
     "CdsProtectionDetailSpecification": CdsProtectionDetailSpecification,
+    "CdsRestructuringType": CdsRestructuringType,
+    "CdsSeniority": CdsSeniority,
     "Change": Change,
     "CompletePortfolio": CompletePortfolio,
     "ConfigurationRecipe": ConfigurationRecipe,
@@ -687,25 +701,18 @@ let typeMap: {[index: string]: any} = {
     "DataDefinition": DataDefinition,
     "DataMapping": DataMapping,
     "DataType": DataType,
+    "DataTypeValueRange": DataTypeValueRange,
+    "DayCountConvention": DayCountConvention,
     "DeleteInstrumentPropertiesResponse": DeleteInstrumentPropertiesResponse,
     "DeleteInstrumentResponse": DeleteInstrumentResponse,
     "DeletedEntityResponse": DeletedEntityResponse,
-    "EquityOption": EquityOption,
-    "EquityOptionAllOf": EquityOptionAllOf,
+    "DeliveryType": DeliveryType,
     "ErrorDetail": ErrorDetail,
     "ExecutionRequest": ExecutionRequest,
     "ExpandedGroup": ExpandedGroup,
     "FieldSchema": FieldSchema,
     "FileResponse": FileResponse,
-    "FixedLeg": FixedLeg,
-    "FixedLegAllOf": FixedLegAllOf,
-    "FixedLegAllOfOverrides": FixedLegAllOfOverrides,
-    "FloatingLeg": FloatingLeg,
     "FlowConventions": FlowConventions,
-    "FxForwardInstrument": FxForwardInstrument,
-    "FxForwardInstrumentAllOf": FxForwardInstrumentAllOf,
-    "FxOption": FxOption,
-    "FxOptionAllOf": FxOptionAllOf,
     "GetInstrumentsResponse": GetInstrumentsResponse,
     "GetQuotesResponse": GetQuotesResponse,
     "GetRecipeResponse": GetRecipeResponse,
@@ -727,9 +734,9 @@ let typeMap: {[index: string]: any} = {
     "InstrumentEconomicDefinition": InstrumentEconomicDefinition,
     "InstrumentIdTypeDescriptor": InstrumentIdTypeDescriptor,
     "InstrumentIdValue": InstrumentIdValue,
-    "InstrumentLeg": InstrumentLeg,
     "InstrumentMatch": InstrumentMatch,
     "InstrumentSearchProperty": InstrumentSearchProperty,
+    "InstrumentType": InstrumentType,
     "LegDefinition": LegDefinition,
     "Link": Link,
     "ListAggregationResponse": ListAggregationResponse,
@@ -741,10 +748,17 @@ let typeMap: {[index: string]: any} = {
     "MarketContextSuppliers": MarketContextSuppliers,
     "MarketDataKeyRule": MarketDataKeyRule,
     "MarketDataManifest": MarketDataManifest,
+    "MarketIdentifier": MarketIdentifier,
+    "MarketManifestLevelOfDetail": MarketManifestLevelOfDetail,
     "MarketOptions": MarketOptions,
     "MetricValue": MetricValue,
     "ModelSelection": ModelSelection,
+    "MovementType": MovementType,
     "NestedAggregationResponse": NestedAggregationResponse,
+    "NotionalExchangeType": NotionalExchangeType,
+    "OperandType": OperandType,
+    "Operator": Operator,
+    "OptionType": OptionType,
     "Order": Order,
     "OrderBySpec": OrderBySpec,
     "OrderRequest": OrderRequest,
@@ -756,6 +770,9 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfPortfolioGroup": PagedResourceListOfPortfolioGroup,
     "PagedResourceListOfPortfolioSearchResult": PagedResourceListOfPortfolioSearchResult,
     "PagedResourceListOfPropertyDefinition": PagedResourceListOfPropertyDefinition,
+    "PayReceive": PayReceive,
+    "PeriodType": PeriodType,
+    "PerpetualEntityState": PerpetualEntityState,
     "PerpetualProperty": PerpetualProperty,
     "Person": Person,
     "Portfolio": Portfolio,
@@ -766,25 +783,33 @@ let typeMap: {[index: string]: any} = {
     "PortfolioProperties": PortfolioProperties,
     "PortfolioReconciliationRequest": PortfolioReconciliationRequest,
     "PortfolioSearchResult": PortfolioSearchResult,
+    "PortfolioType": PortfolioType,
     "PortfoliosReconciliationRequest": PortfoliosReconciliationRequest,
     "PortfoliosReconciliationRequestPreview": PortfoliosReconciliationRequestPreview,
     "PricingContext": PricingContext,
+    "PricingModel": PricingModel,
     "PricingOptions": PricingOptions,
     "ProcessedCommand": ProcessedCommand,
     "Property": Property,
     "PropertyDefinition": PropertyDefinition,
+    "PropertyDomain": PropertyDomain,
     "PropertyFilter": PropertyFilter,
+    "PropertyLifeTime": PropertyLifeTime,
     "PropertySchema": PropertySchema,
+    "PropertyType": PropertyType,
     "PropertyValue": PropertyValue,
     "Quote": Quote,
     "QuoteAccessMetadataRule": QuoteAccessMetadataRule,
     "QuoteAccessMetadataRuleId": QuoteAccessMetadataRuleId,
     "QuoteId": QuoteId,
+    "QuoteInstrumentIdType": QuoteInstrumentIdType,
     "QuoteSeriesId": QuoteSeriesId,
+    "QuoteType": QuoteType,
     "RealisedGainLoss": RealisedGainLoss,
     "ReconciliationBreak": ReconciliationBreak,
     "ReferencePortfolioConstituent": ReferencePortfolioConstituent,
     "ReferencePortfolioConstituentRequest": ReferencePortfolioConstituentRequest,
+    "ReferencePortfolioWeightType": ReferencePortfolioWeightType,
     "ResourceId": ResourceId,
     "ResourceListOfAccessControlledResource": ResourceListOfAccessControlledResource,
     "ResourceListOfAccessMetadataValueOf": ResourceListOfAccessMetadataValueOf,
@@ -813,8 +838,10 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfScopeDefinition": ResourceListOfScopeDefinition,
     "ResourceListOfString": ResourceListOfString,
     "ResourceListOfValueType": ResourceListOfValueType,
+    "ResourceSupplier": ResourceSupplier,
     "ResultDataKeyRule": ResultDataKeyRule,
     "ResultDataSchema": ResultDataSchema,
+    "ResultFormat": ResultFormat,
     "Results": Results,
     "Schema": Schema,
     "ScopeDefinition": ScopeDefinition,
@@ -822,19 +849,19 @@ let typeMap: {[index: string]: any} = {
     "SetPersonPropertiesRequest": SetPersonPropertiesRequest,
     "SideConfigurationData": SideConfigurationData,
     "SideConfigurationDataRequest": SideConfigurationDataRequest,
+    "SortOrder": SortOrder,
     "Stream": Stream,
     "StructuredMarketData": StructuredMarketData,
     "StructuredMarketDataId": StructuredMarketDataId,
     "StructuredResultData": StructuredResultData,
     "StructuredResultDataId": StructuredResultDataId,
-    "SwapInstrument": SwapInstrument,
-    "SwapInstrumentAllOf": SwapInstrumentAllOf,
-    "Swaption": Swaption,
-    "SwaptionAllOf": SwaptionAllOf,
+    "StubType": StubType,
     "TargetTaxLot": TargetTaxLot,
     "TargetTaxLotRequest": TargetTaxLotRequest,
     "Tenor": Tenor,
+    "TenorUnit": TenorUnit,
     "Tolerance": Tolerance,
+    "ToleranceEnum": ToleranceEnum,
     "Transaction": Transaction,
     "TransactionConfigurationData": TransactionConfigurationData,
     "TransactionConfigurationDataRequest": TransactionConfigurationDataRequest,
@@ -842,12 +869,18 @@ let typeMap: {[index: string]: any} = {
     "TransactionConfigurationMovementDataRequest": TransactionConfigurationMovementDataRequest,
     "TransactionConfigurationTypeAlias": TransactionConfigurationTypeAlias,
     "TransactionPrice": TransactionPrice,
+    "TransactionPriceType": TransactionPriceType,
     "TransactionPropertyMapping": TransactionPropertyMapping,
     "TransactionPropertyMappingRequest": TransactionPropertyMappingRequest,
+    "TransactionQueryMode": TransactionQueryMode,
     "TransactionQueryParameters": TransactionQueryParameters,
     "TransactionRequest": TransactionRequest,
+    "TransactionRoles": TransactionRoles,
     "TransactionSetConfigurationData": TransactionSetConfigurationData,
     "TransactionSetConfigurationDataRequest": TransactionSetConfigurationDataRequest,
+    "TransactionStatus": TransactionStatus,
+    "UnitSchema": UnitSchema,
+    "UnmatchedHoldingMethod": UnmatchedHoldingMethod,
     "UpdateCutLabelDefinitionRequest": UpdateCutLabelDefinitionRequest,
     "UpdateDataTypeRequest": UpdateDataTypeRequest,
     "UpdateInstrumentIdentifierRequest": UpdateInstrumentIdentifierRequest,
@@ -883,6 +916,8 @@ let typeMap: {[index: string]: any} = {
     "ValuationsReconciliationRequest": ValuationsReconciliationRequest,
     "ValueTupleOfMarketDataKeyRuleToQuote": ValueTupleOfMarketDataKeyRuleToQuote,
     "ValueTupleOfMarketDataKeyRuleToStructuredMarketData": ValueTupleOfMarketDataKeyRuleToStructuredMarketData,
+    "ValueType": ValueType,
+    "VendorLibrary": VendorLibrary,
     "VendorModelRule": VendorModelRule,
     "Version": Version,
     "VersionSummaryDto": VersionSummaryDto,
