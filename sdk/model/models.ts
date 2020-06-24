@@ -20,12 +20,8 @@ export * from './allocationSetRequest';
 export * from './annulQuotesResponse';
 export * from './annulSingleStructuredDataResponse';
 export * from './annulStructuredDataResponse';
-export * from './bondInstrument';
-export * from './bondInstrumentAllOf';
 export * from './businessDayConvention';
 export * from './cdsFlowConventions';
-export * from './cdsInstrument';
-export * from './cdsInstrumentAllOf';
 export * from './cdsProtectionDetailSpecification';
 export * from './cdsRestructuringType';
 export * from './cdsSeniority';
@@ -64,22 +60,12 @@ export * from './deleteInstrumentPropertiesResponse';
 export * from './deleteInstrumentResponse';
 export * from './deletedEntityResponse';
 export * from './deliveryType';
-export * from './equityOption';
-export * from './equityOptionAllOf';
 export * from './errorDetail';
 export * from './executionRequest';
 export * from './expandedGroup';
 export * from './fieldSchema';
 export * from './fileResponse';
-export * from './fixedLeg';
-export * from './fixedLegAllOf';
-export * from './fixedLegAllOfOverrides';
-export * from './floatingLeg';
 export * from './flowConventions';
-export * from './fxForwardInstrument';
-export * from './fxForwardInstrumentAllOf';
-export * from './fxOption';
-export * from './fxOptionAllOf';
 export * from './getInstrumentsResponse';
 export * from './getQuotesResponse';
 export * from './getRecipeResponse';
@@ -101,8 +87,6 @@ export * from './instrumentDefinition';
 export * from './instrumentEconomicDefinition';
 export * from './instrumentIdTypeDescriptor';
 export * from './instrumentIdValue';
-export * from './instrumentLeg';
-export * from './instrumentLegAllOf';
 export * from './instrumentMatch';
 export * from './instrumentSearchProperty';
 export * from './instrumentType';
@@ -225,10 +209,6 @@ export * from './structuredMarketDataId';
 export * from './structuredResultData';
 export * from './structuredResultDataId';
 export * from './stubType';
-export * from './swapInstrument';
-export * from './swapInstrumentAllOf';
-export * from './swaption';
-export * from './swaptionAllOf';
 export * from './targetTaxLot';
 export * from './targetTaxLotRequest';
 export * from './tenor';
@@ -323,12 +303,8 @@ import { AllocationSetRequest } from './allocationSetRequest';
 import { AnnulQuotesResponse } from './annulQuotesResponse';
 import { AnnulSingleStructuredDataResponse } from './annulSingleStructuredDataResponse';
 import { AnnulStructuredDataResponse } from './annulStructuredDataResponse';
-import { BondInstrument } from './bondInstrument';
-import { BondInstrumentAllOf } from './bondInstrumentAllOf';
 import { BusinessDayConvention } from './businessDayConvention';
 import { CdsFlowConventions } from './cdsFlowConventions';
-import { CdsInstrument } from './cdsInstrument';
-import { CdsInstrumentAllOf } from './cdsInstrumentAllOf';
 import { CdsProtectionDetailSpecification } from './cdsProtectionDetailSpecification';
 import { CdsRestructuringType } from './cdsRestructuringType';
 import { CdsSeniority } from './cdsSeniority';
@@ -367,22 +343,12 @@ import { DeleteInstrumentPropertiesResponse } from './deleteInstrumentProperties
 import { DeleteInstrumentResponse } from './deleteInstrumentResponse';
 import { DeletedEntityResponse } from './deletedEntityResponse';
 import { DeliveryType } from './deliveryType';
-import { EquityOption } from './equityOption';
-import { EquityOptionAllOf } from './equityOptionAllOf';
 import { ErrorDetail } from './errorDetail';
 import { ExecutionRequest } from './executionRequest';
 import { ExpandedGroup } from './expandedGroup';
 import { FieldSchema } from './fieldSchema';
 import { FileResponse } from './fileResponse';
-import { FixedLeg } from './fixedLeg';
-import { FixedLegAllOf } from './fixedLegAllOf';
-import { FixedLegAllOfOverrides } from './fixedLegAllOfOverrides';
-import { FloatingLeg } from './floatingLeg';
 import { FlowConventions } from './flowConventions';
-import { FxForwardInstrument } from './fxForwardInstrument';
-import { FxForwardInstrumentAllOf } from './fxForwardInstrumentAllOf';
-import { FxOption } from './fxOption';
-import { FxOptionAllOf } from './fxOptionAllOf';
 import { GetInstrumentsResponse } from './getInstrumentsResponse';
 import { GetQuotesResponse } from './getQuotesResponse';
 import { GetRecipeResponse } from './getRecipeResponse';
@@ -404,8 +370,6 @@ import { InstrumentDefinition } from './instrumentDefinition';
 import { InstrumentEconomicDefinition } from './instrumentEconomicDefinition';
 import { InstrumentIdTypeDescriptor } from './instrumentIdTypeDescriptor';
 import { InstrumentIdValue } from './instrumentIdValue';
-import { InstrumentLeg } from './instrumentLeg';
-import { InstrumentLegAllOf } from './instrumentLegAllOf';
 import { InstrumentMatch } from './instrumentMatch';
 import { InstrumentSearchProperty } from './instrumentSearchProperty';
 import { InstrumentType } from './instrumentType';
@@ -528,10 +492,6 @@ import { StructuredMarketDataId } from './structuredMarketDataId';
 import { StructuredResultData } from './structuredResultData';
 import { StructuredResultDataId } from './structuredResultDataId';
 import { StubType } from './stubType';
-import { SwapInstrument } from './swapInstrument';
-import { SwapInstrumentAllOf } from './swapInstrumentAllOf';
-import { Swaption } from './swaption';
-import { SwaptionAllOf } from './swaptionAllOf';
 import { TargetTaxLot } from './targetTaxLot';
 import { TargetTaxLotRequest } from './targetTaxLotRequest';
 import { Tenor } from './tenor';
@@ -617,12 +577,8 @@ let primitives = [
 let enumsMap: {[index: string]: any} = {
         "AggregateSpec.OpEnum": AggregateSpec.OpEnum,
         "AggregationQuery.TypeEnum": AggregationQuery.TypeEnum,
-        "BondInstrument.InstrumentTypeEnum": BondInstrument.InstrumentTypeEnum,
-        "BondInstrumentAllOf.InstrumentTypeEnum": BondInstrumentAllOf.InstrumentTypeEnum,
         "CdsFlowConventions.DayCountConventionEnum": CdsFlowConventions.DayCountConventionEnum,
         "CdsFlowConventions.RollConventionEnum": CdsFlowConventions.RollConventionEnum,
-        "CdsInstrument.InstrumentTypeEnum": CdsInstrument.InstrumentTypeEnum,
-        "CdsInstrumentAllOf.InstrumentTypeEnum": CdsInstrumentAllOf.InstrumentTypeEnum,
         "CdsProtectionDetailSpecification.SeniorityEnum": CdsProtectionDetailSpecification.SeniorityEnum,
         "CdsProtectionDetailSpecification.RestructuringTypeEnum": CdsProtectionDetailSpecification.RestructuringTypeEnum,
         "CompletePortfolio.TypeEnum": CompletePortfolio.TypeEnum,
@@ -637,24 +593,9 @@ let enumsMap: {[index: string]: any} = {
         "DataType.TypeValueRangeEnum": DataType.TypeValueRangeEnum,
         "DataType.ValueTypeEnum": DataType.ValueTypeEnum,
         "DataType.UnitSchemaEnum": DataType.UnitSchemaEnum,
-        "EquityOption.OptionTypeEnum": EquityOption.OptionTypeEnum,
-        "EquityOption.DeliveryTypeEnum": EquityOption.DeliveryTypeEnum,
-        "EquityOption.UnderlyingIdentifierEnum": EquityOption.UnderlyingIdentifierEnum,
-        "EquityOption.InstrumentTypeEnum": EquityOption.InstrumentTypeEnum,
-        "EquityOptionAllOf.OptionTypeEnum": EquityOptionAllOf.OptionTypeEnum,
-        "EquityOptionAllOf.DeliveryTypeEnum": EquityOptionAllOf.DeliveryTypeEnum,
-        "EquityOptionAllOf.UnderlyingIdentifierEnum": EquityOptionAllOf.UnderlyingIdentifierEnum,
-        "EquityOptionAllOf.InstrumentTypeEnum": EquityOptionAllOf.InstrumentTypeEnum,
         "FieldSchema.TypeEnum": FieldSchema.TypeEnum,
-        "FixedLeg.InstrumentTypeEnum": FixedLeg.InstrumentTypeEnum,
-        "FixedLegAllOf.InstrumentTypeEnum": FixedLegAllOf.InstrumentTypeEnum,
-        "FloatingLeg.InstrumentTypeEnum": FloatingLeg.InstrumentTypeEnum,
         "FlowConventions.DayCountConventionEnum": FlowConventions.DayCountConventionEnum,
         "FlowConventions.RollConventionEnum": FlowConventions.RollConventionEnum,
-        "FxForwardInstrument.InstrumentTypeEnum": FxForwardInstrument.InstrumentTypeEnum,
-        "FxForwardInstrumentAllOf.InstrumentTypeEnum": FxForwardInstrumentAllOf.InstrumentTypeEnum,
-        "FxOption.InstrumentTypeEnum": FxOption.InstrumentTypeEnum,
-        "FxOptionAllOf.InstrumentTypeEnum": FxOptionAllOf.InstrumentTypeEnum,
         "GetReferencePortfolioConstituentsResponse.WeightTypeEnum": GetReferencePortfolioConstituentsResponse.WeightTypeEnum,
         "GetReferencePortfolioConstituentsResponse.PeriodTypeEnum": GetReferencePortfolioConstituentsResponse.PeriodTypeEnum,
         "HoldingsAdjustment.UnmatchedHoldingMethodEnum": HoldingsAdjustment.UnmatchedHoldingMethodEnum,
@@ -662,8 +603,6 @@ let enumsMap: {[index: string]: any} = {
         "IUnitDefinitionDto.SchemaEnum": IUnitDefinitionDto.SchemaEnum,
         "IndexConvention.DayCountConventionEnum": IndexConvention.DayCountConventionEnum,
         "Instrument.StateEnum": Instrument.StateEnum,
-        "InstrumentLeg.InstrumentTypeEnum": InstrumentLeg.InstrumentTypeEnum,
-        "InstrumentLegAllOf.InstrumentTypeEnum": InstrumentLegAllOf.InstrumentTypeEnum,
         "LegDefinition.StubTypeEnum": LegDefinition.StubTypeEnum,
         "LegDefinition.PayReceiveEnum": LegDefinition.PayReceiveEnum,
         "LegDefinition.NotionalExchangeTypeEnum": LegDefinition.NotionalExchangeTypeEnum,
@@ -690,14 +629,6 @@ let enumsMap: {[index: string]: any} = {
         "QuoteSeriesId.QuoteTypeEnum": QuoteSeriesId.QuoteTypeEnum,
         "ResultDataKeyRule.SupplierEnum": ResultDataKeyRule.SupplierEnum,
         "Results.FormatEnum": Results.FormatEnum,
-        "SwapInstrument.InstrumentTypeEnum": SwapInstrument.InstrumentTypeEnum,
-        "SwapInstrumentAllOf.InstrumentTypeEnum": SwapInstrumentAllOf.InstrumentTypeEnum,
-        "Swaption.PayOrReceiveFixedEnum": Swaption.PayOrReceiveFixedEnum,
-        "Swaption.DeliveryMethodEnum": Swaption.DeliveryMethodEnum,
-        "Swaption.InstrumentTypeEnum": Swaption.InstrumentTypeEnum,
-        "SwaptionAllOf.PayOrReceiveFixedEnum": SwaptionAllOf.PayOrReceiveFixedEnum,
-        "SwaptionAllOf.DeliveryMethodEnum": SwaptionAllOf.DeliveryMethodEnum,
-        "SwaptionAllOf.InstrumentTypeEnum": SwaptionAllOf.InstrumentTypeEnum,
         "Tenor.UnitEnum": Tenor.UnitEnum,
         "Tolerance.TypeEnum": Tolerance.TypeEnum,
         "TransactionConfigurationMovementData.MovementTypesEnum": TransactionConfigurationMovementData.MovementTypesEnum,
@@ -736,12 +667,8 @@ let typeMap: {[index: string]: any} = {
     "AnnulQuotesResponse": AnnulQuotesResponse,
     "AnnulSingleStructuredDataResponse": AnnulSingleStructuredDataResponse,
     "AnnulStructuredDataResponse": AnnulStructuredDataResponse,
-    "BondInstrument": BondInstrument,
-    "BondInstrumentAllOf": BondInstrumentAllOf,
     "BusinessDayConvention": BusinessDayConvention,
     "CdsFlowConventions": CdsFlowConventions,
-    "CdsInstrument": CdsInstrument,
-    "CdsInstrumentAllOf": CdsInstrumentAllOf,
     "CdsProtectionDetailSpecification": CdsProtectionDetailSpecification,
     "CdsRestructuringType": CdsRestructuringType,
     "CdsSeniority": CdsSeniority,
@@ -780,22 +707,12 @@ let typeMap: {[index: string]: any} = {
     "DeleteInstrumentResponse": DeleteInstrumentResponse,
     "DeletedEntityResponse": DeletedEntityResponse,
     "DeliveryType": DeliveryType,
-    "EquityOption": EquityOption,
-    "EquityOptionAllOf": EquityOptionAllOf,
     "ErrorDetail": ErrorDetail,
     "ExecutionRequest": ExecutionRequest,
     "ExpandedGroup": ExpandedGroup,
     "FieldSchema": FieldSchema,
     "FileResponse": FileResponse,
-    "FixedLeg": FixedLeg,
-    "FixedLegAllOf": FixedLegAllOf,
-    "FixedLegAllOfOverrides": FixedLegAllOfOverrides,
-    "FloatingLeg": FloatingLeg,
     "FlowConventions": FlowConventions,
-    "FxForwardInstrument": FxForwardInstrument,
-    "FxForwardInstrumentAllOf": FxForwardInstrumentAllOf,
-    "FxOption": FxOption,
-    "FxOptionAllOf": FxOptionAllOf,
     "GetInstrumentsResponse": GetInstrumentsResponse,
     "GetQuotesResponse": GetQuotesResponse,
     "GetRecipeResponse": GetRecipeResponse,
@@ -817,8 +734,6 @@ let typeMap: {[index: string]: any} = {
     "InstrumentEconomicDefinition": InstrumentEconomicDefinition,
     "InstrumentIdTypeDescriptor": InstrumentIdTypeDescriptor,
     "InstrumentIdValue": InstrumentIdValue,
-    "InstrumentLeg": InstrumentLeg,
-    "InstrumentLegAllOf": InstrumentLegAllOf,
     "InstrumentMatch": InstrumentMatch,
     "InstrumentSearchProperty": InstrumentSearchProperty,
     "InstrumentType": InstrumentType,
@@ -941,10 +856,6 @@ let typeMap: {[index: string]: any} = {
     "StructuredResultData": StructuredResultData,
     "StructuredResultDataId": StructuredResultDataId,
     "StubType": StubType,
-    "SwapInstrument": SwapInstrument,
-    "SwapInstrumentAllOf": SwapInstrumentAllOf,
-    "Swaption": Swaption,
-    "SwaptionAllOf": SwaptionAllOf,
     "TargetTaxLot": TargetTaxLot,
     "TargetTaxLotRequest": TargetTaxLotRequest,
     "Tenor": Tenor,
