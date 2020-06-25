@@ -136,6 +136,7 @@ export * from './outputTransaction';
 export * from './pagedResourceListOfAllocation';
 export * from './pagedResourceListOfInstrument';
 export * from './pagedResourceListOfOrder';
+export * from './pagedResourceListOfPerson';
 export * from './pagedResourceListOfPortfolioGroup';
 export * from './pagedResourceListOfPortfolioSearchResult';
 export * from './pagedResourceListOfPropertyDefinition';
@@ -195,7 +196,6 @@ export * from './resourceListOfHoldingsAdjustmentHeader';
 export * from './resourceListOfIUnitDefinitionDto';
 export * from './resourceListOfInstrumentIdTypeDescriptor';
 export * from './resourceListOfOrder';
-export * from './resourceListOfPerson';
 export * from './resourceListOfPortfolio';
 export * from './resourceListOfPortfolioGroup';
 export * from './resourceListOfPortfolioSearchResult';
@@ -439,6 +439,7 @@ import { OutputTransaction } from './outputTransaction';
 import { PagedResourceListOfAllocation } from './pagedResourceListOfAllocation';
 import { PagedResourceListOfInstrument } from './pagedResourceListOfInstrument';
 import { PagedResourceListOfOrder } from './pagedResourceListOfOrder';
+import { PagedResourceListOfPerson } from './pagedResourceListOfPerson';
 import { PagedResourceListOfPortfolioGroup } from './pagedResourceListOfPortfolioGroup';
 import { PagedResourceListOfPortfolioSearchResult } from './pagedResourceListOfPortfolioSearchResult';
 import { PagedResourceListOfPropertyDefinition } from './pagedResourceListOfPropertyDefinition';
@@ -498,7 +499,6 @@ import { ResourceListOfHoldingsAdjustmentHeader } from './resourceListOfHoldings
 import { ResourceListOfIUnitDefinitionDto } from './resourceListOfIUnitDefinitionDto';
 import { ResourceListOfInstrumentIdTypeDescriptor } from './resourceListOfInstrumentIdTypeDescriptor';
 import { ResourceListOfOrder } from './resourceListOfOrder';
-import { ResourceListOfPerson } from './resourceListOfPerson';
 import { ResourceListOfPortfolio } from './resourceListOfPortfolio';
 import { ResourceListOfPortfolioGroup } from './resourceListOfPortfolioGroup';
 import { ResourceListOfPortfolioSearchResult } from './resourceListOfPortfolioSearchResult';
@@ -852,6 +852,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfAllocation": PagedResourceListOfAllocation,
     "PagedResourceListOfInstrument": PagedResourceListOfInstrument,
     "PagedResourceListOfOrder": PagedResourceListOfOrder,
+    "PagedResourceListOfPerson": PagedResourceListOfPerson,
     "PagedResourceListOfPortfolioGroup": PagedResourceListOfPortfolioGroup,
     "PagedResourceListOfPortfolioSearchResult": PagedResourceListOfPortfolioSearchResult,
     "PagedResourceListOfPropertyDefinition": PagedResourceListOfPropertyDefinition,
@@ -911,7 +912,6 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfIUnitDefinitionDto": ResourceListOfIUnitDefinitionDto,
     "ResourceListOfInstrumentIdTypeDescriptor": ResourceListOfInstrumentIdTypeDescriptor,
     "ResourceListOfOrder": ResourceListOfOrder,
-    "ResourceListOfPerson": ResourceListOfPerson,
     "ResourceListOfPortfolio": ResourceListOfPortfolio,
     "ResourceListOfPortfolioGroup": ResourceListOfPortfolioGroup,
     "ResourceListOfPortfolioSearchResult": ResourceListOfPortfolioSearchResult,
