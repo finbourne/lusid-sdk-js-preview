@@ -68,7 +68,10 @@ export * from './equityOption';
 export * from './equityOptionAllOf';
 export * from './errorDetail';
 export * from './executionRequest';
+export * from './exoticInstrument';
+export * from './exoticInstrumentAllOf';
 export * from './expandedGroup';
+export * from './expandedInstrument';
 export * from './fieldSchema';
 export * from './fileResponse';
 export * from './fixedLeg';
@@ -80,6 +83,7 @@ export * from './fxForwardInstrument';
 export * from './fxForwardInstrumentAllOf';
 export * from './fxOption';
 export * from './fxOptionAllOf';
+export * from './getExpandedInstrumentsResponse';
 export * from './getInstrumentsResponse';
 export * from './getQuotesResponse';
 export * from './getRecipeResponse';
@@ -98,6 +102,7 @@ export * from './inlineValuationReconciliationRequest';
 export * from './inlineValuationsReconciliationRequest';
 export * from './instrument';
 export * from './instrumentDefinition';
+export * from './instrumentDefinitionFormat';
 export * from './instrumentEconomicDefinition';
 export * from './instrumentIdTypeDescriptor';
 export * from './instrumentIdValue';
@@ -371,7 +376,10 @@ import { EquityOption } from './equityOption';
 import { EquityOptionAllOf } from './equityOptionAllOf';
 import { ErrorDetail } from './errorDetail';
 import { ExecutionRequest } from './executionRequest';
+import { ExoticInstrument } from './exoticInstrument';
+import { ExoticInstrumentAllOf } from './exoticInstrumentAllOf';
 import { ExpandedGroup } from './expandedGroup';
+import { ExpandedInstrument } from './expandedInstrument';
 import { FieldSchema } from './fieldSchema';
 import { FileResponse } from './fileResponse';
 import { FixedLeg } from './fixedLeg';
@@ -383,6 +391,7 @@ import { FxForwardInstrument } from './fxForwardInstrument';
 import { FxForwardInstrumentAllOf } from './fxForwardInstrumentAllOf';
 import { FxOption } from './fxOption';
 import { FxOptionAllOf } from './fxOptionAllOf';
+import { GetExpandedInstrumentsResponse } from './getExpandedInstrumentsResponse';
 import { GetInstrumentsResponse } from './getInstrumentsResponse';
 import { GetQuotesResponse } from './getQuotesResponse';
 import { GetRecipeResponse } from './getRecipeResponse';
@@ -401,6 +410,7 @@ import { InlineValuationReconciliationRequest } from './inlineValuationReconcili
 import { InlineValuationsReconciliationRequest } from './inlineValuationsReconciliationRequest';
 import { Instrument } from './instrument';
 import { InstrumentDefinition } from './instrumentDefinition';
+import { InstrumentDefinitionFormat } from './instrumentDefinitionFormat';
 import { InstrumentEconomicDefinition } from './instrumentEconomicDefinition';
 import { InstrumentIdTypeDescriptor } from './instrumentIdTypeDescriptor';
 import { InstrumentIdValue } from './instrumentIdValue';
@@ -645,6 +655,9 @@ let enumsMap: {[index: string]: any} = {
         "EquityOptionAllOf.DeliveryTypeEnum": EquityOptionAllOf.DeliveryTypeEnum,
         "EquityOptionAllOf.UnderlyingIdentifierEnum": EquityOptionAllOf.UnderlyingIdentifierEnum,
         "EquityOptionAllOf.InstrumentTypeEnum": EquityOptionAllOf.InstrumentTypeEnum,
+        "ExoticInstrument.InstrumentTypeEnum": ExoticInstrument.InstrumentTypeEnum,
+        "ExoticInstrumentAllOf.InstrumentTypeEnum": ExoticInstrumentAllOf.InstrumentTypeEnum,
+        "ExpandedInstrument.StateEnum": ExpandedInstrument.StateEnum,
         "FieldSchema.TypeEnum": FieldSchema.TypeEnum,
         "FixedLeg.InstrumentTypeEnum": FixedLeg.InstrumentTypeEnum,
         "FixedLegAllOf.InstrumentTypeEnum": FixedLegAllOf.InstrumentTypeEnum,
@@ -784,7 +797,10 @@ let typeMap: {[index: string]: any} = {
     "EquityOptionAllOf": EquityOptionAllOf,
     "ErrorDetail": ErrorDetail,
     "ExecutionRequest": ExecutionRequest,
+    "ExoticInstrument": ExoticInstrument,
+    "ExoticInstrumentAllOf": ExoticInstrumentAllOf,
     "ExpandedGroup": ExpandedGroup,
+    "ExpandedInstrument": ExpandedInstrument,
     "FieldSchema": FieldSchema,
     "FileResponse": FileResponse,
     "FixedLeg": FixedLeg,
@@ -796,6 +812,7 @@ let typeMap: {[index: string]: any} = {
     "FxForwardInstrumentAllOf": FxForwardInstrumentAllOf,
     "FxOption": FxOption,
     "FxOptionAllOf": FxOptionAllOf,
+    "GetExpandedInstrumentsResponse": GetExpandedInstrumentsResponse,
     "GetInstrumentsResponse": GetInstrumentsResponse,
     "GetQuotesResponse": GetQuotesResponse,
     "GetRecipeResponse": GetRecipeResponse,
@@ -814,6 +831,7 @@ let typeMap: {[index: string]: any} = {
     "InlineValuationsReconciliationRequest": InlineValuationsReconciliationRequest,
     "Instrument": Instrument,
     "InstrumentDefinition": InstrumentDefinition,
+    "InstrumentDefinitionFormat": InstrumentDefinitionFormat,
     "InstrumentEconomicDefinition": InstrumentEconomicDefinition,
     "InstrumentIdTypeDescriptor": InstrumentIdTypeDescriptor,
     "InstrumentIdValue": InstrumentIdValue,
