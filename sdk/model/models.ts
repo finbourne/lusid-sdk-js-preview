@@ -49,7 +49,6 @@ export * from './createPortfolioGroupRequest';
 export * from './createPropertyDefinitionRequest';
 export * from './createRecipeRequest';
 export * from './createReferencePortfolioRequest';
-export * from './createResults';
 export * from './createTransactionPortfolioRequest';
 export * from './createUnitDefinition';
 export * from './currencyAndAmount';
@@ -215,8 +214,6 @@ export * from './resourceListOfValueType';
 export * from './resourceSupplier';
 export * from './resultDataKeyRule';
 export * from './resultDataSchema';
-export * from './resultFormat';
-export * from './results';
 export * from './schema';
 export * from './scopeDefinition';
 export * from './setPersonIdentifiersRequest';
@@ -357,7 +354,6 @@ import { CreatePortfolioGroupRequest } from './createPortfolioGroupRequest';
 import { CreatePropertyDefinitionRequest } from './createPropertyDefinitionRequest';
 import { CreateRecipeRequest } from './createRecipeRequest';
 import { CreateReferencePortfolioRequest } from './createReferencePortfolioRequest';
-import { CreateResults } from './createResults';
 import { CreateTransactionPortfolioRequest } from './createTransactionPortfolioRequest';
 import { CreateUnitDefinition } from './createUnitDefinition';
 import { CurrencyAndAmount } from './currencyAndAmount';
@@ -523,8 +519,6 @@ import { ResourceListOfValueType } from './resourceListOfValueType';
 import { ResourceSupplier } from './resourceSupplier';
 import { ResultDataKeyRule } from './resultDataKeyRule';
 import { ResultDataSchema } from './resultDataSchema';
-import { ResultFormat } from './resultFormat';
-import { Results } from './results';
 import { Schema } from './schema';
 import { ScopeDefinition } from './scopeDefinition';
 import { SetPersonIdentifiersRequest } from './setPersonIdentifiersRequest';
@@ -642,7 +636,6 @@ let enumsMap: {[index: string]: any} = {
         "CreateDerivedTransactionPortfolioRequest.AccountingMethodEnum": CreateDerivedTransactionPortfolioRequest.AccountingMethodEnum,
         "CreatePropertyDefinitionRequest.DomainEnum": CreatePropertyDefinitionRequest.DomainEnum,
         "CreatePropertyDefinitionRequest.LifeTimeEnum": CreatePropertyDefinitionRequest.LifeTimeEnum,
-        "CreateResults.FormatEnum": CreateResults.FormatEnum,
         "CreateTransactionPortfolioRequest.AccountingMethodEnum": CreateTransactionPortfolioRequest.AccountingMethodEnum,
         "DataType.TypeValueRangeEnum": DataType.TypeValueRangeEnum,
         "DataType.ValueTypeEnum": DataType.ValueTypeEnum,
@@ -702,7 +695,6 @@ let enumsMap: {[index: string]: any} = {
         "QuoteSeriesId.InstrumentIdTypeEnum": QuoteSeriesId.InstrumentIdTypeEnum,
         "QuoteSeriesId.QuoteTypeEnum": QuoteSeriesId.QuoteTypeEnum,
         "ResultDataKeyRule.SupplierEnum": ResultDataKeyRule.SupplierEnum,
-        "Results.FormatEnum": Results.FormatEnum,
         "SwapInstrument.InstrumentTypeEnum": SwapInstrument.InstrumentTypeEnum,
         "SwapInstrumentAllOf.InstrumentTypeEnum": SwapInstrumentAllOf.InstrumentTypeEnum,
         "Swaption.PayOrReceiveFixedEnum": Swaption.PayOrReceiveFixedEnum,
@@ -778,7 +770,6 @@ let typeMap: {[index: string]: any} = {
     "CreatePropertyDefinitionRequest": CreatePropertyDefinitionRequest,
     "CreateRecipeRequest": CreateRecipeRequest,
     "CreateReferencePortfolioRequest": CreateReferencePortfolioRequest,
-    "CreateResults": CreateResults,
     "CreateTransactionPortfolioRequest": CreateTransactionPortfolioRequest,
     "CreateUnitDefinition": CreateUnitDefinition,
     "CurrencyAndAmount": CurrencyAndAmount,
@@ -944,8 +935,6 @@ let typeMap: {[index: string]: any} = {
     "ResourceSupplier": ResourceSupplier,
     "ResultDataKeyRule": ResultDataKeyRule,
     "ResultDataSchema": ResultDataSchema,
-    "ResultFormat": ResultFormat,
-    "Results": Results,
     "Schema": Schema,
     "ScopeDefinition": ScopeDefinition,
     "SetPersonIdentifiersRequest": SetPersonIdentifiersRequest,
