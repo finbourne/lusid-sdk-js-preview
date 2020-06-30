@@ -10,32 +10,21 @@
  * Do not edit the class manually.
  */
 
-import { AccessMetadataValue } from './accessMetadataValue';
-import { QuoteAccessMetadataRuleId } from './quoteAccessMetadataRuleId';
 
-export class UpsertQuoteAccessMetadataRuleRequest {
-    'id': QuoteAccessMetadataRuleId;
-    /**
-    * The access control metadata to assign to quotes that match the identifier
-    */
-    'metadata': { [key: string]: Array<AccessMetadataValue>; };
+export class IDataRecord {
+    'fieldCount'?: number;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "id",
-            "baseName": "id",
-            "type": "QuoteAccessMetadataRuleId"
-        },
-        {
-            "name": "metadata",
-            "baseName": "metadata",
-            "type": "{ [key: string]: Array<AccessMetadataValue>; }"
+            "name": "fieldCount",
+            "baseName": "fieldCount",
+            "type": "number"
         }    ];
 
     static getAttributeTypeMap() {
-        return UpsertQuoteAccessMetadataRuleRequest.attributeTypeMap;
+        return IDataRecord.attributeTypeMap;
     }
 }
 

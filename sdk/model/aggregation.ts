@@ -10,32 +10,74 @@
  * Do not edit the class manually.
  */
 
-import { AccessMetadataValue } from './accessMetadataValue';
-import { QuoteAccessMetadataRuleId } from './quoteAccessMetadataRuleId';
+import { AggregationMeasureFailureDetail } from './aggregationMeasureFailureDetail';
+import { IDataRecord } from './iDataRecord';
+import { Link } from './link';
+import { MarketDataManifest } from './marketDataManifest';
+import { ResultDataSchema } from './resultDataSchema';
 
-export class UpsertQuoteAccessMetadataRuleRequest {
-    'id': QuoteAccessMetadataRuleId;
-    /**
-    * The access control metadata to assign to quotes that match the identifier
-    */
-    'metadata': { [key: string]: Array<AccessMetadataValue>; };
+export class Aggregation {
+    'aggregationEffectiveAt'?: Date;
+    'aggregationAsAt'?: Date;
+    'href'?: string;
+    'data'?: Array<IDataRecord>;
+    'aggregationCurrency'?: string;
+    'dataSchema'?: ResultDataSchema;
+    'aggregationFailures'?: Array<AggregationMeasureFailureDetail>;
+    'manifest'?: MarketDataManifest;
+    'links'?: Array<Link>;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "id",
-            "baseName": "id",
-            "type": "QuoteAccessMetadataRuleId"
+            "name": "aggregationEffectiveAt",
+            "baseName": "aggregationEffectiveAt",
+            "type": "Date"
         },
         {
-            "name": "metadata",
-            "baseName": "metadata",
-            "type": "{ [key: string]: Array<AccessMetadataValue>; }"
+            "name": "aggregationAsAt",
+            "baseName": "aggregationAsAt",
+            "type": "Date"
+        },
+        {
+            "name": "href",
+            "baseName": "href",
+            "type": "string"
+        },
+        {
+            "name": "data",
+            "baseName": "data",
+            "type": "Array<IDataRecord>"
+        },
+        {
+            "name": "aggregationCurrency",
+            "baseName": "aggregationCurrency",
+            "type": "string"
+        },
+        {
+            "name": "dataSchema",
+            "baseName": "dataSchema",
+            "type": "ResultDataSchema"
+        },
+        {
+            "name": "aggregationFailures",
+            "baseName": "aggregationFailures",
+            "type": "Array<AggregationMeasureFailureDetail>"
+        },
+        {
+            "name": "manifest",
+            "baseName": "manifest",
+            "type": "MarketDataManifest"
+        },
+        {
+            "name": "links",
+            "baseName": "links",
+            "type": "Array<Link>"
         }    ];
 
     static getAttributeTypeMap() {
-        return UpsertQuoteAccessMetadataRuleRequest.attributeTypeMap;
+        return Aggregation.attributeTypeMap;
     }
 }
 

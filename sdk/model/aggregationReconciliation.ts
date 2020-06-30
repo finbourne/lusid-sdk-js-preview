@@ -10,32 +10,42 @@
  * Do not edit the class manually.
  */
 
-import { AccessMetadataValue } from './accessMetadataValue';
-import { QuoteAccessMetadataRuleId } from './quoteAccessMetadataRuleId';
+import { Aggregation } from './aggregation';
+import { IDataRecord } from './iDataRecord';
+import { ResultDataSchema } from './resultDataSchema';
 
-export class UpsertQuoteAccessMetadataRuleRequest {
-    'id': QuoteAccessMetadataRuleId;
-    /**
-    * The access control metadata to assign to quotes that match the identifier
-    */
-    'metadata': { [key: string]: Array<AccessMetadataValue>; };
+export class AggregationReconciliation {
+    'left'?: Aggregation;
+    'right'?: Aggregation;
+    'diff'?: Array<IDataRecord>;
+    'dataSchema'?: ResultDataSchema;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "id",
-            "baseName": "id",
-            "type": "QuoteAccessMetadataRuleId"
+            "name": "left",
+            "baseName": "left",
+            "type": "Aggregation"
         },
         {
-            "name": "metadata",
-            "baseName": "metadata",
-            "type": "{ [key: string]: Array<AccessMetadataValue>; }"
+            "name": "right",
+            "baseName": "right",
+            "type": "Aggregation"
+        },
+        {
+            "name": "diff",
+            "baseName": "diff",
+            "type": "Array<IDataRecord>"
+        },
+        {
+            "name": "dataSchema",
+            "baseName": "dataSchema",
+            "type": "ResultDataSchema"
         }    ];
 
     static getAttributeTypeMap() {
-        return UpsertQuoteAccessMetadataRuleRequest.attributeTypeMap;
+        return AggregationReconciliation.attributeTypeMap;
     }
 }
 

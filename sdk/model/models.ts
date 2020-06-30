@@ -6,11 +6,13 @@ export * from './actionId';
 export * from './adjustHolding';
 export * from './adjustHoldingRequest';
 export * from './aggregateSpec';
+export * from './aggregation';
 export * from './aggregationContext';
 export * from './aggregationMeasureFailureDetail';
 export * from './aggregationOp';
 export * from './aggregationOptions';
 export * from './aggregationQuery';
+export * from './aggregationReconciliation';
 export * from './aggregationRequest';
 export * from './aggregationResponseNode';
 export * from './aggregationType';
@@ -92,6 +94,7 @@ export * from './getStructuredResultDataResponse';
 export * from './holdingAdjustment';
 export * from './holdingsAdjustment';
 export * from './holdingsAdjustmentHeader';
+export * from './iDataRecord';
 export * from './iUnitDefinitionDto';
 export * from './idSelectorDefinition';
 export * from './identifierPartSchema';
@@ -311,11 +314,13 @@ import { ActionId } from './actionId';
 import { AdjustHolding } from './adjustHolding';
 import { AdjustHoldingRequest } from './adjustHoldingRequest';
 import { AggregateSpec } from './aggregateSpec';
+import { Aggregation } from './aggregation';
 import { AggregationContext } from './aggregationContext';
 import { AggregationMeasureFailureDetail } from './aggregationMeasureFailureDetail';
 import { AggregationOp } from './aggregationOp';
 import { AggregationOptions } from './aggregationOptions';
 import { AggregationQuery } from './aggregationQuery';
+import { AggregationReconciliation } from './aggregationReconciliation';
 import { AggregationRequest } from './aggregationRequest';
 import { AggregationResponseNode } from './aggregationResponseNode';
 import { AggregationType } from './aggregationType';
@@ -397,6 +402,7 @@ import { GetStructuredResultDataResponse } from './getStructuredResultDataRespon
 import { HoldingAdjustment } from './holdingAdjustment';
 import { HoldingsAdjustment } from './holdingsAdjustment';
 import { HoldingsAdjustmentHeader } from './holdingsAdjustmentHeader';
+import { IDataRecord } from './iDataRecord';
 import { IUnitDefinitionDto } from './iUnitDefinitionDto';
 import { IdSelectorDefinition } from './idSelectorDefinition';
 import { IdentifierPartSchema } from './identifierPartSchema';
@@ -727,11 +733,13 @@ let typeMap: {[index: string]: any} = {
     "AdjustHolding": AdjustHolding,
     "AdjustHoldingRequest": AdjustHoldingRequest,
     "AggregateSpec": AggregateSpec,
+    "Aggregation": Aggregation,
     "AggregationContext": AggregationContext,
     "AggregationMeasureFailureDetail": AggregationMeasureFailureDetail,
     "AggregationOp": AggregationOp,
     "AggregationOptions": AggregationOptions,
     "AggregationQuery": AggregationQuery,
+    "AggregationReconciliation": AggregationReconciliation,
     "AggregationRequest": AggregationRequest,
     "AggregationResponseNode": AggregationResponseNode,
     "AggregationType": AggregationType,
@@ -813,6 +821,7 @@ let typeMap: {[index: string]: any} = {
     "HoldingAdjustment": HoldingAdjustment,
     "HoldingsAdjustment": HoldingsAdjustment,
     "HoldingsAdjustmentHeader": HoldingsAdjustmentHeader,
+    "IDataRecord": IDataRecord,
     "IUnitDefinitionDto": IUnitDefinitionDto,
     "IdSelectorDefinition": IdSelectorDefinition,
     "IdentifierPartSchema": IdentifierPartSchema,
