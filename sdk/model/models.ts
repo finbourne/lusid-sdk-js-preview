@@ -124,6 +124,8 @@ export * from './marketContext';
 export * from './marketContextSuppliers';
 export * from './marketDataKeyRule';
 export * from './marketDataManifest';
+export * from './marketDataManifestQuote';
+export * from './marketDataManifestStructuredData';
 export * from './marketIdentifier';
 export * from './marketManifestLevelOfDetail';
 export * from './marketOptions';
@@ -292,8 +294,6 @@ export * from './upsertTransactionPropertiesResponse';
 export * from './user';
 export * from './valuationReconciliationRequest';
 export * from './valuationsReconciliationRequest';
-export * from './valueTupleOfMarketDataKeyRuleToQuote';
-export * from './valueTupleOfMarketDataKeyRuleToStructuredMarketData';
 export * from './valueType';
 export * from './vendorLibrary';
 export * from './vendorModelRule';
@@ -432,6 +432,8 @@ import { MarketContext } from './marketContext';
 import { MarketContextSuppliers } from './marketContextSuppliers';
 import { MarketDataKeyRule } from './marketDataKeyRule';
 import { MarketDataManifest } from './marketDataManifest';
+import { MarketDataManifestQuote } from './marketDataManifestQuote';
+import { MarketDataManifestStructuredData } from './marketDataManifestStructuredData';
 import { MarketIdentifier } from './marketIdentifier';
 import { MarketManifestLevelOfDetail } from './marketManifestLevelOfDetail';
 import { MarketOptions } from './marketOptions';
@@ -600,8 +602,6 @@ import { UpsertTransactionPropertiesResponse } from './upsertTransactionProperti
 import { User } from './user';
 import { ValuationReconciliationRequest } from './valuationReconciliationRequest';
 import { ValuationsReconciliationRequest } from './valuationsReconciliationRequest';
-import { ValueTupleOfMarketDataKeyRuleToQuote } from './valueTupleOfMarketDataKeyRuleToQuote';
-import { ValueTupleOfMarketDataKeyRuleToStructuredMarketData } from './valueTupleOfMarketDataKeyRuleToStructuredMarketData';
 import { ValueType } from './valueType';
 import { VendorLibrary } from './vendorLibrary';
 import { VendorModelRule } from './vendorModelRule';
@@ -851,6 +851,8 @@ let typeMap: {[index: string]: any} = {
     "MarketContextSuppliers": MarketContextSuppliers,
     "MarketDataKeyRule": MarketDataKeyRule,
     "MarketDataManifest": MarketDataManifest,
+    "MarketDataManifestQuote": MarketDataManifestQuote,
+    "MarketDataManifestStructuredData": MarketDataManifestStructuredData,
     "MarketIdentifier": MarketIdentifier,
     "MarketManifestLevelOfDetail": MarketManifestLevelOfDetail,
     "MarketOptions": MarketOptions,
@@ -1019,8 +1021,6 @@ let typeMap: {[index: string]: any} = {
     "User": User,
     "ValuationReconciliationRequest": ValuationReconciliationRequest,
     "ValuationsReconciliationRequest": ValuationsReconciliationRequest,
-    "ValueTupleOfMarketDataKeyRuleToQuote": ValueTupleOfMarketDataKeyRuleToQuote,
-    "ValueTupleOfMarketDataKeyRuleToStructuredMarketData": ValueTupleOfMarketDataKeyRuleToStructuredMarketData,
     "ValueType": ValueType,
     "VendorLibrary": VendorLibrary,
     "VendorModelRule": VendorModelRule,
