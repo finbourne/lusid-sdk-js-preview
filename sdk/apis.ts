@@ -17,6 +17,8 @@ import {PropertyDefinitionsApi} from './api/propertyDefinitionsApi';
 import {QuotesApi} from './api/quotesApi';
 import {ReconciliationsApi} from './api/reconciliationsApi';
 import {ReferencePortfolioApi} from './api/referencePortfolioApi';
+import {RelationDefinitionsApi} from './api/relationDefinitionsApi';
+import {RelationsApi} from './api/relationsApi';
 import {SchemasApi} from './api/schemasApi';
 import {ScopesApi} from './api/scopesApi';
 import {SearchApi} from './api/searchApi';
@@ -45,6 +47,8 @@ export class Api {
     public quotes:  QuotesApi
     public reconciliations:  ReconciliationsApi
     public referencePortfolio:  ReferencePortfolioApi
+    public relationDefinitions:  RelationDefinitionsApi
+    public relations:  RelationsApi
     public schemas:  SchemasApi
     public scopes:  ScopesApi
     public search:  SearchApi

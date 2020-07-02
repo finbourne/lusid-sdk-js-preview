@@ -51,6 +51,8 @@ export * from './createPortfolioGroupRequest';
 export * from './createPropertyDefinitionRequest';
 export * from './createRecipeRequest';
 export * from './createReferencePortfolioRequest';
+export * from './createRelationDefinitionRequest';
+export * from './createRelationRequest';
 export * from './createTransactionPortfolioRequest';
 export * from './createUnitDefinition';
 export * from './currencyAndAmount';
@@ -189,6 +191,8 @@ export * from './reconciliationBreak';
 export * from './referencePortfolioConstituent';
 export * from './referencePortfolioConstituentRequest';
 export * from './referencePortfolioWeightType';
+export * from './relation';
+export * from './relationDefinition';
 export * from './resourceId';
 export * from './resourceListOfAccessControlledResource';
 export * from './resourceListOfAccessMetadataValueOf';
@@ -359,6 +363,8 @@ import { CreatePortfolioGroupRequest } from './createPortfolioGroupRequest';
 import { CreatePropertyDefinitionRequest } from './createPropertyDefinitionRequest';
 import { CreateRecipeRequest } from './createRecipeRequest';
 import { CreateReferencePortfolioRequest } from './createReferencePortfolioRequest';
+import { CreateRelationDefinitionRequest } from './createRelationDefinitionRequest';
+import { CreateRelationRequest } from './createRelationRequest';
 import { CreateTransactionPortfolioRequest } from './createTransactionPortfolioRequest';
 import { CreateUnitDefinition } from './createUnitDefinition';
 import { CurrencyAndAmount } from './currencyAndAmount';
@@ -497,6 +503,8 @@ import { ReconciliationBreak } from './reconciliationBreak';
 import { ReferencePortfolioConstituent } from './referencePortfolioConstituent';
 import { ReferencePortfolioConstituentRequest } from './referencePortfolioConstituentRequest';
 import { ReferencePortfolioWeightType } from './referencePortfolioWeightType';
+import { Relation } from './relation';
+import { RelationDefinition } from './relationDefinition';
 import { ResourceId } from './resourceId';
 import { ResourceListOfAccessControlledResource } from './resourceListOfAccessControlledResource';
 import { ResourceListOfAccessMetadataValueOf } from './resourceListOfAccessMetadataValueOf';
@@ -778,6 +786,8 @@ let typeMap: {[index: string]: any} = {
     "CreatePropertyDefinitionRequest": CreatePropertyDefinitionRequest,
     "CreateRecipeRequest": CreateRecipeRequest,
     "CreateReferencePortfolioRequest": CreateReferencePortfolioRequest,
+    "CreateRelationDefinitionRequest": CreateRelationDefinitionRequest,
+    "CreateRelationRequest": CreateRelationRequest,
     "CreateTransactionPortfolioRequest": CreateTransactionPortfolioRequest,
     "CreateUnitDefinition": CreateUnitDefinition,
     "CurrencyAndAmount": CurrencyAndAmount,
@@ -916,6 +926,8 @@ let typeMap: {[index: string]: any} = {
     "ReferencePortfolioConstituent": ReferencePortfolioConstituent,
     "ReferencePortfolioConstituentRequest": ReferencePortfolioConstituentRequest,
     "ReferencePortfolioWeightType": ReferencePortfolioWeightType,
+    "Relation": Relation,
+    "RelationDefinition": RelationDefinition,
     "ResourceId": ResourceId,
     "ResourceListOfAccessControlledResource": ResourceListOfAccessControlledResource,
     "ResourceListOfAccessMetadataValueOf": ResourceListOfAccessMetadataValueOf,
