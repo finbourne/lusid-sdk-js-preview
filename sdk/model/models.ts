@@ -84,6 +84,7 @@ export * from './fxForwardInstrument';
 export * from './fxForwardInstrumentAllOf';
 export * from './fxOption';
 export * from './fxOptionAllOf';
+export * from './getConventionsResponse';
 export * from './getExpandedInstrumentsResponse';
 export * from './getInstrumentsResponse';
 export * from './getQuotesResponse';
@@ -395,6 +396,7 @@ import { FxForwardInstrument } from './fxForwardInstrument';
 import { FxForwardInstrumentAllOf } from './fxForwardInstrumentAllOf';
 import { FxOption } from './fxOption';
 import { FxOptionAllOf } from './fxOptionAllOf';
+import { GetConventionsResponse } from './getConventionsResponse';
 import { GetExpandedInstrumentsResponse } from './getExpandedInstrumentsResponse';
 import { GetInstrumentsResponse } from './getInstrumentsResponse';
 import { GetQuotesResponse } from './getQuotesResponse';
@@ -817,6 +819,7 @@ let typeMap: {[index: string]: any} = {
     "FxForwardInstrumentAllOf": FxForwardInstrumentAllOf,
     "FxOption": FxOption,
     "FxOptionAllOf": FxOptionAllOf,
+    "GetConventionsResponse": GetConventionsResponse,
     "GetExpandedInstrumentsResponse": GetExpandedInstrumentsResponse,
     "GetInstrumentsResponse": GetInstrumentsResponse,
     "GetQuotesResponse": GetQuotesResponse,
