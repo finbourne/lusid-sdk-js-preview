@@ -2,6 +2,7 @@ import {AggregationApi} from './api/aggregationApi';
 import {AllocationsApi} from './api/allocationsApi';
 import {ApplicationMetadataApi} from './api/applicationMetadataApi';
 import {ConfigurationRecipeApi} from './api/configurationRecipeApi';
+import {ConventionsApi} from './api/conventionsApi';
 import {CorporateActionSourcesApi} from './api/corporateActionSourcesApi';
 import {CutLabelDefinitionsApi} from './api/cutLabelDefinitionsApi';
 import {DataTypesApi} from './api/dataTypesApi';
@@ -32,6 +33,7 @@ export class Api {
     public allocations:  AllocationsApi
     public applicationMetadata:  ApplicationMetadataApi
     public configurationRecipe:  ConfigurationRecipeApi
+    public conventions:  ConventionsApi
     public corporateActionSources:  CorporateActionSourcesApi
     public cutLabelDefinitions:  CutLabelDefinitionsApi
     public dataTypes:  DataTypesApi

@@ -10,122 +10,48 @@
  * Do not edit the class manually.
  */
 
+import { ErrorDetail } from './errorDetail';
+import { FlowConventions } from './flowConventions';
+import { Link } from './link';
 
-export class FxForwardInstrumentAllOf {
+export class GetConventionsResponse {
     /**
-    * The amount that is to be paid in the domestic currency on the maturity date.
+    * The specific Uniform Resource Identifier (URI) for this resource at the requested effective and asAt datetime.
     */
-    'domAmount': number;
+    'href'?: string;
+    'values'?: FlowConventions;
     /**
-    * The amount that is to be paid in the foreign currency on the maturity date
+    * The identifiers which did not resolve to a convention along with the nature of the failure.
     */
-    'fgnAmount': number;
-    /**
-    * Is the contract an Fx-Forward of \"Non-Deliverable\" type, meaning a single payment in the domestic currency based on  the change in fx-rate vs  a reference rate is used.
-    */
-    'isNdf'?: boolean;
-    /**
-    * The fixing date. Its presence determines the NDF status of the instrument.
-    */
-    'fixingDate'?: Date;
-    /**
-    * The foreign (other) currency of the instrument. In the NDF case, only payments are made in the domestic currency.  For the outright forward, currencies are exchanged. By domestic is then that of the portfolio.
-    */
-    'fgnCcy': string;
-    /**
-    * The reference Fx Spot rate for currency pair Foreign-Domestic that was seen on the trade start date (time).
-    */
-    'refSpotRate'?: number;
-    /**
-    * The start date of the instrument. This is normally synonymous with the trade-date.
-    */
-    'startDate': Date;
-    /**
-    * The final maturity date of the instrument. This means the last date on which the instruments makes a payment of any amount.  For the avoidance of doubt, that is not necessarily prior to its last sensitivity date for the purposes of risk; e.g. instruments such as  Constant Maturity Swaps (CMS) often have sensitivities to rates beyond their last payment date
-    */
-    'maturityDate': Date;
-    /**
-    * The domestic currency of the instrument.
-    */
-    'domCcy': string;
-    /**
-    * The available values are: QuotedSecurity, InterestRateSwap, FxForward, Exotic, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedRateLeg, FloatingRateLeg, BespokeCashflowLeg, Unknown
-    */
-    'instrumentType': FxForwardInstrumentAllOf.InstrumentTypeEnum;
+    'failed'?: { [key: string]: ErrorDetail; };
+    'links'?: Array<Link>;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "domAmount",
-            "baseName": "domAmount",
-            "type": "number"
-        },
-        {
-            "name": "fgnAmount",
-            "baseName": "fgnAmount",
-            "type": "number"
-        },
-        {
-            "name": "isNdf",
-            "baseName": "isNdf",
-            "type": "boolean"
-        },
-        {
-            "name": "fixingDate",
-            "baseName": "fixingDate",
-            "type": "Date"
-        },
-        {
-            "name": "fgnCcy",
-            "baseName": "fgnCcy",
+            "name": "href",
+            "baseName": "href",
             "type": "string"
         },
         {
-            "name": "refSpotRate",
-            "baseName": "refSpotRate",
-            "type": "number"
+            "name": "values",
+            "baseName": "values",
+            "type": "FlowConventions"
         },
         {
-            "name": "startDate",
-            "baseName": "startDate",
-            "type": "Date"
+            "name": "failed",
+            "baseName": "failed",
+            "type": "{ [key: string]: ErrorDetail; }"
         },
         {
-            "name": "maturityDate",
-            "baseName": "maturityDate",
-            "type": "Date"
-        },
-        {
-            "name": "domCcy",
-            "baseName": "domCcy",
-            "type": "string"
-        },
-        {
-            "name": "instrumentType",
-            "baseName": "instrumentType",
-            "type": "FxForwardInstrumentAllOf.InstrumentTypeEnum"
+            "name": "links",
+            "baseName": "links",
+            "type": "Array<Link>"
         }    ];
 
     static getAttributeTypeMap() {
-        return FxForwardInstrumentAllOf.attributeTypeMap;
+        return GetConventionsResponse.attributeTypeMap;
     }
 }
 
-export namespace FxForwardInstrumentAllOf {
-    export enum InstrumentTypeEnum {
-        QuotedSecurity = <any> 'QuotedSecurity',
-        InterestRateSwap = <any> 'InterestRateSwap',
-        FxForward = <any> 'FxForward',
-        Exotic = <any> 'Exotic',
-        FxOption = <any> 'FxOption',
-        CreditDefaultSwap = <any> 'CreditDefaultSwap',
-        InterestRateSwaption = <any> 'InterestRateSwaption',
-        Bond = <any> 'Bond',
-        EquityOption = <any> 'EquityOption',
-        FixedRateLeg = <any> 'FixedRateLeg',
-        FloatingRateLeg = <any> 'FloatingRateLeg',
-        BespokeCashflowLeg = <any> 'BespokeCashflowLeg',
-        Unknown = <any> 'Unknown'
-    }
-}
