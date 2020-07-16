@@ -10,72 +10,88 @@
  * Do not edit the class manually.
  */
 
+import { ResourceId } from './resourceId';
 
-export class TransactionConfigurationTypeAlias {
+export class CreateDerivedPropertyDefinitionRequest {
     /**
-    * The transaction type
+    * The domain that the property exists in. The available values are: NotDefined, Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, CutLabelDefinition, Analytic, PortfolioGroup, Person, AccessMetadata, Order, UnitResult, MarketData, ConfigurationRecipe, Allocation
     */
-    'type': string;
+    'domain': CreateDerivedPropertyDefinitionRequest.DomainEnum;
     /**
-    * Brief description of the transaction
+    * The scope that the property exists in.
     */
-    'description': string;
+    'scope': string;
     /**
-    * Relates types of a similar class. E.g. Buy/Sell, StockIn/StockOut
+    * The code of the property. Together with the domain and scope this uniquely identifies the property.
     */
-    'transactionClass': string;
+    'code': string;
     /**
-    * Group is a set of codes related to a source, or sync
+    * The display name of the property.
     */
-    'transactionGroup': string;
+    'displayName': string;
+    'dataTypeId': ResourceId;
     /**
-    * . The available values are: None, LongLonger, LongShorter, ShortShorter, Shorter, ShortLonger, Longer, AllRoles
+    * The string that contains the rule for the derived property.
     */
-    'transactionRoles': TransactionConfigurationTypeAlias.TransactionRolesEnum;
+    'derivation'?: string;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "type",
-            "baseName": "type",
+            "name": "domain",
+            "baseName": "domain",
+            "type": "CreateDerivedPropertyDefinitionRequest.DomainEnum"
+        },
+        {
+            "name": "scope",
+            "baseName": "scope",
             "type": "string"
         },
         {
-            "name": "description",
-            "baseName": "description",
+            "name": "code",
+            "baseName": "code",
             "type": "string"
         },
         {
-            "name": "transactionClass",
-            "baseName": "transactionClass",
+            "name": "displayName",
+            "baseName": "displayName",
             "type": "string"
         },
         {
-            "name": "transactionGroup",
-            "baseName": "transactionGroup",
-            "type": "string"
+            "name": "dataTypeId",
+            "baseName": "dataTypeId",
+            "type": "ResourceId"
         },
         {
-            "name": "transactionRoles",
-            "baseName": "transactionRoles",
-            "type": "TransactionConfigurationTypeAlias.TransactionRolesEnum"
+            "name": "derivation",
+            "baseName": "derivation",
+            "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
-        return TransactionConfigurationTypeAlias.attributeTypeMap;
+        return CreateDerivedPropertyDefinitionRequest.attributeTypeMap;
     }
 }
 
-export namespace TransactionConfigurationTypeAlias {
-    export enum TransactionRolesEnum {
-        None = <any> 'None',
-        LongLonger = <any> 'LongLonger',
-        LongShorter = <any> 'LongShorter',
-        ShortShorter = <any> 'ShortShorter',
-        Shorter = <any> 'Shorter',
-        ShortLonger = <any> 'ShortLonger',
-        Longer = <any> 'Longer',
-        AllRoles = <any> 'AllRoles'
+export namespace CreateDerivedPropertyDefinitionRequest {
+    export enum DomainEnum {
+        NotDefined = <any> 'NotDefined',
+        Transaction = <any> 'Transaction',
+        Portfolio = <any> 'Portfolio',
+        Holding = <any> 'Holding',
+        ReferenceHolding = <any> 'ReferenceHolding',
+        TransactionConfiguration = <any> 'TransactionConfiguration',
+        Instrument = <any> 'Instrument',
+        CutLabelDefinition = <any> 'CutLabelDefinition',
+        Analytic = <any> 'Analytic',
+        PortfolioGroup = <any> 'PortfolioGroup',
+        Person = <any> 'Person',
+        AccessMetadata = <any> 'AccessMetadata',
+        Order = <any> 'Order',
+        UnitResult = <any> 'UnitResult',
+        MarketData = <any> 'MarketData',
+        ConfigurationRecipe = <any> 'ConfigurationRecipe',
+        Allocation = <any> 'Allocation'
     }
 }

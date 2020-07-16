@@ -43,6 +43,7 @@ export * from './corporateActionTransitionRequest';
 export * from './createCorporateActionSourceRequest';
 export * from './createCutLabelDefinitionRequest';
 export * from './createDataTypeRequest';
+export * from './createDerivedPropertyDefinitionRequest';
 export * from './createDerivedTransactionPortfolioRequest';
 export * from './createPortfolioDetails';
 export * from './createPortfolioGroupRequest';
@@ -355,6 +356,7 @@ import { CorporateActionTransitionRequest } from './corporateActionTransitionReq
 import { CreateCorporateActionSourceRequest } from './createCorporateActionSourceRequest';
 import { CreateCutLabelDefinitionRequest } from './createCutLabelDefinitionRequest';
 import { CreateDataTypeRequest } from './createDataTypeRequest';
+import { CreateDerivedPropertyDefinitionRequest } from './createDerivedPropertyDefinitionRequest';
 import { CreateDerivedTransactionPortfolioRequest } from './createDerivedTransactionPortfolioRequest';
 import { CreatePortfolioDetails } from './createPortfolioDetails';
 import { CreatePortfolioGroupRequest } from './createPortfolioGroupRequest';
@@ -647,6 +649,7 @@ let enumsMap: {[index: string]: any} = {
         "CreateDataTypeRequest.TypeValueRangeEnum": CreateDataTypeRequest.TypeValueRangeEnum,
         "CreateDataTypeRequest.ValueTypeEnum": CreateDataTypeRequest.ValueTypeEnum,
         "CreateDataTypeRequest.UnitSchemaEnum": CreateDataTypeRequest.UnitSchemaEnum,
+        "CreateDerivedPropertyDefinitionRequest.DomainEnum": CreateDerivedPropertyDefinitionRequest.DomainEnum,
         "CreateDerivedTransactionPortfolioRequest.AccountingMethodEnum": CreateDerivedTransactionPortfolioRequest.AccountingMethodEnum,
         "CreatePropertyDefinitionRequest.DomainEnum": CreatePropertyDefinitionRequest.DomainEnum,
         "CreatePropertyDefinitionRequest.LifeTimeEnum": CreatePropertyDefinitionRequest.LifeTimeEnum,
@@ -778,6 +781,7 @@ let typeMap: {[index: string]: any} = {
     "CreateCorporateActionSourceRequest": CreateCorporateActionSourceRequest,
     "CreateCutLabelDefinitionRequest": CreateCutLabelDefinitionRequest,
     "CreateDataTypeRequest": CreateDataTypeRequest,
+    "CreateDerivedPropertyDefinitionRequest": CreateDerivedPropertyDefinitionRequest,
     "CreateDerivedTransactionPortfolioRequest": CreateDerivedTransactionPortfolioRequest,
     "CreatePortfolioDetails": CreatePortfolioDetails,
     "CreatePortfolioGroupRequest": CreatePortfolioGroupRequest,
