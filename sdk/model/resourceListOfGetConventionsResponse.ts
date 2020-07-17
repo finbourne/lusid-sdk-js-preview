@@ -10,22 +10,26 @@
  * Do not edit the class manually.
  */
 
+import { GetConventionsResponse } from './getConventionsResponse';
 import { Link } from './link';
 
-export class DeleteInstrumentPropertiesResponse {
-    /**
-    * The asAt datetime at which the properties were removed from the specified instruments.
-    */
-    'asAt': Date;
+export class ResourceListOfGetConventionsResponse {
+    'values': Array<GetConventionsResponse>;
+    'href'?: string;
     'links'?: Array<Link>;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "asAt",
-            "baseName": "asAt",
-            "type": "Date"
+            "name": "values",
+            "baseName": "values",
+            "type": "Array<GetConventionsResponse>"
+        },
+        {
+            "name": "href",
+            "baseName": "href",
+            "type": "string"
         },
         {
             "name": "links",
@@ -34,7 +38,7 @@ export class DeleteInstrumentPropertiesResponse {
         }    ];
 
     static getAttributeTypeMap() {
-        return DeleteInstrumentPropertiesResponse.attributeTypeMap;
+        return ResourceListOfGetConventionsResponse.attributeTypeMap;
     }
 }
 
