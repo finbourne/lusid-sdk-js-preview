@@ -114,7 +114,6 @@ export * from './instrumentLegAllOf';
 export * from './instrumentMatch';
 export * from './instrumentSearchProperty';
 export * from './instrumentType';
-export * from './labelValueSet';
 export * from './legDefinition';
 export * from './link';
 export * from './listAggregationReconciliation';
@@ -429,7 +428,6 @@ import { InstrumentLegAllOf } from './instrumentLegAllOf';
 import { InstrumentMatch } from './instrumentMatch';
 import { InstrumentSearchProperty } from './instrumentSearchProperty';
 import { InstrumentType } from './instrumentType';
-import { LabelValueSet } from './labelValueSet';
 import { LegDefinition } from './legDefinition';
 import { Link } from './link';
 import { ListAggregationReconciliation } from './listAggregationReconciliation';
@@ -856,7 +854,6 @@ let typeMap: {[index: string]: any} = {
     "InstrumentMatch": InstrumentMatch,
     "InstrumentSearchProperty": InstrumentSearchProperty,
     "InstrumentType": InstrumentType,
-    "LabelValueSet": LabelValueSet,
     "LegDefinition": LegDefinition,
     "Link": Link,
     "ListAggregationReconciliation": ListAggregationReconciliation,
