@@ -12,70 +12,22 @@
 
 
 /**
-* An identifier that uniquely describes an item of structured market data such as an interest rate curve or volatility surface.
+* The set of string labels in a multi-value property.
 */
-export class StructuredMarketDataId {
-    /**
-    * The platform or vendor that provided the structured market data, e.g. \'DataScope\', \'LUSID\', \'ISDA\' etc.
-    */
-    'provider': string;
-    /**
-    * The source or originator of the structured market data, e.g. a bank or financial institution.
-    */
-    'priceSource'?: string;
-    /**
-    * Description of the structured market data\'s lineage e.g. \'FundAccountant_GreenQuality\'.
-    */
-    'lineage'?: string;
-    /**
-    * The effectiveAt or cut label that this item of structured market data is/was updated/inserted with.
-    */
-    'effectiveAt'?: string;
-    /**
-    * The type of the market element that the market entity represents, e.g. a vol surface or credit curve
-    */
-    'marketElementType'?: string;
-    /**
-    * The name of the market entity that the document represents
-    */
-    'marketAsset'?: string;
+export class LabelValueSet {
+    'values'?: Array<string>;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "provider",
-            "baseName": "provider",
-            "type": "string"
-        },
-        {
-            "name": "priceSource",
-            "baseName": "priceSource",
-            "type": "string"
-        },
-        {
-            "name": "lineage",
-            "baseName": "lineage",
-            "type": "string"
-        },
-        {
-            "name": "effectiveAt",
-            "baseName": "effectiveAt",
-            "type": "string"
-        },
-        {
-            "name": "marketElementType",
-            "baseName": "marketElementType",
-            "type": "string"
-        },
-        {
-            "name": "marketAsset",
-            "baseName": "marketAsset",
-            "type": "string"
+            "name": "values",
+            "baseName": "values",
+            "type": "Array<string>"
         }    ];
 
     static getAttributeTypeMap() {
-        return StructuredMarketDataId.attributeTypeMap;
+        return LabelValueSet.attributeTypeMap;
     }
 }
 
