@@ -24,7 +24,6 @@ export * from './bondInstrument';
 export * from './bondInstrumentAllOf';
 export * from './businessDayConvention';
 export * from './calendar';
-export * from './calendarDate';
 export * from './cdsFlowConventions';
 export * from './cdsInstrument';
 export * from './cdsInstrumentAllOf';
@@ -139,6 +138,7 @@ export * from './marketIdentifier';
 export * from './marketManifestLevelOfDetail';
 export * from './marketOptions';
 export * from './metricValue';
+export * from './modelDate';
 export * from './modelSelection';
 export * from './movementType';
 export * from './nestedAggregationResponse';
@@ -206,13 +206,13 @@ export * from './resourceListOfAccessControlledResource';
 export * from './resourceListOfAccessMetadataValueOf';
 export * from './resourceListOfAggregationQuery';
 export * from './resourceListOfAllocation';
-export * from './resourceListOfCalendarDate';
 export * from './resourceListOfChange';
 export * from './resourceListOfConstituentsAdjustmentHeader';
 export * from './resourceListOfCorporateAction';
 export * from './resourceListOfCorporateActionSource';
 export * from './resourceListOfCutLabelDefinition';
 export * from './resourceListOfDataType';
+export * from './resourceListOfDate';
 export * from './resourceListOfGetConventionsResponse';
 export * from './resourceListOfGetRecipeResponse';
 export * from './resourceListOfHoldingsAdjustmentHeader';
@@ -348,7 +348,6 @@ import { BondInstrument } from './bondInstrument';
 import { BondInstrumentAllOf } from './bondInstrumentAllOf';
 import { BusinessDayConvention } from './businessDayConvention';
 import { Calendar } from './calendar';
-import { CalendarDate } from './calendarDate';
 import { CdsFlowConventions } from './cdsFlowConventions';
 import { CdsInstrument } from './cdsInstrument';
 import { CdsInstrumentAllOf } from './cdsInstrumentAllOf';
@@ -463,6 +462,7 @@ import { MarketIdentifier } from './marketIdentifier';
 import { MarketManifestLevelOfDetail } from './marketManifestLevelOfDetail';
 import { MarketOptions } from './marketOptions';
 import { MetricValue } from './metricValue';
+import { ModelDate } from './modelDate';
 import { ModelSelection } from './modelSelection';
 import { MovementType } from './movementType';
 import { NestedAggregationResponse } from './nestedAggregationResponse';
@@ -530,13 +530,13 @@ import { ResourceListOfAccessControlledResource } from './resourceListOfAccessCo
 import { ResourceListOfAccessMetadataValueOf } from './resourceListOfAccessMetadataValueOf';
 import { ResourceListOfAggregationQuery } from './resourceListOfAggregationQuery';
 import { ResourceListOfAllocation } from './resourceListOfAllocation';
-import { ResourceListOfCalendarDate } from './resourceListOfCalendarDate';
 import { ResourceListOfChange } from './resourceListOfChange';
 import { ResourceListOfConstituentsAdjustmentHeader } from './resourceListOfConstituentsAdjustmentHeader';
 import { ResourceListOfCorporateAction } from './resourceListOfCorporateAction';
 import { ResourceListOfCorporateActionSource } from './resourceListOfCorporateActionSource';
 import { ResourceListOfCutLabelDefinition } from './resourceListOfCutLabelDefinition';
 import { ResourceListOfDataType } from './resourceListOfDataType';
+import { ResourceListOfDate } from './resourceListOfDate';
 import { ResourceListOfGetConventionsResponse } from './resourceListOfGetConventionsResponse';
 import { ResourceListOfGetRecipeResponse } from './resourceListOfGetRecipeResponse';
 import { ResourceListOfHoldingsAdjustmentHeader } from './resourceListOfHoldingsAdjustmentHeader';
@@ -784,7 +784,6 @@ let typeMap: {[index: string]: any} = {
     "BondInstrumentAllOf": BondInstrumentAllOf,
     "BusinessDayConvention": BusinessDayConvention,
     "Calendar": Calendar,
-    "CalendarDate": CalendarDate,
     "CdsFlowConventions": CdsFlowConventions,
     "CdsInstrument": CdsInstrument,
     "CdsInstrumentAllOf": CdsInstrumentAllOf,
@@ -899,6 +898,7 @@ let typeMap: {[index: string]: any} = {
     "MarketManifestLevelOfDetail": MarketManifestLevelOfDetail,
     "MarketOptions": MarketOptions,
     "MetricValue": MetricValue,
+    "ModelDate": ModelDate,
     "ModelSelection": ModelSelection,
     "MovementType": MovementType,
     "NestedAggregationResponse": NestedAggregationResponse,
@@ -966,13 +966,13 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfAccessMetadataValueOf": ResourceListOfAccessMetadataValueOf,
     "ResourceListOfAggregationQuery": ResourceListOfAggregationQuery,
     "ResourceListOfAllocation": ResourceListOfAllocation,
-    "ResourceListOfCalendarDate": ResourceListOfCalendarDate,
     "ResourceListOfChange": ResourceListOfChange,
     "ResourceListOfConstituentsAdjustmentHeader": ResourceListOfConstituentsAdjustmentHeader,
     "ResourceListOfCorporateAction": ResourceListOfCorporateAction,
     "ResourceListOfCorporateActionSource": ResourceListOfCorporateActionSource,
     "ResourceListOfCutLabelDefinition": ResourceListOfCutLabelDefinition,
     "ResourceListOfDataType": ResourceListOfDataType,
+    "ResourceListOfDate": ResourceListOfDate,
     "ResourceListOfGetConventionsResponse": ResourceListOfGetConventionsResponse,
     "ResourceListOfGetRecipeResponse": ResourceListOfGetRecipeResponse,
     "ResourceListOfHoldingsAdjustmentHeader": ResourceListOfHoldingsAdjustmentHeader,

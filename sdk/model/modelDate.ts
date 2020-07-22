@@ -10,34 +10,83 @@
  * Do not edit the class manually.
  */
 
-import { Property } from './property';
+import { DateAttributes } from './dateAttributes';
+import { ResourceId } from './resourceId';
 
-export class UpsertOrderPropertiesRequest {
-    /**
-    * Client-defined properties associated with this order.
-    */
-    'properties': Array<Property>;
-    /**
-    * Uniquely identifies this order.
-    */
-    'id': string;
+export class ModelDate {
+    'href'?: string;
+    'calendarIdentifier': ResourceId;
+    'dateIdentifier': string;
+    'fromUtc': Date;
+    'toUtc': Date;
+    'localDate': string;
+    'timezone': string;
+    'description': string;
+    'type': string;
+    'attributes': DateAttributes;
+    'sourceData': { [key: string]: string; };
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "properties",
-            "baseName": "properties",
-            "type": "Array<Property>"
+            "name": "href",
+            "baseName": "href",
+            "type": "string"
         },
         {
-            "name": "id",
-            "baseName": "id",
+            "name": "calendarIdentifier",
+            "baseName": "calendarIdentifier",
+            "type": "ResourceId"
+        },
+        {
+            "name": "dateIdentifier",
+            "baseName": "dateIdentifier",
             "type": "string"
+        },
+        {
+            "name": "fromUtc",
+            "baseName": "fromUtc",
+            "type": "Date"
+        },
+        {
+            "name": "toUtc",
+            "baseName": "toUtc",
+            "type": "Date"
+        },
+        {
+            "name": "localDate",
+            "baseName": "localDate",
+            "type": "string"
+        },
+        {
+            "name": "timezone",
+            "baseName": "timezone",
+            "type": "string"
+        },
+        {
+            "name": "description",
+            "baseName": "description",
+            "type": "string"
+        },
+        {
+            "name": "type",
+            "baseName": "type",
+            "type": "string"
+        },
+        {
+            "name": "attributes",
+            "baseName": "attributes",
+            "type": "DateAttributes"
+        },
+        {
+            "name": "sourceData",
+            "baseName": "sourceData",
+            "type": "{ [key: string]: string; }"
         }    ];
 
     static getAttributeTypeMap() {
-        return UpsertOrderPropertiesRequest.attributeTypeMap;
+        return ModelDate.attributeTypeMap;
     }
 }
 

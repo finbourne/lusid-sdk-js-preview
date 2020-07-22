@@ -10,34 +10,35 @@
  * Do not edit the class manually.
  */
 
-import { Property } from './property';
+import { Link } from './link';
+import { ModelDate } from './modelDate';
 
-export class UpsertOrderPropertiesRequest {
-    /**
-    * Client-defined properties associated with this order.
-    */
-    'properties': Array<Property>;
-    /**
-    * Uniquely identifies this order.
-    */
-    'id': string;
+export class ResourceListOfDate {
+    'values': Array<ModelDate>;
+    'href'?: string;
+    'links'?: Array<Link>;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "properties",
-            "baseName": "properties",
-            "type": "Array<Property>"
+            "name": "values",
+            "baseName": "values",
+            "type": "Array<ModelDate>"
         },
         {
-            "name": "id",
-            "baseName": "id",
+            "name": "href",
+            "baseName": "href",
             "type": "string"
+        },
+        {
+            "name": "links",
+            "baseName": "links",
+            "type": "Array<Link>"
         }    ];
 
     static getAttributeTypeMap() {
-        return UpsertOrderPropertiesRequest.attributeTypeMap;
+        return ResourceListOfDate.attributeTypeMap;
     }
 }
 
