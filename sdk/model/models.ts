@@ -180,6 +180,7 @@ export * from './pricingOptions';
 export * from './processedCommand';
 export * from './property';
 export * from './propertyDefinition';
+export * from './propertyDefinitionType';
 export * from './propertyDomain';
 export * from './propertyFilter';
 export * from './propertyLifeTime';
@@ -504,6 +505,7 @@ import { PricingOptions } from './pricingOptions';
 import { ProcessedCommand } from './processedCommand';
 import { Property } from './property';
 import { PropertyDefinition } from './propertyDefinition';
+import { PropertyDefinitionType } from './propertyDefinitionType';
 import { PropertyDomain } from './propertyDomain';
 import { PropertyFilter } from './propertyFilter';
 import { PropertyLifeTime } from './propertyLifeTime';
@@ -725,10 +727,11 @@ let enumsMap: {[index: string]: any} = {
         "Portfolio.TypeEnum": Portfolio.TypeEnum,
         "PortfolioSearchResult.TypeEnum": PortfolioSearchResult.TypeEnum,
         "PropertyDefinition.ValueTypeEnum": PropertyDefinition.ValueTypeEnum,
-        "PropertyDefinition.LifeTimeEnum": PropertyDefinition.LifeTimeEnum,
         "PropertyDefinition.TypeEnum": PropertyDefinition.TypeEnum,
         "PropertyDefinition.UnitSchemaEnum": PropertyDefinition.UnitSchemaEnum,
         "PropertyDefinition.DomainEnum": PropertyDefinition.DomainEnum,
+        "PropertyDefinition.LifeTimeEnum": PropertyDefinition.LifeTimeEnum,
+        "PropertyDefinition.PropertyDefinitionTypeEnum": PropertyDefinition.PropertyDefinitionTypeEnum,
         "PropertyFilter.OperatorEnum": PropertyFilter.OperatorEnum,
         "PropertyFilter.RightOperandTypeEnum": PropertyFilter.RightOperandTypeEnum,
         "QuoteSeriesId.InstrumentIdTypeEnum": QuoteSeriesId.InstrumentIdTypeEnum,
@@ -940,6 +943,7 @@ let typeMap: {[index: string]: any} = {
     "ProcessedCommand": ProcessedCommand,
     "Property": Property,
     "PropertyDefinition": PropertyDefinition,
+    "PropertyDefinitionType": PropertyDefinitionType,
     "PropertyDomain": PropertyDomain,
     "PropertyFilter": PropertyFilter,
     "PropertyLifeTime": PropertyLifeTime,
