@@ -11,7 +11,7 @@
  */
 
 
-export class StubType {
+export class PropertyDefinitionType {
 
     static discriminator: string | undefined = undefined;
 
@@ -19,7 +19,7 @@ export class StubType {
     ];
 
     static getAttributeTypeMap() {
-        return StubType.attributeTypeMap;
+        return PropertyDefinitionType.attributeTypeMap;
     }
 }
 
