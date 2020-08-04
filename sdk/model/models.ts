@@ -253,8 +253,6 @@ export * from './swaption';
 export * from './swaptionAllOf';
 export * from './targetTaxLot';
 export * from './targetTaxLotRequest';
-export * from './tenor';
-export * from './tenorUnit';
 export * from './tolerance';
 export * from './toleranceEnum';
 export * from './transaction';
@@ -578,8 +576,6 @@ import { Swaption } from './swaption';
 import { SwaptionAllOf } from './swaptionAllOf';
 import { TargetTaxLot } from './targetTaxLot';
 import { TargetTaxLotRequest } from './targetTaxLotRequest';
-import { Tenor } from './tenor';
-import { TenorUnit } from './tenorUnit';
 import { Tolerance } from './tolerance';
 import { ToleranceEnum } from './toleranceEnum';
 import { Transaction } from './transaction';
@@ -745,7 +741,6 @@ let enumsMap: {[index: string]: any} = {
         "SwaptionAllOf.PayOrReceiveFixedEnum": SwaptionAllOf.PayOrReceiveFixedEnum,
         "SwaptionAllOf.DeliveryMethodEnum": SwaptionAllOf.DeliveryMethodEnum,
         "SwaptionAllOf.InstrumentTypeEnum": SwaptionAllOf.InstrumentTypeEnum,
-        "Tenor.UnitEnum": Tenor.UnitEnum,
         "Tolerance.TypeEnum": Tolerance.TypeEnum,
         "TransactionConfigurationMovementData.MovementTypesEnum": TransactionConfigurationMovementData.MovementTypesEnum,
         "TransactionConfigurationMovementDataRequest.MovementTypesEnum": TransactionConfigurationMovementDataRequest.MovementTypesEnum,
@@ -1016,8 +1011,6 @@ let typeMap: {[index: string]: any} = {
     "SwaptionAllOf": SwaptionAllOf,
     "TargetTaxLot": TargetTaxLot,
     "TargetTaxLotRequest": TargetTaxLotRequest,
-    "Tenor": Tenor,
-    "TenorUnit": TenorUnit,
     "Tolerance": Tolerance,
     "ToleranceEnum": ToleranceEnum,
     "Transaction": Transaction,
