@@ -10,35 +10,36 @@
  * Do not edit the class manually.
  */
 
-import { AggregationQuery } from './aggregationQuery';
-import { Link } from './link';
 
-export class ResourceListOfAggregationQuery {
-    'values': Array<AggregationQuery>;
-    'href'?: string;
-    'links'?: Array<Link>;
+/**
+* Base class for conventions class
+*/
+export class Conventions {
+    /**
+    * The scope used when updating or inserting the convention.
+    */
+    'scope'?: string;
+    /**
+    * The code of the convention.
+    */
+    'code'?: string;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "values",
-            "baseName": "values",
-            "type": "Array<AggregationQuery>"
-        },
-        {
-            "name": "href",
-            "baseName": "href",
+            "name": "scope",
+            "baseName": "scope",
             "type": "string"
         },
         {
-            "name": "links",
-            "baseName": "links",
-            "type": "Array<Link>"
+            "name": "code",
+            "baseName": "code",
+            "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
-        return ResourceListOfAggregationQuery.attributeTypeMap;
+        return Conventions.attributeTypeMap;
     }
 }
 

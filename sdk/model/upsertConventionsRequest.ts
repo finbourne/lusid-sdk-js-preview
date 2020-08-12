@@ -10,35 +10,25 @@
  * Do not edit the class manually.
  */
 
-import { AggregationQuery } from './aggregationQuery';
-import { Link } from './link';
+import { Conventions } from './conventions';
 
-export class ResourceListOfAggregationQuery {
-    'values': Array<AggregationQuery>;
-    'href'?: string;
-    'links'?: Array<Link>;
+/**
+* A convention that is to be stored in the convention data store.  Only one of these must be present.
+*/
+export class UpsertConventionsRequest {
+    'conventions'?: Conventions;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "values",
-            "baseName": "values",
-            "type": "Array<AggregationQuery>"
-        },
-        {
-            "name": "href",
-            "baseName": "href",
-            "type": "string"
-        },
-        {
-            "name": "links",
-            "baseName": "links",
-            "type": "Array<Link>"
+            "name": "conventions",
+            "baseName": "conventions",
+            "type": "Conventions"
         }    ];
 
     static getAttributeTypeMap() {
-        return ResourceListOfAggregationQuery.attributeTypeMap;
+        return UpsertConventionsRequest.attributeTypeMap;
     }
 }
 
