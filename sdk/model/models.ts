@@ -120,6 +120,7 @@ export * from './instrumentLegAllOf';
 export * from './instrumentMatch';
 export * from './instrumentSearchProperty';
 export * from './instrumentType';
+export * from './isBusinessDayResponse';
 export * from './labelValueSet';
 export * from './legDefinition';
 export * from './link';
@@ -443,6 +444,7 @@ import { InstrumentLegAllOf } from './instrumentLegAllOf';
 import { InstrumentMatch } from './instrumentMatch';
 import { InstrumentSearchProperty } from './instrumentSearchProperty';
 import { InstrumentType } from './instrumentType';
+import { IsBusinessDayResponse } from './isBusinessDayResponse';
 import { LabelValueSet } from './labelValueSet';
 import { LegDefinition } from './legDefinition';
 import { Link } from './link';
@@ -878,6 +880,7 @@ let typeMap: {[index: string]: any} = {
     "InstrumentMatch": InstrumentMatch,
     "InstrumentSearchProperty": InstrumentSearchProperty,
     "InstrumentType": InstrumentType,
+    "IsBusinessDayResponse": IsBusinessDayResponse,
     "LabelValueSet": LabelValueSet,
     "LegDefinition": LegDefinition,
     "Link": Link,

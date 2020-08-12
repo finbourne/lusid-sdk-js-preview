@@ -10,35 +10,30 @@
  * Do not edit the class manually.
  */
 
-import { FieldSchema } from './fieldSchema';
-import { Link } from './link';
 
-export class PropertySchema {
-    'href'?: string;
-    'values'?: { [key: string]: FieldSchema; };
-    'links'?: Array<Link>;
+/**
+* Whether or not a DateTimeOffset is a business DateTime
+*/
+export class IsBusinessDayResponse {
+    'requestedDateTime': Date;
+    'isBusinessDay': boolean;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "href",
-            "baseName": "href",
-            "type": "string"
+            "name": "requestedDateTime",
+            "baseName": "requestedDateTime",
+            "type": "Date"
         },
         {
-            "name": "values",
-            "baseName": "values",
-            "type": "{ [key: string]: FieldSchema; }"
-        },
-        {
-            "name": "links",
-            "baseName": "links",
-            "type": "Array<Link>"
+            "name": "isBusinessDay",
+            "baseName": "isBusinessDay",
+            "type": "boolean"
         }    ];
 
     static getAttributeTypeMap() {
-        return PropertySchema.attributeTypeMap;
+        return IsBusinessDayResponse.attributeTypeMap;
     }
 }
 
