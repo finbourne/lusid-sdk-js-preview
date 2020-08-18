@@ -36,7 +36,6 @@ export * from './completePortfolio';
 export * from './configurationRecipe';
 export * from './configurationRecipeSnippet';
 export * from './constituentsAdjustmentHeader';
-export * from './conventions';
 export * from './corporateAction';
 export * from './corporateActionSource';
 export * from './corporateActionTransition';
@@ -92,8 +91,10 @@ export * from './fxForwardInstrument';
 export * from './fxForwardInstrumentAllOf';
 export * from './fxOption';
 export * from './fxOptionAllOf';
-export * from './getConventionsResponse';
+export * from './getCdsFlowConventionsResponse';
 export * from './getExpandedInstrumentsResponse';
+export * from './getFlowConventionsResponse';
+export * from './getIndexConventionResponse';
 export * from './getInstrumentsResponse';
 export * from './getQuotesResponse';
 export * from './getRecipeResponse';
@@ -216,7 +217,9 @@ export * from './resourceListOfCorporateAction';
 export * from './resourceListOfCorporateActionSource';
 export * from './resourceListOfCutLabelDefinition';
 export * from './resourceListOfDataType';
-export * from './resourceListOfGetConventionsResponse';
+export * from './resourceListOfGetCdsFlowConventionsResponse';
+export * from './resourceListOfGetFlowConventionsResponse';
+export * from './resourceListOfGetIndexConventionResponse';
 export * from './resourceListOfGetRecipeResponse';
 export * from './resourceListOfHoldingsAdjustmentHeader';
 export * from './resourceListOfIUnitDefinitionDto';
@@ -283,9 +286,11 @@ export * from './updateInstrumentIdentifierRequest';
 export * from './updatePortfolioGroupRequest';
 export * from './updatePortfolioRequest';
 export * from './updatePropertyDefinitionRequest';
-export * from './upsertConventionsRequest';
+export * from './upsertCdsFlowConventionsRequest';
 export * from './upsertCorporateActionRequest';
 export * from './upsertCorporateActionsResponse';
+export * from './upsertFlowConventionsRequest';
+export * from './upsertIndexConventionRequest';
 export * from './upsertInstrumentPropertiesResponse';
 export * from './upsertInstrumentPropertyRequest';
 export * from './upsertInstrumentsResponse';
@@ -362,7 +367,6 @@ import { CompletePortfolio } from './completePortfolio';
 import { ConfigurationRecipe } from './configurationRecipe';
 import { ConfigurationRecipeSnippet } from './configurationRecipeSnippet';
 import { ConstituentsAdjustmentHeader } from './constituentsAdjustmentHeader';
-import { Conventions } from './conventions';
 import { CorporateAction } from './corporateAction';
 import { CorporateActionSource } from './corporateActionSource';
 import { CorporateActionTransition } from './corporateActionTransition';
@@ -418,8 +422,10 @@ import { FxForwardInstrument } from './fxForwardInstrument';
 import { FxForwardInstrumentAllOf } from './fxForwardInstrumentAllOf';
 import { FxOption } from './fxOption';
 import { FxOptionAllOf } from './fxOptionAllOf';
-import { GetConventionsResponse } from './getConventionsResponse';
+import { GetCdsFlowConventionsResponse } from './getCdsFlowConventionsResponse';
 import { GetExpandedInstrumentsResponse } from './getExpandedInstrumentsResponse';
+import { GetFlowConventionsResponse } from './getFlowConventionsResponse';
+import { GetIndexConventionResponse } from './getIndexConventionResponse';
 import { GetInstrumentsResponse } from './getInstrumentsResponse';
 import { GetQuotesResponse } from './getQuotesResponse';
 import { GetRecipeResponse } from './getRecipeResponse';
@@ -542,7 +548,9 @@ import { ResourceListOfCorporateAction } from './resourceListOfCorporateAction';
 import { ResourceListOfCorporateActionSource } from './resourceListOfCorporateActionSource';
 import { ResourceListOfCutLabelDefinition } from './resourceListOfCutLabelDefinition';
 import { ResourceListOfDataType } from './resourceListOfDataType';
-import { ResourceListOfGetConventionsResponse } from './resourceListOfGetConventionsResponse';
+import { ResourceListOfGetCdsFlowConventionsResponse } from './resourceListOfGetCdsFlowConventionsResponse';
+import { ResourceListOfGetFlowConventionsResponse } from './resourceListOfGetFlowConventionsResponse';
+import { ResourceListOfGetIndexConventionResponse } from './resourceListOfGetIndexConventionResponse';
 import { ResourceListOfGetRecipeResponse } from './resourceListOfGetRecipeResponse';
 import { ResourceListOfHoldingsAdjustmentHeader } from './resourceListOfHoldingsAdjustmentHeader';
 import { ResourceListOfIUnitDefinitionDto } from './resourceListOfIUnitDefinitionDto';
@@ -609,9 +617,11 @@ import { UpdateInstrumentIdentifierRequest } from './updateInstrumentIdentifierR
 import { UpdatePortfolioGroupRequest } from './updatePortfolioGroupRequest';
 import { UpdatePortfolioRequest } from './updatePortfolioRequest';
 import { UpdatePropertyDefinitionRequest } from './updatePropertyDefinitionRequest';
-import { UpsertConventionsRequest } from './upsertConventionsRequest';
+import { UpsertCdsFlowConventionsRequest } from './upsertCdsFlowConventionsRequest';
 import { UpsertCorporateActionRequest } from './upsertCorporateActionRequest';
 import { UpsertCorporateActionsResponse } from './upsertCorporateActionsResponse';
+import { UpsertFlowConventionsRequest } from './upsertFlowConventionsRequest';
+import { UpsertIndexConventionRequest } from './upsertIndexConventionRequest';
 import { UpsertInstrumentPropertiesResponse } from './upsertInstrumentPropertiesResponse';
 import { UpsertInstrumentPropertyRequest } from './upsertInstrumentPropertyRequest';
 import { UpsertInstrumentsResponse } from './upsertInstrumentsResponse';
@@ -800,7 +810,6 @@ let typeMap: {[index: string]: any} = {
     "ConfigurationRecipe": ConfigurationRecipe,
     "ConfigurationRecipeSnippet": ConfigurationRecipeSnippet,
     "ConstituentsAdjustmentHeader": ConstituentsAdjustmentHeader,
-    "Conventions": Conventions,
     "CorporateAction": CorporateAction,
     "CorporateActionSource": CorporateActionSource,
     "CorporateActionTransition": CorporateActionTransition,
@@ -856,8 +865,10 @@ let typeMap: {[index: string]: any} = {
     "FxForwardInstrumentAllOf": FxForwardInstrumentAllOf,
     "FxOption": FxOption,
     "FxOptionAllOf": FxOptionAllOf,
-    "GetConventionsResponse": GetConventionsResponse,
+    "GetCdsFlowConventionsResponse": GetCdsFlowConventionsResponse,
     "GetExpandedInstrumentsResponse": GetExpandedInstrumentsResponse,
+    "GetFlowConventionsResponse": GetFlowConventionsResponse,
+    "GetIndexConventionResponse": GetIndexConventionResponse,
     "GetInstrumentsResponse": GetInstrumentsResponse,
     "GetQuotesResponse": GetQuotesResponse,
     "GetRecipeResponse": GetRecipeResponse,
@@ -980,7 +991,9 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfCorporateActionSource": ResourceListOfCorporateActionSource,
     "ResourceListOfCutLabelDefinition": ResourceListOfCutLabelDefinition,
     "ResourceListOfDataType": ResourceListOfDataType,
-    "ResourceListOfGetConventionsResponse": ResourceListOfGetConventionsResponse,
+    "ResourceListOfGetCdsFlowConventionsResponse": ResourceListOfGetCdsFlowConventionsResponse,
+    "ResourceListOfGetFlowConventionsResponse": ResourceListOfGetFlowConventionsResponse,
+    "ResourceListOfGetIndexConventionResponse": ResourceListOfGetIndexConventionResponse,
     "ResourceListOfGetRecipeResponse": ResourceListOfGetRecipeResponse,
     "ResourceListOfHoldingsAdjustmentHeader": ResourceListOfHoldingsAdjustmentHeader,
     "ResourceListOfIUnitDefinitionDto": ResourceListOfIUnitDefinitionDto,
@@ -1047,9 +1060,11 @@ let typeMap: {[index: string]: any} = {
     "UpdatePortfolioGroupRequest": UpdatePortfolioGroupRequest,
     "UpdatePortfolioRequest": UpdatePortfolioRequest,
     "UpdatePropertyDefinitionRequest": UpdatePropertyDefinitionRequest,
-    "UpsertConventionsRequest": UpsertConventionsRequest,
+    "UpsertCdsFlowConventionsRequest": UpsertCdsFlowConventionsRequest,
     "UpsertCorporateActionRequest": UpsertCorporateActionRequest,
     "UpsertCorporateActionsResponse": UpsertCorporateActionsResponse,
+    "UpsertFlowConventionsRequest": UpsertFlowConventionsRequest,
+    "UpsertIndexConventionRequest": UpsertIndexConventionRequest,
     "UpsertInstrumentPropertiesResponse": UpsertInstrumentPropertiesResponse,
     "UpsertInstrumentPropertyRequest": UpsertInstrumentPropertyRequest,
     "UpsertInstrumentsResponse": UpsertInstrumentsResponse,
