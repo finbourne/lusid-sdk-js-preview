@@ -155,6 +155,7 @@ export * from './orderRequest';
 export * from './orderSetRequest';
 export * from './outputTransaction';
 export * from './pagedResourceListOfAllocation';
+export * from './pagedResourceListOfCalendar';
 export * from './pagedResourceListOfInstrument';
 export * from './pagedResourceListOfOrder';
 export * from './pagedResourceListOfPerson';
@@ -486,6 +487,7 @@ import { OrderRequest } from './orderRequest';
 import { OrderSetRequest } from './orderSetRequest';
 import { OutputTransaction } from './outputTransaction';
 import { PagedResourceListOfAllocation } from './pagedResourceListOfAllocation';
+import { PagedResourceListOfCalendar } from './pagedResourceListOfCalendar';
 import { PagedResourceListOfInstrument } from './pagedResourceListOfInstrument';
 import { PagedResourceListOfOrder } from './pagedResourceListOfOrder';
 import { PagedResourceListOfPerson } from './pagedResourceListOfPerson';
@@ -929,6 +931,7 @@ let typeMap: {[index: string]: any} = {
     "OrderSetRequest": OrderSetRequest,
     "OutputTransaction": OutputTransaction,
     "PagedResourceListOfAllocation": PagedResourceListOfAllocation,
+    "PagedResourceListOfCalendar": PagedResourceListOfCalendar,
     "PagedResourceListOfInstrument": PagedResourceListOfInstrument,
     "PagedResourceListOfOrder": PagedResourceListOfOrder,
     "PagedResourceListOfPerson": PagedResourceListOfPerson,
