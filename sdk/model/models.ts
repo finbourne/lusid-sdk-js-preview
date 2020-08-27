@@ -87,6 +87,9 @@ export * from './fixedLegAllOf';
 export * from './fixedLegAllOfOverrides';
 export * from './floatingLeg';
 export * from './flowConventions';
+export * from './future';
+export * from './futureAllOf';
+export * from './futuresContractDetails';
 export * from './fxForwardInstrument';
 export * from './fxForwardInstrumentAllOf';
 export * from './fxOption';
@@ -419,6 +422,9 @@ import { FixedLegAllOf } from './fixedLegAllOf';
 import { FixedLegAllOfOverrides } from './fixedLegAllOfOverrides';
 import { FloatingLeg } from './floatingLeg';
 import { FlowConventions } from './flowConventions';
+import { Future } from './future';
+import { FutureAllOf } from './futureAllOf';
+import { FuturesContractDetails } from './futuresContractDetails';
 import { FxForwardInstrument } from './fxForwardInstrument';
 import { FxForwardInstrumentAllOf } from './fxForwardInstrumentAllOf';
 import { FxOption } from './fxOption';
@@ -712,6 +718,9 @@ let enumsMap: {[index: string]: any} = {
         "FloatingLeg.InstrumentTypeEnum": FloatingLeg.InstrumentTypeEnum,
         "FlowConventions.DayCountConventionEnum": FlowConventions.DayCountConventionEnum,
         "FlowConventions.RollConventionEnum": FlowConventions.RollConventionEnum,
+        "Future.InstrumentTypeEnum": Future.InstrumentTypeEnum,
+        "FutureAllOf.InstrumentTypeEnum": FutureAllOf.InstrumentTypeEnum,
+        "FuturesContractDetails.ConventionEnum": FuturesContractDetails.ConventionEnum,
         "FxForwardInstrument.InstrumentTypeEnum": FxForwardInstrument.InstrumentTypeEnum,
         "FxForwardInstrumentAllOf.InstrumentTypeEnum": FxForwardInstrumentAllOf.InstrumentTypeEnum,
         "FxOption.InstrumentTypeEnum": FxOption.InstrumentTypeEnum,
@@ -863,6 +872,9 @@ let typeMap: {[index: string]: any} = {
     "FixedLegAllOfOverrides": FixedLegAllOfOverrides,
     "FloatingLeg": FloatingLeg,
     "FlowConventions": FlowConventions,
+    "Future": Future,
+    "FutureAllOf": FutureAllOf,
+    "FuturesContractDetails": FuturesContractDetails,
     "FxForwardInstrument": FxForwardInstrument,
     "FxForwardInstrumentAllOf": FxForwardInstrumentAllOf,
     "FxOption": FxOption,
