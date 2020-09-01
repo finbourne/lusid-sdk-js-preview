@@ -240,7 +240,6 @@ export * from './resourceListOfReconciliationBreak';
 export * from './resourceListOfScopeDefinition';
 export * from './resourceListOfString';
 export * from './resourceListOfValueType';
-export * from './resourceSupplier';
 export * from './resultDataKeyRule';
 export * from './resultDataSchema';
 export * from './schema';
@@ -575,7 +574,6 @@ import { ResourceListOfReconciliationBreak } from './resourceListOfReconciliatio
 import { ResourceListOfScopeDefinition } from './resourceListOfScopeDefinition';
 import { ResourceListOfString } from './resourceListOfString';
 import { ResourceListOfValueType } from './resourceListOfValueType';
-import { ResourceSupplier } from './resourceSupplier';
 import { ResultDataKeyRule } from './resultDataKeyRule';
 import { ResultDataSchema } from './resultDataSchema';
 import { Schema } from './schema';
@@ -738,10 +736,7 @@ let enumsMap: {[index: string]: any} = {
         "LegDefinition.PayReceiveEnum": LegDefinition.PayReceiveEnum,
         "LegDefinition.NotionalExchangeTypeEnum": LegDefinition.NotionalExchangeTypeEnum,
         "LusidInstrument.InstrumentTypeEnum": LusidInstrument.InstrumentTypeEnum,
-        "MarketDataKeyRule.SupplierEnum": MarketDataKeyRule.SupplierEnum,
         "MarketDataKeyRule.QuoteTypeEnum": MarketDataKeyRule.QuoteTypeEnum,
-        "MarketOptions.DefaultSupplierEnum": MarketOptions.DefaultSupplierEnum,
-        "MarketOptions.DefaultInstrumentCodeTypeEnum": MarketOptions.DefaultInstrumentCodeTypeEnum,
         "MarketOptions.ManifestLevelOfDetailEnum": MarketOptions.ManifestLevelOfDetailEnum,
         "ModelSelection.LibraryEnum": ModelSelection.LibraryEnum,
         "ModelSelection.ModelEnum": ModelSelection.ModelEnum,
@@ -759,7 +754,6 @@ let enumsMap: {[index: string]: any} = {
         "PropertyFilter.RightOperandTypeEnum": PropertyFilter.RightOperandTypeEnum,
         "QuoteSeriesId.InstrumentIdTypeEnum": QuoteSeriesId.InstrumentIdTypeEnum,
         "QuoteSeriesId.QuoteTypeEnum": QuoteSeriesId.QuoteTypeEnum,
-        "ResultDataKeyRule.SupplierEnum": ResultDataKeyRule.SupplierEnum,
         "SwapInstrument.InstrumentTypeEnum": SwapInstrument.InstrumentTypeEnum,
         "SwapInstrumentAllOf.InstrumentTypeEnum": SwapInstrumentAllOf.InstrumentTypeEnum,
         "Swaption.PayOrReceiveFixedEnum": Swaption.PayOrReceiveFixedEnum,
@@ -1025,7 +1019,6 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfScopeDefinition": ResourceListOfScopeDefinition,
     "ResourceListOfString": ResourceListOfString,
     "ResourceListOfValueType": ResourceListOfValueType,
-    "ResourceSupplier": ResourceSupplier,
     "ResultDataKeyRule": ResultDataKeyRule,
     "ResultDataSchema": ResultDataSchema,
     "Schema": Schema,
