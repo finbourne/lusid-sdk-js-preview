@@ -10,94 +10,97 @@
  * Do not edit the class manually.
  */
 
-import { CurrencyAndAmount } from './currencyAndAmount';
-import { PerpetualProperty } from './perpetualProperty';
-import { Property } from './property';
-import { Transaction } from './transaction';
+import { CdsFlowConventions } from './cdsFlowConventions';
+import { CdsProtectionDetailSpecification } from './cdsProtectionDetailSpecification';
+import { CreditDefaultSwapAllOf } from './creditDefaultSwapAllOf';
+import { LusidInstrument } from './lusidInstrument';
 
 /**
-* A list of holdings.
+* IL CDS Instrument; Lusid-ibor internal representation of a Credit Default Swap instrument
 */
-export class PortfolioHolding {
+export class CreditDefaultSwap extends LusidInstrument {
     /**
-    * The unqiue Lusid Instrument Id (LUID) of the instrument that the holding is in.
+    * A ticker to uniquely specify then entity against which the cds is written
     */
-    'instrumentUid': string;
+    'ticker': string;
     /**
-    * The sub-holding properties which identify the holding. Each property will be from the \'Transaction\' domain. These are configured when a transaction portfolio is created.
+    * The start date of the instrument. This is normally synonymous with the trade-date.
     */
-    'subHoldingKeys'?: { [key: string]: PerpetualProperty; };
+    'startDate': Date;
     /**
-    * The properties which have been requested to be decorated onto the holding. These will be from the \'Instrument\' or \'Holding\' domain.
+    * The final maturity date of the instrument. This means the last date on which the instruments makes a payment of any amount.              For the avoidance of doubt, that is not necessarily prior to its last sensitivity date for the purposes of risk; e.g. instruments such as              Constant Maturity Swaps (CMS) often have sensitivities to rates beyond their last payment date
     */
-    'properties'?: { [key: string]: Property; };
+    'maturityDate': Date;
+    'flowConventions': CdsFlowConventions;
     /**
-    * The type of the holding e.g. Position, Balance, CashCommitment, Receivable, ForwardFX etc.
+    * The coupon rate paid on each payment date of the premium leg as a fraction of 100 percent, e.g. \"0.05\" meaning 500 basis points or 5%.              For a standard corporate CDS (North American) this must be either 100bps or 500bps.
     */
-    'holdingType': string;
+    'couponRate': number;
+    'protectionDetailSpecification': CdsProtectionDetailSpecification;
     /**
-    * The total number of units of the holding.
+    * The available values are: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedRateLeg, FloatingRateLeg, BespokeCashflowLeg, Unknown
     */
-    'units': number;
-    /**
-    * The total number of settled units of the holding.
-    */
-    'settledUnits': number;
-    'cost': CurrencyAndAmount;
-    'costPortfolioCcy': CurrencyAndAmount;
-    'transaction'?: Transaction;
+    'instrumentType': CreditDefaultSwap.InstrumentTypeEnum;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "instrumentUid",
-            "baseName": "instrumentUid",
+            "name": "ticker",
+            "baseName": "ticker",
             "type": "string"
         },
         {
-            "name": "subHoldingKeys",
-            "baseName": "subHoldingKeys",
-            "type": "{ [key: string]: PerpetualProperty; }"
+            "name": "startDate",
+            "baseName": "startDate",
+            "type": "Date"
         },
         {
-            "name": "properties",
-            "baseName": "properties",
-            "type": "{ [key: string]: Property; }"
+            "name": "maturityDate",
+            "baseName": "maturityDate",
+            "type": "Date"
         },
         {
-            "name": "holdingType",
-            "baseName": "holdingType",
-            "type": "string"
+            "name": "flowConventions",
+            "baseName": "flowConventions",
+            "type": "CdsFlowConventions"
         },
         {
-            "name": "units",
-            "baseName": "units",
+            "name": "couponRate",
+            "baseName": "couponRate",
             "type": "number"
         },
         {
-            "name": "settledUnits",
-            "baseName": "settledUnits",
-            "type": "number"
+            "name": "protectionDetailSpecification",
+            "baseName": "protectionDetailSpecification",
+            "type": "CdsProtectionDetailSpecification"
         },
         {
-            "name": "cost",
-            "baseName": "cost",
-            "type": "CurrencyAndAmount"
-        },
-        {
-            "name": "costPortfolioCcy",
-            "baseName": "costPortfolioCcy",
-            "type": "CurrencyAndAmount"
-        },
-        {
-            "name": "transaction",
-            "baseName": "transaction",
-            "type": "Transaction"
+            "name": "instrumentType",
+            "baseName": "instrumentType",
+            "type": "CreditDefaultSwap.InstrumentTypeEnum"
         }    ];
 
     static getAttributeTypeMap() {
-        return PortfolioHolding.attributeTypeMap;
+        return super.getAttributeTypeMap().concat(CreditDefaultSwap.attributeTypeMap);
     }
 }
 
+export namespace CreditDefaultSwap {
+    export enum InstrumentTypeEnum {
+        QuotedSecurity = <any> 'QuotedSecurity',
+        InterestRateSwap = <any> 'InterestRateSwap',
+        FxForward = <any> 'FxForward',
+        Future = <any> 'Future',
+        ExoticInstrument = <any> 'ExoticInstrument',
+        FxOption = <any> 'FxOption',
+        CreditDefaultSwap = <any> 'CreditDefaultSwap',
+        InterestRateSwaption = <any> 'InterestRateSwaption',
+        Bond = <any> 'Bond',
+        EquityOption = <any> 'EquityOption',
+        FixedRateLeg = <any> 'FixedRateLeg',
+        FloatingRateLeg = <any> 'FloatingRateLeg',
+        BespokeCashflowLeg = <any> 'BespokeCashflowLeg',
+        Unknown = <any> 'Unknown'
+    }
+}
