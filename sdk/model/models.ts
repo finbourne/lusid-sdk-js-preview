@@ -79,7 +79,6 @@ export * from './executionRequest';
 export * from './exoticInstrument';
 export * from './exoticInstrumentAllOf';
 export * from './expandedGroup';
-export * from './expandedInstrument';
 export * from './fieldSchema';
 export * from './fileResponse';
 export * from './fixedLeg';
@@ -96,7 +95,6 @@ export * from './fxForwardAllOf';
 export * from './fxOption';
 export * from './fxOptionAllOf';
 export * from './getCdsFlowConventionsResponse';
-export * from './getExpandedInstrumentsResponse';
 export * from './getFlowConventionsResponse';
 export * from './getIndexConventionResponse';
 export * from './getInstrumentsResponse';
@@ -118,7 +116,6 @@ export * from './inlineValuationsReconciliationRequest';
 export * from './instrument';
 export * from './instrumentDefinition';
 export * from './instrumentDefinitionFormat';
-export * from './instrumentEconomicDefinition';
 export * from './instrumentIdTypeDescriptor';
 export * from './instrumentIdValue';
 export * from './instrumentLeg';
@@ -137,7 +134,6 @@ export * from './link';
 export * from './listAggregationReconciliation';
 export * from './listAggregationResponse';
 export * from './lusidInstrument';
-export * from './lusidInstrumentDefinition';
 export * from './lusidProblemDetails';
 export * from './lusidValidationProblemDetails';
 export * from './marketContext';
@@ -414,7 +410,6 @@ import { ExecutionRequest } from './executionRequest';
 import { ExoticInstrument } from './exoticInstrument';
 import { ExoticInstrumentAllOf } from './exoticInstrumentAllOf';
 import { ExpandedGroup } from './expandedGroup';
-import { ExpandedInstrument } from './expandedInstrument';
 import { FieldSchema } from './fieldSchema';
 import { FileResponse } from './fileResponse';
 import { FixedLeg } from './fixedLeg';
@@ -431,7 +426,6 @@ import { FxForwardAllOf } from './fxForwardAllOf';
 import { FxOption } from './fxOption';
 import { FxOptionAllOf } from './fxOptionAllOf';
 import { GetCdsFlowConventionsResponse } from './getCdsFlowConventionsResponse';
-import { GetExpandedInstrumentsResponse } from './getExpandedInstrumentsResponse';
 import { GetFlowConventionsResponse } from './getFlowConventionsResponse';
 import { GetIndexConventionResponse } from './getIndexConventionResponse';
 import { GetInstrumentsResponse } from './getInstrumentsResponse';
@@ -453,7 +447,6 @@ import { InlineValuationsReconciliationRequest } from './inlineValuationsReconci
 import { Instrument } from './instrument';
 import { InstrumentDefinition } from './instrumentDefinition';
 import { InstrumentDefinitionFormat } from './instrumentDefinitionFormat';
-import { InstrumentEconomicDefinition } from './instrumentEconomicDefinition';
 import { InstrumentIdTypeDescriptor } from './instrumentIdTypeDescriptor';
 import { InstrumentIdValue } from './instrumentIdValue';
 import { InstrumentLeg } from './instrumentLeg';
@@ -472,7 +465,6 @@ import { Link } from './link';
 import { ListAggregationReconciliation } from './listAggregationReconciliation';
 import { ListAggregationResponse } from './listAggregationResponse';
 import { LusidInstrument } from './lusidInstrument';
-import { LusidInstrumentDefinition } from './lusidInstrumentDefinition';
 import { LusidProblemDetails } from './lusidProblemDetails';
 import { LusidValidationProblemDetails } from './lusidValidationProblemDetails';
 import { MarketContext } from './marketContext';
@@ -711,7 +703,6 @@ let enumsMap: {[index: string]: any} = {
         "EquityOptionAllOf.InstrumentTypeEnum": EquityOptionAllOf.InstrumentTypeEnum,
         "ExoticInstrument.InstrumentTypeEnum": ExoticInstrument.InstrumentTypeEnum,
         "ExoticInstrumentAllOf.InstrumentTypeEnum": ExoticInstrumentAllOf.InstrumentTypeEnum,
-        "ExpandedInstrument.StateEnum": ExpandedInstrument.StateEnum,
         "FieldSchema.TypeEnum": FieldSchema.TypeEnum,
         "FixedLeg.InstrumentTypeEnum": FixedLeg.InstrumentTypeEnum,
         "FixedLegAllOf.InstrumentTypeEnum": FixedLegAllOf.InstrumentTypeEnum,
@@ -861,7 +852,6 @@ let typeMap: {[index: string]: any} = {
     "ExoticInstrument": ExoticInstrument,
     "ExoticInstrumentAllOf": ExoticInstrumentAllOf,
     "ExpandedGroup": ExpandedGroup,
-    "ExpandedInstrument": ExpandedInstrument,
     "FieldSchema": FieldSchema,
     "FileResponse": FileResponse,
     "FixedLeg": FixedLeg,
@@ -878,7 +868,6 @@ let typeMap: {[index: string]: any} = {
     "FxOption": FxOption,
     "FxOptionAllOf": FxOptionAllOf,
     "GetCdsFlowConventionsResponse": GetCdsFlowConventionsResponse,
-    "GetExpandedInstrumentsResponse": GetExpandedInstrumentsResponse,
     "GetFlowConventionsResponse": GetFlowConventionsResponse,
     "GetIndexConventionResponse": GetIndexConventionResponse,
     "GetInstrumentsResponse": GetInstrumentsResponse,
@@ -900,7 +889,6 @@ let typeMap: {[index: string]: any} = {
     "Instrument": Instrument,
     "InstrumentDefinition": InstrumentDefinition,
     "InstrumentDefinitionFormat": InstrumentDefinitionFormat,
-    "InstrumentEconomicDefinition": InstrumentEconomicDefinition,
     "InstrumentIdTypeDescriptor": InstrumentIdTypeDescriptor,
     "InstrumentIdValue": InstrumentIdValue,
     "InstrumentLeg": InstrumentLeg,
@@ -919,7 +907,6 @@ let typeMap: {[index: string]: any} = {
     "ListAggregationReconciliation": ListAggregationReconciliation,
     "ListAggregationResponse": ListAggregationResponse,
     "LusidInstrument": LusidInstrument,
-    "LusidInstrumentDefinition": LusidInstrumentDefinition,
     "LusidProblemDetails": LusidProblemDetails,
     "LusidValidationProblemDetails": LusidValidationProblemDetails,
     "MarketContext": MarketContext,
