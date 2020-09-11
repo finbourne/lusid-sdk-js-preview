@@ -172,6 +172,8 @@ export * from './perpetualEntityState';
 export * from './perpetualProperty';
 export * from './person';
 export * from './portfolio';
+export * from './portfolioCashFlow';
+export * from './portfolioCashFlowsResponse';
 export * from './portfolioDetails';
 export * from './portfolioGroup';
 export * from './portfolioGroupProperties';
@@ -503,6 +505,8 @@ import { PerpetualEntityState } from './perpetualEntityState';
 import { PerpetualProperty } from './perpetualProperty';
 import { Person } from './person';
 import { Portfolio } from './portfolio';
+import { PortfolioCashFlow } from './portfolioCashFlow';
+import { PortfolioCashFlowsResponse } from './portfolioCashFlowsResponse';
 import { PortfolioDetails } from './portfolioDetails';
 import { PortfolioGroup } from './portfolioGroup';
 import { PortfolioGroupProperties } from './portfolioGroupProperties';
@@ -945,6 +949,8 @@ let typeMap: {[index: string]: any} = {
     "PerpetualProperty": PerpetualProperty,
     "Person": Person,
     "Portfolio": Portfolio,
+    "PortfolioCashFlow": PortfolioCashFlow,
+    "PortfolioCashFlowsResponse": PortfolioCashFlowsResponse,
     "PortfolioDetails": PortfolioDetails,
     "PortfolioGroup": PortfolioGroup,
     "PortfolioGroupProperties": PortfolioGroupProperties,

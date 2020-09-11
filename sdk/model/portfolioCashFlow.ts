@@ -10,27 +10,93 @@
  * Do not edit the class manually.
  */
 
+import { CurrencyAndAmount } from './currencyAndAmount';
+import { PerpetualProperty } from './perpetualProperty';
+import { Transaction } from './transaction';
 
-export class CutLocalTime {
-    'hours'?: number;
-    'minutes'?: number;
+/**
+* The details for the cashflow for a given portfolio.
+*/
+export class PortfolioCashFlow {
+    'sequenceNumber': number;
+    'subHoldings'?: { [key: string]: PerpetualProperty; };
+    'type': string;
+    'movementName': string;
+    'cashflow': CurrencyAndAmount;
+    'balance': CurrencyAndAmount;
+    'fxRate': number;
+    'cashflowReportingCurrency': CurrencyAndAmount;
+    'balanceReportingCurrency': CurrencyAndAmount;
+    'translationGainLoss': CurrencyAndAmount;
+    'costBasisReportingCurrency': CurrencyAndAmount;
+    'transaction': Transaction;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "hours",
-            "baseName": "hours",
+            "name": "sequenceNumber",
+            "baseName": "sequenceNumber",
             "type": "number"
         },
         {
-            "name": "minutes",
-            "baseName": "minutes",
+            "name": "subHoldings",
+            "baseName": "subHoldings",
+            "type": "{ [key: string]: PerpetualProperty; }"
+        },
+        {
+            "name": "type",
+            "baseName": "type",
+            "type": "string"
+        },
+        {
+            "name": "movementName",
+            "baseName": "movementName",
+            "type": "string"
+        },
+        {
+            "name": "cashflow",
+            "baseName": "cashflow",
+            "type": "CurrencyAndAmount"
+        },
+        {
+            "name": "balance",
+            "baseName": "balance",
+            "type": "CurrencyAndAmount"
+        },
+        {
+            "name": "fxRate",
+            "baseName": "fxRate",
             "type": "number"
+        },
+        {
+            "name": "cashflowReportingCurrency",
+            "baseName": "cashflowReportingCurrency",
+            "type": "CurrencyAndAmount"
+        },
+        {
+            "name": "balanceReportingCurrency",
+            "baseName": "balanceReportingCurrency",
+            "type": "CurrencyAndAmount"
+        },
+        {
+            "name": "translationGainLoss",
+            "baseName": "translationGainLoss",
+            "type": "CurrencyAndAmount"
+        },
+        {
+            "name": "costBasisReportingCurrency",
+            "baseName": "costBasisReportingCurrency",
+            "type": "CurrencyAndAmount"
+        },
+        {
+            "name": "transaction",
+            "baseName": "transaction",
+            "type": "Transaction"
         }    ];
 
     static getAttributeTypeMap() {
-        return CutLocalTime.attributeTypeMap;
+        return PortfolioCashFlow.attributeTypeMap;
     }
 }
 

@@ -10,27 +10,35 @@
  * Do not edit the class manually.
  */
 
+import { Link } from './link';
+import { PortfolioCashFlow } from './portfolioCashFlow';
 
-export class CutLocalTime {
-    'hours'?: number;
-    'minutes'?: number;
+/**
+* The response object which contains the cashflows for a given portfolio.
+*/
+export class PortfolioCashFlowsResponse {
+    /**
+    * The cash flow details for the given portfolio.
+    */
+    'portfolioCashFlows': Array<PortfolioCashFlow>;
+    'links'?: Array<Link>;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "hours",
-            "baseName": "hours",
-            "type": "number"
+            "name": "portfolioCashFlows",
+            "baseName": "portfolioCashFlows",
+            "type": "Array<PortfolioCashFlow>"
         },
         {
-            "name": "minutes",
-            "baseName": "minutes",
-            "type": "number"
+            "name": "links",
+            "baseName": "links",
+            "type": "Array<Link>"
         }    ];
 
     static getAttributeTypeMap() {
-        return CutLocalTime.attributeTypeMap;
+        return PortfolioCashFlowsResponse.attributeTypeMap;
     }
 }
 
