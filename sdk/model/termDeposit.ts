@@ -10,107 +10,91 @@
  * Do not edit the class manually.
  */
 
-import { Link } from './link';
+import { FlowConventions } from './flowConventions';
 import { LusidInstrument } from './lusidInstrument';
-import { Property } from './property';
-import { ResourceId } from './resourceId';
-import { Version } from './version';
+import { TermDepositAllOf } from './termDepositAllOf';
 
 /**
-* A list of instruments.
+* Lusid internal representation of a term deposit
 */
-export class Instrument {
+export class TermDeposit extends LusidInstrument {
     /**
-    * The specific Uniform Resource Identifier (URI) for this resource at the requested effective and asAt datetime.
+    * The start date of the instrument. This is normally synonymous with the trade-date.
     */
-    'href'?: string;
+    'startDate': Date;
     /**
-    * The unique LUSID Instrument Identifier (LUID) of the instrument.
+    * The final maturity date of the instrument. This means the last date on which the instruments makes a payment of any amount.              For the avoidance of doubt, that is not necessarily prior to its last sensitivity date for the purposes of risk; e.g. instruments such as              Constant Maturity Swaps (CMS) often have sensitivities to rates beyond their last payment date
     */
-    'lusidInstrumentId': string;
-    'version': Version;
+    'maturityDate': Date;
     /**
-    * The name of the instrument.
+    * With an OTC we have the problem of multiple ways of booking a quantity.              e.g.              If buying a swap do you have a holding of size 1 of 100,000,000 notional swap or a holding of 100,000,000 size of 1 notional swap, or any combination that multiplies to 10^8.              When you get for a price for a \'unit swap\' what do you mean? The definition must be consistent across all quotes. This includes bonds which have a face value and              fx-forwards which often trade in standard contract sizes. When we look up a price, and there are no units, we are assuming it is a price for a contract size of 1.              The logical effect of this is that              instrument clean price = contract size * quoted unit price              holding clean price    = holding quantity * instrument clean price = holding quantity * contract size * quoted unit price              In calculating accrued interest the same should hold.              NB: The real problem is that people store \"prices\" without complete units. Everything should really be \"x ccy for n units\". Where the n is implicit the above has to hold.
     */
-    'name': string;
+    'contractSize': number;
+    'flowConvention': FlowConventions;
     /**
-    * The set of identifiers that can be used to identify the instrument.
+    * The fixed rate for the term deposit. Specified as a decimal, e.g 0.03 is meant to be 3% interest
     */
-    'identifiers': { [key: string]: string; };
+    'rate': number;
     /**
-    * The requested instrument properties. These will be from the \'Instrument\' domain.
+    * The available values are: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashflowLeg, Unknown, TermDeposit
     */
-    'properties'?: Array<Property>;
-    'lookthroughPortfolio'?: ResourceId;
-    'instrumentDefinition'?: LusidInstrument;
-    /**
-    * The state of of the instrument at the asAt datetime of this version of the instrument definition. The available values are: Active, Inactive
-    */
-    'state': Instrument.StateEnum;
-    'links'?: Array<Link>;
+    'instrumentType': TermDeposit.InstrumentTypeEnum;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "href",
-            "baseName": "href",
-            "type": "string"
+            "name": "startDate",
+            "baseName": "startDate",
+            "type": "Date"
         },
         {
-            "name": "lusidInstrumentId",
-            "baseName": "lusidInstrumentId",
-            "type": "string"
+            "name": "maturityDate",
+            "baseName": "maturityDate",
+            "type": "Date"
         },
         {
-            "name": "version",
-            "baseName": "version",
-            "type": "Version"
+            "name": "contractSize",
+            "baseName": "contractSize",
+            "type": "number"
         },
         {
-            "name": "name",
-            "baseName": "name",
-            "type": "string"
+            "name": "flowConvention",
+            "baseName": "flowConvention",
+            "type": "FlowConventions"
         },
         {
-            "name": "identifiers",
-            "baseName": "identifiers",
-            "type": "{ [key: string]: string; }"
+            "name": "rate",
+            "baseName": "rate",
+            "type": "number"
         },
         {
-            "name": "properties",
-            "baseName": "properties",
-            "type": "Array<Property>"
-        },
-        {
-            "name": "lookthroughPortfolio",
-            "baseName": "lookthroughPortfolio",
-            "type": "ResourceId"
-        },
-        {
-            "name": "instrumentDefinition",
-            "baseName": "instrumentDefinition",
-            "type": "LusidInstrument"
-        },
-        {
-            "name": "state",
-            "baseName": "state",
-            "type": "Instrument.StateEnum"
-        },
-        {
-            "name": "links",
-            "baseName": "links",
-            "type": "Array<Link>"
+            "name": "instrumentType",
+            "baseName": "instrumentType",
+            "type": "TermDeposit.InstrumentTypeEnum"
         }    ];
 
     static getAttributeTypeMap() {
-        return Instrument.attributeTypeMap;
+        return super.getAttributeTypeMap().concat(TermDeposit.attributeTypeMap);
     }
 }
 
-export namespace Instrument {
-    export enum StateEnum {
-        Active = <any> 'Active',
-        Inactive = <any> 'Inactive'
+export namespace TermDeposit {
+    export enum InstrumentTypeEnum {
+        QuotedSecurity = <any> 'QuotedSecurity',
+        InterestRateSwap = <any> 'InterestRateSwap',
+        FxForward = <any> 'FxForward',
+        Future = <any> 'Future',
+        ExoticInstrument = <any> 'ExoticInstrument',
+        FxOption = <any> 'FxOption',
+        CreditDefaultSwap = <any> 'CreditDefaultSwap',
+        InterestRateSwaption = <any> 'InterestRateSwaption',
+        Bond = <any> 'Bond',
+        EquityOption = <any> 'EquityOption',
+        FixedLeg = <any> 'FixedLeg',
+        FloatingLeg = <any> 'FloatingLeg',
+        BespokeCashflowLeg = <any> 'BespokeCashflowLeg',
+        Unknown = <any> 'Unknown',
+        TermDeposit = <any> 'TermDeposit'
     }
 }

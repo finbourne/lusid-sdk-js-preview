@@ -261,6 +261,8 @@ export * from './structuredResultDataId';
 export * from './stubType';
 export * from './targetTaxLot';
 export * from './targetTaxLotRequest';
+export * from './termDeposit';
+export * from './termDepositAllOf';
 export * from './tolerance';
 export * from './toleranceEnum';
 export * from './transaction';
@@ -596,6 +598,8 @@ import { StructuredResultDataId } from './structuredResultDataId';
 import { StubType } from './stubType';
 import { TargetTaxLot } from './targetTaxLot';
 import { TargetTaxLotRequest } from './targetTaxLotRequest';
+import { TermDeposit } from './termDeposit';
+import { TermDepositAllOf } from './termDepositAllOf';
 import { Tolerance } from './tolerance';
 import { ToleranceEnum } from './toleranceEnum';
 import { Transaction } from './transaction';
@@ -764,6 +768,8 @@ let enumsMap: {[index: string]: any} = {
         "PropertyFilter.RightOperandTypeEnum": PropertyFilter.RightOperandTypeEnum,
         "QuoteSeriesId.InstrumentIdTypeEnum": QuoteSeriesId.InstrumentIdTypeEnum,
         "QuoteSeriesId.QuoteTypeEnum": QuoteSeriesId.QuoteTypeEnum,
+        "TermDeposit.InstrumentTypeEnum": TermDeposit.InstrumentTypeEnum,
+        "TermDepositAllOf.InstrumentTypeEnum": TermDepositAllOf.InstrumentTypeEnum,
         "Tolerance.TypeEnum": Tolerance.TypeEnum,
         "TransactionConfigurationMovementData.MovementTypesEnum": TransactionConfigurationMovementData.MovementTypesEnum,
         "TransactionConfigurationMovementDataRequest.MovementTypesEnum": TransactionConfigurationMovementDataRequest.MovementTypesEnum,
@@ -1042,6 +1048,8 @@ let typeMap: {[index: string]: any} = {
     "StubType": StubType,
     "TargetTaxLot": TargetTaxLot,
     "TargetTaxLotRequest": TargetTaxLotRequest,
+    "TermDeposit": TermDeposit,
+    "TermDepositAllOf": TermDepositAllOf,
     "Tolerance": Tolerance,
     "ToleranceEnum": ToleranceEnum,
     "Transaction": Transaction,
