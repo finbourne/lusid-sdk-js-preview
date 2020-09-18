@@ -130,6 +130,7 @@ export * from './interestRateSwaptionAllOf';
 export * from './isBusinessDayResponse';
 export * from './labelValueSet';
 export * from './legDefinition';
+export * from './legalEntity';
 export * from './link';
 export * from './listAggregationReconciliation';
 export * from './listAggregationResponse';
@@ -296,6 +297,7 @@ export * from './upsertIndexConventionRequest';
 export * from './upsertInstrumentPropertiesResponse';
 export * from './upsertInstrumentPropertyRequest';
 export * from './upsertInstrumentsResponse';
+export * from './upsertLegalEntityRequest';
 export * from './upsertOrderPropertiesRequest';
 export * from './upsertOrderPropertiesResponse';
 export * from './upsertPersonAccessMetadataRequest';
@@ -463,6 +465,7 @@ import { InterestRateSwaptionAllOf } from './interestRateSwaptionAllOf';
 import { IsBusinessDayResponse } from './isBusinessDayResponse';
 import { LabelValueSet } from './labelValueSet';
 import { LegDefinition } from './legDefinition';
+import { LegalEntity } from './legalEntity';
 import { Link } from './link';
 import { ListAggregationReconciliation } from './listAggregationReconciliation';
 import { ListAggregationResponse } from './listAggregationResponse';
@@ -629,6 +632,7 @@ import { UpsertIndexConventionRequest } from './upsertIndexConventionRequest';
 import { UpsertInstrumentPropertiesResponse } from './upsertInstrumentPropertiesResponse';
 import { UpsertInstrumentPropertyRequest } from './upsertInstrumentPropertyRequest';
 import { UpsertInstrumentsResponse } from './upsertInstrumentsResponse';
+import { UpsertLegalEntityRequest } from './upsertLegalEntityRequest';
 import { UpsertOrderPropertiesRequest } from './upsertOrderPropertiesRequest';
 import { UpsertOrderPropertiesResponse } from './upsertOrderPropertiesResponse';
 import { UpsertPersonAccessMetadataRequest } from './upsertPersonAccessMetadataRequest';
@@ -907,6 +911,7 @@ let typeMap: {[index: string]: any} = {
     "IsBusinessDayResponse": IsBusinessDayResponse,
     "LabelValueSet": LabelValueSet,
     "LegDefinition": LegDefinition,
+    "LegalEntity": LegalEntity,
     "Link": Link,
     "ListAggregationReconciliation": ListAggregationReconciliation,
     "ListAggregationResponse": ListAggregationResponse,
@@ -1073,6 +1078,7 @@ let typeMap: {[index: string]: any} = {
     "UpsertInstrumentPropertiesResponse": UpsertInstrumentPropertiesResponse,
     "UpsertInstrumentPropertyRequest": UpsertInstrumentPropertyRequest,
     "UpsertInstrumentsResponse": UpsertInstrumentsResponse,
+    "UpsertLegalEntityRequest": UpsertLegalEntityRequest,
     "UpsertOrderPropertiesRequest": UpsertOrderPropertiesRequest,
     "UpsertOrderPropertiesResponse": UpsertOrderPropertiesResponse,
     "UpsertPersonAccessMetadataRequest": UpsertPersonAccessMetadataRequest,
