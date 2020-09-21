@@ -176,6 +176,7 @@ export * from './portfolio';
 export * from './portfolioCashFlow';
 export * from './portfolioCashFlowsResponse';
 export * from './portfolioDetails';
+export * from './portfolioEntityId';
 export * from './portfolioGroup';
 export * from './portfolioGroupProperties';
 export * from './portfolioHolding';
@@ -321,6 +322,8 @@ export * from './upsertStructuredResultDataRequest';
 export * from './upsertTransactionPropertiesResponse';
 export * from './user';
 export * from './valuationReconciliationRequest';
+export * from './valuationRequest';
+export * from './valuationSchedule';
 export * from './valuationsReconciliationRequest';
 export * from './valueType';
 export * from './vendorLibrary';
@@ -513,6 +516,7 @@ import { Portfolio } from './portfolio';
 import { PortfolioCashFlow } from './portfolioCashFlow';
 import { PortfolioCashFlowsResponse } from './portfolioCashFlowsResponse';
 import { PortfolioDetails } from './portfolioDetails';
+import { PortfolioEntityId } from './portfolioEntityId';
 import { PortfolioGroup } from './portfolioGroup';
 import { PortfolioGroupProperties } from './portfolioGroupProperties';
 import { PortfolioHolding } from './portfolioHolding';
@@ -658,6 +662,8 @@ import { UpsertStructuredResultDataRequest } from './upsertStructuredResultDataR
 import { UpsertTransactionPropertiesResponse } from './upsertTransactionPropertiesResponse';
 import { User } from './user';
 import { ValuationReconciliationRequest } from './valuationReconciliationRequest';
+import { ValuationRequest } from './valuationRequest';
+import { ValuationSchedule } from './valuationSchedule';
 import { ValuationsReconciliationRequest } from './valuationsReconciliationRequest';
 import { ValueType } from './valueType';
 import { VendorLibrary } from './vendorLibrary';
@@ -963,6 +969,7 @@ let typeMap: {[index: string]: any} = {
     "PortfolioCashFlow": PortfolioCashFlow,
     "PortfolioCashFlowsResponse": PortfolioCashFlowsResponse,
     "PortfolioDetails": PortfolioDetails,
+    "PortfolioEntityId": PortfolioEntityId,
     "PortfolioGroup": PortfolioGroup,
     "PortfolioGroupProperties": PortfolioGroupProperties,
     "PortfolioHolding": PortfolioHolding,
@@ -1108,6 +1115,8 @@ let typeMap: {[index: string]: any} = {
     "UpsertTransactionPropertiesResponse": UpsertTransactionPropertiesResponse,
     "User": User,
     "ValuationReconciliationRequest": ValuationReconciliationRequest,
+    "ValuationRequest": ValuationRequest,
+    "ValuationSchedule": ValuationSchedule,
     "ValuationsReconciliationRequest": ValuationsReconciliationRequest,
     "ValueType": ValueType,
     "VendorLibrary": VendorLibrary,
