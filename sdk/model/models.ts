@@ -112,6 +112,7 @@ export * from './identifierPartSchema';
 export * from './indexConvention';
 export * from './inlineAggregationRequest';
 export * from './inlineValuationReconciliationRequest';
+export * from './inlineValuationRequest';
 export * from './inlineValuationsReconciliationRequest';
 export * from './instrument';
 export * from './instrumentDefinition';
@@ -452,6 +453,7 @@ import { IdentifierPartSchema } from './identifierPartSchema';
 import { IndexConvention } from './indexConvention';
 import { InlineAggregationRequest } from './inlineAggregationRequest';
 import { InlineValuationReconciliationRequest } from './inlineValuationReconciliationRequest';
+import { InlineValuationRequest } from './inlineValuationRequest';
 import { InlineValuationsReconciliationRequest } from './inlineValuationsReconciliationRequest';
 import { Instrument } from './instrument';
 import { InstrumentDefinition } from './instrumentDefinition';
@@ -905,6 +907,7 @@ let typeMap: {[index: string]: any} = {
     "IndexConvention": IndexConvention,
     "InlineAggregationRequest": InlineAggregationRequest,
     "InlineValuationReconciliationRequest": InlineValuationReconciliationRequest,
+    "InlineValuationRequest": InlineValuationRequest,
     "InlineValuationsReconciliationRequest": InlineValuationsReconciliationRequest,
     "Instrument": Instrument,
     "InstrumentDefinition": InstrumentDefinition,
