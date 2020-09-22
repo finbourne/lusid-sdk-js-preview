@@ -10,42 +10,99 @@
  * Do not edit the class manually.
  */
 
-import { PerpetualProperty } from './perpetualProperty';
-import { TransactionConfigurationMovementData } from './transactionConfigurationMovementData';
-import { TransactionConfigurationTypeAlias } from './transactionConfigurationTypeAlias';
+import { AggregateSpec } from './aggregateSpec';
+import { OrderBySpec } from './orderBySpec';
+import { PropertyFilter } from './propertyFilter';
+import { ResourceId } from './resourceId';
+import { ValuationSchedule } from './valuationSchedule';
+import { WeightedInstrument } from './weightedInstrument';
 
-export class TransactionConfigurationData {
+/**
+* Specification object for the parameters of an inline valuation
+*/
+export class InlineValuationRequest {
+    'recipeId'?: ResourceId;
     /**
-    * List of transaction codes that map to this specific transaction model
+    * The asAt date to use
     */
-    'aliases': Array<TransactionConfigurationTypeAlias>;
+    'asAt'?: Date;
     /**
-    * Movement data for the transaction code
+    * The set of specifications for items to calculate or retrieve during the aggregation and present in the results.  This is logically equivalent to the set of operations in a Sql select statement  select [operation1(field1), operation2(field2), ... ] from results
     */
-    'movements': Array<TransactionConfigurationMovementData>;
-    'properties'?: { [key: string]: PerpetualProperty; };
+    'metrics': Array<AggregateSpec>;
+    /**
+    * The set of items by which to perform grouping. This primarily matters when one or more of the metric operators is a mapping  that reduces set size, e.g. sum or proportion. The group-by statement determines the set of keys by which to break the results out.
+    */
+    'groupBy'?: Array<string>;
+    /**
+    * A set of filters to use to reduce the data found in a request. Equivalent to the \'where ...\' part of a Sql select statement.  For example, filter a set of values within a given range or matching a particular value.
+    */
+    'filters'?: Array<PropertyFilter>;
+    /**
+    * A (possibly empty/null) set of specifications for how to order the results.
+    */
+    'sort'?: Array<OrderBySpec>;
+    /**
+    * Three letter ISO currency string indicating what currency to report in for ReportCurrency denominated queries.  If not present then the currency of the relevant portfolio will be used in its place where relevant.
+    */
+    'reportCurrency'?: string;
+    'valuationSchedule'?: ValuationSchedule;
+    /**
+    * The set of instruments, weighted by the quantities held that are required.  It is identified by an identifier tag that can be used to identify it externally.  For a single, unique trade or transaction this can be thought of as equivalent to the transaction identifier, or  a composite of the sub-holding keys for a regular sub-holding. When there are multiple transactions sharing the same underlying instrument  such as purchase of shares on multiple dates where tax implications are different this would not be the case.
+    */
+    'instruments': Array<WeightedInstrument>;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "aliases",
-            "baseName": "aliases",
-            "type": "Array<TransactionConfigurationTypeAlias>"
+            "name": "recipeId",
+            "baseName": "recipeId",
+            "type": "ResourceId"
         },
         {
-            "name": "movements",
-            "baseName": "movements",
-            "type": "Array<TransactionConfigurationMovementData>"
+            "name": "asAt",
+            "baseName": "asAt",
+            "type": "Date"
         },
         {
-            "name": "properties",
-            "baseName": "properties",
-            "type": "{ [key: string]: PerpetualProperty; }"
+            "name": "metrics",
+            "baseName": "metrics",
+            "type": "Array<AggregateSpec>"
+        },
+        {
+            "name": "groupBy",
+            "baseName": "groupBy",
+            "type": "Array<string>"
+        },
+        {
+            "name": "filters",
+            "baseName": "filters",
+            "type": "Array<PropertyFilter>"
+        },
+        {
+            "name": "sort",
+            "baseName": "sort",
+            "type": "Array<OrderBySpec>"
+        },
+        {
+            "name": "reportCurrency",
+            "baseName": "reportCurrency",
+            "type": "string"
+        },
+        {
+            "name": "valuationSchedule",
+            "baseName": "valuationSchedule",
+            "type": "ValuationSchedule"
+        },
+        {
+            "name": "instruments",
+            "baseName": "instruments",
+            "type": "Array<WeightedInstrument>"
         }    ];
 
     static getAttributeTypeMap() {
-        return TransactionConfigurationData.attributeTypeMap;
+        return InlineValuationRequest.attributeTypeMap;
     }
 }
 
