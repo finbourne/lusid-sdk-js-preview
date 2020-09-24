@@ -10,65 +10,26 @@
  * Do not edit the class manually.
  */
 
-import { AggregationMeasureFailureDetail } from './aggregationMeasureFailureDetail';
-import { AggregationResponseNode } from './aggregationResponseNode';
 import { Link } from './link';
-import { MarketDataManifest } from './marketDataManifest';
-import { ResultDataSchema } from './resultDataSchema';
+import { PortfolioCashFlow } from './portfolioCashFlow';
 
-export class NestedAggregationResponse {
-    'aggregationEffectiveAt'?: Date;
-    'aggregationAsAt'?: Date;
-    'href'?: string;
-    'data'?: AggregationResponseNode;
-    'aggregationCurrency'?: string;
-    'dataSchema'?: ResultDataSchema;
-    'aggregationFailures'?: Array<AggregationMeasureFailureDetail>;
-    'manifests'?: Array<MarketDataManifest>;
+/**
+* The response object which contains the cashflows for a given portfolio.
+*/
+export class PortfolioCashFlowsResponse {
+    /**
+    * The cash flow details for the given portfolio.
+    */
+    'portfolioCashFlows': Array<PortfolioCashFlow>;
     'links'?: Array<Link>;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "aggregationEffectiveAt",
-            "baseName": "aggregationEffectiveAt",
-            "type": "Date"
-        },
-        {
-            "name": "aggregationAsAt",
-            "baseName": "aggregationAsAt",
-            "type": "Date"
-        },
-        {
-            "name": "href",
-            "baseName": "href",
-            "type": "string"
-        },
-        {
-            "name": "data",
-            "baseName": "data",
-            "type": "AggregationResponseNode"
-        },
-        {
-            "name": "aggregationCurrency",
-            "baseName": "aggregationCurrency",
-            "type": "string"
-        },
-        {
-            "name": "dataSchema",
-            "baseName": "dataSchema",
-            "type": "ResultDataSchema"
-        },
-        {
-            "name": "aggregationFailures",
-            "baseName": "aggregationFailures",
-            "type": "Array<AggregationMeasureFailureDetail>"
-        },
-        {
-            "name": "manifests",
-            "baseName": "manifests",
-            "type": "Array<MarketDataManifest>"
+            "name": "portfolioCashFlows",
+            "baseName": "portfolioCashFlows",
+            "type": "Array<PortfolioCashFlow>"
         },
         {
             "name": "links",
@@ -77,7 +38,7 @@ export class NestedAggregationResponse {
         }    ];
 
     static getAttributeTypeMap() {
-        return NestedAggregationResponse.attributeTypeMap;
+        return PortfolioCashFlowsResponse.attributeTypeMap;
     }
 }
 
