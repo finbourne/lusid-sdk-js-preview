@@ -175,7 +175,6 @@ export * from './perpetualProperty';
 export * from './person';
 export * from './portfolio';
 export * from './portfolioCashFlow';
-export * from './portfolioCashFlowsResponse';
 export * from './portfolioDetails';
 export * from './portfolioEntityId';
 export * from './portfolioGroup';
@@ -236,6 +235,7 @@ export * from './resourceListOfIUnitDefinitionDto';
 export * from './resourceListOfInstrumentIdTypeDescriptor';
 export * from './resourceListOfOrder';
 export * from './resourceListOfPortfolio';
+export * from './resourceListOfPortfolioCashFlow';
 export * from './resourceListOfPortfolioGroup';
 export * from './resourceListOfPortfolioSearchResult';
 export * from './resourceListOfProcessedCommand';
@@ -516,7 +516,6 @@ import { PerpetualProperty } from './perpetualProperty';
 import { Person } from './person';
 import { Portfolio } from './portfolio';
 import { PortfolioCashFlow } from './portfolioCashFlow';
-import { PortfolioCashFlowsResponse } from './portfolioCashFlowsResponse';
 import { PortfolioDetails } from './portfolioDetails';
 import { PortfolioEntityId } from './portfolioEntityId';
 import { PortfolioGroup } from './portfolioGroup';
@@ -577,6 +576,7 @@ import { ResourceListOfIUnitDefinitionDto } from './resourceListOfIUnitDefinitio
 import { ResourceListOfInstrumentIdTypeDescriptor } from './resourceListOfInstrumentIdTypeDescriptor';
 import { ResourceListOfOrder } from './resourceListOfOrder';
 import { ResourceListOfPortfolio } from './resourceListOfPortfolio';
+import { ResourceListOfPortfolioCashFlow } from './resourceListOfPortfolioCashFlow';
 import { ResourceListOfPortfolioGroup } from './resourceListOfPortfolioGroup';
 import { ResourceListOfPortfolioSearchResult } from './resourceListOfPortfolioSearchResult';
 import { ResourceListOfProcessedCommand } from './resourceListOfProcessedCommand';
@@ -970,7 +970,6 @@ let typeMap: {[index: string]: any} = {
     "Person": Person,
     "Portfolio": Portfolio,
     "PortfolioCashFlow": PortfolioCashFlow,
-    "PortfolioCashFlowsResponse": PortfolioCashFlowsResponse,
     "PortfolioDetails": PortfolioDetails,
     "PortfolioEntityId": PortfolioEntityId,
     "PortfolioGroup": PortfolioGroup,
@@ -1031,6 +1030,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfInstrumentIdTypeDescriptor": ResourceListOfInstrumentIdTypeDescriptor,
     "ResourceListOfOrder": ResourceListOfOrder,
     "ResourceListOfPortfolio": ResourceListOfPortfolio,
+    "ResourceListOfPortfolioCashFlow": ResourceListOfPortfolioCashFlow,
     "ResourceListOfPortfolioGroup": ResourceListOfPortfolioGroup,
     "ResourceListOfPortfolioSearchResult": ResourceListOfPortfolioSearchResult,
     "ResourceListOfProcessedCommand": ResourceListOfProcessedCommand,
