@@ -31,6 +31,7 @@ export * from './cdsRestructuringType';
 export * from './cdsSeniority';
 export * from './change';
 export * from './completePortfolio';
+export * from './completeRelation';
 export * from './configurationRecipe';
 export * from './configurationRecipeSnippet';
 export * from './constituentsAdjustmentHeader';
@@ -243,6 +244,7 @@ export * from './resourceListOfPropertyDefinition';
 export * from './resourceListOfQuote';
 export * from './resourceListOfQuoteAccessMetadataRule';
 export * from './resourceListOfReconciliationBreak';
+export * from './resourceListOfRelation';
 export * from './resourceListOfScopeDefinition';
 export * from './resourceListOfString';
 export * from './resourceListOfValueType';
@@ -372,6 +374,7 @@ import { CdsRestructuringType } from './cdsRestructuringType';
 import { CdsSeniority } from './cdsSeniority';
 import { Change } from './change';
 import { CompletePortfolio } from './completePortfolio';
+import { CompleteRelation } from './completeRelation';
 import { ConfigurationRecipe } from './configurationRecipe';
 import { ConfigurationRecipeSnippet } from './configurationRecipeSnippet';
 import { ConstituentsAdjustmentHeader } from './constituentsAdjustmentHeader';
@@ -584,6 +587,7 @@ import { ResourceListOfPropertyDefinition } from './resourceListOfPropertyDefini
 import { ResourceListOfQuote } from './resourceListOfQuote';
 import { ResourceListOfQuoteAccessMetadataRule } from './resourceListOfQuoteAccessMetadataRule';
 import { ResourceListOfReconciliationBreak } from './resourceListOfReconciliationBreak';
+import { ResourceListOfRelation } from './resourceListOfRelation';
 import { ResourceListOfScopeDefinition } from './resourceListOfScopeDefinition';
 import { ResourceListOfString } from './resourceListOfString';
 import { ResourceListOfValueType } from './resourceListOfValueType';
@@ -826,6 +830,7 @@ let typeMap: {[index: string]: any} = {
     "CdsSeniority": CdsSeniority,
     "Change": Change,
     "CompletePortfolio": CompletePortfolio,
+    "CompleteRelation": CompleteRelation,
     "ConfigurationRecipe": ConfigurationRecipe,
     "ConfigurationRecipeSnippet": ConfigurationRecipeSnippet,
     "ConstituentsAdjustmentHeader": ConstituentsAdjustmentHeader,
@@ -1038,6 +1043,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfQuote": ResourceListOfQuote,
     "ResourceListOfQuoteAccessMetadataRule": ResourceListOfQuoteAccessMetadataRule,
     "ResourceListOfReconciliationBreak": ResourceListOfReconciliationBreak,
+    "ResourceListOfRelation": ResourceListOfRelation,
     "ResourceListOfScopeDefinition": ResourceListOfScopeDefinition,
     "ResourceListOfString": ResourceListOfString,
     "ResourceListOfValueType": ResourceListOfValueType,
