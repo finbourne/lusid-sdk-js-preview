@@ -142,9 +142,6 @@ export * from './lusidValidationProblemDetails';
 export * from './marketContext';
 export * from './marketContextSuppliers';
 export * from './marketDataKeyRule';
-export * from './marketDataManifest';
-export * from './marketDataManifestQuote';
-export * from './marketDataManifestStructuredData';
 export * from './marketIdentifier';
 export * from './marketManifestLevelOfDetail';
 export * from './marketOptions';
@@ -485,9 +482,6 @@ import { LusidValidationProblemDetails } from './lusidValidationProblemDetails';
 import { MarketContext } from './marketContext';
 import { MarketContextSuppliers } from './marketContextSuppliers';
 import { MarketDataKeyRule } from './marketDataKeyRule';
-import { MarketDataManifest } from './marketDataManifest';
-import { MarketDataManifestQuote } from './marketDataManifestQuote';
-import { MarketDataManifestStructuredData } from './marketDataManifestStructuredData';
 import { MarketIdentifier } from './marketIdentifier';
 import { MarketManifestLevelOfDetail } from './marketManifestLevelOfDetail';
 import { MarketOptions } from './marketOptions';
@@ -941,9 +935,6 @@ let typeMap: {[index: string]: any} = {
     "MarketContext": MarketContext,
     "MarketContextSuppliers": MarketContextSuppliers,
     "MarketDataKeyRule": MarketDataKeyRule,
-    "MarketDataManifest": MarketDataManifest,
-    "MarketDataManifestQuote": MarketDataManifestQuote,
-    "MarketDataManifestStructuredData": MarketDataManifestStructuredData,
     "MarketIdentifier": MarketIdentifier,
     "MarketManifestLevelOfDetail": MarketManifestLevelOfDetail,
     "MarketOptions": MarketOptions,
