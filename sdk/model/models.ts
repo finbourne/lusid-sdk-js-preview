@@ -143,6 +143,7 @@ export * from './marketContext';
 export * from './marketContextSuppliers';
 export * from './marketDataKeyRule';
 export * from './marketIdentifier';
+export * from './marketManifestLevelOfDetail';
 export * from './marketOptions';
 export * from './metricValue';
 export * from './modelSelection';
@@ -482,6 +483,7 @@ import { MarketContext } from './marketContext';
 import { MarketContextSuppliers } from './marketContextSuppliers';
 import { MarketDataKeyRule } from './marketDataKeyRule';
 import { MarketIdentifier } from './marketIdentifier';
+import { MarketManifestLevelOfDetail } from './marketManifestLevelOfDetail';
 import { MarketOptions } from './marketOptions';
 import { MetricValue } from './metricValue';
 import { ModelSelection } from './modelSelection';
@@ -755,6 +757,7 @@ let enumsMap: {[index: string]: any} = {
         "LegDefinition.NotionalExchangeTypeEnum": LegDefinition.NotionalExchangeTypeEnum,
         "LusidInstrument.InstrumentTypeEnum": LusidInstrument.InstrumentTypeEnum,
         "MarketDataKeyRule.QuoteTypeEnum": MarketDataKeyRule.QuoteTypeEnum,
+        "MarketOptions.ManifestLevelOfDetailEnum": MarketOptions.ManifestLevelOfDetailEnum,
         "ModelSelection.LibraryEnum": ModelSelection.LibraryEnum,
         "ModelSelection.ModelEnum": ModelSelection.ModelEnum,
         "OrderBySpec.SortOrderEnum": OrderBySpec.SortOrderEnum,
@@ -933,6 +936,7 @@ let typeMap: {[index: string]: any} = {
     "MarketContextSuppliers": MarketContextSuppliers,
     "MarketDataKeyRule": MarketDataKeyRule,
     "MarketIdentifier": MarketIdentifier,
+    "MarketManifestLevelOfDetail": MarketManifestLevelOfDetail,
     "MarketOptions": MarketOptions,
     "MetricValue": MetricValue,
     "ModelSelection": ModelSelection,

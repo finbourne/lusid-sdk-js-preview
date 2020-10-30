@@ -10,97 +10,16 @@
  * Do not edit the class manually.
  */
 
-import { Link } from './link';
-import { PerpetualProperty } from './perpetualProperty';
-import { ResourceId } from './resourceId';
-import { Version } from './version';
 
-/**
-* An Order for a certain quantity of a specific instrument
-*/
-export class Order {
-    /**
-    * Client-defined properties associated with this order.
-    */
-    'properties'?: { [key: string]: PerpetualProperty; };
-    'version'?: Version;
-    /**
-    * The instrument ordered.
-    */
-    'instrumentIdentifiers': { [key: string]: string; };
-    /**
-    * The quantity of given instrument ordered.
-    */
-    'quantity': number;
-    /**
-    * The client\'s representation of the order\'s side (buy, sell, short, etc)
-    */
-    'side': string;
-    'orderBookId': ResourceId;
-    'portfolioId': ResourceId;
-    'id': ResourceId;
-    /**
-    * The LUSID instrument id for the instrument ordered.
-    */
-    'lusidInstrumentId': string;
-    'links'?: Array<Link>;
+export class MarketManifestLevelOfDetail {
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-        {
-            "name": "properties",
-            "baseName": "properties",
-            "type": "{ [key: string]: PerpetualProperty; }"
-        },
-        {
-            "name": "version",
-            "baseName": "version",
-            "type": "Version"
-        },
-        {
-            "name": "instrumentIdentifiers",
-            "baseName": "instrumentIdentifiers",
-            "type": "{ [key: string]: string; }"
-        },
-        {
-            "name": "quantity",
-            "baseName": "quantity",
-            "type": "number"
-        },
-        {
-            "name": "side",
-            "baseName": "side",
-            "type": "string"
-        },
-        {
-            "name": "orderBookId",
-            "baseName": "orderBookId",
-            "type": "ResourceId"
-        },
-        {
-            "name": "portfolioId",
-            "baseName": "portfolioId",
-            "type": "ResourceId"
-        },
-        {
-            "name": "id",
-            "baseName": "id",
-            "type": "ResourceId"
-        },
-        {
-            "name": "lusidInstrumentId",
-            "baseName": "lusidInstrumentId",
-            "type": "string"
-        },
-        {
-            "name": "links",
-            "baseName": "links",
-            "type": "Array<Link>"
-        }    ];
+    ];
 
     static getAttributeTypeMap() {
-        return Order.attributeTypeMap;
+        return MarketManifestLevelOfDetail.attributeTypeMap;
     }
 }
 
