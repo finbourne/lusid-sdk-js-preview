@@ -21,7 +21,12 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
+      
+      - name: Test of env variables
+        env:
+          TEST_TOKEN: ${{ secrets.FINBOURNE_TEST }}
+        run: echo "Setting env variables"
+        
       # Runs a single command using the runners shell
       - name: Build docker image using the Dockerfile
         run: |
