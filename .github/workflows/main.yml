@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@v2
       
       - name: Set env variables for MASTER
-        if: ${{ github.head_ref == 'master' }}
+        if: ${{ github.PULL_REQUEST_BRANCH == 'master' }}
         run: | 
           echo "Setting env variables for MASTER..."
         env: 
