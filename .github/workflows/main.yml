@@ -29,7 +29,7 @@ jobs:
           echo "${{  github.ref	}}"
         
       - name: Set env variables for MASTER
-        if: ${{ github.PULL_REQUEST_BRANCH == 'master' }}
+        if: ${{ github.base_ref == 'master' }}
         run: | 
           echo "Setting env variables for MASTER..."
         env: 
