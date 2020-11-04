@@ -23,10 +23,9 @@ jobs:
       - uses: actions/checkout@v2
       
       - name: Set env variables for MASTER
-        #if: ${{ github.head_ref == 'refs/heads/master' }}
+        if: ${{ github.head_ref == 'master' }}
         run: | 
-          echo ${{ github.head_ref }}
-          echo "Setting env variables for master"
+          echo "Setting env variables for MASTER..."
         env: 
           FBN_TOKEN_URL: ${{ secrets.MASTER_FBN_TOKEN_URL }}
           FBN_USERNAME: ${{ secrets.MASTER_FBN_USERNAME }}
@@ -34,16 +33,6 @@ jobs:
           FBN_CLIENT_ID: ${{ secrets.MASTER_FBN_CLIENT_ID }}
           FBN_CLIENT_SECRET: ${{ secrets.MASTER_FBN_CLIENT_SECRET }}
           FBN_LUSID_API_URL: ${{ secrets.MASTER_FBN_LUSID_API_URL }}
-      
-      - name: Test of env variables
-        run: echo "Setting env variables"
-        env:
-          FBN_TOKEN_URL: ${{ secrets.FBN_TOKEN_URL }}
-          FBN_USERNAME: ${{ secrets.FBN_USERNAME }}
-          FBN_PASSWORD: ${{ secrets.FBN_PASSWORD }}
-          FBN_CLIENT_ID: ${{ secrets.FBN_CLIENT_ID }}
-          FBN_CLIENT_SECRET: ${{ secrets.FBN_CLIENT_SECRET }}
-          FBN_LUSID_API_URL: ${{ secrets.FBN_LUSID_API_URL }}  
         
       # Runs a single command using the runners shell
       - name: Build docker image using the Dockerfile
