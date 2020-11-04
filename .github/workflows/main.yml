@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: SdkJsPreviewTests
+name: lusid-sdk-js-preview-tests
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -21,6 +21,19 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      
+      - name: Set env variables for MASTER
+        #if: ${{ github.head_ref == 'refs/heads/master' }}
+        run: | 
+          echo ${{ github.head_ref }}
+          echo "Setting env variables for master"
+        env: 
+          FBN_TOKEN_URL: ${{ secrets.MASTER_FBN_TOKEN_URL }}
+          FBN_USERNAME: ${{ secrets.MASTER_FBN_USERNAME }}
+          FBN_PASSWORD: ${{ secrets.MASTER_FBN_PASSWORD }}
+          FBN_CLIENT_ID: ${{ secrets.MASTER_FBN_CLIENT_ID }}
+          FBN_CLIENT_SECRET: ${{ secrets.MASTER_FBN_CLIENT_SECRET }}
+          FBN_LUSID_API_URL: ${{ secrets.MASTER_FBN_LUSID_API_URL }}
       
       - name: Test of env variables
         run: echo "Setting env variables"
