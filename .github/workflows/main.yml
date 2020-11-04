@@ -42,4 +42,4 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Run the tests
-        run: docker run --rm js-tests
+        run: docker run --rm js-tests -v /usr/src/node_modules -v $(pwd):/usr/src finbourne/lusid-sdk-nodejs-test
