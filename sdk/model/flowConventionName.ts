@@ -10,54 +10,45 @@
  * Do not edit the class manually.
  */
 
-import { Property } from './property';
-import { ResourceId } from './resourceId';
-import { WeekendMask } from './weekendMask';
 
-export class Calendar {
-    'href'?: string;
-    'id': ResourceId;
-    'type': string;
-    'weekendMask': WeekendMask;
-    'sourceProvider': string;
-    'properties': Array<Property>;
+/**
+* Representation of an abstract definition of a flow convention set consisting of currency, tenor and an index name (arbitrary string but likely something like \"IBOR\")
+*/
+export class FlowConventionName {
+    /**
+    * Currency of the flow convention name.
+    */
+    'currency': string;
+    /**
+    * The index, if present, that is required. e.g. \"IBOR\", \"OIS\" or \"SONIA\".
+    */
+    'indexName': string;
+    /**
+    * Tenor for the convention name
+    */
+    'tenor': string;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "href",
-            "baseName": "href",
+            "name": "currency",
+            "baseName": "currency",
             "type": "string"
         },
         {
-            "name": "id",
-            "baseName": "id",
-            "type": "ResourceId"
-        },
-        {
-            "name": "type",
-            "baseName": "type",
+            "name": "indexName",
+            "baseName": "indexName",
             "type": "string"
         },
         {
-            "name": "weekendMask",
-            "baseName": "weekendMask",
-            "type": "WeekendMask"
-        },
-        {
-            "name": "sourceProvider",
-            "baseName": "sourceProvider",
+            "name": "tenor",
+            "baseName": "tenor",
             "type": "string"
-        },
-        {
-            "name": "properties",
-            "baseName": "properties",
-            "type": "Array<Property>"
         }    ];
 
     static getAttributeTypeMap() {
-        return Calendar.attributeTypeMap;
+        return FlowConventionName.attributeTypeMap;
     }
 }
 

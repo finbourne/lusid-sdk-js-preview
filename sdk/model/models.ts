@@ -22,7 +22,6 @@ export * from './annulSingleStructuredDataResponse';
 export * from './annulStructuredDataResponse';
 export * from './bond';
 export * from './bondAllOf';
-export * from './businessDayConvention';
 export * from './calendar';
 export * from './calendarDate';
 export * from './cdsFlowConventions';
@@ -87,6 +86,7 @@ export * from './fixedLegAllOf';
 export * from './fixedLegAllOfOverrides';
 export * from './floatingLeg';
 export * from './floatingLegAllOf';
+export * from './flowConventionName';
 export * from './flowConventions';
 export * from './future';
 export * from './futureAllOf';
@@ -148,7 +148,6 @@ export * from './metricValue';
 export * from './modelSelection';
 export * from './movementType';
 export * from './nestedAggregationResponse';
-export * from './notionalExchangeType';
 export * from './operandType';
 export * from './operator';
 export * from './optionType';
@@ -258,7 +257,6 @@ export * from './structuredMarketData';
 export * from './structuredMarketDataId';
 export * from './structuredResultData';
 export * from './structuredResultDataId';
-export * from './stubType';
 export * from './targetTaxLot';
 export * from './targetTaxLotRequest';
 export * from './termDeposit';
@@ -361,7 +359,6 @@ import { AnnulSingleStructuredDataResponse } from './annulSingleStructuredDataRe
 import { AnnulStructuredDataResponse } from './annulStructuredDataResponse';
 import { Bond } from './bond';
 import { BondAllOf } from './bondAllOf';
-import { BusinessDayConvention } from './businessDayConvention';
 import { Calendar } from './calendar';
 import { CalendarDate } from './calendarDate';
 import { CdsFlowConventions } from './cdsFlowConventions';
@@ -426,6 +423,7 @@ import { FixedLegAllOf } from './fixedLegAllOf';
 import { FixedLegAllOfOverrides } from './fixedLegAllOfOverrides';
 import { FloatingLeg } from './floatingLeg';
 import { FloatingLegAllOf } from './floatingLegAllOf';
+import { FlowConventionName } from './flowConventionName';
 import { FlowConventions } from './flowConventions';
 import { Future } from './future';
 import { FutureAllOf } from './futureAllOf';
@@ -487,7 +485,6 @@ import { MetricValue } from './metricValue';
 import { ModelSelection } from './modelSelection';
 import { MovementType } from './movementType';
 import { NestedAggregationResponse } from './nestedAggregationResponse';
-import { NotionalExchangeType } from './notionalExchangeType';
 import { OperandType } from './operandType';
 import { Operator } from './operator';
 import { OptionType } from './optionType';
@@ -597,7 +594,6 @@ import { StructuredMarketData } from './structuredMarketData';
 import { StructuredMarketDataId } from './structuredMarketDataId';
 import { StructuredResultData } from './structuredResultData';
 import { StructuredResultDataId } from './structuredResultDataId';
-import { StubType } from './stubType';
 import { TargetTaxLot } from './targetTaxLot';
 import { TargetTaxLotRequest } from './targetTaxLotRequest';
 import { TermDeposit } from './termDeposit';
@@ -691,8 +687,6 @@ let enumsMap: {[index: string]: any} = {
         "AggregationQuery.TypeEnum": AggregationQuery.TypeEnum,
         "Bond.InstrumentTypeEnum": Bond.InstrumentTypeEnum,
         "BondAllOf.InstrumentTypeEnum": BondAllOf.InstrumentTypeEnum,
-        "CdsFlowConventions.DayCountConventionEnum": CdsFlowConventions.DayCountConventionEnum,
-        "CdsFlowConventions.RollConventionEnum": CdsFlowConventions.RollConventionEnum,
         "CdsProtectionDetailSpecification.SeniorityEnum": CdsProtectionDetailSpecification.SeniorityEnum,
         "CdsProtectionDetailSpecification.RestructuringTypeEnum": CdsProtectionDetailSpecification.RestructuringTypeEnum,
         "CompletePortfolio.TypeEnum": CompletePortfolio.TypeEnum,
@@ -724,8 +718,6 @@ let enumsMap: {[index: string]: any} = {
         "FixedLegAllOf.InstrumentTypeEnum": FixedLegAllOf.InstrumentTypeEnum,
         "FloatingLeg.InstrumentTypeEnum": FloatingLeg.InstrumentTypeEnum,
         "FloatingLegAllOf.InstrumentTypeEnum": FloatingLegAllOf.InstrumentTypeEnum,
-        "FlowConventions.DayCountConventionEnum": FlowConventions.DayCountConventionEnum,
-        "FlowConventions.RollConventionEnum": FlowConventions.RollConventionEnum,
         "Future.InstrumentTypeEnum": Future.InstrumentTypeEnum,
         "FutureAllOf.InstrumentTypeEnum": FutureAllOf.InstrumentTypeEnum,
         "FuturesContractDetails.ConventionEnum": FuturesContractDetails.ConventionEnum,
@@ -750,9 +742,6 @@ let enumsMap: {[index: string]: any} = {
         "InterestRateSwaptionAllOf.PayOrReceiveFixedEnum": InterestRateSwaptionAllOf.PayOrReceiveFixedEnum,
         "InterestRateSwaptionAllOf.DeliveryMethodEnum": InterestRateSwaptionAllOf.DeliveryMethodEnum,
         "InterestRateSwaptionAllOf.InstrumentTypeEnum": InterestRateSwaptionAllOf.InstrumentTypeEnum,
-        "LegDefinition.StubTypeEnum": LegDefinition.StubTypeEnum,
-        "LegDefinition.PayReceiveEnum": LegDefinition.PayReceiveEnum,
-        "LegDefinition.NotionalExchangeTypeEnum": LegDefinition.NotionalExchangeTypeEnum,
         "LusidInstrument.InstrumentTypeEnum": LusidInstrument.InstrumentTypeEnum,
         "MarketDataKeyRule.QuoteTypeEnum": MarketDataKeyRule.QuoteTypeEnum,
         "ModelSelection.LibraryEnum": ModelSelection.LibraryEnum,
@@ -812,7 +801,6 @@ let typeMap: {[index: string]: any} = {
     "AnnulStructuredDataResponse": AnnulStructuredDataResponse,
     "Bond": Bond,
     "BondAllOf": BondAllOf,
-    "BusinessDayConvention": BusinessDayConvention,
     "Calendar": Calendar,
     "CalendarDate": CalendarDate,
     "CdsFlowConventions": CdsFlowConventions,
@@ -877,6 +865,7 @@ let typeMap: {[index: string]: any} = {
     "FixedLegAllOfOverrides": FixedLegAllOfOverrides,
     "FloatingLeg": FloatingLeg,
     "FloatingLegAllOf": FloatingLegAllOf,
+    "FlowConventionName": FlowConventionName,
     "FlowConventions": FlowConventions,
     "Future": Future,
     "FutureAllOf": FutureAllOf,
@@ -938,7 +927,6 @@ let typeMap: {[index: string]: any} = {
     "ModelSelection": ModelSelection,
     "MovementType": MovementType,
     "NestedAggregationResponse": NestedAggregationResponse,
-    "NotionalExchangeType": NotionalExchangeType,
     "OperandType": OperandType,
     "Operator": Operator,
     "OptionType": OptionType,
@@ -1048,7 +1036,6 @@ let typeMap: {[index: string]: any} = {
     "StructuredMarketDataId": StructuredMarketDataId,
     "StructuredResultData": StructuredResultData,
     "StructuredResultDataId": StructuredResultDataId,
-    "StubType": StubType,
     "TargetTaxLot": TargetTaxLot,
     "TargetTaxLotRequest": TargetTaxLotRequest,
     "TermDeposit": TermDeposit,
