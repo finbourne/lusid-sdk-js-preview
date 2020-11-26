@@ -16,7 +16,7 @@ services:
 
   lusid-sdk-js-preview-test:
     container_name: lusid-sdk-js-preview-test
-    image: finbourne/lusid-sdk-nodejs-test
+    image: finbourne/lusid-sdk-test-javascript:latest
     environment:
       - FBN_CLIENT_ID
       - FBN_CLIENT_SECRET
