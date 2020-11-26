@@ -14,7 +14,7 @@ services:
       - ANY
     tty: false
 
-  lusid-sdk-python-preview-test:
+  lusid-sdk-js-preview-test:
     build: .
     container_name: lusid-sdk-js-preview-test
     image: finbourne/lusid-sdk-js-preview-test
