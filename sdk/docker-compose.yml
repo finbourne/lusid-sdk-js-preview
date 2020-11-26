@@ -15,9 +15,8 @@ services:
     tty: false
 
   lusid-sdk-js-preview-test:
-    build: .
     container_name: lusid-sdk-js-preview-test
-    image: finbourne/lusid-sdk-js-preview-test
+    image: finbourne/lusid-sdk-nodejs-test
     environment:
       - FBN_CLIENT_ID
       - FBN_CLIENT_SECRET
