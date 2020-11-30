@@ -240,11 +240,13 @@ export * from './resourceListOfQuote';
 export * from './resourceListOfQuoteAccessMetadataRule';
 export * from './resourceListOfReconciliationBreak';
 export * from './resourceListOfRelation';
+export * from './resourceListOfReturn';
 export * from './resourceListOfScopeDefinition';
 export * from './resourceListOfString';
 export * from './resourceListOfValueType';
 export * from './resultDataKeyRule';
 export * from './resultDataSchema';
+export * from './return';
 export * from './schema';
 export * from './scopeDefinition';
 export * from './setPersonIdentifiersRequest';
@@ -312,6 +314,7 @@ export * from './upsertQuotesResponse';
 export * from './upsertRecipeRequest';
 export * from './upsertReferencePortfolioConstituentsRequest';
 export * from './upsertReferencePortfolioConstituentsResponse';
+export * from './upsertReturnsResponse';
 export * from './upsertSingleStructuredDataResponse';
 export * from './upsertStructuredDataResponse';
 export * from './upsertStructuredMarketDataRequest';
@@ -577,11 +580,13 @@ import { ResourceListOfQuote } from './resourceListOfQuote';
 import { ResourceListOfQuoteAccessMetadataRule } from './resourceListOfQuoteAccessMetadataRule';
 import { ResourceListOfReconciliationBreak } from './resourceListOfReconciliationBreak';
 import { ResourceListOfRelation } from './resourceListOfRelation';
+import { ResourceListOfReturn } from './resourceListOfReturn';
 import { ResourceListOfScopeDefinition } from './resourceListOfScopeDefinition';
 import { ResourceListOfString } from './resourceListOfString';
 import { ResourceListOfValueType } from './resourceListOfValueType';
 import { ResultDataKeyRule } from './resultDataKeyRule';
 import { ResultDataSchema } from './resultDataSchema';
+import { Return } from './return';
 import { Schema } from './schema';
 import { ScopeDefinition } from './scopeDefinition';
 import { SetPersonIdentifiersRequest } from './setPersonIdentifiersRequest';
@@ -649,6 +654,7 @@ import { UpsertQuotesResponse } from './upsertQuotesResponse';
 import { UpsertRecipeRequest } from './upsertRecipeRequest';
 import { UpsertReferencePortfolioConstituentsRequest } from './upsertReferencePortfolioConstituentsRequest';
 import { UpsertReferencePortfolioConstituentsResponse } from './upsertReferencePortfolioConstituentsResponse';
+import { UpsertReturnsResponse } from './upsertReturnsResponse';
 import { UpsertSingleStructuredDataResponse } from './upsertSingleStructuredDataResponse';
 import { UpsertStructuredDataResponse } from './upsertStructuredDataResponse';
 import { UpsertStructuredMarketDataRequest } from './upsertStructuredMarketDataRequest';
@@ -1018,11 +1024,13 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfQuoteAccessMetadataRule": ResourceListOfQuoteAccessMetadataRule,
     "ResourceListOfReconciliationBreak": ResourceListOfReconciliationBreak,
     "ResourceListOfRelation": ResourceListOfRelation,
+    "ResourceListOfReturn": ResourceListOfReturn,
     "ResourceListOfScopeDefinition": ResourceListOfScopeDefinition,
     "ResourceListOfString": ResourceListOfString,
     "ResourceListOfValueType": ResourceListOfValueType,
     "ResultDataKeyRule": ResultDataKeyRule,
     "ResultDataSchema": ResultDataSchema,
+    "Return": Return,
     "Schema": Schema,
     "ScopeDefinition": ScopeDefinition,
     "SetPersonIdentifiersRequest": SetPersonIdentifiersRequest,
@@ -1090,6 +1098,7 @@ let typeMap: {[index: string]: any} = {
     "UpsertRecipeRequest": UpsertRecipeRequest,
     "UpsertReferencePortfolioConstituentsRequest": UpsertReferencePortfolioConstituentsRequest,
     "UpsertReferencePortfolioConstituentsResponse": UpsertReferencePortfolioConstituentsResponse,
+    "UpsertReturnsResponse": UpsertReturnsResponse,
     "UpsertSingleStructuredDataResponse": UpsertSingleStructuredDataResponse,
     "UpsertStructuredDataResponse": UpsertStructuredDataResponse,
     "UpsertStructuredMarketDataRequest": UpsertStructuredMarketDataRequest,
