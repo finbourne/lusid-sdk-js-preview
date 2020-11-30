@@ -10,37 +10,35 @@
  * Do not edit the class manually.
  */
 
-import { Property } from './property';
+import { CutLabelDefinition } from './cutLabelDefinition';
+import { Link } from './link';
 
-/**
-* Request to create or update an legal entity
-*/
-export class UpsertLegalEntityRequest {
-    /**
-    * The identifiers the legal entity will be created with.
-    */
-    'identifiers'?: { [key: string]: Property; };
-    /**
-    * A set of properties associated to the Legal Entity.
-    */
-    'properties'?: { [key: string]: Property; };
+export class ResourceListOfCutLabelDefinition {
+    'values': Array<CutLabelDefinition>;
+    'href'?: string;
+    'links'?: Array<Link>;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "identifiers",
-            "baseName": "identifiers",
-            "type": "{ [key: string]: Property; }"
+            "name": "values",
+            "baseName": "values",
+            "type": "Array<CutLabelDefinition>"
         },
         {
-            "name": "properties",
-            "baseName": "properties",
-            "type": "{ [key: string]: Property; }"
+            "name": "href",
+            "baseName": "href",
+            "type": "string"
+        },
+        {
+            "name": "links",
+            "baseName": "links",
+            "type": "Array<Link>"
         }    ];
 
     static getAttributeTypeMap() {
-        return UpsertLegalEntityRequest.attributeTypeMap;
+        return ResourceListOfCutLabelDefinition.attributeTypeMap;
     }
 }
 
