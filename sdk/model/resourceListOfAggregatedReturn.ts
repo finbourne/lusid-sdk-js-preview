@@ -10,34 +10,26 @@
  * Do not edit the class manually.
  */
 
+import { AggregatedReturn } from './aggregatedReturn';
 import { Link } from './link';
 
-/**
-* Response from upserting structured data document
-*/
-export class UpsertSingleStructuredDataResponse {
-    /**
-    * The specific Uniform Resource Identifier (URI) for this resource at the requested effective and asAt datetime.
-    */
+export class ResourceListOfAggregatedReturn {
+    'values': Array<AggregatedReturn>;
     'href'?: string;
-    /**
-    * The value that was successfully retrieved.
-    */
-    'value'?: Date;
     'links'?: Array<Link>;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
+            "name": "values",
+            "baseName": "values",
+            "type": "Array<AggregatedReturn>"
+        },
+        {
             "name": "href",
             "baseName": "href",
             "type": "string"
-        },
-        {
-            "name": "value",
-            "baseName": "value",
-            "type": "Date"
         },
         {
             "name": "links",
@@ -46,7 +38,7 @@ export class UpsertSingleStructuredDataResponse {
         }    ];
 
     static getAttributeTypeMap() {
-        return UpsertSingleStructuredDataResponse.attributeTypeMap;
+        return ResourceListOfAggregatedReturn.attributeTypeMap;
     }
 }
 

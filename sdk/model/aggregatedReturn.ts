@@ -10,43 +10,54 @@
  * Do not edit the class manually.
  */
 
-import { Link } from './link';
 
 /**
-* Response from upserting structured data document
+* A list of Aggregated Returns.
 */
-export class UpsertSingleStructuredDataResponse {
+export class AggregatedReturn {
     /**
-    * The specific Uniform Resource Identifier (URI) for this resource at the requested effective and asAt datetime.
+    * The effectiveAt for the return.
     */
-    'href'?: string;
+    'effectiveAt': Date;
     /**
-    * The value that was successfully retrieved.
+    * The market value.
     */
-    'value'?: Date;
-    'links'?: Array<Link>;
+    'marketValue': number;
+    /**
+    * The value for the specified metric.
+    */
+    'metricsValue': { [key: string]: number; };
+    /**
+    * Show the aggregated output returns on a Daily or Monthly period.
+    */
+    'frequency'?: string;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "href",
-            "baseName": "href",
-            "type": "string"
-        },
-        {
-            "name": "value",
-            "baseName": "value",
+            "name": "effectiveAt",
+            "baseName": "effectiveAt",
             "type": "Date"
         },
         {
-            "name": "links",
-            "baseName": "links",
-            "type": "Array<Link>"
+            "name": "marketValue",
+            "baseName": "marketValue",
+            "type": "number"
+        },
+        {
+            "name": "metricsValue",
+            "baseName": "metricsValue",
+            "type": "{ [key: string]: number; }"
+        },
+        {
+            "name": "frequency",
+            "baseName": "frequency",
+            "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
-        return UpsertSingleStructuredDataResponse.attributeTypeMap;
+        return AggregatedReturn.attributeTypeMap;
     }
 }
 
