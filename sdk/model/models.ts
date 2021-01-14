@@ -35,6 +35,8 @@ export * from './completeRelation';
 export * from './configurationRecipe';
 export * from './configurationRecipeSnippet';
 export * from './constituentsAdjustmentHeader';
+export * from './contractForDifference';
+export * from './contractForDifferenceAllOf';
 export * from './corporateAction';
 export * from './corporateActionSource';
 export * from './corporateActionTransition';
@@ -377,6 +379,8 @@ import { CompleteRelation } from './completeRelation';
 import { ConfigurationRecipe } from './configurationRecipe';
 import { ConfigurationRecipeSnippet } from './configurationRecipeSnippet';
 import { ConstituentsAdjustmentHeader } from './constituentsAdjustmentHeader';
+import { ContractForDifference } from './contractForDifference';
+import { ContractForDifferenceAllOf } from './contractForDifferenceAllOf';
 import { CorporateAction } from './corporateAction';
 import { CorporateActionSource } from './corporateActionSource';
 import { CorporateActionTransition } from './corporateActionTransition';
@@ -700,6 +704,8 @@ let enumsMap: {[index: string]: any} = {
         "CdsProtectionDetailSpecification.SeniorityEnum": CdsProtectionDetailSpecification.SeniorityEnum,
         "CdsProtectionDetailSpecification.RestructuringTypeEnum": CdsProtectionDetailSpecification.RestructuringTypeEnum,
         "CompletePortfolio.TypeEnum": CompletePortfolio.TypeEnum,
+        "ContractForDifference.InstrumentTypeEnum": ContractForDifference.InstrumentTypeEnum,
+        "ContractForDifferenceAllOf.InstrumentTypeEnum": ContractForDifferenceAllOf.InstrumentTypeEnum,
         "CreateDataTypeRequest.TypeValueRangeEnum": CreateDataTypeRequest.TypeValueRangeEnum,
         "CreateDataTypeRequest.ValueTypeEnum": CreateDataTypeRequest.ValueTypeEnum,
         "CreateDataTypeRequest.UnitSchemaEnum": CreateDataTypeRequest.UnitSchemaEnum,
@@ -823,6 +829,8 @@ let typeMap: {[index: string]: any} = {
     "ConfigurationRecipe": ConfigurationRecipe,
     "ConfigurationRecipeSnippet": ConfigurationRecipeSnippet,
     "ConstituentsAdjustmentHeader": ConstituentsAdjustmentHeader,
+    "ContractForDifference": ContractForDifference,
+    "ContractForDifferenceAllOf": ContractForDifferenceAllOf,
     "CorporateAction": CorporateAction,
     "CorporateActionSource": CorporateActionSource,
     "CorporateActionTransition": CorporateActionTransition,

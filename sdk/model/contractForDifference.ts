@@ -10,25 +10,112 @@
  * Do not edit the class manually.
  */
 
-import { AggregationOptions } from './aggregationOptions';
+import { ContractForDifferenceAllOf } from './contractForDifferenceAllOf';
+import { LusidInstrument } from './lusidInstrument';
 
 /**
-* Aggregation context node. Whilst the market and pricing nodes concern themselves with which models are used and where the market data comes from, the aggregation  context determines how data is aggregated together. This controls the behaviour of the grouping and sql-like engine at the back of the valuation. For instance,  it controls conversion of currencies and whether the sql-like engine behaves more like ANSI or MySql SQL.
+* IL CFD Instrument; Lusid-ibor internal representation of a Contract For Difference instrument.
 */
-export class AggregationContext {
-    'options'?: AggregationOptions;
+export class ContractForDifference extends LusidInstrument {
+    /**
+    * The start date of the CFD.
+    */
+    'startDate': Date;
+    /**
+    * The code of the underlying.
+    */
+    'code': string;
+    /**
+    * The currency that this CFD pays out, this can be different to the UnderlyingCcy.
+    */
+    'payCcy': string;
+    /**
+    * The reference date of the CFD.
+    */
+    'referenceDate': Date;
+    /**
+    * The reference rate of the CFD.
+    */
+    'referenceRate': number;
+    /**
+    * The currency of the underlying
+    */
+    'underlyingCcy': string;
+    /**
+    * external market codes and identifiers for the CFD, e.g. RIC.  Supported string (enumeration) values are: [LusidInstrumentId, Isin, Sedol, Cusip, ClientInternal, Figi, RIC, QuotePermId].
+    */
+    'underlyingIdentifier': string;
+    /**
+    * The available values are: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashflowLeg, Unknown, TermDeposit, ContractForDifference
+    */
+    'instrumentType': ContractForDifference.InstrumentTypeEnum;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "options",
-            "baseName": "options",
-            "type": "AggregationOptions"
+            "name": "startDate",
+            "baseName": "startDate",
+            "type": "Date"
+        },
+        {
+            "name": "code",
+            "baseName": "code",
+            "type": "string"
+        },
+        {
+            "name": "payCcy",
+            "baseName": "payCcy",
+            "type": "string"
+        },
+        {
+            "name": "referenceDate",
+            "baseName": "referenceDate",
+            "type": "Date"
+        },
+        {
+            "name": "referenceRate",
+            "baseName": "referenceRate",
+            "type": "number"
+        },
+        {
+            "name": "underlyingCcy",
+            "baseName": "underlyingCcy",
+            "type": "string"
+        },
+        {
+            "name": "underlyingIdentifier",
+            "baseName": "underlyingIdentifier",
+            "type": "string"
+        },
+        {
+            "name": "instrumentType",
+            "baseName": "instrumentType",
+            "type": "ContractForDifference.InstrumentTypeEnum"
         }    ];
 
     static getAttributeTypeMap() {
-        return AggregationContext.attributeTypeMap;
+        return super.getAttributeTypeMap().concat(ContractForDifference.attributeTypeMap);
     }
 }
 
+export namespace ContractForDifference {
+    export enum InstrumentTypeEnum {
+        QuotedSecurity = <any> 'QuotedSecurity',
+        InterestRateSwap = <any> 'InterestRateSwap',
+        FxForward = <any> 'FxForward',
+        Future = <any> 'Future',
+        ExoticInstrument = <any> 'ExoticInstrument',
+        FxOption = <any> 'FxOption',
+        CreditDefaultSwap = <any> 'CreditDefaultSwap',
+        InterestRateSwaption = <any> 'InterestRateSwaption',
+        Bond = <any> 'Bond',
+        EquityOption = <any> 'EquityOption',
+        FixedLeg = <any> 'FixedLeg',
+        FloatingLeg = <any> 'FloatingLeg',
+        BespokeCashflowLeg = <any> 'BespokeCashflowLeg',
+        Unknown = <any> 'Unknown',
+        TermDeposit = <any> 'TermDeposit',
+        ContractForDifference = <any> 'ContractForDifference'
+    }
+}
