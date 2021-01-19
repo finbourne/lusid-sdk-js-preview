@@ -303,6 +303,7 @@ export * from './upsertIndexConventionRequest';
 export * from './upsertInstrumentPropertiesResponse';
 export * from './upsertInstrumentPropertyRequest';
 export * from './upsertInstrumentsResponse';
+export * from './upsertLegalEntityAccessMetadataRequest';
 export * from './upsertLegalEntityRequest';
 export * from './upsertOrderPropertiesRequest';
 export * from './upsertOrderPropertiesResponse';
@@ -647,6 +648,7 @@ import { UpsertIndexConventionRequest } from './upsertIndexConventionRequest';
 import { UpsertInstrumentPropertiesResponse } from './upsertInstrumentPropertiesResponse';
 import { UpsertInstrumentPropertyRequest } from './upsertInstrumentPropertyRequest';
 import { UpsertInstrumentsResponse } from './upsertInstrumentsResponse';
+import { UpsertLegalEntityAccessMetadataRequest } from './upsertLegalEntityAccessMetadataRequest';
 import { UpsertLegalEntityRequest } from './upsertLegalEntityRequest';
 import { UpsertOrderPropertiesRequest } from './upsertOrderPropertiesRequest';
 import { UpsertOrderPropertiesResponse } from './upsertOrderPropertiesResponse';
@@ -1097,6 +1099,7 @@ let typeMap: {[index: string]: any} = {
     "UpsertInstrumentPropertiesResponse": UpsertInstrumentPropertiesResponse,
     "UpsertInstrumentPropertyRequest": UpsertInstrumentPropertyRequest,
     "UpsertInstrumentsResponse": UpsertInstrumentsResponse,
+    "UpsertLegalEntityAccessMetadataRequest": UpsertLegalEntityAccessMetadataRequest,
     "UpsertLegalEntityRequest": UpsertLegalEntityRequest,
     "UpsertOrderPropertiesRequest": UpsertOrderPropertiesRequest,
     "UpsertOrderPropertiesResponse": UpsertOrderPropertiesResponse,

@@ -10,47 +10,25 @@
  * Do not edit the class manually.
  */
 
-import { Link } from './link';
-import { QuoteAccessMetadataRule } from './quoteAccessMetadataRule';
+import { AccessMetadataValue } from './accessMetadataValue';
 
-export class ResourceListOfQuoteAccessMetadataRule {
-    'values': Array<QuoteAccessMetadataRule>;
-    'href'?: string;
-    'links'?: Array<Link>;
-    'nextPage'?: string;
-    'previousPage'?: string;
+export class UpsertLegalEntityAccessMetadataRequest {
+    /**
+    * The access control metadata to assign to a Legal Entity that matches the identifier
+    */
+    'metadata'?: Array<AccessMetadataValue>;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "values",
-            "baseName": "values",
-            "type": "Array<QuoteAccessMetadataRule>"
-        },
-        {
-            "name": "href",
-            "baseName": "href",
-            "type": "string"
-        },
-        {
-            "name": "links",
-            "baseName": "links",
-            "type": "Array<Link>"
-        },
-        {
-            "name": "nextPage",
-            "baseName": "nextPage",
-            "type": "string"
-        },
-        {
-            "name": "previousPage",
-            "baseName": "previousPage",
-            "type": "string"
+            "name": "metadata",
+            "baseName": "metadata",
+            "type": "Array<AccessMetadataValue>"
         }    ];
 
     static getAttributeTypeMap() {
-        return ResourceListOfQuoteAccessMetadataRule.attributeTypeMap;
+        return UpsertLegalEntityAccessMetadataRequest.attributeTypeMap;
     }
 }
 
