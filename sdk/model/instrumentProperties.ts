@@ -11,69 +11,38 @@
  */
 
 import { Link } from './link';
+import { Property } from './property';
+import { Version } from './version';
 
-/**
-* Configuration needed to define a side. Sides are referenced by Label. Beyond that, other properties  can be used to reference either transaction fields, or transaction properties.
-*/
-export class SideConfigurationData {
+export class InstrumentProperties {
     /**
-    * The side\'s label.
+    * The specific Uniform Resource Identifier (URI) for this resource at the requested effective and asAt datetime.
     */
-    'side': string;
+    'href'?: string;
     /**
-    * The security, or instrument.
+    * The instrument properties. These will be from the \'Instrument\' domain.
     */
-    'security': string;
-    /**
-    * The currency.
-    */
-    'currency': string;
-    /**
-    * The rate.
-    */
-    'rate': string;
-    /**
-    * The units.
-    */
-    'units': string;
-    /**
-    * The amount.
-    */
-    'amount': string;
+    'properties'?: { [key: string]: Property; };
+    'version'?: Version;
     'links'?: Array<Link>;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "side",
-            "baseName": "side",
+            "name": "href",
+            "baseName": "href",
             "type": "string"
         },
         {
-            "name": "security",
-            "baseName": "security",
-            "type": "string"
+            "name": "properties",
+            "baseName": "properties",
+            "type": "{ [key: string]: Property; }"
         },
         {
-            "name": "currency",
-            "baseName": "currency",
-            "type": "string"
-        },
-        {
-            "name": "rate",
-            "baseName": "rate",
-            "type": "string"
-        },
-        {
-            "name": "units",
-            "baseName": "units",
-            "type": "string"
-        },
-        {
-            "name": "amount",
-            "baseName": "amount",
-            "type": "string"
+            "name": "version",
+            "baseName": "version",
+            "type": "Version"
         },
         {
             "name": "links",
@@ -82,7 +51,7 @@ export class SideConfigurationData {
         }    ];
 
     static getAttributeTypeMap() {
-        return SideConfigurationData.attributeTypeMap;
+        return InstrumentProperties.attributeTypeMap;
     }
 }
 
