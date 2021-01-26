@@ -10,31 +10,33 @@
  * Do not edit the class manually.
  */
 
-import { Link } from './link';
 
-export class UpsertInstrumentPropertiesResponse {
+export class DeleteRelationRequest {
     /**
-    * The asAt datetime at which the properties were updated or inserted on the specified instruments.
+    * The identifier of the source entity of the relation to be deleted.
     */
-    'asAtDate': Date;
-    'links'?: Array<Link>;
+    'sourceEntityId': { [key: string]: string; };
+    /**
+    * The identifier of the target entity of the relation to be deleted.
+    */
+    'targetEntityId': { [key: string]: string; };
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "asAtDate",
-            "baseName": "asAtDate",
-            "type": "Date"
+            "name": "sourceEntityId",
+            "baseName": "sourceEntityId",
+            "type": "{ [key: string]: string; }"
         },
         {
-            "name": "links",
-            "baseName": "links",
-            "type": "Array<Link>"
+            "name": "targetEntityId",
+            "baseName": "targetEntityId",
+            "type": "{ [key: string]: string; }"
         }    ];
 
     static getAttributeTypeMap() {
-        return UpsertInstrumentPropertiesResponse.attributeTypeMap;
+        return DeleteRelationRequest.attributeTypeMap;
     }
 }
 

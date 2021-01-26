@@ -73,6 +73,7 @@ export * from './dayCountConvention';
 export * from './dayOfWeek';
 export * from './deleteInstrumentPropertiesResponse';
 export * from './deleteInstrumentResponse';
+export * from './deleteRelationRequest';
 export * from './deletedEntityResponse';
 export * from './deliveryType';
 export * from './equityOption';
@@ -419,6 +420,7 @@ import { DayCountConvention } from './dayCountConvention';
 import { DayOfWeek } from './dayOfWeek';
 import { DeleteInstrumentPropertiesResponse } from './deleteInstrumentPropertiesResponse';
 import { DeleteInstrumentResponse } from './deleteInstrumentResponse';
+import { DeleteRelationRequest } from './deleteRelationRequest';
 import { DeletedEntityResponse } from './deletedEntityResponse';
 import { DeliveryType } from './deliveryType';
 import { EquityOption } from './equityOption';
@@ -871,6 +873,7 @@ let typeMap: {[index: string]: any} = {
     "DayOfWeek": DayOfWeek,
     "DeleteInstrumentPropertiesResponse": DeleteInstrumentPropertiesResponse,
     "DeleteInstrumentResponse": DeleteInstrumentResponse,
+    "DeleteRelationRequest": DeleteRelationRequest,
     "DeletedEntityResponse": DeletedEntityResponse,
     "DeliveryType": DeliveryType,
     "EquityOption": EquityOption,
