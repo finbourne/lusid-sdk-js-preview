@@ -78,6 +78,8 @@ export * from './deletedEntityResponse';
 export * from './deliveryType';
 export * from './equityOption';
 export * from './equityOptionAllOf';
+export * from './equitySwap';
+export * from './equitySwapAllOf';
 export * from './errorDetail';
 export * from './executionRequest';
 export * from './exoticInstrument';
@@ -425,6 +427,8 @@ import { DeletedEntityResponse } from './deletedEntityResponse';
 import { DeliveryType } from './deliveryType';
 import { EquityOption } from './equityOption';
 import { EquityOptionAllOf } from './equityOptionAllOf';
+import { EquitySwap } from './equitySwap';
+import { EquitySwapAllOf } from './equitySwapAllOf';
 import { ErrorDetail } from './errorDetail';
 import { ExecutionRequest } from './executionRequest';
 import { ExoticInstrument } from './exoticInstrument';
@@ -733,6 +737,8 @@ let enumsMap: {[index: string]: any} = {
         "EquityOptionAllOf.OptionTypeEnum": EquityOptionAllOf.OptionTypeEnum,
         "EquityOptionAllOf.UnderlyingIdentifierEnum": EquityOptionAllOf.UnderlyingIdentifierEnum,
         "EquityOptionAllOf.InstrumentTypeEnum": EquityOptionAllOf.InstrumentTypeEnum,
+        "EquitySwap.InstrumentTypeEnum": EquitySwap.InstrumentTypeEnum,
+        "EquitySwapAllOf.InstrumentTypeEnum": EquitySwapAllOf.InstrumentTypeEnum,
         "ExoticInstrument.InstrumentTypeEnum": ExoticInstrument.InstrumentTypeEnum,
         "ExoticInstrumentAllOf.InstrumentTypeEnum": ExoticInstrumentAllOf.InstrumentTypeEnum,
         "FieldSchema.TypeEnum": FieldSchema.TypeEnum,
@@ -878,6 +884,8 @@ let typeMap: {[index: string]: any} = {
     "DeliveryType": DeliveryType,
     "EquityOption": EquityOption,
     "EquityOptionAllOf": EquityOptionAllOf,
+    "EquitySwap": EquitySwap,
+    "EquitySwapAllOf": EquitySwapAllOf,
     "ErrorDetail": ErrorDetail,
     "ExecutionRequest": ExecutionRequest,
     "ExoticInstrument": ExoticInstrument,

@@ -10,48 +10,136 @@
  * Do not edit the class manually.
  */
 
-import { Link } from './link';
-import { Property } from './property';
-import { Version } from './version';
+import { EquitySwapAllOf } from './equitySwapAllOf';
+import { FlowConventions } from './flowConventions';
+import { InstrumentLeg } from './instrumentLeg';
+import { LusidInstrument } from './lusidInstrument';
 
-export class InstrumentProperties {
+/**
+* Lusid-ibor internal representation of an Equity Swap instrument.
+*/
+export class EquitySwap extends LusidInstrument {
     /**
-    * The specific Uniform Resource Identifier (URI) for this resource at the requested effective and asAt datetime.
+    * The start date of the EquitySwap
     */
-    'href'?: string;
+    'startDate': Date;
     /**
-    * The instrument properties. These will be from the \'Instrument\' domain.
+    * The maturity date of the EquitySwap.
     */
-    'properties'?: { [key: string]: Property; };
-    'version'?: Version;
-    'links'?: Array<Link>;
+    'maturityDate': Date;
+    /**
+    * The code of the underlying.
+    */
+    'code': string;
+    'equityFlowConventions': FlowConventions;
+    'fundingLeg': InstrumentLeg;
+    /**
+    * Dividend inclusion flag, if true dividends are included in the equity leg (total return).
+    */
+    'includeDividends': boolean;
+    /**
+    * The initial equity price of the Equity Swap.
+    */
+    'initialPrice': number;
+    /**
+    * Notional reset flag, if true the notional of the funding leg is reset at the start of every  coupon to match the value of the equity leg (equity price at start of coupon times quantity)
+    */
+    'notionalReset': boolean;
+    /**
+    * The quantity or number of shares in the Equity Swap.
+    */
+    'quantity': number;
+    /**
+    * external market codes and identifiers for the EquitySwap, e.g. RIC.  Supported string (enumeration) values are: [LusidInstrumentId, Isin, Sedol, Cusip, ClientInternal, Figi, RIC, QuotePermId].
+    */
+    'underlyingIdentifier': string;
+    /**
+    * The available values are: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashflowLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap
+    */
+    'instrumentType': EquitySwap.InstrumentTypeEnum;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "href",
-            "baseName": "href",
+            "name": "startDate",
+            "baseName": "startDate",
+            "type": "Date"
+        },
+        {
+            "name": "maturityDate",
+            "baseName": "maturityDate",
+            "type": "Date"
+        },
+        {
+            "name": "code",
+            "baseName": "code",
             "type": "string"
         },
         {
-            "name": "properties",
-            "baseName": "properties",
-            "type": "{ [key: string]: Property; }"
+            "name": "equityFlowConventions",
+            "baseName": "equityFlowConventions",
+            "type": "FlowConventions"
         },
         {
-            "name": "version",
-            "baseName": "version",
-            "type": "Version"
+            "name": "fundingLeg",
+            "baseName": "fundingLeg",
+            "type": "InstrumentLeg"
         },
         {
-            "name": "links",
-            "baseName": "links",
-            "type": "Array<Link>"
+            "name": "includeDividends",
+            "baseName": "includeDividends",
+            "type": "boolean"
+        },
+        {
+            "name": "initialPrice",
+            "baseName": "initialPrice",
+            "type": "number"
+        },
+        {
+            "name": "notionalReset",
+            "baseName": "notionalReset",
+            "type": "boolean"
+        },
+        {
+            "name": "quantity",
+            "baseName": "quantity",
+            "type": "number"
+        },
+        {
+            "name": "underlyingIdentifier",
+            "baseName": "underlyingIdentifier",
+            "type": "string"
+        },
+        {
+            "name": "instrumentType",
+            "baseName": "instrumentType",
+            "type": "EquitySwap.InstrumentTypeEnum"
         }    ];
 
     static getAttributeTypeMap() {
-        return InstrumentProperties.attributeTypeMap;
+        return super.getAttributeTypeMap().concat(EquitySwap.attributeTypeMap);
     }
 }
 
+export namespace EquitySwap {
+    export enum InstrumentTypeEnum {
+        QuotedSecurity = <any> 'QuotedSecurity',
+        InterestRateSwap = <any> 'InterestRateSwap',
+        FxForward = <any> 'FxForward',
+        Future = <any> 'Future',
+        ExoticInstrument = <any> 'ExoticInstrument',
+        FxOption = <any> 'FxOption',
+        CreditDefaultSwap = <any> 'CreditDefaultSwap',
+        InterestRateSwaption = <any> 'InterestRateSwaption',
+        Bond = <any> 'Bond',
+        EquityOption = <any> 'EquityOption',
+        FixedLeg = <any> 'FixedLeg',
+        FloatingLeg = <any> 'FloatingLeg',
+        BespokeCashflowLeg = <any> 'BespokeCashflowLeg',
+        Unknown = <any> 'Unknown',
+        TermDeposit = <any> 'TermDeposit',
+        ContractForDifference = <any> 'ContractForDifference',
+        EquitySwap = <any> 'EquitySwap'
+    }
+}
