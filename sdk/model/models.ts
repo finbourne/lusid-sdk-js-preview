@@ -122,6 +122,7 @@ export * from './inlineValuationReconciliationRequest';
 export * from './inlineValuationRequest';
 export * from './inlineValuationsReconciliationRequest';
 export * from './instrument';
+export * from './instrumentCashFlow';
 export * from './instrumentDefinition';
 export * from './instrumentDefinitionFormat';
 export * from './instrumentIdTypeDescriptor';
@@ -236,6 +237,7 @@ export * from './resourceListOfGetIndexConventionResponse';
 export * from './resourceListOfGetRecipeResponse';
 export * from './resourceListOfHoldingsAdjustmentHeader';
 export * from './resourceListOfIUnitDefinitionDto';
+export * from './resourceListOfInstrumentCashFlow';
 export * from './resourceListOfInstrumentIdTypeDescriptor';
 export * from './resourceListOfOrder';
 export * from './resourceListOfPortfolio';
@@ -251,6 +253,7 @@ export * from './resourceListOfRelation';
 export * from './resourceListOfReturn';
 export * from './resourceListOfScopeDefinition';
 export * from './resourceListOfString';
+export * from './resourceListOfTransaction';
 export * from './resourceListOfValueType';
 export * from './resultDataKeyRule';
 export * from './resultDataSchema';
@@ -471,6 +474,7 @@ import { InlineValuationReconciliationRequest } from './inlineValuationReconcili
 import { InlineValuationRequest } from './inlineValuationRequest';
 import { InlineValuationsReconciliationRequest } from './inlineValuationsReconciliationRequest';
 import { Instrument } from './instrument';
+import { InstrumentCashFlow } from './instrumentCashFlow';
 import { InstrumentDefinition } from './instrumentDefinition';
 import { InstrumentDefinitionFormat } from './instrumentDefinitionFormat';
 import { InstrumentIdTypeDescriptor } from './instrumentIdTypeDescriptor';
@@ -585,6 +589,7 @@ import { ResourceListOfGetIndexConventionResponse } from './resourceListOfGetInd
 import { ResourceListOfGetRecipeResponse } from './resourceListOfGetRecipeResponse';
 import { ResourceListOfHoldingsAdjustmentHeader } from './resourceListOfHoldingsAdjustmentHeader';
 import { ResourceListOfIUnitDefinitionDto } from './resourceListOfIUnitDefinitionDto';
+import { ResourceListOfInstrumentCashFlow } from './resourceListOfInstrumentCashFlow';
 import { ResourceListOfInstrumentIdTypeDescriptor } from './resourceListOfInstrumentIdTypeDescriptor';
 import { ResourceListOfOrder } from './resourceListOfOrder';
 import { ResourceListOfPortfolio } from './resourceListOfPortfolio';
@@ -600,6 +605,7 @@ import { ResourceListOfRelation } from './resourceListOfRelation';
 import { ResourceListOfReturn } from './resourceListOfReturn';
 import { ResourceListOfScopeDefinition } from './resourceListOfScopeDefinition';
 import { ResourceListOfString } from './resourceListOfString';
+import { ResourceListOfTransaction } from './resourceListOfTransaction';
 import { ResourceListOfValueType } from './resourceListOfValueType';
 import { ResultDataKeyRule } from './resultDataKeyRule';
 import { ResultDataSchema } from './resultDataSchema';
@@ -928,6 +934,7 @@ let typeMap: {[index: string]: any} = {
     "InlineValuationRequest": InlineValuationRequest,
     "InlineValuationsReconciliationRequest": InlineValuationsReconciliationRequest,
     "Instrument": Instrument,
+    "InstrumentCashFlow": InstrumentCashFlow,
     "InstrumentDefinition": InstrumentDefinition,
     "InstrumentDefinitionFormat": InstrumentDefinitionFormat,
     "InstrumentIdTypeDescriptor": InstrumentIdTypeDescriptor,
@@ -1042,6 +1049,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfGetRecipeResponse": ResourceListOfGetRecipeResponse,
     "ResourceListOfHoldingsAdjustmentHeader": ResourceListOfHoldingsAdjustmentHeader,
     "ResourceListOfIUnitDefinitionDto": ResourceListOfIUnitDefinitionDto,
+    "ResourceListOfInstrumentCashFlow": ResourceListOfInstrumentCashFlow,
     "ResourceListOfInstrumentIdTypeDescriptor": ResourceListOfInstrumentIdTypeDescriptor,
     "ResourceListOfOrder": ResourceListOfOrder,
     "ResourceListOfPortfolio": ResourceListOfPortfolio,
@@ -1057,6 +1065,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfReturn": ResourceListOfReturn,
     "ResourceListOfScopeDefinition": ResourceListOfScopeDefinition,
     "ResourceListOfString": ResourceListOfString,
+    "ResourceListOfTransaction": ResourceListOfTransaction,
     "ResourceListOfValueType": ResourceListOfValueType,
     "ResultDataKeyRule": ResultDataKeyRule,
     "ResultDataSchema": ResultDataSchema,
