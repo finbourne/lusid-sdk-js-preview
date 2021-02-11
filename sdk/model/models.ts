@@ -175,6 +175,7 @@ export * from './pagedResourceListOfCalendar';
 export * from './pagedResourceListOfCorporateActionSource';
 export * from './pagedResourceListOfCutLabelDefinition';
 export * from './pagedResourceListOfInstrument';
+export * from './pagedResourceListOfLegalEntity';
 export * from './pagedResourceListOfOrder';
 export * from './pagedResourceListOfPerson';
 export * from './pagedResourceListOfPortfolioGroup';
@@ -537,6 +538,7 @@ import { PagedResourceListOfCalendar } from './pagedResourceListOfCalendar';
 import { PagedResourceListOfCorporateActionSource } from './pagedResourceListOfCorporateActionSource';
 import { PagedResourceListOfCutLabelDefinition } from './pagedResourceListOfCutLabelDefinition';
 import { PagedResourceListOfInstrument } from './pagedResourceListOfInstrument';
+import { PagedResourceListOfLegalEntity } from './pagedResourceListOfLegalEntity';
 import { PagedResourceListOfOrder } from './pagedResourceListOfOrder';
 import { PagedResourceListOfPerson } from './pagedResourceListOfPerson';
 import { PagedResourceListOfPortfolioGroup } from './pagedResourceListOfPortfolioGroup';
@@ -1007,6 +1009,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfCorporateActionSource": PagedResourceListOfCorporateActionSource,
     "PagedResourceListOfCutLabelDefinition": PagedResourceListOfCutLabelDefinition,
     "PagedResourceListOfInstrument": PagedResourceListOfInstrument,
+    "PagedResourceListOfLegalEntity": PagedResourceListOfLegalEntity,
     "PagedResourceListOfOrder": PagedResourceListOfOrder,
     "PagedResourceListOfPerson": PagedResourceListOfPerson,
     "PagedResourceListOfPortfolioGroup": PagedResourceListOfPortfolioGroup,

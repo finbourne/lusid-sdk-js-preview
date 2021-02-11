@@ -10,30 +10,47 @@
  * Do not edit the class manually.
  */
 
+import { LegalEntity } from './legalEntity';
+import { Link } from './link';
 
-/**
-* Any overriding data for notionals, spreads or rates that would affect generation of a leg.              This supports the case where an amortization schedule is given but otherwise generation is allowed as usual.
-*/
-export class FixedLegAllOfOverrides {
-    'amortization'?: Array<number>;
-    'spreads'?: Array<number>;
+export class PagedResourceListOfLegalEntity {
+    'nextPage'?: string;
+    'previousPage'?: string;
+    'values': Array<LegalEntity>;
+    'href'?: string;
+    'links'?: Array<Link>;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "amortization",
-            "baseName": "Amortization",
-            "type": "Array<number>"
+            "name": "nextPage",
+            "baseName": "nextPage",
+            "type": "string"
         },
         {
-            "name": "spreads",
-            "baseName": "Spreads",
-            "type": "Array<number>"
+            "name": "previousPage",
+            "baseName": "previousPage",
+            "type": "string"
+        },
+        {
+            "name": "values",
+            "baseName": "values",
+            "type": "Array<LegalEntity>"
+        },
+        {
+            "name": "href",
+            "baseName": "href",
+            "type": "string"
+        },
+        {
+            "name": "links",
+            "baseName": "links",
+            "type": "Array<Link>"
         }    ];
 
     static getAttributeTypeMap() {
-        return FixedLegAllOfOverrides.attributeTypeMap;
+        return PagedResourceListOfLegalEntity.attributeTypeMap;
     }
 }
 
