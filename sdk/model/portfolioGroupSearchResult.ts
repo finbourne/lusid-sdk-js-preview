@@ -10,48 +10,90 @@
  * Do not edit the class manually.
  */
 
+import { Link } from './link';
+import { ResourceId } from './resourceId';
+import { Version } from './version';
 
-/**
-* Base class in hierarchy for LUSID Instruments. Valuation would normally be performed through passing LUSID a Code for a portfolio to be valued.  In that case the set of instruments have already been uploaded. Equally, one might wish to pass in a set of instruments directly and have LUSID  value the inlined set. This the base instrument for this case.
-*/
-export class LusidInstrument {
+export class PortfolioGroupSearchResult {
     /**
-    * The available values are: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashflowLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap
+    * The specific Uniform Resource Identifier (URI) for this resource at the requested effective and asAt datetime.
     */
-    'instrumentType': LusidInstrument.InstrumentTypeEnum;
+    'href'?: string;
+    'id': ResourceId;
+    /**
+    * The name of the portfolio group.
+    */
+    'displayName': string;
+    /**
+    * The long form description of the portfolio group.
+    */
+    'description'?: string;
+    /**
+    * The effective datetime at which the portfolio group was created. No portfolios or sub groups can be added to the group before this date.
+    */
+    'created'?: Date;
+    /**
+    * The collection of resource identifiers for the portfolios contained in the portfolio group.
+    */
+    'portfolios'?: Array<ResourceId>;
+    /**
+    * The collection of resource identifiers for the portfolio groups contained in the portfolio group as sub groups.
+    */
+    'subGroups'?: Array<ResourceId>;
+    'version'?: Version;
+    'links'?: Array<Link>;
 
-    static discriminator: string | undefined = "instrumentType";
+    static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "instrumentType",
-            "baseName": "instrumentType",
-            "type": "LusidInstrument.InstrumentTypeEnum"
+            "name": "href",
+            "baseName": "href",
+            "type": "string"
+        },
+        {
+            "name": "id",
+            "baseName": "id",
+            "type": "ResourceId"
+        },
+        {
+            "name": "displayName",
+            "baseName": "displayName",
+            "type": "string"
+        },
+        {
+            "name": "description",
+            "baseName": "description",
+            "type": "string"
+        },
+        {
+            "name": "created",
+            "baseName": "created",
+            "type": "Date"
+        },
+        {
+            "name": "portfolios",
+            "baseName": "portfolios",
+            "type": "Array<ResourceId>"
+        },
+        {
+            "name": "subGroups",
+            "baseName": "subGroups",
+            "type": "Array<ResourceId>"
+        },
+        {
+            "name": "version",
+            "baseName": "version",
+            "type": "Version"
+        },
+        {
+            "name": "links",
+            "baseName": "links",
+            "type": "Array<Link>"
         }    ];
 
     static getAttributeTypeMap() {
-        return LusidInstrument.attributeTypeMap;
+        return PortfolioGroupSearchResult.attributeTypeMap;
     }
 }
 
-export namespace LusidInstrument {
-    export enum InstrumentTypeEnum {
-        QuotedSecurity = <any> 'QuotedSecurity',
-        InterestRateSwap = <any> 'InterestRateSwap',
-        FxForward = <any> 'FxForward',
-        Future = <any> 'Future',
-        ExoticInstrument = <any> 'ExoticInstrument',
-        FxOption = <any> 'FxOption',
-        CreditDefaultSwap = <any> 'CreditDefaultSwap',
-        InterestRateSwaption = <any> 'InterestRateSwaption',
-        Bond = <any> 'Bond',
-        EquityOption = <any> 'EquityOption',
-        FixedLeg = <any> 'FixedLeg',
-        FloatingLeg = <any> 'FloatingLeg',
-        BespokeCashflowLeg = <any> 'BespokeCashflowLeg',
-        Unknown = <any> 'Unknown',
-        TermDeposit = <any> 'TermDeposit',
-        ContractForDifference = <any> 'ContractForDifference',
-        EquitySwap = <any> 'EquitySwap'
-    }
-}
