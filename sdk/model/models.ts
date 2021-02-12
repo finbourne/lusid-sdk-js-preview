@@ -178,7 +178,7 @@ export * from './pagedResourceListOfInstrument';
 export * from './pagedResourceListOfLegalEntity';
 export * from './pagedResourceListOfOrder';
 export * from './pagedResourceListOfPerson';
-export * from './pagedResourceListOfPortfolioGroupSearchResult';
+export * from './pagedResourceListOfPortfolioGroup';
 export * from './pagedResourceListOfPortfolioSearchResult';
 export * from './pagedResourceListOfPropertyDefinition';
 export * from './payReceive';
@@ -192,7 +192,6 @@ export * from './portfolioDetails';
 export * from './portfolioEntityId';
 export * from './portfolioGroup';
 export * from './portfolioGroupProperties';
-export * from './portfolioGroupSearchResult';
 export * from './portfolioHolding';
 export * from './portfolioProperties';
 export * from './portfolioReconciliationRequest';
@@ -542,7 +541,7 @@ import { PagedResourceListOfInstrument } from './pagedResourceListOfInstrument';
 import { PagedResourceListOfLegalEntity } from './pagedResourceListOfLegalEntity';
 import { PagedResourceListOfOrder } from './pagedResourceListOfOrder';
 import { PagedResourceListOfPerson } from './pagedResourceListOfPerson';
-import { PagedResourceListOfPortfolioGroupSearchResult } from './pagedResourceListOfPortfolioGroupSearchResult';
+import { PagedResourceListOfPortfolioGroup } from './pagedResourceListOfPortfolioGroup';
 import { PagedResourceListOfPortfolioSearchResult } from './pagedResourceListOfPortfolioSearchResult';
 import { PagedResourceListOfPropertyDefinition } from './pagedResourceListOfPropertyDefinition';
 import { PayReceive } from './payReceive';
@@ -556,7 +555,6 @@ import { PortfolioDetails } from './portfolioDetails';
 import { PortfolioEntityId } from './portfolioEntityId';
 import { PortfolioGroup } from './portfolioGroup';
 import { PortfolioGroupProperties } from './portfolioGroupProperties';
-import { PortfolioGroupSearchResult } from './portfolioGroupSearchResult';
 import { PortfolioHolding } from './portfolioHolding';
 import { PortfolioProperties } from './portfolioProperties';
 import { PortfolioReconciliationRequest } from './portfolioReconciliationRequest';
@@ -1014,7 +1012,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfLegalEntity": PagedResourceListOfLegalEntity,
     "PagedResourceListOfOrder": PagedResourceListOfOrder,
     "PagedResourceListOfPerson": PagedResourceListOfPerson,
-    "PagedResourceListOfPortfolioGroupSearchResult": PagedResourceListOfPortfolioGroupSearchResult,
+    "PagedResourceListOfPortfolioGroup": PagedResourceListOfPortfolioGroup,
     "PagedResourceListOfPortfolioSearchResult": PagedResourceListOfPortfolioSearchResult,
     "PagedResourceListOfPropertyDefinition": PagedResourceListOfPropertyDefinition,
     "PayReceive": PayReceive,
@@ -1028,7 +1026,6 @@ let typeMap: {[index: string]: any} = {
     "PortfolioEntityId": PortfolioEntityId,
     "PortfolioGroup": PortfolioGroup,
     "PortfolioGroupProperties": PortfolioGroupProperties,
-    "PortfolioGroupSearchResult": PortfolioGroupSearchResult,
     "PortfolioHolding": PortfolioHolding,
     "PortfolioProperties": PortfolioProperties,
     "PortfolioReconciliationRequest": PortfolioReconciliationRequest,
