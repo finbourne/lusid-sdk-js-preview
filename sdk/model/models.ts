@@ -72,6 +72,7 @@ export * from './dataMapping';
 export * from './dataType';
 export * from './dataTypeValueRange';
 export * from './dateAttributes';
+export * from './dateRange';
 export * from './dayCountConvention';
 export * from './dayOfWeek';
 export * from './deleteInstrumentPropertiesResponse';
@@ -208,6 +209,7 @@ export * from './propertyDefinition';
 export * from './propertyDefinitionType';
 export * from './propertyDomain';
 export * from './propertyFilter';
+export * from './propertyInterval';
 export * from './propertyLifeTime';
 export * from './propertySchema';
 export * from './propertyType';
@@ -255,6 +257,7 @@ export * from './resourceListOfPortfolioGroup';
 export * from './resourceListOfPortfolioSearchResult';
 export * from './resourceListOfProcessedCommand';
 export * from './resourceListOfPropertyDefinition';
+export * from './resourceListOfPropertyInterval';
 export * from './resourceListOfQuote';
 export * from './resourceListOfQuoteAccessMetadataRule';
 export * from './resourceListOfReconciliationBreak';
@@ -435,6 +438,7 @@ import { DataMapping } from './dataMapping';
 import { DataType } from './dataType';
 import { DataTypeValueRange } from './dataTypeValueRange';
 import { DateAttributes } from './dateAttributes';
+import { DateRange } from './dateRange';
 import { DayCountConvention } from './dayCountConvention';
 import { DayOfWeek } from './dayOfWeek';
 import { DeleteInstrumentPropertiesResponse } from './deleteInstrumentPropertiesResponse';
@@ -571,6 +575,7 @@ import { PropertyDefinition } from './propertyDefinition';
 import { PropertyDefinitionType } from './propertyDefinitionType';
 import { PropertyDomain } from './propertyDomain';
 import { PropertyFilter } from './propertyFilter';
+import { PropertyInterval } from './propertyInterval';
 import { PropertyLifeTime } from './propertyLifeTime';
 import { PropertySchema } from './propertySchema';
 import { PropertyType } from './propertyType';
@@ -618,6 +623,7 @@ import { ResourceListOfPortfolioGroup } from './resourceListOfPortfolioGroup';
 import { ResourceListOfPortfolioSearchResult } from './resourceListOfPortfolioSearchResult';
 import { ResourceListOfProcessedCommand } from './resourceListOfProcessedCommand';
 import { ResourceListOfPropertyDefinition } from './resourceListOfPropertyDefinition';
+import { ResourceListOfPropertyInterval } from './resourceListOfPropertyInterval';
 import { ResourceListOfQuote } from './resourceListOfQuote';
 import { ResourceListOfQuoteAccessMetadataRule } from './resourceListOfQuoteAccessMetadataRule';
 import { ResourceListOfReconciliationBreak } from './resourceListOfReconciliationBreak';
@@ -906,6 +912,7 @@ let typeMap: {[index: string]: any} = {
     "DataType": DataType,
     "DataTypeValueRange": DataTypeValueRange,
     "DateAttributes": DateAttributes,
+    "DateRange": DateRange,
     "DayCountConvention": DayCountConvention,
     "DayOfWeek": DayOfWeek,
     "DeleteInstrumentPropertiesResponse": DeleteInstrumentPropertiesResponse,
@@ -1042,6 +1049,7 @@ let typeMap: {[index: string]: any} = {
     "PropertyDefinitionType": PropertyDefinitionType,
     "PropertyDomain": PropertyDomain,
     "PropertyFilter": PropertyFilter,
+    "PropertyInterval": PropertyInterval,
     "PropertyLifeTime": PropertyLifeTime,
     "PropertySchema": PropertySchema,
     "PropertyType": PropertyType,
@@ -1089,6 +1097,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfPortfolioSearchResult": ResourceListOfPortfolioSearchResult,
     "ResourceListOfProcessedCommand": ResourceListOfProcessedCommand,
     "ResourceListOfPropertyDefinition": ResourceListOfPropertyDefinition,
+    "ResourceListOfPropertyInterval": ResourceListOfPropertyInterval,
     "ResourceListOfQuote": ResourceListOfQuote,
     "ResourceListOfQuoteAccessMetadataRule": ResourceListOfQuoteAccessMetadataRule,
     "ResourceListOfReconciliationBreak": ResourceListOfReconciliationBreak,
