@@ -181,7 +181,7 @@ export * from './pagedResourceListOfOrder';
 export * from './pagedResourceListOfPerson';
 export * from './pagedResourceListOfPortfolioGroupSearchResult';
 export * from './pagedResourceListOfPortfolioSearchResult';
-export * from './pagedResourceListOfPropertyDefinition';
+export * from './pagedResourceListOfPropertyDefinitionSearchResult';
 export * from './payReceive';
 export * from './periodType';
 export * from './perpetualEntityState';
@@ -207,6 +207,7 @@ export * from './pricingOptions';
 export * from './processedCommand';
 export * from './property';
 export * from './propertyDefinition';
+export * from './propertyDefinitionSearchResult';
 export * from './propertyDefinitionType';
 export * from './propertyDomain';
 export * from './propertyFilter';
@@ -548,7 +549,7 @@ import { PagedResourceListOfOrder } from './pagedResourceListOfOrder';
 import { PagedResourceListOfPerson } from './pagedResourceListOfPerson';
 import { PagedResourceListOfPortfolioGroupSearchResult } from './pagedResourceListOfPortfolioGroupSearchResult';
 import { PagedResourceListOfPortfolioSearchResult } from './pagedResourceListOfPortfolioSearchResult';
-import { PagedResourceListOfPropertyDefinition } from './pagedResourceListOfPropertyDefinition';
+import { PagedResourceListOfPropertyDefinitionSearchResult } from './pagedResourceListOfPropertyDefinitionSearchResult';
 import { PayReceive } from './payReceive';
 import { PeriodType } from './periodType';
 import { PerpetualEntityState } from './perpetualEntityState';
@@ -574,6 +575,7 @@ import { PricingOptions } from './pricingOptions';
 import { ProcessedCommand } from './processedCommand';
 import { Property } from './property';
 import { PropertyDefinition } from './propertyDefinition';
+import { PropertyDefinitionSearchResult } from './propertyDefinitionSearchResult';
 import { PropertyDefinitionType } from './propertyDefinitionType';
 import { PropertyDomain } from './propertyDomain';
 import { PropertyFilter } from './propertyFilter';
@@ -819,6 +821,12 @@ let enumsMap: {[index: string]: any} = {
         "PropertyDefinition.DomainEnum": PropertyDefinition.DomainEnum,
         "PropertyDefinition.LifeTimeEnum": PropertyDefinition.LifeTimeEnum,
         "PropertyDefinition.PropertyDefinitionTypeEnum": PropertyDefinition.PropertyDefinitionTypeEnum,
+        "PropertyDefinitionSearchResult.ValueTypeEnum": PropertyDefinitionSearchResult.ValueTypeEnum,
+        "PropertyDefinitionSearchResult.TypeEnum": PropertyDefinitionSearchResult.TypeEnum,
+        "PropertyDefinitionSearchResult.UnitSchemaEnum": PropertyDefinitionSearchResult.UnitSchemaEnum,
+        "PropertyDefinitionSearchResult.DomainEnum": PropertyDefinitionSearchResult.DomainEnum,
+        "PropertyDefinitionSearchResult.LifeTimeEnum": PropertyDefinitionSearchResult.LifeTimeEnum,
+        "PropertyDefinitionSearchResult.PropertyDefinitionTypeEnum": PropertyDefinitionSearchResult.PropertyDefinitionTypeEnum,
         "PropertyFilter.OperatorEnum": PropertyFilter.OperatorEnum,
         "PropertyFilter.RightOperandTypeEnum": PropertyFilter.RightOperandTypeEnum,
         "QuoteSeriesId.InstrumentIdTypeEnum": QuoteSeriesId.InstrumentIdTypeEnum,
@@ -1023,7 +1031,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfPerson": PagedResourceListOfPerson,
     "PagedResourceListOfPortfolioGroupSearchResult": PagedResourceListOfPortfolioGroupSearchResult,
     "PagedResourceListOfPortfolioSearchResult": PagedResourceListOfPortfolioSearchResult,
-    "PagedResourceListOfPropertyDefinition": PagedResourceListOfPropertyDefinition,
+    "PagedResourceListOfPropertyDefinitionSearchResult": PagedResourceListOfPropertyDefinitionSearchResult,
     "PayReceive": PayReceive,
     "PeriodType": PeriodType,
     "PerpetualEntityState": PerpetualEntityState,
@@ -1049,6 +1057,7 @@ let typeMap: {[index: string]: any} = {
     "ProcessedCommand": ProcessedCommand,
     "Property": Property,
     "PropertyDefinition": PropertyDefinition,
+    "PropertyDefinitionSearchResult": PropertyDefinitionSearchResult,
     "PropertyDefinitionType": PropertyDefinitionType,
     "PropertyDomain": PropertyDomain,
     "PropertyFilter": PropertyFilter,

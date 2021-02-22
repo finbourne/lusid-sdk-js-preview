@@ -10,16 +10,230 @@
  * Do not edit the class manually.
  */
 
+import { Link } from './link';
+import { ResourceId } from './resourceId';
 
-export class QuoteInstrumentIdType {
+/**
+* A property definition search result
+*/
+export class PropertyDefinitionSearchResult {
+    /**
+    * The specific Uniform Resource Identifier (URI) for this resource at the requested effective and asAt datetime.
+    */
+    'href'?: string;
+    /**
+    * The property key which uniquely identifies the property. The format for the property key is {domain}/{scope}/{code}, e.g. \'Portfolio/Manager/Id\'.
+    */
+    'key'?: string;
+    /**
+    * The type of values that can be associated with this property. This is defined by the property\'s data type. The available values are: String, Int, Decimal, DateTime, Boolean, Map, List, PropertyArray, Percentage, Code, Id, Uri, CurrencyAndAmount, TradePrice, Currency, MetricValue, ResourceId, ResultValue, CutLocalTime, DateOrCutLabel
+    */
+    'valueType'?: PropertyDefinitionSearchResult.ValueTypeEnum;
+    /**
+    * The display name of the property.
+    */
+    'displayName'?: string;
+    'dataTypeId'?: ResourceId;
+    /**
+    * The type of the property. The available values are: Label, Metric, Information
+    */
+    'type'?: PropertyDefinitionSearchResult.TypeEnum;
+    /**
+    * The units that can be associated with the property\'s values. This is defined by the property\'s data type. The available values are: NoUnits, Basic, Iso4217Currency
+    */
+    'unitSchema'?: PropertyDefinitionSearchResult.UnitSchemaEnum;
+    /**
+    * The domain that the property exists in. The available values are: NotDefined, Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, CutLabelDefinition, Analytic, PortfolioGroup, Person, AccessMetadata, Order, UnitResult, MarketData, ConfigurationRecipe, Allocation, Calendar, LegalEntity
+    */
+    'domain'?: PropertyDefinitionSearchResult.DomainEnum;
+    /**
+    * The scope that the property exists in.
+    */
+    'scope'?: string;
+    /**
+    * The code of the property. Together with the domain and scope this uniquely identifies the property.
+    */
+    'code'?: string;
+    /**
+    * Whether or not a value is always required for this property.
+    */
+    'valueRequired'?: boolean;
+    /**
+    * Describes how the property\'s values can change over time. The available values are: Perpetual, TimeVariant
+    */
+    'lifeTime'?: PropertyDefinitionSearchResult.LifeTimeEnum;
+    /**
+    * Describes the uniqueness and cardinality of the property for entity objects under the property domain specified in Key.
+    */
+    'constraintStyle'?: string;
+    /**
+    * The definition type (DerivedDefinition or Definition). The available values are: ValueProperty, DerivedDefinition
+    */
+    'propertyDefinitionType'?: PropertyDefinitionSearchResult.PropertyDefinitionTypeEnum;
+    /**
+    * A brief description of what a property of this property definition contains.
+    */
+    'propertyDescription'?: string;
+    /**
+    * The rule that defines how data is composed for a derived property.
+    */
+    'derivationFormula'?: string;
+    'links'?: Array<Link>;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-    ];
+        {
+            "name": "href",
+            "baseName": "href",
+            "type": "string"
+        },
+        {
+            "name": "key",
+            "baseName": "key",
+            "type": "string"
+        },
+        {
+            "name": "valueType",
+            "baseName": "valueType",
+            "type": "PropertyDefinitionSearchResult.ValueTypeEnum"
+        },
+        {
+            "name": "displayName",
+            "baseName": "displayName",
+            "type": "string"
+        },
+        {
+            "name": "dataTypeId",
+            "baseName": "dataTypeId",
+            "type": "ResourceId"
+        },
+        {
+            "name": "type",
+            "baseName": "type",
+            "type": "PropertyDefinitionSearchResult.TypeEnum"
+        },
+        {
+            "name": "unitSchema",
+            "baseName": "unitSchema",
+            "type": "PropertyDefinitionSearchResult.UnitSchemaEnum"
+        },
+        {
+            "name": "domain",
+            "baseName": "domain",
+            "type": "PropertyDefinitionSearchResult.DomainEnum"
+        },
+        {
+            "name": "scope",
+            "baseName": "scope",
+            "type": "string"
+        },
+        {
+            "name": "code",
+            "baseName": "code",
+            "type": "string"
+        },
+        {
+            "name": "valueRequired",
+            "baseName": "valueRequired",
+            "type": "boolean"
+        },
+        {
+            "name": "lifeTime",
+            "baseName": "lifeTime",
+            "type": "PropertyDefinitionSearchResult.LifeTimeEnum"
+        },
+        {
+            "name": "constraintStyle",
+            "baseName": "constraintStyle",
+            "type": "string"
+        },
+        {
+            "name": "propertyDefinitionType",
+            "baseName": "propertyDefinitionType",
+            "type": "PropertyDefinitionSearchResult.PropertyDefinitionTypeEnum"
+        },
+        {
+            "name": "propertyDescription",
+            "baseName": "propertyDescription",
+            "type": "string"
+        },
+        {
+            "name": "derivationFormula",
+            "baseName": "derivationFormula",
+            "type": "string"
+        },
+        {
+            "name": "links",
+            "baseName": "links",
+            "type": "Array<Link>"
+        }    ];
 
     static getAttributeTypeMap() {
-        return QuoteInstrumentIdType.attributeTypeMap;
+        return PropertyDefinitionSearchResult.attributeTypeMap;
     }
 }
 
+export namespace PropertyDefinitionSearchResult {
+    export enum ValueTypeEnum {
+        String = <any> 'String',
+        Int = <any> 'Int',
+        Decimal = <any> 'Decimal',
+        DateTime = <any> 'DateTime',
+        Boolean = <any> 'Boolean',
+        Map = <any> 'Map',
+        List = <any> 'List',
+        PropertyArray = <any> 'PropertyArray',
+        Percentage = <any> 'Percentage',
+        Code = <any> 'Code',
+        Id = <any> 'Id',
+        Uri = <any> 'Uri',
+        CurrencyAndAmount = <any> 'CurrencyAndAmount',
+        TradePrice = <any> 'TradePrice',
+        Currency = <any> 'Currency',
+        MetricValue = <any> 'MetricValue',
+        ResourceId = <any> 'ResourceId',
+        ResultValue = <any> 'ResultValue',
+        CutLocalTime = <any> 'CutLocalTime',
+        DateOrCutLabel = <any> 'DateOrCutLabel'
+    }
+    export enum TypeEnum {
+        Label = <any> 'Label',
+        Metric = <any> 'Metric',
+        Information = <any> 'Information'
+    }
+    export enum UnitSchemaEnum {
+        NoUnits = <any> 'NoUnits',
+        Basic = <any> 'Basic',
+        Iso4217Currency = <any> 'Iso4217Currency'
+    }
+    export enum DomainEnum {
+        NotDefined = <any> 'NotDefined',
+        Transaction = <any> 'Transaction',
+        Portfolio = <any> 'Portfolio',
+        Holding = <any> 'Holding',
+        ReferenceHolding = <any> 'ReferenceHolding',
+        TransactionConfiguration = <any> 'TransactionConfiguration',
+        Instrument = <any> 'Instrument',
+        CutLabelDefinition = <any> 'CutLabelDefinition',
+        Analytic = <any> 'Analytic',
+        PortfolioGroup = <any> 'PortfolioGroup',
+        Person = <any> 'Person',
+        AccessMetadata = <any> 'AccessMetadata',
+        Order = <any> 'Order',
+        UnitResult = <any> 'UnitResult',
+        MarketData = <any> 'MarketData',
+        ConfigurationRecipe = <any> 'ConfigurationRecipe',
+        Allocation = <any> 'Allocation',
+        Calendar = <any> 'Calendar',
+        LegalEntity = <any> 'LegalEntity'
+    }
+    export enum LifeTimeEnum {
+        Perpetual = <any> 'Perpetual',
+        TimeVariant = <any> 'TimeVariant'
+    }
+    export enum PropertyDefinitionTypeEnum {
+        ValueProperty = <any> 'ValueProperty',
+        DerivedDefinition = <any> 'DerivedDefinition'
+    }
+}
