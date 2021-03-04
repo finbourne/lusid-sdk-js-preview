@@ -10,54 +10,79 @@
  * Do not edit the class manually.
  */
 
+import { CashPerpetualAllOf } from './cashPerpetualAllOf';
+import { LusidInstrument } from './lusidInstrument';
 
 /**
-* A list of Aggregated Returns.
+* Cash Instrument; LUSID representation of a perpetual cash instrument.
 */
-export class AggregatedReturn {
+export class CashPerpetual extends LusidInstrument {
     /**
-    * The effectiveAt for the return.
+    * The start date of the instrument. This is normally synonymous with the trade-date.
     */
-    'effectiveAt': Date;
+    'startDate': Date;
     /**
-    * The market value.
+    * The domestic currency of the instrument.
     */
-    'marketValue': number;
+    'domCcy': string;
     /**
-    * The value for the specified metric.
+    * The face-value or principal for the cash at outset.
     */
-    'metricsValue': { [key: string]: number; };
+    'principal': number;
     /**
-    * Show the aggregated output returns on a Daily or Monthly period.
+    * The available values are: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashflowLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CashSettled
     */
-    'frequency'?: string;
+    'instrumentType': CashPerpetual.InstrumentTypeEnum;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "effectiveAt",
-            "baseName": "effectiveAt",
+            "name": "startDate",
+            "baseName": "startDate",
             "type": "Date"
         },
         {
-            "name": "marketValue",
-            "baseName": "marketValue",
+            "name": "domCcy",
+            "baseName": "domCcy",
+            "type": "string"
+        },
+        {
+            "name": "principal",
+            "baseName": "principal",
             "type": "number"
         },
         {
-            "name": "metricsValue",
-            "baseName": "metricsValue",
-            "type": "{ [key: string]: number; }"
-        },
-        {
-            "name": "frequency",
-            "baseName": "frequency",
-            "type": "string"
+            "name": "instrumentType",
+            "baseName": "instrumentType",
+            "type": "CashPerpetual.InstrumentTypeEnum"
         }    ];
 
     static getAttributeTypeMap() {
-        return AggregatedReturn.attributeTypeMap;
+        return super.getAttributeTypeMap().concat(CashPerpetual.attributeTypeMap);
     }
 }
 
+export namespace CashPerpetual {
+    export enum InstrumentTypeEnum {
+        QuotedSecurity = <any> 'QuotedSecurity',
+        InterestRateSwap = <any> 'InterestRateSwap',
+        FxForward = <any> 'FxForward',
+        Future = <any> 'Future',
+        ExoticInstrument = <any> 'ExoticInstrument',
+        FxOption = <any> 'FxOption',
+        CreditDefaultSwap = <any> 'CreditDefaultSwap',
+        InterestRateSwaption = <any> 'InterestRateSwaption',
+        Bond = <any> 'Bond',
+        EquityOption = <any> 'EquityOption',
+        FixedLeg = <any> 'FixedLeg',
+        FloatingLeg = <any> 'FloatingLeg',
+        BespokeCashflowLeg = <any> 'BespokeCashflowLeg',
+        Unknown = <any> 'Unknown',
+        TermDeposit = <any> 'TermDeposit',
+        ContractForDifference = <any> 'ContractForDifference',
+        EquitySwap = <any> 'EquitySwap',
+        CashPerpetual = <any> 'CashPerpetual',
+        CashSettled = <any> 'CashSettled'
+    }
+}

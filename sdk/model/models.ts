@@ -25,6 +25,8 @@ export * from './bond';
 export * from './bondAllOf';
 export * from './calendar';
 export * from './calendarDate';
+export * from './cashPerpetual';
+export * from './cashPerpetualAllOf';
 export * from './cdsFlowConventions';
 export * from './cdsProtectionDetailSpecification';
 export * from './cdsRestructuringType';
@@ -393,6 +395,8 @@ import { Bond } from './bond';
 import { BondAllOf } from './bondAllOf';
 import { Calendar } from './calendar';
 import { CalendarDate } from './calendarDate';
+import { CashPerpetual } from './cashPerpetual';
+import { CashPerpetualAllOf } from './cashPerpetualAllOf';
 import { CdsFlowConventions } from './cdsFlowConventions';
 import { CdsProtectionDetailSpecification } from './cdsProtectionDetailSpecification';
 import { CdsRestructuringType } from './cdsRestructuringType';
@@ -749,6 +753,8 @@ let enumsMap: {[index: string]: any} = {
         "AggregationQuery.TypeEnum": AggregationQuery.TypeEnum,
         "Bond.InstrumentTypeEnum": Bond.InstrumentTypeEnum,
         "BondAllOf.InstrumentTypeEnum": BondAllOf.InstrumentTypeEnum,
+        "CashPerpetual.InstrumentTypeEnum": CashPerpetual.InstrumentTypeEnum,
+        "CashPerpetualAllOf.InstrumentTypeEnum": CashPerpetualAllOf.InstrumentTypeEnum,
         "CdsProtectionDetailSpecification.SeniorityEnum": CdsProtectionDetailSpecification.SeniorityEnum,
         "CdsProtectionDetailSpecification.RestructuringTypeEnum": CdsProtectionDetailSpecification.RestructuringTypeEnum,
         "CompletePortfolio.TypeEnum": CompletePortfolio.TypeEnum,
@@ -875,6 +881,8 @@ let typeMap: {[index: string]: any} = {
     "BondAllOf": BondAllOf,
     "Calendar": Calendar,
     "CalendarDate": CalendarDate,
+    "CashPerpetual": CashPerpetual,
+    "CashPerpetualAllOf": CashPerpetualAllOf,
     "CdsFlowConventions": CdsFlowConventions,
     "CdsProtectionDetailSpecification": CdsProtectionDetailSpecification,
     "CdsRestructuringType": CdsRestructuringType,
