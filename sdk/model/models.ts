@@ -21,6 +21,9 @@ export * from './allocationSetRequest';
 export * from './annulQuotesResponse';
 export * from './annulSingleStructuredDataResponse';
 export * from './annulStructuredDataResponse';
+export * from './basket';
+export * from './basketAllOf';
+export * from './basketIdentifier';
 export * from './bond';
 export * from './bondAllOf';
 export * from './calendar';
@@ -28,6 +31,8 @@ export * from './calendarDate';
 export * from './cashPerpetual';
 export * from './cashPerpetualAllOf';
 export * from './cdsFlowConventions';
+export * from './cdsIndex';
+export * from './cdsIndexAllOf';
 export * from './cdsProtectionDetailSpecification';
 export * from './cdsRestructuringType';
 export * from './cdsSeniority';
@@ -365,6 +370,7 @@ export * from './versionedResourceListOfPortfolioHolding';
 export * from './versionedResourceListOfTransaction';
 export * from './weekendMask';
 export * from './weightedInstrument';
+export * from './weightedInstruments';
 
 import localVarRequest = require('request');
 
@@ -391,6 +397,9 @@ import { AllocationSetRequest } from './allocationSetRequest';
 import { AnnulQuotesResponse } from './annulQuotesResponse';
 import { AnnulSingleStructuredDataResponse } from './annulSingleStructuredDataResponse';
 import { AnnulStructuredDataResponse } from './annulStructuredDataResponse';
+import { Basket } from './basket';
+import { BasketAllOf } from './basketAllOf';
+import { BasketIdentifier } from './basketIdentifier';
 import { Bond } from './bond';
 import { BondAllOf } from './bondAllOf';
 import { Calendar } from './calendar';
@@ -398,6 +407,8 @@ import { CalendarDate } from './calendarDate';
 import { CashPerpetual } from './cashPerpetual';
 import { CashPerpetualAllOf } from './cashPerpetualAllOf';
 import { CdsFlowConventions } from './cdsFlowConventions';
+import { CdsIndex } from './cdsIndex';
+import { CdsIndexAllOf } from './cdsIndexAllOf';
 import { CdsProtectionDetailSpecification } from './cdsProtectionDetailSpecification';
 import { CdsRestructuringType } from './cdsRestructuringType';
 import { CdsSeniority } from './cdsSeniority';
@@ -735,6 +746,7 @@ import { VersionedResourceListOfPortfolioHolding } from './versionedResourceList
 import { VersionedResourceListOfTransaction } from './versionedResourceListOfTransaction';
 import { WeekendMask } from './weekendMask';
 import { WeightedInstrument } from './weightedInstrument';
+import { WeightedInstruments } from './weightedInstruments';
 
 /* tslint:disable:no-unused-variable */
 let primitives = [
@@ -751,10 +763,14 @@ let primitives = [
 let enumsMap: {[index: string]: any} = {
         "AggregateSpec.OpEnum": AggregateSpec.OpEnum,
         "AggregationQuery.TypeEnum": AggregationQuery.TypeEnum,
+        "Basket.InstrumentTypeEnum": Basket.InstrumentTypeEnum,
+        "BasketAllOf.InstrumentTypeEnum": BasketAllOf.InstrumentTypeEnum,
         "Bond.InstrumentTypeEnum": Bond.InstrumentTypeEnum,
         "BondAllOf.InstrumentTypeEnum": BondAllOf.InstrumentTypeEnum,
         "CashPerpetual.InstrumentTypeEnum": CashPerpetual.InstrumentTypeEnum,
         "CashPerpetualAllOf.InstrumentTypeEnum": CashPerpetualAllOf.InstrumentTypeEnum,
+        "CdsIndex.InstrumentTypeEnum": CdsIndex.InstrumentTypeEnum,
+        "CdsIndexAllOf.InstrumentTypeEnum": CdsIndexAllOf.InstrumentTypeEnum,
         "CdsProtectionDetailSpecification.SeniorityEnum": CdsProtectionDetailSpecification.SeniorityEnum,
         "CdsProtectionDetailSpecification.RestructuringTypeEnum": CdsProtectionDetailSpecification.RestructuringTypeEnum,
         "CompletePortfolio.TypeEnum": CompletePortfolio.TypeEnum,
@@ -877,6 +893,9 @@ let typeMap: {[index: string]: any} = {
     "AnnulQuotesResponse": AnnulQuotesResponse,
     "AnnulSingleStructuredDataResponse": AnnulSingleStructuredDataResponse,
     "AnnulStructuredDataResponse": AnnulStructuredDataResponse,
+    "Basket": Basket,
+    "BasketAllOf": BasketAllOf,
+    "BasketIdentifier": BasketIdentifier,
     "Bond": Bond,
     "BondAllOf": BondAllOf,
     "Calendar": Calendar,
@@ -884,6 +903,8 @@ let typeMap: {[index: string]: any} = {
     "CashPerpetual": CashPerpetual,
     "CashPerpetualAllOf": CashPerpetualAllOf,
     "CdsFlowConventions": CdsFlowConventions,
+    "CdsIndex": CdsIndex,
+    "CdsIndexAllOf": CdsIndexAllOf,
     "CdsProtectionDetailSpecification": CdsProtectionDetailSpecification,
     "CdsRestructuringType": CdsRestructuringType,
     "CdsSeniority": CdsSeniority,
@@ -1221,6 +1242,7 @@ let typeMap: {[index: string]: any} = {
     "VersionedResourceListOfTransaction": VersionedResourceListOfTransaction,
     "WeekendMask": WeekendMask,
     "WeightedInstrument": WeightedInstrument,
+    "WeightedInstruments": WeightedInstruments,
 }
 
 export class ObjectSerializer {
