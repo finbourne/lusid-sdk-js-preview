@@ -10,120 +10,34 @@
  * Do not edit the class manually.
  */
 
-import { Basket } from './basket';
-import { CdsFlowConventions } from './cdsFlowConventions';
-import { CdsIndexAllOf } from './cdsIndexAllOf';
-import { FlowConventionName } from './flowConventionName';
-import { LusidInstrument } from './lusidInstrument';
+import { Property } from './property';
 
-/**
-* IL CDS Index Instrument; Lusid-ibor internal representation of a Credit Default Swap Index instrument  Calculation information and reference data can be obtained from Markit, e.g. https://www.markit.com/Documentation/Product/ITraxx
-*/
-export class CdsIndex extends LusidInstrument {
+export class UpsertOrderPropertiesRequest {
     /**
-    * The start date of the instrument. This is normally synonymous with the trade-date.
+    * Client-defined properties associated with this order.
     */
-    'startDate': Date;
+    'properties': Array<Property>;
     /**
-    * The final maturity date of the instrument. This means the last date on which the instruments makes a payment of any amount.  For the avoidance of doubt, that is not necessarily prior to its last sensitivity date for the purposes of risk; e.g. instruments such as  Constant Maturity Swaps (CMS) often have sensitivities to rates beyond their last payment date
+    * Uniquely identifies this order.
     */
-    'maturityDate': Date;
-    'flowConventions': CdsFlowConventions;
-    /**
-    * The coupon rate paid on each payment date of the premium leg as a fraction of 100 percent, e.g. \"0.05\" meaning 500 basis points or 5%.  For a standard corporate CDS (North American) this must be either 100bps or 500bps.
-    */
-    'couponRate': number;
-    /**
-    * external market codes and identifiers for the cds index, e.g. a RED code, BBG ID or ICE code.
-    */
-    'identifiers': { [key: string]: string; };
-    'basket': Basket;
-    'conventionName': FlowConventionName;
-    /**
-    * The notional quantity that applies to both the premium and protection legs
-    */
-    'notional': number;
-    /**
-    * The available values are: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashflowLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CashSettled, CdsIndex, Basket
-    */
-    'instrumentType': CdsIndex.InstrumentTypeEnum;
+    'id': string;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "startDate",
-            "baseName": "startDate",
-            "type": "Date"
+            "name": "properties",
+            "baseName": "properties",
+            "type": "Array<Property>"
         },
         {
-            "name": "maturityDate",
-            "baseName": "maturityDate",
-            "type": "Date"
-        },
-        {
-            "name": "flowConventions",
-            "baseName": "flowConventions",
-            "type": "CdsFlowConventions"
-        },
-        {
-            "name": "couponRate",
-            "baseName": "couponRate",
-            "type": "number"
-        },
-        {
-            "name": "identifiers",
-            "baseName": "identifiers",
-            "type": "{ [key: string]: string; }"
-        },
-        {
-            "name": "basket",
-            "baseName": "basket",
-            "type": "Basket"
-        },
-        {
-            "name": "conventionName",
-            "baseName": "conventionName",
-            "type": "FlowConventionName"
-        },
-        {
-            "name": "notional",
-            "baseName": "notional",
-            "type": "number"
-        },
-        {
-            "name": "instrumentType",
-            "baseName": "instrumentType",
-            "type": "CdsIndex.InstrumentTypeEnum"
+            "name": "id",
+            "baseName": "id",
+            "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
-        return super.getAttributeTypeMap().concat(CdsIndex.attributeTypeMap);
+        return UpsertOrderPropertiesRequest.attributeTypeMap;
     }
 }
 
-export namespace CdsIndex {
-    export enum InstrumentTypeEnum {
-        QuotedSecurity = <any> 'QuotedSecurity',
-        InterestRateSwap = <any> 'InterestRateSwap',
-        FxForward = <any> 'FxForward',
-        Future = <any> 'Future',
-        ExoticInstrument = <any> 'ExoticInstrument',
-        FxOption = <any> 'FxOption',
-        CreditDefaultSwap = <any> 'CreditDefaultSwap',
-        InterestRateSwaption = <any> 'InterestRateSwaption',
-        Bond = <any> 'Bond',
-        EquityOption = <any> 'EquityOption',
-        FixedLeg = <any> 'FixedLeg',
-        FloatingLeg = <any> 'FloatingLeg',
-        BespokeCashflowLeg = <any> 'BespokeCashflowLeg',
-        Unknown = <any> 'Unknown',
-        TermDeposit = <any> 'TermDeposit',
-        ContractForDifference = <any> 'ContractForDifference',
-        EquitySwap = <any> 'EquitySwap',
-        CashPerpetual = <any> 'CashPerpetual',
-        CashSettled = <any> 'CashSettled',
-        CdsIndex = <any> 'CdsIndex',
-        Basket = <any> 'Basket'
-    }
-}
