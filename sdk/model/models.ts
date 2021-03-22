@@ -54,6 +54,7 @@ export * from './counterparty';
 export * from './createCalendarRequest';
 export * from './createCorporateActionSourceRequest';
 export * from './createCutLabelDefinitionRequest';
+export * from './createDataMapRequest';
 export * from './createDataTypeRequest';
 export * from './createDateRequest';
 export * from './createDerivedPropertyDefinitionRequest';
@@ -75,6 +76,7 @@ export * from './currencyAndAmount';
 export * from './cutLabelDefinition';
 export * from './cutLocalTime';
 export * from './dataDefinition';
+export * from './dataMapKey';
 export * from './dataMapping';
 export * from './dataType';
 export * from './dataTypeValueRange';
@@ -115,6 +117,7 @@ export * from './fxOptionAllOf';
 export * from './getCdsFlowConventionsResponse';
 export * from './getCounterpartyResponse';
 export * from './getCreditSupportAnnexResponse';
+export * from './getDataMapResponse';
 export * from './getFlowConventionsResponse';
 export * from './getIndexConventionResponse';
 export * from './getInstrumentsResponse';
@@ -428,6 +431,7 @@ import { Counterparty } from './counterparty';
 import { CreateCalendarRequest } from './createCalendarRequest';
 import { CreateCorporateActionSourceRequest } from './createCorporateActionSourceRequest';
 import { CreateCutLabelDefinitionRequest } from './createCutLabelDefinitionRequest';
+import { CreateDataMapRequest } from './createDataMapRequest';
 import { CreateDataTypeRequest } from './createDataTypeRequest';
 import { CreateDateRequest } from './createDateRequest';
 import { CreateDerivedPropertyDefinitionRequest } from './createDerivedPropertyDefinitionRequest';
@@ -449,6 +453,7 @@ import { CurrencyAndAmount } from './currencyAndAmount';
 import { CutLabelDefinition } from './cutLabelDefinition';
 import { CutLocalTime } from './cutLocalTime';
 import { DataDefinition } from './dataDefinition';
+import { DataMapKey } from './dataMapKey';
 import { DataMapping } from './dataMapping';
 import { DataType } from './dataType';
 import { DataTypeValueRange } from './dataTypeValueRange';
@@ -489,6 +494,7 @@ import { FxOptionAllOf } from './fxOptionAllOf';
 import { GetCdsFlowConventionsResponse } from './getCdsFlowConventionsResponse';
 import { GetCounterpartyResponse } from './getCounterpartyResponse';
 import { GetCreditSupportAnnexResponse } from './getCreditSupportAnnexResponse';
+import { GetDataMapResponse } from './getDataMapResponse';
 import { GetFlowConventionsResponse } from './getFlowConventionsResponse';
 import { GetIndexConventionResponse } from './getIndexConventionResponse';
 import { GetInstrumentsResponse } from './getInstrumentsResponse';
@@ -922,6 +928,7 @@ let typeMap: {[index: string]: any} = {
     "CreateCalendarRequest": CreateCalendarRequest,
     "CreateCorporateActionSourceRequest": CreateCorporateActionSourceRequest,
     "CreateCutLabelDefinitionRequest": CreateCutLabelDefinitionRequest,
+    "CreateDataMapRequest": CreateDataMapRequest,
     "CreateDataTypeRequest": CreateDataTypeRequest,
     "CreateDateRequest": CreateDateRequest,
     "CreateDerivedPropertyDefinitionRequest": CreateDerivedPropertyDefinitionRequest,
@@ -943,6 +950,7 @@ let typeMap: {[index: string]: any} = {
     "CutLabelDefinition": CutLabelDefinition,
     "CutLocalTime": CutLocalTime,
     "DataDefinition": DataDefinition,
+    "DataMapKey": DataMapKey,
     "DataMapping": DataMapping,
     "DataType": DataType,
     "DataTypeValueRange": DataTypeValueRange,
@@ -983,6 +991,7 @@ let typeMap: {[index: string]: any} = {
     "GetCdsFlowConventionsResponse": GetCdsFlowConventionsResponse,
     "GetCounterpartyResponse": GetCounterpartyResponse,
     "GetCreditSupportAnnexResponse": GetCreditSupportAnnexResponse,
+    "GetDataMapResponse": GetDataMapResponse,
     "GetFlowConventionsResponse": GetFlowConventionsResponse,
     "GetIndexConventionResponse": GetIndexConventionResponse,
     "GetInstrumentsResponse": GetInstrumentsResponse,
