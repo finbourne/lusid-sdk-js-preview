@@ -39,6 +39,7 @@ export * from './cdsSeniority';
 export * from './change';
 export * from './completePortfolio';
 export * from './completeRelation';
+export * from './completeRelationship';
 export * from './configurationRecipe';
 export * from './configurationRecipeSnippet';
 export * from './constituentsAdjustmentHeader';
@@ -66,6 +67,8 @@ export * from './createRecipeRequest';
 export * from './createReferencePortfolioRequest';
 export * from './createRelationDefinitionRequest';
 export * from './createRelationRequest';
+export * from './createRelationshipDefinitionRequest';
+export * from './createRelationshipRequest';
 export * from './createTransactionPortfolioRequest';
 export * from './createUnitDefinition';
 export * from './creditDefaultSwap';
@@ -87,6 +90,7 @@ export * from './dayOfWeek';
 export * from './deleteInstrumentPropertiesResponse';
 export * from './deleteInstrumentResponse';
 export * from './deleteRelationRequest';
+export * from './deleteRelationshipRequest';
 export * from './deletedEntityResponse';
 export * from './deliveryType';
 export * from './equityOption';
@@ -239,8 +243,11 @@ export * from './reconciliationLeftRightAddressKeyPair';
 export * from './referencePortfolioConstituent';
 export * from './referencePortfolioConstituentRequest';
 export * from './referencePortfolioWeightType';
+export * from './relatedEntity';
 export * from './relation';
 export * from './relationDefinition';
+export * from './relationship';
+export * from './relationshipDefinition';
 export * from './resourceId';
 export * from './resourceListOfAccessControlledResource';
 export * from './resourceListOfAccessMetadataValueOf';
@@ -274,6 +281,7 @@ export * from './resourceListOfQuote';
 export * from './resourceListOfQuoteAccessMetadataRule';
 export * from './resourceListOfReconciliationBreak';
 export * from './resourceListOfRelation';
+export * from './resourceListOfRelationship';
 export * from './resourceListOfReturn';
 export * from './resourceListOfScopeDefinition';
 export * from './resourceListOfString';
@@ -326,6 +334,7 @@ export * from './updateInstrumentIdentifierRequest';
 export * from './updatePortfolioGroupRequest';
 export * from './updatePortfolioRequest';
 export * from './updatePropertyDefinitionRequest';
+export * from './updateRelationshipDefinitionRequest';
 export * from './upsertCdsFlowConventionsRequest';
 export * from './upsertCorporateActionRequest';
 export * from './upsertCorporateActionsResponse';
@@ -416,6 +425,7 @@ import { CdsSeniority } from './cdsSeniority';
 import { Change } from './change';
 import { CompletePortfolio } from './completePortfolio';
 import { CompleteRelation } from './completeRelation';
+import { CompleteRelationship } from './completeRelationship';
 import { ConfigurationRecipe } from './configurationRecipe';
 import { ConfigurationRecipeSnippet } from './configurationRecipeSnippet';
 import { ConstituentsAdjustmentHeader } from './constituentsAdjustmentHeader';
@@ -443,6 +453,8 @@ import { CreateRecipeRequest } from './createRecipeRequest';
 import { CreateReferencePortfolioRequest } from './createReferencePortfolioRequest';
 import { CreateRelationDefinitionRequest } from './createRelationDefinitionRequest';
 import { CreateRelationRequest } from './createRelationRequest';
+import { CreateRelationshipDefinitionRequest } from './createRelationshipDefinitionRequest';
+import { CreateRelationshipRequest } from './createRelationshipRequest';
 import { CreateTransactionPortfolioRequest } from './createTransactionPortfolioRequest';
 import { CreateUnitDefinition } from './createUnitDefinition';
 import { CreditDefaultSwap } from './creditDefaultSwap';
@@ -464,6 +476,7 @@ import { DayOfWeek } from './dayOfWeek';
 import { DeleteInstrumentPropertiesResponse } from './deleteInstrumentPropertiesResponse';
 import { DeleteInstrumentResponse } from './deleteInstrumentResponse';
 import { DeleteRelationRequest } from './deleteRelationRequest';
+import { DeleteRelationshipRequest } from './deleteRelationshipRequest';
 import { DeletedEntityResponse } from './deletedEntityResponse';
 import { DeliveryType } from './deliveryType';
 import { EquityOption } from './equityOption';
@@ -616,8 +629,11 @@ import { ReconciliationLeftRightAddressKeyPair } from './reconciliationLeftRight
 import { ReferencePortfolioConstituent } from './referencePortfolioConstituent';
 import { ReferencePortfolioConstituentRequest } from './referencePortfolioConstituentRequest';
 import { ReferencePortfolioWeightType } from './referencePortfolioWeightType';
+import { RelatedEntity } from './relatedEntity';
 import { Relation } from './relation';
 import { RelationDefinition } from './relationDefinition';
+import { Relationship } from './relationship';
+import { RelationshipDefinition } from './relationshipDefinition';
 import { ResourceId } from './resourceId';
 import { ResourceListOfAccessControlledResource } from './resourceListOfAccessControlledResource';
 import { ResourceListOfAccessMetadataValueOf } from './resourceListOfAccessMetadataValueOf';
@@ -651,6 +667,7 @@ import { ResourceListOfQuote } from './resourceListOfQuote';
 import { ResourceListOfQuoteAccessMetadataRule } from './resourceListOfQuoteAccessMetadataRule';
 import { ResourceListOfReconciliationBreak } from './resourceListOfReconciliationBreak';
 import { ResourceListOfRelation } from './resourceListOfRelation';
+import { ResourceListOfRelationship } from './resourceListOfRelationship';
 import { ResourceListOfReturn } from './resourceListOfReturn';
 import { ResourceListOfScopeDefinition } from './resourceListOfScopeDefinition';
 import { ResourceListOfString } from './resourceListOfString';
@@ -703,6 +720,7 @@ import { UpdateInstrumentIdentifierRequest } from './updateInstrumentIdentifierR
 import { UpdatePortfolioGroupRequest } from './updatePortfolioGroupRequest';
 import { UpdatePortfolioRequest } from './updatePortfolioRequest';
 import { UpdatePropertyDefinitionRequest } from './updatePropertyDefinitionRequest';
+import { UpdateRelationshipDefinitionRequest } from './updateRelationshipDefinitionRequest';
 import { UpsertCdsFlowConventionsRequest } from './upsertCdsFlowConventionsRequest';
 import { UpsertCorporateActionRequest } from './upsertCorporateActionRequest';
 import { UpsertCorporateActionsResponse } from './upsertCorporateActionsResponse';
@@ -913,6 +931,7 @@ let typeMap: {[index: string]: any} = {
     "Change": Change,
     "CompletePortfolio": CompletePortfolio,
     "CompleteRelation": CompleteRelation,
+    "CompleteRelationship": CompleteRelationship,
     "ConfigurationRecipe": ConfigurationRecipe,
     "ConfigurationRecipeSnippet": ConfigurationRecipeSnippet,
     "ConstituentsAdjustmentHeader": ConstituentsAdjustmentHeader,
@@ -940,6 +959,8 @@ let typeMap: {[index: string]: any} = {
     "CreateReferencePortfolioRequest": CreateReferencePortfolioRequest,
     "CreateRelationDefinitionRequest": CreateRelationDefinitionRequest,
     "CreateRelationRequest": CreateRelationRequest,
+    "CreateRelationshipDefinitionRequest": CreateRelationshipDefinitionRequest,
+    "CreateRelationshipRequest": CreateRelationshipRequest,
     "CreateTransactionPortfolioRequest": CreateTransactionPortfolioRequest,
     "CreateUnitDefinition": CreateUnitDefinition,
     "CreditDefaultSwap": CreditDefaultSwap,
@@ -961,6 +982,7 @@ let typeMap: {[index: string]: any} = {
     "DeleteInstrumentPropertiesResponse": DeleteInstrumentPropertiesResponse,
     "DeleteInstrumentResponse": DeleteInstrumentResponse,
     "DeleteRelationRequest": DeleteRelationRequest,
+    "DeleteRelationshipRequest": DeleteRelationshipRequest,
     "DeletedEntityResponse": DeletedEntityResponse,
     "DeliveryType": DeliveryType,
     "EquityOption": EquityOption,
@@ -1113,8 +1135,11 @@ let typeMap: {[index: string]: any} = {
     "ReferencePortfolioConstituent": ReferencePortfolioConstituent,
     "ReferencePortfolioConstituentRequest": ReferencePortfolioConstituentRequest,
     "ReferencePortfolioWeightType": ReferencePortfolioWeightType,
+    "RelatedEntity": RelatedEntity,
     "Relation": Relation,
     "RelationDefinition": RelationDefinition,
+    "Relationship": Relationship,
+    "RelationshipDefinition": RelationshipDefinition,
     "ResourceId": ResourceId,
     "ResourceListOfAccessControlledResource": ResourceListOfAccessControlledResource,
     "ResourceListOfAccessMetadataValueOf": ResourceListOfAccessMetadataValueOf,
@@ -1148,6 +1173,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfQuoteAccessMetadataRule": ResourceListOfQuoteAccessMetadataRule,
     "ResourceListOfReconciliationBreak": ResourceListOfReconciliationBreak,
     "ResourceListOfRelation": ResourceListOfRelation,
+    "ResourceListOfRelationship": ResourceListOfRelationship,
     "ResourceListOfReturn": ResourceListOfReturn,
     "ResourceListOfScopeDefinition": ResourceListOfScopeDefinition,
     "ResourceListOfString": ResourceListOfString,
@@ -1200,6 +1226,7 @@ let typeMap: {[index: string]: any} = {
     "UpdatePortfolioGroupRequest": UpdatePortfolioGroupRequest,
     "UpdatePortfolioRequest": UpdatePortfolioRequest,
     "UpdatePropertyDefinitionRequest": UpdatePropertyDefinitionRequest,
+    "UpdateRelationshipDefinitionRequest": UpdateRelationshipDefinitionRequest,
     "UpsertCdsFlowConventionsRequest": UpsertCdsFlowConventionsRequest,
     "UpsertCorporateActionRequest": UpsertCorporateActionRequest,
     "UpsertCorporateActionsResponse": UpsertCorporateActionsResponse,

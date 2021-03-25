@@ -23,6 +23,8 @@ import {ReconciliationsApi} from './api/reconciliationsApi';
 import {ReferencePortfolioApi} from './api/referencePortfolioApi';
 import {RelationDefinitionsApi} from './api/relationDefinitionsApi';
 import {RelationsApi} from './api/relationsApi';
+import {RelationshipDefinitionsApi} from './api/relationshipDefinitionsApi';
+import {RelationshipsApi} from './api/relationshipsApi';
 import {SchemasApi} from './api/schemasApi';
 import {ScopesApi} from './api/scopesApi';
 import {SearchApi} from './api/searchApi';
@@ -57,6 +59,8 @@ export class Api {
     public referencePortfolio:  ReferencePortfolioApi
     public relationDefinitions:  RelationDefinitionsApi
     public relations:  RelationsApi
+    public relationshipDefinitions:  RelationshipDefinitionsApi
+    public relationships:  RelationshipsApi
     public schemas:  SchemasApi
     public scopes:  ScopesApi
     public search:  SearchApi
