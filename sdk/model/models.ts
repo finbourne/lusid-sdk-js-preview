@@ -85,7 +85,6 @@ export * from './dataType';
 export * from './dataTypeValueRange';
 export * from './dateAttributes';
 export * from './dateRange';
-export * from './dayCountConvention';
 export * from './dayOfWeek';
 export * from './deleteInstrumentPropertiesResponse';
 export * from './deleteInstrumentResponse';
@@ -471,7 +470,6 @@ import { DataType } from './dataType';
 import { DataTypeValueRange } from './dataTypeValueRange';
 import { DateAttributes } from './dateAttributes';
 import { DateRange } from './dateRange';
-import { DayCountConvention } from './dayCountConvention';
 import { DayOfWeek } from './dayOfWeek';
 import { DeleteInstrumentPropertiesResponse } from './deleteInstrumentPropertiesResponse';
 import { DeleteInstrumentResponse } from './deleteInstrumentResponse';
@@ -828,7 +826,6 @@ let enumsMap: {[index: string]: any} = {
         "FloatingLegAllOf.InstrumentTypeEnum": FloatingLegAllOf.InstrumentTypeEnum,
         "Future.InstrumentTypeEnum": Future.InstrumentTypeEnum,
         "FutureAllOf.InstrumentTypeEnum": FutureAllOf.InstrumentTypeEnum,
-        "FuturesContractDetails.ConventionEnum": FuturesContractDetails.ConventionEnum,
         "FxForward.InstrumentTypeEnum": FxForward.InstrumentTypeEnum,
         "FxForwardAllOf.InstrumentTypeEnum": FxForwardAllOf.InstrumentTypeEnum,
         "FxOption.InstrumentTypeEnum": FxOption.InstrumentTypeEnum,
@@ -977,7 +974,6 @@ let typeMap: {[index: string]: any} = {
     "DataTypeValueRange": DataTypeValueRange,
     "DateAttributes": DateAttributes,
     "DateRange": DateRange,
-    "DayCountConvention": DayCountConvention,
     "DayOfWeek": DayOfWeek,
     "DeleteInstrumentPropertiesResponse": DeleteInstrumentPropertiesResponse,
     "DeleteInstrumentResponse": DeleteInstrumentResponse,
