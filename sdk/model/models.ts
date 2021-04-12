@@ -13,6 +13,7 @@ export * from './aggregationOp';
 export * from './aggregationOptions';
 export * from './aggregationQuery';
 export * from './aggregationRequest';
+export * from './aggregationResponseNode';
 export * from './aggregationType';
 export * from './allocation';
 export * from './allocationRequest';
@@ -174,6 +175,7 @@ export * from './marketOptions';
 export * from './metricValue';
 export * from './modelSelection';
 export * from './movementType';
+export * from './nestedAggregationResponse';
 export * from './operandType';
 export * from './operator';
 export * from './optionType';
@@ -396,6 +398,7 @@ import { AggregationOp } from './aggregationOp';
 import { AggregationOptions } from './aggregationOptions';
 import { AggregationQuery } from './aggregationQuery';
 import { AggregationRequest } from './aggregationRequest';
+import { AggregationResponseNode } from './aggregationResponseNode';
 import { AggregationType } from './aggregationType';
 import { Allocation } from './allocation';
 import { AllocationRequest } from './allocationRequest';
@@ -557,6 +560,7 @@ import { MarketOptions } from './marketOptions';
 import { MetricValue } from './metricValue';
 import { ModelSelection } from './modelSelection';
 import { MovementType } from './movementType';
+import { NestedAggregationResponse } from './nestedAggregationResponse';
 import { OperandType } from './operandType';
 import { Operator } from './operator';
 import { OptionType } from './optionType';
@@ -898,6 +902,7 @@ let typeMap: {[index: string]: any} = {
     "AggregationOptions": AggregationOptions,
     "AggregationQuery": AggregationQuery,
     "AggregationRequest": AggregationRequest,
+    "AggregationResponseNode": AggregationResponseNode,
     "AggregationType": AggregationType,
     "Allocation": Allocation,
     "AllocationRequest": AllocationRequest,
@@ -1059,6 +1064,7 @@ let typeMap: {[index: string]: any} = {
     "MetricValue": MetricValue,
     "ModelSelection": ModelSelection,
     "MovementType": MovementType,
+    "NestedAggregationResponse": NestedAggregationResponse,
     "OperandType": OperandType,
     "Operator": Operator,
     "OptionType": OptionType,

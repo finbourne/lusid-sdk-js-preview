@@ -10,76 +10,67 @@
  * Do not edit the class manually.
  */
 
-import { DateAttributes } from './dateAttributes';
+import { AggregationMeasureFailureDetail } from './aggregationMeasureFailureDetail';
+import { AggregationResponseNode } from './aggregationResponseNode';
+import { Link } from './link';
+import { ResultDataSchema } from './resultDataSchema';
 
-export class CalendarDate {
+export class NestedAggregationResponse {
+    'aggregationEffectiveAt'?: Date;
+    'aggregationAsAt'?: Date;
     'href'?: string;
-    'dateIdentifier': string;
-    'fromUtc': Date;
-    'toUtc': Date;
-    'localDate': string;
-    'timezone': string;
-    'description': string;
-    'type': string;
-    'attributes': DateAttributes;
-    'sourceData': { [key: string]: string; };
+    'data'?: AggregationResponseNode;
+    'aggregationCurrency'?: string;
+    'dataSchema'?: ResultDataSchema;
+    'aggregationFailures'?: Array<AggregationMeasureFailureDetail>;
+    'links'?: Array<Link>;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+        {
+            "name": "aggregationEffectiveAt",
+            "baseName": "aggregationEffectiveAt",
+            "type": "Date"
+        },
+        {
+            "name": "aggregationAsAt",
+            "baseName": "aggregationAsAt",
+            "type": "Date"
+        },
         {
             "name": "href",
             "baseName": "href",
             "type": "string"
         },
         {
-            "name": "dateIdentifier",
-            "baseName": "dateIdentifier",
+            "name": "data",
+            "baseName": "data",
+            "type": "AggregationResponseNode"
+        },
+        {
+            "name": "aggregationCurrency",
+            "baseName": "aggregationCurrency",
             "type": "string"
         },
         {
-            "name": "fromUtc",
-            "baseName": "fromUtc",
-            "type": "Date"
+            "name": "dataSchema",
+            "baseName": "dataSchema",
+            "type": "ResultDataSchema"
         },
         {
-            "name": "toUtc",
-            "baseName": "toUtc",
-            "type": "Date"
+            "name": "aggregationFailures",
+            "baseName": "aggregationFailures",
+            "type": "Array<AggregationMeasureFailureDetail>"
         },
         {
-            "name": "localDate",
-            "baseName": "localDate",
-            "type": "string"
-        },
-        {
-            "name": "timezone",
-            "baseName": "timezone",
-            "type": "string"
-        },
-        {
-            "name": "description",
-            "baseName": "description",
-            "type": "string"
-        },
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "string"
-        },
-        {
-            "name": "attributes",
-            "baseName": "attributes",
-            "type": "DateAttributes"
-        },
-        {
-            "name": "sourceData",
-            "baseName": "sourceData",
-            "type": "{ [key: string]: string; }"
+            "name": "links",
+            "baseName": "links",
+            "type": "Array<Link>"
         }    ];
 
     static getAttributeTypeMap() {
-        return CalendarDate.attributeTypeMap;
+        return NestedAggregationResponse.attributeTypeMap;
     }
 }
 

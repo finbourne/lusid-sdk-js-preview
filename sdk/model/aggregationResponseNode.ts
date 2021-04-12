@@ -10,76 +10,46 @@
  * Do not edit the class manually.
  */
 
-import { DateAttributes } from './dateAttributes';
+import { AggregateSpec } from './aggregateSpec';
 
-export class CalendarDate {
-    'href'?: string;
-    'dateIdentifier': string;
-    'fromUtc': Date;
-    'toUtc': Date;
-    'localDate': string;
-    'timezone': string;
-    'description': string;
-    'type': string;
-    'attributes': DateAttributes;
-    'sourceData': { [key: string]: string; };
+export class AggregationResponseNode {
+    'key'?: AggregateSpec;
+    'value'?: string;
+    'depth'?: number;
+    'properties'?: { [key: string]: object; };
+    'children'?: Array<AggregationResponseNode>;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "href",
-            "baseName": "href",
+            "name": "key",
+            "baseName": "key",
+            "type": "AggregateSpec"
+        },
+        {
+            "name": "value",
+            "baseName": "value",
             "type": "string"
         },
         {
-            "name": "dateIdentifier",
-            "baseName": "dateIdentifier",
-            "type": "string"
+            "name": "depth",
+            "baseName": "depth",
+            "type": "number"
         },
         {
-            "name": "fromUtc",
-            "baseName": "fromUtc",
-            "type": "Date"
+            "name": "properties",
+            "baseName": "properties",
+            "type": "{ [key: string]: object; }"
         },
         {
-            "name": "toUtc",
-            "baseName": "toUtc",
-            "type": "Date"
-        },
-        {
-            "name": "localDate",
-            "baseName": "localDate",
-            "type": "string"
-        },
-        {
-            "name": "timezone",
-            "baseName": "timezone",
-            "type": "string"
-        },
-        {
-            "name": "description",
-            "baseName": "description",
-            "type": "string"
-        },
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "string"
-        },
-        {
-            "name": "attributes",
-            "baseName": "attributes",
-            "type": "DateAttributes"
-        },
-        {
-            "name": "sourceData",
-            "baseName": "sourceData",
-            "type": "{ [key: string]: string; }"
+            "name": "children",
+            "baseName": "children",
+            "type": "Array<AggregationResponseNode>"
         }    ];
 
     static getAttributeTypeMap() {
-        return CalendarDate.attributeTypeMap;
+        return AggregationResponseNode.attributeTypeMap;
     }
 }
 
