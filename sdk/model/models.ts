@@ -194,6 +194,7 @@ export * from './pagedResourceListOfPortfolioGroupSearchResult';
 export * from './pagedResourceListOfPortfolioSearchResult';
 export * from './pagedResourceListOfPropertyDefinitionSearchResult';
 export * from './payReceive';
+export * from './performanceReturn';
 export * from './periodType';
 export * from './perpetualEntityState';
 export * from './perpetualProperty';
@@ -267,6 +268,7 @@ export * from './resourceListOfIUnitDefinitionDto';
 export * from './resourceListOfInstrumentCashFlow';
 export * from './resourceListOfInstrumentIdTypeDescriptor';
 export * from './resourceListOfOrder';
+export * from './resourceListOfPerformanceReturn';
 export * from './resourceListOfPortfolio';
 export * from './resourceListOfPortfolioCashFlow';
 export * from './resourceListOfPortfolioGroup';
@@ -279,14 +281,12 @@ export * from './resourceListOfQuoteAccessMetadataRule';
 export * from './resourceListOfReconciliationBreak';
 export * from './resourceListOfRelation';
 export * from './resourceListOfRelationship';
-export * from './resourceListOfReturn';
 export * from './resourceListOfScopeDefinition';
 export * from './resourceListOfString';
 export * from './resourceListOfTransaction';
 export * from './resourceListOfValueType';
 export * from './resultDataKeyRule';
 export * from './resultDataSchema';
-export * from './return';
 export * from './schema';
 export * from './scopeDefinition';
 export * from './setPersonIdentifiersRequest';
@@ -577,6 +577,7 @@ import { PagedResourceListOfPortfolioGroupSearchResult } from './pagedResourceLi
 import { PagedResourceListOfPortfolioSearchResult } from './pagedResourceListOfPortfolioSearchResult';
 import { PagedResourceListOfPropertyDefinitionSearchResult } from './pagedResourceListOfPropertyDefinitionSearchResult';
 import { PayReceive } from './payReceive';
+import { PerformanceReturn } from './performanceReturn';
 import { PeriodType } from './periodType';
 import { PerpetualEntityState } from './perpetualEntityState';
 import { PerpetualProperty } from './perpetualProperty';
@@ -650,6 +651,7 @@ import { ResourceListOfIUnitDefinitionDto } from './resourceListOfIUnitDefinitio
 import { ResourceListOfInstrumentCashFlow } from './resourceListOfInstrumentCashFlow';
 import { ResourceListOfInstrumentIdTypeDescriptor } from './resourceListOfInstrumentIdTypeDescriptor';
 import { ResourceListOfOrder } from './resourceListOfOrder';
+import { ResourceListOfPerformanceReturn } from './resourceListOfPerformanceReturn';
 import { ResourceListOfPortfolio } from './resourceListOfPortfolio';
 import { ResourceListOfPortfolioCashFlow } from './resourceListOfPortfolioCashFlow';
 import { ResourceListOfPortfolioGroup } from './resourceListOfPortfolioGroup';
@@ -662,14 +664,12 @@ import { ResourceListOfQuoteAccessMetadataRule } from './resourceListOfQuoteAcce
 import { ResourceListOfReconciliationBreak } from './resourceListOfReconciliationBreak';
 import { ResourceListOfRelation } from './resourceListOfRelation';
 import { ResourceListOfRelationship } from './resourceListOfRelationship';
-import { ResourceListOfReturn } from './resourceListOfReturn';
 import { ResourceListOfScopeDefinition } from './resourceListOfScopeDefinition';
 import { ResourceListOfString } from './resourceListOfString';
 import { ResourceListOfTransaction } from './resourceListOfTransaction';
 import { ResourceListOfValueType } from './resourceListOfValueType';
 import { ResultDataKeyRule } from './resultDataKeyRule';
 import { ResultDataSchema } from './resultDataSchema';
-import { Return } from './return';
 import { Schema } from './schema';
 import { ScopeDefinition } from './scopeDefinition';
 import { SetPersonIdentifiersRequest } from './setPersonIdentifiersRequest';
@@ -1079,6 +1079,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfPortfolioSearchResult": PagedResourceListOfPortfolioSearchResult,
     "PagedResourceListOfPropertyDefinitionSearchResult": PagedResourceListOfPropertyDefinitionSearchResult,
     "PayReceive": PayReceive,
+    "PerformanceReturn": PerformanceReturn,
     "PeriodType": PeriodType,
     "PerpetualEntityState": PerpetualEntityState,
     "PerpetualProperty": PerpetualProperty,
@@ -1152,6 +1153,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfInstrumentCashFlow": ResourceListOfInstrumentCashFlow,
     "ResourceListOfInstrumentIdTypeDescriptor": ResourceListOfInstrumentIdTypeDescriptor,
     "ResourceListOfOrder": ResourceListOfOrder,
+    "ResourceListOfPerformanceReturn": ResourceListOfPerformanceReturn,
     "ResourceListOfPortfolio": ResourceListOfPortfolio,
     "ResourceListOfPortfolioCashFlow": ResourceListOfPortfolioCashFlow,
     "ResourceListOfPortfolioGroup": ResourceListOfPortfolioGroup,
@@ -1164,14 +1166,12 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfReconciliationBreak": ResourceListOfReconciliationBreak,
     "ResourceListOfRelation": ResourceListOfRelation,
     "ResourceListOfRelationship": ResourceListOfRelationship,
-    "ResourceListOfReturn": ResourceListOfReturn,
     "ResourceListOfScopeDefinition": ResourceListOfScopeDefinition,
     "ResourceListOfString": ResourceListOfString,
     "ResourceListOfTransaction": ResourceListOfTransaction,
     "ResourceListOfValueType": ResourceListOfValueType,
     "ResultDataKeyRule": ResultDataKeyRule,
     "ResultDataSchema": ResultDataSchema,
-    "Return": Return,
     "Schema": Schema,
     "ScopeDefinition": ScopeDefinition,
     "SetPersonIdentifiersRequest": SetPersonIdentifiersRequest,
