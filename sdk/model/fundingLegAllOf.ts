@@ -10,33 +10,75 @@
  * Do not edit the class manually.
  */
 
+import { LegDefinition } from './legDefinition';
 
-export class DeleteRelationshipRequest {
+export class FundingLegAllOf {
+    'startDate': Date;
+    'maturityDate': Date;
+    'legDefinition': LegDefinition;
+    'notional': number;
     /**
-    * The identifier of the source entity of the relationship to be deleted.
+    * The available values are: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashflowLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CashSettled, CdsIndex, Basket, FundingLeg
     */
-    'sourceEntityId': { [key: string]: string; };
-    /**
-    * The identifier of the target entity of the relationship to be deleted.
-    */
-    'targetEntityId': { [key: string]: string; };
+    'instrumentType': FundingLegAllOf.InstrumentTypeEnum;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "sourceEntityId",
-            "baseName": "sourceEntityId",
-            "type": "{ [key: string]: string; }"
+            "name": "startDate",
+            "baseName": "startDate",
+            "type": "Date"
         },
         {
-            "name": "targetEntityId",
-            "baseName": "targetEntityId",
-            "type": "{ [key: string]: string; }"
+            "name": "maturityDate",
+            "baseName": "maturityDate",
+            "type": "Date"
+        },
+        {
+            "name": "legDefinition",
+            "baseName": "legDefinition",
+            "type": "LegDefinition"
+        },
+        {
+            "name": "notional",
+            "baseName": "notional",
+            "type": "number"
+        },
+        {
+            "name": "instrumentType",
+            "baseName": "instrumentType",
+            "type": "FundingLegAllOf.InstrumentTypeEnum"
         }    ];
 
     static getAttributeTypeMap() {
-        return DeleteRelationshipRequest.attributeTypeMap;
+        return FundingLegAllOf.attributeTypeMap;
     }
 }
 
+export namespace FundingLegAllOf {
+    export enum InstrumentTypeEnum {
+        QuotedSecurity = <any> 'QuotedSecurity',
+        InterestRateSwap = <any> 'InterestRateSwap',
+        FxForward = <any> 'FxForward',
+        Future = <any> 'Future',
+        ExoticInstrument = <any> 'ExoticInstrument',
+        FxOption = <any> 'FxOption',
+        CreditDefaultSwap = <any> 'CreditDefaultSwap',
+        InterestRateSwaption = <any> 'InterestRateSwaption',
+        Bond = <any> 'Bond',
+        EquityOption = <any> 'EquityOption',
+        FixedLeg = <any> 'FixedLeg',
+        FloatingLeg = <any> 'FloatingLeg',
+        BespokeCashflowLeg = <any> 'BespokeCashflowLeg',
+        Unknown = <any> 'Unknown',
+        TermDeposit = <any> 'TermDeposit',
+        ContractForDifference = <any> 'ContractForDifference',
+        EquitySwap = <any> 'EquitySwap',
+        CashPerpetual = <any> 'CashPerpetual',
+        CashSettled = <any> 'CashSettled',
+        CdsIndex = <any> 'CdsIndex',
+        Basket = <any> 'Basket',
+        FundingLeg = <any> 'FundingLeg'
+    }
+}

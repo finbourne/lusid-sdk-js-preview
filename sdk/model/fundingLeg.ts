@@ -10,33 +10,80 @@
  * Do not edit the class manually.
  */
 
+import { FundingLegAllOf } from './fundingLegAllOf';
+import { InstrumentLeg } from './instrumentLeg';
+import { LegDefinition } from './legDefinition';
 
-export class DeleteRelationshipRequest {
+/**
+* IL FundingLeg Instrument; Lusid-ibor internal representation of a funding leg with variable notional.  This instrument is a hybrid between a single leg swap and a bank account, in that the notional is not fixed but  can be changed over it\'s life. The use case for this is to represent the funding leg of a basket of instruments  (e.g. equities) where the contents of the basket can change over time.  The actual notional history is stored in the FundingLegHistory object (implements IHistory) and this can be updated  externally or in some circumstances automatically by LUSID.  The main analytic calculated for this instrument is Accrual rather than PV.
+*/
+export class FundingLeg extends InstrumentLeg {
+    'startDate': Date;
+    'maturityDate': Date;
+    'legDefinition': LegDefinition;
+    'notional': number;
     /**
-    * The identifier of the source entity of the relationship to be deleted.
+    * The available values are: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashflowLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CashSettled, CdsIndex, Basket, FundingLeg
     */
-    'sourceEntityId': { [key: string]: string; };
-    /**
-    * The identifier of the target entity of the relationship to be deleted.
-    */
-    'targetEntityId': { [key: string]: string; };
+    'instrumentType': FundingLeg.InstrumentTypeEnum;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "sourceEntityId",
-            "baseName": "sourceEntityId",
-            "type": "{ [key: string]: string; }"
+            "name": "startDate",
+            "baseName": "startDate",
+            "type": "Date"
         },
         {
-            "name": "targetEntityId",
-            "baseName": "targetEntityId",
-            "type": "{ [key: string]: string; }"
+            "name": "maturityDate",
+            "baseName": "maturityDate",
+            "type": "Date"
+        },
+        {
+            "name": "legDefinition",
+            "baseName": "legDefinition",
+            "type": "LegDefinition"
+        },
+        {
+            "name": "notional",
+            "baseName": "notional",
+            "type": "number"
+        },
+        {
+            "name": "instrumentType",
+            "baseName": "instrumentType",
+            "type": "FundingLeg.InstrumentTypeEnum"
         }    ];
 
     static getAttributeTypeMap() {
-        return DeleteRelationshipRequest.attributeTypeMap;
+        return super.getAttributeTypeMap().concat(FundingLeg.attributeTypeMap);
     }
 }
 
+export namespace FundingLeg {
+    export enum InstrumentTypeEnum {
+        QuotedSecurity = <any> 'QuotedSecurity',
+        InterestRateSwap = <any> 'InterestRateSwap',
+        FxForward = <any> 'FxForward',
+        Future = <any> 'Future',
+        ExoticInstrument = <any> 'ExoticInstrument',
+        FxOption = <any> 'FxOption',
+        CreditDefaultSwap = <any> 'CreditDefaultSwap',
+        InterestRateSwaption = <any> 'InterestRateSwaption',
+        Bond = <any> 'Bond',
+        EquityOption = <any> 'EquityOption',
+        FixedLeg = <any> 'FixedLeg',
+        FloatingLeg = <any> 'FloatingLeg',
+        BespokeCashflowLeg = <any> 'BespokeCashflowLeg',
+        Unknown = <any> 'Unknown',
+        TermDeposit = <any> 'TermDeposit',
+        ContractForDifference = <any> 'ContractForDifference',
+        EquitySwap = <any> 'EquitySwap',
+        CashPerpetual = <any> 'CashPerpetual',
+        CashSettled = <any> 'CashSettled',
+        CdsIndex = <any> 'CdsIndex',
+        Basket = <any> 'Basket',
+        FundingLeg = <any> 'FundingLeg'
+    }
+}
