@@ -138,8 +138,6 @@ export * from './idSelectorDefinition';
 export * from './identifierPartSchema';
 export * from './indexConvention';
 export * from './industryClassificationScheme';
-export * from './inlineAggregationRequest';
-export * from './inlineValuationReconciliationRequest';
 export * from './inlineValuationRequest';
 export * from './inlineValuationsReconciliationRequest';
 export * from './instrument';
@@ -365,7 +363,6 @@ export * from './upsertStructuredMarketDataRequest';
 export * from './upsertStructuredResultDataRequest';
 export * from './upsertTransactionPropertiesResponse';
 export * from './user';
-export * from './valuationReconciliationRequest';
 export * from './valuationRequest';
 export * from './valuationSchedule';
 export * from './valuationsReconciliationRequest';
@@ -523,8 +520,6 @@ import { IdSelectorDefinition } from './idSelectorDefinition';
 import { IdentifierPartSchema } from './identifierPartSchema';
 import { IndexConvention } from './indexConvention';
 import { IndustryClassificationScheme } from './industryClassificationScheme';
-import { InlineAggregationRequest } from './inlineAggregationRequest';
-import { InlineValuationReconciliationRequest } from './inlineValuationReconciliationRequest';
 import { InlineValuationRequest } from './inlineValuationRequest';
 import { InlineValuationsReconciliationRequest } from './inlineValuationsReconciliationRequest';
 import { Instrument } from './instrument';
@@ -750,7 +745,6 @@ import { UpsertStructuredMarketDataRequest } from './upsertStructuredMarketDataR
 import { UpsertStructuredResultDataRequest } from './upsertStructuredResultDataRequest';
 import { UpsertTransactionPropertiesResponse } from './upsertTransactionPropertiesResponse';
 import { User } from './user';
-import { ValuationReconciliationRequest } from './valuationReconciliationRequest';
 import { ValuationRequest } from './valuationRequest';
 import { ValuationSchedule } from './valuationSchedule';
 import { ValuationsReconciliationRequest } from './valuationsReconciliationRequest';
@@ -1029,8 +1023,6 @@ let typeMap: {[index: string]: any} = {
     "IdentifierPartSchema": IdentifierPartSchema,
     "IndexConvention": IndexConvention,
     "IndustryClassificationScheme": IndustryClassificationScheme,
-    "InlineAggregationRequest": InlineAggregationRequest,
-    "InlineValuationReconciliationRequest": InlineValuationReconciliationRequest,
     "InlineValuationRequest": InlineValuationRequest,
     "InlineValuationsReconciliationRequest": InlineValuationsReconciliationRequest,
     "Instrument": Instrument,
@@ -1256,7 +1248,6 @@ let typeMap: {[index: string]: any} = {
     "UpsertStructuredResultDataRequest": UpsertStructuredResultDataRequest,
     "UpsertTransactionPropertiesResponse": UpsertTransactionPropertiesResponse,
     "User": User,
-    "ValuationReconciliationRequest": ValuationReconciliationRequest,
     "ValuationRequest": ValuationRequest,
     "ValuationSchedule": ValuationSchedule,
     "ValuationsReconciliationRequest": ValuationsReconciliationRequest,
