@@ -12,7 +12,6 @@ export * from './aggregationMeasureFailureDetail';
 export * from './aggregationOp';
 export * from './aggregationOptions';
 export * from './aggregationQuery';
-export * from './aggregationRequest';
 export * from './aggregationType';
 export * from './allocation';
 export * from './allocationRequest';
@@ -394,7 +393,6 @@ import { AggregationMeasureFailureDetail } from './aggregationMeasureFailureDeta
 import { AggregationOp } from './aggregationOp';
 import { AggregationOptions } from './aggregationOptions';
 import { AggregationQuery } from './aggregationQuery';
-import { AggregationRequest } from './aggregationRequest';
 import { AggregationType } from './aggregationType';
 import { Allocation } from './allocation';
 import { AllocationRequest } from './allocationRequest';
@@ -897,7 +895,6 @@ let typeMap: {[index: string]: any} = {
     "AggregationOp": AggregationOp,
     "AggregationOptions": AggregationOptions,
     "AggregationQuery": AggregationQuery,
-    "AggregationRequest": AggregationRequest,
     "AggregationType": AggregationType,
     "Allocation": Allocation,
     "AllocationRequest": AllocationRequest,
