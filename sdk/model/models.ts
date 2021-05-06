@@ -271,7 +271,6 @@ export * from './resourceListOfPerformanceReturn';
 export * from './resourceListOfPortfolio';
 export * from './resourceListOfPortfolioCashFlow';
 export * from './resourceListOfPortfolioGroup';
-export * from './resourceListOfPortfolioSearchResult';
 export * from './resourceListOfProcessedCommand';
 export * from './resourceListOfPropertyDefinition';
 export * from './resourceListOfPropertyInterval';
@@ -652,7 +651,6 @@ import { ResourceListOfPerformanceReturn } from './resourceListOfPerformanceRetu
 import { ResourceListOfPortfolio } from './resourceListOfPortfolio';
 import { ResourceListOfPortfolioCashFlow } from './resourceListOfPortfolioCashFlow';
 import { ResourceListOfPortfolioGroup } from './resourceListOfPortfolioGroup';
-import { ResourceListOfPortfolioSearchResult } from './resourceListOfPortfolioSearchResult';
 import { ResourceListOfProcessedCommand } from './resourceListOfProcessedCommand';
 import { ResourceListOfPropertyDefinition } from './resourceListOfPropertyDefinition';
 import { ResourceListOfPropertyInterval } from './resourceListOfPropertyInterval';
@@ -1154,7 +1152,6 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfPortfolio": ResourceListOfPortfolio,
     "ResourceListOfPortfolioCashFlow": ResourceListOfPortfolioCashFlow,
     "ResourceListOfPortfolioGroup": ResourceListOfPortfolioGroup,
-    "ResourceListOfPortfolioSearchResult": ResourceListOfPortfolioSearchResult,
     "ResourceListOfProcessedCommand": ResourceListOfProcessedCommand,
     "ResourceListOfPropertyDefinition": ResourceListOfPropertyDefinition,
     "ResourceListOfPropertyInterval": ResourceListOfPropertyInterval,
