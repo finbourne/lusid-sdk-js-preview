@@ -92,7 +92,6 @@ export * from './deleteInstrumentResponse';
 export * from './deleteRelationRequest';
 export * from './deleteRelationshipRequest';
 export * from './deletedEntityResponse';
-export * from './deletedOrdersEntitiesResponse';
 export * from './deliveryType';
 export * from './equityOption';
 export * from './equityOptionAllOf';
@@ -369,8 +368,6 @@ export * from './user';
 export * from './valuationRequest';
 export * from './valuationSchedule';
 export * from './valuationsReconciliationRequest';
-export * from './valueTupleOfResourceIdToDeletedEntityResponse';
-export * from './valueTupleOfResourceIdToString';
 export * from './valueType';
 export * from './vendorLibrary';
 export * from './vendorModelRule';
@@ -479,7 +476,6 @@ import { DeleteInstrumentResponse } from './deleteInstrumentResponse';
 import { DeleteRelationRequest } from './deleteRelationRequest';
 import { DeleteRelationshipRequest } from './deleteRelationshipRequest';
 import { DeletedEntityResponse } from './deletedEntityResponse';
-import { DeletedOrdersEntitiesResponse } from './deletedOrdersEntitiesResponse';
 import { DeliveryType } from './deliveryType';
 import { EquityOption } from './equityOption';
 import { EquityOptionAllOf } from './equityOptionAllOf';
@@ -756,8 +752,6 @@ import { User } from './user';
 import { ValuationRequest } from './valuationRequest';
 import { ValuationSchedule } from './valuationSchedule';
 import { ValuationsReconciliationRequest } from './valuationsReconciliationRequest';
-import { ValueTupleOfResourceIdToDeletedEntityResponse } from './valueTupleOfResourceIdToDeletedEntityResponse';
-import { ValueTupleOfResourceIdToString } from './valueTupleOfResourceIdToString';
 import { ValueType } from './valueType';
 import { VendorLibrary } from './vendorLibrary';
 import { VendorModelRule } from './vendorModelRule';
@@ -987,7 +981,6 @@ let typeMap: {[index: string]: any} = {
     "DeleteRelationRequest": DeleteRelationRequest,
     "DeleteRelationshipRequest": DeleteRelationshipRequest,
     "DeletedEntityResponse": DeletedEntityResponse,
-    "DeletedOrdersEntitiesResponse": DeletedOrdersEntitiesResponse,
     "DeliveryType": DeliveryType,
     "EquityOption": EquityOption,
     "EquityOptionAllOf": EquityOptionAllOf,
@@ -1264,8 +1257,6 @@ let typeMap: {[index: string]: any} = {
     "ValuationRequest": ValuationRequest,
     "ValuationSchedule": ValuationSchedule,
     "ValuationsReconciliationRequest": ValuationsReconciliationRequest,
-    "ValueTupleOfResourceIdToDeletedEntityResponse": ValueTupleOfResourceIdToDeletedEntityResponse,
-    "ValueTupleOfResourceIdToString": ValueTupleOfResourceIdToString,
     "ValueType": ValueType,
     "VendorLibrary": VendorLibrary,
     "VendorModelRule": VendorModelRule,
