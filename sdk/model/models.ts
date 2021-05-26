@@ -29,6 +29,7 @@ export * from './bond';
 export * from './bondAllOf';
 export * from './calendar';
 export * from './calendarDate';
+export * from './cashLadderRecord';
 export * from './cashPerpetual';
 export * from './cashPerpetualAllOf';
 export * from './cdsFlowConventions';
@@ -203,6 +204,7 @@ export * from './perpetualProperty';
 export * from './person';
 export * from './portfolio';
 export * from './portfolioCashFlow';
+export * from './portfolioCashLadder';
 export * from './portfolioDetails';
 export * from './portfolioEntityId';
 export * from './portfolioGroup';
@@ -274,6 +276,7 @@ export * from './resourceListOfOrder';
 export * from './resourceListOfPerformanceReturn';
 export * from './resourceListOfPortfolio';
 export * from './resourceListOfPortfolioCashFlow';
+export * from './resourceListOfPortfolioCashLadder';
 export * from './resourceListOfPortfolioGroup';
 export * from './resourceListOfProcessedCommand';
 export * from './resourceListOfPropertyDefinition';
@@ -413,6 +416,7 @@ import { Bond } from './bond';
 import { BondAllOf } from './bondAllOf';
 import { Calendar } from './calendar';
 import { CalendarDate } from './calendarDate';
+import { CashLadderRecord } from './cashLadderRecord';
 import { CashPerpetual } from './cashPerpetual';
 import { CashPerpetualAllOf } from './cashPerpetualAllOf';
 import { CdsFlowConventions } from './cdsFlowConventions';
@@ -587,6 +591,7 @@ import { PerpetualProperty } from './perpetualProperty';
 import { Person } from './person';
 import { Portfolio } from './portfolio';
 import { PortfolioCashFlow } from './portfolioCashFlow';
+import { PortfolioCashLadder } from './portfolioCashLadder';
 import { PortfolioDetails } from './portfolioDetails';
 import { PortfolioEntityId } from './portfolioEntityId';
 import { PortfolioGroup } from './portfolioGroup';
@@ -658,6 +663,7 @@ import { ResourceListOfOrder } from './resourceListOfOrder';
 import { ResourceListOfPerformanceReturn } from './resourceListOfPerformanceReturn';
 import { ResourceListOfPortfolio } from './resourceListOfPortfolio';
 import { ResourceListOfPortfolioCashFlow } from './resourceListOfPortfolioCashFlow';
+import { ResourceListOfPortfolioCashLadder } from './resourceListOfPortfolioCashLadder';
 import { ResourceListOfPortfolioGroup } from './resourceListOfPortfolioGroup';
 import { ResourceListOfProcessedCommand } from './resourceListOfProcessedCommand';
 import { ResourceListOfPropertyDefinition } from './resourceListOfPropertyDefinition';
@@ -918,6 +924,7 @@ let typeMap: {[index: string]: any} = {
     "BondAllOf": BondAllOf,
     "Calendar": Calendar,
     "CalendarDate": CalendarDate,
+    "CashLadderRecord": CashLadderRecord,
     "CashPerpetual": CashPerpetual,
     "CashPerpetualAllOf": CashPerpetualAllOf,
     "CdsFlowConventions": CdsFlowConventions,
@@ -1092,6 +1099,7 @@ let typeMap: {[index: string]: any} = {
     "Person": Person,
     "Portfolio": Portfolio,
     "PortfolioCashFlow": PortfolioCashFlow,
+    "PortfolioCashLadder": PortfolioCashLadder,
     "PortfolioDetails": PortfolioDetails,
     "PortfolioEntityId": PortfolioEntityId,
     "PortfolioGroup": PortfolioGroup,
@@ -1163,6 +1171,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfPerformanceReturn": ResourceListOfPerformanceReturn,
     "ResourceListOfPortfolio": ResourceListOfPortfolio,
     "ResourceListOfPortfolioCashFlow": ResourceListOfPortfolioCashFlow,
+    "ResourceListOfPortfolioCashLadder": ResourceListOfPortfolioCashLadder,
     "ResourceListOfPortfolioGroup": ResourceListOfPortfolioGroup,
     "ResourceListOfProcessedCommand": ResourceListOfProcessedCommand,
     "ResourceListOfPropertyDefinition": ResourceListOfPropertyDefinition,
