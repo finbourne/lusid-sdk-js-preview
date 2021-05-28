@@ -10,78 +10,132 @@
  * Do not edit the class manually.
  */
 
+import { A2BCategory } from './a2BCategory';
+import { PerpetualProperty } from './perpetualProperty';
+import { Property } from './property';
 
-export class ExecutionRequest {
+/**
+* A2B Movement Record - shows A2B category based changes relating to a specific movement
+*/
+export class A2BMovementRecord {
     /**
-    * The unique identifier of the Execution Report (8) message as assigned by sell-side. FIX field 17.
+    * The type of the holding e.g. Position, Balance, CashCommitment, Receivable, ForwardFX etc.
     */
-    'executionId': string;
+    'holdingType'?: string;
     /**
-    * The side of the order. FIX field 54.
+    * The unique Lusid Instrument Id (LUID) of the instrument that the holding is in.
     */
-    'side': string;
+    'instrumentUid'?: string;
     /**
-    * A set of instrument identifiers that can resolve the execution to a unique instrument.
+    * The sub-holding properties which identify the holding. Each property will be from the \'Transaction\' domain. These are configured when a transaction portfolio is created.
     */
-    'instrumentIdentifiers': { [key: string]: string; };
+    'subHoldingKeys'?: { [key: string]: PerpetualProperty; };
     /**
-    * Time of execution/order creation. FIX field 60.
+    * The holding currency.
     */
-    'transactionTime': Date;
+    'currency'?: string;
     /**
-    * Quantity (e.g. shares) bought/sold on this (last) fill. FIX field 32.
+    * The unique identifier for the transaction.
     */
-    'lastShares': number;
+    'transactionId'?: string;
     /**
-    * Price of this (last) fill. FIX field 31.
+    * The name of the movement.
     */
-    'lastPx': number;
+    'movementName'?: string;
     /**
-    * The currency used for the price. FIX field 15.
+    * The date of the movement.
     */
-    'currency': string;
+    'effectiveDate'?: Date;
+    /**
+    * The number of units of the instrument that are affected by the movement.
+    */
+    'units'?: number;
+    'start'?: A2BCategory;
+    'flows'?: A2BCategory;
+    'gains'?: A2BCategory;
+    'carry'?: A2BCategory;
+    'end'?: A2BCategory;
+    /**
+    * The properties which have been requested to be decorated onto the holding. These will be from the \'Instrument\' domain.
+    */
+    'properties'?: { [key: string]: Property; };
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "executionId",
-            "baseName": "executionId",
+            "name": "holdingType",
+            "baseName": "holdingType",
             "type": "string"
         },
         {
-            "name": "side",
-            "baseName": "side",
+            "name": "instrumentUid",
+            "baseName": "instrumentUid",
             "type": "string"
         },
         {
-            "name": "instrumentIdentifiers",
-            "baseName": "instrumentIdentifiers",
-            "type": "{ [key: string]: string; }"
-        },
-        {
-            "name": "transactionTime",
-            "baseName": "transactionTime",
-            "type": "Date"
-        },
-        {
-            "name": "lastShares",
-            "baseName": "lastShares",
-            "type": "number"
-        },
-        {
-            "name": "lastPx",
-            "baseName": "lastPx",
-            "type": "number"
+            "name": "subHoldingKeys",
+            "baseName": "subHoldingKeys",
+            "type": "{ [key: string]: PerpetualProperty; }"
         },
         {
             "name": "currency",
             "baseName": "currency",
             "type": "string"
+        },
+        {
+            "name": "transactionId",
+            "baseName": "transactionId",
+            "type": "string"
+        },
+        {
+            "name": "movementName",
+            "baseName": "movementName",
+            "type": "string"
+        },
+        {
+            "name": "effectiveDate",
+            "baseName": "effectiveDate",
+            "type": "Date"
+        },
+        {
+            "name": "units",
+            "baseName": "units",
+            "type": "number"
+        },
+        {
+            "name": "start",
+            "baseName": "start",
+            "type": "A2BCategory"
+        },
+        {
+            "name": "flows",
+            "baseName": "flows",
+            "type": "A2BCategory"
+        },
+        {
+            "name": "gains",
+            "baseName": "gains",
+            "type": "A2BCategory"
+        },
+        {
+            "name": "carry",
+            "baseName": "carry",
+            "type": "A2BCategory"
+        },
+        {
+            "name": "end",
+            "baseName": "end",
+            "type": "A2BCategory"
+        },
+        {
+            "name": "properties",
+            "baseName": "properties",
+            "type": "{ [key: string]: Property; }"
         }    ];
 
     static getAttributeTypeMap() {
-        return ExecutionRequest.attributeTypeMap;
+        return A2BMovementRecord.attributeTypeMap;
     }
 }
 

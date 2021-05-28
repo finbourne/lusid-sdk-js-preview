@@ -1,6 +1,7 @@
 export * from './a2BBreakdown';
 export * from './a2BCategory';
 export * from './a2BDataRecord';
+export * from './a2BMovementRecord';
 export * from './accessControlledAction';
 export * from './accessControlledResource';
 export * from './accessMetadataValue';
@@ -252,6 +253,7 @@ export * from './relationship';
 export * from './relationshipDefinition';
 export * from './resourceId';
 export * from './resourceListOfA2BDataRecord';
+export * from './resourceListOfA2BMovementRecord';
 export * from './resourceListOfAccessControlledResource';
 export * from './resourceListOfAccessMetadataValueOf';
 export * from './resourceListOfAggregatedReturn';
@@ -388,6 +390,7 @@ import localVarRequest = require('request');
 import { A2BBreakdown } from './a2BBreakdown';
 import { A2BCategory } from './a2BCategory';
 import { A2BDataRecord } from './a2BDataRecord';
+import { A2BMovementRecord } from './a2BMovementRecord';
 import { AccessControlledAction } from './accessControlledAction';
 import { AccessControlledResource } from './accessControlledResource';
 import { AccessMetadataValue } from './accessMetadataValue';
@@ -639,6 +642,7 @@ import { Relationship } from './relationship';
 import { RelationshipDefinition } from './relationshipDefinition';
 import { ResourceId } from './resourceId';
 import { ResourceListOfA2BDataRecord } from './resourceListOfA2BDataRecord';
+import { ResourceListOfA2BMovementRecord } from './resourceListOfA2BMovementRecord';
 import { ResourceListOfAccessControlledResource } from './resourceListOfAccessControlledResource';
 import { ResourceListOfAccessMetadataValueOf } from './resourceListOfAccessMetadataValueOf';
 import { ResourceListOfAggregatedReturn } from './resourceListOfAggregatedReturn';
@@ -896,6 +900,7 @@ let typeMap: {[index: string]: any} = {
     "A2BBreakdown": A2BBreakdown,
     "A2BCategory": A2BCategory,
     "A2BDataRecord": A2BDataRecord,
+    "A2BMovementRecord": A2BMovementRecord,
     "AccessControlledAction": AccessControlledAction,
     "AccessControlledResource": AccessControlledResource,
     "AccessMetadataValue": AccessMetadataValue,
@@ -1147,6 +1152,7 @@ let typeMap: {[index: string]: any} = {
     "RelationshipDefinition": RelationshipDefinition,
     "ResourceId": ResourceId,
     "ResourceListOfA2BDataRecord": ResourceListOfA2BDataRecord,
+    "ResourceListOfA2BMovementRecord": ResourceListOfA2BMovementRecord,
     "ResourceListOfAccessControlledResource": ResourceListOfAccessControlledResource,
     "ResourceListOfAccessMetadataValueOf": ResourceListOfAccessMetadataValueOf,
     "ResourceListOfAggregatedReturn": ResourceListOfAggregatedReturn,

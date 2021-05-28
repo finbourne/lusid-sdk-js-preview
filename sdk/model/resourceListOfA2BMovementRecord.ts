@@ -10,78 +10,47 @@
  * Do not edit the class manually.
  */
 
+import { A2BMovementRecord } from './a2BMovementRecord';
+import { Link } from './link';
 
-export class ExecutionRequest {
-    /**
-    * The unique identifier of the Execution Report (8) message as assigned by sell-side. FIX field 17.
-    */
-    'executionId': string;
-    /**
-    * The side of the order. FIX field 54.
-    */
-    'side': string;
-    /**
-    * A set of instrument identifiers that can resolve the execution to a unique instrument.
-    */
-    'instrumentIdentifiers': { [key: string]: string; };
-    /**
-    * Time of execution/order creation. FIX field 60.
-    */
-    'transactionTime': Date;
-    /**
-    * Quantity (e.g. shares) bought/sold on this (last) fill. FIX field 32.
-    */
-    'lastShares': number;
-    /**
-    * Price of this (last) fill. FIX field 31.
-    */
-    'lastPx': number;
-    /**
-    * The currency used for the price. FIX field 15.
-    */
-    'currency': string;
+export class ResourceListOfA2BMovementRecord {
+    'values': Array<A2BMovementRecord>;
+    'href'?: string;
+    'links'?: Array<Link>;
+    'nextPage'?: string;
+    'previousPage'?: string;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "executionId",
-            "baseName": "executionId",
+            "name": "values",
+            "baseName": "values",
+            "type": "Array<A2BMovementRecord>"
+        },
+        {
+            "name": "href",
+            "baseName": "href",
             "type": "string"
         },
         {
-            "name": "side",
-            "baseName": "side",
+            "name": "links",
+            "baseName": "links",
+            "type": "Array<Link>"
+        },
+        {
+            "name": "nextPage",
+            "baseName": "nextPage",
             "type": "string"
         },
         {
-            "name": "instrumentIdentifiers",
-            "baseName": "instrumentIdentifiers",
-            "type": "{ [key: string]: string; }"
-        },
-        {
-            "name": "transactionTime",
-            "baseName": "transactionTime",
-            "type": "Date"
-        },
-        {
-            "name": "lastShares",
-            "baseName": "lastShares",
-            "type": "number"
-        },
-        {
-            "name": "lastPx",
-            "baseName": "lastPx",
-            "type": "number"
-        },
-        {
-            "name": "currency",
-            "baseName": "currency",
+            "name": "previousPage",
+            "baseName": "previousPage",
             "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
-        return ExecutionRequest.attributeTypeMap;
+        return ResourceListOfA2BMovementRecord.attributeTypeMap;
     }
 }
 
