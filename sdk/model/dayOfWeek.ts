@@ -10,14 +10,16 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 
-export enum DayOfWeek {
-    Sunday = <any> 'Sunday',
-    Monday = <any> 'Monday',
-    Tuesday = <any> 'Tuesday',
-    Wednesday = <any> 'Wednesday',
-    Thursday = <any> 'Thursday',
-    Friday = <any> 'Friday',
-    Saturday = <any> 'Saturday'
+export class DayOfWeek {
+
+    static discriminator: string | undefined = undefined;
+
+    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    ];
+
+    static getAttributeTypeMap() {
+        return DayOfWeek.attributeTypeMap;
+    }
 }
+

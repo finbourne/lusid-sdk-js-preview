@@ -10,9 +10,8 @@
  * Do not edit the class manually.
  */
 
-
-import localVarRequest from 'request';
-import http from 'http';
+import localVarRequest = require('request');
+import http = require('http');
 
 /* tslint:disable:no-unused-locals */
 import { InstrumentMatch } from '../model/instrumentMatch';
@@ -23,15 +22,8 @@ import { PagedResourceListOfPortfolioGroupSearchResult } from '../model/pagedRes
 import { PagedResourceListOfPortfolioSearchResult } from '../model/pagedResourceListOfPortfolioSearchResult';
 import { PagedResourceListOfPropertyDefinitionSearchResult } from '../model/pagedResourceListOfPropertyDefinitionSearchResult';
 
-import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
-import { HttpBasicAuth, HttpBearerAuth, ApiKeyAuth, OAuth } from '../model/models';
-
-class HttpError extends Error {
-    constructor (public response: http.IncomingMessage, public body: any, public statusCode?: number) {
-        super('HTTP request failed');
-        this.name = 'HttpError';
-    }
-}
+import { ObjectSerializer, Authentication, VoidAuth } from '../model/models';
+import { OAuth } from '../model/models';
 
 let defaultBasePath = 'http://local-unit-test-server.lusid.com:56961';
 
@@ -44,15 +36,13 @@ export enum SearchApiApiKeys {
 
 export class SearchApi {
     protected _basePath = defaultBasePath;
-    protected _defaultHeaders : any = {};
+    protected defaultHeaders : any = {};
     protected _useQuerystring : boolean = false;
 
     protected authentications = {
         'default': <Authentication>new VoidAuth(),
         'oauth2': new OAuth(),
     }
-
-    protected interceptors: Interceptor[] = [];
 
     constructor(basePath?: string);
     constructor(basePathOrUsername: string, password?: string, basePath?: string) {
@@ -75,14 +65,6 @@ export class SearchApi {
         this._basePath = basePath;
     }
 
-    set defaultHeaders(defaultHeaders: any) {
-        this._defaultHeaders = defaultHeaders;
-    }
-
-    get defaultHeaders() {
-        return this._defaultHeaders;
-    }
-
     get basePath() {
         return this._basePath;
     }
@@ -99,10 +81,6 @@ export class SearchApi {
         this.authentications.oauth2.accessToken = token;
     }
 
-    public addInterceptor(interceptor: Interceptor) {
-        this.interceptors.push(interceptor);
-    }
-
     /**
      * Search across all instruments that have been mastered in LUSID. Optionally augment the results with instruments from an external symbology service,  currently OpenFIGI.
      * @summary [EXPERIMENTAL] Instruments search
@@ -113,14 +91,7 @@ export class SearchApi {
     public async instrumentsSearch (instrumentSearchProperty: Array<InstrumentSearchProperty>, masteredEffectiveAt?: string, masteredOnly?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<InstrumentMatch>;  }> {
         const localVarPath = this.basePath + '/api/search/instruments';
         let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['text/plain', 'application/json', 'text/json'];
-        // give precedence to 'application/json'
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = 'application/json';
-        } else {
-            localVarHeaderParams.Accept = produces.join(',');
-        }
+        let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
         let localVarFormParams: any = {};
 
         // verify required parameter 'instrumentSearchProperty' is not null or undefined
@@ -150,38 +121,29 @@ export class SearchApi {
             body: ObjectSerializer.serialize(instrumentSearchProperty, "Array<InstrumentSearchProperty>")
         };
 
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.oauth2.accessToken) {
-            authenticationPromise = authenticationPromise.then(() => this.authentications.oauth2.applyToRequest(localVarRequestOptions));
-        }
-        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+        this.authentications.oauth2.applyToRequest(localVarRequestOptions);
 
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
-        }
+        this.authentications.default.applyToRequest(localVarRequestOptions);
 
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
+        if (Object.keys(localVarFormParams).length) {
+            if (localVarUseFormData) {
+                (<any>localVarRequestOptions).formData = localVarFormParams;
+            } else {
+                localVarRequestOptions.form = localVarFormParams;
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<InstrumentMatch>;  }>((resolve, reject) => {
-                localVarRequest(localVarRequestOptions, (error, response, body) => {
-                    if (error) {
-                        reject(error);
+        }
+        return new Promise<{ response: http.IncomingMessage; body: Array<InstrumentMatch>;  }>((resolve, reject) => {
+            localVarRequest(localVarRequestOptions, (error, response, body) => {
+                if (error) {
+                    reject(error);
+                } else {
+                    body = ObjectSerializer.deserialize(body, "Array<InstrumentMatch>");
+                    if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                        resolve({ response: response, body: body });
                     } else {
-                        body = ObjectSerializer.deserialize(body, "Array<InstrumentMatch>");
-                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            resolve({ response: response, body: body });
-                        } else {
-                            reject(new HttpError(response, body, response.statusCode));
-                        }
+                        reject({ response: response, body: body });
                     }
-                });
+                }
             });
         });
     }
@@ -197,14 +159,7 @@ export class SearchApi {
     public async searchPortfolioGroups (search?: string, filter?: string, sortBy?: string, limit?: number, page?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PagedResourceListOfPortfolioGroupSearchResult;  }> {
         const localVarPath = this.basePath + '/api/search/portfoliogroups';
         let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['text/plain', 'application/json', 'text/json'];
-        // give precedence to 'application/json'
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = 'application/json';
-        } else {
-            localVarHeaderParams.Accept = produces.join(',');
-        }
+        let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
         let localVarFormParams: any = {};
 
         if (search !== undefined) {
@@ -240,38 +195,29 @@ export class SearchApi {
             json: true,
         };
 
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.oauth2.accessToken) {
-            authenticationPromise = authenticationPromise.then(() => this.authentications.oauth2.applyToRequest(localVarRequestOptions));
-        }
-        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+        this.authentications.oauth2.applyToRequest(localVarRequestOptions);
 
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
-        }
+        this.authentications.default.applyToRequest(localVarRequestOptions);
 
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
+        if (Object.keys(localVarFormParams).length) {
+            if (localVarUseFormData) {
+                (<any>localVarRequestOptions).formData = localVarFormParams;
+            } else {
+                localVarRequestOptions.form = localVarFormParams;
             }
-            return new Promise<{ response: http.IncomingMessage; body: PagedResourceListOfPortfolioGroupSearchResult;  }>((resolve, reject) => {
-                localVarRequest(localVarRequestOptions, (error, response, body) => {
-                    if (error) {
-                        reject(error);
+        }
+        return new Promise<{ response: http.IncomingMessage; body: PagedResourceListOfPortfolioGroupSearchResult;  }>((resolve, reject) => {
+            localVarRequest(localVarRequestOptions, (error, response, body) => {
+                if (error) {
+                    reject(error);
+                } else {
+                    body = ObjectSerializer.deserialize(body, "PagedResourceListOfPortfolioGroupSearchResult");
+                    if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                        resolve({ response: response, body: body });
                     } else {
-                        body = ObjectSerializer.deserialize(body, "PagedResourceListOfPortfolioGroupSearchResult");
-                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            resolve({ response: response, body: body });
-                        } else {
-                            reject(new HttpError(response, body, response.statusCode));
-                        }
+                        reject({ response: response, body: body });
                     }
-                });
+                }
             });
         });
     }
@@ -287,14 +233,7 @@ export class SearchApi {
     public async searchPortfolios (search?: string, filter?: string, sortBy?: string, limit?: number, page?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PagedResourceListOfPortfolioSearchResult;  }> {
         const localVarPath = this.basePath + '/api/search/portfolios';
         let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['text/plain', 'application/json', 'text/json'];
-        // give precedence to 'application/json'
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = 'application/json';
-        } else {
-            localVarHeaderParams.Accept = produces.join(',');
-        }
+        let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
         let localVarFormParams: any = {};
 
         if (search !== undefined) {
@@ -330,38 +269,29 @@ export class SearchApi {
             json: true,
         };
 
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.oauth2.accessToken) {
-            authenticationPromise = authenticationPromise.then(() => this.authentications.oauth2.applyToRequest(localVarRequestOptions));
-        }
-        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+        this.authentications.oauth2.applyToRequest(localVarRequestOptions);
 
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
-        }
+        this.authentications.default.applyToRequest(localVarRequestOptions);
 
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
+        if (Object.keys(localVarFormParams).length) {
+            if (localVarUseFormData) {
+                (<any>localVarRequestOptions).formData = localVarFormParams;
+            } else {
+                localVarRequestOptions.form = localVarFormParams;
             }
-            return new Promise<{ response: http.IncomingMessage; body: PagedResourceListOfPortfolioSearchResult;  }>((resolve, reject) => {
-                localVarRequest(localVarRequestOptions, (error, response, body) => {
-                    if (error) {
-                        reject(error);
+        }
+        return new Promise<{ response: http.IncomingMessage; body: PagedResourceListOfPortfolioSearchResult;  }>((resolve, reject) => {
+            localVarRequest(localVarRequestOptions, (error, response, body) => {
+                if (error) {
+                    reject(error);
+                } else {
+                    body = ObjectSerializer.deserialize(body, "PagedResourceListOfPortfolioSearchResult");
+                    if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                        resolve({ response: response, body: body });
                     } else {
-                        body = ObjectSerializer.deserialize(body, "PagedResourceListOfPortfolioSearchResult");
-                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            resolve({ response: response, body: body });
-                        } else {
-                            reject(new HttpError(response, body, response.statusCode));
-                        }
+                        reject({ response: response, body: body });
                     }
-                });
+                }
             });
         });
     }
@@ -377,14 +307,7 @@ export class SearchApi {
     public async searchProperties (search?: string, filter?: string, sortBy?: string, limit?: number, page?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PagedResourceListOfPropertyDefinitionSearchResult;  }> {
         const localVarPath = this.basePath + '/api/search/propertydefinitions';
         let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['text/plain', 'application/json', 'text/json'];
-        // give precedence to 'application/json'
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = 'application/json';
-        } else {
-            localVarHeaderParams.Accept = produces.join(',');
-        }
+        let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
         let localVarFormParams: any = {};
 
         if (search !== undefined) {
@@ -420,38 +343,29 @@ export class SearchApi {
             json: true,
         };
 
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.oauth2.accessToken) {
-            authenticationPromise = authenticationPromise.then(() => this.authentications.oauth2.applyToRequest(localVarRequestOptions));
-        }
-        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+        this.authentications.oauth2.applyToRequest(localVarRequestOptions);
 
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
-        }
+        this.authentications.default.applyToRequest(localVarRequestOptions);
 
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
+        if (Object.keys(localVarFormParams).length) {
+            if (localVarUseFormData) {
+                (<any>localVarRequestOptions).formData = localVarFormParams;
+            } else {
+                localVarRequestOptions.form = localVarFormParams;
             }
-            return new Promise<{ response: http.IncomingMessage; body: PagedResourceListOfPropertyDefinitionSearchResult;  }>((resolve, reject) => {
-                localVarRequest(localVarRequestOptions, (error, response, body) => {
-                    if (error) {
-                        reject(error);
+        }
+        return new Promise<{ response: http.IncomingMessage; body: PagedResourceListOfPropertyDefinitionSearchResult;  }>((resolve, reject) => {
+            localVarRequest(localVarRequestOptions, (error, response, body) => {
+                if (error) {
+                    reject(error);
+                } else {
+                    body = ObjectSerializer.deserialize(body, "PagedResourceListOfPropertyDefinitionSearchResult");
+                    if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                        resolve({ response: response, body: body });
                     } else {
-                        body = ObjectSerializer.deserialize(body, "PagedResourceListOfPropertyDefinitionSearchResult");
-                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            resolve({ response: response, body: body });
-                        } else {
-                            reject(new HttpError(response, body, response.statusCode));
-                        }
+                        reject({ response: response, body: body });
                     }
-                });
+                }
             });
         });
     }

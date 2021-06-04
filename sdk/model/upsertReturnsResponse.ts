@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 import { ErrorDetail } from './errorDetail';
 import { Link } from './link';
 import { Version } from './version';
@@ -23,16 +22,16 @@ export class UpsertReturnsResponse {
     /**
     * The specific Uniform Resource Identifier (URI) for this resource at the requested effective and asAt datetime.
     */
-    'href'?: string | null;
+    'href'?: string;
     /**
     * The set of values that were successfully retrieved.
     */
-    'values'?: Array<{ [key: string]: Date; }> | null;
+    'values'?: Array<{ [key: string]: Date; }>;
     /**
     * The set of values that could not be retrieved due along with a reason for this, e.g badly formed request.
     */
-    'failed'?: Array<{ [key: string]: ErrorDetail; }> | null;
-    'links'?: Array<Link> | null;
+    'failed'?: Array<{ [key: string]: ErrorDetail; }>;
+    'links'?: Array<Link>;
 
     static discriminator: string | undefined = undefined;
 

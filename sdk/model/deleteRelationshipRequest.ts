@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 
 export class DeleteRelationshipRequest {
     /**
@@ -24,7 +23,7 @@ export class DeleteRelationshipRequest {
     /**
     * The effective date of the relationship to be deleted
     */
-    'effectiveFrom'?: string | null;
+    'effectiveFrom'?: string;
 
     static discriminator: string | undefined = undefined;
 

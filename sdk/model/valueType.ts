@@ -10,30 +10,19 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 
 /**
 * A list of types, familiar to the Ui, that define the expected input or output types on a piece of data
 */
-export enum ValueType {
-    String = <any> 'String',
-    Int = <any> 'Int',
-    Decimal = <any> 'Decimal',
-    DateTime = <any> 'DateTime',
-    Boolean = <any> 'Boolean',
-    Map = <any> 'Map',
-    List = <any> 'List',
-    PropertyArray = <any> 'PropertyArray',
-    Percentage = <any> 'Percentage',
-    Code = <any> 'Code',
-    Id = <any> 'Id',
-    Uri = <any> 'Uri',
-    CurrencyAndAmount = <any> 'CurrencyAndAmount',
-    TradePrice = <any> 'TradePrice',
-    Currency = <any> 'Currency',
-    MetricValue = <any> 'MetricValue',
-    ResourceId = <any> 'ResourceId',
-    ResultValue = <any> 'ResultValue',
-    CutLocalTime = <any> 'CutLocalTime',
-    DateOrCutLabel = <any> 'DateOrCutLabel'
+export class ValueType {
+
+    static discriminator: string | undefined = undefined;
+
+    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    ];
+
+    static getAttributeTypeMap() {
+        return ValueType.attributeTypeMap;
+    }
 }
+

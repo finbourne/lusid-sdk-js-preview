@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 import { Link } from './link';
 
 /**
@@ -24,7 +23,7 @@ export class InstrumentCashFlow {
     /**
     * The quantity (amount) that will be paid. Note that this can be empty if the payment is in the future and a model is used that cannot estimate it.
     */
-    'amount'?: number | null;
+    'amount'?: number;
     /**
     * The payment currency of the cash flow.
     */
@@ -41,7 +40,7 @@ export class InstrumentCashFlow {
     * Whilst a cash flow is defined by an (amount,ccy) pair and the date it is paid on there is additional information required for diagnostics. This includes a range of information and can be empty in the case of a simple cash quantity or where further information is not available. Typical information includes items such as reset dates, RIC, accrual start/end, number of days and curve data.
     */
     'diagnostics': { [key: string]: string; };
-    'links'?: Array<Link> | null;
+    'links'?: Array<Link>;
 
     static discriminator: string | undefined = undefined;
 

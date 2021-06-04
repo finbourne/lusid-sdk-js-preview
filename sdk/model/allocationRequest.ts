@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 import { PerpetualProperty } from './perpetualProperty';
 import { ResourceId } from './resourceId';
 
@@ -21,7 +20,7 @@ export class AllocationRequest {
     /**
     * Client-defined properties associated with this allocation.
     */
-    'properties'?: { [key: string]: PerpetualProperty; } | null;
+    'properties'?: { [key: string]: PerpetualProperty; };
     /**
     * The instrument allocated.
     */

@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 import { DateAttributes } from './dateAttributes';
 
 export class CreateDateRequest {
@@ -19,9 +18,9 @@ export class CreateDateRequest {
     'toUtc': Date;
     'timeZone': string;
     'description': string;
-    'type'?: string | null;
+    'type'?: string;
     'attributes'?: DateAttributes;
-    'sourceData'?: { [key: string]: string; } | null;
+    'sourceData'?: { [key: string]: string; };
 
     static discriminator: string | undefined = undefined;
 

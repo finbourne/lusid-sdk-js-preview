@@ -10,14 +10,13 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 import { Property } from './property';
 
 export class SetPersonIdentifiersRequest {
     /**
     * Identifiers to set for a Person. Identifiers not included in the request will not be amended.
     */
-    'identifiers'?: { [key: string]: Property; } | null;
+    'identifiers'?: { [key: string]: Property; };
 
     static discriminator: string | undefined = undefined;
 

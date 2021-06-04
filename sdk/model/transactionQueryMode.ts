@@ -10,9 +10,16 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 
-export enum TransactionQueryMode {
-    TradeDate = <any> 'TradeDate',
-    SettleDate = <any> 'SettleDate'
+export class TransactionQueryMode {
+
+    static discriminator: string | undefined = undefined;
+
+    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    ];
+
+    static getAttributeTypeMap() {
+        return TransactionQueryMode.attributeTypeMap;
+    }
 }
+

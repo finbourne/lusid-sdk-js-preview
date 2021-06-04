@@ -10,13 +10,12 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 
 export class CreateUnitDefinition {
     'code': string;
     'displayName': string;
     'description': string;
-    'details'?: { [key: string]: string; } | null;
+    'details'?: { [key: string]: string; };
 
     static discriminator: string | undefined = undefined;
 

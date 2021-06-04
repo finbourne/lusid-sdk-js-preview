@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 import { Property } from './property';
 import { ResourceId } from './resourceId';
 import { WeekendMask } from './weekendMask';
@@ -20,7 +19,7 @@ export class CreateCalendarRequest {
     'calendarType': string;
     'weekendMask': WeekendMask;
     'sourceProvider': string;
-    'properties'?: Array<Property> | null;
+    'properties'?: Array<Property>;
 
     static discriminator: string | undefined = undefined;
 

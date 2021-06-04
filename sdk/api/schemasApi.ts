@@ -10,9 +10,8 @@
  * Do not edit the class manually.
  */
 
-
-import localVarRequest from 'request';
-import http from 'http';
+import localVarRequest = require('request');
+import http = require('http');
 
 /* tslint:disable:no-unused-locals */
 import { LusidProblemDetails } from '../model/lusidProblemDetails';
@@ -22,15 +21,8 @@ import { ResourceListOfString } from '../model/resourceListOfString';
 import { ResourceListOfValueType } from '../model/resourceListOfValueType';
 import { Schema } from '../model/schema';
 
-import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
-import { HttpBasicAuth, HttpBearerAuth, ApiKeyAuth, OAuth } from '../model/models';
-
-class HttpError extends Error {
-    constructor (public response: http.IncomingMessage, public body: any, public statusCode?: number) {
-        super('HTTP request failed');
-        this.name = 'HttpError';
-    }
-}
+import { ObjectSerializer, Authentication, VoidAuth } from '../model/models';
+import { OAuth } from '../model/models';
 
 let defaultBasePath = 'http://local-unit-test-server.lusid.com:56961';
 
@@ -43,15 +35,13 @@ export enum SchemasApiApiKeys {
 
 export class SchemasApi {
     protected _basePath = defaultBasePath;
-    protected _defaultHeaders : any = {};
+    protected defaultHeaders : any = {};
     protected _useQuerystring : boolean = false;
 
     protected authentications = {
         'default': <Authentication>new VoidAuth(),
         'oauth2': new OAuth(),
     }
-
-    protected interceptors: Interceptor[] = [];
 
     constructor(basePath?: string);
     constructor(basePathOrUsername: string, password?: string, basePath?: string) {
@@ -74,14 +64,6 @@ export class SchemasApi {
         this._basePath = basePath;
     }
 
-    set defaultHeaders(defaultHeaders: any) {
-        this._defaultHeaders = defaultHeaders;
-    }
-
-    get defaultHeaders() {
-        return this._defaultHeaders;
-    }
-
     get basePath() {
         return this._basePath;
     }
@@ -98,10 +80,6 @@ export class SchemasApi {
         this.authentications.oauth2.accessToken = token;
     }
 
-    public addInterceptor(interceptor: Interceptor) {
-        this.interceptors.push(interceptor);
-    }
-
     /**
      * Gets the schema and meta-data for a given entity
      * @summary [BETA] Get schema
@@ -111,14 +89,7 @@ export class SchemasApi {
         const localVarPath = this.basePath + '/api/schemas/entities/{entity}'
             .replace('{' + 'entity' + '}', encodeURIComponent(String(entity)));
         let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['text/plain', 'application/json', 'text/json'];
-        // give precedence to 'application/json'
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = 'application/json';
-        } else {
-            localVarHeaderParams.Accept = produces.join(',');
-        }
+        let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
         let localVarFormParams: any = {};
 
         // verify required parameter 'entity' is not null or undefined
@@ -139,38 +110,29 @@ export class SchemasApi {
             json: true,
         };
 
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.oauth2.accessToken) {
-            authenticationPromise = authenticationPromise.then(() => this.authentications.oauth2.applyToRequest(localVarRequestOptions));
-        }
-        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+        this.authentications.oauth2.applyToRequest(localVarRequestOptions);
 
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
-        }
+        this.authentications.default.applyToRequest(localVarRequestOptions);
 
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
+        if (Object.keys(localVarFormParams).length) {
+            if (localVarUseFormData) {
+                (<any>localVarRequestOptions).formData = localVarFormParams;
+            } else {
+                localVarRequestOptions.form = localVarFormParams;
             }
-            return new Promise<{ response: http.IncomingMessage; body: Schema;  }>((resolve, reject) => {
-                localVarRequest(localVarRequestOptions, (error, response, body) => {
-                    if (error) {
-                        reject(error);
+        }
+        return new Promise<{ response: http.IncomingMessage; body: Schema;  }>((resolve, reject) => {
+            localVarRequest(localVarRequestOptions, (error, response, body) => {
+                if (error) {
+                    reject(error);
+                } else {
+                    body = ObjectSerializer.deserialize(body, "Schema");
+                    if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                        resolve({ response: response, body: body });
                     } else {
-                        body = ObjectSerializer.deserialize(body, "Schema");
-                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            resolve({ response: response, body: body });
-                        } else {
-                            reject(new HttpError(response, body, response.statusCode));
-                        }
+                        reject({ response: response, body: body });
                     }
-                });
+                }
             });
         });
     }
@@ -183,14 +145,7 @@ export class SchemasApi {
     public async getPropertySchema (propertyKeys?: Array<string>, asAt?: Date, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PropertySchema;  }> {
         const localVarPath = this.basePath + '/api/schemas/properties';
         let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['text/plain', 'application/json', 'text/json'];
-        // give precedence to 'application/json'
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = 'application/json';
-        } else {
-            localVarHeaderParams.Accept = produces.join(',');
-        }
+        let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
         let localVarFormParams: any = {};
 
         if (propertyKeys !== undefined) {
@@ -214,38 +169,29 @@ export class SchemasApi {
             json: true,
         };
 
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.oauth2.accessToken) {
-            authenticationPromise = authenticationPromise.then(() => this.authentications.oauth2.applyToRequest(localVarRequestOptions));
-        }
-        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+        this.authentications.oauth2.applyToRequest(localVarRequestOptions);
 
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
-        }
+        this.authentications.default.applyToRequest(localVarRequestOptions);
 
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
+        if (Object.keys(localVarFormParams).length) {
+            if (localVarUseFormData) {
+                (<any>localVarRequestOptions).formData = localVarFormParams;
+            } else {
+                localVarRequestOptions.form = localVarFormParams;
             }
-            return new Promise<{ response: http.IncomingMessage; body: PropertySchema;  }>((resolve, reject) => {
-                localVarRequest(localVarRequestOptions, (error, response, body) => {
-                    if (error) {
-                        reject(error);
+        }
+        return new Promise<{ response: http.IncomingMessage; body: PropertySchema;  }>((resolve, reject) => {
+            localVarRequest(localVarRequestOptions, (error, response, body) => {
+                if (error) {
+                    reject(error);
+                } else {
+                    body = ObjectSerializer.deserialize(body, "PropertySchema");
+                    if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                        resolve({ response: response, body: body });
                     } else {
-                        body = ObjectSerializer.deserialize(body, "PropertySchema");
-                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            resolve({ response: response, body: body });
-                        } else {
-                            reject(new HttpError(response, body, response.statusCode));
-                        }
+                        reject({ response: response, body: body });
                     }
-                });
+                }
             });
         });
     }
@@ -259,14 +205,7 @@ export class SchemasApi {
     public async getValueTypes (sortBy?: Array<string>, start?: number, limit?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ResourceListOfValueType;  }> {
         const localVarPath = this.basePath + '/api/schemas/types';
         let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['text/plain', 'application/json', 'text/json'];
-        // give precedence to 'application/json'
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = 'application/json';
-        } else {
-            localVarHeaderParams.Accept = produces.join(',');
-        }
+        let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
         let localVarFormParams: any = {};
 
         if (sortBy !== undefined) {
@@ -294,38 +233,29 @@ export class SchemasApi {
             json: true,
         };
 
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.oauth2.accessToken) {
-            authenticationPromise = authenticationPromise.then(() => this.authentications.oauth2.applyToRequest(localVarRequestOptions));
-        }
-        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+        this.authentications.oauth2.applyToRequest(localVarRequestOptions);
 
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
-        }
+        this.authentications.default.applyToRequest(localVarRequestOptions);
 
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
+        if (Object.keys(localVarFormParams).length) {
+            if (localVarUseFormData) {
+                (<any>localVarRequestOptions).formData = localVarFormParams;
+            } else {
+                localVarRequestOptions.form = localVarFormParams;
             }
-            return new Promise<{ response: http.IncomingMessage; body: ResourceListOfValueType;  }>((resolve, reject) => {
-                localVarRequest(localVarRequestOptions, (error, response, body) => {
-                    if (error) {
-                        reject(error);
+        }
+        return new Promise<{ response: http.IncomingMessage; body: ResourceListOfValueType;  }>((resolve, reject) => {
+            localVarRequest(localVarRequestOptions, (error, response, body) => {
+                if (error) {
+                    reject(error);
+                } else {
+                    body = ObjectSerializer.deserialize(body, "ResourceListOfValueType");
+                    if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                        resolve({ response: response, body: body });
                     } else {
-                        body = ObjectSerializer.deserialize(body, "ResourceListOfValueType");
-                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            resolve({ response: response, body: body });
-                        } else {
-                            reject(new HttpError(response, body, response.statusCode));
-                        }
+                        reject({ response: response, body: body });
                     }
-                });
+                }
             });
         });
     }
@@ -336,14 +266,7 @@ export class SchemasApi {
     public async listEntities (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ResourceListOfString;  }> {
         const localVarPath = this.basePath + '/api/schemas/entities';
         let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['text/plain', 'application/json', 'text/json'];
-        // give precedence to 'application/json'
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = 'application/json';
-        } else {
-            localVarHeaderParams.Accept = produces.join(',');
-        }
+        let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
         let localVarFormParams: any = {};
 
         (<any>Object).assign(localVarHeaderParams, options.headers);
@@ -359,38 +282,29 @@ export class SchemasApi {
             json: true,
         };
 
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications.oauth2.accessToken) {
-            authenticationPromise = authenticationPromise.then(() => this.authentications.oauth2.applyToRequest(localVarRequestOptions));
-        }
-        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+        this.authentications.oauth2.applyToRequest(localVarRequestOptions);
 
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
-        }
+        this.authentications.default.applyToRequest(localVarRequestOptions);
 
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
+        if (Object.keys(localVarFormParams).length) {
+            if (localVarUseFormData) {
+                (<any>localVarRequestOptions).formData = localVarFormParams;
+            } else {
+                localVarRequestOptions.form = localVarFormParams;
             }
-            return new Promise<{ response: http.IncomingMessage; body: ResourceListOfString;  }>((resolve, reject) => {
-                localVarRequest(localVarRequestOptions, (error, response, body) => {
-                    if (error) {
-                        reject(error);
+        }
+        return new Promise<{ response: http.IncomingMessage; body: ResourceListOfString;  }>((resolve, reject) => {
+            localVarRequest(localVarRequestOptions, (error, response, body) => {
+                if (error) {
+                    reject(error);
+                } else {
+                    body = ObjectSerializer.deserialize(body, "ResourceListOfString");
+                    if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                        resolve({ response: response, body: body });
                     } else {
-                        body = ObjectSerializer.deserialize(body, "ResourceListOfString");
-                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            resolve({ response: response, body: body });
-                        } else {
-                            reject(new HttpError(response, body, response.statusCode));
-                        }
+                        reject({ response: response, body: body });
                     }
-                });
+                }
             });
         });
     }

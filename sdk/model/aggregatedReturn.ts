@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 
 /**
 * A list of Aggregated Returns.
@@ -31,7 +30,7 @@ export class AggregatedReturn {
     /**
     * Show the aggregated output returns on a Daily or Monthly period.
     */
-    'frequency'?: string | null;
+    'frequency'?: string;
 
     static discriminator: string | undefined = undefined;
 

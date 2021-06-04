@@ -10,10 +10,16 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 
-export enum UnitSchema {
-    NoUnits = <any> 'NoUnits',
-    Basic = <any> 'Basic',
-    Iso4217Currency = <any> 'Iso4217Currency'
+export class UnitSchema {
+
+    static discriminator: string | undefined = undefined;
+
+    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    ];
+
+    static getAttributeTypeMap() {
+        return UnitSchema.attributeTypeMap;
+    }
 }
+

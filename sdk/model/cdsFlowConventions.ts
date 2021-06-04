@@ -10,13 +10,12 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 
 export class CdsFlowConventions {
     /**
     * The frequency at which the reference bonds are updated, this defaults to 6M, but can be 3M, exp for historically issued products
     */
-    'rollFrequency'?: string | null;
+    'rollFrequency'?: string;
     /**
     * Currency of the flow convention.
     */
@@ -52,11 +51,11 @@ export class CdsFlowConventions {
     /**
     * The scope used when updating or inserting the convention.
     */
-    'scope'?: string | null;
+    'scope'?: string;
     /**
     * The code of the convention.
     */
-    'code'?: string | null;
+    'code'?: string;
 
     static discriminator: string | undefined = undefined;
 

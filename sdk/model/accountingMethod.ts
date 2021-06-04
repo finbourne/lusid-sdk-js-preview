@@ -10,13 +10,16 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 
-export enum AccountingMethod {
-    Default = <any> 'Default',
-    AverageCost = <any> 'AverageCost',
-    FirstInFirstOut = <any> 'FirstInFirstOut',
-    LastInFirstOut = <any> 'LastInFirstOut',
-    HighestCostFirst = <any> 'HighestCostFirst',
-    LowestCostFirst = <any> 'LowestCostFirst'
+export class AccountingMethod {
+
+    static discriminator: string | undefined = undefined;
+
+    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    ];
+
+    static getAttributeTypeMap() {
+        return AccountingMethod.attributeTypeMap;
+    }
 }
+

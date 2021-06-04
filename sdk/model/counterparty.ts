@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 import { CreditRating } from './creditRating';
 import { IndustryClassificationScheme } from './industryClassificationScheme';
 
@@ -38,11 +37,11 @@ export class Counterparty {
     /**
     * The scope used when updating or inserting the convention.
     */
-    'scope'?: string | null;
+    'scope'?: string;
     /**
     * The code of the convention.
     */
-    'code'?: string | null;
+    'code'?: string;
 
     static discriminator: string | undefined = undefined;
 

@@ -10,10 +10,16 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 
-export enum TransactionStatus {
-    Active = <any> 'Active',
-    Amended = <any> 'Amended',
-    Cancelled = <any> 'Cancelled'
+export class TransactionStatus {
+
+    static discriminator: string | undefined = undefined;
+
+    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    ];
+
+    static getAttributeTypeMap() {
+        return TransactionStatus.attributeTypeMap;
+    }
 }
+

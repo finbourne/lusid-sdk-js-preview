@@ -10,16 +10,15 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 import { Link } from './link';
 import { Order } from './order';
 
 export class PagedResourceListOfOrder {
-    'nextPage'?: string | null;
-    'previousPage'?: string | null;
+    'nextPage'?: string;
+    'previousPage'?: string;
     'values': Array<Order>;
-    'href'?: string | null;
-    'links'?: Array<Link> | null;
+    'href'?: string;
+    'links'?: Array<Link>;
 
     static discriminator: string | undefined = undefined;
 

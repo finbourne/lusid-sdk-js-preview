@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 import { ContractForDifferenceAllOf } from './contractForDifferenceAllOf';
 import { LusidInstrument } from './lusidInstrument';
 

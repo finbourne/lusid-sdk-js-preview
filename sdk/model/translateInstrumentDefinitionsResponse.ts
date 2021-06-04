@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 import { ErrorDetail } from './errorDetail';
 import { Link } from './link';
 import { LusidInstrument } from './lusidInstrument';
@@ -22,16 +21,16 @@ export class TranslateInstrumentDefinitionsResponse {
     /**
     * The specific Uniform Resource Identifier (URI) for this resource at the requested effective and asAt datetime.
     */
-    'href'?: string | null;
+    'href'?: string;
     /**
     * The instruments which have been successfully translated.
     */
-    'values'?: { [key: string]: LusidInstrument; } | null;
+    'values'?: { [key: string]: LusidInstrument; };
     /**
     * The instruments that could not be translated along with a reason for their failure.
     */
-    'failed'?: { [key: string]: ErrorDetail; } | null;
-    'links'?: Array<Link> | null;
+    'failed'?: { [key: string]: ErrorDetail; };
+    'links'?: Array<Link>;
 
     static discriminator: string | undefined = undefined;
 

@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 import { DataMapKey } from './dataMapKey';
 
 /**
@@ -24,11 +23,11 @@ export class StructuredResultData {
     /**
     * The semantic version of the document format; MAJOR.MINOR.PATCH
     */
-    'version'?: string | null;
+    'version'?: string;
     /**
     * The name or description for the document
     */
-    'name'?: string | null;
+    'name'?: string;
     /**
     * The document that will be stored (or retrieved) and which describes a unit result data entity such as a set of prices or yields
     */

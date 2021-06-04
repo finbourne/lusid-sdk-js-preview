@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 import { PortfolioReconciliationRequest } from './portfolioReconciliationRequest';
 import { Tolerance } from './tolerance';
 
@@ -18,7 +17,7 @@ export class PortfoliosReconciliationRequestPreview {
     /**
     * Tolerance to be included for the units and cost.
     */
-    'tolerance'?: { [key: string]: Tolerance; } | null;
+    'tolerance'?: { [key: string]: Tolerance; };
     'left': PortfolioReconciliationRequest;
     'right': PortfolioReconciliationRequest;
     /**

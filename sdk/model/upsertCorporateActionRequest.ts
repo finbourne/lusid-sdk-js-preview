@@ -10,12 +10,11 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 import { CorporateActionTransitionRequest } from './corporateActionTransitionRequest';
 
 export class UpsertCorporateActionRequest {
     'corporateActionCode': string;
-    'description'?: string | null;
+    'description'?: string;
     'announcementDate': Date;
     'exDate': Date;
     'recordDate': Date;
