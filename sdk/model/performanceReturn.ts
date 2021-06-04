@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 
 /**
 * A list of Returns.
@@ -30,7 +31,7 @@ export class PerformanceReturn {
     /**
     * Show the returns on a Daily or Monthly period.
     */
-    'period'?: string;
+    'period'?: string | null;
 
     static discriminator: string | undefined = undefined;
 

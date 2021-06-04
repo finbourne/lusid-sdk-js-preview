@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 
 export class CreateRelationshipRequest {
     /**
@@ -23,7 +24,7 @@ export class CreateRelationshipRequest {
     /**
     * The effective date of the relationship to be created
     */
-    'effectiveFrom'?: string;
+    'effectiveFrom'?: string | null;
 
     static discriminator: string | undefined = undefined;
 

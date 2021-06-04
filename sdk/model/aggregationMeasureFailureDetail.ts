@@ -10,13 +10,14 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 
 export class AggregationMeasureFailureDetail {
-    'id'?: string;
+    'id'?: string | null;
     'effectiveAt'?: Date;
-    'measure'?: string;
-    'reason'?: string;
-    'detail'?: string;
+    'measure'?: string | null;
+    'reason'?: string | null;
+    'detail'?: string | null;
 
     static discriminator: string | undefined = undefined;
 

@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { FundingLegAllOf } from './fundingLegAllOf';
 import { InstrumentLeg } from './instrumentLeg';
 import { LegDefinition } from './legDefinition';

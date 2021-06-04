@@ -10,11 +10,12 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { FieldSchema } from './fieldSchema';
 
 export class ResultDataSchema {
-    'nodeValueSchema'?: { [key: string]: FieldSchema; };
-    'propertySchema'?: { [key: string]: FieldSchema; };
+    'nodeValueSchema'?: { [key: string]: FieldSchema; } | null;
+    'propertySchema'?: { [key: string]: FieldSchema; } | null;
 
     static discriminator: string | undefined = undefined;
 

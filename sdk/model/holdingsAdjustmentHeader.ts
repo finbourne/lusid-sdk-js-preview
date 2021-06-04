@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { Link } from './link';
 import { Version } from './version';
 
@@ -26,7 +27,7 @@ export class HoldingsAdjustmentHeader {
     * Describes how the holdings were adjusted. If \'PositionToZero\' the entire transaction portfolio\'s holdings were set via a call to \'Set holdings\'. If \'KeepTheSame\' only the specified holdings were adjusted via a call to \'Adjust holdings\'. The available values are: PositionToZero, KeepTheSame
     */
     'unmatchedHoldingMethod': HoldingsAdjustmentHeader.UnmatchedHoldingMethodEnum;
-    'links'?: Array<Link>;
+    'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
 

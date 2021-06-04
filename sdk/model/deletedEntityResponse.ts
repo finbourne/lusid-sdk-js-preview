@@ -10,22 +10,23 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { Link } from './link';
 
 export class DeletedEntityResponse {
     /**
     * The specific Uniform Resource Identifier (URI) for this resource at the requested effective and asAt datetime.
     */
-    'href'?: string;
+    'href'?: string | null;
     /**
     * The effective datetime at which the deletion became valid. May be null in the case where multiple date times are applicable.
     */
-    'effectiveFrom'?: Date;
+    'effectiveFrom'?: Date | null;
     /**
     * The asAt datetime at which the deletion was committed to LUSID.
     */
     'asAt': Date;
-    'links'?: Array<Link>;
+    'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
 

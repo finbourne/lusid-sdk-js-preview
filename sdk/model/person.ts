@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { Property } from './property';
 import { Version } from './version';
 
@@ -17,27 +18,27 @@ export class Person {
     /**
     * The display name of the Person
     */
-    'displayName'?: string;
+    'displayName'?: string | null;
     /**
     * The description of the Person
     */
-    'description'?: string;
+    'description'?: string | null;
     /**
     * The specifc Uniform Resource Identifier (URI) for this resource at the requested effective and asAt datetime.
     */
-    'href'?: string;
+    'href'?: string | null;
     /**
     * The unique LUSID Person Identifier (LUPID) of the Person.
     */
-    'lusidPersonId'?: string;
+    'lusidPersonId'?: string | null;
     /**
     * Unique client-defined identifiers of the Person.
     */
-    'identifiers'?: { [key: string]: Property; };
+    'identifiers'?: { [key: string]: Property; } | null;
     /**
     * A set of properties associated to the Person. There can be multiple properties associated with a property key.
     */
-    'properties'?: { [key: string]: Array<Property>; };
+    'properties'?: { [key: string]: Array<Property>; } | null;
     'version'?: Version;
 
     static discriminator: string | undefined = undefined;

@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { FixedLegAllOfOverrides } from './fixedLegAllOfOverrides';
 import { FloatingLegAllOf } from './floatingLegAllOf';
 import { InstrumentLeg } from './instrumentLeg';
@@ -26,7 +27,7 @@ export class FloatingLeg extends InstrumentLeg {
     * scaling factor to apply to leg quantities.
     */
     'notional': number;
-    'overrides'?: FixedLegAllOfOverrides;
+    'overrides'?: FixedLegAllOfOverrides | null;
     /**
     * The available values are: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CashSettled, CdsIndex, Basket, FundingLeg, CrossCurrencySwap
     */

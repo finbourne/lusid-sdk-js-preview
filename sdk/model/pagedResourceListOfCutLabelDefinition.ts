@@ -10,15 +10,16 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { CutLabelDefinition } from './cutLabelDefinition';
 import { Link } from './link';
 
 export class PagedResourceListOfCutLabelDefinition {
-    'nextPage'?: string;
-    'previousPage'?: string;
+    'nextPage'?: string | null;
+    'previousPage'?: string | null;
     'values': Array<CutLabelDefinition>;
-    'href'?: string;
-    'links'?: Array<Link>;
+    'href'?: string | null;
+    'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
 

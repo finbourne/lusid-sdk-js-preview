@@ -10,13 +10,14 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { AccessMetadataValue } from './accessMetadataValue';
 
 export class UpsertPersonAccessMetadataRequest {
     /**
     * The access control metadata to assign to a Person that matches the identifier
     */
-    'metadata'?: Array<AccessMetadataValue>;
+    'metadata'?: Array<AccessMetadataValue> | null;
 
     static discriminator: string | undefined = undefined;
 

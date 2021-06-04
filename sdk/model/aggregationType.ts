@@ -10,19 +10,19 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 
 /**
 * A list of types, that define the expected output types found from an aggregation request in its result.
 */
-export class AggregationType {
-
-    static discriminator: string | undefined = undefined;
-
-    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-    ];
-
-    static getAttributeTypeMap() {
-        return AggregationType.attributeTypeMap;
-    }
+export enum AggregationType {
+    String = <any> 'String',
+    Int = <any> 'Int',
+    Decimal = <any> 'Decimal',
+    DateTime = <any> 'DateTime',
+    Boolean = <any> 'Boolean',
+    ResultValue = <any> 'ResultValue',
+    Array = <any> 'Array',
+    Map = <any> 'Map',
+    Json = <any> 'Json'
 }
-

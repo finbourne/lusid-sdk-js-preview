@@ -10,16 +10,10 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 
-export class TransactionPriceType {
-
-    static discriminator: string | undefined = undefined;
-
-    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-    ];
-
-    static getAttributeTypeMap() {
-        return TransactionPriceType.attributeTypeMap;
-    }
+export enum TransactionPriceType {
+    Price = <any> 'Price',
+    Yield = <any> 'Yield',
+    Spread = <any> 'Spread'
 }
-

@@ -1,3 +1,5 @@
+import localVarRequest from 'request';
+
 export * from './a2BBreakdown';
 export * from './a2BCategory';
 export * from './a2BDataRecord';
@@ -387,7 +389,18 @@ export * from './weekendMask';
 export * from './weightedInstrument';
 export * from './weightedInstruments';
 
-import localVarRequest = require('request');
+import * as fs from 'fs';
+
+export interface RequestDetailedFile {
+    value: Buffer;
+    options?: {
+        filename?: string;
+        contentType?: string;
+    }
+}
+
+export type RequestFile = string | Buffer | fs.ReadStream | RequestDetailedFile;
+
 
 import { A2BBreakdown } from './a2BBreakdown';
 import { A2BCategory } from './a2BCategory';
@@ -789,10 +802,13 @@ let primitives = [
                     "number",
                     "any"
                  ];
-                 
+
 let enumsMap: {[index: string]: any} = {
+        "AccountingMethod": AccountingMethod,
         "AggregateSpec.OpEnum": AggregateSpec.OpEnum,
+        "AggregationOp": AggregationOp,
         "AggregationQuery.TypeEnum": AggregationQuery.TypeEnum,
+        "AggregationType": AggregationType,
         "Basket.InstrumentTypeEnum": Basket.InstrumentTypeEnum,
         "BasketAllOf.InstrumentTypeEnum": BasketAllOf.InstrumentTypeEnum,
         "Bond.InstrumentTypeEnum": Bond.InstrumentTypeEnum,
@@ -803,6 +819,8 @@ let enumsMap: {[index: string]: any} = {
         "CdsIndexAllOf.InstrumentTypeEnum": CdsIndexAllOf.InstrumentTypeEnum,
         "CdsProtectionDetailSpecification.SeniorityEnum": CdsProtectionDetailSpecification.SeniorityEnum,
         "CdsProtectionDetailSpecification.RestructuringTypeEnum": CdsProtectionDetailSpecification.RestructuringTypeEnum,
+        "CdsRestructuringType": CdsRestructuringType,
+        "CdsSeniority": CdsSeniority,
         "CompletePortfolio.TypeEnum": CompletePortfolio.TypeEnum,
         "ContractForDifference.InstrumentTypeEnum": ContractForDifference.InstrumentTypeEnum,
         "ContractForDifferenceAllOf.InstrumentTypeEnum": ContractForDifferenceAllOf.InstrumentTypeEnum,
@@ -821,6 +839,9 @@ let enumsMap: {[index: string]: any} = {
         "DataType.TypeValueRangeEnum": DataType.TypeValueRangeEnum,
         "DataType.ValueTypeEnum": DataType.ValueTypeEnum,
         "DataType.UnitSchemaEnum": DataType.UnitSchemaEnum,
+        "DataTypeValueRange": DataTypeValueRange,
+        "DayOfWeek": DayOfWeek,
+        "DeliveryType": DeliveryType,
         "EquityOption.DeliveryTypeEnum": EquityOption.DeliveryTypeEnum,
         "EquityOption.OptionTypeEnum": EquityOption.OptionTypeEnum,
         "EquityOption.UnderlyingIdentifierEnum": EquityOption.UnderlyingIdentifierEnum,
@@ -854,6 +875,7 @@ let enumsMap: {[index: string]: any} = {
         "Instrument.StateEnum": Instrument.StateEnum,
         "InstrumentLeg.InstrumentTypeEnum": InstrumentLeg.InstrumentTypeEnum,
         "InstrumentLegAllOf.InstrumentTypeEnum": InstrumentLegAllOf.InstrumentTypeEnum,
+        "InstrumentType": InstrumentType,
         "InterestRateSwap.InstrumentTypeEnum": InterestRateSwap.InstrumentTypeEnum,
         "InterestRateSwapAllOf.InstrumentTypeEnum": InterestRateSwapAllOf.InstrumentTypeEnum,
         "InterestRateSwaption.PayOrReceiveFixedEnum": InterestRateSwaption.PayOrReceiveFixedEnum,
@@ -864,12 +886,22 @@ let enumsMap: {[index: string]: any} = {
         "InterestRateSwaptionAllOf.InstrumentTypeEnum": InterestRateSwaptionAllOf.InstrumentTypeEnum,
         "LusidInstrument.InstrumentTypeEnum": LusidInstrument.InstrumentTypeEnum,
         "MarketDataKeyRule.QuoteTypeEnum": MarketDataKeyRule.QuoteTypeEnum,
+        "MarketIdentifier": MarketIdentifier,
         "ModelSelection.LibraryEnum": ModelSelection.LibraryEnum,
         "ModelSelection.ModelEnum": ModelSelection.ModelEnum,
+        "MovementType": MovementType,
+        "OperandType": OperandType,
+        "Operator": Operator,
+        "OptionType": OptionType,
         "OrderBySpec.SortOrderEnum": OrderBySpec.SortOrderEnum,
         "OutputTransaction.TransactionStatusEnum": OutputTransaction.TransactionStatusEnum,
+        "PayReceive": PayReceive,
+        "PeriodType": PeriodType,
+        "PerpetualEntityState": PerpetualEntityState,
         "Portfolio.TypeEnum": Portfolio.TypeEnum,
         "PortfolioSearchResult.TypeEnum": PortfolioSearchResult.TypeEnum,
+        "PortfolioType": PortfolioType,
+        "PricingModel": PricingModel,
         "PropertyDefinition.ValueTypeEnum": PropertyDefinition.ValueTypeEnum,
         "PropertyDefinition.TypeEnum": PropertyDefinition.TypeEnum,
         "PropertyDefinition.UnitSchemaEnum": PropertyDefinition.UnitSchemaEnum,
@@ -882,23 +914,40 @@ let enumsMap: {[index: string]: any} = {
         "PropertyDefinitionSearchResult.DomainEnum": PropertyDefinitionSearchResult.DomainEnum,
         "PropertyDefinitionSearchResult.LifeTimeEnum": PropertyDefinitionSearchResult.LifeTimeEnum,
         "PropertyDefinitionSearchResult.PropertyDefinitionTypeEnum": PropertyDefinitionSearchResult.PropertyDefinitionTypeEnum,
+        "PropertyDefinitionType": PropertyDefinitionType,
+        "PropertyDomain": PropertyDomain,
         "PropertyFilter.OperatorEnum": PropertyFilter.OperatorEnum,
         "PropertyFilter.RightOperandTypeEnum": PropertyFilter.RightOperandTypeEnum,
+        "PropertyLifeTime": PropertyLifeTime,
+        "PropertyType": PropertyType,
+        "QuoteInstrumentIdType": QuoteInstrumentIdType,
         "QuoteSeriesId.InstrumentIdTypeEnum": QuoteSeriesId.InstrumentIdTypeEnum,
         "QuoteSeriesId.QuoteTypeEnum": QuoteSeriesId.QuoteTypeEnum,
+        "QuoteType": QuoteType,
+        "ReferencePortfolioWeightType": ReferencePortfolioWeightType,
+        "SortOrder": SortOrder,
         "TermDeposit.InstrumentTypeEnum": TermDeposit.InstrumentTypeEnum,
         "TermDepositAllOf.InstrumentTypeEnum": TermDepositAllOf.InstrumentTypeEnum,
         "Tolerance.TypeEnum": Tolerance.TypeEnum,
+        "ToleranceEnum": ToleranceEnum,
         "TransactionConfigurationMovementData.MovementTypesEnum": TransactionConfigurationMovementData.MovementTypesEnum,
         "TransactionConfigurationMovementDataRequest.MovementTypesEnum": TransactionConfigurationMovementDataRequest.MovementTypesEnum,
         "TransactionConfigurationTypeAlias.TransactionRolesEnum": TransactionConfigurationTypeAlias.TransactionRolesEnum,
         "TransactionPrice.TypeEnum": TransactionPrice.TypeEnum,
+        "TransactionPriceType": TransactionPriceType,
+        "TransactionQueryMode": TransactionQueryMode,
         "TransactionQueryParameters.QueryModeEnum": TransactionQueryParameters.QueryModeEnum,
+        "TransactionRoles": TransactionRoles,
+        "TransactionStatus": TransactionStatus,
+        "UnitSchema": UnitSchema,
+        "UnmatchedHoldingMethod": UnmatchedHoldingMethod,
         "UpdateDataTypeRequest.TypeValueRangeEnum": UpdateDataTypeRequest.TypeValueRangeEnum,
         "UpdateDataTypeRequest.ValueTypeEnum": UpdateDataTypeRequest.ValueTypeEnum,
         "UpdateDataTypeRequest.UnitSchemaEnum": UpdateDataTypeRequest.UnitSchemaEnum,
         "UpsertReferencePortfolioConstituentsRequest.WeightTypeEnum": UpsertReferencePortfolioConstituentsRequest.WeightTypeEnum,
         "UpsertReferencePortfolioConstituentsRequest.PeriodTypeEnum": UpsertReferencePortfolioConstituentsRequest.PeriodTypeEnum,
+        "ValueType": ValueType,
+        "VendorLibrary": VendorLibrary,
         "VendorModelRule.SupplierEnum": VendorModelRule.SupplierEnum,
 }
 
@@ -910,7 +959,6 @@ let typeMap: {[index: string]: any} = {
     "AccessControlledAction": AccessControlledAction,
     "AccessControlledResource": AccessControlledResource,
     "AccessMetadataValue": AccessMetadataValue,
-    "AccountingMethod": AccountingMethod,
     "ActionId": ActionId,
     "AdjustHolding": AdjustHolding,
     "AdjustHoldingRequest": AdjustHoldingRequest,
@@ -918,10 +966,8 @@ let typeMap: {[index: string]: any} = {
     "AggregatedReturn": AggregatedReturn,
     "AggregationContext": AggregationContext,
     "AggregationMeasureFailureDetail": AggregationMeasureFailureDetail,
-    "AggregationOp": AggregationOp,
     "AggregationOptions": AggregationOptions,
     "AggregationQuery": AggregationQuery,
-    "AggregationType": AggregationType,
     "Allocation": Allocation,
     "AllocationRequest": AllocationRequest,
     "AllocationSetRequest": AllocationSetRequest,
@@ -942,8 +988,6 @@ let typeMap: {[index: string]: any} = {
     "CdsIndex": CdsIndex,
     "CdsIndexAllOf": CdsIndexAllOf,
     "CdsProtectionDetailSpecification": CdsProtectionDetailSpecification,
-    "CdsRestructuringType": CdsRestructuringType,
-    "CdsSeniority": CdsSeniority,
     "Change": Change,
     "CompletePortfolio": CompletePortfolio,
     "CompleteRelation": CompleteRelation,
@@ -992,16 +1036,13 @@ let typeMap: {[index: string]: any} = {
     "DataMapKey": DataMapKey,
     "DataMapping": DataMapping,
     "DataType": DataType,
-    "DataTypeValueRange": DataTypeValueRange,
     "DateAttributes": DateAttributes,
     "DateRange": DateRange,
-    "DayOfWeek": DayOfWeek,
     "DeleteInstrumentPropertiesResponse": DeleteInstrumentPropertiesResponse,
     "DeleteInstrumentResponse": DeleteInstrumentResponse,
     "DeleteRelationRequest": DeleteRelationRequest,
     "DeleteRelationshipRequest": DeleteRelationshipRequest,
     "DeletedEntityResponse": DeletedEntityResponse,
-    "DeliveryType": DeliveryType,
     "EquityOption": EquityOption,
     "EquityOptionAllOf": EquityOptionAllOf,
     "EquitySwap": EquitySwap,
@@ -1062,7 +1103,6 @@ let typeMap: {[index: string]: any} = {
     "InstrumentMatch": InstrumentMatch,
     "InstrumentProperties": InstrumentProperties,
     "InstrumentSearchProperty": InstrumentSearchProperty,
-    "InstrumentType": InstrumentType,
     "InterestRateSwap": InterestRateSwap,
     "InterestRateSwapAllOf": InterestRateSwapAllOf,
     "InterestRateSwaption": InterestRateSwaption,
@@ -1080,14 +1120,9 @@ let typeMap: {[index: string]: any} = {
     "MarketContext": MarketContext,
     "MarketContextSuppliers": MarketContextSuppliers,
     "MarketDataKeyRule": MarketDataKeyRule,
-    "MarketIdentifier": MarketIdentifier,
     "MarketOptions": MarketOptions,
     "MetricValue": MetricValue,
     "ModelSelection": ModelSelection,
-    "MovementType": MovementType,
-    "OperandType": OperandType,
-    "Operator": Operator,
-    "OptionType": OptionType,
     "Order": Order,
     "OrderBySpec": OrderBySpec,
     "OrderRequest": OrderRequest,
@@ -1104,10 +1139,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfPortfolioGroupSearchResult": PagedResourceListOfPortfolioGroupSearchResult,
     "PagedResourceListOfPortfolioSearchResult": PagedResourceListOfPortfolioSearchResult,
     "PagedResourceListOfPropertyDefinitionSearchResult": PagedResourceListOfPropertyDefinitionSearchResult,
-    "PayReceive": PayReceive,
     "PerformanceReturn": PerformanceReturn,
-    "PeriodType": PeriodType,
-    "PerpetualEntityState": PerpetualEntityState,
     "PerpetualProperty": PerpetualProperty,
     "Person": Person,
     "Portfolio": Portfolio,
@@ -1122,37 +1154,28 @@ let typeMap: {[index: string]: any} = {
     "PortfolioProperties": PortfolioProperties,
     "PortfolioReconciliationRequest": PortfolioReconciliationRequest,
     "PortfolioSearchResult": PortfolioSearchResult,
-    "PortfolioType": PortfolioType,
     "PortfoliosReconciliationRequest": PortfoliosReconciliationRequest,
     "PortfoliosReconciliationRequestPreview": PortfoliosReconciliationRequestPreview,
     "PricingContext": PricingContext,
-    "PricingModel": PricingModel,
     "PricingOptions": PricingOptions,
     "ProcessedCommand": ProcessedCommand,
     "Property": Property,
     "PropertyDefinition": PropertyDefinition,
     "PropertyDefinitionSearchResult": PropertyDefinitionSearchResult,
-    "PropertyDefinitionType": PropertyDefinitionType,
-    "PropertyDomain": PropertyDomain,
     "PropertyFilter": PropertyFilter,
     "PropertyInterval": PropertyInterval,
-    "PropertyLifeTime": PropertyLifeTime,
     "PropertySchema": PropertySchema,
-    "PropertyType": PropertyType,
     "PropertyValue": PropertyValue,
     "Quote": Quote,
     "QuoteAccessMetadataRule": QuoteAccessMetadataRule,
     "QuoteAccessMetadataRuleId": QuoteAccessMetadataRuleId,
     "QuoteId": QuoteId,
-    "QuoteInstrumentIdType": QuoteInstrumentIdType,
     "QuoteSeriesId": QuoteSeriesId,
-    "QuoteType": QuoteType,
     "RealisedGainLoss": RealisedGainLoss,
     "ReconciliationBreak": ReconciliationBreak,
     "ReconciliationLeftRightAddressKeyPair": ReconciliationLeftRightAddressKeyPair,
     "ReferencePortfolioConstituent": ReferencePortfolioConstituent,
     "ReferencePortfolioConstituentRequest": ReferencePortfolioConstituentRequest,
-    "ReferencePortfolioWeightType": ReferencePortfolioWeightType,
     "RelatedEntity": RelatedEntity,
     "Relation": Relation,
     "RelationDefinition": RelationDefinition,
@@ -1207,7 +1230,6 @@ let typeMap: {[index: string]: any} = {
     "SetPersonPropertiesRequest": SetPersonPropertiesRequest,
     "SideConfigurationData": SideConfigurationData,
     "SideConfigurationDataRequest": SideConfigurationDataRequest,
-    "SortOrder": SortOrder,
     "Stream": Stream,
     "StructuredMarketData": StructuredMarketData,
     "StructuredMarketDataId": StructuredMarketDataId,
@@ -1218,7 +1240,6 @@ let typeMap: {[index: string]: any} = {
     "TermDeposit": TermDeposit,
     "TermDepositAllOf": TermDepositAllOf,
     "Tolerance": Tolerance,
-    "ToleranceEnum": ToleranceEnum,
     "Transaction": Transaction,
     "TransactionConfigurationData": TransactionConfigurationData,
     "TransactionConfigurationDataRequest": TransactionConfigurationDataRequest,
@@ -1226,18 +1247,12 @@ let typeMap: {[index: string]: any} = {
     "TransactionConfigurationMovementDataRequest": TransactionConfigurationMovementDataRequest,
     "TransactionConfigurationTypeAlias": TransactionConfigurationTypeAlias,
     "TransactionPrice": TransactionPrice,
-    "TransactionPriceType": TransactionPriceType,
     "TransactionPropertyMapping": TransactionPropertyMapping,
     "TransactionPropertyMappingRequest": TransactionPropertyMappingRequest,
-    "TransactionQueryMode": TransactionQueryMode,
     "TransactionQueryParameters": TransactionQueryParameters,
     "TransactionRequest": TransactionRequest,
-    "TransactionRoles": TransactionRoles,
     "TransactionSetConfigurationData": TransactionSetConfigurationData,
     "TransactionSetConfigurationDataRequest": TransactionSetConfigurationDataRequest,
-    "TransactionStatus": TransactionStatus,
-    "UnitSchema": UnitSchema,
-    "UnmatchedHoldingMethod": UnmatchedHoldingMethod,
     "UpdateCalendarRequest": UpdateCalendarRequest,
     "UpdateCutLabelDefinitionRequest": UpdateCutLabelDefinitionRequest,
     "UpdateDataTypeRequest": UpdateDataTypeRequest,
@@ -1280,8 +1295,6 @@ let typeMap: {[index: string]: any} = {
     "ValuationRequest": ValuationRequest,
     "ValuationSchedule": ValuationSchedule,
     "ValuationsReconciliationRequest": ValuationsReconciliationRequest,
-    "ValueType": ValueType,
-    "VendorLibrary": VendorLibrary,
     "VendorModelRule": VendorModelRule,
     "Version": Version,
     "VersionSummaryDto": VersionSummaryDto,
@@ -1338,9 +1351,9 @@ export class ObjectSerializer {
             let subType: string = type.replace("Array<", ""); // Array<Type> => Type>
             subType = subType.substring(0, subType.length - 1); // Type> => Type
             let transformedData: any[] = [];
-            for (let index in data) {
-                let date = data[index];
-                transformedData.push(ObjectSerializer.serialize(date, subType));
+            for (let index = 0; index < data.length; index++) {
+                let datum = data[index];
+                transformedData.push(ObjectSerializer.serialize(datum, subType));
             }
             return transformedData;
         } else if (type === "Date") {
@@ -1352,14 +1365,14 @@ export class ObjectSerializer {
             if (!typeMap[type]) { // in case we dont know the type
                 return data;
             }
-            
+
             // Get the actual type of this object
             type = this.findCorrectType(data, type);
 
             // get the map for the correct type.
             let attributeTypes = typeMap[type].getAttributeTypeMap();
             let instance: {[index: string]: any} = {};
-            for (let index in attributeTypes) {
+            for (let index = 0; index < attributeTypes.length; index++) {
                 let attributeType = attributeTypes[index];
                 instance[attributeType.baseName] = ObjectSerializer.serialize(data[attributeType.name], attributeType.type);
             }
@@ -1378,9 +1391,9 @@ export class ObjectSerializer {
             let subType: string = type.replace("Array<", ""); // Array<Type> => Type>
             subType = subType.substring(0, subType.length - 1); // Type> => Type
             let transformedData: any[] = [];
-            for (let index in data) {
-                let date = data[index];
-                transformedData.push(ObjectSerializer.deserialize(date, subType));
+            for (let index = 0; index < data.length; index++) {
+                let datum = data[index];
+                transformedData.push(ObjectSerializer.deserialize(datum, subType));
             }
             return transformedData;
         } else if (type === "Date") {
@@ -1395,7 +1408,7 @@ export class ObjectSerializer {
             }
             let instance = new typeMap[type]();
             let attributeTypes = typeMap[type].getAttributeTypeMap();
-            for (let index in attributeTypes) {
+            for (let index = 0; index < attributeTypes.length; index++) {
                 let attributeType = attributeTypes[index];
                 instance[attributeType.name] = ObjectSerializer.deserialize(data[attributeType.baseName], attributeType.type);
             }
@@ -1408,7 +1421,7 @@ export interface Authentication {
     /**
     * Apply authentication settings to header and query params.
     */
-    applyToRequest(requestOptions: localVarRequest.Options): void;
+    applyToRequest(requestOptions: localVarRequest.Options): Promise<void> | void;
 }
 
 export class HttpBasicAuth implements Authentication {
@@ -1418,6 +1431,19 @@ export class HttpBasicAuth implements Authentication {
     applyToRequest(requestOptions: localVarRequest.Options): void {
         requestOptions.auth = {
             username: this.username, password: this.password
+        }
+    }
+}
+
+export class HttpBearerAuth implements Authentication {
+    public accessToken: string | (() => string) = '';
+
+    applyToRequest(requestOptions: localVarRequest.Options): void {
+        if (requestOptions && requestOptions.headers) {
+            const accessToken = typeof this.accessToken === 'function'
+                            ? this.accessToken()
+                            : this.accessToken;
+            requestOptions.headers["Authorization"] = "Bearer " + accessToken;
         }
     }
 }
@@ -1433,6 +1459,13 @@ export class ApiKeyAuth implements Authentication {
             (<any>requestOptions.qs)[this.paramName] = this.apiKey;
         } else if (this.location == "header" && requestOptions && requestOptions.headers) {
             requestOptions.headers[this.paramName] = this.apiKey;
+        } else if (this.location == 'cookie' && requestOptions && requestOptions.headers) {
+            if (requestOptions.headers['Cookie']) {
+                requestOptions.headers['Cookie'] += '; ' + this.paramName + '=' + encodeURIComponent(this.apiKey);
+            }
+            else {
+                requestOptions.headers['Cookie'] = this.paramName + '=' + encodeURIComponent(this.apiKey);
+            }
         }
     }
 }
@@ -1455,3 +1488,5 @@ export class VoidAuth implements Authentication {
         // Do nothing
     }
 }
+
+export type Interceptor = (requestOptions: localVarRequest.Options) => (Promise<void> | void);

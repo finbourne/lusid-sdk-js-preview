@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { InstrumentDefinition } from './instrumentDefinition';
 
 /**
@@ -19,11 +20,11 @@ export class InstrumentMatch {
     /**
     * The collection of instruments found by the search which have been mastered within LUSID.
     */
-    'masteredInstruments'?: Array<InstrumentDefinition>;
+    'masteredInstruments'?: Array<InstrumentDefinition> | null;
     /**
     * The collection of instruments found by the search which have not been mastered within LUSID and instead found via OpenFIGI.
     */
-    'externalInstruments'?: Array<InstrumentDefinition>;
+    'externalInstruments'?: Array<InstrumentDefinition> | null;
 
     static discriminator: string | undefined = undefined;
 

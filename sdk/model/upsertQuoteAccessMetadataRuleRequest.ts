@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { AccessMetadataValue } from './accessMetadataValue';
 import { QuoteAccessMetadataRuleId } from './quoteAccessMetadataRuleId';
 
