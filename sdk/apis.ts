@@ -32,6 +32,7 @@ import {StructuredMarketDataApi} from './api/structuredMarketDataApi';
 import {StructuredResultDataApi} from './api/structuredResultDataApi';
 import {SystemConfigurationApi} from './api/systemConfigurationApi';
 import {TransactionPortfoliosApi} from './api/transactionPortfoliosApi';
+import {TranslationApi} from './api/translationApi';
 
 export class Api {
     public aggregation:  AggregationApi
@@ -68,4 +69,5 @@ export class Api {
     public structuredResultData:  StructuredResultDataApi
     public systemConfiguration:  SystemConfigurationApi
     public transactionPortfolios:  TransactionPortfoliosApi
+    public translation:  TranslationApi
 }

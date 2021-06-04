@@ -333,6 +333,8 @@ export * from './transactionRoles';
 export * from './transactionSetConfigurationData';
 export * from './transactionSetConfigurationDataRequest';
 export * from './transactionStatus';
+export * from './translateInstrumentDefinitionsRequest';
+export * from './translateInstrumentDefinitionsResponse';
 export * from './unitSchema';
 export * from './unmatchedHoldingMethod';
 export * from './updateCalendarRequest';
@@ -735,6 +737,8 @@ import { TransactionRoles } from './transactionRoles';
 import { TransactionSetConfigurationData } from './transactionSetConfigurationData';
 import { TransactionSetConfigurationDataRequest } from './transactionSetConfigurationDataRequest';
 import { TransactionStatus } from './transactionStatus';
+import { TranslateInstrumentDefinitionsRequest } from './translateInstrumentDefinitionsRequest';
+import { TranslateInstrumentDefinitionsResponse } from './translateInstrumentDefinitionsResponse';
 import { UnitSchema } from './unitSchema';
 import { UnmatchedHoldingMethod } from './unmatchedHoldingMethod';
 import { UpdateCalendarRequest } from './updateCalendarRequest';
@@ -1253,6 +1257,8 @@ let typeMap: {[index: string]: any} = {
     "TransactionRequest": TransactionRequest,
     "TransactionSetConfigurationData": TransactionSetConfigurationData,
     "TransactionSetConfigurationDataRequest": TransactionSetConfigurationDataRequest,
+    "TranslateInstrumentDefinitionsRequest": TranslateInstrumentDefinitionsRequest,
+    "TranslateInstrumentDefinitionsResponse": TranslateInstrumentDefinitionsResponse,
     "UpdateCalendarRequest": UpdateCalendarRequest,
     "UpdateCutLabelDefinitionRequest": UpdateCutLabelDefinitionRequest,
     "UpdateDataTypeRequest": UpdateDataTypeRequest,
