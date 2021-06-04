@@ -10,15 +10,16 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { Link } from './link';
 import { PortfolioGroupSearchResult } from './portfolioGroupSearchResult';
 
 export class PagedResourceListOfPortfolioGroupSearchResult {
-    'nextPage'?: string;
-    'previousPage'?: string;
+    'nextPage'?: string | null;
+    'previousPage'?: string | null;
     'values': Array<PortfolioGroupSearchResult>;
-    'href'?: string;
-    'links'?: Array<Link>;
+    'href'?: string | null;
+    'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
 

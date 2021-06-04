@@ -10,12 +10,13 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 
 export class CreateCorporateActionSourceRequest {
     'scope': string;
     'code': string;
     'displayName': string;
-    'description'?: string;
+    'description'?: string | null;
 
     static discriminator: string | undefined = undefined;
 

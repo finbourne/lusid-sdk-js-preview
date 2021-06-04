@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { Link } from './link';
 import { ResourceId } from './resourceId';
 import { Version } from './version';
@@ -20,32 +21,32 @@ export class RelationDefinition {
     /**
     * The entity domain of the source entity object.
     */
-    'sourceEntityDomain'?: string;
+    'sourceEntityDomain'?: string | null;
     /**
     * The entity domain of the target entity object.
     */
-    'targetEntityDomain'?: string;
+    'targetEntityDomain'?: string | null;
     /**
     * The display name of the relation.
     */
-    'displayName'?: string;
+    'displayName'?: string | null;
     /**
     * The description to relate source entity object and target entity object
     */
-    'outwardDescription'?: string;
+    'outwardDescription'?: string | null;
     /**
     * The description to relate target entity object and source entity object
     */
-    'inwardDescription'?: string;
+    'inwardDescription'?: string | null;
     /**
     * Describes how the relations can change over time, allowed values are \"Perpetual\" and \"TimeVariant\"
     */
-    'lifeTime'?: string;
+    'lifeTime'?: string | null;
     /**
     * Describes the uniqueness and cardinality for relations with a specific source entity object and relations under this definition. Allowed values are \"Property\" and \"Collection\", defaults to \"Collection\" if not specified.
     */
-    'constraintStyle'?: string;
-    'links'?: Array<Link>;
+    'constraintStyle'?: string | null;
+    'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
 

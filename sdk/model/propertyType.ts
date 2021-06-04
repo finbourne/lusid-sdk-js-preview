@@ -10,19 +10,13 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 
 /**
 * See https://wiki.finbourne.com/information/domain-model-properties
 */
-export class PropertyType {
-
-    static discriminator: string | undefined = undefined;
-
-    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-    ];
-
-    static getAttributeTypeMap() {
-        return PropertyType.attributeTypeMap;
-    }
+export enum PropertyType {
+    Label = <any> 'Label',
+    Metric = <any> 'Metric',
+    Information = <any> 'Information'
 }
-

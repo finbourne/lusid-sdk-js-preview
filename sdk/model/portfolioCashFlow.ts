@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { CurrencyAndAmount } from './currencyAndAmount';
 import { Link } from './link';
 import { PerpetualProperty } from './perpetualProperty';
@@ -34,7 +35,7 @@ export class PortfolioCashFlow {
     /**
     * The sub-holding properties which identify the holding. Each property will be from the \'Transaction\' domain. These are configured when a transaction portfolio is created.
     */
-    'subHoldingKeys'?: { [key: string]: PerpetualProperty; };
+    'subHoldingKeys'?: { [key: string]: PerpetualProperty; } | null;
     /**
     * Indicates the record type (Closed, Open, Activity).
     */
@@ -54,7 +55,7 @@ export class PortfolioCashFlow {
     'translationGainLoss': CurrencyAndAmount;
     'costBasisReportingCurrency': CurrencyAndAmount;
     'transaction'?: Transaction;
-    'links'?: Array<Link>;
+    'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
 

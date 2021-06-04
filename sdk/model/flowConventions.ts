@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 
 /**
 * A flow convention defines the specification for generation of the date schedule for a leg or set of cashflows.  It determines the tenor of these and, how to map the unadjusted set of dates to dates which are \'good business  days\'. For example, if an unadjusted date falls on a Saturday or a bank holiday, should it be rolled forward  or backward to obtain the adjusted date.
@@ -50,11 +51,11 @@ export class FlowConventions {
     /**
     * The scope used when updating or inserting the convention.
     */
-    'scope'?: string;
+    'scope'?: string | null;
     /**
     * The code of the convention.
     */
-    'code'?: string;
+    'code'?: string | null;
 
     static discriminator: string | undefined = undefined;
 

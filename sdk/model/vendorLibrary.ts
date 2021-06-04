@@ -10,16 +10,12 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 
-export class VendorLibrary {
-
-    static discriminator: string | undefined = undefined;
-
-    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-    ];
-
-    static getAttributeTypeMap() {
-        return VendorLibrary.attributeTypeMap;
-    }
+export enum VendorLibrary {
+    Lusid = <any> 'Lusid',
+    RefinitivQps = <any> 'RefinitivQps',
+    RefinitivTracsWeb = <any> 'RefinitivTracsWeb',
+    VolMaster = <any> 'VolMaster',
+    IsdaCds = <any> 'IsdaCds'
 }
-

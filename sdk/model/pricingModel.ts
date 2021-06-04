@@ -10,16 +10,20 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 
-export class PricingModel {
-
-    static discriminator: string | undefined = undefined;
-
-    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-    ];
-
-    static getAttributeTypeMap() {
-        return PricingModel.attributeTypeMap;
-    }
+export enum PricingModel {
+    SimpleStatic = <any> 'SimpleStatic',
+    Discounting = <any> 'Discounting',
+    VendorDefault = <any> 'VendorDefault',
+    BlackScholes = <any> 'BlackScholes',
+    ConstantTimeValueOfMoney = <any> 'ConstantTimeValueOfMoney',
+    Bachelier = <any> 'Bachelier',
+    ForwardWithPoints = <any> 'ForwardWithPoints',
+    ForwardWithPointsUndiscounted = <any> 'ForwardWithPointsUndiscounted',
+    ForwardSpecifiedRate = <any> 'ForwardSpecifiedRate',
+    ForwardSpecifiedRateUndiscounted = <any> 'ForwardSpecifiedRateUndiscounted',
+    IndexNav = <any> 'IndexNav',
+    IndexPrice = <any> 'IndexPrice',
+    InlinedIndex = <any> 'InlinedIndex'
 }
-

@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { CreateUnitDefinition } from './createUnitDefinition';
 
 export class CreateDataTypeRequest {
@@ -25,12 +26,12 @@ export class CreateDataTypeRequest {
     * The available values are: String, Int, Decimal, DateTime, Boolean, Map, List, PropertyArray, Percentage, Code, Id, Uri, CurrencyAndAmount, TradePrice, Currency, MetricValue, ResourceId, ResultValue, CutLocalTime, DateOrCutLabel
     */
     'valueType': CreateDataTypeRequest.ValueTypeEnum;
-    'acceptableValues'?: Array<string>;
+    'acceptableValues'?: Array<string> | null;
     /**
     * The available values are: NoUnits, Basic, Iso4217Currency
     */
     'unitSchema'?: CreateDataTypeRequest.UnitSchemaEnum;
-    'acceptableUnits'?: Array<CreateUnitDefinition>;
+    'acceptableUnits'?: Array<CreateUnitDefinition> | null;
 
     static discriminator: string | undefined = undefined;
 

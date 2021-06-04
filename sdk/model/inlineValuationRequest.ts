@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { AggregateSpec } from './aggregateSpec';
 import { OrderBySpec } from './orderBySpec';
 import { PropertyFilter } from './propertyFilter';
@@ -25,7 +26,7 @@ export class InlineValuationRequest {
     /**
     * The asAt date to use
     */
-    'asAt'?: Date;
+    'asAt'?: Date | null;
     /**
     * The set of specifications to calculate or retrieve during the valuation and present in the results. For example:  AggregateSpec(\'Holding/default/PV\',\'Sum\') for returning the PV (present value) of holdings  AggregateSpec(\'Holding/default/Units\',\'Sum\') for returning the units of holidays  AggregateSpec(\'Instrument/default/LusidInstrumentId\',\'Value\') for returning the Lusid Instrument identifier
     */
@@ -33,19 +34,19 @@ export class InlineValuationRequest {
     /**
     * The set of items by which to perform grouping. This primarily matters when one or more of the metric operators is a mapping  that reduces set size, e.g. sum or proportion. The group-by statement determines the set of keys by which to break the results out.
     */
-    'groupBy'?: Array<string>;
+    'groupBy'?: Array<string> | null;
     /**
     * A set of filters to use to reduce the data found in a request. Equivalent to the \'where ...\' part of a Sql select statement.  For example, filter a set of values within a given range or matching a particular value.
     */
-    'filters'?: Array<PropertyFilter>;
+    'filters'?: Array<PropertyFilter> | null;
     /**
     * A (possibly empty/null) set of specifications for how to order the results.
     */
-    'sort'?: Array<OrderBySpec>;
+    'sort'?: Array<OrderBySpec> | null;
     /**
     * Three letter ISO currency string indicating what currency to report in for ReportCurrency denominated queries.  If not present, then the currency of the relevant portfolio will be used in its place.
     */
-    'reportCurrency'?: string;
+    'reportCurrency'?: string | null;
     /**
     * Flag directing the Valuation call to populate the results with subtotals of aggregates.
     */

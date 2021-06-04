@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { Counterparty } from './counterparty';
 import { ErrorDetail } from './errorDetail';
 import { Link } from './link';
@@ -18,13 +19,13 @@ export class GetCounterpartyResponse {
     /**
     * The specific Uniform Resource Identifier (URI) for this resource at the requested effective and asAt datetime.
     */
-    'href'?: string;
+    'href'?: string | null;
     'value'?: Counterparty;
     /**
     * The counterparty that could not be updated or inserted along with a reason for failure.
     */
-    'failed'?: { [key: string]: ErrorDetail; };
-    'links'?: Array<Link>;
+    'failed'?: { [key: string]: ErrorDetail; } | null;
+    'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
 

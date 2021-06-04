@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { Property } from './property';
 
 export class UpsertInstrumentPropertyRequest {
@@ -24,7 +25,7 @@ export class UpsertInstrumentPropertyRequest {
     /**
     * Set of unique instrument properties and associated values to store with the instrument. Each property must be from the \'Instrument\' domain.
     */
-    'properties'?: Array<Property>;
+    'properties'?: Array<Property> | null;
 
     static discriminator: string | undefined = undefined;
 

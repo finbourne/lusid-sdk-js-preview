@@ -10,16 +10,10 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 
-export class OptionType {
-
-    static discriminator: string | undefined = undefined;
-
-    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-    ];
-
-    static getAttributeTypeMap() {
-        return OptionType.attributeTypeMap;
-    }
+export enum OptionType {
+    None = <any> 'None',
+    Call = <any> 'Call',
+    Put = <any> 'Put'
 }
-

@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { Link } from './link';
 import { PortfolioHolding } from './portfolioHolding';
 import { Version } from './version';
@@ -17,10 +18,10 @@ import { Version } from './version';
 export class VersionedResourceListOfPortfolioHolding {
     'version': Version;
     'values': Array<PortfolioHolding>;
-    'href'?: string;
-    'nextPage'?: string;
-    'previousPage'?: string;
-    'links'?: Array<Link>;
+    'href'?: string | null;
+    'nextPage'?: string | null;
+    'previousPage'?: string | null;
+    'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
 

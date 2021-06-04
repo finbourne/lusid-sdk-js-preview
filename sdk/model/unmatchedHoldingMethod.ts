@@ -10,19 +10,12 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 
 /**
 * When holdings adjustments are specified for a single effective date,  any holdings for the portfolio not included in the adjustments are  adjusted according to this value.
 */
-export class UnmatchedHoldingMethod {
-
-    static discriminator: string | undefined = undefined;
-
-    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-    ];
-
-    static getAttributeTypeMap() {
-        return UnmatchedHoldingMethod.attributeTypeMap;
-    }
+export enum UnmatchedHoldingMethod {
+    PositionToZero = <any> 'PositionToZero',
+    KeepTheSame = <any> 'KeepTheSame'
 }
-

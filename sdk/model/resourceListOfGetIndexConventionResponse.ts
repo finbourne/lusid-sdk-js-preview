@@ -10,15 +10,16 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { GetIndexConventionResponse } from './getIndexConventionResponse';
 import { Link } from './link';
 
 export class ResourceListOfGetIndexConventionResponse {
     'values': Array<GetIndexConventionResponse>;
-    'href'?: string;
-    'links'?: Array<Link>;
-    'nextPage'?: string;
-    'previousPage'?: string;
+    'href'?: string | null;
+    'links'?: Array<Link> | null;
+    'nextPage'?: string | null;
+    'previousPage'?: string | null;
 
     static discriminator: string | undefined = undefined;
 

@@ -10,19 +10,29 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 
 /**
 * See https://wiki.finbourne.com/information/domain-model-properties                Each domain refers to a logical set of properties which reside within it.
 */
-export class PropertyDomain {
-
-    static discriminator: string | undefined = undefined;
-
-    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-    ];
-
-    static getAttributeTypeMap() {
-        return PropertyDomain.attributeTypeMap;
-    }
+export enum PropertyDomain {
+    NotDefined = <any> 'NotDefined',
+    Transaction = <any> 'Transaction',
+    Portfolio = <any> 'Portfolio',
+    Holding = <any> 'Holding',
+    ReferenceHolding = <any> 'ReferenceHolding',
+    TransactionConfiguration = <any> 'TransactionConfiguration',
+    Instrument = <any> 'Instrument',
+    CutLabelDefinition = <any> 'CutLabelDefinition',
+    Analytic = <any> 'Analytic',
+    PortfolioGroup = <any> 'PortfolioGroup',
+    Person = <any> 'Person',
+    AccessMetadata = <any> 'AccessMetadata',
+    Order = <any> 'Order',
+    UnitResult = <any> 'UnitResult',
+    MarketData = <any> 'MarketData',
+    ConfigurationRecipe = <any> 'ConfigurationRecipe',
+    Allocation = <any> 'Allocation',
+    Calendar = <any> 'Calendar',
+    LegalEntity = <any> 'LegalEntity'
 }
-
