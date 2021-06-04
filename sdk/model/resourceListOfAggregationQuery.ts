@@ -10,16 +10,15 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 import { AggregationQuery } from './aggregationQuery';
 import { Link } from './link';
 
 export class ResourceListOfAggregationQuery {
     'values': Array<AggregationQuery>;
-    'href'?: string | null;
-    'links'?: Array<Link> | null;
-    'nextPage'?: string | null;
-    'previousPage'?: string | null;
+    'href'?: string;
+    'links'?: Array<Link>;
+    'nextPage'?: string;
+    'previousPage'?: string;
 
     static discriminator: string | undefined = undefined;
 

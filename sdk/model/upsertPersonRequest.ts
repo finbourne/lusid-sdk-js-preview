@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 import { Property } from './property';
 
 export class UpsertPersonRequest {
@@ -21,7 +20,7 @@ export class UpsertPersonRequest {
     /**
     * A set of properties associated to the Person. There can be multiple properties associated with a property key.
     */
-    'properties'?: { [key: string]: Array<Property>; } | null;
+    'properties'?: { [key: string]: Array<Property>; };
     /**
     * The display name of the Person
     */
@@ -29,7 +28,7 @@ export class UpsertPersonRequest {
     /**
     * The description of the Person
     */
-    'description'?: string | null;
+    'description'?: string;
 
     static discriminator: string | undefined = undefined;
 

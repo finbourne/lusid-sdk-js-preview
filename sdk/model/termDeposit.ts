@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 import { FlowConventions } from './flowConventions';
 import { LusidInstrument } from './lusidInstrument';
 import { TermDepositAllOf } from './termDepositAllOf';

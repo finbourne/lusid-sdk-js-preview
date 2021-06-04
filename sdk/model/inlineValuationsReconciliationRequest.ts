@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 import { InlineValuationRequest } from './inlineValuationRequest';
 import { ReconciliationLeftRightAddressKeyPair } from './reconciliationLeftRightAddressKeyPair';
 
@@ -23,11 +22,11 @@ export class InlineValuationsReconciliationRequest {
     /**
     * The mapping from property keys requested by left aggregation to property keys on right hand side
     */
-    'leftToRightMapping'?: Array<ReconciliationLeftRightAddressKeyPair> | null;
+    'leftToRightMapping'?: Array<ReconciliationLeftRightAddressKeyPair>;
     /**
     * List of keys to preserve (from rhs) in the diff. Used in conjunction with filtering/grouping
     */
-    'preserveKeys'?: Array<string> | null;
+    'preserveKeys'?: Array<string>;
 
     static discriminator: string | undefined = undefined;
 

@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 import { A2BCategory } from './a2BCategory';
 import { PerpetualProperty } from './perpetualProperty';
 import { Property } from './property';
@@ -22,23 +21,23 @@ export class A2BDataRecord {
     /**
     * The type of the holding e.g. Position, Balance, CashCommitment, Receivable, ForwardFX etc.
     */
-    'holdingType'?: string | null;
+    'holdingType'?: string;
     /**
     * The unique Lusid Instrument Id (LUID) of the instrument that the holding is in.
     */
-    'instrumentUid'?: string | null;
+    'instrumentUid'?: string;
     /**
     * The sub-holding properties which identify the holding. Each property will be from the \'Transaction\' domain. These are configured when a transaction portfolio is created.
     */
-    'subHoldingKeys'?: { [key: string]: PerpetualProperty; } | null;
+    'subHoldingKeys'?: { [key: string]: PerpetualProperty; };
     /**
     * The holding currency.
     */
-    'currency'?: string | null;
+    'currency'?: string;
     /**
     * The unique identifier for the transaction.
     */
-    'transactionId'?: string | null;
+    'transactionId'?: string;
     'start'?: A2BCategory;
     'flows'?: A2BCategory;
     'gains'?: A2BCategory;
@@ -47,7 +46,7 @@ export class A2BDataRecord {
     /**
     * The properties which have been requested to be decorated onto the holding. These will be from the \'Instrument\' domain.
     */
-    'properties'?: { [key: string]: Property; } | null;
+    'properties'?: { [key: string]: Property; };
 
     static discriminator: string | undefined = undefined;
 

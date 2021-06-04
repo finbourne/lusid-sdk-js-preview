@@ -10,10 +10,16 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 
-export enum ReferencePortfolioWeightType {
-    Static = <any> 'Static',
-    Floating = <any> 'Floating',
-    Periodical = <any> 'Periodical'
+export class ReferencePortfolioWeightType {
+
+    static discriminator: string | undefined = undefined;
+
+    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    ];
+
+    static getAttributeTypeMap() {
+        return ReferencePortfolioWeightType.attributeTypeMap;
+    }
 }
+

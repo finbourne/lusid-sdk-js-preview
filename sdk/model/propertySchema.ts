@@ -10,14 +10,13 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 import { FieldSchema } from './fieldSchema';
 import { Link } from './link';
 
 export class PropertySchema {
-    'href'?: string | null;
-    'values'?: { [key: string]: FieldSchema; } | null;
-    'links'?: Array<Link> | null;
+    'href'?: string;
+    'values'?: { [key: string]: FieldSchema; };
+    'links'?: Array<Link>;
 
     static discriminator: string | undefined = undefined;
 

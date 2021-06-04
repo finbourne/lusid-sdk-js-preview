@@ -10,9 +10,16 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 
-export enum OperandType {
-    Absolute = <any> 'Absolute',
-    Property = <any> 'Property'
+export class OperandType {
+
+    static discriminator: string | undefined = undefined;
+
+    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    ];
+
+    static getAttributeTypeMap() {
+        return OperandType.attributeTypeMap;
+    }
 }
+

@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 import { EquityOptionAllOf } from './equityOptionAllOf';
 import { LusidInstrument } from './lusidInstrument';
 
@@ -135,11 +134,11 @@ export namespace EquityOption {
         Cusip = <any> 'Cusip',
         ClientInternal = <any> 'ClientInternal',
         Figi = <any> 'Figi',
-        Ric = <any> 'RIC',
+        RIC = <any> 'RIC',
         QuotePermId = <any> 'QuotePermId',
-        RedCode = <any> 'REDCode',
-        Bbgid = <any> 'BBGId',
-        IceCode = <any> 'ICECode'
+        REDCode = <any> 'REDCode',
+        BBGId = <any> 'BBGId',
+        ICECode = <any> 'ICECode'
     }
     export enum InstrumentTypeEnum {
         QuotedSecurity = <any> 'QuotedSecurity',

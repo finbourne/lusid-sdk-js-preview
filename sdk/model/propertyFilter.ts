@@ -10,18 +10,17 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 
 export class PropertyFilter {
     /**
     * The key that uniquely identifies a queryable address in Lusid.
     */
-    'left'?: string | null;
+    'left'?: string;
     /**
     * The available values are: Equals, NotEquals, GreaterThan, GreaterThanOrEqualTo, LessThan, LessThanOrEqualTo, In
     */
     'operator'?: PropertyFilter.OperatorEnum;
-    'right'?: object | null;
+    'right'?: object;
     /**
     * The available values are: Absolute, Property
     */

@@ -10,12 +10,19 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 
 /**
 * This class indicates what the range of data acceptable by a data type
 */
-export enum DataTypeValueRange {
-    Open = <any> 'Open',
-    Closed = <any> 'Closed'
+export class DataTypeValueRange {
+
+    static discriminator: string | undefined = undefined;
+
+    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    ];
+
+    static getAttributeTypeMap() {
+        return DataTypeValueRange.attributeTypeMap;
+    }
 }
+

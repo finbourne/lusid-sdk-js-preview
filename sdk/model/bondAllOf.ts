@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 import { FlowConventions } from './flowConventions';
 
 export class BondAllOf {
@@ -38,7 +37,7 @@ export class BondAllOf {
     /**
     * external market codes and identifiers for the bond, e.g. ISIN.
     */
-    'identifiers'?: { [key: string]: string; } | null;
+    'identifiers'?: { [key: string]: string; };
     /**
     * The available values are: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CashSettled, CdsIndex, Basket, FundingLeg, CrossCurrencySwap
     */

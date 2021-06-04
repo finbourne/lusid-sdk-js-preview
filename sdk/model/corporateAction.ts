@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 import { CorporateActionTransition } from './corporateActionTransition';
 
 /**
@@ -21,7 +20,7 @@ export class CorporateAction {
     * The unique identifier of this corporate action
     */
     'corporateActionCode': string;
-    'description'?: string | null;
+    'description'?: string;
     /**
     * The announcement date of the corporate action
     */
@@ -41,7 +40,7 @@ export class CorporateAction {
     /**
     * The transitions that result from this corporate action
     */
-    'transitions'?: Array<CorporateActionTransition> | null;
+    'transitions'?: Array<CorporateActionTransition>;
 
     static discriminator: string | undefined = undefined;
 

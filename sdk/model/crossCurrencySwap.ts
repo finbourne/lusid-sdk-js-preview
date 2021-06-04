@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 import { CrossCurrencySwapAllOf } from './crossCurrencySwapAllOf';
 import { InstrumentLeg } from './instrumentLeg';
 import { LusidInstrument } from './lusidInstrument';

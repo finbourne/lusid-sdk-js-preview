@@ -10,14 +10,13 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 
 /**
 * An access control value. Provider should only be used if you are a service provide licensing data. In that case  the provider value must match your domain.
 */
 export class AccessMetadataValue {
     'value': string;
-    'provider'?: string | null;
+    'provider'?: string;
 
     static discriminator: string | undefined = undefined;
 

@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 import { BasketIdentifier } from './basketIdentifier';
 import { WeightedInstruments } from './weightedInstruments';
 

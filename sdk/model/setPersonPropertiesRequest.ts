@@ -10,14 +10,13 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 import { Property } from './property';
 
 export class SetPersonPropertiesRequest {
     /**
     * Properties to set for a Person. All time-variant properties must have same EffectiveFrom date. Properties not included in the request will not be amended.
     */
-    'properties'?: { [key: string]: Array<Property>; } | null;
+    'properties'?: { [key: string]: Array<Property>; };
 
     static discriminator: string | undefined = undefined;
 

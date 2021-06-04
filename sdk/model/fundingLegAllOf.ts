@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 import { LegDefinition } from './legDefinition';
 
 export class FundingLegAllOf {

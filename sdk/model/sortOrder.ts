@@ -10,9 +10,16 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 
-export enum SortOrder {
-    Ascending = <any> 'Ascending',
-    Descending = <any> 'Descending'
+export class SortOrder {
+
+    static discriminator: string | undefined = undefined;
+
+    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    ];
+
+    static getAttributeTypeMap() {
+        return SortOrder.attributeTypeMap;
+    }
 }
+

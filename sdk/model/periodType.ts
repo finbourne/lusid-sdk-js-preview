@@ -10,12 +10,16 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 
-export enum PeriodType {
-    Daily = <any> 'Daily',
-    Weekly = <any> 'Weekly',
-    Monthly = <any> 'Monthly',
-    Quarterly = <any> 'Quarterly',
-    Annually = <any> 'Annually'
+export class PeriodType {
+
+    static discriminator: string | undefined = undefined;
+
+    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    ];
+
+    static getAttributeTypeMap() {
+        return PeriodType.attributeTypeMap;
+    }
 }
+

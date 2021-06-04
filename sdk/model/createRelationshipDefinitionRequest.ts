@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 
 export class CreateRelationshipDefinitionRequest {
     /**
@@ -44,11 +43,11 @@ export class CreateRelationshipDefinitionRequest {
     /**
     * Describes how the relationships can change over time. Allowed values are \'Perpetual\' and \'TimeVariant\', defaults to \'Perpetual\' if not specified.
     */
-    'lifeTime'?: string | null;
+    'lifeTime'?: string;
     /**
     * Describes the cardinality of the relationship with a specific source entity object and relationships under this definition. Allowed values are \'ManyToMany\' and \'OneToMany\', defaults to \'ManyToMany\' if not specified.
     */
-    'relationshipCardinality'?: string | null;
+    'relationshipCardinality'?: string;
 
     static discriminator: string | undefined = undefined;
 

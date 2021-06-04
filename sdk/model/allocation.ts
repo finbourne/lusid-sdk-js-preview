@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 import { Link } from './link';
 import { PerpetualProperty } from './perpetualProperty';
 import { ResourceId } from './resourceId';
@@ -35,12 +34,12 @@ export class Allocation {
     /**
     * Client-defined properties associated with this allocation.
     */
-    'properties'?: { [key: string]: PerpetualProperty; } | null;
+    'properties'?: { [key: string]: PerpetualProperty; };
     /**
     * The LUSID instrument id for the instrument allocated.
     */
     'lusidInstrumentId': string;
-    'links'?: Array<Link> | null;
+    'links'?: Array<Link>;
 
     static discriminator: string | undefined = undefined;
 
