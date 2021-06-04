@@ -80,6 +80,8 @@ export * from './creditDefaultSwap';
 export * from './creditDefaultSwapAllOf';
 export * from './creditRating';
 export * from './creditSupportAnnex';
+export * from './crossCurrencySwap';
+export * from './crossCurrencySwapAllOf';
 export * from './currencyAndAmount';
 export * from './cutLabelDefinition';
 export * from './cutLocalTime';
@@ -480,6 +482,8 @@ import { CreditDefaultSwap } from './creditDefaultSwap';
 import { CreditDefaultSwapAllOf } from './creditDefaultSwapAllOf';
 import { CreditRating } from './creditRating';
 import { CreditSupportAnnex } from './creditSupportAnnex';
+import { CrossCurrencySwap } from './crossCurrencySwap';
+import { CrossCurrencySwapAllOf } from './crossCurrencySwapAllOf';
 import { CurrencyAndAmount } from './currencyAndAmount';
 import { CutLabelDefinition } from './cutLabelDefinition';
 import { CutLocalTime } from './cutLocalTime';
@@ -830,6 +834,8 @@ let enumsMap: {[index: string]: any} = {
         "CreateTransactionPortfolioRequest.AccountingMethodEnum": CreateTransactionPortfolioRequest.AccountingMethodEnum,
         "CreditDefaultSwap.InstrumentTypeEnum": CreditDefaultSwap.InstrumentTypeEnum,
         "CreditDefaultSwapAllOf.InstrumentTypeEnum": CreditDefaultSwapAllOf.InstrumentTypeEnum,
+        "CrossCurrencySwap.InstrumentTypeEnum": CrossCurrencySwap.InstrumentTypeEnum,
+        "CrossCurrencySwapAllOf.InstrumentTypeEnum": CrossCurrencySwapAllOf.InstrumentTypeEnum,
         "DataType.TypeValueRangeEnum": DataType.TypeValueRangeEnum,
         "DataType.ValueTypeEnum": DataType.ValueTypeEnum,
         "DataType.UnitSchemaEnum": DataType.UnitSchemaEnum,
@@ -1021,6 +1027,8 @@ let typeMap: {[index: string]: any} = {
     "CreditDefaultSwapAllOf": CreditDefaultSwapAllOf,
     "CreditRating": CreditRating,
     "CreditSupportAnnex": CreditSupportAnnex,
+    "CrossCurrencySwap": CrossCurrencySwap,
+    "CrossCurrencySwapAllOf": CrossCurrencySwapAllOf,
     "CurrencyAndAmount": CurrencyAndAmount,
     "CutLabelDefinition": CutLabelDefinition,
     "CutLocalTime": CutLocalTime,

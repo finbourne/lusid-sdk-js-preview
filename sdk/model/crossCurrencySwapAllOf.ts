@@ -11,68 +11,79 @@
  */
 
 import { RequestFile } from './models';
-import { ResourceId } from './resourceId';
-import { Version } from './version';
+import { InstrumentLeg } from './instrumentLeg';
 
-/**
-* Representation of a relation containing details of source and target entities, and both outward and inward descriptions.
-*/
-export class CompleteRelation {
-    'href'?: string | null;
-    'version'?: Version;
-    'relationDefinitionId': ResourceId;
-    'sourceEntityId': { [key: string]: string; };
-    'targetEntityId': { [key: string]: string; };
-    'outwardDescription': string;
-    'inwardDescription': string;
-    'effectiveFrom'?: Date;
+export class CrossCurrencySwapAllOf {
+    /**
+    * The start date of the instrument. This is normally synonymous with the trade-date.
+    */
+    'startDate': Date;
+    /**
+    * The final maturity date of the instrument. This means the last date on which the instruments makes a payment of any amount.  For the avoidance of doubt, that is not necessarily prior to its last sensitivity date for the purposes of risk; e.g. instruments such as  Constant Maturity Swaps (CMS) often have sensitivities to rates beyond their last payment date
+    */
+    'maturityDate': Date;
+    /**
+    * The set of instrument legs that define the swap instrument.
+    */
+    'legs': Array<InstrumentLeg>;
+    /**
+    * The available values are: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CashSettled, CdsIndex, Basket, FundingLeg, CrossCurrencySwap
+    */
+    'instrumentType': CrossCurrencySwapAllOf.InstrumentTypeEnum;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "href",
-            "baseName": "href",
-            "type": "string"
-        },
-        {
-            "name": "version",
-            "baseName": "version",
-            "type": "Version"
-        },
-        {
-            "name": "relationDefinitionId",
-            "baseName": "relationDefinitionId",
-            "type": "ResourceId"
-        },
-        {
-            "name": "sourceEntityId",
-            "baseName": "sourceEntityId",
-            "type": "{ [key: string]: string; }"
-        },
-        {
-            "name": "targetEntityId",
-            "baseName": "targetEntityId",
-            "type": "{ [key: string]: string; }"
-        },
-        {
-            "name": "outwardDescription",
-            "baseName": "outwardDescription",
-            "type": "string"
-        },
-        {
-            "name": "inwardDescription",
-            "baseName": "inwardDescription",
-            "type": "string"
-        },
-        {
-            "name": "effectiveFrom",
-            "baseName": "effectiveFrom",
+            "name": "startDate",
+            "baseName": "startDate",
             "type": "Date"
+        },
+        {
+            "name": "maturityDate",
+            "baseName": "maturityDate",
+            "type": "Date"
+        },
+        {
+            "name": "legs",
+            "baseName": "legs",
+            "type": "Array<InstrumentLeg>"
+        },
+        {
+            "name": "instrumentType",
+            "baseName": "instrumentType",
+            "type": "CrossCurrencySwapAllOf.InstrumentTypeEnum"
         }    ];
 
     static getAttributeTypeMap() {
-        return CompleteRelation.attributeTypeMap;
+        return CrossCurrencySwapAllOf.attributeTypeMap;
     }
 }
 
+export namespace CrossCurrencySwapAllOf {
+    export enum InstrumentTypeEnum {
+        QuotedSecurity = <any> 'QuotedSecurity',
+        InterestRateSwap = <any> 'InterestRateSwap',
+        FxForward = <any> 'FxForward',
+        Future = <any> 'Future',
+        ExoticInstrument = <any> 'ExoticInstrument',
+        FxOption = <any> 'FxOption',
+        CreditDefaultSwap = <any> 'CreditDefaultSwap',
+        InterestRateSwaption = <any> 'InterestRateSwaption',
+        Bond = <any> 'Bond',
+        EquityOption = <any> 'EquityOption',
+        FixedLeg = <any> 'FixedLeg',
+        FloatingLeg = <any> 'FloatingLeg',
+        BespokeCashFlowsLeg = <any> 'BespokeCashFlowsLeg',
+        Unknown = <any> 'Unknown',
+        TermDeposit = <any> 'TermDeposit',
+        ContractForDifference = <any> 'ContractForDifference',
+        EquitySwap = <any> 'EquitySwap',
+        CashPerpetual = <any> 'CashPerpetual',
+        CashSettled = <any> 'CashSettled',
+        CdsIndex = <any> 'CdsIndex',
+        Basket = <any> 'Basket',
+        FundingLeg = <any> 'FundingLeg',
+        CrossCurrencySwap = <any> 'CrossCurrencySwap'
+    }
+}
