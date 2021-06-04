@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { SideConfigurationDataRequest } from './sideConfigurationDataRequest';
 import { TransactionConfigurationDataRequest } from './transactionConfigurationDataRequest';
 
@@ -24,7 +25,7 @@ export class TransactionSetConfigurationDataRequest {
     /**
     * Collection of side definition requests.
     */
-    'sideConfigRequests'?: Array<SideConfigurationDataRequest>;
+    'sideConfigRequests'?: Array<SideConfigurationDataRequest> | null;
 
     static discriminator: string | undefined = undefined;
 

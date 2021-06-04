@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 
 /**
 * CDSs generally conform to fairly standard definitions, but can be tweaked in a number of different ways.  This class gathers a number of common features which may deviate. These will default to the market standard when  no overrides are provided
@@ -64,19 +65,19 @@ export class CdsProtectionDetailSpecification {
 export namespace CdsProtectionDetailSpecification {
     export enum SeniorityEnum {
         Unknown = <any> 'Unknown',
-        SNR = <any> 'SNR',
-        SUB = <any> 'SUB',
-        JRSUBUT2 = <any> 'JRSUBUT2',
-        PREFT1 = <any> 'PREFT1',
-        SECDOM = <any> 'SECDOM',
-        SNRFOR = <any> 'SNRFOR',
-        SUBLT2 = <any> 'SUBLT2'
+        Snr = <any> 'SNR',
+        Sub = <any> 'SUB',
+        Jrsubut2 = <any> 'JRSUBUT2',
+        Preft1 = <any> 'PREFT1',
+        Secdom = <any> 'SECDOM',
+        Snrfor = <any> 'SNRFOR',
+        Sublt2 = <any> 'SUBLT2'
     }
     export enum RestructuringTypeEnum {
         Unknown = <any> 'Unknown',
-        CR = <any> 'CR',
-        MR = <any> 'MR',
-        MM = <any> 'MM',
-        XR = <any> 'XR'
+        Cr = <any> 'CR',
+        Mr = <any> 'MR',
+        Mm = <any> 'MM',
+        Xr = <any> 'XR'
     }
 }

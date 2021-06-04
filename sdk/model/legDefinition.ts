@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { FlowConventionName } from './flowConventionName';
 import { FlowConventions } from './flowConventions';
 import { IndexConvention } from './indexConvention';
@@ -37,7 +38,7 @@ export class LegDefinition {
     /**
     * Control how resets are generated relative to swap payment convention(s).  Supported string (enumeration) values are: [InAdvance, InArrears].
     */
-    'resetConvention'?: string;
+    'resetConvention'?: string | null;
     /**
     * If a stub is required should it be at the front or back of the leg.  Supported string (enumeration) values are: [Front, Back, Both].
     */

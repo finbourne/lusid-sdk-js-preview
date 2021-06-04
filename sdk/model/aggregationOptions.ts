@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 
 /**
 * Options for controlling the default aspects and behaviour of the aggregation.

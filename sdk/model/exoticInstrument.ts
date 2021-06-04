@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { ExoticInstrumentAllOf } from './exoticInstrumentAllOf';
 import { InstrumentDefinitionFormat } from './instrumentDefinitionFormat';
 import { LusidInstrument } from './lusidInstrument';

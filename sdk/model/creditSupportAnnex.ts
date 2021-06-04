@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 
 /**
 * Entity to capture the calculable and queryable methods and practices of determining and transferring collateral  to a counterparty as part of margining of transactions. These typically come from a particular ISDA agreement  that is in place between the two counterparties.
@@ -54,11 +55,11 @@ export class CreditSupportAnnex {
     /**
     * The scope used when updating or inserting the convention.
     */
-    'scope'?: string;
+    'scope'?: string | null;
     /**
     * The code of the convention.
     */
-    'code'?: string;
+    'code'?: string | null;
 
     static discriminator: string | undefined = undefined;
 

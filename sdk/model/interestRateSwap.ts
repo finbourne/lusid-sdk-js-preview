@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { InstrumentLeg } from './instrumentLeg';
 import { InterestRateSwapAllOf } from './interestRateSwapAllOf';
 import { LusidInstrument } from './lusidInstrument';

@@ -10,15 +10,16 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { Link } from './link';
 import { PropertyDefinitionSearchResult } from './propertyDefinitionSearchResult';
 
 export class PagedResourceListOfPropertyDefinitionSearchResult {
-    'nextPage'?: string;
-    'previousPage'?: string;
+    'nextPage'?: string | null;
+    'previousPage'?: string | null;
     'values': Array<PropertyDefinitionSearchResult>;
-    'href'?: string;
-    'links'?: Array<Link>;
+    'href'?: string | null;
+    'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
 

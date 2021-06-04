@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { ResourceId } from './resourceId';
 import { Version } from './version';
 
@@ -17,7 +18,7 @@ import { Version } from './version';
 * Representation of a relation containing details of source and target entities, and both outward and inward descriptions.
 */
 export class CompleteRelation {
-    'href'?: string;
+    'href'?: string | null;
     'version'?: Version;
     'relationDefinitionId': ResourceId;
     'sourceEntityId': { [key: string]: string; };

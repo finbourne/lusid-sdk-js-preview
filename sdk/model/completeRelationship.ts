@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { RelatedEntity } from './relatedEntity';
 import { ResourceId } from './resourceId';
 import { Version } from './version';
@@ -21,7 +22,7 @@ export class CompleteRelationship {
     /**
     * The specific Uniform Resource Identifier (URI) for this resource at the requested effective and asAt datetime.
     */
-    'href'?: string;
+    'href'?: string | null;
     'version'?: Version;
     'relationshipDefinitionId': ResourceId;
     'sourceEntity': RelatedEntity;

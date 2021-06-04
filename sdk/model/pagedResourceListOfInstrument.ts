@@ -10,15 +10,16 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { Instrument } from './instrument';
 import { Link } from './link';
 
 export class PagedResourceListOfInstrument {
-    'nextPage'?: string;
-    'previousPage'?: string;
+    'nextPage'?: string | null;
+    'previousPage'?: string | null;
     'values': Array<Instrument>;
-    'href'?: string;
-    'links'?: Array<Link>;
+    'href'?: string | null;
+    'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
 

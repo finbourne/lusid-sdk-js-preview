@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { CashLadderRecord } from './cashLadderRecord';
 import { Link } from './link';
 import { PerpetualProperty } from './perpetualProperty';
@@ -18,16 +19,16 @@ export class PortfolioCashLadder {
     /**
     * The currency of the cash-flows.
     */
-    'currency'?: string;
+    'currency'?: string | null;
     /**
     * The sub-holding properties which identify the holding. Each property will be from the \'Transaction\' domain. These are configured when a transaction portfolio is created.
     */
-    'subHoldingKeys'?: { [key: string]: PerpetualProperty; };
+    'subHoldingKeys'?: { [key: string]: PerpetualProperty; } | null;
     /**
     * A record of cash flows on a specific date.
     */
-    'records'?: Array<CashLadderRecord>;
-    'links'?: Array<Link>;
+    'records'?: Array<CashLadderRecord> | null;
+    'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
 
