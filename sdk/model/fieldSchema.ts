@@ -10,13 +10,12 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 import { ResourceId } from './resourceId';
 
 export class FieldSchema {
     'id'?: ResourceId;
-    'displayName'?: string | null;
-    'description'?: string | null;
+    'displayName'?: string;
+    'description'?: string;
     /**
     * The available values are: String, Int, Decimal, DateTime, Boolean, Map, List, PropertyArray, Percentage, Code, Id, Uri, CurrencyAndAmount, TradePrice, Currency, MetricValue, ResourceId, ResultValue, CutLocalTime, DateOrCutLabel
     */

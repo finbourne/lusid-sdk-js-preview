@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 import { InstrumentLegAllOf } from './instrumentLegAllOf';
 import { LusidInstrument } from './lusidInstrument';
 

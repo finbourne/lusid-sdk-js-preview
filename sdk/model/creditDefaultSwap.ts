@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 import { CdsFlowConventions } from './cdsFlowConventions';
 import { CdsProtectionDetailSpecification } from './cdsProtectionDetailSpecification';
 import { CreditDefaultSwapAllOf } from './creditDefaultSwapAllOf';

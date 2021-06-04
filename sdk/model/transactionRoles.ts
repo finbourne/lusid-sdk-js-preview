@@ -10,15 +10,16 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 
-export enum TransactionRoles {
-    None = <any> 'None',
-    LongLonger = <any> 'LongLonger',
-    LongShorter = <any> 'LongShorter',
-    ShortShorter = <any> 'ShortShorter',
-    Shorter = <any> 'Shorter',
-    ShortLonger = <any> 'ShortLonger',
-    Longer = <any> 'Longer',
-    AllRoles = <any> 'AllRoles'
+export class TransactionRoles {
+
+    static discriminator: string | undefined = undefined;
+
+    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    ];
+
+    static getAttributeTypeMap() {
+        return TransactionRoles.attributeTypeMap;
+    }
 }
+

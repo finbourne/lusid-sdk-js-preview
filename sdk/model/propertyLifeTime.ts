@@ -10,9 +10,16 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 
-export enum PropertyLifeTime {
-    Perpetual = <any> 'Perpetual',
-    TimeVariant = <any> 'TimeVariant'
+export class PropertyLifeTime {
+
+    static discriminator: string | undefined = undefined;
+
+    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    ];
+
+    static getAttributeTypeMap() {
+        return PropertyLifeTime.attributeTypeMap;
+    }
 }
+

@@ -10,18 +10,16 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 
-export enum MarketIdentifier {
-    LusidInstrumentId = <any> 'LusidInstrumentId',
-    Isin = <any> 'Isin',
-    Sedol = <any> 'Sedol',
-    Cusip = <any> 'Cusip',
-    ClientInternal = <any> 'ClientInternal',
-    Figi = <any> 'Figi',
-    Ric = <any> 'RIC',
-    QuotePermId = <any> 'QuotePermId',
-    RedCode = <any> 'REDCode',
-    Bbgid = <any> 'BBGId',
-    IceCode = <any> 'ICECode'
+export class MarketIdentifier {
+
+    static discriminator: string | undefined = undefined;
+
+    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    ];
+
+    static getAttributeTypeMap() {
+        return MarketIdentifier.attributeTypeMap;
+    }
 }
+

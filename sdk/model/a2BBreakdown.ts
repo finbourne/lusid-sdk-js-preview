@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 
 /**
 * A2B Breakdown - Shows the total, and each sub-element within an A2B Category
@@ -23,11 +22,11 @@ export class A2BBreakdown {
     /**
     * The currency. Applies to the Total, as well as all the componenents.
     */
-    'currency'?: string | null;
+    'currency'?: string;
     /**
     * The individual components that make up the category. For example, the Start category may have Cost, Unrealised gains and accrued interest components.
     */
-    'components'?: { [key: string]: number; } | null;
+    'components'?: { [key: string]: number; };
 
     static discriminator: string | undefined = undefined;
 

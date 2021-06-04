@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 
 /**
 * An identifier that uniquely describes an item of structured result data such as the risk to an interest curve or a set of yields or analytics on an index.
@@ -23,15 +22,15 @@ export class StructuredResultDataId {
     /**
     * The identifier for the entity that this id describes. It could be an index, instrument or other form of structured data
     */
-    'code'?: string | null;
+    'code'?: string;
     /**
     * The effectiveAt or cut label that this item of structured market data is/was updated/inserted with.
     */
-    'effectiveAt'?: string | null;
+    'effectiveAt'?: string;
     /**
     * An identifier that denotes the class of data that the id points to. This is not the same as the format, but a more generic identifier such as \'risk result\', \'cashflow\', \'index\' or similar.
     */
-    'resultType'?: string | null;
+    'resultType'?: string;
 
     static discriminator: string | undefined = undefined;
 

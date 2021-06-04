@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 import { Link } from './link';
 
 export class DeleteInstrumentPropertiesResponse {
@@ -18,7 +17,7 @@ export class DeleteInstrumentPropertiesResponse {
     * The asAt datetime at which the properties were removed from the specified instruments.
     */
     'asAt': Date;
-    'links'?: Array<Link> | null;
+    'links'?: Array<Link>;
 
     static discriminator: string | undefined = undefined;
 

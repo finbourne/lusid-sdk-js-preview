@@ -10,10 +10,16 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 
-export enum PortfolioType {
-    Transaction = <any> 'Transaction',
-    Reference = <any> 'Reference',
-    DerivedTransaction = <any> 'DerivedTransaction'
+export class PortfolioType {
+
+    static discriminator: string | undefined = undefined;
+
+    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    ];
+
+    static getAttributeTypeMap() {
+        return PortfolioType.attributeTypeMap;
+    }
 }
+

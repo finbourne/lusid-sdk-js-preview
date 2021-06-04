@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 import { RelatedEntity } from './relatedEntity';
 import { ResourceId } from './resourceId';
 import { Version } from './version';

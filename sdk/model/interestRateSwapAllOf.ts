@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 import { InstrumentLeg } from './instrumentLeg';
 
 export class InterestRateSwapAllOf {

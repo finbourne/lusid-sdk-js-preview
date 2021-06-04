@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 import { InterestRateSwap } from './interestRateSwap';
 import { InterestRateSwaptionAllOf } from './interestRateSwaptionAllOf';
 import { LusidInstrument } from './lusidInstrument';

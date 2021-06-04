@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 
 /**
 * A rule that describes how we resolve (unit) result data.
@@ -35,11 +34,11 @@ export class ResultDataKeyRule {
     /**
     * Shorthand for the time interval used to select result data.
     */
-    'quoteInterval'?: string | null;
+    'quoteInterval'?: string;
     /**
     * The AsAt predicate specification.
     */
-    'asAt'?: Date | null;
+    'asAt'?: Date;
 
     static discriminator: string | undefined = undefined;
 

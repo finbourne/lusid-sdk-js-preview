@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 import { AllocationRequest } from './allocationRequest';
 
 /**
@@ -20,7 +19,7 @@ export class AllocationSetRequest {
     /**
     * A collection of AllocationRequests.
     */
-    'allocationRequests'?: Array<AllocationRequest> | null;
+    'allocationRequests'?: Array<AllocationRequest>;
 
     static discriminator: string | undefined = undefined;
 

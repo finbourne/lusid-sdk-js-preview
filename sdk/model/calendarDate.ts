@@ -10,11 +10,10 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 import { DateAttributes } from './dateAttributes';
 
 export class CalendarDate {
-    'href'?: string | null;
+    'href'?: string;
     'dateIdentifier': string;
     'fromUtc': Date;
     'toUtc': Date;

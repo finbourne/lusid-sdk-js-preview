@@ -10,14 +10,16 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 
-export enum AggregationOp {
-    Sum = <any> 'Sum',
-    Proportion = <any> 'Proportion',
-    Average = <any> 'Average',
-    Count = <any> 'Count',
-    Min = <any> 'Min',
-    Max = <any> 'Max',
-    Value = <any> 'Value'
+export class AggregationOp {
+
+    static discriminator: string | undefined = undefined;
+
+    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    ];
+
+    static getAttributeTypeMap() {
+        return AggregationOp.attributeTypeMap;
+    }
 }
+

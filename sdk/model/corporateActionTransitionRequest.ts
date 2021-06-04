@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 import { CorporateActionTransitionComponentRequest } from './corporateActionTransitionComponentRequest';
 
 /**
@@ -18,7 +17,7 @@ import { CorporateActionTransitionComponentRequest } from './corporateActionTran
 */
 export class CorporateActionTransitionRequest {
     'inputTransition'?: CorporateActionTransitionComponentRequest;
-    'outputTransitions'?: Array<CorporateActionTransitionComponentRequest> | null;
+    'outputTransitions'?: Array<CorporateActionTransitionComponentRequest>;
 
     static discriminator: string | undefined = undefined;
 

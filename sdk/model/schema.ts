@@ -10,15 +10,14 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 import { FieldSchema } from './fieldSchema';
 import { Link } from './link';
 
 export class Schema {
-    'entity'?: string | null;
-    'href'?: string | null;
-    'values'?: { [key: string]: FieldSchema; } | null;
-    'links'?: Array<Link> | null;
+    'entity'?: string;
+    'href'?: string;
+    'values'?: { [key: string]: FieldSchema; };
+    'links'?: Array<Link>;
 
     static discriminator: string | undefined = undefined;
 

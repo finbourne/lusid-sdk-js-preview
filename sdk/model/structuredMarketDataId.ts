@@ -10,7 +10,6 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 
 /**
 * An identifier that uniquely describes an item of structured market data such as an interest rate curve or volatility surface.
@@ -23,23 +22,23 @@ export class StructuredMarketDataId {
     /**
     * The source or originator of the structured market data, e.g. a bank or financial institution.
     */
-    'priceSource'?: string | null;
+    'priceSource'?: string;
     /**
     * Description of the structured market data\'s lineage e.g. \'FundAccountant_GreenQuality\'.
     */
-    'lineage'?: string | null;
+    'lineage'?: string;
     /**
     * The effectiveAt or cut label that this item of structured market data is/was updated/inserted with.
     */
-    'effectiveAt'?: string | null;
+    'effectiveAt'?: string;
     /**
     * The type of the market element that the market entity represents, e.g. a vol surface or credit curve
     */
-    'marketElementType'?: string | null;
+    'marketElementType'?: string;
     /**
     * The name of the market entity that the document represents
     */
-    'marketAsset'?: string | null;
+    'marketAsset'?: string;
 
     static discriminator: string | undefined = undefined;
 

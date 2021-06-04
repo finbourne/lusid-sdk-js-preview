@@ -10,14 +10,16 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 
-export enum Operator {
-    Equals = <any> 'Equals',
-    NotEquals = <any> 'NotEquals',
-    GreaterThan = <any> 'GreaterThan',
-    GreaterThanOrEqualTo = <any> 'GreaterThanOrEqualTo',
-    LessThan = <any> 'LessThan',
-    LessThanOrEqualTo = <any> 'LessThanOrEqualTo',
-    In = <any> 'In'
+export class Operator {
+
+    static discriminator: string | undefined = undefined;
+
+    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    ];
+
+    static getAttributeTypeMap() {
+        return Operator.attributeTypeMap;
+    }
 }
+

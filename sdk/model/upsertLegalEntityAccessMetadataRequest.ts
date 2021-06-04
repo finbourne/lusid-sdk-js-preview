@@ -10,14 +10,13 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 import { AccessMetadataValue } from './accessMetadataValue';
 
 export class UpsertLegalEntityAccessMetadataRequest {
     /**
     * The access control metadata to assign to a Legal Entity that matches the identifier
     */
-    'metadata'?: Array<AccessMetadataValue> | null;
+    'metadata'?: Array<AccessMetadataValue>;
 
     static discriminator: string | undefined = undefined;
 
