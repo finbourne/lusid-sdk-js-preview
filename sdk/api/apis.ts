@@ -68,7 +68,4 @@ export * from './transactionPortfoliosApi';
 import { TransactionPortfoliosApi } from './transactionPortfoliosApi';
 export * from './translationApi';
 import { TranslationApi } from './translationApi';
-
-export { RequestFile } from '../model/models';
-
 export const APIS = [AggregationApi, AllocationsApi, ApplicationMetadataApi, CalendarsApi, ConfigurationRecipeApi, ConventionsApi, CorporateActionSourcesApi, CounterpartyApi, CutLabelDefinitionsApi, DataTypesApi, DerivedTransactionPortfoliosApi, EntitiesApi, InstrumentsApi, LegalEntitiesApi, LoginApi, OrdersApi, PersonsApi, PortfolioGroupsApi, PortfoliosApi, PropertyDefinitionsApi, QuotesApi, ReconciliationsApi, ReferencePortfolioApi, RelationDefinitionsApi, RelationsApi, RelationshipDefinitionsApi, RelationshipsApi, SchemasApi, ScopesApi, SearchApi, StructuredMarketDataApi, StructuredResultDataApi, SystemConfigurationApi, TransactionPortfoliosApi, TranslationApi];
