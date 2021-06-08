@@ -124,6 +124,8 @@ export * from './fxForward';
 export * from './fxForwardAllOf';
 export * from './fxOption';
 export * from './fxOptionAllOf';
+export * from './fxSwap';
+export * from './fxSwapAllOf';
 export * from './getCdsFlowConventionsResponse';
 export * from './getCounterpartyResponse';
 export * from './getCreditSupportAnnexResponse';
@@ -517,6 +519,8 @@ import { FxForward } from './fxForward';
 import { FxForwardAllOf } from './fxForwardAllOf';
 import { FxOption } from './fxOption';
 import { FxOptionAllOf } from './fxOptionAllOf';
+import { FxSwap } from './fxSwap';
+import { FxSwapAllOf } from './fxSwapAllOf';
 import { GetCdsFlowConventionsResponse } from './getCdsFlowConventionsResponse';
 import { GetCounterpartyResponse } from './getCounterpartyResponse';
 import { GetCreditSupportAnnexResponse } from './getCreditSupportAnnexResponse';
@@ -850,6 +854,8 @@ let enumsMap: {[index: string]: any} = {
         "FxForwardAllOf.InstrumentTypeEnum": FxForwardAllOf.InstrumentTypeEnum,
         "FxOption.InstrumentTypeEnum": FxOption.InstrumentTypeEnum,
         "FxOptionAllOf.InstrumentTypeEnum": FxOptionAllOf.InstrumentTypeEnum,
+        "FxSwap.InstrumentTypeEnum": FxSwap.InstrumentTypeEnum,
+        "FxSwapAllOf.InstrumentTypeEnum": FxSwapAllOf.InstrumentTypeEnum,
         "GetReferencePortfolioConstituentsResponse.WeightTypeEnum": GetReferencePortfolioConstituentsResponse.WeightTypeEnum,
         "GetReferencePortfolioConstituentsResponse.PeriodTypeEnum": GetReferencePortfolioConstituentsResponse.PeriodTypeEnum,
         "HoldingsAdjustment.UnmatchedHoldingMethodEnum": HoldingsAdjustment.UnmatchedHoldingMethodEnum,
@@ -1033,6 +1039,8 @@ let typeMap: {[index: string]: any} = {
     "FxForwardAllOf": FxForwardAllOf,
     "FxOption": FxOption,
     "FxOptionAllOf": FxOptionAllOf,
+    "FxSwap": FxSwap,
+    "FxSwapAllOf": FxSwapAllOf,
     "GetCdsFlowConventionsResponse": GetCdsFlowConventionsResponse,
     "GetCounterpartyResponse": GetCounterpartyResponse,
     "GetCreditSupportAnnexResponse": GetCreditSupportAnnexResponse,

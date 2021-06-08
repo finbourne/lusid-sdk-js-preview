@@ -10,61 +10,41 @@
  * Do not edit the class manually.
  */
 
-import { CrossCurrencySwapAllOf } from './crossCurrencySwapAllOf';
-import { InstrumentLeg } from './instrumentLeg';
-import { LusidInstrument } from './lusidInstrument';
+import { FxForward } from './fxForward';
 
-/**
-* IL Cross Currency Swap Instrument; Lusid-ibor internal representation of a Cross Currency Swap instrument  A Cross Currency Swap is the exchange of two sets of cashflows (of differing currencies) occurring at one or more dates.  These may include a notional exchange at the start and, or, maturity of the trade. Depending upon the choice of  payment currency, payment frequency and so on they can be used to match sets of future obligations
-*/
-export class CrossCurrencySwap extends LusidInstrument {
-    /**
-    * The start date of the instrument. This is normally synonymous with the trade-date.
-    */
-    'startDate': Date;
-    /**
-    * The final maturity date of the instrument. This means the last date on which the instruments makes a payment of any amount.  For the avoidance of doubt, that is not necessarily prior to its last sensitivity date for the purposes of risk; e.g. instruments such as  Constant Maturity Swaps (CMS) often have sensitivities to rates beyond their last payment date
-    */
-    'maturityDate': Date;
-    /**
-    * The set of instrument legs that define the swap instrument.
-    */
-    'legs': Array<InstrumentLeg>;
+export class FxSwapAllOf {
+    'nearFxForward': FxForward;
+    'farFxForward': FxForward;
     /**
     * The available values are: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CashSettled, CdsIndex, Basket, FundingLeg, CrossCurrencySwap, FxSwap
     */
-    'instrumentType': CrossCurrencySwap.InstrumentTypeEnum;
+    'instrumentType': FxSwapAllOf.InstrumentTypeEnum;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "startDate",
-            "baseName": "startDate",
-            "type": "Date"
+            "name": "nearFxForward",
+            "baseName": "nearFxForward",
+            "type": "FxForward"
         },
         {
-            "name": "maturityDate",
-            "baseName": "maturityDate",
-            "type": "Date"
-        },
-        {
-            "name": "legs",
-            "baseName": "legs",
-            "type": "Array<InstrumentLeg>"
+            "name": "farFxForward",
+            "baseName": "farFxForward",
+            "type": "FxForward"
         },
         {
             "name": "instrumentType",
             "baseName": "instrumentType",
-            "type": "CrossCurrencySwap.InstrumentTypeEnum"
+            "type": "FxSwapAllOf.InstrumentTypeEnum"
         }    ];
 
     static getAttributeTypeMap() {
-        return super.getAttributeTypeMap().concat(CrossCurrencySwap.attributeTypeMap);
+        return FxSwapAllOf.attributeTypeMap;
     }
 }
 
-export namespace CrossCurrencySwap {
+export namespace FxSwapAllOf {
     export enum InstrumentTypeEnum {
         QuotedSecurity = <any> 'QuotedSecurity',
         InterestRateSwap = <any> 'InterestRateSwap',
