@@ -43,7 +43,7 @@ export class PropertyDefinitionSearchResult {
     */
     'unitSchema'?: PropertyDefinitionSearchResult.UnitSchemaEnum;
     /**
-    * The domain that the property exists in. The available values are: NotDefined, Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, CutLabelDefinition, Analytic, PortfolioGroup, Person, AccessMetadata, Order, UnitResult, MarketData, ConfigurationRecipe, Allocation, Calendar, LegalEntity, Placement, Execution, Block, Participation, Package, OrderInstruction
+    * The domain that the property exists in. The available values are: NotDefined, Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, CutLabelDefinition, Analytic, PortfolioGroup, Person, AccessMetadata, Order, UnitResult, MarketData, ConfigurationRecipe, Allocation, Calendar, LegalEntity
     */
     'domain'?: PropertyDefinitionSearchResult.DomainEnum;
     /**
@@ -226,13 +226,7 @@ export namespace PropertyDefinitionSearchResult {
         ConfigurationRecipe = <any> 'ConfigurationRecipe',
         Allocation = <any> 'Allocation',
         Calendar = <any> 'Calendar',
-        LegalEntity = <any> 'LegalEntity',
-        Placement = <any> 'Placement',
-        Execution = <any> 'Execution',
-        Block = <any> 'Block',
-        Participation = <any> 'Participation',
-        Package = <any> 'Package',
-        OrderInstruction = <any> 'OrderInstruction'
+        LegalEntity = <any> 'LegalEntity'
     }
     export enum LifeTimeEnum {
         Perpetual = <any> 'Perpetual',
