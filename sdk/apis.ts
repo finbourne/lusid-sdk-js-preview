@@ -2,6 +2,7 @@ import {AggregationApi} from './api/aggregationApi';
 import {AllocationsApi} from './api/allocationsApi';
 import {ApplicationMetadataApi} from './api/applicationMetadataApi';
 import {CalendarsApi} from './api/calendarsApi';
+import {ComplexMarketDataApi} from './api/complexMarketDataApi';
 import {ConfigurationRecipeApi} from './api/configurationRecipeApi';
 import {ConventionsApi} from './api/conventionsApi';
 import {CorporateActionSourcesApi} from './api/corporateActionSourcesApi';
@@ -39,6 +40,7 @@ export class Api {
     public allocations:  AllocationsApi
     public applicationMetadata:  ApplicationMetadataApi
     public calendars:  CalendarsApi
+    public complexMarketData:  ComplexMarketDataApi
     public configurationRecipe:  ConfigurationRecipeApi
     public conventions:  ConventionsApi
     public corporateActionSources:  CorporateActionSourcesApi
