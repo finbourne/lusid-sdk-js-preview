@@ -43,8 +43,6 @@ export * from './change';
 export * from './completePortfolio';
 export * from './completeRelation';
 export * from './completeRelationship';
-export * from './complexMarketData';
-export * from './complexMarketDataId';
 export * from './configurationRecipe';
 export * from './configurationRecipeSnippet';
 export * from './constituentsAdjustmentHeader';
@@ -129,7 +127,6 @@ export * from './fxOptionAllOf';
 export * from './fxSwap';
 export * from './fxSwapAllOf';
 export * from './getCdsFlowConventionsResponse';
-export * from './getComplexMarketDataResponse';
 export * from './getCounterpartyResponse';
 export * from './getCreditSupportAnnexResponse';
 export * from './getDataMapResponse';
@@ -180,7 +177,6 @@ export * from './lusidValidationProblemDetails';
 export * from './marketContext';
 export * from './marketContextSuppliers';
 export * from './marketDataKeyRule';
-export * from './marketDataType';
 export * from './marketIdentifier';
 export * from './marketOptions';
 export * from './metricValue';
@@ -350,7 +346,6 @@ export * from './updatePortfolioRequest';
 export * from './updatePropertyDefinitionRequest';
 export * from './updateRelationshipDefinitionRequest';
 export * from './upsertCdsFlowConventionsRequest';
-export * from './upsertComplexMarketDataRequest';
 export * from './upsertCorporateActionRequest';
 export * from './upsertCorporateActionsResponse';
 export * from './upsertCounterpartyRequest';
@@ -443,8 +438,6 @@ import { Change } from './change';
 import { CompletePortfolio } from './completePortfolio';
 import { CompleteRelation } from './completeRelation';
 import { CompleteRelationship } from './completeRelationship';
-import { ComplexMarketData } from './complexMarketData';
-import { ComplexMarketDataId } from './complexMarketDataId';
 import { ConfigurationRecipe } from './configurationRecipe';
 import { ConfigurationRecipeSnippet } from './configurationRecipeSnippet';
 import { ConstituentsAdjustmentHeader } from './constituentsAdjustmentHeader';
@@ -529,7 +522,6 @@ import { FxOptionAllOf } from './fxOptionAllOf';
 import { FxSwap } from './fxSwap';
 import { FxSwapAllOf } from './fxSwapAllOf';
 import { GetCdsFlowConventionsResponse } from './getCdsFlowConventionsResponse';
-import { GetComplexMarketDataResponse } from './getComplexMarketDataResponse';
 import { GetCounterpartyResponse } from './getCounterpartyResponse';
 import { GetCreditSupportAnnexResponse } from './getCreditSupportAnnexResponse';
 import { GetDataMapResponse } from './getDataMapResponse';
@@ -580,7 +572,6 @@ import { LusidValidationProblemDetails } from './lusidValidationProblemDetails';
 import { MarketContext } from './marketContext';
 import { MarketContextSuppliers } from './marketContextSuppliers';
 import { MarketDataKeyRule } from './marketDataKeyRule';
-import { MarketDataType } from './marketDataType';
 import { MarketIdentifier } from './marketIdentifier';
 import { MarketOptions } from './marketOptions';
 import { MetricValue } from './metricValue';
@@ -750,7 +741,6 @@ import { UpdatePortfolioRequest } from './updatePortfolioRequest';
 import { UpdatePropertyDefinitionRequest } from './updatePropertyDefinitionRequest';
 import { UpdateRelationshipDefinitionRequest } from './updateRelationshipDefinitionRequest';
 import { UpsertCdsFlowConventionsRequest } from './upsertCdsFlowConventionsRequest';
-import { UpsertComplexMarketDataRequest } from './upsertComplexMarketDataRequest';
 import { UpsertCorporateActionRequest } from './upsertCorporateActionRequest';
 import { UpsertCorporateActionsResponse } from './upsertCorporateActionsResponse';
 import { UpsertCounterpartyRequest } from './upsertCounterpartyRequest';
@@ -822,7 +812,6 @@ let enumsMap: {[index: string]: any} = {
         "CdsProtectionDetailSpecification.SeniorityEnum": CdsProtectionDetailSpecification.SeniorityEnum,
         "CdsProtectionDetailSpecification.RestructuringTypeEnum": CdsProtectionDetailSpecification.RestructuringTypeEnum,
         "CompletePortfolio.TypeEnum": CompletePortfolio.TypeEnum,
-        "ComplexMarketData.MarketDataTypeEnum": ComplexMarketData.MarketDataTypeEnum,
         "ContractForDifference.InstrumentTypeEnum": ContractForDifference.InstrumentTypeEnum,
         "ContractForDifferenceAllOf.InstrumentTypeEnum": ContractForDifferenceAllOf.InstrumentTypeEnum,
         "CreateDataTypeRequest.TypeValueRangeEnum": CreateDataTypeRequest.TypeValueRangeEnum,
@@ -969,8 +958,6 @@ let typeMap: {[index: string]: any} = {
     "CompletePortfolio": CompletePortfolio,
     "CompleteRelation": CompleteRelation,
     "CompleteRelationship": CompleteRelationship,
-    "ComplexMarketData": ComplexMarketData,
-    "ComplexMarketDataId": ComplexMarketDataId,
     "ConfigurationRecipe": ConfigurationRecipe,
     "ConfigurationRecipeSnippet": ConfigurationRecipeSnippet,
     "ConstituentsAdjustmentHeader": ConstituentsAdjustmentHeader,
@@ -1055,7 +1042,6 @@ let typeMap: {[index: string]: any} = {
     "FxSwap": FxSwap,
     "FxSwapAllOf": FxSwapAllOf,
     "GetCdsFlowConventionsResponse": GetCdsFlowConventionsResponse,
-    "GetComplexMarketDataResponse": GetComplexMarketDataResponse,
     "GetCounterpartyResponse": GetCounterpartyResponse,
     "GetCreditSupportAnnexResponse": GetCreditSupportAnnexResponse,
     "GetDataMapResponse": GetDataMapResponse,
@@ -1106,7 +1092,6 @@ let typeMap: {[index: string]: any} = {
     "MarketContext": MarketContext,
     "MarketContextSuppliers": MarketContextSuppliers,
     "MarketDataKeyRule": MarketDataKeyRule,
-    "MarketDataType": MarketDataType,
     "MarketIdentifier": MarketIdentifier,
     "MarketOptions": MarketOptions,
     "MetricValue": MetricValue,
@@ -1276,7 +1261,6 @@ let typeMap: {[index: string]: any} = {
     "UpdatePropertyDefinitionRequest": UpdatePropertyDefinitionRequest,
     "UpdateRelationshipDefinitionRequest": UpdateRelationshipDefinitionRequest,
     "UpsertCdsFlowConventionsRequest": UpsertCdsFlowConventionsRequest,
-    "UpsertComplexMarketDataRequest": UpsertComplexMarketDataRequest,
     "UpsertCorporateActionRequest": UpsertCorporateActionRequest,
     "UpsertCorporateActionsResponse": UpsertCorporateActionsResponse,
     "UpsertCounterpartyRequest": UpsertCounterpartyRequest,
