@@ -99,10 +99,14 @@ export * from './deleteRelationRequest';
 export * from './deleteRelationshipRequest';
 export * from './deletedEntityResponse';
 export * from './deliveryType';
+export * from './discountFactorCurveData';
+export * from './discountFactorCurveDataAllOf';
 export * from './equityOption';
 export * from './equityOptionAllOf';
 export * from './equitySwap';
 export * from './equitySwapAllOf';
+export * from './equityVolSurfaceData';
+export * from './equityVolSurfaceDataAllOf';
 export * from './errorDetail';
 export * from './executionRequest';
 export * from './exoticInstrument';
@@ -128,6 +132,7 @@ export * from './fxOption';
 export * from './fxOptionAllOf';
 export * from './fxSwap';
 export * from './fxSwapAllOf';
+export * from './fxVolSurfaceData';
 export * from './getCdsFlowConventionsResponse';
 export * from './getComplexMarketDataResponse';
 export * from './getCounterpartyResponse';
@@ -167,6 +172,8 @@ export * from './interestRateSwap';
 export * from './interestRateSwapAllOf';
 export * from './interestRateSwaption';
 export * from './interestRateSwaptionAllOf';
+export * from './irVolCubeData';
+export * from './irVolCubeDataAllOf';
 export * from './isBusinessDayResponse';
 export * from './labelValueSet';
 export * from './legDefinition';
@@ -183,9 +190,12 @@ export * from './marketDataKeyRule';
 export * from './marketDataType';
 export * from './marketIdentifier';
 export * from './marketOptions';
+export * from './marketQuote';
 export * from './metricValue';
 export * from './modelSelection';
 export * from './movementType';
+export * from './opaqueMarketData';
+export * from './opaqueMarketDataAllOf';
 export * from './operandType';
 export * from './operator';
 export * from './optionType';
@@ -395,6 +405,8 @@ export * from './versionedResourceListOfTransaction';
 export * from './weekendMask';
 export * from './weightedInstrument';
 export * from './weightedInstruments';
+export * from './yieldCurveData';
+export * from './yieldCurveDataAllOf';
 
 import localVarRequest = require('request');
 
@@ -499,10 +511,14 @@ import { DeleteRelationRequest } from './deleteRelationRequest';
 import { DeleteRelationshipRequest } from './deleteRelationshipRequest';
 import { DeletedEntityResponse } from './deletedEntityResponse';
 import { DeliveryType } from './deliveryType';
+import { DiscountFactorCurveData } from './discountFactorCurveData';
+import { DiscountFactorCurveDataAllOf } from './discountFactorCurveDataAllOf';
 import { EquityOption } from './equityOption';
 import { EquityOptionAllOf } from './equityOptionAllOf';
 import { EquitySwap } from './equitySwap';
 import { EquitySwapAllOf } from './equitySwapAllOf';
+import { EquityVolSurfaceData } from './equityVolSurfaceData';
+import { EquityVolSurfaceDataAllOf } from './equityVolSurfaceDataAllOf';
 import { ErrorDetail } from './errorDetail';
 import { ExecutionRequest } from './executionRequest';
 import { ExoticInstrument } from './exoticInstrument';
@@ -528,6 +544,7 @@ import { FxOption } from './fxOption';
 import { FxOptionAllOf } from './fxOptionAllOf';
 import { FxSwap } from './fxSwap';
 import { FxSwapAllOf } from './fxSwapAllOf';
+import { FxVolSurfaceData } from './fxVolSurfaceData';
 import { GetCdsFlowConventionsResponse } from './getCdsFlowConventionsResponse';
 import { GetComplexMarketDataResponse } from './getComplexMarketDataResponse';
 import { GetCounterpartyResponse } from './getCounterpartyResponse';
@@ -567,6 +584,8 @@ import { InterestRateSwap } from './interestRateSwap';
 import { InterestRateSwapAllOf } from './interestRateSwapAllOf';
 import { InterestRateSwaption } from './interestRateSwaption';
 import { InterestRateSwaptionAllOf } from './interestRateSwaptionAllOf';
+import { IrVolCubeData } from './irVolCubeData';
+import { IrVolCubeDataAllOf } from './irVolCubeDataAllOf';
 import { IsBusinessDayResponse } from './isBusinessDayResponse';
 import { LabelValueSet } from './labelValueSet';
 import { LegDefinition } from './legDefinition';
@@ -583,9 +602,12 @@ import { MarketDataKeyRule } from './marketDataKeyRule';
 import { MarketDataType } from './marketDataType';
 import { MarketIdentifier } from './marketIdentifier';
 import { MarketOptions } from './marketOptions';
+import { MarketQuote } from './marketQuote';
 import { MetricValue } from './metricValue';
 import { ModelSelection } from './modelSelection';
 import { MovementType } from './movementType';
+import { OpaqueMarketData } from './opaqueMarketData';
+import { OpaqueMarketDataAllOf } from './opaqueMarketDataAllOf';
 import { OperandType } from './operandType';
 import { Operator } from './operator';
 import { OptionType } from './optionType';
@@ -795,6 +817,8 @@ import { VersionedResourceListOfTransaction } from './versionedResourceListOfTra
 import { WeekendMask } from './weekendMask';
 import { WeightedInstrument } from './weightedInstrument';
 import { WeightedInstruments } from './weightedInstruments';
+import { YieldCurveData } from './yieldCurveData';
+import { YieldCurveDataAllOf } from './yieldCurveDataAllOf';
 
 /* tslint:disable:no-unused-variable */
 let primitives = [
@@ -840,6 +864,8 @@ let enumsMap: {[index: string]: any} = {
         "DataType.TypeValueRangeEnum": DataType.TypeValueRangeEnum,
         "DataType.ValueTypeEnum": DataType.ValueTypeEnum,
         "DataType.UnitSchemaEnum": DataType.UnitSchemaEnum,
+        "DiscountFactorCurveData.MarketDataTypeEnum": DiscountFactorCurveData.MarketDataTypeEnum,
+        "DiscountFactorCurveDataAllOf.MarketDataTypeEnum": DiscountFactorCurveDataAllOf.MarketDataTypeEnum,
         "EquityOption.DeliveryTypeEnum": EquityOption.DeliveryTypeEnum,
         "EquityOption.OptionTypeEnum": EquityOption.OptionTypeEnum,
         "EquityOption.UnderlyingIdentifierEnum": EquityOption.UnderlyingIdentifierEnum,
@@ -850,6 +876,8 @@ let enumsMap: {[index: string]: any} = {
         "EquityOptionAllOf.InstrumentTypeEnum": EquityOptionAllOf.InstrumentTypeEnum,
         "EquitySwap.InstrumentTypeEnum": EquitySwap.InstrumentTypeEnum,
         "EquitySwapAllOf.InstrumentTypeEnum": EquitySwapAllOf.InstrumentTypeEnum,
+        "EquityVolSurfaceData.MarketDataTypeEnum": EquityVolSurfaceData.MarketDataTypeEnum,
+        "EquityVolSurfaceDataAllOf.MarketDataTypeEnum": EquityVolSurfaceDataAllOf.MarketDataTypeEnum,
         "ExoticInstrument.InstrumentTypeEnum": ExoticInstrument.InstrumentTypeEnum,
         "ExoticInstrumentAllOf.InstrumentTypeEnum": ExoticInstrumentAllOf.InstrumentTypeEnum,
         "FieldSchema.TypeEnum": FieldSchema.TypeEnum,
@@ -867,6 +895,7 @@ let enumsMap: {[index: string]: any} = {
         "FxOptionAllOf.InstrumentTypeEnum": FxOptionAllOf.InstrumentTypeEnum,
         "FxSwap.InstrumentTypeEnum": FxSwap.InstrumentTypeEnum,
         "FxSwapAllOf.InstrumentTypeEnum": FxSwapAllOf.InstrumentTypeEnum,
+        "FxVolSurfaceData.MarketDataTypeEnum": FxVolSurfaceData.MarketDataTypeEnum,
         "GetReferencePortfolioConstituentsResponse.WeightTypeEnum": GetReferencePortfolioConstituentsResponse.WeightTypeEnum,
         "GetReferencePortfolioConstituentsResponse.PeriodTypeEnum": GetReferencePortfolioConstituentsResponse.PeriodTypeEnum,
         "HoldingsAdjustment.UnmatchedHoldingMethodEnum": HoldingsAdjustment.UnmatchedHoldingMethodEnum,
@@ -883,10 +912,15 @@ let enumsMap: {[index: string]: any} = {
         "InterestRateSwaptionAllOf.PayOrReceiveFixedEnum": InterestRateSwaptionAllOf.PayOrReceiveFixedEnum,
         "InterestRateSwaptionAllOf.DeliveryMethodEnum": InterestRateSwaptionAllOf.DeliveryMethodEnum,
         "InterestRateSwaptionAllOf.InstrumentTypeEnum": InterestRateSwaptionAllOf.InstrumentTypeEnum,
+        "IrVolCubeData.MarketDataTypeEnum": IrVolCubeData.MarketDataTypeEnum,
+        "IrVolCubeDataAllOf.MarketDataTypeEnum": IrVolCubeDataAllOf.MarketDataTypeEnum,
         "LusidInstrument.InstrumentTypeEnum": LusidInstrument.InstrumentTypeEnum,
         "MarketDataKeyRule.QuoteTypeEnum": MarketDataKeyRule.QuoteTypeEnum,
+        "MarketQuote.QuoteTypeEnum": MarketQuote.QuoteTypeEnum,
         "ModelSelection.LibraryEnum": ModelSelection.LibraryEnum,
         "ModelSelection.ModelEnum": ModelSelection.ModelEnum,
+        "OpaqueMarketData.MarketDataTypeEnum": OpaqueMarketData.MarketDataTypeEnum,
+        "OpaqueMarketDataAllOf.MarketDataTypeEnum": OpaqueMarketDataAllOf.MarketDataTypeEnum,
         "OrderBySpec.SortOrderEnum": OrderBySpec.SortOrderEnum,
         "OutputTransaction.TransactionStatusEnum": OutputTransaction.TransactionStatusEnum,
         "Portfolio.TypeEnum": Portfolio.TypeEnum,
@@ -921,6 +955,8 @@ let enumsMap: {[index: string]: any} = {
         "UpsertReferencePortfolioConstituentsRequest.WeightTypeEnum": UpsertReferencePortfolioConstituentsRequest.WeightTypeEnum,
         "UpsertReferencePortfolioConstituentsRequest.PeriodTypeEnum": UpsertReferencePortfolioConstituentsRequest.PeriodTypeEnum,
         "VendorModelRule.SupplierEnum": VendorModelRule.SupplierEnum,
+        "YieldCurveData.MarketDataTypeEnum": YieldCurveData.MarketDataTypeEnum,
+        "YieldCurveDataAllOf.MarketDataTypeEnum": YieldCurveDataAllOf.MarketDataTypeEnum,
 }
 
 let typeMap: {[index: string]: any} = {
@@ -1025,10 +1061,14 @@ let typeMap: {[index: string]: any} = {
     "DeleteRelationshipRequest": DeleteRelationshipRequest,
     "DeletedEntityResponse": DeletedEntityResponse,
     "DeliveryType": DeliveryType,
+    "DiscountFactorCurveData": DiscountFactorCurveData,
+    "DiscountFactorCurveDataAllOf": DiscountFactorCurveDataAllOf,
     "EquityOption": EquityOption,
     "EquityOptionAllOf": EquityOptionAllOf,
     "EquitySwap": EquitySwap,
     "EquitySwapAllOf": EquitySwapAllOf,
+    "EquityVolSurfaceData": EquityVolSurfaceData,
+    "EquityVolSurfaceDataAllOf": EquityVolSurfaceDataAllOf,
     "ErrorDetail": ErrorDetail,
     "ExecutionRequest": ExecutionRequest,
     "ExoticInstrument": ExoticInstrument,
@@ -1054,6 +1094,7 @@ let typeMap: {[index: string]: any} = {
     "FxOptionAllOf": FxOptionAllOf,
     "FxSwap": FxSwap,
     "FxSwapAllOf": FxSwapAllOf,
+    "FxVolSurfaceData": FxVolSurfaceData,
     "GetCdsFlowConventionsResponse": GetCdsFlowConventionsResponse,
     "GetComplexMarketDataResponse": GetComplexMarketDataResponse,
     "GetCounterpartyResponse": GetCounterpartyResponse,
@@ -1093,6 +1134,8 @@ let typeMap: {[index: string]: any} = {
     "InterestRateSwapAllOf": InterestRateSwapAllOf,
     "InterestRateSwaption": InterestRateSwaption,
     "InterestRateSwaptionAllOf": InterestRateSwaptionAllOf,
+    "IrVolCubeData": IrVolCubeData,
+    "IrVolCubeDataAllOf": IrVolCubeDataAllOf,
     "IsBusinessDayResponse": IsBusinessDayResponse,
     "LabelValueSet": LabelValueSet,
     "LegDefinition": LegDefinition,
@@ -1109,9 +1152,12 @@ let typeMap: {[index: string]: any} = {
     "MarketDataType": MarketDataType,
     "MarketIdentifier": MarketIdentifier,
     "MarketOptions": MarketOptions,
+    "MarketQuote": MarketQuote,
     "MetricValue": MetricValue,
     "ModelSelection": ModelSelection,
     "MovementType": MovementType,
+    "OpaqueMarketData": OpaqueMarketData,
+    "OpaqueMarketDataAllOf": OpaqueMarketDataAllOf,
     "OperandType": OperandType,
     "Operator": Operator,
     "OptionType": OptionType,
@@ -1321,6 +1367,8 @@ let typeMap: {[index: string]: any} = {
     "WeekendMask": WeekendMask,
     "WeightedInstrument": WeightedInstrument,
     "WeightedInstruments": WeightedInstruments,
+    "YieldCurveData": YieldCurveData,
+    "YieldCurveDataAllOf": YieldCurveDataAllOf,
 }
 
 export class ObjectSerializer {
