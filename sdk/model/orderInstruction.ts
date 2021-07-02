@@ -25,9 +25,6 @@ export class OrderInstruction {
     */
     'properties'?: { [key: string]: PerpetualProperty; };
     'version'?: Version;
-    /**
-    * Collection of links.
-    */
     'links'?: Array<Link>;
 
     static discriminator: string | undefined = undefined;
