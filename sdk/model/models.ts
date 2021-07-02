@@ -26,6 +26,7 @@ export * from './annulStructuredDataResponse';
 export * from './basket';
 export * from './basketAllOf';
 export * from './basketIdentifier';
+export * from './block';
 export * from './bond';
 export * from './bondAllOf';
 export * from './calendar';
@@ -108,6 +109,9 @@ export * from './equitySwapAllOf';
 export * from './equityVolSurfaceData';
 export * from './equityVolSurfaceDataAllOf';
 export * from './errorDetail';
+export * from './execution';
+export * from './executionRequest';
+export * from './executionSetRequest';
 export * from './exoticInstrument';
 export * from './exoticInstrumentAllOf';
 export * from './expandedGroup';
@@ -200,26 +204,44 @@ export * from './operator';
 export * from './optionType';
 export * from './order';
 export * from './orderBySpec';
+export * from './orderInstruction';
+export * from './orderInstructionRequest';
+export * from './orderInstructionSetRequest';
 export * from './orderRequest';
 export * from './orderSetRequest';
 export * from './outputTransaction';
+export * from './package';
+export * from './packageRequest';
+export * from './packageSetRequest';
 export * from './pagedResourceListOfAllocation';
+export * from './pagedResourceListOfBlock';
 export * from './pagedResourceListOfCalendar';
 export * from './pagedResourceListOfCorporateActionSource';
 export * from './pagedResourceListOfCutLabelDefinition';
+export * from './pagedResourceListOfExecution';
 export * from './pagedResourceListOfInstrument';
 export * from './pagedResourceListOfLegalEntity';
 export * from './pagedResourceListOfOrder';
+export * from './pagedResourceListOfOrderInstruction';
+export * from './pagedResourceListOfPackage';
+export * from './pagedResourceListOfParticipation';
 export * from './pagedResourceListOfPerson';
+export * from './pagedResourceListOfPlacement';
 export * from './pagedResourceListOfPortfolioGroupSearchResult';
 export * from './pagedResourceListOfPortfolioSearchResult';
 export * from './pagedResourceListOfPropertyDefinitionSearchResult';
+export * from './participation';
+export * from './participationRequest';
+export * from './participationSetRequest';
 export * from './payReceive';
 export * from './performanceReturn';
 export * from './periodType';
 export * from './perpetualEntityState';
 export * from './perpetualProperty';
 export * from './person';
+export * from './placement';
+export * from './placementRequest';
+export * from './placementSetRequest';
 export * from './portfolio';
 export * from './portfolioCashFlow';
 export * from './portfolioCashLadder';
@@ -276,11 +298,13 @@ export * from './resourceListOfAccessMetadataValueOf';
 export * from './resourceListOfAggregatedReturn';
 export * from './resourceListOfAggregationQuery';
 export * from './resourceListOfAllocation';
+export * from './resourceListOfBlock';
 export * from './resourceListOfCalendarDate';
 export * from './resourceListOfChange';
 export * from './resourceListOfConstituentsAdjustmentHeader';
 export * from './resourceListOfCorporateAction';
 export * from './resourceListOfDataType';
+export * from './resourceListOfExecution';
 export * from './resourceListOfGetCdsFlowConventionsResponse';
 export * from './resourceListOfGetCounterpartyResponse';
 export * from './resourceListOfGetCreditSupportAnnexResponse';
@@ -292,7 +316,11 @@ export * from './resourceListOfIUnitDefinitionDto';
 export * from './resourceListOfInstrumentCashFlow';
 export * from './resourceListOfInstrumentIdTypeDescriptor';
 export * from './resourceListOfOrder';
+export * from './resourceListOfOrderInstruction';
+export * from './resourceListOfPackage';
+export * from './resourceListOfParticipation';
 export * from './resourceListOfPerformanceReturn';
+export * from './resourceListOfPlacement';
 export * from './resourceListOfPortfolio';
 export * from './resourceListOfPortfolioCashFlow';
 export * from './resourceListOfPortfolioCashLadder';
@@ -436,6 +464,7 @@ import { AnnulStructuredDataResponse } from './annulStructuredDataResponse';
 import { Basket } from './basket';
 import { BasketAllOf } from './basketAllOf';
 import { BasketIdentifier } from './basketIdentifier';
+import { Block } from './block';
 import { Bond } from './bond';
 import { BondAllOf } from './bondAllOf';
 import { Calendar } from './calendar';
@@ -518,6 +547,9 @@ import { EquitySwapAllOf } from './equitySwapAllOf';
 import { EquityVolSurfaceData } from './equityVolSurfaceData';
 import { EquityVolSurfaceDataAllOf } from './equityVolSurfaceDataAllOf';
 import { ErrorDetail } from './errorDetail';
+import { Execution } from './execution';
+import { ExecutionRequest } from './executionRequest';
+import { ExecutionSetRequest } from './executionSetRequest';
 import { ExoticInstrument } from './exoticInstrument';
 import { ExoticInstrumentAllOf } from './exoticInstrumentAllOf';
 import { ExpandedGroup } from './expandedGroup';
@@ -610,26 +642,44 @@ import { Operator } from './operator';
 import { OptionType } from './optionType';
 import { Order } from './order';
 import { OrderBySpec } from './orderBySpec';
+import { OrderInstruction } from './orderInstruction';
+import { OrderInstructionRequest } from './orderInstructionRequest';
+import { OrderInstructionSetRequest } from './orderInstructionSetRequest';
 import { OrderRequest } from './orderRequest';
 import { OrderSetRequest } from './orderSetRequest';
 import { OutputTransaction } from './outputTransaction';
+import { Package } from './package';
+import { PackageRequest } from './packageRequest';
+import { PackageSetRequest } from './packageSetRequest';
 import { PagedResourceListOfAllocation } from './pagedResourceListOfAllocation';
+import { PagedResourceListOfBlock } from './pagedResourceListOfBlock';
 import { PagedResourceListOfCalendar } from './pagedResourceListOfCalendar';
 import { PagedResourceListOfCorporateActionSource } from './pagedResourceListOfCorporateActionSource';
 import { PagedResourceListOfCutLabelDefinition } from './pagedResourceListOfCutLabelDefinition';
+import { PagedResourceListOfExecution } from './pagedResourceListOfExecution';
 import { PagedResourceListOfInstrument } from './pagedResourceListOfInstrument';
 import { PagedResourceListOfLegalEntity } from './pagedResourceListOfLegalEntity';
 import { PagedResourceListOfOrder } from './pagedResourceListOfOrder';
+import { PagedResourceListOfOrderInstruction } from './pagedResourceListOfOrderInstruction';
+import { PagedResourceListOfPackage } from './pagedResourceListOfPackage';
+import { PagedResourceListOfParticipation } from './pagedResourceListOfParticipation';
 import { PagedResourceListOfPerson } from './pagedResourceListOfPerson';
+import { PagedResourceListOfPlacement } from './pagedResourceListOfPlacement';
 import { PagedResourceListOfPortfolioGroupSearchResult } from './pagedResourceListOfPortfolioGroupSearchResult';
 import { PagedResourceListOfPortfolioSearchResult } from './pagedResourceListOfPortfolioSearchResult';
 import { PagedResourceListOfPropertyDefinitionSearchResult } from './pagedResourceListOfPropertyDefinitionSearchResult';
+import { Participation } from './participation';
+import { ParticipationRequest } from './participationRequest';
+import { ParticipationSetRequest } from './participationSetRequest';
 import { PayReceive } from './payReceive';
 import { PerformanceReturn } from './performanceReturn';
 import { PeriodType } from './periodType';
 import { PerpetualEntityState } from './perpetualEntityState';
 import { PerpetualProperty } from './perpetualProperty';
 import { Person } from './person';
+import { Placement } from './placement';
+import { PlacementRequest } from './placementRequest';
+import { PlacementSetRequest } from './placementSetRequest';
 import { Portfolio } from './portfolio';
 import { PortfolioCashFlow } from './portfolioCashFlow';
 import { PortfolioCashLadder } from './portfolioCashLadder';
@@ -686,11 +736,13 @@ import { ResourceListOfAccessMetadataValueOf } from './resourceListOfAccessMetad
 import { ResourceListOfAggregatedReturn } from './resourceListOfAggregatedReturn';
 import { ResourceListOfAggregationQuery } from './resourceListOfAggregationQuery';
 import { ResourceListOfAllocation } from './resourceListOfAllocation';
+import { ResourceListOfBlock } from './resourceListOfBlock';
 import { ResourceListOfCalendarDate } from './resourceListOfCalendarDate';
 import { ResourceListOfChange } from './resourceListOfChange';
 import { ResourceListOfConstituentsAdjustmentHeader } from './resourceListOfConstituentsAdjustmentHeader';
 import { ResourceListOfCorporateAction } from './resourceListOfCorporateAction';
 import { ResourceListOfDataType } from './resourceListOfDataType';
+import { ResourceListOfExecution } from './resourceListOfExecution';
 import { ResourceListOfGetCdsFlowConventionsResponse } from './resourceListOfGetCdsFlowConventionsResponse';
 import { ResourceListOfGetCounterpartyResponse } from './resourceListOfGetCounterpartyResponse';
 import { ResourceListOfGetCreditSupportAnnexResponse } from './resourceListOfGetCreditSupportAnnexResponse';
@@ -702,7 +754,11 @@ import { ResourceListOfIUnitDefinitionDto } from './resourceListOfIUnitDefinitio
 import { ResourceListOfInstrumentCashFlow } from './resourceListOfInstrumentCashFlow';
 import { ResourceListOfInstrumentIdTypeDescriptor } from './resourceListOfInstrumentIdTypeDescriptor';
 import { ResourceListOfOrder } from './resourceListOfOrder';
+import { ResourceListOfOrderInstruction } from './resourceListOfOrderInstruction';
+import { ResourceListOfPackage } from './resourceListOfPackage';
+import { ResourceListOfParticipation } from './resourceListOfParticipation';
 import { ResourceListOfPerformanceReturn } from './resourceListOfPerformanceReturn';
+import { ResourceListOfPlacement } from './resourceListOfPlacement';
 import { ResourceListOfPortfolio } from './resourceListOfPortfolio';
 import { ResourceListOfPortfolioCashFlow } from './resourceListOfPortfolioCashFlow';
 import { ResourceListOfPortfolioCashLadder } from './resourceListOfPortfolioCashLadder';
@@ -984,6 +1040,7 @@ let typeMap: {[index: string]: any} = {
     "Basket": Basket,
     "BasketAllOf": BasketAllOf,
     "BasketIdentifier": BasketIdentifier,
+    "Block": Block,
     "Bond": Bond,
     "BondAllOf": BondAllOf,
     "Calendar": Calendar,
@@ -1066,6 +1123,9 @@ let typeMap: {[index: string]: any} = {
     "EquityVolSurfaceData": EquityVolSurfaceData,
     "EquityVolSurfaceDataAllOf": EquityVolSurfaceDataAllOf,
     "ErrorDetail": ErrorDetail,
+    "Execution": Execution,
+    "ExecutionRequest": ExecutionRequest,
+    "ExecutionSetRequest": ExecutionSetRequest,
     "ExoticInstrument": ExoticInstrument,
     "ExoticInstrumentAllOf": ExoticInstrumentAllOf,
     "ExpandedGroup": ExpandedGroup,
@@ -1158,26 +1218,44 @@ let typeMap: {[index: string]: any} = {
     "OptionType": OptionType,
     "Order": Order,
     "OrderBySpec": OrderBySpec,
+    "OrderInstruction": OrderInstruction,
+    "OrderInstructionRequest": OrderInstructionRequest,
+    "OrderInstructionSetRequest": OrderInstructionSetRequest,
     "OrderRequest": OrderRequest,
     "OrderSetRequest": OrderSetRequest,
     "OutputTransaction": OutputTransaction,
+    "Package": Package,
+    "PackageRequest": PackageRequest,
+    "PackageSetRequest": PackageSetRequest,
     "PagedResourceListOfAllocation": PagedResourceListOfAllocation,
+    "PagedResourceListOfBlock": PagedResourceListOfBlock,
     "PagedResourceListOfCalendar": PagedResourceListOfCalendar,
     "PagedResourceListOfCorporateActionSource": PagedResourceListOfCorporateActionSource,
     "PagedResourceListOfCutLabelDefinition": PagedResourceListOfCutLabelDefinition,
+    "PagedResourceListOfExecution": PagedResourceListOfExecution,
     "PagedResourceListOfInstrument": PagedResourceListOfInstrument,
     "PagedResourceListOfLegalEntity": PagedResourceListOfLegalEntity,
     "PagedResourceListOfOrder": PagedResourceListOfOrder,
+    "PagedResourceListOfOrderInstruction": PagedResourceListOfOrderInstruction,
+    "PagedResourceListOfPackage": PagedResourceListOfPackage,
+    "PagedResourceListOfParticipation": PagedResourceListOfParticipation,
     "PagedResourceListOfPerson": PagedResourceListOfPerson,
+    "PagedResourceListOfPlacement": PagedResourceListOfPlacement,
     "PagedResourceListOfPortfolioGroupSearchResult": PagedResourceListOfPortfolioGroupSearchResult,
     "PagedResourceListOfPortfolioSearchResult": PagedResourceListOfPortfolioSearchResult,
     "PagedResourceListOfPropertyDefinitionSearchResult": PagedResourceListOfPropertyDefinitionSearchResult,
+    "Participation": Participation,
+    "ParticipationRequest": ParticipationRequest,
+    "ParticipationSetRequest": ParticipationSetRequest,
     "PayReceive": PayReceive,
     "PerformanceReturn": PerformanceReturn,
     "PeriodType": PeriodType,
     "PerpetualEntityState": PerpetualEntityState,
     "PerpetualProperty": PerpetualProperty,
     "Person": Person,
+    "Placement": Placement,
+    "PlacementRequest": PlacementRequest,
+    "PlacementSetRequest": PlacementSetRequest,
     "Portfolio": Portfolio,
     "PortfolioCashFlow": PortfolioCashFlow,
     "PortfolioCashLadder": PortfolioCashLadder,
@@ -1234,11 +1312,13 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfAggregatedReturn": ResourceListOfAggregatedReturn,
     "ResourceListOfAggregationQuery": ResourceListOfAggregationQuery,
     "ResourceListOfAllocation": ResourceListOfAllocation,
+    "ResourceListOfBlock": ResourceListOfBlock,
     "ResourceListOfCalendarDate": ResourceListOfCalendarDate,
     "ResourceListOfChange": ResourceListOfChange,
     "ResourceListOfConstituentsAdjustmentHeader": ResourceListOfConstituentsAdjustmentHeader,
     "ResourceListOfCorporateAction": ResourceListOfCorporateAction,
     "ResourceListOfDataType": ResourceListOfDataType,
+    "ResourceListOfExecution": ResourceListOfExecution,
     "ResourceListOfGetCdsFlowConventionsResponse": ResourceListOfGetCdsFlowConventionsResponse,
     "ResourceListOfGetCounterpartyResponse": ResourceListOfGetCounterpartyResponse,
     "ResourceListOfGetCreditSupportAnnexResponse": ResourceListOfGetCreditSupportAnnexResponse,
@@ -1250,7 +1330,11 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfInstrumentCashFlow": ResourceListOfInstrumentCashFlow,
     "ResourceListOfInstrumentIdTypeDescriptor": ResourceListOfInstrumentIdTypeDescriptor,
     "ResourceListOfOrder": ResourceListOfOrder,
+    "ResourceListOfOrderInstruction": ResourceListOfOrderInstruction,
+    "ResourceListOfPackage": ResourceListOfPackage,
+    "ResourceListOfParticipation": ResourceListOfParticipation,
     "ResourceListOfPerformanceReturn": ResourceListOfPerformanceReturn,
+    "ResourceListOfPlacement": ResourceListOfPlacement,
     "ResourceListOfPortfolio": ResourceListOfPortfolio,
     "ResourceListOfPortfolioCashFlow": ResourceListOfPortfolioCashFlow,
     "ResourceListOfPortfolioCashLadder": ResourceListOfPortfolioCashLadder,
