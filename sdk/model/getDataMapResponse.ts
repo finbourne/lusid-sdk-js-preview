@@ -27,9 +27,6 @@ export class GetDataMapResponse {
     * TODO
     */
     'failed'?: { [key: string]: ErrorDetail; };
-    /**
-    * Collection of links.
-    */
     'links'?: Array<Link>;
 
     static discriminator: string | undefined = undefined;

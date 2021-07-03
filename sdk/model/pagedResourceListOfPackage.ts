@@ -13,29 +13,11 @@
 import { Link } from './link';
 import { Package } from './package';
 
-/**
-* A paginated list of resource that can be returned from a request.
-*/
 export class PagedResourceListOfPackage {
-    /**
-    * The next page of results.
-    */
     'nextPage'?: string;
-    /**
-    * The previous page of results.
-    */
     'previousPage'?: string;
-    /**
-    * The resources to list.
-    */
     'values': Array<Package>;
-    /**
-    * The URI of the resource list.
-    */
     'href'?: string;
-    /**
-    * Collection of links.
-    */
     'links'?: Array<Link>;
 
     static discriminator: string | undefined = undefined;

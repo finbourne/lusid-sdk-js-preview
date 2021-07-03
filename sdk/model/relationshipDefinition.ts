@@ -45,9 +45,6 @@ export class RelationshipDefinition {
     * Describes the cardinality of the relationship between source entity and target entity.
     */
     'relationshipCardinality': string;
-    /**
-    * Collection of links.
-    */
     'links'?: Array<Link>;
 
     static discriminator: string | undefined = undefined;
