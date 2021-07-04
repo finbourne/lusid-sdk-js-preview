@@ -60,9 +60,6 @@ export class Block {
     'limitPrice'?: CurrencyAndAmount;
     'stopPrice'?: CurrencyAndAmount;
     'version'?: Version;
-    /**
-    * Collection of links.
-    */
     'links'?: Array<Link>;
 
     static discriminator: string | undefined = undefined;
