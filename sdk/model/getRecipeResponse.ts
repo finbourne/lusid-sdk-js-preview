@@ -19,9 +19,6 @@ export class GetRecipeResponse {
     */
     'href'?: string;
     'value'?: ConfigurationRecipe;
-    /**
-    * Collection of links.
-    */
     'links'?: Array<Link>;
 
     static discriminator: string | undefined = undefined;

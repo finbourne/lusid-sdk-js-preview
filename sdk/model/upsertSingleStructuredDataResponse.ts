@@ -24,9 +24,6 @@ export class UpsertSingleStructuredDataResponse {
     * The value that was successfully retrieved.
     */
     'value'?: Date;
-    /**
-    * Collection of links.
-    */
     'links'?: Array<Link>;
 
     static discriminator: string | undefined = undefined;

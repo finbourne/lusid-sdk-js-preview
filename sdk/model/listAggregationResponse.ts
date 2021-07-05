@@ -22,9 +22,6 @@ export class ListAggregationResponse {
     'aggregationCurrency'?: string;
     'dataSchema'?: ResultDataSchema;
     'aggregationFailures'?: Array<AggregationMeasureFailureDetail>;
-    /**
-    * Collection of links.
-    */
     'links'?: Array<Link>;
 
     static discriminator: string | undefined = undefined;

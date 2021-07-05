@@ -13,29 +13,11 @@
 import { A2BDataRecord } from './a2BDataRecord';
 import { Link } from './link';
 
-/**
-* A collection of resources that can be returned from requests.
-*/
 export class ResourceListOfA2BDataRecord {
-    /**
-    * The resources to list.
-    */
     'values': Array<A2BDataRecord>;
-    /**
-    * The URI of the resource list.
-    */
     'href'?: string;
-    /**
-    * Collection of links.
-    */
     'links'?: Array<Link>;
-    /**
-    * The next page of results.
-    */
     'nextPage'?: string;
-    /**
-    * The previous page of results.
-    */
     'previousPage'?: string;
 
     static discriminator: string | undefined = undefined;
