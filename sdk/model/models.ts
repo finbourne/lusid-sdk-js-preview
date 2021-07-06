@@ -124,6 +124,8 @@ export * from './floatingLeg';
 export * from './floatingLegAllOf';
 export * from './flowConventionName';
 export * from './flowConventions';
+export * from './forwardRateAgreement';
+export * from './forwardRateAgreementAllOf';
 export * from './fundingLeg';
 export * from './fundingLegAllOf';
 export * from './future';
@@ -562,6 +564,8 @@ import { FloatingLeg } from './floatingLeg';
 import { FloatingLegAllOf } from './floatingLegAllOf';
 import { FlowConventionName } from './flowConventionName';
 import { FlowConventions } from './flowConventions';
+import { ForwardRateAgreement } from './forwardRateAgreement';
+import { ForwardRateAgreementAllOf } from './forwardRateAgreementAllOf';
 import { FundingLeg } from './fundingLeg';
 import { FundingLegAllOf } from './fundingLegAllOf';
 import { Future } from './future';
@@ -937,6 +941,8 @@ let enumsMap: {[index: string]: any} = {
         "FixedLegAllOf.InstrumentTypeEnum": FixedLegAllOf.InstrumentTypeEnum,
         "FloatingLeg.InstrumentTypeEnum": FloatingLeg.InstrumentTypeEnum,
         "FloatingLegAllOf.InstrumentTypeEnum": FloatingLegAllOf.InstrumentTypeEnum,
+        "ForwardRateAgreement.InstrumentTypeEnum": ForwardRateAgreement.InstrumentTypeEnum,
+        "ForwardRateAgreementAllOf.InstrumentTypeEnum": ForwardRateAgreementAllOf.InstrumentTypeEnum,
         "FundingLeg.InstrumentTypeEnum": FundingLeg.InstrumentTypeEnum,
         "FundingLegAllOf.InstrumentTypeEnum": FundingLegAllOf.InstrumentTypeEnum,
         "Future.InstrumentTypeEnum": Future.InstrumentTypeEnum,
@@ -1138,6 +1144,8 @@ let typeMap: {[index: string]: any} = {
     "FloatingLegAllOf": FloatingLegAllOf,
     "FlowConventionName": FlowConventionName,
     "FlowConventions": FlowConventions,
+    "ForwardRateAgreement": ForwardRateAgreement,
+    "ForwardRateAgreementAllOf": ForwardRateAgreementAllOf,
     "FundingLeg": FundingLeg,
     "FundingLegAllOf": FundingLegAllOf,
     "Future": Future,

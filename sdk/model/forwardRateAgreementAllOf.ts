@@ -10,32 +10,107 @@
  * Do not edit the class manually.
  */
 
-import { StructuredMarketData } from './structuredMarketData';
-import { StructuredMarketDataId } from './structuredMarketDataId';
 
-/**
-* The details of the structured market data item to upsert into Lusid.
-*/
-export class UpsertStructuredMarketDataRequest {
-    'marketDataId': StructuredMarketDataId;
-    'marketData': StructuredMarketData;
+export class ForwardRateAgreementAllOf {
+    /**
+    * The start date of the instrument. This is normally synonymous with the trade-date.
+    */
+    'startDate': Date;
+    /**
+    * The final maturity date of the instrument. This means the last date on which the instruments makes a payment of any amount.  For the avoidance of doubt, that is not necessarily prior to its last sensitivity date for the purposes of risk; e.g. instruments such as  Constant Maturity Swaps (CMS) often have sensitivities to rates beyond their last payment date
+    */
+    'maturityDate': Date;
+    /**
+    * The domestic currency of the instrument.
+    */
+    'domCcy': string;
+    /**
+    * The date at which the rate to be paid, the reference rate, is confirmed/observed
+    */
+    'fixingDate': Date;
+    /**
+    * The rate at which the FRA is traded.
+    */
+    'fraRate': number;
+    /**
+    * The amount for which the FRA is traded.
+    */
+    'notional': number;
+    /**
+    * The available values are: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CashSettled, CdsIndex, Basket, FundingLeg, CrossCurrencySwap, FxSwap, ForwardRateAgreement
+    */
+    'instrumentType': ForwardRateAgreementAllOf.InstrumentTypeEnum;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "marketDataId",
-            "baseName": "marketDataId",
-            "type": "StructuredMarketDataId"
+            "name": "startDate",
+            "baseName": "startDate",
+            "type": "Date"
         },
         {
-            "name": "marketData",
-            "baseName": "marketData",
-            "type": "StructuredMarketData"
+            "name": "maturityDate",
+            "baseName": "maturityDate",
+            "type": "Date"
+        },
+        {
+            "name": "domCcy",
+            "baseName": "domCcy",
+            "type": "string"
+        },
+        {
+            "name": "fixingDate",
+            "baseName": "fixingDate",
+            "type": "Date"
+        },
+        {
+            "name": "fraRate",
+            "baseName": "fraRate",
+            "type": "number"
+        },
+        {
+            "name": "notional",
+            "baseName": "notional",
+            "type": "number"
+        },
+        {
+            "name": "instrumentType",
+            "baseName": "instrumentType",
+            "type": "ForwardRateAgreementAllOf.InstrumentTypeEnum"
         }    ];
 
     static getAttributeTypeMap() {
-        return UpsertStructuredMarketDataRequest.attributeTypeMap;
+        return ForwardRateAgreementAllOf.attributeTypeMap;
     }
 }
 
+export namespace ForwardRateAgreementAllOf {
+    export enum InstrumentTypeEnum {
+        QuotedSecurity = <any> 'QuotedSecurity',
+        InterestRateSwap = <any> 'InterestRateSwap',
+        FxForward = <any> 'FxForward',
+        Future = <any> 'Future',
+        ExoticInstrument = <any> 'ExoticInstrument',
+        FxOption = <any> 'FxOption',
+        CreditDefaultSwap = <any> 'CreditDefaultSwap',
+        InterestRateSwaption = <any> 'InterestRateSwaption',
+        Bond = <any> 'Bond',
+        EquityOption = <any> 'EquityOption',
+        FixedLeg = <any> 'FixedLeg',
+        FloatingLeg = <any> 'FloatingLeg',
+        BespokeCashFlowsLeg = <any> 'BespokeCashFlowsLeg',
+        Unknown = <any> 'Unknown',
+        TermDeposit = <any> 'TermDeposit',
+        ContractForDifference = <any> 'ContractForDifference',
+        EquitySwap = <any> 'EquitySwap',
+        CashPerpetual = <any> 'CashPerpetual',
+        CashSettled = <any> 'CashSettled',
+        CdsIndex = <any> 'CdsIndex',
+        Basket = <any> 'Basket',
+        FundingLeg = <any> 'FundingLeg',
+        CrossCurrencySwap = <any> 'CrossCurrencySwap',
+        FxSwap = <any> 'FxSwap',
+        ForwardRateAgreement = <any> 'ForwardRateAgreement'
+    }
+}
