@@ -27,9 +27,6 @@ export class PortfolioCashLadder {
     * A record of cash flows on a specific date.
     */
     'records'?: Array<CashLadderRecord>;
-    /**
-    * Collection of links.
-    */
     'links'?: Array<Link>;
 
     static discriminator: string | undefined = undefined;

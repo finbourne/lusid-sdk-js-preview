@@ -30,9 +30,6 @@ export class TranslateInstrumentDefinitionsResponse {
     * The instruments that could not be translated along with a reason for their failure.
     */
     'failed'?: { [key: string]: ErrorDetail; };
-    /**
-    * Collection of links.
-    */
     'links'?: Array<Link>;
 
     static discriminator: string | undefined = undefined;

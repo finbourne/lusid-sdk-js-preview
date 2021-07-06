@@ -17,9 +17,6 @@ export class DeleteInstrumentPropertiesResponse {
     * The as-at datetime at which properties were deleted.
     */
     'asAt': Date;
-    /**
-    * Collection of links.
-    */
     'links'?: Array<Link>;
 
     static discriminator: string | undefined = undefined;

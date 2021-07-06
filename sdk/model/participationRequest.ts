@@ -22,9 +22,6 @@ export class ParticipationRequest {
     'placementId': ResourceId;
     'orderId': ResourceId;
     'version'?: Version;
-    /**
-    * Collection of links.
-    */
     'links'?: Array<Link>;
 
     static discriminator: string | undefined = undefined;
