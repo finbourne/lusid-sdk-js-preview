@@ -24,9 +24,6 @@ export class GetCounterpartyResponse {
     * The counterparty that could not be updated or inserted along with a reason for failure.
     */
     'failed'?: { [key: string]: ErrorDetail; };
-    /**
-    * Collection of links.
-    */
     'links'?: Array<Link>;
 
     static discriminator: string | undefined = undefined;

@@ -20,9 +20,6 @@ export class CorporateActionSource {
     'version'?: Version;
     'displayName'?: string;
     'description'?: string;
-    /**
-    * Collection of links.
-    */
     'links'?: Array<Link>;
 
     static discriminator: string | undefined = undefined;

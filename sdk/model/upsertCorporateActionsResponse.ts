@@ -18,9 +18,6 @@ export class UpsertCorporateActionsResponse {
     'href'?: string;
     'values'?: { [key: string]: CorporateAction; };
     'failed'?: { [key: string]: ErrorDetail; };
-    /**
-    * Collection of links.
-    */
     'links'?: Array<Link>;
 
     static discriminator: string | undefined = undefined;

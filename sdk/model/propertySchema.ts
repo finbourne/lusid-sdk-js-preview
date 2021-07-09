@@ -16,9 +16,6 @@ import { Link } from './link';
 export class PropertySchema {
     'href'?: string;
     'values'?: { [key: string]: FieldSchema; };
-    /**
-    * Collection of links.
-    */
     'links'?: Array<Link>;
 
     static discriminator: string | undefined = undefined;

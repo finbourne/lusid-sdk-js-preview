@@ -27,9 +27,6 @@ export class GetStructuredMarketDataResponse {
     * The set of values that could not be retrieved due along with a reason for this, e.g badly formed request.
     */
     'failed'?: { [key: string]: ErrorDetail; };
-    /**
-    * Collection of links.
-    */
     'links'?: Array<Link>;
 
     static discriminator: string | undefined = undefined;
