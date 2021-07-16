@@ -11,43 +11,44 @@
  */
 
 
-export class AggregateSpec {
+/**
+* A class containing information for a given premium payment.
+*/
+export class Premium {
     /**
-    * The key that uniquely identifies a queryable address in Lusid.
+    * Premium amount
     */
-    'key': string;
+    'amount': number;
     /**
-    * The available values are: Sum, Proportion, Average, Count, Min, Max, Value
+    * Premium currency
     */
-    'op': AggregateSpec.OpEnum;
+    'currency': string;
+    /**
+    * Date when premium paid
+    */
+    'date': Date;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "key",
-            "baseName": "key",
+            "name": "amount",
+            "baseName": "amount",
+            "type": "number"
+        },
+        {
+            "name": "currency",
+            "baseName": "currency",
             "type": "string"
         },
         {
-            "name": "op",
-            "baseName": "op",
-            "type": "AggregateSpec.OpEnum"
+            "name": "date",
+            "baseName": "date",
+            "type": "Date"
         }    ];
 
     static getAttributeTypeMap() {
-        return AggregateSpec.attributeTypeMap;
+        return Premium.attributeTypeMap;
     }
 }
 
-export namespace AggregateSpec {
-    export enum OpEnum {
-        Sum = <any> 'Sum',
-        Proportion = <any> 'Proportion',
-        Average = <any> 'Average',
-        Count = <any> 'Count',
-        Min = <any> 'Min',
-        Max = <any> 'Max',
-        Value = <any> 'Value'
-    }
-}
