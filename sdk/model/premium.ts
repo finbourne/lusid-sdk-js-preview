@@ -10,69 +10,45 @@
  * Do not edit the class manually.
  */
 
-import { Link } from './link';
-import { PortfolioHolding } from './portfolioHolding';
-import { Version } from './version';
 
-export class VersionedResourceListOfPortfolioHolding {
-    'version': Version;
+/**
+* A class containing information for a given premium payment.
+*/
+export class Premium {
     /**
-    * The resources to list.
+    * Premium amount
     */
-    'values': Array<PortfolioHolding>;
+    'amount': number;
     /**
-    * The URI of the resource list.
+    * Premium currency
     */
-    'href'?: string;
+    'currency': string;
     /**
-    * The next page of results.
+    * Date when premium paid
     */
-    'nextPage'?: string;
-    /**
-    * The previous page of results.
-    */
-    'previousPage'?: string;
-    /**
-    * Collection of links.
-    */
-    'links'?: Array<Link>;
+    'date': Date;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "version",
-            "baseName": "version",
-            "type": "Version"
+            "name": "amount",
+            "baseName": "amount",
+            "type": "number"
         },
         {
-            "name": "values",
-            "baseName": "values",
-            "type": "Array<PortfolioHolding>"
-        },
-        {
-            "name": "href",
-            "baseName": "href",
+            "name": "currency",
+            "baseName": "currency",
             "type": "string"
         },
         {
-            "name": "nextPage",
-            "baseName": "nextPage",
-            "type": "string"
-        },
-        {
-            "name": "previousPage",
-            "baseName": "previousPage",
-            "type": "string"
-        },
-        {
-            "name": "links",
-            "baseName": "links",
-            "type": "Array<Link>"
+            "name": "date",
+            "baseName": "date",
+            "type": "Date"
         }    ];
 
     static getAttributeTypeMap() {
-        return VersionedResourceListOfPortfolioHolding.attributeTypeMap;
+        return Premium.attributeTypeMap;
     }
 }
 
