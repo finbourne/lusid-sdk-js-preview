@@ -259,7 +259,6 @@ export * from './portfolioSearchResult';
 export * from './portfolioType';
 export * from './portfoliosReconciliationRequest';
 export * from './portfoliosReconciliationRequestPreview';
-export * from './premium';
 export * from './pricingContext';
 export * from './pricingModel';
 export * from './pricingOptions';
@@ -700,7 +699,6 @@ import { PortfolioSearchResult } from './portfolioSearchResult';
 import { PortfolioType } from './portfolioType';
 import { PortfoliosReconciliationRequest } from './portfoliosReconciliationRequest';
 import { PortfoliosReconciliationRequestPreview } from './portfoliosReconciliationRequestPreview';
-import { Premium } from './premium';
 import { PricingContext } from './pricingContext';
 import { PricingModel } from './pricingModel';
 import { PricingOptions } from './pricingOptions';
@@ -1281,7 +1279,6 @@ let typeMap: {[index: string]: any} = {
     "PortfolioType": PortfolioType,
     "PortfoliosReconciliationRequest": PortfoliosReconciliationRequest,
     "PortfoliosReconciliationRequestPreview": PortfoliosReconciliationRequestPreview,
-    "Premium": Premium,
     "PricingContext": PricingContext,
     "PricingModel": PricingModel,
     "PricingOptions": PricingOptions,
