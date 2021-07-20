@@ -23,6 +23,7 @@ export * from './allocationSetRequest';
 export * from './annulQuotesResponse';
 export * from './annulSingleStructuredDataResponse';
 export * from './annulStructuredDataResponse';
+export * from './assetClass';
 export * from './basket';
 export * from './basketAllOf';
 export * from './basketIdentifier';
@@ -347,6 +348,8 @@ export * from './setPersonIdentifiersRequest';
 export * from './setPersonPropertiesRequest';
 export * from './sideConfigurationData';
 export * from './sideConfigurationDataRequest';
+export * from './simpleInstrument';
+export * from './simpleInstrumentAllOf';
 export * from './sortOrder';
 export * from './stream';
 export * from './structuredMarketData';
@@ -464,6 +467,7 @@ import { AllocationSetRequest } from './allocationSetRequest';
 import { AnnulQuotesResponse } from './annulQuotesResponse';
 import { AnnulSingleStructuredDataResponse } from './annulSingleStructuredDataResponse';
 import { AnnulStructuredDataResponse } from './annulStructuredDataResponse';
+import { AssetClass } from './assetClass';
 import { Basket } from './basket';
 import { BasketAllOf } from './basketAllOf';
 import { BasketIdentifier } from './basketIdentifier';
@@ -788,6 +792,8 @@ import { SetPersonIdentifiersRequest } from './setPersonIdentifiersRequest';
 import { SetPersonPropertiesRequest } from './setPersonPropertiesRequest';
 import { SideConfigurationData } from './sideConfigurationData';
 import { SideConfigurationDataRequest } from './sideConfigurationDataRequest';
+import { SimpleInstrument } from './simpleInstrument';
+import { SimpleInstrumentAllOf } from './simpleInstrumentAllOf';
 import { SortOrder } from './sortOrder';
 import { Stream } from './stream';
 import { StructuredMarketData } from './structuredMarketData';
@@ -1001,6 +1007,10 @@ let enumsMap: {[index: string]: any} = {
         "PropertyFilter.RightOperandTypeEnum": PropertyFilter.RightOperandTypeEnum,
         "QuoteSeriesId.InstrumentIdTypeEnum": QuoteSeriesId.InstrumentIdTypeEnum,
         "QuoteSeriesId.QuoteTypeEnum": QuoteSeriesId.QuoteTypeEnum,
+        "SimpleInstrument.AssetClassEnum": SimpleInstrument.AssetClassEnum,
+        "SimpleInstrument.InstrumentTypeEnum": SimpleInstrument.InstrumentTypeEnum,
+        "SimpleInstrumentAllOf.AssetClassEnum": SimpleInstrumentAllOf.AssetClassEnum,
+        "SimpleInstrumentAllOf.InstrumentTypeEnum": SimpleInstrumentAllOf.InstrumentTypeEnum,
         "TermDeposit.InstrumentTypeEnum": TermDeposit.InstrumentTypeEnum,
         "TermDepositAllOf.InstrumentTypeEnum": TermDepositAllOf.InstrumentTypeEnum,
         "Tolerance.TypeEnum": Tolerance.TypeEnum,
@@ -1045,6 +1055,7 @@ let typeMap: {[index: string]: any} = {
     "AnnulQuotesResponse": AnnulQuotesResponse,
     "AnnulSingleStructuredDataResponse": AnnulSingleStructuredDataResponse,
     "AnnulStructuredDataResponse": AnnulStructuredDataResponse,
+    "AssetClass": AssetClass,
     "Basket": Basket,
     "BasketAllOf": BasketAllOf,
     "BasketIdentifier": BasketIdentifier,
@@ -1369,6 +1380,8 @@ let typeMap: {[index: string]: any} = {
     "SetPersonPropertiesRequest": SetPersonPropertiesRequest,
     "SideConfigurationData": SideConfigurationData,
     "SideConfigurationDataRequest": SideConfigurationDataRequest,
+    "SimpleInstrument": SimpleInstrument,
+    "SimpleInstrumentAllOf": SimpleInstrumentAllOf,
     "SortOrder": SortOrder,
     "Stream": Stream,
     "StructuredMarketData": StructuredMarketData,
