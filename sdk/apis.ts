@@ -7,7 +7,7 @@ import {ComplexMarketDataApi} from './api/complexMarketDataApi';
 import {ConfigurationRecipeApi} from './api/configurationRecipeApi';
 import {ConventionsApi} from './api/conventionsApi';
 import {CorporateActionSourcesApi} from './api/corporateActionSourcesApi';
-import {CounterpartiesApi} from './api/counterpartiesApi';
+import {CounterpartyApi} from './api/counterpartyApi';
 import {CutLabelDefinitionsApi} from './api/cutLabelDefinitionsApi';
 import {DataTypesApi} from './api/dataTypesApi';
 import {DerivedTransactionPortfoliosApi} from './api/derivedTransactionPortfoliosApi';
@@ -51,7 +51,7 @@ export class Api {
     public configurationRecipe:  ConfigurationRecipeApi
     public conventions:  ConventionsApi
     public corporateActionSources:  CorporateActionSourcesApi
-    public counterparties:  CounterpartiesApi
+    public counterparty:  CounterpartyApi
     public cutLabelDefinitions:  CutLabelDefinitionsApi
     public dataTypes:  DataTypesApi
     public derivedTransactionPortfolios:  DerivedTransactionPortfoliosApi
