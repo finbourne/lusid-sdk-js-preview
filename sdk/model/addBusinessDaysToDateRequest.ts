@@ -10,65 +10,39 @@
  * Do not edit the class manually.
  */
 
-import { Link } from './link';
-import { PerformanceReturn } from './performanceReturn';
 
-/**
-* A collection of resources that can be returned from requests.
-*/
-export class ResourceListOfPerformanceReturn {
-    /**
-    * The resources to list.
-    */
-    'values': Array<PerformanceReturn>;
-    /**
-    * The URI of the resource list.
-    */
-    'href'?: string;
-    /**
-    * Collection of links.
-    */
-    'links'?: Array<Link>;
-    /**
-    * The next page of results.
-    */
-    'nextPage'?: string;
-    /**
-    * The previous page of results.
-    */
-    'previousPage'?: string;
+export class AddBusinessDaysToDateRequest {
+    'businessDayOffset': number;
+    'holidayCodes': Array<string>;
+    'startDate'?: Date;
+    'asAt'?: Date;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "values",
-            "baseName": "values",
-            "type": "Array<PerformanceReturn>"
+            "name": "businessDayOffset",
+            "baseName": "businessDayOffset",
+            "type": "number"
         },
         {
-            "name": "href",
-            "baseName": "href",
-            "type": "string"
+            "name": "holidayCodes",
+            "baseName": "holidayCodes",
+            "type": "Array<string>"
         },
         {
-            "name": "links",
-            "baseName": "links",
-            "type": "Array<Link>"
+            "name": "startDate",
+            "baseName": "startDate",
+            "type": "Date"
         },
         {
-            "name": "nextPage",
-            "baseName": "nextPage",
-            "type": "string"
-        },
-        {
-            "name": "previousPage",
-            "baseName": "previousPage",
-            "type": "string"
+            "name": "asAt",
+            "baseName": "asAt",
+            "type": "Date"
         }    ];
 
     static getAttributeTypeMap() {
-        return ResourceListOfPerformanceReturn.attributeTypeMap;
+        return AddBusinessDaysToDateRequest.attributeTypeMap;
     }
 }
 

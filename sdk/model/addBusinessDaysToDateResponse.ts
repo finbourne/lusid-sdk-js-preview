@@ -10,65 +10,24 @@
  * Do not edit the class manually.
  */
 
-import { Link } from './link';
-import { PerformanceReturn } from './performanceReturn';
 
 /**
-* A collection of resources that can be returned from requests.
+* The date that is the requested number of business days after the given start date
 */
-export class ResourceListOfPerformanceReturn {
-    /**
-    * The resources to list.
-    */
-    'values': Array<PerformanceReturn>;
-    /**
-    * The URI of the resource list.
-    */
-    'href'?: string;
-    /**
-    * Collection of links.
-    */
-    'links'?: Array<Link>;
-    /**
-    * The next page of results.
-    */
-    'nextPage'?: string;
-    /**
-    * The previous page of results.
-    */
-    'previousPage'?: string;
+export class AddBusinessDaysToDateResponse {
+    'value': Date;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "values",
-            "baseName": "values",
-            "type": "Array<PerformanceReturn>"
-        },
-        {
-            "name": "href",
-            "baseName": "href",
-            "type": "string"
-        },
-        {
-            "name": "links",
-            "baseName": "links",
-            "type": "Array<Link>"
-        },
-        {
-            "name": "nextPage",
-            "baseName": "nextPage",
-            "type": "string"
-        },
-        {
-            "name": "previousPage",
-            "baseName": "previousPage",
-            "type": "string"
+            "name": "value",
+            "baseName": "value",
+            "type": "Date"
         }    ];
 
     static getAttributeTypeMap() {
-        return ResourceListOfPerformanceReturn.attributeTypeMap;
+        return AddBusinessDaysToDateResponse.attributeTypeMap;
     }
 }
 

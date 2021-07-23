@@ -7,6 +7,8 @@ export * from './accessControlledResource';
 export * from './accessMetadataValue';
 export * from './accountingMethod';
 export * from './actionId';
+export * from './addBusinessDaysToDateRequest';
+export * from './addBusinessDaysToDateResponse';
 export * from './adjustHolding';
 export * from './adjustHoldingRequest';
 export * from './aggregateSpec';
@@ -451,6 +453,8 @@ import { AccessControlledResource } from './accessControlledResource';
 import { AccessMetadataValue } from './accessMetadataValue';
 import { AccountingMethod } from './accountingMethod';
 import { ActionId } from './actionId';
+import { AddBusinessDaysToDateRequest } from './addBusinessDaysToDateRequest';
+import { AddBusinessDaysToDateResponse } from './addBusinessDaysToDateResponse';
 import { AdjustHolding } from './adjustHolding';
 import { AdjustHoldingRequest } from './adjustHoldingRequest';
 import { AggregateSpec } from './aggregateSpec';
@@ -1039,6 +1043,8 @@ let typeMap: {[index: string]: any} = {
     "AccessMetadataValue": AccessMetadataValue,
     "AccountingMethod": AccountingMethod,
     "ActionId": ActionId,
+    "AddBusinessDaysToDateRequest": AddBusinessDaysToDateRequest,
+    "AddBusinessDaysToDateResponse": AddBusinessDaysToDateResponse,
     "AdjustHolding": AdjustHolding,
     "AdjustHoldingRequest": AdjustHoldingRequest,
     "AggregateSpec": AggregateSpec,
