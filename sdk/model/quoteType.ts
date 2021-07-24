@@ -10,16 +10,15 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 
-export class QuoteType {
-
-    static discriminator: string | undefined = undefined;
-
-    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-    ];
-
-    static getAttributeTypeMap() {
-        return QuoteType.attributeTypeMap;
-    }
+export enum QuoteType {
+    Price = <any> 'Price',
+    Spread = <any> 'Spread',
+    Rate = <any> 'Rate',
+    LogNormalVol = <any> 'LogNormalVol',
+    NormalVol = <any> 'NormalVol',
+    ParSpread = <any> 'ParSpread',
+    IsdaSpread = <any> 'IsdaSpread',
+    Upfront = <any> 'Upfront'
 }
-

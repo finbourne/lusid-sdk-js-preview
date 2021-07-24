@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 
 /**
 * Representation of an abstract definition of a flow convention set consisting of currency, tenor and an index name (arbitrary string but likely something like \"IBOR\")
@@ -22,7 +23,7 @@ export class FlowConventionName {
     /**
     * The index, if present, that is required. e.g. \"IBOR\", \"OIS\" or \"SONIA\".
     */
-    'indexName'?: string;
+    'indexName'?: string | null;
     /**
     * Tenor for the convention name
     */

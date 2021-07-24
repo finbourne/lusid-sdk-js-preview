@@ -10,16 +10,14 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 
-export class QuoteInstrumentIdType {
-
-    static discriminator: string | undefined = undefined;
-
-    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-    ];
-
-    static getAttributeTypeMap() {
-        return QuoteInstrumentIdType.attributeTypeMap;
-    }
+export enum QuoteInstrumentIdType {
+    LusidInstrumentId = <any> 'LusidInstrumentId',
+    Figi = <any> 'Figi',
+    Ric = <any> 'RIC',
+    QuotePermId = <any> 'QuotePermId',
+    Isin = <any> 'Isin',
+    CurrencyPair = <any> 'CurrencyPair',
+    ClientInternal = <any> 'ClientInternal'
 }
-

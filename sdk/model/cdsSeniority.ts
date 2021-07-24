@@ -10,16 +10,15 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 
-export class CdsSeniority {
-
-    static discriminator: string | undefined = undefined;
-
-    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-    ];
-
-    static getAttributeTypeMap() {
-        return CdsSeniority.attributeTypeMap;
-    }
+export enum CdsSeniority {
+    Unknown = <any> 'Unknown',
+    Snr = <any> 'SNR',
+    Sub = <any> 'SUB',
+    Jrsubut2 = <any> 'JRSUBUT2',
+    Preft1 = <any> 'PREFT1',
+    Secdom = <any> 'SECDOM',
+    Snrfor = <any> 'SNRFOR',
+    Sublt2 = <any> 'SUBLT2'
 }
-

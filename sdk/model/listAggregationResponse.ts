@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { AggregationMeasureFailureDetail } from './aggregationMeasureFailureDetail';
 import { Link } from './link';
 import { ResultDataSchema } from './resultDataSchema';
@@ -17,15 +18,15 @@ import { ResultDataSchema } from './resultDataSchema';
 export class ListAggregationResponse {
     'aggregationEffectiveAt'?: Date;
     'aggregationAsAt'?: Date;
-    'href'?: string;
-    'data'?: Array<{ [key: string]: object; }>;
-    'aggregationCurrency'?: string;
+    'href'?: string | null;
+    'data'?: Array<{ [key: string]: object; }> | null;
+    'aggregationCurrency'?: string | null;
     'dataSchema'?: ResultDataSchema;
-    'aggregationFailures'?: Array<AggregationMeasureFailureDetail>;
+    'aggregationFailures'?: Array<AggregationMeasureFailureDetail> | null;
     /**
     * Collection of links.
     */
-    'links'?: Array<Link>;
+    'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
 

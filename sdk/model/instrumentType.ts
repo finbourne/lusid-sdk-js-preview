@@ -10,16 +10,33 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 
-export class InstrumentType {
-
-    static discriminator: string | undefined = undefined;
-
-    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-    ];
-
-    static getAttributeTypeMap() {
-        return InstrumentType.attributeTypeMap;
-    }
+export enum InstrumentType {
+    QuotedSecurity = <any> 'QuotedSecurity',
+    InterestRateSwap = <any> 'InterestRateSwap',
+    FxForward = <any> 'FxForward',
+    Future = <any> 'Future',
+    ExoticInstrument = <any> 'ExoticInstrument',
+    FxOption = <any> 'FxOption',
+    CreditDefaultSwap = <any> 'CreditDefaultSwap',
+    InterestRateSwaption = <any> 'InterestRateSwaption',
+    Bond = <any> 'Bond',
+    EquityOption = <any> 'EquityOption',
+    FixedLeg = <any> 'FixedLeg',
+    FloatingLeg = <any> 'FloatingLeg',
+    BespokeCashFlowsLeg = <any> 'BespokeCashFlowsLeg',
+    Unknown = <any> 'Unknown',
+    TermDeposit = <any> 'TermDeposit',
+    ContractForDifference = <any> 'ContractForDifference',
+    EquitySwap = <any> 'EquitySwap',
+    CashPerpetual = <any> 'CashPerpetual',
+    CashSettled = <any> 'CashSettled',
+    CdsIndex = <any> 'CdsIndex',
+    Basket = <any> 'Basket',
+    FundingLeg = <any> 'FundingLeg',
+    CrossCurrencySwap = <any> 'CrossCurrencySwap',
+    FxSwap = <any> 'FxSwap',
+    ForwardRateAgreement = <any> 'ForwardRateAgreement',
+    SimpleInstrument = <any> 'SimpleInstrument'
 }
-

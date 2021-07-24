@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { AggregationContext } from './aggregationContext';
 import { MarketContext } from './marketContext';
 import { PricingContext } from './pricingContext';
@@ -33,11 +34,11 @@ export class ConfigurationRecipe {
     /**
     * A list of parent recipes (scope,code) that can be used to share functionality between recipes. For instance one might use common recipes to set up  pricing for individual asset classes, e.g. rates or credit, and then combine them into a single recipe to be used by an exotics desk in conjunction with  some overrides that it requires for models or other pricing options.
     */
-    'inheritedRecipes'?: Array<ResourceId>;
+    'inheritedRecipes'?: Array<ResourceId> | null;
     /**
     * User can assign a description to understand more humanly the recipe.
     */
-    'description'?: string;
+    'description'?: string | null;
 
     static discriminator: string | undefined = undefined;
 

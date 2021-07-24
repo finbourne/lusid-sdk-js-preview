@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 
 /**
 * An identifier that uniquely describes an item of complex market data such as an interest rate curve or volatility surface.
@@ -22,19 +23,19 @@ export class ComplexMarketDataId {
     /**
     * The source or originator of the structured market data, e.g. a bank or financial institution.
     */
-    'priceSource'?: string;
+    'priceSource'?: string | null;
     /**
     * Description of the structured market data\'s lineage e.g. \'FundAccountant_GreenQuality\'.
     */
-    'lineage'?: string;
+    'lineage'?: string | null;
     /**
     * The effectiveAt or cut label that this item of structured market data is/was updated/inserted with.
     */
-    'effectiveAt'?: string;
+    'effectiveAt'?: string | null;
     /**
     * The name of the market entity that the document represents
     */
-    'marketAsset'?: string;
+    'marketAsset'?: string | null;
 
     static discriminator: string | undefined = undefined;
 

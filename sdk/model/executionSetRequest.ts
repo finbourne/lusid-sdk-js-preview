@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { ExecutionRequest } from './executionRequest';
 
 /**
@@ -19,7 +20,7 @@ export class ExecutionSetRequest {
     /**
     * A collection of ExecutionRequests.
     */
-    'requests'?: Array<ExecutionRequest>;
+    'requests'?: Array<ExecutionRequest> | null;
 
     static discriminator: string | undefined = undefined;
 

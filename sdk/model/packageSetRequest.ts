@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { PackageRequest } from './packageRequest';
 
 /**
@@ -19,7 +20,7 @@ export class PackageSetRequest {
     /**
     * A collection of PackageRequests.
     */
-    'requests'?: Array<PackageRequest>;
+    'requests'?: Array<PackageRequest> | null;
 
     static discriminator: string | undefined = undefined;
 

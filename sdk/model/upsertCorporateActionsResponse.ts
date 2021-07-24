@@ -10,18 +10,19 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { CorporateAction } from './corporateAction';
 import { ErrorDetail } from './errorDetail';
 import { Link } from './link';
 
 export class UpsertCorporateActionsResponse {
-    'href'?: string;
-    'values'?: { [key: string]: CorporateAction; };
-    'failed'?: { [key: string]: ErrorDetail; };
+    'href'?: string | null;
+    'values'?: { [key: string]: CorporateAction; } | null;
+    'failed'?: { [key: string]: ErrorDetail; } | null;
     /**
     * Collection of links.
     */
-    'links'?: Array<Link>;
+    'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
 

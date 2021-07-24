@@ -10,16 +10,9 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 
-export class DeliveryType {
-
-    static discriminator: string | undefined = undefined;
-
-    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-    ];
-
-    static getAttributeTypeMap() {
-        return DeliveryType.attributeTypeMap;
-    }
+export enum DeliveryType {
+    Cash = <any> 'Cash',
+    Physical = <any> 'Physical'
 }
-

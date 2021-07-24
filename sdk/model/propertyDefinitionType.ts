@@ -10,16 +10,9 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 
-export class PropertyDefinitionType {
-
-    static discriminator: string | undefined = undefined;
-
-    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-    ];
-
-    static getAttributeTypeMap() {
-        return PropertyDefinitionType.attributeTypeMap;
-    }
+export enum PropertyDefinitionType {
+    ValueProperty = <any> 'ValueProperty',
+    DerivedDefinition = <any> 'DerivedDefinition'
 }
-

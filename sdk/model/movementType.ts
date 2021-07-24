@@ -10,16 +10,24 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 
-export class MovementType {
-
-    static discriminator: string | undefined = undefined;
-
-    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-    ];
-
-    static getAttributeTypeMap() {
-        return MovementType.attributeTypeMap;
-    }
+export enum MovementType {
+    Settlement = <any> 'Settlement',
+    Traded = <any> 'Traded',
+    StockMovement = <any> 'StockMovement',
+    FutureCash = <any> 'FutureCash',
+    Commitment = <any> 'Commitment',
+    Receivable = <any> 'Receivable',
+    CashSettlement = <any> 'CashSettlement',
+    CashForward = <any> 'CashForward',
+    CashCommitment = <any> 'CashCommitment',
+    CashReceivable = <any> 'CashReceivable',
+    Accrual = <any> 'Accrual',
+    CashAccrual = <any> 'CashAccrual',
+    ForwardFx = <any> 'ForwardFx',
+    CashFxForward = <any> 'CashFxForward',
+    UnsettledCashTypes = <any> 'UnsettledCashTypes',
+    Carry = <any> 'Carry',
+    CarryAsPnl = <any> 'CarryAsPnl'
 }
-

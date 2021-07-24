@@ -10,20 +10,21 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { Link } from './link';
 import { ResourceId } from './resourceId';
 import { Version } from './version';
 
 export class CorporateActionSource {
-    'href'?: string;
+    'href'?: string | null;
     'id'?: ResourceId;
     'version'?: Version;
-    'displayName'?: string;
-    'description'?: string;
+    'displayName'?: string | null;
+    'description'?: string | null;
     /**
     * Collection of links.
     */
-    'links'?: Array<Link>;
+    'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
 

@@ -10,13 +10,14 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { ListAggregationResponse } from './listAggregationResponse';
 import { ResultDataSchema } from './resultDataSchema';
 
 export class ListAggregationReconciliation {
     'left'?: ListAggregationResponse;
     'right'?: ListAggregationResponse;
-    'diff'?: Array<{ [key: string]: object; }>;
+    'diff'?: Array<{ [key: string]: object; }> | null;
     'dataSchema'?: ResultDataSchema;
 
     static discriminator: string | undefined = undefined;

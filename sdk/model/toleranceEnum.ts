@@ -10,16 +10,9 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 
-export class ToleranceEnum {
-
-    static discriminator: string | undefined = undefined;
-
-    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-    ];
-
-    static getAttributeTypeMap() {
-        return ToleranceEnum.attributeTypeMap;
-    }
+export enum ToleranceEnum {
+    Absolute = <any> 'Absolute',
+    Relative = <any> 'Relative'
 }
-
