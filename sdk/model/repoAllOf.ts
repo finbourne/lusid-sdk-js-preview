@@ -10,65 +10,118 @@
  * Do not edit the class manually.
  */
 
-import { CounterpartySignatory } from './counterpartySignatory';
-import { ResourceId } from './resourceId';
 
-/**
-* Represents the legal agreement between two parties engaged in an OTC transaction.  A typical example would be a 2002 ISDA Master Agreement, signed by two legal entities on a given date.
-*/
-export class CounterpartyAgreement {
+export class RepoAllOf {
     /**
-    * A user-defined display label for the Counterparty Agreement.
+    * The start date of the instrument. This is normally synonymous with the trade-date.
     */
-    'displayName': string;
+    'startDate': Date;
     /**
-    * A user-defined field to capture the type of agreement this represents. Examples might be \"ISDA 2002 Master Agreement\" or \"ISDA 1992 Master Agreement\".
+    * The final maturity date of the instrument. This means the last date on which the instruments makes a payment of any amount.  For the avoidance of doubt, that is not necessarily prior to its last sensitivity date for the purposes of risk; e.g. instruments such as  Constant Maturity Swaps (CMS) often have sensitivities to rates beyond their last payment date
     */
-    'agreementType': string;
-    'counterpartySignatory': CounterpartySignatory;
+    'maturityDate': Date;
     /**
-    * The date on which the CounterpartyAgreement was signed by both parties.
+    * The domestic currency of the instrument.
     */
-    'datedAsOf': Date;
-    'creditSupportAnnexId': ResourceId;
-    'id': ResourceId;
+    'domCcy': string;
+    /**
+    * For calculation of interest, the accrual basis to be used.  Supported string (enumeration) values are: [Actual360, Act360, MoneyMarket, Actual365, Act365, Thirty360, ThirtyU360, Bond, ThirtyE360, EuroBond, ActualActual, ActAct, ActActIsda, ActActIsma, ActActIcma, OneOne, Act364, Act365F, Act365L, Act365_25, Act252, Bus252, NL360, NL365, Invalid].
+    */
+    'accrualBasis': string;
+    /**
+    * The full value of the collateral in domCcy, before any margin (or haircut) is applied.
+    */
+    'collateralValue': number;
+    /**
+    * The margin (or haircut) applied to the collateral, this should be a number between 0 and 1, i.e. for a 5% haircut this should be 0.05.
+    */
+    'margin': number;
+    /**
+    * the rate at which interest is to be accrue and be paid upon redemption of the collateral at maturity.
+    */
+    'repoRate': number;
+    /**
+    * The available values are: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CashSettled, CdsIndex, Basket, FundingLeg, CrossCurrencySwap, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo
+    */
+    'instrumentType': RepoAllOf.InstrumentTypeEnum;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "displayName",
-            "baseName": "displayName",
-            "type": "string"
-        },
-        {
-            "name": "agreementType",
-            "baseName": "agreementType",
-            "type": "string"
-        },
-        {
-            "name": "counterpartySignatory",
-            "baseName": "counterpartySignatory",
-            "type": "CounterpartySignatory"
-        },
-        {
-            "name": "datedAsOf",
-            "baseName": "datedAsOf",
+            "name": "startDate",
+            "baseName": "startDate",
             "type": "Date"
         },
         {
-            "name": "creditSupportAnnexId",
-            "baseName": "creditSupportAnnexId",
-            "type": "ResourceId"
+            "name": "maturityDate",
+            "baseName": "maturityDate",
+            "type": "Date"
         },
         {
-            "name": "id",
-            "baseName": "id",
-            "type": "ResourceId"
+            "name": "domCcy",
+            "baseName": "domCcy",
+            "type": "string"
+        },
+        {
+            "name": "accrualBasis",
+            "baseName": "accrualBasis",
+            "type": "string"
+        },
+        {
+            "name": "collateralValue",
+            "baseName": "collateralValue",
+            "type": "number"
+        },
+        {
+            "name": "margin",
+            "baseName": "margin",
+            "type": "number"
+        },
+        {
+            "name": "repoRate",
+            "baseName": "repoRate",
+            "type": "number"
+        },
+        {
+            "name": "instrumentType",
+            "baseName": "instrumentType",
+            "type": "RepoAllOf.InstrumentTypeEnum"
         }    ];
 
     static getAttributeTypeMap() {
-        return CounterpartyAgreement.attributeTypeMap;
+        return RepoAllOf.attributeTypeMap;
     }
 }
 
+export namespace RepoAllOf {
+    export enum InstrumentTypeEnum {
+        QuotedSecurity = <any> 'QuotedSecurity',
+        InterestRateSwap = <any> 'InterestRateSwap',
+        FxForward = <any> 'FxForward',
+        Future = <any> 'Future',
+        ExoticInstrument = <any> 'ExoticInstrument',
+        FxOption = <any> 'FxOption',
+        CreditDefaultSwap = <any> 'CreditDefaultSwap',
+        InterestRateSwaption = <any> 'InterestRateSwaption',
+        Bond = <any> 'Bond',
+        EquityOption = <any> 'EquityOption',
+        FixedLeg = <any> 'FixedLeg',
+        FloatingLeg = <any> 'FloatingLeg',
+        BespokeCashFlowsLeg = <any> 'BespokeCashFlowsLeg',
+        Unknown = <any> 'Unknown',
+        TermDeposit = <any> 'TermDeposit',
+        ContractForDifference = <any> 'ContractForDifference',
+        EquitySwap = <any> 'EquitySwap',
+        CashPerpetual = <any> 'CashPerpetual',
+        CashSettled = <any> 'CashSettled',
+        CdsIndex = <any> 'CdsIndex',
+        Basket = <any> 'Basket',
+        FundingLeg = <any> 'FundingLeg',
+        CrossCurrencySwap = <any> 'CrossCurrencySwap',
+        FxSwap = <any> 'FxSwap',
+        ForwardRateAgreement = <any> 'ForwardRateAgreement',
+        SimpleInstrument = <any> 'SimpleInstrument',
+        Repo = <any> 'Repo'
+    }
+}

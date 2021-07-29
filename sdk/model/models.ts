@@ -295,6 +295,8 @@ export * from './relation';
 export * from './relationDefinition';
 export * from './relationship';
 export * from './relationshipDefinition';
+export * from './repo';
+export * from './repoAllOf';
 export * from './resourceId';
 export * from './resourceListOfA2BDataRecord';
 export * from './resourceListOfA2BMovementRecord';
@@ -741,6 +743,8 @@ import { Relation } from './relation';
 import { RelationDefinition } from './relationDefinition';
 import { Relationship } from './relationship';
 import { RelationshipDefinition } from './relationshipDefinition';
+import { Repo } from './repo';
+import { RepoAllOf } from './repoAllOf';
 import { ResourceId } from './resourceId';
 import { ResourceListOfA2BDataRecord } from './resourceListOfA2BDataRecord';
 import { ResourceListOfA2BMovementRecord } from './resourceListOfA2BMovementRecord';
@@ -1011,6 +1015,8 @@ let enumsMap: {[index: string]: any} = {
         "PropertyFilter.RightOperandTypeEnum": PropertyFilter.RightOperandTypeEnum,
         "QuoteSeriesId.InstrumentIdTypeEnum": QuoteSeriesId.InstrumentIdTypeEnum,
         "QuoteSeriesId.QuoteTypeEnum": QuoteSeriesId.QuoteTypeEnum,
+        "Repo.InstrumentTypeEnum": Repo.InstrumentTypeEnum,
+        "RepoAllOf.InstrumentTypeEnum": RepoAllOf.InstrumentTypeEnum,
         "SimpleInstrument.AssetClassEnum": SimpleInstrument.AssetClassEnum,
         "SimpleInstrument.InstrumentTypeEnum": SimpleInstrument.InstrumentTypeEnum,
         "SimpleInstrumentAllOf.AssetClassEnum": SimpleInstrumentAllOf.AssetClassEnum,
@@ -1331,6 +1337,8 @@ let typeMap: {[index: string]: any} = {
     "RelationDefinition": RelationDefinition,
     "Relationship": Relationship,
     "RelationshipDefinition": RelationshipDefinition,
+    "Repo": Repo,
+    "RepoAllOf": RepoAllOf,
     "ResourceId": ResourceId,
     "ResourceListOfA2BDataRecord": ResourceListOfA2BDataRecord,
     "ResourceListOfA2BMovementRecord": ResourceListOfA2BMovementRecord,
