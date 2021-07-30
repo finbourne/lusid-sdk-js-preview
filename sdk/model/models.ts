@@ -87,6 +87,9 @@ export * from './creditSupportAnnex';
 export * from './crossCurrencySwap';
 export * from './crossCurrencySwapAllOf';
 export * from './currencyAndAmount';
+export * from './customEntityDefinition';
+export * from './customEntityDefinitionRequest';
+export * from './customEntityFieldDefinition';
 export * from './cutLabelDefinition';
 export * from './cutLocalTime';
 export * from './dataDefinition';
@@ -535,6 +538,9 @@ import { CreditSupportAnnex } from './creditSupportAnnex';
 import { CrossCurrencySwap } from './crossCurrencySwap';
 import { CrossCurrencySwapAllOf } from './crossCurrencySwapAllOf';
 import { CurrencyAndAmount } from './currencyAndAmount';
+import { CustomEntityDefinition } from './customEntityDefinition';
+import { CustomEntityDefinitionRequest } from './customEntityDefinitionRequest';
+import { CustomEntityFieldDefinition } from './customEntityFieldDefinition';
 import { CutLabelDefinition } from './cutLabelDefinition';
 import { CutLocalTime } from './cutLocalTime';
 import { DataDefinition } from './dataDefinition';
@@ -1129,6 +1135,9 @@ let typeMap: {[index: string]: any} = {
     "CrossCurrencySwap": CrossCurrencySwap,
     "CrossCurrencySwapAllOf": CrossCurrencySwapAllOf,
     "CurrencyAndAmount": CurrencyAndAmount,
+    "CustomEntityDefinition": CustomEntityDefinition,
+    "CustomEntityDefinitionRequest": CustomEntityDefinitionRequest,
+    "CustomEntityFieldDefinition": CustomEntityFieldDefinition,
     "CutLabelDefinition": CutLabelDefinition,
     "CutLocalTime": CutLocalTime,
     "DataDefinition": DataDefinition,
