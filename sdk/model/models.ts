@@ -32,6 +32,8 @@ export * from './basketIdentifier';
 export * from './block';
 export * from './bond';
 export * from './bondAllOf';
+export * from './bucketedCashFlowRequest';
+export * from './bucketedCashFlowResponse';
 export * from './calendar';
 export * from './calendarDate';
 export * from './cashLadderRecord';
@@ -160,6 +162,7 @@ export * from './getStructuredResultDataResponse';
 export * from './holdingAdjustment';
 export * from './holdingsAdjustment';
 export * from './holdingsAdjustmentHeader';
+export * from './iDataRecord';
 export * from './iUnitDefinitionDto';
 export * from './idSelectorDefinition';
 export * from './identifierPartSchema';
@@ -483,6 +486,8 @@ import { BasketIdentifier } from './basketIdentifier';
 import { Block } from './block';
 import { Bond } from './bond';
 import { BondAllOf } from './bondAllOf';
+import { BucketedCashFlowRequest } from './bucketedCashFlowRequest';
+import { BucketedCashFlowResponse } from './bucketedCashFlowResponse';
 import { Calendar } from './calendar';
 import { CalendarDate } from './calendarDate';
 import { CashLadderRecord } from './cashLadderRecord';
@@ -611,6 +616,7 @@ import { GetStructuredResultDataResponse } from './getStructuredResultDataRespon
 import { HoldingAdjustment } from './holdingAdjustment';
 import { HoldingsAdjustment } from './holdingsAdjustment';
 import { HoldingsAdjustmentHeader } from './holdingsAdjustmentHeader';
+import { IDataRecord } from './iDataRecord';
 import { IUnitDefinitionDto } from './iUnitDefinitionDto';
 import { IdSelectorDefinition } from './idSelectorDefinition';
 import { IdentifierPartSchema } from './identifierPartSchema';
@@ -1080,6 +1086,8 @@ let typeMap: {[index: string]: any} = {
     "Block": Block,
     "Bond": Bond,
     "BondAllOf": BondAllOf,
+    "BucketedCashFlowRequest": BucketedCashFlowRequest,
+    "BucketedCashFlowResponse": BucketedCashFlowResponse,
     "Calendar": Calendar,
     "CalendarDate": CalendarDate,
     "CashLadderRecord": CashLadderRecord,
@@ -1208,6 +1216,7 @@ let typeMap: {[index: string]: any} = {
     "HoldingAdjustment": HoldingAdjustment,
     "HoldingsAdjustment": HoldingsAdjustment,
     "HoldingsAdjustmentHeader": HoldingsAdjustmentHeader,
+    "IDataRecord": IDataRecord,
     "IUnitDefinitionDto": IUnitDefinitionDto,
     "IdSelectorDefinition": IdSelectorDefinition,
     "IdentifierPartSchema": IdentifierPartSchema,
