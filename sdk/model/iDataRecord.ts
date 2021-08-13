@@ -10,65 +10,21 @@
  * Do not edit the class manually.
  */
 
-import { GetCounterpartyAgreementResponse } from './getCounterpartyAgreementResponse';
-import { Link } from './link';
 
-/**
-* A collection of resources that can be returned from requests.
-*/
-export class ResourceListOfGetCounterpartyAgreementResponse {
-    /**
-    * The resources to list.
-    */
-    'values': Array<GetCounterpartyAgreementResponse>;
-    /**
-    * The URI of the resource list.
-    */
-    'href'?: string;
-    /**
-    * Collection of links.
-    */
-    'links'?: Array<Link>;
-    /**
-    * The next page of results.
-    */
-    'nextPage'?: string;
-    /**
-    * The previous page of results.
-    */
-    'previousPage'?: string;
+export class IDataRecord {
+    'fieldCount'?: number;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "values",
-            "baseName": "values",
-            "type": "Array<GetCounterpartyAgreementResponse>"
-        },
-        {
-            "name": "href",
-            "baseName": "href",
-            "type": "string"
-        },
-        {
-            "name": "links",
-            "baseName": "links",
-            "type": "Array<Link>"
-        },
-        {
-            "name": "nextPage",
-            "baseName": "nextPage",
-            "type": "string"
-        },
-        {
-            "name": "previousPage",
-            "baseName": "previousPage",
-            "type": "string"
+            "name": "fieldCount",
+            "baseName": "fieldCount",
+            "type": "number"
         }    ];
 
     static getAttributeTypeMap() {
-        return ResourceListOfGetCounterpartyAgreementResponse.attributeTypeMap;
+        return IDataRecord.attributeTypeMap;
     }
 }
 
