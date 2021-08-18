@@ -63,6 +63,7 @@ export * from './corporateActionTransitionComponent';
 export * from './corporateActionTransitionComponentRequest';
 export * from './corporateActionTransitionRequest';
 export * from './counterpartyAgreement';
+export * from './counterpartyRiskInformation';
 export * from './counterpartySignatory';
 export * from './createCalendarRequest';
 export * from './createCorporateActionSourceRequest';
@@ -85,6 +86,7 @@ export * from './createTransactionPortfolioRequest';
 export * from './createUnitDefinition';
 export * from './creditDefaultSwap';
 export * from './creditDefaultSwapAllOf';
+export * from './creditRating';
 export * from './creditSupportAnnex';
 export * from './crossCurrencySwap';
 export * from './crossCurrencySwapAllOf';
@@ -166,6 +168,7 @@ export * from './iUnitDefinitionDto';
 export * from './idSelectorDefinition';
 export * from './identifierPartSchema';
 export * from './indexConvention';
+export * from './industryClassifier';
 export * from './inlineValuationRequest';
 export * from './inlineValuationsReconciliationRequest';
 export * from './instrument';
@@ -516,6 +519,7 @@ import { CorporateActionTransitionComponent } from './corporateActionTransitionC
 import { CorporateActionTransitionComponentRequest } from './corporateActionTransitionComponentRequest';
 import { CorporateActionTransitionRequest } from './corporateActionTransitionRequest';
 import { CounterpartyAgreement } from './counterpartyAgreement';
+import { CounterpartyRiskInformation } from './counterpartyRiskInformation';
 import { CounterpartySignatory } from './counterpartySignatory';
 import { CreateCalendarRequest } from './createCalendarRequest';
 import { CreateCorporateActionSourceRequest } from './createCorporateActionSourceRequest';
@@ -538,6 +542,7 @@ import { CreateTransactionPortfolioRequest } from './createTransactionPortfolioR
 import { CreateUnitDefinition } from './createUnitDefinition';
 import { CreditDefaultSwap } from './creditDefaultSwap';
 import { CreditDefaultSwapAllOf } from './creditDefaultSwapAllOf';
+import { CreditRating } from './creditRating';
 import { CreditSupportAnnex } from './creditSupportAnnex';
 import { CrossCurrencySwap } from './crossCurrencySwap';
 import { CrossCurrencySwapAllOf } from './crossCurrencySwapAllOf';
@@ -619,6 +624,7 @@ import { IUnitDefinitionDto } from './iUnitDefinitionDto';
 import { IdSelectorDefinition } from './idSelectorDefinition';
 import { IdentifierPartSchema } from './identifierPartSchema';
 import { IndexConvention } from './indexConvention';
+import { IndustryClassifier } from './industryClassifier';
 import { InlineValuationRequest } from './inlineValuationRequest';
 import { InlineValuationsReconciliationRequest } from './inlineValuationsReconciliationRequest';
 import { Instrument } from './instrument';
@@ -1115,6 +1121,7 @@ let typeMap: {[index: string]: any} = {
     "CorporateActionTransitionComponentRequest": CorporateActionTransitionComponentRequest,
     "CorporateActionTransitionRequest": CorporateActionTransitionRequest,
     "CounterpartyAgreement": CounterpartyAgreement,
+    "CounterpartyRiskInformation": CounterpartyRiskInformation,
     "CounterpartySignatory": CounterpartySignatory,
     "CreateCalendarRequest": CreateCalendarRequest,
     "CreateCorporateActionSourceRequest": CreateCorporateActionSourceRequest,
@@ -1137,6 +1144,7 @@ let typeMap: {[index: string]: any} = {
     "CreateUnitDefinition": CreateUnitDefinition,
     "CreditDefaultSwap": CreditDefaultSwap,
     "CreditDefaultSwapAllOf": CreditDefaultSwapAllOf,
+    "CreditRating": CreditRating,
     "CreditSupportAnnex": CreditSupportAnnex,
     "CrossCurrencySwap": CrossCurrencySwap,
     "CrossCurrencySwapAllOf": CrossCurrencySwapAllOf,
@@ -1218,6 +1226,7 @@ let typeMap: {[index: string]: any} = {
     "IdSelectorDefinition": IdSelectorDefinition,
     "IdentifierPartSchema": IdentifierPartSchema,
     "IndexConvention": IndexConvention,
+    "IndustryClassifier": IndustryClassifier,
     "InlineValuationRequest": InlineValuationRequest,
     "InlineValuationsReconciliationRequest": InlineValuationsReconciliationRequest,
     "Instrument": Instrument,
