@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { ErrorDetail } from './errorDetail';
 import { Link } from './link';
 
@@ -20,19 +21,19 @@ export class AnnulStructuredDataResponse {
     /**
     * The specific Uniform Resource Identifier (URI) for this resource at the requested effective and asAt datetime.
     */
-    'href'?: string;
+    'href'?: string | null;
     /**
     * The set of values that were removed.
     */
-    'values'?: { [key: string]: Date; };
+    'values'?: { [key: string]: Date; } | null;
     /**
     * The set of values where removal failed, with a description as to why that is the case, e.g. badly formed request
     */
-    'failed'?: { [key: string]: ErrorDetail; };
+    'failed'?: { [key: string]: ErrorDetail; } | null;
     /**
     * Collection of links.
     */
-    'links'?: Array<Link>;
+    'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
 

@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { FlowConventions } from './flowConventions';
 
 export class BondAllOf {
@@ -37,15 +38,15 @@ export class BondAllOf {
     /**
     * external market codes and identifiers for the bond, e.g. ISIN.
     */
-    'identifiers'?: { [key: string]: string; };
+    'identifiers'?: { [key: string]: string; } | null;
     /**
     * The number of days before the next coupon payment for which the bond goes ex-dividend.
     */
-    'exDividendDays'?: number;
+    'exDividendDays'?: number | null;
     /**
     * The initial coupon date which specifies the accrual start period for a fixed coupon bond with ex dividend schedule
     */
-    'initialCouponDate'?: Date;
+    'initialCouponDate'?: Date | null;
     /**
     * The available values are: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CashSettled, CdsIndex, Basket, FundingLeg, CrossCurrencySwap, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo
     */

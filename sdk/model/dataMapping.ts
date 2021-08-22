@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { DataDefinition } from './dataDefinition';
 
 /**
@@ -19,7 +20,7 @@ export class DataMapping {
     /**
     * A map from LUSID item keys to data definitions that define the names, types and degree of uniqueness of data provided to LUSID in structured data stores.
     */
-    'dataDefinitions'?: Array<DataDefinition>;
+    'dataDefinitions'?: Array<DataDefinition> | null;
 
     static discriminator: string | undefined = undefined;
 

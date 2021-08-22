@@ -10,19 +10,16 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 
 /**
 * The format of the complex market data stored. Complex market data is used to store any  data which requires more context than just a simple single point as is the case with a  quote.  Examples of such complex market data are Discount Curve and Volatility Surfaces.
 */
-export class MarketDataType {
-
-    static discriminator: string | undefined = undefined;
-
-    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-    ];
-
-    static getAttributeTypeMap() {
-        return MarketDataType.attributeTypeMap;
-    }
+export enum MarketDataType {
+    DiscountFactorCurveData = <any> 'DiscountFactorCurveData',
+    EquityVolSurfaceData = <any> 'EquityVolSurfaceData',
+    FxVolSurfaceData = <any> 'FxVolSurfaceData',
+    IrVolCubeData = <any> 'IrVolCubeData',
+    OpaqueMarketData = <any> 'OpaqueMarketData',
+    YieldCurveData = <any> 'YieldCurveData'
 }
-

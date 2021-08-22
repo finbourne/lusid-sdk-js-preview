@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { CurrencyAndAmount } from './currencyAndAmount';
 import { Link } from './link';
 import { PerpetualProperty } from './perpetualProperty';
@@ -25,7 +26,7 @@ export class Execution {
     /**
     * Client-defined properties associated with this execution.
     */
-    'properties'?: { [key: string]: PerpetualProperty; };
+    'properties'?: { [key: string]: PerpetualProperty; } | null;
     /**
     * The instrument ordered.
     */
@@ -75,7 +76,7 @@ export class Execution {
     /**
     * Collection of links.
     */
-    'links'?: Array<Link>;
+    'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
 

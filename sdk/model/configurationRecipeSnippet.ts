@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { AggregationOptions } from './aggregationOptions';
 import { ConfigurationRecipe } from './configurationRecipe';
 import { MarketDataKeyRule } from './marketDataKeyRule';
@@ -33,12 +34,12 @@ export class ConfigurationRecipeSnippet {
     /**
     * The set of model rules that are available. There may be multiple rules for Vendors, but only one per model-instrument pair.  Which of these preference sets is used depends upon the model choice selection if specified, or failing that the global default model specification  in the options.
     */
-    'modelRules'?: Array<VendorModelRule>;
+    'modelRules'?: Array<VendorModelRule> | null;
     'pricingOptions'?: PricingOptions;
     /**
     * The set of rules that define how to resolve particular use cases. These can be relatively general or specific in nature.  Nominally any number are possible and will be processed in order where applicable. However, there is evidently a potential  for increased computational cost where many rules must be applied to resolve data. Ensuring that portfolios are structured in  such a way as to reduce the number of rules required is therefore sensible.
     */
-    'marketRules'?: Array<MarketDataKeyRule>;
+    'marketRules'?: Array<MarketDataKeyRule> | null;
     'marketOptions'?: MarketOptions;
     'recipe'?: ConfigurationRecipe;
 

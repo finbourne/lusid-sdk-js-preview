@@ -10,13 +10,14 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { CustomEntityFieldDefinition } from './customEntityFieldDefinition';
 
 export class CustomEntityDefinitionRequest {
     'customEntityId': string;
     'displayName': string;
-    'description'?: string;
-    'fieldSchema'?: Array<CustomEntityFieldDefinition>;
+    'description'?: string | null;
+    'fieldSchema'?: Array<CustomEntityFieldDefinition> | null;
 
     static discriminator: string | undefined = undefined;
 

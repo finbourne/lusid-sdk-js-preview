@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { CreateUnitDefinition } from './createUnitDefinition';
 
 export class CreateDataTypeRequest {
@@ -40,7 +41,7 @@ export class CreateDataTypeRequest {
     /**
     * The acceptable set of values for this data type. Only applies to \'open\' value type range.
     */
-    'acceptableValues'?: Array<string>;
+    'acceptableValues'?: Array<string> | null;
     /**
     * The schema of the data type\'s units. The available values are: NoUnits, Basic, Iso4217Currency
     */
@@ -48,7 +49,7 @@ export class CreateDataTypeRequest {
     /**
     * The definitions of the acceptable units.
     */
-    'acceptableUnits'?: Array<CreateUnitDefinition>;
+    'acceptableUnits'?: Array<CreateUnitDefinition> | null;
 
     static discriminator: string | undefined = undefined;
 

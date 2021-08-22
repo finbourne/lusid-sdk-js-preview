@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { LusidInstrument } from './lusidInstrument';
 import { SimpleInstrumentAllOf } from './simpleInstrumentAllOf';
 
@@ -32,7 +33,7 @@ export class SimpleInstrument extends LusidInstrument {
     /**
     * The set of foreign currencies, if any (optional)
     */
-    'fgnCcys'?: Array<string>;
+    'fgnCcys'?: Array<string> | null;
     /**
     * The Instrument type of the simple instrument
     */
@@ -84,7 +85,7 @@ export class SimpleInstrument extends LusidInstrument {
 export namespace SimpleInstrument {
     export enum AssetClassEnum {
         InterestRates = <any> 'InterestRates',
-        FX = <any> 'FX',
+        Fx = <any> 'FX',
         Inflation = <any> 'Inflation',
         Equities = <any> 'Equities',
         Credit = <any> 'Credit',

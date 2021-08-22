@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { FxForward } from './fxForward';
 import { FxSwapAllOf } from './fxSwapAllOf';
 import { LusidInstrument } from './lusidInstrument';

@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { A2BCategory } from './a2BCategory';
 import { PerpetualProperty } from './perpetualProperty';
 import { Property } from './property';
@@ -23,27 +24,27 @@ export class A2BMovementRecord {
     /**
     * The type of the holding e.g. Position, Balance, CashCommitment, Receivable, ForwardFX etc.
     */
-    'holdingType'?: string;
+    'holdingType'?: string | null;
     /**
     * The unique Lusid Instrument Id (LUID) of the instrument that the holding is in.
     */
-    'instrumentUid'?: string;
+    'instrumentUid'?: string | null;
     /**
     * The sub-holding properties which identify the holding. Each property will be from the \'Transaction\' domain. These are configured when a transaction portfolio is created.
     */
-    'subHoldingKeys'?: { [key: string]: PerpetualProperty; };
+    'subHoldingKeys'?: { [key: string]: PerpetualProperty; } | null;
     /**
     * The holding currency.
     */
-    'currency'?: string;
+    'currency'?: string | null;
     /**
     * The unique identifier for the transaction.
     */
-    'transactionId'?: string;
+    'transactionId'?: string | null;
     /**
     * The name of the movement.
     */
-    'movementName'?: string;
+    'movementName'?: string | null;
     /**
     * The date of the movement.
     */
@@ -60,11 +61,11 @@ export class A2BMovementRecord {
     /**
     * The properties which have been requested to be decorated onto the holding. These will be from the \'Instrument\' domain.
     */
-    'properties'?: { [key: string]: Property; };
+    'properties'?: { [key: string]: Property; } | null;
     /**
     * Arbitrary string that can be used to cross reference an entry in the A2B report with activity in the A2B-Movements. This should be used purely as a token. The content should not be relied upon.
     */
-    'groupId'?: string;
+    'groupId'?: string | null;
 
     static discriminator: string | undefined = undefined;
 

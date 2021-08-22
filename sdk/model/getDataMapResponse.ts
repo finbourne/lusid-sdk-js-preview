@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { DataMapping } from './dataMapping';
 import { ErrorDetail } from './errorDetail';
 import { Link } from './link';
@@ -18,19 +19,19 @@ export class GetDataMapResponse {
     /**
     * The specific Uniform Resource Identifier (URI) for this resource at the requested effective and asAt datetime.
     */
-    'href'?: string;
+    'href'?: string | null;
     /**
     * TODO
     */
-    'values'?: { [key: string]: DataMapping; };
+    'values'?: { [key: string]: DataMapping; } | null;
     /**
     * TODO
     */
-    'failed'?: { [key: string]: ErrorDetail; };
+    'failed'?: { [key: string]: ErrorDetail; } | null;
     /**
     * Collection of links.
     */
-    'links'?: Array<Link>;
+    'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
 

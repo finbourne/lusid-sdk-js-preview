@@ -10,16 +10,9 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 
-export class PerpetualEntityState {
-
-    static discriminator: string | undefined = undefined;
-
-    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-    ];
-
-    static getAttributeTypeMap() {
-        return PerpetualEntityState.attributeTypeMap;
-    }
+export enum PerpetualEntityState {
+    Active = <any> 'Active',
+    Inactive = <any> 'Inactive'
 }
-

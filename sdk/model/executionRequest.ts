@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { CurrencyAndAmount } from './currencyAndAmount';
 import { PerpetualProperty } from './perpetualProperty';
 import { ResourceId } from './resourceId';
@@ -23,7 +24,7 @@ export class ExecutionRequest {
     /**
     * Client-defined properties associated with this execution.
     */
-    'properties'?: { [key: string]: PerpetualProperty; };
+    'properties'?: { [key: string]: PerpetualProperty; } | null;
     /**
     * The instrument ordered.
     */

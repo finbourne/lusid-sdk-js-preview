@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { PerpetualProperty } from './perpetualProperty';
 import { ResourceId } from './resourceId';
 
@@ -21,7 +22,7 @@ export class OrderInstructionRequest {
     /**
     * Client-defined properties associated with this execution.
     */
-    'properties'?: { [key: string]: PerpetualProperty; };
+    'properties'?: { [key: string]: PerpetualProperty; } | null;
 
     static discriminator: string | undefined = undefined;
 

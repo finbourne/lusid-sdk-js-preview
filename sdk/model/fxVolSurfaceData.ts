@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { ComplexMarketData } from './complexMarketData';
 import { EquityVolSurfaceDataAllOf } from './equityVolSurfaceDataAllOf';
 import { LusidInstrument } from './lusidInstrument';

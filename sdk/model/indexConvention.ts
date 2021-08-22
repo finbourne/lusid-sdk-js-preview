@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 
 /**
 * A set of conventions that describe the conventions for calculation of payments made on rates interbank lending and similar.  Based on ISDA 2006 conventions and similar documentation. Please see the knowledge base for further documentation.
@@ -38,11 +39,11 @@ export class IndexConvention {
     /**
     * The scope used when updating or inserting the convention.
     */
-    'scope'?: string;
+    'scope'?: string | null;
     /**
     * The code of the convention.
     */
-    'code'?: string;
+    'code'?: string | null;
 
     static discriminator: string | undefined = undefined;
 

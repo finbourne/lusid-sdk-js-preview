@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 
 /**
 * Specification of a portfolio or portfolio group id, its scope and which it is.
@@ -18,15 +19,15 @@ export class PortfolioEntityId {
     /**
     * The scope within which the portfolio or portfolio group lives.
     */
-    'scope'?: string;
+    'scope'?: string | null;
     /**
     * Portfolio name or code.
     */
-    'code'?: string;
+    'code'?: string | null;
     /**
     * String identifier for portfolio e.g. \"SinglePortfolio\" and \"GroupPortfolio\". If not specified, it is assumed to be a single portfolio.
     */
-    'portfolioEntityType'?: string;
+    'portfolioEntityType'?: string | null;
 
     static discriminator: string | undefined = undefined;
 
