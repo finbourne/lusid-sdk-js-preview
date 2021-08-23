@@ -341,6 +341,7 @@ export * from './resourceListOfPortfolioCashFlow';
 export * from './resourceListOfPortfolioCashLadder';
 export * from './resourceListOfPortfolioGroup';
 export * from './resourceListOfProcessedCommand';
+export * from './resourceListOfProperty';
 export * from './resourceListOfPropertyDefinition';
 export * from './resourceListOfPropertyInterval';
 export * from './resourceListOfQuote';
@@ -797,6 +798,7 @@ import { ResourceListOfPortfolioCashFlow } from './resourceListOfPortfolioCashFl
 import { ResourceListOfPortfolioCashLadder } from './resourceListOfPortfolioCashLadder';
 import { ResourceListOfPortfolioGroup } from './resourceListOfPortfolioGroup';
 import { ResourceListOfProcessedCommand } from './resourceListOfProcessedCommand';
+import { ResourceListOfProperty } from './resourceListOfProperty';
 import { ResourceListOfPropertyDefinition } from './resourceListOfPropertyDefinition';
 import { ResourceListOfPropertyInterval } from './resourceListOfPropertyInterval';
 import { ResourceListOfQuote } from './resourceListOfQuote';
@@ -1399,6 +1401,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfPortfolioCashLadder": ResourceListOfPortfolioCashLadder,
     "ResourceListOfPortfolioGroup": ResourceListOfPortfolioGroup,
     "ResourceListOfProcessedCommand": ResourceListOfProcessedCommand,
+    "ResourceListOfProperty": ResourceListOfProperty,
     "ResourceListOfPropertyDefinition": ResourceListOfPropertyDefinition,
     "ResourceListOfPropertyInterval": ResourceListOfPropertyInterval,
     "ResourceListOfQuote": ResourceListOfQuote,

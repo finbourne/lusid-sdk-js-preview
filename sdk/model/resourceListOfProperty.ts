@@ -10,72 +10,65 @@
  * Do not edit the class manually.
  */
 
+import { Link } from './link';
+import { Property } from './property';
 
 /**
-* Configuration needed to define a side. Sides are referenced by Label. Beyond that, other properties  can be used to reference either transaction fields, or transaction properties.
+* A collection of resources that can be returned from requests.
 */
-export class SideConfigurationDataRequest {
+export class ResourceListOfProperty {
     /**
-    * The side\'s label.
+    * The resources to list.
     */
-    'side': string;
+    'values': Array<Property>;
     /**
-    * The security, or instrument.
+    * The URI of the resource list.
     */
-    'security': string;
+    'href'?: string;
     /**
-    * The currency.
+    * Collection of links.
     */
-    'currency': string;
+    'links'?: Array<Link>;
     /**
-    * The rate.
+    * The next page of results.
     */
-    'rate': string;
+    'nextPage'?: string;
     /**
-    * The units.
+    * The previous page of results.
     */
-    'units': string;
-    /**
-    * The amount.
-    */
-    'amount': string;
+    'previousPage'?: string;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "side",
-            "baseName": "side",
+            "name": "values",
+            "baseName": "values",
+            "type": "Array<Property>"
+        },
+        {
+            "name": "href",
+            "baseName": "href",
             "type": "string"
         },
         {
-            "name": "security",
-            "baseName": "security",
+            "name": "links",
+            "baseName": "links",
+            "type": "Array<Link>"
+        },
+        {
+            "name": "nextPage",
+            "baseName": "nextPage",
             "type": "string"
         },
         {
-            "name": "currency",
-            "baseName": "currency",
-            "type": "string"
-        },
-        {
-            "name": "rate",
-            "baseName": "rate",
-            "type": "string"
-        },
-        {
-            "name": "units",
-            "baseName": "units",
-            "type": "string"
-        },
-        {
-            "name": "amount",
-            "baseName": "amount",
+            "name": "previousPage",
+            "baseName": "previousPage",
             "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
-        return SideConfigurationDataRequest.attributeTypeMap;
+        return ResourceListOfProperty.attributeTypeMap;
     }
 }
 
