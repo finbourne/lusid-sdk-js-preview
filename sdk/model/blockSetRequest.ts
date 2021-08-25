@@ -10,63 +10,28 @@
  * Do not edit the class manually.
  */
 
+import { BlockRequest } from './blockRequest';
 
 /**
-* A list of Aggregated Returns.
+* A request to create or update multiple Blocks.
 */
-export class AggregatedReturn {
+export class BlockSetRequest {
     /**
-    * The effectiveAt for the return.
+    * A collection of BlockRequests.
     */
-    'effectiveAt': Date;
-    /**
-    * The opening market value.
-    */
-    'openingMarketValue'?: number;
-    /**
-    * The closing market value.
-    */
-    'closingMarketValue'?: number;
-    /**
-    * The value for the specified metric.
-    */
-    'metricsValue': { [key: string]: number; };
-    /**
-    * Show the aggregated output returns on a Daily or Monthly period.
-    */
-    'frequency'?: string;
+    'requests'?: Array<BlockRequest>;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "effectiveAt",
-            "baseName": "effectiveAt",
-            "type": "Date"
-        },
-        {
-            "name": "openingMarketValue",
-            "baseName": "openingMarketValue",
-            "type": "number"
-        },
-        {
-            "name": "closingMarketValue",
-            "baseName": "closingMarketValue",
-            "type": "number"
-        },
-        {
-            "name": "metricsValue",
-            "baseName": "metricsValue",
-            "type": "{ [key: string]: number; }"
-        },
-        {
-            "name": "frequency",
-            "baseName": "frequency",
-            "type": "string"
+            "name": "requests",
+            "baseName": "requests",
+            "type": "Array<BlockRequest>"
         }    ];
 
     static getAttributeTypeMap() {
-        return AggregatedReturn.attributeTypeMap;
+        return BlockSetRequest.attributeTypeMap;
     }
 }
 

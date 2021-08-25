@@ -10,100 +10,111 @@
  * Do not edit the class manually.
  */
 
-import { CreateUnitDefinition } from './createUnitDefinition';
+import { CurrencyAndAmount } from './currencyAndAmount';
+import { PerpetualProperty } from './perpetualProperty';
+import { ResourceId } from './resourceId';
 
-export class UpdateDataTypeRequest {
+/**
+* A request to create or update an Order.
+*/
+export class BlockRequest {
+    'id': ResourceId;
     /**
-    * The available values are: Open, Closed
+    * The related order ids.
     */
-    'typeValueRange': UpdateDataTypeRequest.TypeValueRangeEnum;
-    'displayName': string;
-    'description': string;
+    'orderIds': Array<ResourceId>;
     /**
-    * The available values are: String, Int, Decimal, DateTime, Boolean, Map, List, PropertyArray, Percentage, Code, Id, Uri, CurrencyAndAmount, TradePrice, Currency, MetricValue, ResourceId, ResultValue, CutLocalTime, DateOrCutLabel
+    * Client-defined properties associated with this block.
     */
-    'valueType': UpdateDataTypeRequest.ValueTypeEnum;
-    'acceptableValues'?: Array<string>;
+    'properties'?: { [key: string]: PerpetualProperty; };
     /**
-    * The available values are: NoUnits, Basic, Iso4217Currency
+    * The instrument ordered.
     */
-    'unitSchema'?: UpdateDataTypeRequest.UnitSchemaEnum;
-    'acceptableUnits'?: Array<CreateUnitDefinition>;
+    'instrumentIdentifiers': { [key: string]: string; };
+    /**
+    * The total quantity of given instrument ordered.
+    */
+    'quantity': number;
+    /**
+    * The client\'s representation of the block\'s side (buy, sell, short, etc)
+    */
+    'side': string;
+    /**
+    * The block order\'s type (examples: Limit, Market, ...)
+    */
+    'type': string;
+    /**
+    * The block orders\' time in force (examples: Day, GoodTilCancel, ...)
+    */
+    'timeInForce': string;
+    /**
+    * The date on which the block was made
+    */
+    'createdDate': Date;
+    'limitPrice'?: CurrencyAndAmount;
+    'stopPrice'?: CurrencyAndAmount;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "typeValueRange",
-            "baseName": "typeValueRange",
-            "type": "UpdateDataTypeRequest.TypeValueRangeEnum"
+            "name": "id",
+            "baseName": "id",
+            "type": "ResourceId"
         },
         {
-            "name": "displayName",
-            "baseName": "displayName",
+            "name": "orderIds",
+            "baseName": "orderIds",
+            "type": "Array<ResourceId>"
+        },
+        {
+            "name": "properties",
+            "baseName": "properties",
+            "type": "{ [key: string]: PerpetualProperty; }"
+        },
+        {
+            "name": "instrumentIdentifiers",
+            "baseName": "instrumentIdentifiers",
+            "type": "{ [key: string]: string; }"
+        },
+        {
+            "name": "quantity",
+            "baseName": "quantity",
+            "type": "number"
+        },
+        {
+            "name": "side",
+            "baseName": "side",
             "type": "string"
         },
         {
-            "name": "description",
-            "baseName": "description",
+            "name": "type",
+            "baseName": "type",
             "type": "string"
         },
         {
-            "name": "valueType",
-            "baseName": "valueType",
-            "type": "UpdateDataTypeRequest.ValueTypeEnum"
+            "name": "timeInForce",
+            "baseName": "timeInForce",
+            "type": "string"
         },
         {
-            "name": "acceptableValues",
-            "baseName": "acceptableValues",
-            "type": "Array<string>"
+            "name": "createdDate",
+            "baseName": "createdDate",
+            "type": "Date"
         },
         {
-            "name": "unitSchema",
-            "baseName": "unitSchema",
-            "type": "UpdateDataTypeRequest.UnitSchemaEnum"
+            "name": "limitPrice",
+            "baseName": "limitPrice",
+            "type": "CurrencyAndAmount"
         },
         {
-            "name": "acceptableUnits",
-            "baseName": "acceptableUnits",
-            "type": "Array<CreateUnitDefinition>"
+            "name": "stopPrice",
+            "baseName": "stopPrice",
+            "type": "CurrencyAndAmount"
         }    ];
 
     static getAttributeTypeMap() {
-        return UpdateDataTypeRequest.attributeTypeMap;
+        return BlockRequest.attributeTypeMap;
     }
 }
 
-export namespace UpdateDataTypeRequest {
-    export enum TypeValueRangeEnum {
-        Open = <any> 'Open',
-        Closed = <any> 'Closed'
-    }
-    export enum ValueTypeEnum {
-        String = <any> 'String',
-        Int = <any> 'Int',
-        Decimal = <any> 'Decimal',
-        DateTime = <any> 'DateTime',
-        Boolean = <any> 'Boolean',
-        Map = <any> 'Map',
-        List = <any> 'List',
-        PropertyArray = <any> 'PropertyArray',
-        Percentage = <any> 'Percentage',
-        Code = <any> 'Code',
-        Id = <any> 'Id',
-        Uri = <any> 'Uri',
-        CurrencyAndAmount = <any> 'CurrencyAndAmount',
-        TradePrice = <any> 'TradePrice',
-        Currency = <any> 'Currency',
-        MetricValue = <any> 'MetricValue',
-        ResourceId = <any> 'ResourceId',
-        ResultValue = <any> 'ResultValue',
-        CutLocalTime = <any> 'CutLocalTime',
-        DateOrCutLabel = <any> 'DateOrCutLabel'
-    }
-    export enum UnitSchemaEnum {
-        NoUnits = <any> 'NoUnits',
-        Basic = <any> 'Basic',
-        Iso4217Currency = <any> 'Iso4217Currency'
-    }
-}
