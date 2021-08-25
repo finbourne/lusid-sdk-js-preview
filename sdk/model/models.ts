@@ -30,8 +30,6 @@ export * from './basket';
 export * from './basketAllOf';
 export * from './basketIdentifier';
 export * from './block';
-export * from './blockRequest';
-export * from './blockSetRequest';
 export * from './bond';
 export * from './bondAllOf';
 export * from './bucketedCashFlowRequest';
@@ -489,8 +487,6 @@ import { Basket } from './basket';
 import { BasketAllOf } from './basketAllOf';
 import { BasketIdentifier } from './basketIdentifier';
 import { Block } from './block';
-import { BlockRequest } from './blockRequest';
-import { BlockSetRequest } from './blockSetRequest';
 import { Bond } from './bond';
 import { BondAllOf } from './bondAllOf';
 import { BucketedCashFlowRequest } from './bucketedCashFlowRequest';
@@ -1094,8 +1090,6 @@ let typeMap: {[index: string]: any} = {
     "BasketAllOf": BasketAllOf,
     "BasketIdentifier": BasketIdentifier,
     "Block": Block,
-    "BlockRequest": BlockRequest,
-    "BlockSetRequest": BlockSetRequest,
     "Bond": Bond,
     "BondAllOf": BondAllOf,
     "BucketedCashFlowRequest": BucketedCashFlowRequest,
