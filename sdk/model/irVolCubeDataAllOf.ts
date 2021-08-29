@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { LusidInstrument } from './lusidInstrument';
 import { MarketQuote } from './marketQuote';
 

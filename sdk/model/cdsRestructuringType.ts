@@ -10,16 +10,12 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 
-export class CdsRestructuringType {
-
-    static discriminator: string | undefined = undefined;
-
-    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-    ];
-
-    static getAttributeTypeMap() {
-        return CdsRestructuringType.attributeTypeMap;
-    }
+export enum CdsRestructuringType {
+    Unknown = <any> 'Unknown',
+    Cr = <any> 'CR',
+    Mr = <any> 'MR',
+    Mm = <any> 'MM',
+    Xr = <any> 'XR'
 }
-

@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { Property } from './property';
 
 /**
@@ -31,7 +32,7 @@ export class RelatedEntity {
     /**
     * The properties of the entity. This field is empty until further notice.
     */
-    'properties'?: { [key: string]: Property; };
+    'properties'?: { [key: string]: Property; } | null;
 
     static discriminator: string | undefined = undefined;
 

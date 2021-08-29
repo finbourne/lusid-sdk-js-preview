@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { ConfigurationRecipe } from './configurationRecipe';
 import { ResourceId } from './resourceId';
 
@@ -26,7 +27,7 @@ export class CreateRecipeRequest {
     /**
     * The asAt date to use
     */
-    'asAt'?: Date;
+    'asAt'?: Date | null;
     /**
     * The market data time, i.e. the recipe generated will look for rules with this effectiveAt.
     */

@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { ParticipationRequest } from './participationRequest';
 
 /**
@@ -19,7 +20,7 @@ export class ParticipationSetRequest {
     /**
     * A collection of ParticipationRequests.
     */
-    'requests'?: Array<ParticipationRequest>;
+    'requests'?: Array<ParticipationRequest> | null;
 
     static discriminator: string | undefined = undefined;
 

@@ -10,24 +10,25 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { Link } from './link';
 import { ResultDataSchema } from './resultDataSchema';
 
 export class BucketedCashFlowResponse {
-    'href'?: string;
+    'href'?: string | null;
     /**
     * List of dictionary bucketed cash flow result set.  Each dictionary represent a bucketed cashflow result set keyed by AddressKeys.  e.g. dictionary[\"Valuation/CashFlowAmount\"] for the aggregated cash flow amount for the bucket.  e.g. suppose \"RoundUp\" method, then dictionary[\"Valuation/CashFlowDate/RoundUp\"] returns the bucketed cashflow date.
     */
-    'data'?: Array<{ [key: string]: object; }>;
+    'data'?: Array<{ [key: string]: object; }> | null;
     /**
     * Three letter ISO currency string indicating what currency to report in for ReportCcy denominated queries.  If not present then the currency of the relevant portfolio will be used in its place where relevant.
     */
-    'reportCurrency'?: string;
+    'reportCurrency'?: string | null;
     'dataSchema'?: ResultDataSchema;
     /**
     * Collection of links.
     */
-    'links'?: Array<Link>;
+    'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
 

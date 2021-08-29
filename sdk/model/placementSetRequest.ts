@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { PlacementRequest } from './placementRequest';
 
 /**
@@ -19,7 +20,7 @@ export class PlacementSetRequest {
     /**
     * A collection of PlacementRequests.
     */
-    'requests'?: Array<PlacementRequest>;
+    'requests'?: Array<PlacementRequest> | null;
 
     static discriminator: string | undefined = undefined;
 

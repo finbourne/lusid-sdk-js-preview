@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { EquitySwapAllOf } from './equitySwapAllOf';
 import { FlowConventions } from './flowConventions';
 import { InstrumentLeg } from './instrumentLeg';

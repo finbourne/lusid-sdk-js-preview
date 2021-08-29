@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 
 /**
 * An identifier that uniquely identifies a set of Quote access control metadata.
@@ -18,27 +19,27 @@ export class QuoteAccessMetadataRuleId {
     /**
     * The platform or vendor that provided the quote, e.g. \'DataScope\', \'LUSID\' etc.
     */
-    'provider'?: string;
+    'provider'?: string | null;
     /**
     * The source or originator of the quote, e.g. a bank or financial institution.
     */
-    'priceSource'?: string;
+    'priceSource'?: string | null;
     /**
     * The value of the instrument identifier that uniquely identifies the instrument that the quote is for, e.g. \'BBG00JX0P539\'.
     */
-    'instrumentId'?: string;
+    'instrumentId'?: string | null;
     /**
     * The type of instrument identifier used to uniquely identify the instrument that the quote is for, e.g. \'Figi\'.
     */
-    'instrumentIdType'?: string;
+    'instrumentIdType'?: string | null;
     /**
     * The type of the quote. This allows for quotes other than prices e.g. rates or spreads to be used.
     */
-    'quoteType'?: string;
+    'quoteType'?: string | null;
     /**
     * The field of the quote e.g. bid, mid, ask etc. This should be consistent across a time series of quotes. The allowed values are dependant on the specified Provider.
     */
-    'field'?: string;
+    'field'?: string | null;
 
     static discriminator: string | undefined = undefined;
 

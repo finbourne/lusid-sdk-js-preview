@@ -10,16 +10,17 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 
 export class DataMapKey {
     /**
     * The version of the mappings. It is possible that a client will wish to update mappings over time. The version identifies the MAJOR.MINOR.PATCH version  of the mappings that the client assigns it.
     */
-    'version'?: string;
+    'version'?: string | null;
     /**
     * A unique name to semantically identify the mapping set.
     */
-    'code'?: string;
+    'code'?: string | null;
 
     static discriminator: string | undefined = undefined;
 

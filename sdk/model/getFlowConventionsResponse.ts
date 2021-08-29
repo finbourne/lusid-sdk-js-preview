@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { ErrorDetail } from './errorDetail';
 import { FlowConventions } from './flowConventions';
 import { Link } from './link';
@@ -18,16 +19,16 @@ export class GetFlowConventionsResponse {
     /**
     * The specific Uniform Resource Identifier (URI) for this resource at the requested effective and asAt datetime.
     */
-    'href'?: string;
+    'href'?: string | null;
     'value'?: FlowConventions;
     /**
     * The identifiers that did not resolve to a conventions along with the nature of the failure.
     */
-    'failed'?: { [key: string]: ErrorDetail; };
+    'failed'?: { [key: string]: ErrorDetail; } | null;
     /**
     * Collection of links.
     */
-    'links'?: Array<Link>;
+    'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
 

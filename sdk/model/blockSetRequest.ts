@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { BlockRequest } from './blockRequest';
 
 /**
@@ -19,7 +20,7 @@ export class BlockSetRequest {
     /**
     * A collection of BlockRequests.
     */
-    'requests'?: Array<BlockRequest>;
+    'requests'?: Array<BlockRequest> | null;
 
     static discriminator: string | undefined = undefined;
 

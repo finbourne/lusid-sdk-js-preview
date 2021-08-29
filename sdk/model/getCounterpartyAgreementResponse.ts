@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { CounterpartyAgreement } from './counterpartyAgreement';
 import { ErrorDetail } from './errorDetail';
 import { Link } from './link';
@@ -18,16 +19,16 @@ export class GetCounterpartyAgreementResponse {
     /**
     * The specific Uniform Resource Identifier (URI) for this resource at the requested effective and asAt datetime.
     */
-    'href'?: string;
+    'href'?: string | null;
     'value'?: CounterpartyAgreement;
     /**
     * The counterparty agreement that could not be retrieved along with a reason for failure.
     */
-    'failed'?: { [key: string]: ErrorDetail; };
+    'failed'?: { [key: string]: ErrorDetail; } | null;
     /**
     * Collection of links.
     */
-    'links'?: Array<Link>;
+    'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
 

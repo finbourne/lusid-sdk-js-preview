@@ -10,10 +10,11 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { DateAttributes } from './dateAttributes';
 
 export class CalendarDate {
-    'href'?: string;
+    'href'?: string | null;
     'dateIdentifier': string;
     'fromUtc': Date;
     'toUtc': Date;
@@ -22,7 +23,7 @@ export class CalendarDate {
     'description': string;
     'type': string;
     'attributes'?: DateAttributes;
-    'sourceData'?: { [key: string]: string; };
+    'sourceData'?: { [key: string]: string; } | null;
 
     static discriminator: string | undefined = undefined;
 

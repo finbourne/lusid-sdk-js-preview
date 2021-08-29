@@ -10,16 +10,17 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 
 export class UpdateDataTypeRequest {
     /**
     * The display name of the data type.
     */
-    'displayName'?: string;
+    'displayName'?: string | null;
     /**
     * The description of the data type.
     */
-    'description'?: string;
+    'description'?: string | null;
 
     static discriminator: string | undefined = undefined;
 

@@ -10,16 +10,14 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 
-export class AssetClass {
-
-    static discriminator: string | undefined = undefined;
-
-    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-    ];
-
-    static getAttributeTypeMap() {
-        return AssetClass.attributeTypeMap;
-    }
+export enum AssetClass {
+    InterestRates = <any> 'InterestRates',
+    Fx = <any> 'FX',
+    Inflation = <any> 'Inflation',
+    Equities = <any> 'Equities',
+    Credit = <any> 'Credit',
+    Commodities = <any> 'Commodities',
+    Unknown = <any> 'Unknown'
 }
-

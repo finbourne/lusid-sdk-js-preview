@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { ComplexMarketData } from './complexMarketData';
 import { ErrorDetail } from './errorDetail';
 import { Link } from './link';
@@ -18,19 +19,19 @@ export class GetComplexMarketDataResponse {
     /**
     * The specific Uniform Resource Identifier (URI) for this resource at the requested effective and asAt datetime.
     */
-    'href'?: string;
+    'href'?: string | null;
     /**
     * The set of values that were successfully retrieved.
     */
-    'values'?: { [key: string]: ComplexMarketData; };
+    'values'?: { [key: string]: ComplexMarketData; } | null;
     /**
     * The set of values that could not be retrieved due along with a reason for this, e.g badly formed request.
     */
-    'failed'?: { [key: string]: ErrorDetail; };
+    'failed'?: { [key: string]: ErrorDetail; } | null;
     /**
     * Collection of links.
     */
-    'links'?: Array<Link>;
+    'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
 

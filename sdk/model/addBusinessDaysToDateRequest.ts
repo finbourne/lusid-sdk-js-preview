@@ -10,12 +10,13 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 
 export class AddBusinessDaysToDateRequest {
     'businessDayOffset': number;
     'holidayCodes': Array<string>;
     'startDate'?: Date;
-    'asAt'?: Date;
+    'asAt'?: Date | null;
 
     static discriminator: string | undefined = undefined;
 

@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { MarketContextSuppliers } from './marketContextSuppliers';
 import { MarketDataKeyRule } from './marketDataKeyRule';
 import { MarketOptions } from './marketOptions';
@@ -21,8 +22,8 @@ export class MarketContext {
     /**
     * The set of rules that define how to resolve particular use cases. These can be relatively general or specific in nature.  Nominally any number are possible and will be processed in order where applicable. However, there is evidently a potential  for increased computational cost where many rules must be applied to resolve data. Ensuring that portfolios are structured in  such a way as to reduce the number of rules required is therefore sensible.
     */
-    'marketRules'?: Array<MarketDataKeyRule>;
-    'suppliers'?: MarketContextSuppliers;
+    'marketRules'?: Array<MarketDataKeyRule> | null;
+    'suppliers'?: MarketContextSuppliers | null;
     'options'?: MarketOptions;
 
     static discriminator: string | undefined = undefined;

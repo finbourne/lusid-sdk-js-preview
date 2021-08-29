@@ -10,16 +10,17 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 
 export class DateAttributes {
     'irregular': boolean;
     'irregularSession': boolean;
     'newHours': boolean;
-    'activity'?: string;
-    'firstOpen'?: string;
-    'lastOpen'?: string;
-    'firstClose'?: string;
-    'lastClose'?: string;
+    'activity'?: string | null;
+    'firstOpen'?: string | null;
+    'lastOpen'?: string | null;
+    'firstClose'?: string | null;
+    'lastClose'?: string | null;
 
     static discriminator: string | undefined = undefined;
 

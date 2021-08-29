@@ -10,16 +10,17 @@
  * Do not edit the class manually.
  */
 
+import { RequestFile } from './models';
 import { CustomEntityFieldDefinition } from './customEntityFieldDefinition';
 
 /**
 * Representation of Custom Entity Definition on LUSID API
 */
 export class CustomEntityDefinition {
-    'href'?: string;
+    'href'?: string | null;
     'customEntityId': string;
     'displayName': string;
-    'description'?: string;
+    'description'?: string | null;
     'entityType': string;
     'fieldSchema': Array<CustomEntityFieldDefinition>;
 
