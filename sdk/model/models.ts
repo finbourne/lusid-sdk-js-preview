@@ -15,6 +15,7 @@ export * from './adjustHolding';
 export * from './adjustHoldingRequest';
 export * from './aggregateSpec';
 export * from './aggregatedReturn';
+export * from './aggregatedReturnsRequest';
 export * from './aggregationContext';
 export * from './aggregationMeasureFailureDetail';
 export * from './aggregationOp';
@@ -251,6 +252,7 @@ export * from './participationRequest';
 export * from './participationSetRequest';
 export * from './payReceive';
 export * from './performanceReturn';
+export * from './performanceReturnsMetric';
 export * from './periodType';
 export * from './perpetualEntityState';
 export * from './perpetualProperty';
@@ -485,6 +487,7 @@ import { AdjustHolding } from './adjustHolding';
 import { AdjustHoldingRequest } from './adjustHoldingRequest';
 import { AggregateSpec } from './aggregateSpec';
 import { AggregatedReturn } from './aggregatedReturn';
+import { AggregatedReturnsRequest } from './aggregatedReturnsRequest';
 import { AggregationContext } from './aggregationContext';
 import { AggregationMeasureFailureDetail } from './aggregationMeasureFailureDetail';
 import { AggregationOp } from './aggregationOp';
@@ -721,6 +724,7 @@ import { ParticipationRequest } from './participationRequest';
 import { ParticipationSetRequest } from './participationSetRequest';
 import { PayReceive } from './payReceive';
 import { PerformanceReturn } from './performanceReturn';
+import { PerformanceReturnsMetric } from './performanceReturnsMetric';
 import { PeriodType } from './periodType';
 import { PerpetualEntityState } from './perpetualEntityState';
 import { PerpetualProperty } from './perpetualProperty';
@@ -1124,6 +1128,7 @@ let typeMap: {[index: string]: any} = {
     "AdjustHoldingRequest": AdjustHoldingRequest,
     "AggregateSpec": AggregateSpec,
     "AggregatedReturn": AggregatedReturn,
+    "AggregatedReturnsRequest": AggregatedReturnsRequest,
     "AggregationContext": AggregationContext,
     "AggregationMeasureFailureDetail": AggregationMeasureFailureDetail,
     "AggregationOptions": AggregationOptions,
@@ -1344,6 +1349,7 @@ let typeMap: {[index: string]: any} = {
     "ParticipationRequest": ParticipationRequest,
     "ParticipationSetRequest": ParticipationSetRequest,
     "PerformanceReturn": PerformanceReturn,
+    "PerformanceReturnsMetric": PerformanceReturnsMetric,
     "PerpetualProperty": PerpetualProperty,
     "Person": Person,
     "Placement": Placement,
