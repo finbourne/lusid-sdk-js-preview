@@ -8,7 +8,6 @@ import {ConfigurationRecipeApi} from './api/configurationRecipeApi';
 import {ConventionsApi} from './api/conventionsApi';
 import {CorporateActionSourcesApi} from './api/corporateActionSourcesApi';
 import {CounterpartiesApi} from './api/counterpartiesApi';
-import {CustomEntitiesApi} from './api/customEntitiesApi';
 import {CustomEntityDefinitionsApi} from './api/customEntityDefinitionsApi';
 import {CutLabelDefinitionsApi} from './api/cutLabelDefinitionsApi';
 import {DataTypesApi} from './api/dataTypesApi';
@@ -54,7 +53,6 @@ export class Api {
     public conventions:  ConventionsApi
     public corporateActionSources:  CorporateActionSourcesApi
     public counterparties:  CounterpartiesApi
-    public customEntities:  CustomEntitiesApi
     public customEntityDefinitions:  CustomEntityDefinitionsApi
     public cutLabelDefinitions:  CutLabelDefinitionsApi
     public dataTypes:  DataTypesApi

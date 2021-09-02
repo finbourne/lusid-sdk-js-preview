@@ -98,12 +98,7 @@ export * from './crossCurrencySwapAllOf';
 export * from './currencyAndAmount';
 export * from './customEntityDefinition';
 export * from './customEntityDefinitionRequest';
-export * from './customEntityField';
 export * from './customEntityFieldDefinition';
-export * from './customEntityIdRequest';
-export * from './customEntityIdResponse';
-export * from './customEntityRequest';
-export * from './customEntityResponse';
 export * from './cutLabelDefinition';
 export * from './cutLocalTime';
 export * from './dataDefinition';
@@ -575,12 +570,7 @@ import { CrossCurrencySwapAllOf } from './crossCurrencySwapAllOf';
 import { CurrencyAndAmount } from './currencyAndAmount';
 import { CustomEntityDefinition } from './customEntityDefinition';
 import { CustomEntityDefinitionRequest } from './customEntityDefinitionRequest';
-import { CustomEntityField } from './customEntityField';
 import { CustomEntityFieldDefinition } from './customEntityFieldDefinition';
-import { CustomEntityIdRequest } from './customEntityIdRequest';
-import { CustomEntityIdResponse } from './customEntityIdResponse';
-import { CustomEntityRequest } from './customEntityRequest';
-import { CustomEntityResponse } from './customEntityResponse';
 import { CutLabelDefinition } from './cutLabelDefinition';
 import { CutLocalTime } from './cutLocalTime';
 import { DataDefinition } from './dataDefinition';
@@ -1216,12 +1206,7 @@ let typeMap: {[index: string]: any} = {
     "CurrencyAndAmount": CurrencyAndAmount,
     "CustomEntityDefinition": CustomEntityDefinition,
     "CustomEntityDefinitionRequest": CustomEntityDefinitionRequest,
-    "CustomEntityField": CustomEntityField,
     "CustomEntityFieldDefinition": CustomEntityFieldDefinition,
-    "CustomEntityIdRequest": CustomEntityIdRequest,
-    "CustomEntityIdResponse": CustomEntityIdResponse,
-    "CustomEntityRequest": CustomEntityRequest,
-    "CustomEntityResponse": CustomEntityResponse,
     "CutLabelDefinition": CutLabelDefinition,
     "CutLocalTime": CutLocalTime,
     "DataDefinition": DataDefinition,
