@@ -135,7 +135,6 @@ export * from './executionSetRequest';
 export * from './exoticInstrument';
 export * from './exoticInstrumentAllOf';
 export * from './expandedGroup';
-export * from './feeCalculationDetails';
 export * from './fieldSchema';
 export * from './fileResponse';
 export * from './fixedLeg';
@@ -332,7 +331,6 @@ export * from './resourceListOfConstituentsAdjustmentHeader';
 export * from './resourceListOfCorporateAction';
 export * from './resourceListOfDataType';
 export * from './resourceListOfExecution';
-export * from './resourceListOfFeeCalculationDetails';
 export * from './resourceListOfGetCdsFlowConventionsResponse';
 export * from './resourceListOfGetCounterpartyAgreementResponse';
 export * from './resourceListOfGetCreditSupportAnnexResponse';
@@ -614,7 +612,6 @@ import { ExecutionSetRequest } from './executionSetRequest';
 import { ExoticInstrument } from './exoticInstrument';
 import { ExoticInstrumentAllOf } from './exoticInstrumentAllOf';
 import { ExpandedGroup } from './expandedGroup';
-import { FeeCalculationDetails } from './feeCalculationDetails';
 import { FieldSchema } from './fieldSchema';
 import { FileResponse } from './fileResponse';
 import { FixedLeg } from './fixedLeg';
@@ -811,7 +808,6 @@ import { ResourceListOfConstituentsAdjustmentHeader } from './resourceListOfCons
 import { ResourceListOfCorporateAction } from './resourceListOfCorporateAction';
 import { ResourceListOfDataType } from './resourceListOfDataType';
 import { ResourceListOfExecution } from './resourceListOfExecution';
-import { ResourceListOfFeeCalculationDetails } from './resourceListOfFeeCalculationDetails';
 import { ResourceListOfGetCdsFlowConventionsResponse } from './resourceListOfGetCdsFlowConventionsResponse';
 import { ResourceListOfGetCounterpartyAgreementResponse } from './resourceListOfGetCounterpartyAgreementResponse';
 import { ResourceListOfGetCreditSupportAnnexResponse } from './resourceListOfGetCreditSupportAnnexResponse';
@@ -1254,7 +1250,6 @@ let typeMap: {[index: string]: any} = {
     "ExoticInstrument": ExoticInstrument,
     "ExoticInstrumentAllOf": ExoticInstrumentAllOf,
     "ExpandedGroup": ExpandedGroup,
-    "FeeCalculationDetails": FeeCalculationDetails,
     "FieldSchema": FieldSchema,
     "FileResponse": FileResponse,
     "FixedLeg": FixedLeg,
@@ -1432,7 +1427,6 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfCorporateAction": ResourceListOfCorporateAction,
     "ResourceListOfDataType": ResourceListOfDataType,
     "ResourceListOfExecution": ResourceListOfExecution,
-    "ResourceListOfFeeCalculationDetails": ResourceListOfFeeCalculationDetails,
     "ResourceListOfGetCdsFlowConventionsResponse": ResourceListOfGetCdsFlowConventionsResponse,
     "ResourceListOfGetCounterpartyAgreementResponse": ResourceListOfGetCounterpartyAgreementResponse,
     "ResourceListOfGetCreditSupportAnnexResponse": ResourceListOfGetCreditSupportAnnexResponse,
