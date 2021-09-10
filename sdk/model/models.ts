@@ -87,7 +87,6 @@ export * from './createRelationDefinitionRequest';
 export * from './createRelationRequest';
 export * from './createRelationshipDefinitionRequest';
 export * from './createRelationshipRequest';
-export * from './createSequenceRequest';
 export * from './createTransactionPortfolioRequest';
 export * from './createUnitDefinition';
 export * from './creditDefaultSwap';
@@ -221,7 +220,6 @@ export * from './marketQuote';
 export * from './metricValue';
 export * from './modelSelection';
 export * from './movementType';
-export * from './nextValueInSequenceResponse';
 export * from './opaqueMarketData';
 export * from './opaqueMarketDataAllOf';
 export * from './operandType';
@@ -372,7 +370,6 @@ export * from './resultDataKeyRule';
 export * from './resultDataSchema';
 export * from './schema';
 export * from './scopeDefinition';
-export * from './sequenceDefinition';
 export * from './setPersonIdentifiersRequest';
 export * from './setPersonPropertiesRequest';
 export * from './sideConfigurationData';
@@ -569,7 +566,6 @@ import { CreateRelationDefinitionRequest } from './createRelationDefinitionReque
 import { CreateRelationRequest } from './createRelationRequest';
 import { CreateRelationshipDefinitionRequest } from './createRelationshipDefinitionRequest';
 import { CreateRelationshipRequest } from './createRelationshipRequest';
-import { CreateSequenceRequest } from './createSequenceRequest';
 import { CreateTransactionPortfolioRequest } from './createTransactionPortfolioRequest';
 import { CreateUnitDefinition } from './createUnitDefinition';
 import { CreditDefaultSwap } from './creditDefaultSwap';
@@ -703,7 +699,6 @@ import { MarketQuote } from './marketQuote';
 import { MetricValue } from './metricValue';
 import { ModelSelection } from './modelSelection';
 import { MovementType } from './movementType';
-import { NextValueInSequenceResponse } from './nextValueInSequenceResponse';
 import { OpaqueMarketData } from './opaqueMarketData';
 import { OpaqueMarketDataAllOf } from './opaqueMarketDataAllOf';
 import { OperandType } from './operandType';
@@ -854,7 +849,6 @@ import { ResultDataKeyRule } from './resultDataKeyRule';
 import { ResultDataSchema } from './resultDataSchema';
 import { Schema } from './schema';
 import { ScopeDefinition } from './scopeDefinition';
-import { SequenceDefinition } from './sequenceDefinition';
 import { SetPersonIdentifiersRequest } from './setPersonIdentifiersRequest';
 import { SetPersonPropertiesRequest } from './setPersonPropertiesRequest';
 import { SideConfigurationData } from './sideConfigurationData';
@@ -1215,7 +1209,6 @@ let typeMap: {[index: string]: any} = {
     "CreateRelationRequest": CreateRelationRequest,
     "CreateRelationshipDefinitionRequest": CreateRelationshipDefinitionRequest,
     "CreateRelationshipRequest": CreateRelationshipRequest,
-    "CreateSequenceRequest": CreateSequenceRequest,
     "CreateTransactionPortfolioRequest": CreateTransactionPortfolioRequest,
     "CreateUnitDefinition": CreateUnitDefinition,
     "CreditDefaultSwap": CreditDefaultSwap,
@@ -1342,7 +1335,6 @@ let typeMap: {[index: string]: any} = {
     "MarketQuote": MarketQuote,
     "MetricValue": MetricValue,
     "ModelSelection": ModelSelection,
-    "NextValueInSequenceResponse": NextValueInSequenceResponse,
     "OpaqueMarketData": OpaqueMarketData,
     "OpaqueMarketDataAllOf": OpaqueMarketDataAllOf,
     "Order": Order,
@@ -1478,7 +1470,6 @@ let typeMap: {[index: string]: any} = {
     "ResultDataSchema": ResultDataSchema,
     "Schema": Schema,
     "ScopeDefinition": ScopeDefinition,
-    "SequenceDefinition": SequenceDefinition,
     "SetPersonIdentifiersRequest": SetPersonIdentifiersRequest,
     "SetPersonPropertiesRequest": SetPersonPropertiesRequest,
     "SideConfigurationData": SideConfigurationData,
