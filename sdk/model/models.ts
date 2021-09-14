@@ -240,6 +240,7 @@ export * from './pagedResourceListOfAllocation';
 export * from './pagedResourceListOfBlock';
 export * from './pagedResourceListOfCalendar';
 export * from './pagedResourceListOfCorporateActionSource';
+export * from './pagedResourceListOfCustomEntityResponse';
 export * from './pagedResourceListOfCutLabelDefinition';
 export * from './pagedResourceListOfExecution';
 export * from './pagedResourceListOfInstrument';
@@ -719,6 +720,7 @@ import { PagedResourceListOfAllocation } from './pagedResourceListOfAllocation';
 import { PagedResourceListOfBlock } from './pagedResourceListOfBlock';
 import { PagedResourceListOfCalendar } from './pagedResourceListOfCalendar';
 import { PagedResourceListOfCorporateActionSource } from './pagedResourceListOfCorporateActionSource';
+import { PagedResourceListOfCustomEntityResponse } from './pagedResourceListOfCustomEntityResponse';
 import { PagedResourceListOfCutLabelDefinition } from './pagedResourceListOfCutLabelDefinition';
 import { PagedResourceListOfExecution } from './pagedResourceListOfExecution';
 import { PagedResourceListOfInstrument } from './pagedResourceListOfInstrument';
@@ -1352,6 +1354,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfBlock": PagedResourceListOfBlock,
     "PagedResourceListOfCalendar": PagedResourceListOfCalendar,
     "PagedResourceListOfCorporateActionSource": PagedResourceListOfCorporateActionSource,
+    "PagedResourceListOfCustomEntityResponse": PagedResourceListOfCustomEntityResponse,
     "PagedResourceListOfCutLabelDefinition": PagedResourceListOfCutLabelDefinition,
     "PagedResourceListOfExecution": PagedResourceListOfExecution,
     "PagedResourceListOfInstrument": PagedResourceListOfInstrument,

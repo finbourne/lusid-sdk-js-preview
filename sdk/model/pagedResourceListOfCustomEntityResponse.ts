@@ -11,25 +11,13 @@
  */
 
 import { RequestFile } from './models';
+import { CustomEntityResponse } from './customEntityResponse';
 import { Link } from './link';
-import { Quote } from './quote';
 
 /**
-* A collection of resources that can be returned from requests.
+* A paginated list of resource that can be returned from a request.
 */
-export class ResourceListOfQuote {
-    /**
-    * The resources to list.
-    */
-    'values': Array<Quote>;
-    /**
-    * The URI of the resource list.
-    */
-    'href'?: string | null;
-    /**
-    * Collection of links.
-    */
-    'links'?: Array<Link> | null;
+export class PagedResourceListOfCustomEntityResponse {
     /**
     * The next page of results.
     */
@@ -38,14 +26,36 @@ export class ResourceListOfQuote {
     * The previous page of results.
     */
     'previousPage'?: string | null;
+    /**
+    * The resources to list.
+    */
+    'values': Array<CustomEntityResponse>;
+    /**
+    * The URI of the resource list.
+    */
+    'href'?: string | null;
+    /**
+    * Collection of links.
+    */
+    'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
+            "name": "nextPage",
+            "baseName": "nextPage",
+            "type": "string"
+        },
+        {
+            "name": "previousPage",
+            "baseName": "previousPage",
+            "type": "string"
+        },
+        {
             "name": "values",
             "baseName": "values",
-            "type": "Array<Quote>"
+            "type": "Array<CustomEntityResponse>"
         },
         {
             "name": "href",
@@ -56,20 +66,10 @@ export class ResourceListOfQuote {
             "name": "links",
             "baseName": "links",
             "type": "Array<Link>"
-        },
-        {
-            "name": "nextPage",
-            "baseName": "nextPage",
-            "type": "string"
-        },
-        {
-            "name": "previousPage",
-            "baseName": "previousPage",
-            "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
-        return ResourceListOfQuote.attributeTypeMap;
+        return PagedResourceListOfCustomEntityResponse.attributeTypeMap;
     }
 }
 
