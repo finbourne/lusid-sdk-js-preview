@@ -154,6 +154,14 @@ export * from './futureAllOf';
 export * from './futuresContractDetails';
 export * from './fxForward';
 export * from './fxForwardAllOf';
+export * from './fxForwardCurveData';
+export * from './fxForwardCurveDataAllOf';
+export * from './fxForwardPipsCurveData';
+export * from './fxForwardPipsCurveDataAllOf';
+export * from './fxForwardTenorCurveData';
+export * from './fxForwardTenorCurveDataAllOf';
+export * from './fxForwardTenorPipsCurveData';
+export * from './fxForwardTenorPipsCurveDataAllOf';
 export * from './fxOption';
 export * from './fxOptionAllOf';
 export * from './fxSwap';
@@ -634,6 +642,14 @@ import { FutureAllOf } from './futureAllOf';
 import { FuturesContractDetails } from './futuresContractDetails';
 import { FxForward } from './fxForward';
 import { FxForwardAllOf } from './fxForwardAllOf';
+import { FxForwardCurveData } from './fxForwardCurveData';
+import { FxForwardCurveDataAllOf } from './fxForwardCurveDataAllOf';
+import { FxForwardPipsCurveData } from './fxForwardPipsCurveData';
+import { FxForwardPipsCurveDataAllOf } from './fxForwardPipsCurveDataAllOf';
+import { FxForwardTenorCurveData } from './fxForwardTenorCurveData';
+import { FxForwardTenorCurveDataAllOf } from './fxForwardTenorCurveDataAllOf';
+import { FxForwardTenorPipsCurveData } from './fxForwardTenorPipsCurveData';
+import { FxForwardTenorPipsCurveDataAllOf } from './fxForwardTenorPipsCurveDataAllOf';
 import { FxOption } from './fxOption';
 import { FxOptionAllOf } from './fxOptionAllOf';
 import { FxSwap } from './fxSwap';
@@ -1029,6 +1045,14 @@ let enumsMap: {[index: string]: any} = {
         "FutureAllOf.InstrumentTypeEnum": FutureAllOf.InstrumentTypeEnum,
         "FxForward.InstrumentTypeEnum": FxForward.InstrumentTypeEnum,
         "FxForwardAllOf.InstrumentTypeEnum": FxForwardAllOf.InstrumentTypeEnum,
+        "FxForwardCurveData.MarketDataTypeEnum": FxForwardCurveData.MarketDataTypeEnum,
+        "FxForwardCurveDataAllOf.MarketDataTypeEnum": FxForwardCurveDataAllOf.MarketDataTypeEnum,
+        "FxForwardPipsCurveData.MarketDataTypeEnum": FxForwardPipsCurveData.MarketDataTypeEnum,
+        "FxForwardPipsCurveDataAllOf.MarketDataTypeEnum": FxForwardPipsCurveDataAllOf.MarketDataTypeEnum,
+        "FxForwardTenorCurveData.MarketDataTypeEnum": FxForwardTenorCurveData.MarketDataTypeEnum,
+        "FxForwardTenorCurveDataAllOf.MarketDataTypeEnum": FxForwardTenorCurveDataAllOf.MarketDataTypeEnum,
+        "FxForwardTenorPipsCurveData.MarketDataTypeEnum": FxForwardTenorPipsCurveData.MarketDataTypeEnum,
+        "FxForwardTenorPipsCurveDataAllOf.MarketDataTypeEnum": FxForwardTenorPipsCurveDataAllOf.MarketDataTypeEnum,
         "FxOption.InstrumentTypeEnum": FxOption.InstrumentTypeEnum,
         "FxOptionAllOf.InstrumentTypeEnum": FxOptionAllOf.InstrumentTypeEnum,
         "FxSwap.InstrumentTypeEnum": FxSwap.InstrumentTypeEnum,
@@ -1275,6 +1299,14 @@ let typeMap: {[index: string]: any} = {
     "FuturesContractDetails": FuturesContractDetails,
     "FxForward": FxForward,
     "FxForwardAllOf": FxForwardAllOf,
+    "FxForwardCurveData": FxForwardCurveData,
+    "FxForwardCurveDataAllOf": FxForwardCurveDataAllOf,
+    "FxForwardPipsCurveData": FxForwardPipsCurveData,
+    "FxForwardPipsCurveDataAllOf": FxForwardPipsCurveDataAllOf,
+    "FxForwardTenorCurveData": FxForwardTenorCurveData,
+    "FxForwardTenorCurveDataAllOf": FxForwardTenorCurveDataAllOf,
+    "FxForwardTenorPipsCurveData": FxForwardTenorPipsCurveData,
+    "FxForwardTenorPipsCurveDataAllOf": FxForwardTenorPipsCurveDataAllOf,
     "FxOption": FxOption,
     "FxOptionAllOf": FxOptionAllOf,
     "FxSwap": FxSwap,
