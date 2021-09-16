@@ -38,6 +38,7 @@ import {RelationshipsApi} from './api/relationshipsApi';
 import {SchemasApi} from './api/schemasApi';
 import {ScopesApi} from './api/scopesApi';
 import {SearchApi} from './api/searchApi';
+import {SequencesApi} from './api/sequencesApi';
 import {StructuredMarketDataApi} from './api/structuredMarketDataApi';
 import {StructuredResultDataApi} from './api/structuredResultDataApi';
 import {SystemConfigurationApi} from './api/systemConfigurationApi';
@@ -85,6 +86,7 @@ export class Api {
     public schemas:  SchemasApi
     public scopes:  ScopesApi
     public search:  SearchApi
+    public sequences:  SequencesApi
     public structuredMarketData:  StructuredMarketDataApi
     public structuredResultData:  StructuredResultDataApi
     public systemConfiguration:  SystemConfigurationApi
