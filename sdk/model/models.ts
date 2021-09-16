@@ -122,6 +122,9 @@ export * from './deletedEntityResponse';
 export * from './deliveryType';
 export * from './discountFactorCurveData';
 export * from './discountFactorCurveDataAllOf';
+export * from './equity';
+export * from './equityAllOf';
+export * from './equityAllOfIdentifiers';
 export * from './equityOption';
 export * from './equityOptionAllOf';
 export * from './equitySwap';
@@ -610,6 +613,9 @@ import { DeletedEntityResponse } from './deletedEntityResponse';
 import { DeliveryType } from './deliveryType';
 import { DiscountFactorCurveData } from './discountFactorCurveData';
 import { DiscountFactorCurveDataAllOf } from './discountFactorCurveDataAllOf';
+import { Equity } from './equity';
+import { EquityAllOf } from './equityAllOf';
+import { EquityAllOfIdentifiers } from './equityAllOfIdentifiers';
 import { EquityOption } from './equityOption';
 import { EquityOptionAllOf } from './equityOptionAllOf';
 import { EquitySwap } from './equitySwap';
@@ -1018,6 +1024,8 @@ let enumsMap: {[index: string]: any} = {
         "DeliveryType": DeliveryType,
         "DiscountFactorCurveData.MarketDataTypeEnum": DiscountFactorCurveData.MarketDataTypeEnum,
         "DiscountFactorCurveDataAllOf.MarketDataTypeEnum": DiscountFactorCurveDataAllOf.MarketDataTypeEnum,
+        "Equity.InstrumentTypeEnum": Equity.InstrumentTypeEnum,
+        "EquityAllOf.InstrumentTypeEnum": EquityAllOf.InstrumentTypeEnum,
         "EquityOption.DeliveryTypeEnum": EquityOption.DeliveryTypeEnum,
         "EquityOption.OptionTypeEnum": EquityOption.OptionTypeEnum,
         "EquityOption.UnderlyingIdentifierEnum": EquityOption.UnderlyingIdentifierEnum,
@@ -1267,6 +1275,9 @@ let typeMap: {[index: string]: any} = {
     "DeletedEntityResponse": DeletedEntityResponse,
     "DiscountFactorCurveData": DiscountFactorCurveData,
     "DiscountFactorCurveDataAllOf": DiscountFactorCurveDataAllOf,
+    "Equity": Equity,
+    "EquityAllOf": EquityAllOf,
+    "EquityAllOfIdentifiers": EquityAllOfIdentifiers,
     "EquityOption": EquityOption,
     "EquityOptionAllOf": EquityOptionAllOf,
     "EquitySwap": EquitySwap,
