@@ -11,28 +11,33 @@
  */
 
 import { RequestFile } from './models';
-import { BlockRequest } from './blockRequest';
 
-/**
-* A request to create or update multiple Blocks.
-*/
-export class BlockSetRequest {
-    /**
-    * A collection of BlockRequests.
-    */
-    'requests'?: Array<BlockRequest> | null;
+export class UpdateUnitRequest {
+    'code'?: string | null;
+    'displayName'?: string | null;
+    'description'?: string | null;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "requests",
-            "baseName": "requests",
-            "type": "Array<BlockRequest>"
+            "name": "code",
+            "baseName": "code",
+            "type": "string"
+        },
+        {
+            "name": "displayName",
+            "baseName": "displayName",
+            "type": "string"
+        },
+        {
+            "name": "description",
+            "baseName": "description",
+            "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
-        return BlockSetRequest.attributeTypeMap;
+        return UpdateUnitRequest.attributeTypeMap;
     }
 }
 
