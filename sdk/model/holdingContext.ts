@@ -11,65 +11,27 @@
  */
 
 import { RequestFile } from './models';
-import { Link } from './link';
-import { Property } from './property';
 
 /**
-* A collection of resources that can be returned from requests.
+* Holding context node.  Contains settings that control how LUSID handles holdings within portfolios.
 */
-export class ResourceListOfProperty {
+export class HoldingContext {
     /**
-    * The resources to list.
+    * Whether or not to expand the holdings to return the underlying tax-lots. Defaults to True.
     */
-    'values': Array<Property>;
-    /**
-    * The URI of the resource list.
-    */
-    'href'?: string | null;
-    /**
-    * Collection of links.
-    */
-    'links'?: Array<Link> | null;
-    /**
-    * The next page of results.
-    */
-    'nextPage'?: string | null;
-    /**
-    * The previous page of results.
-    */
-    'previousPage'?: string | null;
+    'taxLotLevelHoldings'?: boolean;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "values",
-            "baseName": "values",
-            "type": "Array<Property>"
-        },
-        {
-            "name": "href",
-            "baseName": "href",
-            "type": "string"
-        },
-        {
-            "name": "links",
-            "baseName": "links",
-            "type": "Array<Link>"
-        },
-        {
-            "name": "nextPage",
-            "baseName": "nextPage",
-            "type": "string"
-        },
-        {
-            "name": "previousPage",
-            "baseName": "previousPage",
-            "type": "string"
+            "name": "taxLotLevelHoldings",
+            "baseName": "taxLotLevelHoldings",
+            "type": "boolean"
         }    ];
 
     static getAttributeTypeMap() {
-        return ResourceListOfProperty.attributeTypeMap;
+        return HoldingContext.attributeTypeMap;
     }
 }
 
