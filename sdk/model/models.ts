@@ -39,6 +39,8 @@ export * from './bond';
 export * from './bondAllOf';
 export * from './bucketedCashFlowRequest';
 export * from './bucketedCashFlowResponse';
+export * from './calculationInfo';
+export * from './calculationMethod';
 export * from './calendar';
 export * from './calendarDate';
 export * from './cashLadderRecord';
@@ -232,6 +234,7 @@ export * from './marketQuote';
 export * from './metricValue';
 export * from './modelSelection';
 export * from './movementType';
+export * from './multiplier';
 export * from './nextValueInSequenceResponse';
 export * from './opaqueMarketData';
 export * from './opaqueMarketDataAllOf';
@@ -534,6 +537,8 @@ import { Bond } from './bond';
 import { BondAllOf } from './bondAllOf';
 import { BucketedCashFlowRequest } from './bucketedCashFlowRequest';
 import { BucketedCashFlowResponse } from './bucketedCashFlowResponse';
+import { CalculationInfo } from './calculationInfo';
+import { CalculationMethod } from './calculationMethod';
 import { Calendar } from './calendar';
 import { CalendarDate } from './calendarDate';
 import { CashLadderRecord } from './cashLadderRecord';
@@ -727,6 +732,7 @@ import { MarketQuote } from './marketQuote';
 import { MetricValue } from './metricValue';
 import { ModelSelection } from './modelSelection';
 import { MovementType } from './movementType';
+import { Multiplier } from './multiplier';
 import { NextValueInSequenceResponse } from './nextValueInSequenceResponse';
 import { OpaqueMarketData } from './opaqueMarketData';
 import { OpaqueMarketDataAllOf } from './opaqueMarketDataAllOf';
@@ -1000,6 +1006,9 @@ let enumsMap: {[index: string]: any} = {
         "BasketAllOf.InstrumentTypeEnum": BasketAllOf.InstrumentTypeEnum,
         "Bond.InstrumentTypeEnum": Bond.InstrumentTypeEnum,
         "BondAllOf.InstrumentTypeEnum": BondAllOf.InstrumentTypeEnum,
+        "CalculationInfo.CalculationMethodEnum": CalculationInfo.CalculationMethodEnum,
+        "CalculationInfo.MultiplierEnum": CalculationInfo.MultiplierEnum,
+        "CalculationMethod": CalculationMethod,
         "CashPerpetual.InstrumentTypeEnum": CashPerpetual.InstrumentTypeEnum,
         "CashPerpetualAllOf.InstrumentTypeEnum": CashPerpetualAllOf.InstrumentTypeEnum,
         "CdsIndex.InstrumentTypeEnum": CdsIndex.InstrumentTypeEnum,
@@ -1101,6 +1110,7 @@ let enumsMap: {[index: string]: any} = {
         "ModelSelection.LibraryEnum": ModelSelection.LibraryEnum,
         "ModelSelection.ModelEnum": ModelSelection.ModelEnum,
         "MovementType": MovementType,
+        "Multiplier": Multiplier,
         "OpaqueMarketData.MarketDataTypeEnum": OpaqueMarketData.MarketDataTypeEnum,
         "OpaqueMarketDataAllOf.MarketDataTypeEnum": OpaqueMarketDataAllOf.MarketDataTypeEnum,
         "OperandType": OperandType,
@@ -1205,6 +1215,7 @@ let typeMap: {[index: string]: any} = {
     "BondAllOf": BondAllOf,
     "BucketedCashFlowRequest": BucketedCashFlowRequest,
     "BucketedCashFlowResponse": BucketedCashFlowResponse,
+    "CalculationInfo": CalculationInfo,
     "Calendar": Calendar,
     "CalendarDate": CalendarDate,
     "CashLadderRecord": CashLadderRecord,
