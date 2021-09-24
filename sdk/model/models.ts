@@ -187,7 +187,6 @@ export * from './getReferencePortfolioConstituentsResponse';
 export * from './getStructuredMarketDataResponse';
 export * from './getStructuredResultDataResponse';
 export * from './holdingAdjustment';
-export * from './holdingContext';
 export * from './holdingsAdjustment';
 export * from './holdingsAdjustmentHeader';
 export * from './iUnitDefinitionDto';
@@ -686,7 +685,6 @@ import { GetReferencePortfolioConstituentsResponse } from './getReferencePortfol
 import { GetStructuredMarketDataResponse } from './getStructuredMarketDataResponse';
 import { GetStructuredResultDataResponse } from './getStructuredResultDataResponse';
 import { HoldingAdjustment } from './holdingAdjustment';
-import { HoldingContext } from './holdingContext';
 import { HoldingsAdjustment } from './holdingsAdjustment';
 import { HoldingsAdjustmentHeader } from './holdingsAdjustmentHeader';
 import { IUnitDefinitionDto } from './iUnitDefinitionDto';
@@ -1359,7 +1357,6 @@ let typeMap: {[index: string]: any} = {
     "GetStructuredMarketDataResponse": GetStructuredMarketDataResponse,
     "GetStructuredResultDataResponse": GetStructuredResultDataResponse,
     "HoldingAdjustment": HoldingAdjustment,
-    "HoldingContext": HoldingContext,
     "HoldingsAdjustment": HoldingsAdjustment,
     "HoldingsAdjustmentHeader": HoldingsAdjustmentHeader,
     "IUnitDefinitionDto": IUnitDefinitionDto,
