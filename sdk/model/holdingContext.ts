@@ -12,32 +12,26 @@
 
 import { RequestFile } from './models';
 
-export class DataMapKey {
+/**
+* Holding context node.  Contains settings that control how LUSID handles holdings within portfolios.
+*/
+export class HoldingContext {
     /**
-    * The version of the mappings. It is possible that a client will wish to update mappings over time. The version identifies the MAJOR.MINOR.PATCH version  of the mappings that the client assigns it.
+    * Whether or not to expand the holdings to return the underlying tax-lots. Defaults to True.
     */
-    'version'?: string | null;
-    /**
-    * A unique name to semantically identify the mapping set.
-    */
-    'code'?: string | null;
+    'taxLotLevelHoldings'?: boolean;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "version",
-            "baseName": "version",
-            "type": "string"
-        },
-        {
-            "name": "code",
-            "baseName": "code",
-            "type": "string"
+            "name": "taxLotLevelHoldings",
+            "baseName": "taxLotLevelHoldings",
+            "type": "boolean"
         }    ];
 
     static getAttributeTypeMap() {
-        return DataMapKey.attributeTypeMap;
+        return HoldingContext.attributeTypeMap;
     }
 }
 
