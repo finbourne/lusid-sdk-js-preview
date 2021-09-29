@@ -43,6 +43,8 @@ export * from './calculationInfo';
 export * from './calculationMethod';
 export * from './calendar';
 export * from './calendarDate';
+export * from './capFloor';
+export * from './capFloorAllOf';
 export * from './cashLadderRecord';
 export * from './cashPerpetual';
 export * from './cashPerpetualAllOf';
@@ -542,6 +544,8 @@ import { CalculationInfo } from './calculationInfo';
 import { CalculationMethod } from './calculationMethod';
 import { Calendar } from './calendar';
 import { CalendarDate } from './calendarDate';
+import { CapFloor } from './capFloor';
+import { CapFloorAllOf } from './capFloorAllOf';
 import { CashLadderRecord } from './cashLadderRecord';
 import { CashPerpetual } from './cashPerpetual';
 import { CashPerpetualAllOf } from './cashPerpetualAllOf';
@@ -1011,6 +1015,8 @@ let enumsMap: {[index: string]: any} = {
         "CalculationInfo.CalculationMethodEnum": CalculationInfo.CalculationMethodEnum,
         "CalculationInfo.MultiplierEnum": CalculationInfo.MultiplierEnum,
         "CalculationMethod": CalculationMethod,
+        "CapFloor.InstrumentTypeEnum": CapFloor.InstrumentTypeEnum,
+        "CapFloorAllOf.InstrumentTypeEnum": CapFloorAllOf.InstrumentTypeEnum,
         "CashPerpetual.InstrumentTypeEnum": CashPerpetual.InstrumentTypeEnum,
         "CashPerpetualAllOf.InstrumentTypeEnum": CashPerpetualAllOf.InstrumentTypeEnum,
         "CdsIndex.InstrumentTypeEnum": CdsIndex.InstrumentTypeEnum,
@@ -1220,6 +1226,8 @@ let typeMap: {[index: string]: any} = {
     "CalculationInfo": CalculationInfo,
     "Calendar": Calendar,
     "CalendarDate": CalendarDate,
+    "CapFloor": CapFloor,
+    "CapFloorAllOf": CapFloorAllOf,
     "CashLadderRecord": CashLadderRecord,
     "CashPerpetual": CashPerpetual,
     "CashPerpetualAllOf": CashPerpetualAllOf,
