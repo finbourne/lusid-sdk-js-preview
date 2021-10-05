@@ -162,6 +162,8 @@ export * from './futureAllOf';
 export * from './futuresContractDetails';
 export * from './fxForward';
 export * from './fxForwardAllOf';
+export * from './fxForwardCurveByQuoteReference';
+export * from './fxForwardCurveByQuoteReferenceAllOf';
 export * from './fxForwardCurveData';
 export * from './fxForwardCurveDataAllOf';
 export * from './fxForwardPipsCurveData';
@@ -663,6 +665,8 @@ import { FutureAllOf } from './futureAllOf';
 import { FuturesContractDetails } from './futuresContractDetails';
 import { FxForward } from './fxForward';
 import { FxForwardAllOf } from './fxForwardAllOf';
+import { FxForwardCurveByQuoteReference } from './fxForwardCurveByQuoteReference';
+import { FxForwardCurveByQuoteReferenceAllOf } from './fxForwardCurveByQuoteReferenceAllOf';
 import { FxForwardCurveData } from './fxForwardCurveData';
 import { FxForwardCurveDataAllOf } from './fxForwardCurveDataAllOf';
 import { FxForwardPipsCurveData } from './fxForwardPipsCurveData';
@@ -1078,6 +1082,8 @@ let enumsMap: {[index: string]: any} = {
         "FutureAllOf.InstrumentTypeEnum": FutureAllOf.InstrumentTypeEnum,
         "FxForward.InstrumentTypeEnum": FxForward.InstrumentTypeEnum,
         "FxForwardAllOf.InstrumentTypeEnum": FxForwardAllOf.InstrumentTypeEnum,
+        "FxForwardCurveByQuoteReference.MarketDataTypeEnum": FxForwardCurveByQuoteReference.MarketDataTypeEnum,
+        "FxForwardCurveByQuoteReferenceAllOf.MarketDataTypeEnum": FxForwardCurveByQuoteReferenceAllOf.MarketDataTypeEnum,
         "FxForwardCurveData.MarketDataTypeEnum": FxForwardCurveData.MarketDataTypeEnum,
         "FxForwardCurveDataAllOf.MarketDataTypeEnum": FxForwardCurveDataAllOf.MarketDataTypeEnum,
         "FxForwardPipsCurveData.MarketDataTypeEnum": FxForwardPipsCurveData.MarketDataTypeEnum,
@@ -1340,6 +1346,8 @@ let typeMap: {[index: string]: any} = {
     "FuturesContractDetails": FuturesContractDetails,
     "FxForward": FxForward,
     "FxForwardAllOf": FxForwardAllOf,
+    "FxForwardCurveByQuoteReference": FxForwardCurveByQuoteReference,
+    "FxForwardCurveByQuoteReferenceAllOf": FxForwardCurveByQuoteReferenceAllOf,
     "FxForwardCurveData": FxForwardCurveData,
     "FxForwardCurveDataAllOf": FxForwardCurveDataAllOf,
     "FxForwardPipsCurveData": FxForwardPipsCurveData,
