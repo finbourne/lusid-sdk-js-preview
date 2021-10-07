@@ -19,6 +19,7 @@ import {FeesAndCommissionsApi} from './api/feesAndCommissionsApi';
 import {InstrumentsApi} from './api/instrumentsApi';
 import {LegalEntitiesApi} from './api/legalEntitiesApi';
 import {LoginApi} from './api/loginApi';
+import {OrderGraphApi} from './api/orderGraphApi';
 import {OrderInstructionsApi} from './api/orderInstructionsApi';
 import {OrdersApi} from './api/ordersApi';
 import {PackagesApi} from './api/packagesApi';
@@ -67,6 +68,7 @@ export class Api {
     public instruments:  InstrumentsApi
     public legalEntities:  LegalEntitiesApi
     public login:  LoginApi
+    public orderGraph:  OrderGraphApi
     public orderInstructions:  OrderInstructionsApi
     public orders:  OrdersApi
     public packages:  PackagesApi

@@ -248,6 +248,7 @@ export * from './operator';
 export * from './optionType';
 export * from './order';
 export * from './orderBySpec';
+export * from './orderGraphBlock';
 export * from './orderInstruction';
 export * from './orderInstructionRequest';
 export * from './orderInstructionSetRequest';
@@ -267,6 +268,7 @@ export * from './pagedResourceListOfExecution';
 export * from './pagedResourceListOfInstrument';
 export * from './pagedResourceListOfLegalEntity';
 export * from './pagedResourceListOfOrder';
+export * from './pagedResourceListOfOrderGraphBlock';
 export * from './pagedResourceListOfOrderInstruction';
 export * from './pagedResourceListOfPackage';
 export * from './pagedResourceListOfParticipation';
@@ -751,6 +753,7 @@ import { Operator } from './operator';
 import { OptionType } from './optionType';
 import { Order } from './order';
 import { OrderBySpec } from './orderBySpec';
+import { OrderGraphBlock } from './orderGraphBlock';
 import { OrderInstruction } from './orderInstruction';
 import { OrderInstructionRequest } from './orderInstructionRequest';
 import { OrderInstructionSetRequest } from './orderInstructionSetRequest';
@@ -770,6 +773,7 @@ import { PagedResourceListOfExecution } from './pagedResourceListOfExecution';
 import { PagedResourceListOfInstrument } from './pagedResourceListOfInstrument';
 import { PagedResourceListOfLegalEntity } from './pagedResourceListOfLegalEntity';
 import { PagedResourceListOfOrder } from './pagedResourceListOfOrder';
+import { PagedResourceListOfOrderGraphBlock } from './pagedResourceListOfOrderGraphBlock';
 import { PagedResourceListOfOrderInstruction } from './pagedResourceListOfOrderInstruction';
 import { PagedResourceListOfPackage } from './pagedResourceListOfPackage';
 import { PagedResourceListOfParticipation } from './pagedResourceListOfParticipation';
@@ -1424,6 +1428,7 @@ let typeMap: {[index: string]: any} = {
     "OpaqueMarketDataAllOf": OpaqueMarketDataAllOf,
     "Order": Order,
     "OrderBySpec": OrderBySpec,
+    "OrderGraphBlock": OrderGraphBlock,
     "OrderInstruction": OrderInstruction,
     "OrderInstructionRequest": OrderInstructionRequest,
     "OrderInstructionSetRequest": OrderInstructionSetRequest,
@@ -1443,6 +1448,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfInstrument": PagedResourceListOfInstrument,
     "PagedResourceListOfLegalEntity": PagedResourceListOfLegalEntity,
     "PagedResourceListOfOrder": PagedResourceListOfOrder,
+    "PagedResourceListOfOrderGraphBlock": PagedResourceListOfOrderGraphBlock,
     "PagedResourceListOfOrderInstruction": PagedResourceListOfOrderInstruction,
     "PagedResourceListOfPackage": PagedResourceListOfPackage,
     "PagedResourceListOfParticipation": PagedResourceListOfParticipation,
