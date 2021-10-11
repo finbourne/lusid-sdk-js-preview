@@ -249,6 +249,7 @@ export * from './optionType';
 export * from './order';
 export * from './orderBySpec';
 export * from './orderGraphBlock';
+export * from './orderGraphSynopsis';
 export * from './orderInstruction';
 export * from './orderInstructionRequest';
 export * from './orderInstructionSetRequest';
@@ -753,6 +754,7 @@ import { OptionType } from './optionType';
 import { Order } from './order';
 import { OrderBySpec } from './orderBySpec';
 import { OrderGraphBlock } from './orderGraphBlock';
+import { OrderGraphSynopsis } from './orderGraphSynopsis';
 import { OrderInstruction } from './orderInstruction';
 import { OrderInstructionRequest } from './orderInstructionRequest';
 import { OrderInstructionSetRequest } from './orderInstructionSetRequest';
@@ -1422,6 +1424,7 @@ let typeMap: {[index: string]: any} = {
     "Order": Order,
     "OrderBySpec": OrderBySpec,
     "OrderGraphBlock": OrderGraphBlock,
+    "OrderGraphSynopsis": OrderGraphSynopsis,
     "OrderInstruction": OrderInstruction,
     "OrderInstructionRequest": OrderInstructionRequest,
     "OrderInstructionSetRequest": OrderInstructionSetRequest,

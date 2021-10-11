@@ -11,74 +11,24 @@
  */
 
 import { RequestFile } from './models';
-import { PerpetualProperty } from './perpetualProperty';
-import { TargetTaxLot } from './targetTaxLot';
 
-/**
-* The target holdings.
-*/
-export class HoldingAdjustment {
+export class OrderGraphSynopsis {
     /**
-    * A set of instrument identifiers that can resolve the holding adjustment to a unique instrument.
+    * Total number of units.
     */
-    'instrumentIdentifiers'?: { [key: string]: string; } | null;
-    /**
-    * The unqiue Lusid Instrument Id (LUID) of the instrument that the holding adjustment is in.
-    */
-    'instrumentUid': string;
-    /**
-    * The set of unique transaction properties and associated values stored with the holding adjustment transactions automatically created by LUSID. Each property will be from the \'Transaction\' domain.
-    */
-    'subHoldingKeys'?: { [key: string]: PerpetualProperty; } | null;
-    /**
-    * The set of unique holding properties and associated values stored with the target holding. Each property will be from the \'Holding\' domain.
-    */
-    'properties'?: { [key: string]: PerpetualProperty; } | null;
-    /**
-    * The tax-lots that together make up the target holding.
-    */
-    'taxLots': Array<TargetTaxLot>;
-    /**
-    * The Holding currency.
-    */
-    'currency'?: string | null;
+    'quantity': number;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "instrumentIdentifiers",
-            "baseName": "instrumentIdentifiers",
-            "type": "{ [key: string]: string; }"
-        },
-        {
-            "name": "instrumentUid",
-            "baseName": "instrumentUid",
-            "type": "string"
-        },
-        {
-            "name": "subHoldingKeys",
-            "baseName": "subHoldingKeys",
-            "type": "{ [key: string]: PerpetualProperty; }"
-        },
-        {
-            "name": "properties",
-            "baseName": "properties",
-            "type": "{ [key: string]: PerpetualProperty; }"
-        },
-        {
-            "name": "taxLots",
-            "baseName": "taxLots",
-            "type": "Array<TargetTaxLot>"
-        },
-        {
-            "name": "currency",
-            "baseName": "currency",
-            "type": "string"
+            "name": "quantity",
+            "baseName": "quantity",
+            "type": "number"
         }    ];
 
     static getAttributeTypeMap() {
-        return HoldingAdjustment.attributeTypeMap;
+        return OrderGraphSynopsis.attributeTypeMap;
     }
 }
 
