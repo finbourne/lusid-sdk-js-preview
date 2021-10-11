@@ -280,7 +280,6 @@ export * from './pagedResourceListOfPropertyDefinitionSearchResult';
 export * from './participation';
 export * from './participationRequest';
 export * from './participationSetRequest';
-export * from './payReceive';
 export * from './performanceReturn';
 export * from './performanceReturnsMetric';
 export * from './periodType';
@@ -785,7 +784,6 @@ import { PagedResourceListOfPropertyDefinitionSearchResult } from './pagedResour
 import { Participation } from './participation';
 import { ParticipationRequest } from './participationRequest';
 import { ParticipationSetRequest } from './participationSetRequest';
-import { PayReceive } from './payReceive';
 import { PerformanceReturn } from './performanceReturn';
 import { PerformanceReturnsMetric } from './performanceReturnsMetric';
 import { PeriodType } from './periodType';
@@ -1112,11 +1110,7 @@ let enumsMap: {[index: string]: any} = {
         "InstrumentType": InstrumentType,
         "InterestRateSwap.InstrumentTypeEnum": InterestRateSwap.InstrumentTypeEnum,
         "InterestRateSwapAllOf.InstrumentTypeEnum": InterestRateSwapAllOf.InstrumentTypeEnum,
-        "InterestRateSwaption.PayOrReceiveFixedEnum": InterestRateSwaption.PayOrReceiveFixedEnum,
-        "InterestRateSwaption.DeliveryMethodEnum": InterestRateSwaption.DeliveryMethodEnum,
         "InterestRateSwaption.InstrumentTypeEnum": InterestRateSwaption.InstrumentTypeEnum,
-        "InterestRateSwaptionAllOf.PayOrReceiveFixedEnum": InterestRateSwaptionAllOf.PayOrReceiveFixedEnum,
-        "InterestRateSwaptionAllOf.DeliveryMethodEnum": InterestRateSwaptionAllOf.DeliveryMethodEnum,
         "InterestRateSwaptionAllOf.InstrumentTypeEnum": InterestRateSwaptionAllOf.InstrumentTypeEnum,
         "IrVolCubeData.MarketDataTypeEnum": IrVolCubeData.MarketDataTypeEnum,
         "IrVolCubeDataAllOf.MarketDataTypeEnum": IrVolCubeDataAllOf.MarketDataTypeEnum,
@@ -1136,7 +1130,6 @@ let enumsMap: {[index: string]: any} = {
         "OptionType": OptionType,
         "OrderBySpec.SortOrderEnum": OrderBySpec.SortOrderEnum,
         "OutputTransaction.TransactionStatusEnum": OutputTransaction.TransactionStatusEnum,
-        "PayReceive": PayReceive,
         "PeriodType": PeriodType,
         "PerpetualEntityState": PerpetualEntityState,
         "Portfolio.TypeEnum": Portfolio.TypeEnum,
