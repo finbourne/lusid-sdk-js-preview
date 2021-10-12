@@ -11,27 +11,97 @@
  */
 
 import { RequestFile } from './models';
+import { ExchangeTradedOptionAllOf } from './exchangeTradedOptionAllOf';
+import { ExchangeTradedOptionContractDetails } from './exchangeTradedOptionContractDetails';
+import { LusidInstrument } from './lusidInstrument';
 
 /**
-* A list of scopes.
+* Exchange Traded Option Instrument; Lusid-ibor internal representation of an ET Option.
 */
-export class ScopeDefinition {
+export class ExchangeTradedOption extends LusidInstrument {
     /**
-    * The unique identifier for the scope.
+    * The start date of the instrument. This is normally synonymous with the trade-date.
     */
-    'scope': string;
+    'startDate': Date;
+    'contractDetails': ExchangeTradedOptionContractDetails;
+    /**
+    * The number of contracts held
+    */
+    'contracts': number;
+    /**
+    * The reference spot price for the option at which the contract was entered into.
+    */
+    'refSpotPrice': number;
+    /**
+    * The available values are: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, CrossCurrencySwap, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption
+    */
+    'instrumentType': ExchangeTradedOption.InstrumentTypeEnum;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "scope",
-            "baseName": "scope",
-            "type": "string"
+            "name": "startDate",
+            "baseName": "startDate",
+            "type": "Date"
+        },
+        {
+            "name": "contractDetails",
+            "baseName": "contractDetails",
+            "type": "ExchangeTradedOptionContractDetails"
+        },
+        {
+            "name": "contracts",
+            "baseName": "contracts",
+            "type": "number"
+        },
+        {
+            "name": "refSpotPrice",
+            "baseName": "refSpotPrice",
+            "type": "number"
+        },
+        {
+            "name": "instrumentType",
+            "baseName": "instrumentType",
+            "type": "ExchangeTradedOption.InstrumentTypeEnum"
         }    ];
 
     static getAttributeTypeMap() {
-        return ScopeDefinition.attributeTypeMap;
+        return super.getAttributeTypeMap().concat(ExchangeTradedOption.attributeTypeMap);
     }
 }
 
+export namespace ExchangeTradedOption {
+    export enum InstrumentTypeEnum {
+        QuotedSecurity = <any> 'QuotedSecurity',
+        InterestRateSwap = <any> 'InterestRateSwap',
+        FxForward = <any> 'FxForward',
+        Future = <any> 'Future',
+        ExoticInstrument = <any> 'ExoticInstrument',
+        FxOption = <any> 'FxOption',
+        CreditDefaultSwap = <any> 'CreditDefaultSwap',
+        InterestRateSwaption = <any> 'InterestRateSwaption',
+        Bond = <any> 'Bond',
+        EquityOption = <any> 'EquityOption',
+        FixedLeg = <any> 'FixedLeg',
+        FloatingLeg = <any> 'FloatingLeg',
+        BespokeCashFlowsLeg = <any> 'BespokeCashFlowsLeg',
+        Unknown = <any> 'Unknown',
+        TermDeposit = <any> 'TermDeposit',
+        ContractForDifference = <any> 'ContractForDifference',
+        EquitySwap = <any> 'EquitySwap',
+        CashPerpetual = <any> 'CashPerpetual',
+        CapFloor = <any> 'CapFloor',
+        CashSettled = <any> 'CashSettled',
+        CdsIndex = <any> 'CdsIndex',
+        Basket = <any> 'Basket',
+        FundingLeg = <any> 'FundingLeg',
+        CrossCurrencySwap = <any> 'CrossCurrencySwap',
+        FxSwap = <any> 'FxSwap',
+        ForwardRateAgreement = <any> 'ForwardRateAgreement',
+        SimpleInstrument = <any> 'SimpleInstrument',
+        Repo = <any> 'Repo',
+        Equity = <any> 'Equity',
+        ExchangeTradedOption = <any> 'ExchangeTradedOption'
+    }
+}
