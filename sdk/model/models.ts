@@ -127,8 +127,6 @@ export * from './deletedEntityResponse';
 export * from './deliveryType';
 export * from './discountFactorCurveData';
 export * from './discountFactorCurveDataAllOf';
-export * from './emptyModelOptions';
-export * from './emptyModelOptionsAllOf';
 export * from './equity';
 export * from './equityAllOf';
 export * from './equityAllOfIdentifiers';
@@ -242,16 +240,12 @@ export * from './marketIdentifier';
 export * from './marketOptions';
 export * from './marketQuote';
 export * from './metricValue';
-export * from './modelOptions';
-export * from './modelOptionsType';
 export * from './modelSelection';
 export * from './movementType';
 export * from './multiplier';
 export * from './nextValueInSequenceResponse';
 export * from './opaqueMarketData';
 export * from './opaqueMarketDataAllOf';
-export * from './opaqueModelOptions';
-export * from './opaqueModelOptionsAllOf';
 export * from './operandType';
 export * from './operator';
 export * from './optionType';
@@ -643,8 +637,6 @@ import { DeletedEntityResponse } from './deletedEntityResponse';
 import { DeliveryType } from './deliveryType';
 import { DiscountFactorCurveData } from './discountFactorCurveData';
 import { DiscountFactorCurveDataAllOf } from './discountFactorCurveDataAllOf';
-import { EmptyModelOptions } from './emptyModelOptions';
-import { EmptyModelOptionsAllOf } from './emptyModelOptionsAllOf';
 import { Equity } from './equity';
 import { EquityAllOf } from './equityAllOf';
 import { EquityAllOfIdentifiers } from './equityAllOfIdentifiers';
@@ -758,16 +750,12 @@ import { MarketIdentifier } from './marketIdentifier';
 import { MarketOptions } from './marketOptions';
 import { MarketQuote } from './marketQuote';
 import { MetricValue } from './metricValue';
-import { ModelOptions } from './modelOptions';
-import { ModelOptionsType } from './modelOptionsType';
 import { ModelSelection } from './modelSelection';
 import { MovementType } from './movementType';
 import { Multiplier } from './multiplier';
 import { NextValueInSequenceResponse } from './nextValueInSequenceResponse';
 import { OpaqueMarketData } from './opaqueMarketData';
 import { OpaqueMarketDataAllOf } from './opaqueMarketDataAllOf';
-import { OpaqueModelOptions } from './opaqueModelOptions';
-import { OpaqueModelOptionsAllOf } from './opaqueModelOptionsAllOf';
 import { OperandType } from './operandType';
 import { Operator } from './operator';
 import { OptionType } from './optionType';
@@ -1079,8 +1067,6 @@ let enumsMap: {[index: string]: any} = {
         "DeliveryType": DeliveryType,
         "DiscountFactorCurveData.MarketDataTypeEnum": DiscountFactorCurveData.MarketDataTypeEnum,
         "DiscountFactorCurveDataAllOf.MarketDataTypeEnum": DiscountFactorCurveDataAllOf.MarketDataTypeEnum,
-        "EmptyModelOptions.ModelOptionsTypeEnum": EmptyModelOptions.ModelOptionsTypeEnum,
-        "EmptyModelOptionsAllOf.ModelOptionsTypeEnum": EmptyModelOptionsAllOf.ModelOptionsTypeEnum,
         "Equity.InstrumentTypeEnum": Equity.InstrumentTypeEnum,
         "EquityAllOf.InstrumentTypeEnum": EquityAllOf.InstrumentTypeEnum,
         "EquityOption.DeliveryTypeEnum": EquityOption.DeliveryTypeEnum,
@@ -1147,16 +1133,12 @@ let enumsMap: {[index: string]: any} = {
         "MarketDataType": MarketDataType,
         "MarketIdentifier": MarketIdentifier,
         "MarketQuote.QuoteTypeEnum": MarketQuote.QuoteTypeEnum,
-        "ModelOptions.ModelOptionsTypeEnum": ModelOptions.ModelOptionsTypeEnum,
-        "ModelOptionsType": ModelOptionsType,
         "ModelSelection.LibraryEnum": ModelSelection.LibraryEnum,
         "ModelSelection.ModelEnum": ModelSelection.ModelEnum,
         "MovementType": MovementType,
         "Multiplier": Multiplier,
         "OpaqueMarketData.MarketDataTypeEnum": OpaqueMarketData.MarketDataTypeEnum,
         "OpaqueMarketDataAllOf.MarketDataTypeEnum": OpaqueMarketDataAllOf.MarketDataTypeEnum,
-        "OpaqueModelOptions.ModelOptionsTypeEnum": OpaqueModelOptions.ModelOptionsTypeEnum,
-        "OpaqueModelOptionsAllOf.ModelOptionsTypeEnum": OpaqueModelOptionsAllOf.ModelOptionsTypeEnum,
         "OperandType": OperandType,
         "Operator": Operator,
         "OptionType": OptionType,
@@ -1340,8 +1322,6 @@ let typeMap: {[index: string]: any} = {
     "DeletedEntityResponse": DeletedEntityResponse,
     "DiscountFactorCurveData": DiscountFactorCurveData,
     "DiscountFactorCurveDataAllOf": DiscountFactorCurveDataAllOf,
-    "EmptyModelOptions": EmptyModelOptions,
-    "EmptyModelOptionsAllOf": EmptyModelOptionsAllOf,
     "Equity": Equity,
     "EquityAllOf": EquityAllOf,
     "EquityAllOfIdentifiers": EquityAllOfIdentifiers,
@@ -1452,13 +1432,10 @@ let typeMap: {[index: string]: any} = {
     "MarketOptions": MarketOptions,
     "MarketQuote": MarketQuote,
     "MetricValue": MetricValue,
-    "ModelOptions": ModelOptions,
     "ModelSelection": ModelSelection,
     "NextValueInSequenceResponse": NextValueInSequenceResponse,
     "OpaqueMarketData": OpaqueMarketData,
     "OpaqueMarketDataAllOf": OpaqueMarketDataAllOf,
-    "OpaqueModelOptions": OpaqueModelOptions,
-    "OpaqueModelOptionsAllOf": OpaqueModelOptionsAllOf,
     "Order": Order,
     "OrderBySpec": OrderBySpec,
     "OrderGraphBlock": OrderGraphBlock,
