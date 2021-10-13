@@ -489,6 +489,8 @@ export * from './versionSummaryDto';
 export * from './versionedResourceListOfOutputTransaction';
 export * from './versionedResourceListOfPortfolioHolding';
 export * from './versionedResourceListOfTransaction';
+export * from './versionedResourceListWithWarningsOfPortfolioHolding';
+export * from './warning';
 export * from './weekendMask';
 export * from './weightedInstrument';
 export * from './weightedInstruments';
@@ -997,6 +999,8 @@ import { VersionSummaryDto } from './versionSummaryDto';
 import { VersionedResourceListOfOutputTransaction } from './versionedResourceListOfOutputTransaction';
 import { VersionedResourceListOfPortfolioHolding } from './versionedResourceListOfPortfolioHolding';
 import { VersionedResourceListOfTransaction } from './versionedResourceListOfTransaction';
+import { VersionedResourceListWithWarningsOfPortfolioHolding } from './versionedResourceListWithWarningsOfPortfolioHolding';
+import { Warning } from './warning';
 import { WeekendMask } from './weekendMask';
 import { WeightedInstrument } from './weightedInstrument';
 import { WeightedInstruments } from './weightedInstruments';
@@ -1651,6 +1655,8 @@ let typeMap: {[index: string]: any} = {
     "VersionedResourceListOfOutputTransaction": VersionedResourceListOfOutputTransaction,
     "VersionedResourceListOfPortfolioHolding": VersionedResourceListOfPortfolioHolding,
     "VersionedResourceListOfTransaction": VersionedResourceListOfTransaction,
+    "VersionedResourceListWithWarningsOfPortfolioHolding": VersionedResourceListWithWarningsOfPortfolioHolding,
+    "Warning": Warning,
     "WeekendMask": WeekendMask,
     "WeightedInstrument": WeightedInstrument,
     "WeightedInstruments": WeightedInstruments,
