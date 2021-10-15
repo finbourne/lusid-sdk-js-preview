@@ -60,6 +60,8 @@ export * from './completeRelation';
 export * from './completeRelationship';
 export * from './complexMarketData';
 export * from './complexMarketDataId';
+export * from './complianceRuleResult';
+export * from './complianceRun';
 export * from './configurationRecipe';
 export * from './configurationRecipeSnippet';
 export * from './constituentsAdjustmentHeader';
@@ -272,6 +274,8 @@ export * from './packageSetRequest';
 export * from './pagedResourceListOfAllocation';
 export * from './pagedResourceListOfBlock';
 export * from './pagedResourceListOfCalendar';
+export * from './pagedResourceListOfComplianceRuleResult';
+export * from './pagedResourceListOfComplianceRun';
 export * from './pagedResourceListOfCorporateActionSource';
 export * from './pagedResourceListOfCustomEntityResponse';
 export * from './pagedResourceListOfCutLabelDefinition';
@@ -578,6 +582,8 @@ import { CompleteRelation } from './completeRelation';
 import { CompleteRelationship } from './completeRelationship';
 import { ComplexMarketData } from './complexMarketData';
 import { ComplexMarketDataId } from './complexMarketDataId';
+import { ComplianceRuleResult } from './complianceRuleResult';
+import { ComplianceRun } from './complianceRun';
 import { ConfigurationRecipe } from './configurationRecipe';
 import { ConfigurationRecipeSnippet } from './configurationRecipeSnippet';
 import { ConstituentsAdjustmentHeader } from './constituentsAdjustmentHeader';
@@ -790,6 +796,8 @@ import { PackageSetRequest } from './packageSetRequest';
 import { PagedResourceListOfAllocation } from './pagedResourceListOfAllocation';
 import { PagedResourceListOfBlock } from './pagedResourceListOfBlock';
 import { PagedResourceListOfCalendar } from './pagedResourceListOfCalendar';
+import { PagedResourceListOfComplianceRuleResult } from './pagedResourceListOfComplianceRuleResult';
+import { PagedResourceListOfComplianceRun } from './pagedResourceListOfComplianceRun';
 import { PagedResourceListOfCorporateActionSource } from './pagedResourceListOfCorporateActionSource';
 import { PagedResourceListOfCustomEntityResponse } from './pagedResourceListOfCustomEntityResponse';
 import { PagedResourceListOfCutLabelDefinition } from './pagedResourceListOfCutLabelDefinition';
@@ -1280,6 +1288,8 @@ let typeMap: {[index: string]: any} = {
     "CompleteRelationship": CompleteRelationship,
     "ComplexMarketData": ComplexMarketData,
     "ComplexMarketDataId": ComplexMarketDataId,
+    "ComplianceRuleResult": ComplianceRuleResult,
+    "ComplianceRun": ComplianceRun,
     "ConfigurationRecipe": ConfigurationRecipe,
     "ConfigurationRecipeSnippet": ConfigurationRecipeSnippet,
     "ConstituentsAdjustmentHeader": ConstituentsAdjustmentHeader,
@@ -1480,6 +1490,8 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfAllocation": PagedResourceListOfAllocation,
     "PagedResourceListOfBlock": PagedResourceListOfBlock,
     "PagedResourceListOfCalendar": PagedResourceListOfCalendar,
+    "PagedResourceListOfComplianceRuleResult": PagedResourceListOfComplianceRuleResult,
+    "PagedResourceListOfComplianceRun": PagedResourceListOfComplianceRun,
     "PagedResourceListOfCorporateActionSource": PagedResourceListOfCorporateActionSource,
     "PagedResourceListOfCustomEntityResponse": PagedResourceListOfCustomEntityResponse,
     "PagedResourceListOfCutLabelDefinition": PagedResourceListOfCutLabelDefinition,
