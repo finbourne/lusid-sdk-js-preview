@@ -10,8 +10,6 @@ export * from './calendarsApi';
 import { CalendarsApi } from './calendarsApi';
 export * from './complexMarketDataApi';
 import { ComplexMarketDataApi } from './complexMarketDataApi';
-export * from './complianceApi';
-import { ComplianceApi } from './complianceApi';
 export * from './configurationRecipeApi';
 import { ConfigurationRecipeApi } from './configurationRecipeApi';
 export * from './conventionsApi';
@@ -97,4 +95,4 @@ import { TranslationApi } from './translationApi';
 
 export { RequestFile } from '../model/models';
 
-export const APIS = [AggregationApi, AllocationsApi, ApplicationMetadataApi, BlocksApi, CalendarsApi, ComplexMarketDataApi, ComplianceApi, ConfigurationRecipeApi, ConventionsApi, CorporateActionSourcesApi, CounterpartiesApi, CustomEntitiesApi, CustomEntityDefinitionsApi, CutLabelDefinitionsApi, DataTypesApi, DerivedTransactionPortfoliosApi, EntitiesApi, ExecutionsApi, FeesAndCommissionsApi, InstrumentsApi, LegalEntitiesApi, LoginApi, OrderGraphApi, OrderInstructionsApi, OrdersApi, PackagesApi, ParticipationsApi, PersonsApi, PlacementsApi, PortfolioGroupsApi, PortfoliosApi, PropertyDefinitionsApi, QuotesApi, ReconciliationsApi, ReferencePortfolioApi, RelationDefinitionsApi, RelationsApi, RelationshipDefinitionsApi, RelationshipsApi, SchemasApi, ScopesApi, SearchApi, SequencesApi, StructuredMarketDataApi, StructuredResultDataApi, SystemConfigurationApi, TransactionPortfoliosApi, TranslationApi];
+export const APIS = [AggregationApi, AllocationsApi, ApplicationMetadataApi, BlocksApi, CalendarsApi, ComplexMarketDataApi, ConfigurationRecipeApi, ConventionsApi, CorporateActionSourcesApi, CounterpartiesApi, CustomEntitiesApi, CustomEntityDefinitionsApi, CutLabelDefinitionsApi, DataTypesApi, DerivedTransactionPortfoliosApi, EntitiesApi, ExecutionsApi, FeesAndCommissionsApi, InstrumentsApi, LegalEntitiesApi, LoginApi, OrderGraphApi, OrderInstructionsApi, OrdersApi, PackagesApi, ParticipationsApi, PersonsApi, PlacementsApi, PortfolioGroupsApi, PortfoliosApi, PropertyDefinitionsApi, QuotesApi, ReconciliationsApi, ReferencePortfolioApi, RelationDefinitionsApi, RelationsApi, RelationshipDefinitionsApi, RelationshipsApi, SchemasApi, ScopesApi, SearchApi, SequencesApi, StructuredMarketDataApi, StructuredResultDataApi, SystemConfigurationApi, TransactionPortfoliosApi, TranslationApi];
