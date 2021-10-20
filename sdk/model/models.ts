@@ -151,7 +151,9 @@ export * from './exoticInstrument';
 export * from './exoticInstrumentAllOf';
 export * from './expandedGroup';
 export * from './feeCalculationDetails';
+export * from './fieldDefinition';
 export * from './fieldSchema';
+export * from './fieldValue';
 export * from './fileResponse';
 export * from './fixedLeg';
 export * from './fixedLegAllOf';
@@ -346,6 +348,7 @@ export * from './quoteType';
 export * from './realisedGainLoss';
 export * from './reconciliationBreak';
 export * from './reconciliationLeftRightAddressKeyPair';
+export * from './referenceData';
 export * from './referencePortfolioConstituent';
 export * from './referencePortfolioConstituentRequest';
 export * from './referencePortfolioWeightType';
@@ -673,7 +676,9 @@ import { ExoticInstrument } from './exoticInstrument';
 import { ExoticInstrumentAllOf } from './exoticInstrumentAllOf';
 import { ExpandedGroup } from './expandedGroup';
 import { FeeCalculationDetails } from './feeCalculationDetails';
+import { FieldDefinition } from './fieldDefinition';
 import { FieldSchema } from './fieldSchema';
+import { FieldValue } from './fieldValue';
 import { FileResponse } from './fileResponse';
 import { FixedLeg } from './fixedLeg';
 import { FixedLegAllOf } from './fixedLegAllOf';
@@ -868,6 +873,7 @@ import { QuoteType } from './quoteType';
 import { RealisedGainLoss } from './realisedGainLoss';
 import { ReconciliationBreak } from './reconciliationBreak';
 import { ReconciliationLeftRightAddressKeyPair } from './reconciliationLeftRightAddressKeyPair';
+import { ReferenceData } from './referenceData';
 import { ReferencePortfolioConstituent } from './referencePortfolioConstituent';
 import { ReferencePortfolioConstituentRequest } from './referencePortfolioConstituentRequest';
 import { ReferencePortfolioWeightType } from './referencePortfolioWeightType';
@@ -1376,7 +1382,9 @@ let typeMap: {[index: string]: any} = {
     "ExoticInstrumentAllOf": ExoticInstrumentAllOf,
     "ExpandedGroup": ExpandedGroup,
     "FeeCalculationDetails": FeeCalculationDetails,
+    "FieldDefinition": FieldDefinition,
     "FieldSchema": FieldSchema,
+    "FieldValue": FieldValue,
     "FileResponse": FileResponse,
     "FixedLeg": FixedLeg,
     "FixedLegAllOf": FixedLegAllOf,
@@ -1552,6 +1560,7 @@ let typeMap: {[index: string]: any} = {
     "RealisedGainLoss": RealisedGainLoss,
     "ReconciliationBreak": ReconciliationBreak,
     "ReconciliationLeftRightAddressKeyPair": ReconciliationLeftRightAddressKeyPair,
+    "ReferenceData": ReferenceData,
     "ReferencePortfolioConstituent": ReferencePortfolioConstituent,
     "ReferencePortfolioConstituentRequest": ReferencePortfolioConstituentRequest,
     "RelatedEntity": RelatedEntity,
