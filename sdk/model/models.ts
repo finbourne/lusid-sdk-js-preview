@@ -197,7 +197,6 @@ export * from './getInstrumentsResponse';
 export * from './getQuotesResponse';
 export * from './getRecipeResponse';
 export * from './getReferencePortfolioConstituentsResponse';
-export * from './getStructuredMarketDataResponse';
 export * from './getStructuredResultDataResponse';
 export * from './holdingAdjustment';
 export * from './holdingContext';
@@ -421,8 +420,6 @@ export * from './simpleInstrument';
 export * from './simpleInstrumentAllOf';
 export * from './sortOrder';
 export * from './stream';
-export * from './structuredMarketData';
-export * from './structuredMarketDataId';
 export * from './structuredResultData';
 export * from './structuredResultDataId';
 export * from './targetTaxLot';
@@ -489,7 +486,6 @@ export * from './upsertReferencePortfolioConstituentsResponse';
 export * from './upsertReturnsResponse';
 export * from './upsertSingleStructuredDataResponse';
 export * from './upsertStructuredDataResponse';
-export * from './upsertStructuredMarketDataRequest';
 export * from './upsertStructuredResultDataRequest';
 export * from './upsertTransactionPropertiesResponse';
 export * from './user';
@@ -722,7 +718,6 @@ import { GetInstrumentsResponse } from './getInstrumentsResponse';
 import { GetQuotesResponse } from './getQuotesResponse';
 import { GetRecipeResponse } from './getRecipeResponse';
 import { GetReferencePortfolioConstituentsResponse } from './getReferencePortfolioConstituentsResponse';
-import { GetStructuredMarketDataResponse } from './getStructuredMarketDataResponse';
 import { GetStructuredResultDataResponse } from './getStructuredResultDataResponse';
 import { HoldingAdjustment } from './holdingAdjustment';
 import { HoldingContext } from './holdingContext';
@@ -946,8 +941,6 @@ import { SimpleInstrument } from './simpleInstrument';
 import { SimpleInstrumentAllOf } from './simpleInstrumentAllOf';
 import { SortOrder } from './sortOrder';
 import { Stream } from './stream';
-import { StructuredMarketData } from './structuredMarketData';
-import { StructuredMarketDataId } from './structuredMarketDataId';
 import { StructuredResultData } from './structuredResultData';
 import { StructuredResultDataId } from './structuredResultDataId';
 import { TargetTaxLot } from './targetTaxLot';
@@ -1014,7 +1007,6 @@ import { UpsertReferencePortfolioConstituentsResponse } from './upsertReferenceP
 import { UpsertReturnsResponse } from './upsertReturnsResponse';
 import { UpsertSingleStructuredDataResponse } from './upsertSingleStructuredDataResponse';
 import { UpsertStructuredDataResponse } from './upsertStructuredDataResponse';
-import { UpsertStructuredMarketDataRequest } from './upsertStructuredMarketDataRequest';
 import { UpsertStructuredResultDataRequest } from './upsertStructuredResultDataRequest';
 import { UpsertTransactionPropertiesResponse } from './upsertTransactionPropertiesResponse';
 import { User } from './user';
@@ -1428,7 +1420,6 @@ let typeMap: {[index: string]: any} = {
     "GetQuotesResponse": GetQuotesResponse,
     "GetRecipeResponse": GetRecipeResponse,
     "GetReferencePortfolioConstituentsResponse": GetReferencePortfolioConstituentsResponse,
-    "GetStructuredMarketDataResponse": GetStructuredMarketDataResponse,
     "GetStructuredResultDataResponse": GetStructuredResultDataResponse,
     "HoldingAdjustment": HoldingAdjustment,
     "HoldingContext": HoldingContext,
@@ -1631,8 +1622,6 @@ let typeMap: {[index: string]: any} = {
     "SimpleInstrument": SimpleInstrument,
     "SimpleInstrumentAllOf": SimpleInstrumentAllOf,
     "Stream": Stream,
-    "StructuredMarketData": StructuredMarketData,
-    "StructuredMarketDataId": StructuredMarketDataId,
     "StructuredResultData": StructuredResultData,
     "StructuredResultDataId": StructuredResultDataId,
     "TargetTaxLot": TargetTaxLot,
@@ -1692,7 +1681,6 @@ let typeMap: {[index: string]: any} = {
     "UpsertReturnsResponse": UpsertReturnsResponse,
     "UpsertSingleStructuredDataResponse": UpsertSingleStructuredDataResponse,
     "UpsertStructuredDataResponse": UpsertStructuredDataResponse,
-    "UpsertStructuredMarketDataRequest": UpsertStructuredMarketDataRequest,
     "UpsertStructuredResultDataRequest": UpsertStructuredResultDataRequest,
     "UpsertTransactionPropertiesResponse": UpsertTransactionPropertiesResponse,
     "User": User,
