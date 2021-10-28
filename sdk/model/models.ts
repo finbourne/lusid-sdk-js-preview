@@ -206,6 +206,8 @@ export * from './iUnitDefinitionDto';
 export * from './idSelectorDefinition';
 export * from './identifierPartSchema';
 export * from './indexConvention';
+export * from './indexModelOptions';
+export * from './indexModelOptionsAllOf';
 export * from './industryClassifier';
 export * from './inlineValuationRequest';
 export * from './inlineValuationsReconciliationRequest';
@@ -409,6 +411,7 @@ export * from './resourceListOfTransaction';
 export * from './resourceListOfValueType';
 export * from './resultDataKeyRule';
 export * from './resultDataSchema';
+export * from './scalingMethodology';
 export * from './schema';
 export * from './scopeDefinition';
 export * from './sequenceDefinition';
@@ -727,6 +730,8 @@ import { IUnitDefinitionDto } from './iUnitDefinitionDto';
 import { IdSelectorDefinition } from './idSelectorDefinition';
 import { IdentifierPartSchema } from './identifierPartSchema';
 import { IndexConvention } from './indexConvention';
+import { IndexModelOptions } from './indexModelOptions';
+import { IndexModelOptionsAllOf } from './indexModelOptionsAllOf';
 import { IndustryClassifier } from './industryClassifier';
 import { InlineValuationRequest } from './inlineValuationRequest';
 import { InlineValuationsReconciliationRequest } from './inlineValuationsReconciliationRequest';
@@ -930,6 +935,7 @@ import { ResourceListOfTransaction } from './resourceListOfTransaction';
 import { ResourceListOfValueType } from './resourceListOfValueType';
 import { ResultDataKeyRule } from './resultDataKeyRule';
 import { ResultDataSchema } from './resultDataSchema';
+import { ScalingMethodology } from './scalingMethodology';
 import { Schema } from './schema';
 import { ScopeDefinition } from './scopeDefinition';
 import { SequenceDefinition } from './sequenceDefinition';
@@ -1142,6 +1148,10 @@ let enumsMap: {[index: string]: any} = {
         "HoldingsAdjustment.UnmatchedHoldingMethodEnum": HoldingsAdjustment.UnmatchedHoldingMethodEnum,
         "HoldingsAdjustmentHeader.UnmatchedHoldingMethodEnum": HoldingsAdjustmentHeader.UnmatchedHoldingMethodEnum,
         "IUnitDefinitionDto.SchemaEnum": IUnitDefinitionDto.SchemaEnum,
+        "IndexModelOptions.PortfolioScalingEnum": IndexModelOptions.PortfolioScalingEnum,
+        "IndexModelOptions.ModelOptionsTypeEnum": IndexModelOptions.ModelOptionsTypeEnum,
+        "IndexModelOptionsAllOf.PortfolioScalingEnum": IndexModelOptionsAllOf.PortfolioScalingEnum,
+        "IndexModelOptionsAllOf.ModelOptionsTypeEnum": IndexModelOptionsAllOf.ModelOptionsTypeEnum,
         "Instrument.StateEnum": Instrument.StateEnum,
         "InstrumentLeg.InstrumentTypeEnum": InstrumentLeg.InstrumentTypeEnum,
         "InstrumentLegAllOf.InstrumentTypeEnum": InstrumentLegAllOf.InstrumentTypeEnum,
@@ -1203,6 +1213,7 @@ let enumsMap: {[index: string]: any} = {
         "ReferencePortfolioWeightType": ReferencePortfolioWeightType,
         "Repo.InstrumentTypeEnum": Repo.InstrumentTypeEnum,
         "RepoAllOf.InstrumentTypeEnum": RepoAllOf.InstrumentTypeEnum,
+        "ScalingMethodology": ScalingMethodology,
         "SimpleInstrument.AssetClassEnum": SimpleInstrument.AssetClassEnum,
         "SimpleInstrument.InstrumentTypeEnum": SimpleInstrument.InstrumentTypeEnum,
         "SimpleInstrumentAllOf.AssetClassEnum": SimpleInstrumentAllOf.AssetClassEnum,
@@ -1429,6 +1440,8 @@ let typeMap: {[index: string]: any} = {
     "IdSelectorDefinition": IdSelectorDefinition,
     "IdentifierPartSchema": IdentifierPartSchema,
     "IndexConvention": IndexConvention,
+    "IndexModelOptions": IndexModelOptions,
+    "IndexModelOptionsAllOf": IndexModelOptionsAllOf,
     "IndustryClassifier": IndustryClassifier,
     "InlineValuationRequest": InlineValuationRequest,
     "InlineValuationsReconciliationRequest": InlineValuationsReconciliationRequest,
