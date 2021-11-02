@@ -361,8 +361,6 @@ export * from './relationshipDefinition';
 export * from './repo';
 export * from './repoAllOf';
 export * from './resourceId';
-export * from './resourceListOfA2BDataRecord';
-export * from './resourceListOfA2BMovementRecord';
 export * from './resourceListOfAccessControlledResource';
 export * from './resourceListOfAccessMetadataValueOf';
 export * from './resourceListOfAggregatedReturn';
@@ -500,6 +498,8 @@ export * from './vendorLibrary';
 export * from './vendorModelRule';
 export * from './version';
 export * from './versionSummaryDto';
+export * from './versionedResourceListOfA2BDataRecord';
+export * from './versionedResourceListOfA2BMovementRecord';
 export * from './versionedResourceListOfOutputTransaction';
 export * from './versionedResourceListOfPortfolioHolding';
 export * from './versionedResourceListOfTransaction';
@@ -885,8 +885,6 @@ import { RelationshipDefinition } from './relationshipDefinition';
 import { Repo } from './repo';
 import { RepoAllOf } from './repoAllOf';
 import { ResourceId } from './resourceId';
-import { ResourceListOfA2BDataRecord } from './resourceListOfA2BDataRecord';
-import { ResourceListOfA2BMovementRecord } from './resourceListOfA2BMovementRecord';
 import { ResourceListOfAccessControlledResource } from './resourceListOfAccessControlledResource';
 import { ResourceListOfAccessMetadataValueOf } from './resourceListOfAccessMetadataValueOf';
 import { ResourceListOfAggregatedReturn } from './resourceListOfAggregatedReturn';
@@ -1024,6 +1022,8 @@ import { VendorLibrary } from './vendorLibrary';
 import { VendorModelRule } from './vendorModelRule';
 import { Version } from './version';
 import { VersionSummaryDto } from './versionSummaryDto';
+import { VersionedResourceListOfA2BDataRecord } from './versionedResourceListOfA2BDataRecord';
+import { VersionedResourceListOfA2BMovementRecord } from './versionedResourceListOfA2BMovementRecord';
 import { VersionedResourceListOfOutputTransaction } from './versionedResourceListOfOutputTransaction';
 import { VersionedResourceListOfPortfolioHolding } from './versionedResourceListOfPortfolioHolding';
 import { VersionedResourceListOfTransaction } from './versionedResourceListOfTransaction';
@@ -1575,8 +1575,6 @@ let typeMap: {[index: string]: any} = {
     "Repo": Repo,
     "RepoAllOf": RepoAllOf,
     "ResourceId": ResourceId,
-    "ResourceListOfA2BDataRecord": ResourceListOfA2BDataRecord,
-    "ResourceListOfA2BMovementRecord": ResourceListOfA2BMovementRecord,
     "ResourceListOfAccessControlledResource": ResourceListOfAccessControlledResource,
     "ResourceListOfAccessMetadataValueOf": ResourceListOfAccessMetadataValueOf,
     "ResourceListOfAggregatedReturn": ResourceListOfAggregatedReturn,
@@ -1703,6 +1701,8 @@ let typeMap: {[index: string]: any} = {
     "VendorModelRule": VendorModelRule,
     "Version": Version,
     "VersionSummaryDto": VersionSummaryDto,
+    "VersionedResourceListOfA2BDataRecord": VersionedResourceListOfA2BDataRecord,
+    "VersionedResourceListOfA2BMovementRecord": VersionedResourceListOfA2BMovementRecord,
     "VersionedResourceListOfOutputTransaction": VersionedResourceListOfOutputTransaction,
     "VersionedResourceListOfPortfolioHolding": VersionedResourceListOfPortfolioHolding,
     "VersionedResourceListOfTransaction": VersionedResourceListOfTransaction,
