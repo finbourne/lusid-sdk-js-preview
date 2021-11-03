@@ -1153,6 +1153,7 @@ let enumsMap: {[index: string]: any} = {
         "IndexModelOptionsAllOf.PortfolioScalingEnum": IndexModelOptionsAllOf.PortfolioScalingEnum,
         "IndexModelOptionsAllOf.ModelOptionsTypeEnum": IndexModelOptionsAllOf.ModelOptionsTypeEnum,
         "Instrument.StateEnum": Instrument.StateEnum,
+        "Instrument.AssetClassEnum": Instrument.AssetClassEnum,
         "InstrumentLeg.InstrumentTypeEnum": InstrumentLeg.InstrumentTypeEnum,
         "InstrumentLegAllOf.InstrumentTypeEnum": InstrumentLegAllOf.InstrumentTypeEnum,
         "InstrumentType": InstrumentType,
