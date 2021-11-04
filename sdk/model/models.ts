@@ -120,6 +120,7 @@ export * from './dataType';
 export * from './dataTypeValueRange';
 export * from './dateAttributes';
 export * from './dateRange';
+export * from './dateTimeComparisonType';
 export * from './dayOfWeek';
 export * from './deleteInstrumentPropertiesResponse';
 export * from './deleteInstrumentResponse';
@@ -202,6 +203,7 @@ export * from './holdingAdjustment';
 export * from './holdingContext';
 export * from './holdingsAdjustment';
 export * from './holdingsAdjustmentHeader';
+export * from './iDataRecord';
 export * from './iUnitDefinitionDto';
 export * from './idSelectorDefinition';
 export * from './identifierPartSchema';
@@ -253,6 +255,7 @@ export * from './modelSelection';
 export * from './movementType';
 export * from './multiplier';
 export * from './nextValueInSequenceResponse';
+export * from './numericComparisonType';
 export * from './opaqueMarketData';
 export * from './opaqueMarketDataAllOf';
 export * from './opaqueModelOptions';
@@ -347,8 +350,19 @@ export * from './quoteInstrumentIdType';
 export * from './quoteSeriesId';
 export * from './quoteType';
 export * from './realisedGainLoss';
+export * from './reconcileDateTimeRule';
+export * from './reconcileDateTimeRuleAllOf';
+export * from './reconcileNumericRule';
+export * from './reconcileNumericRuleAllOf';
+export * from './reconcileStringRule';
+export * from './reconcileStringRuleAllOf';
 export * from './reconciliationBreak';
 export * from './reconciliationLeftRightAddressKeyPair';
+export * from './reconciliationLine';
+export * from './reconciliationRequest';
+export * from './reconciliationResponse';
+export * from './reconciliationRule';
+export * from './reconciliationRuleType';
 export * from './referenceData';
 export * from './referencePortfolioConstituent';
 export * from './referencePortfolioConstituentRequest';
@@ -421,6 +435,7 @@ export * from './simpleInstrument';
 export * from './simpleInstrumentAllOf';
 export * from './sortOrder';
 export * from './stream';
+export * from './stringComparisonType';
 export * from './structuredResultData';
 export * from './structuredResultDataId';
 export * from './targetTaxLot';
@@ -644,6 +659,7 @@ import { DataType } from './dataType';
 import { DataTypeValueRange } from './dataTypeValueRange';
 import { DateAttributes } from './dateAttributes';
 import { DateRange } from './dateRange';
+import { DateTimeComparisonType } from './dateTimeComparisonType';
 import { DayOfWeek } from './dayOfWeek';
 import { DeleteInstrumentPropertiesResponse } from './deleteInstrumentPropertiesResponse';
 import { DeleteInstrumentResponse } from './deleteInstrumentResponse';
@@ -726,6 +742,7 @@ import { HoldingAdjustment } from './holdingAdjustment';
 import { HoldingContext } from './holdingContext';
 import { HoldingsAdjustment } from './holdingsAdjustment';
 import { HoldingsAdjustmentHeader } from './holdingsAdjustmentHeader';
+import { IDataRecord } from './iDataRecord';
 import { IUnitDefinitionDto } from './iUnitDefinitionDto';
 import { IdSelectorDefinition } from './idSelectorDefinition';
 import { IdentifierPartSchema } from './identifierPartSchema';
@@ -777,6 +794,7 @@ import { ModelSelection } from './modelSelection';
 import { MovementType } from './movementType';
 import { Multiplier } from './multiplier';
 import { NextValueInSequenceResponse } from './nextValueInSequenceResponse';
+import { NumericComparisonType } from './numericComparisonType';
 import { OpaqueMarketData } from './opaqueMarketData';
 import { OpaqueMarketDataAllOf } from './opaqueMarketDataAllOf';
 import { OpaqueModelOptions } from './opaqueModelOptions';
@@ -871,8 +889,19 @@ import { QuoteInstrumentIdType } from './quoteInstrumentIdType';
 import { QuoteSeriesId } from './quoteSeriesId';
 import { QuoteType } from './quoteType';
 import { RealisedGainLoss } from './realisedGainLoss';
+import { ReconcileDateTimeRule } from './reconcileDateTimeRule';
+import { ReconcileDateTimeRuleAllOf } from './reconcileDateTimeRuleAllOf';
+import { ReconcileNumericRule } from './reconcileNumericRule';
+import { ReconcileNumericRuleAllOf } from './reconcileNumericRuleAllOf';
+import { ReconcileStringRule } from './reconcileStringRule';
+import { ReconcileStringRuleAllOf } from './reconcileStringRuleAllOf';
 import { ReconciliationBreak } from './reconciliationBreak';
 import { ReconciliationLeftRightAddressKeyPair } from './reconciliationLeftRightAddressKeyPair';
+import { ReconciliationLine } from './reconciliationLine';
+import { ReconciliationRequest } from './reconciliationRequest';
+import { ReconciliationResponse } from './reconciliationResponse';
+import { ReconciliationRule } from './reconciliationRule';
+import { ReconciliationRuleType } from './reconciliationRuleType';
 import { ReferenceData } from './referenceData';
 import { ReferencePortfolioConstituent } from './referencePortfolioConstituent';
 import { ReferencePortfolioConstituentRequest } from './referencePortfolioConstituentRequest';
@@ -945,6 +974,7 @@ import { SimpleInstrument } from './simpleInstrument';
 import { SimpleInstrumentAllOf } from './simpleInstrumentAllOf';
 import { SortOrder } from './sortOrder';
 import { Stream } from './stream';
+import { StringComparisonType } from './stringComparisonType';
 import { StructuredResultData } from './structuredResultData';
 import { StructuredResultDataId } from './structuredResultDataId';
 import { TargetTaxLot } from './targetTaxLot';
@@ -1091,6 +1121,7 @@ let enumsMap: {[index: string]: any} = {
         "DataType.ValueTypeEnum": DataType.ValueTypeEnum,
         "DataType.UnitSchemaEnum": DataType.UnitSchemaEnum,
         "DataTypeValueRange": DataTypeValueRange,
+        "DateTimeComparisonType": DateTimeComparisonType,
         "DayOfWeek": DayOfWeek,
         "DeliveryType": DeliveryType,
         "DiscountFactorCurveData.MarketDataTypeEnum": DiscountFactorCurveData.MarketDataTypeEnum,
@@ -1174,6 +1205,7 @@ let enumsMap: {[index: string]: any} = {
         "ModelSelection.ModelEnum": ModelSelection.ModelEnum,
         "MovementType": MovementType,
         "Multiplier": Multiplier,
+        "NumericComparisonType": NumericComparisonType,
         "OpaqueMarketData.MarketDataTypeEnum": OpaqueMarketData.MarketDataTypeEnum,
         "OpaqueMarketDataAllOf.MarketDataTypeEnum": OpaqueMarketDataAllOf.MarketDataTypeEnum,
         "OpaqueModelOptions.ModelOptionsTypeEnum": OpaqueModelOptions.ModelOptionsTypeEnum,
@@ -1211,6 +1243,20 @@ let enumsMap: {[index: string]: any} = {
         "QuoteSeriesId.InstrumentIdTypeEnum": QuoteSeriesId.InstrumentIdTypeEnum,
         "QuoteSeriesId.QuoteTypeEnum": QuoteSeriesId.QuoteTypeEnum,
         "QuoteType": QuoteType,
+        "ReconcileDateTimeRule.ComparisonTypeEnum": ReconcileDateTimeRule.ComparisonTypeEnum,
+        "ReconcileDateTimeRule.RuleTypeEnum": ReconcileDateTimeRule.RuleTypeEnum,
+        "ReconcileDateTimeRuleAllOf.ComparisonTypeEnum": ReconcileDateTimeRuleAllOf.ComparisonTypeEnum,
+        "ReconcileDateTimeRuleAllOf.RuleTypeEnum": ReconcileDateTimeRuleAllOf.RuleTypeEnum,
+        "ReconcileNumericRule.ComparisonTypeEnum": ReconcileNumericRule.ComparisonTypeEnum,
+        "ReconcileNumericRule.RuleTypeEnum": ReconcileNumericRule.RuleTypeEnum,
+        "ReconcileNumericRuleAllOf.ComparisonTypeEnum": ReconcileNumericRuleAllOf.ComparisonTypeEnum,
+        "ReconcileNumericRuleAllOf.RuleTypeEnum": ReconcileNumericRuleAllOf.RuleTypeEnum,
+        "ReconcileStringRule.ComparisonTypeEnum": ReconcileStringRule.ComparisonTypeEnum,
+        "ReconcileStringRule.RuleTypeEnum": ReconcileStringRule.RuleTypeEnum,
+        "ReconcileStringRuleAllOf.ComparisonTypeEnum": ReconcileStringRuleAllOf.ComparisonTypeEnum,
+        "ReconcileStringRuleAllOf.RuleTypeEnum": ReconcileStringRuleAllOf.RuleTypeEnum,
+        "ReconciliationRule.RuleTypeEnum": ReconciliationRule.RuleTypeEnum,
+        "ReconciliationRuleType": ReconciliationRuleType,
         "ReferencePortfolioWeightType": ReferencePortfolioWeightType,
         "Repo.InstrumentTypeEnum": Repo.InstrumentTypeEnum,
         "RepoAllOf.InstrumentTypeEnum": RepoAllOf.InstrumentTypeEnum,
@@ -1220,6 +1266,7 @@ let enumsMap: {[index: string]: any} = {
         "SimpleInstrumentAllOf.AssetClassEnum": SimpleInstrumentAllOf.AssetClassEnum,
         "SimpleInstrumentAllOf.InstrumentTypeEnum": SimpleInstrumentAllOf.InstrumentTypeEnum,
         "SortOrder": SortOrder,
+        "StringComparisonType": StringComparisonType,
         "TermDeposit.InstrumentTypeEnum": TermDeposit.InstrumentTypeEnum,
         "TermDepositAllOf.InstrumentTypeEnum": TermDepositAllOf.InstrumentTypeEnum,
         "Tolerance.TypeEnum": Tolerance.TypeEnum,
@@ -1437,6 +1484,7 @@ let typeMap: {[index: string]: any} = {
     "HoldingContext": HoldingContext,
     "HoldingsAdjustment": HoldingsAdjustment,
     "HoldingsAdjustmentHeader": HoldingsAdjustmentHeader,
+    "IDataRecord": IDataRecord,
     "IUnitDefinitionDto": IUnitDefinitionDto,
     "IdSelectorDefinition": IdSelectorDefinition,
     "IdentifierPartSchema": IdentifierPartSchema,
@@ -1563,8 +1611,18 @@ let typeMap: {[index: string]: any} = {
     "QuoteId": QuoteId,
     "QuoteSeriesId": QuoteSeriesId,
     "RealisedGainLoss": RealisedGainLoss,
+    "ReconcileDateTimeRule": ReconcileDateTimeRule,
+    "ReconcileDateTimeRuleAllOf": ReconcileDateTimeRuleAllOf,
+    "ReconcileNumericRule": ReconcileNumericRule,
+    "ReconcileNumericRuleAllOf": ReconcileNumericRuleAllOf,
+    "ReconcileStringRule": ReconcileStringRule,
+    "ReconcileStringRuleAllOf": ReconcileStringRuleAllOf,
     "ReconciliationBreak": ReconciliationBreak,
     "ReconciliationLeftRightAddressKeyPair": ReconciliationLeftRightAddressKeyPair,
+    "ReconciliationLine": ReconciliationLine,
+    "ReconciliationRequest": ReconciliationRequest,
+    "ReconciliationResponse": ReconciliationResponse,
+    "ReconciliationRule": ReconciliationRule,
     "ReferenceData": ReferenceData,
     "ReferencePortfolioConstituent": ReferencePortfolioConstituent,
     "ReferencePortfolioConstituentRequest": ReferencePortfolioConstituentRequest,
