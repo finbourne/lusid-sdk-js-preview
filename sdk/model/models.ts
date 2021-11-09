@@ -429,6 +429,8 @@ export * from './scopeDefinition';
 export * from './sequenceDefinition';
 export * from './setPersonIdentifiersRequest';
 export * from './setPersonPropertiesRequest';
+export * from './setTransactionConfigurationAlias';
+export * from './setTransactionConfigurationSourceRequest';
 export * from './sideConfigurationData';
 export * from './sideConfigurationDataRequest';
 export * from './simpleInstrument';
@@ -968,6 +970,8 @@ import { ScopeDefinition } from './scopeDefinition';
 import { SequenceDefinition } from './sequenceDefinition';
 import { SetPersonIdentifiersRequest } from './setPersonIdentifiersRequest';
 import { SetPersonPropertiesRequest } from './setPersonPropertiesRequest';
+import { SetTransactionConfigurationAlias } from './setTransactionConfigurationAlias';
+import { SetTransactionConfigurationSourceRequest } from './setTransactionConfigurationSourceRequest';
 import { SideConfigurationData } from './sideConfigurationData';
 import { SideConfigurationDataRequest } from './sideConfigurationDataRequest';
 import { SimpleInstrument } from './simpleInstrument';
@@ -1687,6 +1691,8 @@ let typeMap: {[index: string]: any} = {
     "SequenceDefinition": SequenceDefinition,
     "SetPersonIdentifiersRequest": SetPersonIdentifiersRequest,
     "SetPersonPropertiesRequest": SetPersonPropertiesRequest,
+    "SetTransactionConfigurationAlias": SetTransactionConfigurationAlias,
+    "SetTransactionConfigurationSourceRequest": SetTransactionConfigurationSourceRequest,
     "SideConfigurationData": SideConfigurationData,
     "SideConfigurationDataRequest": SideConfigurationDataRequest,
     "SimpleInstrument": SimpleInstrument,
