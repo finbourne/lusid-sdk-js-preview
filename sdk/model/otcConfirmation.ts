@@ -12,99 +12,26 @@
 
 import { RequestFile } from './models';
 
-export class AggregationQuery {
+/**
+* For the storage of any information pertinent to the confirmation of an OTC trade. e.g the Counterparty Agreement Code
+*/
+export class OtcConfirmation {
     /**
-    * The address that is the query to be made into the system. e.g. a Valuation/Pv or Instrument/MaturityDate
+    * The counterparty party agreement code used to identify and retrieve the specific Counterparty Agreement that governs a transaction
     */
-    'addressKey': string;
-    /**
-    * What does the information that is being queried by the address mean. What is the address for.
-    */
-    'description': string;
-    /**
-    * The suggested name that the user would wish to put on to the returned information for visualisation in preference to the address.
-    */
-    'displayName': string;
-    /**
-    * The available values are: String, Int, Decimal, DateTime, Boolean, ResultValue, Array, Map, Json
-    */
-    'type': AggregationQuery.TypeEnum;
-    /**
-    * Is the data scaled when it is for, e.g. a holding in an instrument. A key example would be the difference between price and pv. The present value  of an instrument would scale with the quantity held. The price would be that for a hypothetical unit of that instrument, typically associated with the  contract size.
-    */
-    'scalesWithHoldingQuantity': boolean;
-    /**
-    * When performing an aggregation operation, what column type operations can be performed on the data. For example, it makes sense to sum decimals but  not strings. Either can be counted. With more complex types, e.g. ResultValues, operations may be linked to a semantic meaning such as the currency  of the result. In such cases the operations may be supported but context specific. For example, it makes sense to sum PVs in a single currency but not  when the currency is different. In such cases, an error would result (it being assumed that no fx rates for currency conversion were implicit in the context).
-    */
-    'supportedOperations': string;
-    /**
-    * Within an API where an item can be accessed through an address or property, there is an associated status that determines  whether the item is stable or likely to change. This status is one of [Experimental, Beta, EAP, Prod,  Deprecated]. If the item is  deprecated it will be removed on or after the associated DateTime RemovalDate field. That field will not otherwise be set.
-    */
-    'lifeCycleStatus': string;
-    /**
-    * If the life cycle status is set to deprecated then this will be populated with the date on or after which removal of the address query will happen
-    */
-    'removalDate': Date;
+    'counterpartyAgreementCode'?: string | null;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "addressKey",
-            "baseName": "addressKey",
+            "name": "counterpartyAgreementCode",
+            "baseName": "counterpartyAgreementCode",
             "type": "string"
-        },
-        {
-            "name": "description",
-            "baseName": "description",
-            "type": "string"
-        },
-        {
-            "name": "displayName",
-            "baseName": "displayName",
-            "type": "string"
-        },
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "AggregationQuery.TypeEnum"
-        },
-        {
-            "name": "scalesWithHoldingQuantity",
-            "baseName": "scalesWithHoldingQuantity",
-            "type": "boolean"
-        },
-        {
-            "name": "supportedOperations",
-            "baseName": "supportedOperations",
-            "type": "string"
-        },
-        {
-            "name": "lifeCycleStatus",
-            "baseName": "lifeCycleStatus",
-            "type": "string"
-        },
-        {
-            "name": "removalDate",
-            "baseName": "removalDate",
-            "type": "Date"
         }    ];
 
     static getAttributeTypeMap() {
-        return AggregationQuery.attributeTypeMap;
+        return OtcConfirmation.attributeTypeMap;
     }
 }
 
-export namespace AggregationQuery {
-    export enum TypeEnum {
-        String = <any> 'String',
-        Int = <any> 'Int',
-        Decimal = <any> 'Decimal',
-        DateTime = <any> 'DateTime',
-        Boolean = <any> 'Boolean',
-        ResultValue = <any> 'ResultValue',
-        Array = <any> 'Array',
-        Map = <any> 'Map',
-        Json = <any> 'Json'
-    }
-}

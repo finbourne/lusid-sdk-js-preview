@@ -273,6 +273,7 @@ export * from './orderInstructionRequest';
 export * from './orderInstructionSetRequest';
 export * from './orderRequest';
 export * from './orderSetRequest';
+export * from './otcConfirmation';
 export * from './outputTransaction';
 export * from './package';
 export * from './packageRequest';
@@ -814,6 +815,7 @@ import { OrderInstructionRequest } from './orderInstructionRequest';
 import { OrderInstructionSetRequest } from './orderInstructionSetRequest';
 import { OrderRequest } from './orderRequest';
 import { OrderSetRequest } from './orderSetRequest';
+import { OtcConfirmation } from './otcConfirmation';
 import { OutputTransaction } from './outputTransaction';
 import { Package } from './package';
 import { PackageRequest } from './packageRequest';
@@ -1548,6 +1550,7 @@ let typeMap: {[index: string]: any} = {
     "OrderInstructionSetRequest": OrderInstructionSetRequest,
     "OrderRequest": OrderRequest,
     "OrderSetRequest": OrderSetRequest,
+    "OtcConfirmation": OtcConfirmation,
     "OutputTransaction": OutputTransaction,
     "Package": Package,
     "PackageRequest": PackageRequest,
