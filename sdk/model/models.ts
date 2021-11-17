@@ -130,6 +130,7 @@ export * from './deletedEntityResponse';
 export * from './deliveryType';
 export * from './discountFactorCurveData';
 export * from './discountFactorCurveDataAllOf';
+export * from './discountingMethod';
 export * from './emptyModelOptions';
 export * from './emptyModelOptionsAllOf';
 export * from './equity';
@@ -176,6 +177,8 @@ export * from './fxForwardCurveByQuoteReference';
 export * from './fxForwardCurveByQuoteReferenceAllOf';
 export * from './fxForwardCurveData';
 export * from './fxForwardCurveDataAllOf';
+export * from './fxForwardModelOptions';
+export * from './fxForwardModelOptionsAllOf';
 export * from './fxForwardPipsCurveData';
 export * from './fxForwardPipsCurveDataAllOf';
 export * from './fxForwardTenorCurveData';
@@ -246,6 +249,7 @@ export * from './marketContextSuppliers';
 export * from './marketDataKeyRule';
 export * from './marketDataType';
 export * from './marketIdentifier';
+export * from './marketObservableType';
 export * from './marketOptions';
 export * from './marketQuote';
 export * from './metricValue';
@@ -672,6 +676,7 @@ import { DeletedEntityResponse } from './deletedEntityResponse';
 import { DeliveryType } from './deliveryType';
 import { DiscountFactorCurveData } from './discountFactorCurveData';
 import { DiscountFactorCurveDataAllOf } from './discountFactorCurveDataAllOf';
+import { DiscountingMethod } from './discountingMethod';
 import { EmptyModelOptions } from './emptyModelOptions';
 import { EmptyModelOptionsAllOf } from './emptyModelOptionsAllOf';
 import { Equity } from './equity';
@@ -718,6 +723,8 @@ import { FxForwardCurveByQuoteReference } from './fxForwardCurveByQuoteReference
 import { FxForwardCurveByQuoteReferenceAllOf } from './fxForwardCurveByQuoteReferenceAllOf';
 import { FxForwardCurveData } from './fxForwardCurveData';
 import { FxForwardCurveDataAllOf } from './fxForwardCurveDataAllOf';
+import { FxForwardModelOptions } from './fxForwardModelOptions';
+import { FxForwardModelOptionsAllOf } from './fxForwardModelOptionsAllOf';
 import { FxForwardPipsCurveData } from './fxForwardPipsCurveData';
 import { FxForwardPipsCurveDataAllOf } from './fxForwardPipsCurveDataAllOf';
 import { FxForwardTenorCurveData } from './fxForwardTenorCurveData';
@@ -788,6 +795,7 @@ import { MarketContextSuppliers } from './marketContextSuppliers';
 import { MarketDataKeyRule } from './marketDataKeyRule';
 import { MarketDataType } from './marketDataType';
 import { MarketIdentifier } from './marketIdentifier';
+import { MarketObservableType } from './marketObservableType';
 import { MarketOptions } from './marketOptions';
 import { MarketQuote } from './marketQuote';
 import { MetricValue } from './metricValue';
@@ -1132,6 +1140,7 @@ let enumsMap: {[index: string]: any} = {
         "DeliveryType": DeliveryType,
         "DiscountFactorCurveData.MarketDataTypeEnum": DiscountFactorCurveData.MarketDataTypeEnum,
         "DiscountFactorCurveDataAllOf.MarketDataTypeEnum": DiscountFactorCurveDataAllOf.MarketDataTypeEnum,
+        "DiscountingMethod": DiscountingMethod,
         "EmptyModelOptions.ModelOptionsTypeEnum": EmptyModelOptions.ModelOptionsTypeEnum,
         "EmptyModelOptionsAllOf.ModelOptionsTypeEnum": EmptyModelOptionsAllOf.ModelOptionsTypeEnum,
         "Equity.InstrumentTypeEnum": Equity.InstrumentTypeEnum,
@@ -1169,6 +1178,12 @@ let enumsMap: {[index: string]: any} = {
         "FxForwardCurveByQuoteReferenceAllOf.MarketDataTypeEnum": FxForwardCurveByQuoteReferenceAllOf.MarketDataTypeEnum,
         "FxForwardCurveData.MarketDataTypeEnum": FxForwardCurveData.MarketDataTypeEnum,
         "FxForwardCurveDataAllOf.MarketDataTypeEnum": FxForwardCurveDataAllOf.MarketDataTypeEnum,
+        "FxForwardModelOptions.ForwardRateObservableTypeEnum": FxForwardModelOptions.ForwardRateObservableTypeEnum,
+        "FxForwardModelOptions.DiscountingMethodEnum": FxForwardModelOptions.DiscountingMethodEnum,
+        "FxForwardModelOptions.ModelOptionsTypeEnum": FxForwardModelOptions.ModelOptionsTypeEnum,
+        "FxForwardModelOptionsAllOf.ForwardRateObservableTypeEnum": FxForwardModelOptionsAllOf.ForwardRateObservableTypeEnum,
+        "FxForwardModelOptionsAllOf.DiscountingMethodEnum": FxForwardModelOptionsAllOf.DiscountingMethodEnum,
+        "FxForwardModelOptionsAllOf.ModelOptionsTypeEnum": FxForwardModelOptionsAllOf.ModelOptionsTypeEnum,
         "FxForwardPipsCurveData.MarketDataTypeEnum": FxForwardPipsCurveData.MarketDataTypeEnum,
         "FxForwardPipsCurveDataAllOf.MarketDataTypeEnum": FxForwardPipsCurveDataAllOf.MarketDataTypeEnum,
         "FxForwardTenorCurveData.MarketDataTypeEnum": FxForwardTenorCurveData.MarketDataTypeEnum,
@@ -1204,6 +1219,7 @@ let enumsMap: {[index: string]: any} = {
         "MarketDataKeyRule.QuoteTypeEnum": MarketDataKeyRule.QuoteTypeEnum,
         "MarketDataType": MarketDataType,
         "MarketIdentifier": MarketIdentifier,
+        "MarketObservableType": MarketObservableType,
         "MarketQuote.QuoteTypeEnum": MarketQuote.QuoteTypeEnum,
         "ModelOptions.ModelOptionsTypeEnum": ModelOptions.ModelOptionsTypeEnum,
         "ModelOptionsType": ModelOptionsType,
@@ -1463,6 +1479,8 @@ let typeMap: {[index: string]: any} = {
     "FxForwardCurveByQuoteReferenceAllOf": FxForwardCurveByQuoteReferenceAllOf,
     "FxForwardCurveData": FxForwardCurveData,
     "FxForwardCurveDataAllOf": FxForwardCurveDataAllOf,
+    "FxForwardModelOptions": FxForwardModelOptions,
+    "FxForwardModelOptionsAllOf": FxForwardModelOptionsAllOf,
     "FxForwardPipsCurveData": FxForwardPipsCurveData,
     "FxForwardPipsCurveDataAllOf": FxForwardPipsCurveDataAllOf,
     "FxForwardTenorCurveData": FxForwardTenorCurveData,
