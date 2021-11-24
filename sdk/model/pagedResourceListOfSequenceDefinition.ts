@@ -11,34 +11,65 @@
  */
 
 import { RequestFile } from './models';
-import { TypedResourceId } from './typedResourceId';
+import { Link } from './link';
+import { SequenceDefinition } from './sequenceDefinition';
 
 /**
-* The counterpartyAgreement is signed by two parties, one of which is implicitly the LUSID user.  The CounterpartySignatory represents the \'other side\' of the agreement.  It comprises a name and identifier for a Legal Entity in LUSID.
+* A paginated list of resource that can be returned from a request.
 */
-export class CounterpartySignatory {
+export class PagedResourceListOfSequenceDefinition {
     /**
-    * A user-defined name or label for the counterparty signatory.  There is no requirement for this to match the \"displayName\" of the legal entity.
+    * The next page of results.
     */
-    'name': string;
-    'legalEntityIdentifier': TypedResourceId;
+    'nextPage'?: string | null;
+    /**
+    * The previous page of results.
+    */
+    'previousPage'?: string | null;
+    /**
+    * The resources to list.
+    */
+    'values': Array<SequenceDefinition>;
+    /**
+    * The URI of the resource list.
+    */
+    'href'?: string | null;
+    /**
+    * Collection of links.
+    */
+    'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "name",
-            "baseName": "name",
+            "name": "nextPage",
+            "baseName": "nextPage",
             "type": "string"
         },
         {
-            "name": "legalEntityIdentifier",
-            "baseName": "legalEntityIdentifier",
-            "type": "TypedResourceId"
+            "name": "previousPage",
+            "baseName": "previousPage",
+            "type": "string"
+        },
+        {
+            "name": "values",
+            "baseName": "values",
+            "type": "Array<SequenceDefinition>"
+        },
+        {
+            "name": "href",
+            "baseName": "href",
+            "type": "string"
+        },
+        {
+            "name": "links",
+            "baseName": "links",
+            "type": "Array<Link>"
         }    ];
 
     static getAttributeTypeMap() {
-        return CounterpartySignatory.attributeTypeMap;
+        return PagedResourceListOfSequenceDefinition.attributeTypeMap;
     }
 }
 
