@@ -99,6 +99,8 @@ export * from './createUnitDefinition';
 export * from './creditDefaultSwap';
 export * from './creditDefaultSwapAllOf';
 export * from './creditRating';
+export * from './creditSpreadCurveData';
+export * from './creditSpreadCurveDataAllOf';
 export * from './creditSupportAnnex';
 export * from './crossCurrencySwap';
 export * from './crossCurrencySwapAllOf';
@@ -646,6 +648,8 @@ import { CreateUnitDefinition } from './createUnitDefinition';
 import { CreditDefaultSwap } from './creditDefaultSwap';
 import { CreditDefaultSwapAllOf } from './creditDefaultSwapAllOf';
 import { CreditRating } from './creditRating';
+import { CreditSpreadCurveData } from './creditSpreadCurveData';
+import { CreditSpreadCurveDataAllOf } from './creditSpreadCurveDataAllOf';
 import { CreditSupportAnnex } from './creditSupportAnnex';
 import { CrossCurrencySwap } from './crossCurrencySwap';
 import { CrossCurrencySwapAllOf } from './crossCurrencySwapAllOf';
@@ -1131,6 +1135,8 @@ let enumsMap: {[index: string]: any} = {
         "CreateTransactionPortfolioRequest.AccountingMethodEnum": CreateTransactionPortfolioRequest.AccountingMethodEnum,
         "CreditDefaultSwap.InstrumentTypeEnum": CreditDefaultSwap.InstrumentTypeEnum,
         "CreditDefaultSwapAllOf.InstrumentTypeEnum": CreditDefaultSwapAllOf.InstrumentTypeEnum,
+        "CreditSpreadCurveData.MarketDataTypeEnum": CreditSpreadCurveData.MarketDataTypeEnum,
+        "CreditSpreadCurveDataAllOf.MarketDataTypeEnum": CreditSpreadCurveDataAllOf.MarketDataTypeEnum,
         "CrossCurrencySwap.InstrumentTypeEnum": CrossCurrencySwap.InstrumentTypeEnum,
         "CrossCurrencySwapAllOf.InstrumentTypeEnum": CrossCurrencySwapAllOf.InstrumentTypeEnum,
         "DataType.TypeValueRangeEnum": DataType.TypeValueRangeEnum,
@@ -1408,6 +1414,8 @@ let typeMap: {[index: string]: any} = {
     "CreditDefaultSwap": CreditDefaultSwap,
     "CreditDefaultSwapAllOf": CreditDefaultSwapAllOf,
     "CreditRating": CreditRating,
+    "CreditSpreadCurveData": CreditSpreadCurveData,
+    "CreditSpreadCurveDataAllOf": CreditSpreadCurveDataAllOf,
     "CreditSupportAnnex": CreditSupportAnnex,
     "CrossCurrencySwap": CrossCurrencySwap,
     "CrossCurrencySwapAllOf": CrossCurrencySwapAllOf,
