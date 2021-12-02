@@ -119,6 +119,7 @@ export * from './dataDefinition';
 export * from './dataMapKey';
 export * from './dataMapping';
 export * from './dataType';
+export * from './dataTypeSummary';
 export * from './dataTypeValueRange';
 export * from './dateAttributes';
 export * from './dateRange';
@@ -292,6 +293,7 @@ export * from './pagedResourceListOfComplianceRun';
 export * from './pagedResourceListOfCorporateActionSource';
 export * from './pagedResourceListOfCustomEntityResponse';
 export * from './pagedResourceListOfCutLabelDefinition';
+export * from './pagedResourceListOfDataTypeSummary';
 export * from './pagedResourceListOfExecution';
 export * from './pagedResourceListOfInstrument';
 export * from './pagedResourceListOfLegalEntity';
@@ -668,6 +670,7 @@ import { DataDefinition } from './dataDefinition';
 import { DataMapKey } from './dataMapKey';
 import { DataMapping } from './dataMapping';
 import { DataType } from './dataType';
+import { DataTypeSummary } from './dataTypeSummary';
 import { DataTypeValueRange } from './dataTypeValueRange';
 import { DateAttributes } from './dateAttributes';
 import { DateRange } from './dateRange';
@@ -841,6 +844,7 @@ import { PagedResourceListOfComplianceRun } from './pagedResourceListOfComplianc
 import { PagedResourceListOfCorporateActionSource } from './pagedResourceListOfCorporateActionSource';
 import { PagedResourceListOfCustomEntityResponse } from './pagedResourceListOfCustomEntityResponse';
 import { PagedResourceListOfCutLabelDefinition } from './pagedResourceListOfCutLabelDefinition';
+import { PagedResourceListOfDataTypeSummary } from './pagedResourceListOfDataTypeSummary';
 import { PagedResourceListOfExecution } from './pagedResourceListOfExecution';
 import { PagedResourceListOfInstrument } from './pagedResourceListOfInstrument';
 import { PagedResourceListOfLegalEntity } from './pagedResourceListOfLegalEntity';
@@ -1142,6 +1146,9 @@ let enumsMap: {[index: string]: any} = {
         "DataType.TypeValueRangeEnum": DataType.TypeValueRangeEnum,
         "DataType.ValueTypeEnum": DataType.ValueTypeEnum,
         "DataType.UnitSchemaEnum": DataType.UnitSchemaEnum,
+        "DataTypeSummary.TypeValueRangeEnum": DataTypeSummary.TypeValueRangeEnum,
+        "DataTypeSummary.ValueTypeEnum": DataTypeSummary.ValueTypeEnum,
+        "DataTypeSummary.UnitSchemaEnum": DataTypeSummary.UnitSchemaEnum,
         "DataTypeValueRange": DataTypeValueRange,
         "DateTimeComparisonType": DateTimeComparisonType,
         "DayOfWeek": DayOfWeek,
@@ -1434,6 +1441,7 @@ let typeMap: {[index: string]: any} = {
     "DataMapKey": DataMapKey,
     "DataMapping": DataMapping,
     "DataType": DataType,
+    "DataTypeSummary": DataTypeSummary,
     "DateAttributes": DateAttributes,
     "DateRange": DateRange,
     "DeleteInstrumentPropertiesResponse": DeleteInstrumentPropertiesResponse,
@@ -1591,6 +1599,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfCorporateActionSource": PagedResourceListOfCorporateActionSource,
     "PagedResourceListOfCustomEntityResponse": PagedResourceListOfCustomEntityResponse,
     "PagedResourceListOfCutLabelDefinition": PagedResourceListOfCutLabelDefinition,
+    "PagedResourceListOfDataTypeSummary": PagedResourceListOfDataTypeSummary,
     "PagedResourceListOfExecution": PagedResourceListOfExecution,
     "PagedResourceListOfInstrument": PagedResourceListOfInstrument,
     "PagedResourceListOfLegalEntity": PagedResourceListOfLegalEntity,
