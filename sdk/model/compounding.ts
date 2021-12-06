@@ -11,65 +11,45 @@
  */
 
 import { RequestFile } from './models';
-import { Execution } from './execution';
-import { Link } from './link';
 
 /**
-* A paginated list of resource that can be returned from a request.
+* The compounding settings used on interest rate.
 */
-export class PagedResourceListOfExecution {
+export class Compounding {
     /**
-    * The next page of results.
+    * If the interest rate is simple or compounded.  Supported string (enumeration) values are: [Average, Compounded, None].
     */
-    'nextPage'?: string | null;
+    'compoundingMethod': string;
     /**
-    * The previous page of results.
+    * The interest payment frequency.
     */
-    'previousPage'?: string | null;
+    'resetFrequency': string;
     /**
-    * The resources to list.
+    * Defines how the computed leg spread is applied to compounded rate.  It applies only when CompoundingMethod = ‘Compounded‘.  Supported string (enumeration) values are: [IsdaCompounding, NoCompounding, IsdaFlatCompounding, None].
     */
-    'values': Array<Execution>;
-    /**
-    * The URI of the resource list.
-    */
-    'href'?: string | null;
-    /**
-    * Collection of links.
-    */
-    'links'?: Array<Link> | null;
+    'spreadCompoundingMethod': string;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "nextPage",
-            "baseName": "nextPage",
+            "name": "compoundingMethod",
+            "baseName": "compoundingMethod",
             "type": "string"
         },
         {
-            "name": "previousPage",
-            "baseName": "previousPage",
+            "name": "resetFrequency",
+            "baseName": "resetFrequency",
             "type": "string"
         },
         {
-            "name": "values",
-            "baseName": "values",
-            "type": "Array<Execution>"
-        },
-        {
-            "name": "href",
-            "baseName": "href",
+            "name": "spreadCompoundingMethod",
+            "baseName": "spreadCompoundingMethod",
             "type": "string"
-        },
-        {
-            "name": "links",
-            "baseName": "links",
-            "type": "Array<Link>"
         }    ];
 
     static getAttributeTypeMap() {
-        return PagedResourceListOfExecution.attributeTypeMap;
+        return Compounding.attributeTypeMap;
     }
 }
 
