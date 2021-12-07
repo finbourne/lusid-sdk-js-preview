@@ -62,6 +62,7 @@ export * from './complexMarketData';
 export * from './complexMarketDataId';
 export * from './complianceRuleResult';
 export * from './complianceRun';
+export * from './compounding';
 export * from './configurationRecipe';
 export * from './configurationRecipeSnippet';
 export * from './constituentsAdjustmentHeader';
@@ -613,6 +614,7 @@ import { ComplexMarketData } from './complexMarketData';
 import { ComplexMarketDataId } from './complexMarketDataId';
 import { ComplianceRuleResult } from './complianceRuleResult';
 import { ComplianceRun } from './complianceRun';
+import { Compounding } from './compounding';
 import { ConfigurationRecipe } from './configurationRecipe';
 import { ConfigurationRecipeSnippet } from './configurationRecipeSnippet';
 import { ConstituentsAdjustmentHeader } from './constituentsAdjustmentHeader';
@@ -1384,6 +1386,7 @@ let typeMap: {[index: string]: any} = {
     "ComplexMarketDataId": ComplexMarketDataId,
     "ComplianceRuleResult": ComplianceRuleResult,
     "ComplianceRun": ComplianceRun,
+    "Compounding": Compounding,
     "ConfigurationRecipe": ConfigurationRecipe,
     "ConfigurationRecipeSnippet": ConfigurationRecipeSnippet,
     "ConstituentsAdjustmentHeader": ConstituentsAdjustmentHeader,
