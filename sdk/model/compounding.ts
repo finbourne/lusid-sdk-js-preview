@@ -13,12 +13,43 @@
 import { RequestFile } from './models';
 
 /**
-* Comparison types for strings
+* The compounding settings used on interest rate.
 */
-export enum StringComparisonType {
-    Exact = <any> 'Exact',
-    Contains = <any> 'Contains',
-    CaseInsensitive = <any> 'CaseInsensitive',
-    ContainsAnyCase = <any> 'ContainsAnyCase',
-    IsOneOf = <any> 'IsOneOf'
+export class Compounding {
+    /**
+    * If the interest rate is simple or compounded.  Supported string (enumeration) values are: [Average, Compounded, None].
+    */
+    'compoundingMethod': string;
+    /**
+    * The interest payment frequency.
+    */
+    'resetFrequency': string;
+    /**
+    * Defines how the computed leg spread is applied to compounded rate.  It applies only when CompoundingMethod = ‘Compounded‘.  Supported string (enumeration) values are: [IsdaCompounding, NoCompounding, IsdaFlatCompounding, None].
+    */
+    'spreadCompoundingMethod': string;
+
+    static discriminator: string | undefined = undefined;
+
+    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+        {
+            "name": "compoundingMethod",
+            "baseName": "compoundingMethod",
+            "type": "string"
+        },
+        {
+            "name": "resetFrequency",
+            "baseName": "resetFrequency",
+            "type": "string"
+        },
+        {
+            "name": "spreadCompoundingMethod",
+            "baseName": "spreadCompoundingMethod",
+            "type": "string"
+        }    ];
+
+    static getAttributeTypeMap() {
+        return Compounding.attributeTypeMap;
+    }
 }
+
