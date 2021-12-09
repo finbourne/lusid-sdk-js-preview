@@ -8,7 +8,10 @@ describe('Collect Metatdata', () => {
       console.log(result.body)
       done()
     })
-    .catch((err) => console.log(err.response.statusCode, err.response.statusMessage))
+    .catch((err) => {
+      console.error(err.response.statusCode, err.response.statusMessage)
+      done(new Error(JSON.stringify(err.response.body)))
+    })
   })
 })
 
