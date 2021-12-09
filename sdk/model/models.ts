@@ -242,6 +242,7 @@ export * from './isBusinessDayResponse';
 export * from './labelValueSet';
 export * from './legDefinition';
 export * from './legalEntity';
+export * from './levelStep';
 export * from './link';
 export * from './listAggregationReconciliation';
 export * from './listAggregationResponse';
@@ -447,6 +448,7 @@ export * from './sideConfigurationDataRequest';
 export * from './simpleInstrument';
 export * from './simpleInstrumentAllOf';
 export * from './sortOrder';
+export * from './stepSchedule';
 export * from './stream';
 export * from './stringComparisonType';
 export * from './structuredResultData';
@@ -794,6 +796,7 @@ import { IsBusinessDayResponse } from './isBusinessDayResponse';
 import { LabelValueSet } from './labelValueSet';
 import { LegDefinition } from './legDefinition';
 import { LegalEntity } from './legalEntity';
+import { LevelStep } from './levelStep';
 import { Link } from './link';
 import { ListAggregationReconciliation } from './listAggregationReconciliation';
 import { ListAggregationResponse } from './listAggregationResponse';
@@ -999,6 +1002,7 @@ import { SideConfigurationDataRequest } from './sideConfigurationDataRequest';
 import { SimpleInstrument } from './simpleInstrument';
 import { SimpleInstrumentAllOf } from './simpleInstrumentAllOf';
 import { SortOrder } from './sortOrder';
+import { StepSchedule } from './stepSchedule';
 import { Stream } from './stream';
 import { StringComparisonType } from './stringComparisonType';
 import { StructuredResultData } from './structuredResultData';
@@ -1560,6 +1564,7 @@ let typeMap: {[index: string]: any} = {
     "LabelValueSet": LabelValueSet,
     "LegDefinition": LegDefinition,
     "LegalEntity": LegalEntity,
+    "LevelStep": LevelStep,
     "Link": Link,
     "ListAggregationReconciliation": ListAggregationReconciliation,
     "ListAggregationResponse": ListAggregationResponse,
@@ -1741,6 +1746,7 @@ let typeMap: {[index: string]: any} = {
     "SideConfigurationDataRequest": SideConfigurationDataRequest,
     "SimpleInstrument": SimpleInstrument,
     "SimpleInstrumentAllOf": SimpleInstrumentAllOf,
+    "StepSchedule": StepSchedule,
     "Stream": Stream,
     "StructuredResultData": StructuredResultData,
     "StructuredResultDataId": StructuredResultDataId,
