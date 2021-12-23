@@ -11,13 +11,65 @@
  */
 
 import { RequestFile } from './models';
+import { Link } from './link';
+import { RelationshipDefinition } from './relationshipDefinition';
 
-export enum Operator {
-    Equals = <any> 'Equals',
-    NotEquals = <any> 'NotEquals',
-    GreaterThan = <any> 'GreaterThan',
-    GreaterThanOrEqualTo = <any> 'GreaterThanOrEqualTo',
-    LessThan = <any> 'LessThan',
-    LessThanOrEqualTo = <any> 'LessThanOrEqualTo',
-    In = <any> 'In'
+/**
+* A paginated list of resource that can be returned from a request.
+*/
+export class PagedResourceListOfRelationshipDefinition {
+    /**
+    * The next page of results.
+    */
+    'nextPage'?: string | null;
+    /**
+    * The previous page of results.
+    */
+    'previousPage'?: string | null;
+    /**
+    * The resources to list.
+    */
+    'values': Array<RelationshipDefinition>;
+    /**
+    * The URI of the resource list.
+    */
+    'href'?: string | null;
+    /**
+    * Collection of links.
+    */
+    'links'?: Array<Link> | null;
+
+    static discriminator: string | undefined = undefined;
+
+    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+        {
+            "name": "nextPage",
+            "baseName": "nextPage",
+            "type": "string"
+        },
+        {
+            "name": "previousPage",
+            "baseName": "previousPage",
+            "type": "string"
+        },
+        {
+            "name": "values",
+            "baseName": "values",
+            "type": "Array<RelationshipDefinition>"
+        },
+        {
+            "name": "href",
+            "baseName": "href",
+            "type": "string"
+        },
+        {
+            "name": "links",
+            "baseName": "links",
+            "type": "Array<Link>"
+        }    ];
+
+    static getAttributeTypeMap() {
+        return PagedResourceListOfRelationshipDefinition.attributeTypeMap;
+    }
 }
+
