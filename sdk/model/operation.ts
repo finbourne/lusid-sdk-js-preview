@@ -12,16 +12,38 @@
 
 import { RequestFile } from './models';
 
-export enum AggregationOp {
-    Sum = <any> 'Sum',
-    Proportion = <any> 'Proportion',
-    Average = <any> 'Average',
-    Count = <any> 'Count',
-    Min = <any> 'Min',
-    Max = <any> 'Max',
-    Value = <any> 'Value',
-    SumOfPositiveValues = <any> 'SumOfPositiveValues',
-    SumOfNegativeValues = <any> 'SumOfNegativeValues',
-    SumOfAbsoluteValues = <any> 'SumOfAbsoluteValues',
-    ProportionOfAbsoluteValues = <any> 'ProportionOfAbsoluteValues'
+export class Operation {
+    'value'?: object | null;
+    'path'?: string | null;
+    'op'?: string | null;
+    'from'?: string | null;
+
+    static discriminator: string | undefined = undefined;
+
+    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+        {
+            "name": "value",
+            "baseName": "value",
+            "type": "object"
+        },
+        {
+            "name": "path",
+            "baseName": "path",
+            "type": "string"
+        },
+        {
+            "name": "op",
+            "baseName": "op",
+            "type": "string"
+        },
+        {
+            "name": "from",
+            "baseName": "from",
+            "type": "string"
+        }    ];
+
+    static getAttributeTypeMap() {
+        return Operation.attributeTypeMap;
+    }
 }
+

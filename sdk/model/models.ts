@@ -270,6 +270,7 @@ export * from './opaqueMarketDataAllOf';
 export * from './opaqueModelOptions';
 export * from './opaqueModelOptionsAllOf';
 export * from './operandType';
+export * from './operation';
 export * from './operator';
 export * from './optionType';
 export * from './order';
@@ -825,6 +826,7 @@ import { OpaqueMarketDataAllOf } from './opaqueMarketDataAllOf';
 import { OpaqueModelOptions } from './opaqueModelOptions';
 import { OpaqueModelOptionsAllOf } from './opaqueModelOptionsAllOf';
 import { OperandType } from './operandType';
+import { Operation } from './operation';
 import { Operator } from './operator';
 import { OptionType } from './optionType';
 import { Order } from './order';
@@ -1586,6 +1588,7 @@ let typeMap: {[index: string]: any} = {
     "OpaqueMarketDataAllOf": OpaqueMarketDataAllOf,
     "OpaqueModelOptions": OpaqueModelOptions,
     "OpaqueModelOptionsAllOf": OpaqueModelOptionsAllOf,
+    "Operation": Operation,
     "Order": Order,
     "OrderBySpec": OrderBySpec,
     "OrderGraphBlock": OrderGraphBlock,
