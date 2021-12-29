@@ -11,33 +11,25 @@
  */
 
 import { RequestFile } from './models';
+import { Property } from './property';
 
-export class CustomEntityIdRequest {
-    'identifierScope': string;
-    'identifierType': string;
-    'identifierValue': string;
+export class SetLegalEntityIdentifiersRequest {
+    /**
+    * Identifiers to set for a Legal Entity. Identifiers not included in the request will not be amended.
+    */
+    'identifiers'?: { [key: string]: Property; } | null;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "identifierScope",
-            "baseName": "identifierScope",
-            "type": "string"
-        },
-        {
-            "name": "identifierType",
-            "baseName": "identifierType",
-            "type": "string"
-        },
-        {
-            "name": "identifierValue",
-            "baseName": "identifierValue",
-            "type": "string"
+            "name": "identifiers",
+            "baseName": "identifiers",
+            "type": "{ [key: string]: Property; }"
         }    ];
 
     static getAttributeTypeMap() {
-        return CustomEntityIdRequest.attributeTypeMap;
+        return SetLegalEntityIdentifiersRequest.attributeTypeMap;
     }
 }
 

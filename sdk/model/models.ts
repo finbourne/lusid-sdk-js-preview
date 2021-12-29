@@ -441,6 +441,7 @@ export * from './scalingMethodology';
 export * from './schema';
 export * from './scopeDefinition';
 export * from './sequenceDefinition';
+export * from './setLegalEntityIdentifiersRequest';
 export * from './setPersonIdentifiersRequest';
 export * from './setPersonPropertiesRequest';
 export * from './setTransactionConfigurationAlias';
@@ -997,6 +998,7 @@ import { ScalingMethodology } from './scalingMethodology';
 import { Schema } from './schema';
 import { ScopeDefinition } from './scopeDefinition';
 import { SequenceDefinition } from './sequenceDefinition';
+import { SetLegalEntityIdentifiersRequest } from './setLegalEntityIdentifiersRequest';
 import { SetPersonIdentifiersRequest } from './setPersonIdentifiersRequest';
 import { SetPersonPropertiesRequest } from './setPersonPropertiesRequest';
 import { SetTransactionConfigurationAlias } from './setTransactionConfigurationAlias';
@@ -1744,6 +1746,7 @@ let typeMap: {[index: string]: any} = {
     "Schema": Schema,
     "ScopeDefinition": ScopeDefinition,
     "SequenceDefinition": SequenceDefinition,
+    "SetLegalEntityIdentifiersRequest": SetLegalEntityIdentifiersRequest,
     "SetPersonIdentifiersRequest": SetPersonIdentifiersRequest,
     "SetPersonPropertiesRequest": SetPersonPropertiesRequest,
     "SetTransactionConfigurationAlias": SetTransactionConfigurationAlias,
