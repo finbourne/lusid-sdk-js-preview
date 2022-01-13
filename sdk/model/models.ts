@@ -29,16 +29,6 @@ export * from './annulQuotesResponse';
 export * from './annulSingleStructuredDataResponse';
 export * from './annulStructuredDataResponse';
 export * from './assetClass';
-export * from './atomValue';
-export * from './atomValue0D';
-export * from './atomValue0DAllOf';
-export * from './atomValueDecimal';
-export * from './atomValueDecimalAllOf';
-export * from './atomValueInt';
-export * from './atomValueIntAllOf';
-export * from './atomValueString';
-export * from './atomValueStringAllOf';
-export * from './atomValueType';
 export * from './basket';
 export * from './basketAllOf';
 export * from './basketIdentifier';
@@ -216,8 +206,6 @@ export * from './getQuotesResponse';
 export * from './getRecipeResponse';
 export * from './getReferencePortfolioConstituentsResponse';
 export * from './getStructuredResultDataResponse';
-export * from './getVirtualDocumentResponse';
-export * from './groupedResultOfAddressKey';
 export * from './holdingAdjustment';
 export * from './holdingContext';
 export * from './holdingsAdjustment';
@@ -549,8 +537,6 @@ export * from './versionedResourceListOfOutputTransaction';
 export * from './versionedResourceListOfPortfolioHolding';
 export * from './versionedResourceListOfTransaction';
 export * from './versionedResourceListWithWarningsOfPortfolioHolding';
-export * from './virtualDocument';
-export * from './virtualDocumentRow';
 export * from './warning';
 export * from './weekendMask';
 export * from './weightedInstrument';
@@ -600,16 +586,6 @@ import { AnnulQuotesResponse } from './annulQuotesResponse';
 import { AnnulSingleStructuredDataResponse } from './annulSingleStructuredDataResponse';
 import { AnnulStructuredDataResponse } from './annulStructuredDataResponse';
 import { AssetClass } from './assetClass';
-import { AtomValue } from './atomValue';
-import { AtomValue0D } from './atomValue0D';
-import { AtomValue0DAllOf } from './atomValue0DAllOf';
-import { AtomValueDecimal } from './atomValueDecimal';
-import { AtomValueDecimalAllOf } from './atomValueDecimalAllOf';
-import { AtomValueInt } from './atomValueInt';
-import { AtomValueIntAllOf } from './atomValueIntAllOf';
-import { AtomValueString } from './atomValueString';
-import { AtomValueStringAllOf } from './atomValueStringAllOf';
-import { AtomValueType } from './atomValueType';
 import { Basket } from './basket';
 import { BasketAllOf } from './basketAllOf';
 import { BasketIdentifier } from './basketIdentifier';
@@ -787,8 +763,6 @@ import { GetQuotesResponse } from './getQuotesResponse';
 import { GetRecipeResponse } from './getRecipeResponse';
 import { GetReferencePortfolioConstituentsResponse } from './getReferencePortfolioConstituentsResponse';
 import { GetStructuredResultDataResponse } from './getStructuredResultDataResponse';
-import { GetVirtualDocumentResponse } from './getVirtualDocumentResponse';
-import { GroupedResultOfAddressKey } from './groupedResultOfAddressKey';
 import { HoldingAdjustment } from './holdingAdjustment';
 import { HoldingContext } from './holdingContext';
 import { HoldingsAdjustment } from './holdingsAdjustment';
@@ -1120,8 +1094,6 @@ import { VersionedResourceListOfOutputTransaction } from './versionedResourceLis
 import { VersionedResourceListOfPortfolioHolding } from './versionedResourceListOfPortfolioHolding';
 import { VersionedResourceListOfTransaction } from './versionedResourceListOfTransaction';
 import { VersionedResourceListWithWarningsOfPortfolioHolding } from './versionedResourceListWithWarningsOfPortfolioHolding';
-import { VirtualDocument } from './virtualDocument';
-import { VirtualDocumentRow } from './virtualDocumentRow';
 import { Warning } from './warning';
 import { WeekendMask } from './weekendMask';
 import { WeightedInstrument } from './weightedInstrument';
@@ -1148,7 +1120,6 @@ let enumsMap: {[index: string]: any} = {
         "AggregationQuery.TypeEnum": AggregationQuery.TypeEnum,
         "AggregationType": AggregationType,
         "AssetClass": AssetClass,
-        "AtomValueType": AtomValueType,
         "Basket.InstrumentTypeEnum": Basket.InstrumentTypeEnum,
         "BasketAllOf.InstrumentTypeEnum": BasketAllOf.InstrumentTypeEnum,
         "Bond.InstrumentTypeEnum": Bond.InstrumentTypeEnum,
@@ -1395,15 +1366,6 @@ let typeMap: {[index: string]: any} = {
     "AnnulQuotesResponse": AnnulQuotesResponse,
     "AnnulSingleStructuredDataResponse": AnnulSingleStructuredDataResponse,
     "AnnulStructuredDataResponse": AnnulStructuredDataResponse,
-    "AtomValue": AtomValue,
-    "AtomValue0D": AtomValue0D,
-    "AtomValue0DAllOf": AtomValue0DAllOf,
-    "AtomValueDecimal": AtomValueDecimal,
-    "AtomValueDecimalAllOf": AtomValueDecimalAllOf,
-    "AtomValueInt": AtomValueInt,
-    "AtomValueIntAllOf": AtomValueIntAllOf,
-    "AtomValueString": AtomValueString,
-    "AtomValueStringAllOf": AtomValueStringAllOf,
     "Basket": Basket,
     "BasketAllOf": BasketAllOf,
     "BasketIdentifier": BasketIdentifier,
@@ -1573,8 +1535,6 @@ let typeMap: {[index: string]: any} = {
     "GetRecipeResponse": GetRecipeResponse,
     "GetReferencePortfolioConstituentsResponse": GetReferencePortfolioConstituentsResponse,
     "GetStructuredResultDataResponse": GetStructuredResultDataResponse,
-    "GetVirtualDocumentResponse": GetVirtualDocumentResponse,
-    "GroupedResultOfAddressKey": GroupedResultOfAddressKey,
     "HoldingAdjustment": HoldingAdjustment,
     "HoldingContext": HoldingContext,
     "HoldingsAdjustment": HoldingsAdjustment,
@@ -1871,8 +1831,6 @@ let typeMap: {[index: string]: any} = {
     "VersionedResourceListOfPortfolioHolding": VersionedResourceListOfPortfolioHolding,
     "VersionedResourceListOfTransaction": VersionedResourceListOfTransaction,
     "VersionedResourceListWithWarningsOfPortfolioHolding": VersionedResourceListWithWarningsOfPortfolioHolding,
-    "VirtualDocument": VirtualDocument,
-    "VirtualDocumentRow": VirtualDocumentRow,
     "Warning": Warning,
     "WeekendMask": WeekendMask,
     "WeightedInstrument": WeightedInstrument,
