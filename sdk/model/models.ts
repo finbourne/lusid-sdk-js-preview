@@ -258,6 +258,7 @@ export * from './levelStep';
 export * from './link';
 export * from './listAggregationReconciliation';
 export * from './listAggregationResponse';
+export * from './listComplexMarketDataWithMetaDataResponse';
 export * from './lusidInstrument';
 export * from './lusidProblemDetails';
 export * from './lusidValidationProblemDetails';
@@ -424,6 +425,7 @@ export * from './resourceListOfHoldingsAdjustmentHeader';
 export * from './resourceListOfIUnitDefinitionDto';
 export * from './resourceListOfInstrumentCashFlow';
 export * from './resourceListOfInstrumentIdTypeDescriptor';
+export * from './resourceListOfListComplexMarketDataWithMetaDataResponse';
 export * from './resourceListOfOrder';
 export * from './resourceListOfOrderInstruction';
 export * from './resourceListOfPackage';
@@ -829,6 +831,7 @@ import { LevelStep } from './levelStep';
 import { Link } from './link';
 import { ListAggregationReconciliation } from './listAggregationReconciliation';
 import { ListAggregationResponse } from './listAggregationResponse';
+import { ListComplexMarketDataWithMetaDataResponse } from './listComplexMarketDataWithMetaDataResponse';
 import { LusidInstrument } from './lusidInstrument';
 import { LusidProblemDetails } from './lusidProblemDetails';
 import { LusidValidationProblemDetails } from './lusidValidationProblemDetails';
@@ -995,6 +998,7 @@ import { ResourceListOfHoldingsAdjustmentHeader } from './resourceListOfHoldings
 import { ResourceListOfIUnitDefinitionDto } from './resourceListOfIUnitDefinitionDto';
 import { ResourceListOfInstrumentCashFlow } from './resourceListOfInstrumentCashFlow';
 import { ResourceListOfInstrumentIdTypeDescriptor } from './resourceListOfInstrumentIdTypeDescriptor';
+import { ResourceListOfListComplexMarketDataWithMetaDataResponse } from './resourceListOfListComplexMarketDataWithMetaDataResponse';
 import { ResourceListOfOrder } from './resourceListOfOrder';
 import { ResourceListOfOrderInstruction } from './resourceListOfOrderInstruction';
 import { ResourceListOfPackage } from './resourceListOfPackage';
@@ -1623,6 +1627,7 @@ let typeMap: {[index: string]: any} = {
     "Link": Link,
     "ListAggregationReconciliation": ListAggregationReconciliation,
     "ListAggregationResponse": ListAggregationResponse,
+    "ListComplexMarketDataWithMetaDataResponse": ListComplexMarketDataWithMetaDataResponse,
     "LusidInstrument": LusidInstrument,
     "LusidProblemDetails": LusidProblemDetails,
     "LusidValidationProblemDetails": LusidValidationProblemDetails,
@@ -1767,6 +1772,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfIUnitDefinitionDto": ResourceListOfIUnitDefinitionDto,
     "ResourceListOfInstrumentCashFlow": ResourceListOfInstrumentCashFlow,
     "ResourceListOfInstrumentIdTypeDescriptor": ResourceListOfInstrumentIdTypeDescriptor,
+    "ResourceListOfListComplexMarketDataWithMetaDataResponse": ResourceListOfListComplexMarketDataWithMetaDataResponse,
     "ResourceListOfOrder": ResourceListOfOrder,
     "ResourceListOfOrderInstruction": ResourceListOfOrderInstruction,
     "ResourceListOfPackage": ResourceListOfPackage,
