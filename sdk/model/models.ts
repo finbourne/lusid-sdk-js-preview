@@ -456,6 +456,7 @@ export * from './schema';
 export * from './scopeDefinition';
 export * from './sequenceDefinition';
 export * from './setLegalEntityIdentifiersRequest';
+export * from './setLegalEntityPropertiesRequest';
 export * from './setPersonIdentifiersRequest';
 export * from './setPersonPropertiesRequest';
 export * from './setTransactionConfigurationAlias';
@@ -1029,6 +1030,7 @@ import { Schema } from './schema';
 import { ScopeDefinition } from './scopeDefinition';
 import { SequenceDefinition } from './sequenceDefinition';
 import { SetLegalEntityIdentifiersRequest } from './setLegalEntityIdentifiersRequest';
+import { SetLegalEntityPropertiesRequest } from './setLegalEntityPropertiesRequest';
 import { SetPersonIdentifiersRequest } from './setPersonIdentifiersRequest';
 import { SetPersonPropertiesRequest } from './setPersonPropertiesRequest';
 import { SetTransactionConfigurationAlias } from './setTransactionConfigurationAlias';
@@ -1802,6 +1804,7 @@ let typeMap: {[index: string]: any} = {
     "ScopeDefinition": ScopeDefinition,
     "SequenceDefinition": SequenceDefinition,
     "SetLegalEntityIdentifiersRequest": SetLegalEntityIdentifiersRequest,
+    "SetLegalEntityPropertiesRequest": SetLegalEntityPropertiesRequest,
     "SetPersonIdentifiersRequest": SetPersonIdentifiersRequest,
     "SetPersonPropertiesRequest": SetPersonPropertiesRequest,
     "SetTransactionConfigurationAlias": SetTransactionConfigurationAlias,
