@@ -11,27 +11,25 @@
  */
 
 import { RequestFile } from './models';
+import { Property } from './property';
 
-/**
-* A list of scopes.
-*/
-export class ScopeDefinition {
+export class SetLegalEntityPropertiesRequest {
     /**
-    * The unique identifier for the scope.
+    * Properties to set for a Legal Entity. All time-variant properties must have same EffectiveFrom date. Properties not included in the request will not be amended.
     */
-    'scope': string;
+    'properties'?: { [key: string]: Property; } | null;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "scope",
-            "baseName": "scope",
-            "type": "string"
+            "name": "properties",
+            "baseName": "properties",
+            "type": "{ [key: string]: Property; }"
         }    ];
 
     static getAttributeTypeMap() {
-        return ScopeDefinition.attributeTypeMap;
+        return SetLegalEntityPropertiesRequest.attributeTypeMap;
     }
 }
 
