@@ -113,8 +113,6 @@ export * from './creditRating';
 export * from './creditSpreadCurveData';
 export * from './creditSpreadCurveDataAllOf';
 export * from './creditSupportAnnex';
-export * from './crossCurrencySwap';
-export * from './crossCurrencySwapAllOf';
 export * from './currencyAndAmount';
 export * from './customEntityDefinition';
 export * from './customEntityDefinitionRequest';
@@ -687,8 +685,6 @@ import { CreditRating } from './creditRating';
 import { CreditSpreadCurveData } from './creditSpreadCurveData';
 import { CreditSpreadCurveDataAllOf } from './creditSpreadCurveDataAllOf';
 import { CreditSupportAnnex } from './creditSupportAnnex';
-import { CrossCurrencySwap } from './crossCurrencySwap';
-import { CrossCurrencySwapAllOf } from './crossCurrencySwapAllOf';
 import { CurrencyAndAmount } from './currencyAndAmount';
 import { CustomEntityDefinition } from './customEntityDefinition';
 import { CustomEntityDefinitionRequest } from './customEntityDefinitionRequest';
@@ -1197,8 +1193,6 @@ let enumsMap: {[index: string]: any} = {
         "CreditDefaultSwapAllOf.InstrumentTypeEnum": CreditDefaultSwapAllOf.InstrumentTypeEnum,
         "CreditSpreadCurveData.MarketDataTypeEnum": CreditSpreadCurveData.MarketDataTypeEnum,
         "CreditSpreadCurveDataAllOf.MarketDataTypeEnum": CreditSpreadCurveDataAllOf.MarketDataTypeEnum,
-        "CrossCurrencySwap.InstrumentTypeEnum": CrossCurrencySwap.InstrumentTypeEnum,
-        "CrossCurrencySwapAllOf.InstrumentTypeEnum": CrossCurrencySwapAllOf.InstrumentTypeEnum,
         "DataType.TypeValueRangeEnum": DataType.TypeValueRangeEnum,
         "DataType.ValueTypeEnum": DataType.ValueTypeEnum,
         "DataType.UnitSchemaEnum": DataType.UnitSchemaEnum,
@@ -1490,8 +1484,6 @@ let typeMap: {[index: string]: any} = {
     "CreditSpreadCurveData": CreditSpreadCurveData,
     "CreditSpreadCurveDataAllOf": CreditSpreadCurveDataAllOf,
     "CreditSupportAnnex": CreditSupportAnnex,
-    "CrossCurrencySwap": CrossCurrencySwap,
-    "CrossCurrencySwapAllOf": CrossCurrencySwapAllOf,
     "CurrencyAndAmount": CurrencyAndAmount,
     "CustomEntityDefinition": CustomEntityDefinition,
     "CustomEntityDefinitionRequest": CustomEntityDefinitionRequest,
