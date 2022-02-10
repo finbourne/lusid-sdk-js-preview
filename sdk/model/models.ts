@@ -165,6 +165,9 @@ export * from './exoticInstrument';
 export * from './exoticInstrumentAllOf';
 export * from './expandedGroup';
 export * from './feeCalculationDetails';
+export * from './feeRule';
+export * from './feeRuleUpsertRequest';
+export * from './feeRuleUpsertResponse';
 export * from './fieldDefinition';
 export * from './fieldSchema';
 export * from './fieldValue';
@@ -413,6 +416,7 @@ export * from './resourceListOfCorporateAction';
 export * from './resourceListOfDataType';
 export * from './resourceListOfExecution';
 export * from './resourceListOfFeeCalculationDetails';
+export * from './resourceListOfFeeRule';
 export * from './resourceListOfGetCdsFlowConventionsResponse';
 export * from './resourceListOfGetCounterpartyAgreementResponse';
 export * from './resourceListOfGetCreditSupportAnnexResponse';
@@ -737,6 +741,9 @@ import { ExoticInstrument } from './exoticInstrument';
 import { ExoticInstrumentAllOf } from './exoticInstrumentAllOf';
 import { ExpandedGroup } from './expandedGroup';
 import { FeeCalculationDetails } from './feeCalculationDetails';
+import { FeeRule } from './feeRule';
+import { FeeRuleUpsertRequest } from './feeRuleUpsertRequest';
+import { FeeRuleUpsertResponse } from './feeRuleUpsertResponse';
 import { FieldDefinition } from './fieldDefinition';
 import { FieldSchema } from './fieldSchema';
 import { FieldValue } from './fieldValue';
@@ -985,6 +992,7 @@ import { ResourceListOfCorporateAction } from './resourceListOfCorporateAction';
 import { ResourceListOfDataType } from './resourceListOfDataType';
 import { ResourceListOfExecution } from './resourceListOfExecution';
 import { ResourceListOfFeeCalculationDetails } from './resourceListOfFeeCalculationDetails';
+import { ResourceListOfFeeRule } from './resourceListOfFeeRule';
 import { ResourceListOfGetCdsFlowConventionsResponse } from './resourceListOfGetCdsFlowConventionsResponse';
 import { ResourceListOfGetCounterpartyAgreementResponse } from './resourceListOfGetCounterpartyAgreementResponse';
 import { ResourceListOfGetCreditSupportAnnexResponse } from './resourceListOfGetCreditSupportAnnexResponse';
@@ -1531,6 +1539,9 @@ let typeMap: {[index: string]: any} = {
     "ExoticInstrumentAllOf": ExoticInstrumentAllOf,
     "ExpandedGroup": ExpandedGroup,
     "FeeCalculationDetails": FeeCalculationDetails,
+    "FeeRule": FeeRule,
+    "FeeRuleUpsertRequest": FeeRuleUpsertRequest,
+    "FeeRuleUpsertResponse": FeeRuleUpsertResponse,
     "FieldDefinition": FieldDefinition,
     "FieldSchema": FieldSchema,
     "FieldValue": FieldValue,
@@ -1756,6 +1767,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfDataType": ResourceListOfDataType,
     "ResourceListOfExecution": ResourceListOfExecution,
     "ResourceListOfFeeCalculationDetails": ResourceListOfFeeCalculationDetails,
+    "ResourceListOfFeeRule": ResourceListOfFeeRule,
     "ResourceListOfGetCdsFlowConventionsResponse": ResourceListOfGetCdsFlowConventionsResponse,
     "ResourceListOfGetCounterpartyAgreementResponse": ResourceListOfGetCounterpartyAgreementResponse,
     "ResourceListOfGetCreditSupportAnnexResponse": ResourceListOfGetCreditSupportAnnexResponse,
