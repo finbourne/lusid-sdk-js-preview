@@ -140,6 +140,7 @@ export * from './deleteRelationRequest';
 export * from './deleteRelationshipRequest';
 export * from './deletedEntityResponse';
 export * from './deliveryType';
+export * from './dependencySourceFilter';
 export * from './discountFactorCurveData';
 export * from './discountFactorCurveDataAllOf';
 export * from './discountingMethod';
@@ -266,6 +267,7 @@ export * from './lusidValidationProblemDetails';
 export * from './marketContext';
 export * from './marketContextSuppliers';
 export * from './marketDataKeyRule';
+export * from './marketDataSpecificRule';
 export * from './marketDataType';
 export * from './marketIdentifier';
 export * from './marketObservableType';
@@ -716,6 +718,7 @@ import { DeleteRelationRequest } from './deleteRelationRequest';
 import { DeleteRelationshipRequest } from './deleteRelationshipRequest';
 import { DeletedEntityResponse } from './deletedEntityResponse';
 import { DeliveryType } from './deliveryType';
+import { DependencySourceFilter } from './dependencySourceFilter';
 import { DiscountFactorCurveData } from './discountFactorCurveData';
 import { DiscountFactorCurveDataAllOf } from './discountFactorCurveDataAllOf';
 import { DiscountingMethod } from './discountingMethod';
@@ -842,6 +845,7 @@ import { LusidValidationProblemDetails } from './lusidValidationProblemDetails';
 import { MarketContext } from './marketContext';
 import { MarketContextSuppliers } from './marketContextSuppliers';
 import { MarketDataKeyRule } from './marketDataKeyRule';
+import { MarketDataSpecificRule } from './marketDataSpecificRule';
 import { MarketDataType } from './marketDataType';
 import { MarketIdentifier } from './marketIdentifier';
 import { MarketObservableType } from './marketObservableType';
@@ -1290,6 +1294,7 @@ let enumsMap: {[index: string]: any} = {
         "IrVolCubeDataAllOf.MarketDataTypeEnum": IrVolCubeDataAllOf.MarketDataTypeEnum,
         "LusidInstrument.InstrumentTypeEnum": LusidInstrument.InstrumentTypeEnum,
         "MarketDataKeyRule.QuoteTypeEnum": MarketDataKeyRule.QuoteTypeEnum,
+        "MarketDataSpecificRule.QuoteTypeEnum": MarketDataSpecificRule.QuoteTypeEnum,
         "MarketDataType": MarketDataType,
         "MarketIdentifier": MarketIdentifier,
         "MarketObservableType": MarketObservableType,
@@ -1515,6 +1520,7 @@ let typeMap: {[index: string]: any} = {
     "DeleteRelationRequest": DeleteRelationRequest,
     "DeleteRelationshipRequest": DeleteRelationshipRequest,
     "DeletedEntityResponse": DeletedEntityResponse,
+    "DependencySourceFilter": DependencySourceFilter,
     "DiscountFactorCurveData": DiscountFactorCurveData,
     "DiscountFactorCurveDataAllOf": DiscountFactorCurveDataAllOf,
     "EmptyModelOptions": EmptyModelOptions,
@@ -1639,6 +1645,7 @@ let typeMap: {[index: string]: any} = {
     "MarketContext": MarketContext,
     "MarketContextSuppliers": MarketContextSuppliers,
     "MarketDataKeyRule": MarketDataKeyRule,
+    "MarketDataSpecificRule": MarketDataSpecificRule,
     "MarketOptions": MarketOptions,
     "MarketQuote": MarketQuote,
     "MetricValue": MetricValue,
