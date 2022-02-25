@@ -26,7 +26,7 @@ let sectorDataTypeId = new ResourceId()
 sectorDataTypeId.scope = "system"
 sectorDataTypeId.code = "string"
 
-// Create a property definition request to define a new property
+// Create a property definition request to define a new property in LUSID
 let sectorProp = new CreatePropertyDefinitionRequest()
 sectorProp.domain = CreatePropertyDefinitionRequest.DomainEnum.Instrument
 sectorProp.scope = uniqueScope
@@ -49,7 +49,7 @@ describe('Load Instrument Master', () => {
 })
 
 describe('Create property definitions', () => {
-  it('Should create a sector property', (done) => {
+  it('Should create a sector property in LUSID', (done) => {
     createProperty(sectorProp)
       .then(() => done())
       .catch((err) => done(`Failed to create the sector property. Error: ${err.toString()}`))
@@ -58,7 +58,7 @@ describe('Create property definitions', () => {
 
 describe('Add properties on instruments', () => {
   it('Should add the sector property on each instrument', (done) => {
-    getPropertiesFromFile('./instrument-properties.json', 'Sector', FileType.Json)
+    getPropertyRequestsFromFile('./instrument-properties.json', 'Sector', FileType.Json)
       .then((requests: UpsertInstrumentPropertyRequest[]) => {
         upsertInstrumentProperties(requests)
           .then(() => done())
@@ -70,7 +70,6 @@ describe('Add properties on instruments', () => {
 
 // Import your instruments from a CSV file
 function loadFromCsv(filePath: string): Promise<any[]> {
-  // Returns a promise
   return new Promise((resolve, reject) => {
     // Use the csvtojson module to import a CSV file
     csv()
@@ -83,9 +82,7 @@ function loadFromCsv(filePath: string): Promise<any[]> {
 
 // Import your instruments from a JSON file
 function loadFromJson(filePath: string): Promise<any[]> {
-  // Returns a promise
   return new Promise((resolve, reject) => {
-    // Use the csvtojson module to import a CSV file
     try {
       let instruments = require(filePath)
       resolve(instruments)
@@ -95,11 +92,13 @@ function loadFromJson(filePath: string): Promise<any[]> {
   })
 }
 
+// Upsert a set of instrument definitions into LUSID
 function upsertInstruments(instruments: InstrumentDefinition[])
   : Promise<UpsertInstrumentsResponse> {
   return new Promise((resolve, reject) => {
     let body: { [instrumentName: string]: InstrumentDefinition } = {}
 
+    // Add each instrument definition to a dictionary
     instruments.forEach(instrument => {
       body[instrument.name] = instrument
     });
@@ -114,7 +113,6 @@ function upsertInstruments(instruments: InstrumentDefinition[])
 function createProperty(
   propertyDefintion: CreatePropertyDefinitionRequest):
   Promise<PropertyDefinition> {
-  // Return a promise
   return new Promise((resolve, reject) => {
     // Use your client to call create property definition
     client.api.propertyDefinitions.createPropertyDefinition(propertyDefintion)
@@ -123,6 +121,7 @@ function createProperty(
   })
 }
 
+// Construct a property that we can add to a LUSID instrument
 function buildInstrumentProperty(key: string, value: string): Property {
   // Initialize the property key (Instrument/Scope/PropertyName)
   let instrumentProperty = new Property()
@@ -136,6 +135,7 @@ function buildInstrumentProperty(key: string, value: string): Property {
   return instrumentProperty
 }
 
+// Use your client to add a property to a particular instrument in LUSID
 function upsertInstrumentProperties(
   requests: UpsertInstrumentPropertyRequest[]):
   Promise<UpsertInstrumentPropertiesResponse> {
@@ -146,17 +146,12 @@ function upsertInstrumentProperties(
   })
 }
 
-/**
- * Function to take an instrument object and convert it into a LUSID model
- * Inputs
- * instrument (dictionary) - Object with key-value attribute pairs describing the instrument
- * Returns
- * InstrumentDefinition (lusid.InstrumentDefinition) LUSID model for an instrument definition
- */
+// Load our instrument definitions from a file
 function getInstrumentsFromFile(
   filePath: string,
   fileType: FileType):
   Promise<InstrumentDefinition[]> {
+  // Read our set of instruments objects from a file
   if (fileType == FileType.Json) {
     var loadFunction = loadFromJson(filePath)
   } else {
@@ -164,7 +159,7 @@ function getInstrumentsFromFile(
   }
 
   return loadFunction.then((instruments: any[]) => {
-    // Use a reduce function to convert each instrument object into a LUSID model
+    // Use a map function to convert each instrument object into a LUSID model
     return instruments.map((instrument: any) => {
       let definition: InstrumentDefinition = new InstrumentDefinition()
 
@@ -193,17 +188,20 @@ function getInstrumentsFromFile(
   })
 }
 
-function getPropertiesFromFile(
+// Construct a set of requests that will allow us to add new properties to LUSID instruments
+function getPropertyRequestsFromFile(
   filePath: string,
   propertyName: string,
   fileType: FileType):
   Promise<UpsertInstrumentPropertyRequest[]> {
+  // Load our property values from file
   if (fileType == FileType.Json) {
     var loadFunction = loadFromJson(filePath)
   } else {
     var loadFunction = loadFromCsv(filePath)
   }
 
+  // Create an upsert request for each property in the file
   return loadFunction.then((properties) => {
     return properties.map((property) => {
       let instrumentPropertyRequest = new UpsertInstrumentPropertyRequest()
