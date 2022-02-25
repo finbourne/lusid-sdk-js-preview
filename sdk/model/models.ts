@@ -50,7 +50,6 @@ export * from './bondAllOf';
 export * from './bucketedCashFlowRequest';
 export * from './bucketedCashFlowResponse';
 export * from './calculationInfo';
-export * from './calculationMethod';
 export * from './calendar';
 export * from './calendarDate';
 export * from './capFloor';
@@ -277,7 +276,6 @@ export * from './modelOptions';
 export * from './modelOptionsType';
 export * from './modelSelection';
 export * from './movementType';
-export * from './multiplier';
 export * from './nextValueInSequenceResponse';
 export * from './numericComparisonType';
 export * from './opaqueMarketData';
@@ -627,7 +625,6 @@ import { BondAllOf } from './bondAllOf';
 import { BucketedCashFlowRequest } from './bucketedCashFlowRequest';
 import { BucketedCashFlowResponse } from './bucketedCashFlowResponse';
 import { CalculationInfo } from './calculationInfo';
-import { CalculationMethod } from './calculationMethod';
 import { Calendar } from './calendar';
 import { CalendarDate } from './calendarDate';
 import { CapFloor } from './capFloor';
@@ -854,7 +851,6 @@ import { ModelOptions } from './modelOptions';
 import { ModelOptionsType } from './modelOptionsType';
 import { ModelSelection } from './modelSelection';
 import { MovementType } from './movementType';
-import { Multiplier } from './multiplier';
 import { NextValueInSequenceResponse } from './nextValueInSequenceResponse';
 import { NumericComparisonType } from './numericComparisonType';
 import { OpaqueMarketData } from './opaqueMarketData';
@@ -1174,9 +1170,6 @@ let enumsMap: {[index: string]: any} = {
         "BasketAllOf.InstrumentTypeEnum": BasketAllOf.InstrumentTypeEnum,
         "Bond.InstrumentTypeEnum": Bond.InstrumentTypeEnum,
         "BondAllOf.InstrumentTypeEnum": BondAllOf.InstrumentTypeEnum,
-        "CalculationInfo.CalculationMethodEnum": CalculationInfo.CalculationMethodEnum,
-        "CalculationInfo.MultiplierEnum": CalculationInfo.MultiplierEnum,
-        "CalculationMethod": CalculationMethod,
         "CapFloor.InstrumentTypeEnum": CapFloor.InstrumentTypeEnum,
         "CapFloorAllOf.InstrumentTypeEnum": CapFloorAllOf.InstrumentTypeEnum,
         "CashPerpetual.InstrumentTypeEnum": CashPerpetual.InstrumentTypeEnum,
@@ -1302,7 +1295,6 @@ let enumsMap: {[index: string]: any} = {
         "ModelSelection.LibraryEnum": ModelSelection.LibraryEnum,
         "ModelSelection.ModelEnum": ModelSelection.ModelEnum,
         "MovementType": MovementType,
-        "Multiplier": Multiplier,
         "NumericComparisonType": NumericComparisonType,
         "OpaqueMarketData.MarketDataTypeEnum": OpaqueMarketData.MarketDataTypeEnum,
         "OpaqueMarketDataAllOf.MarketDataTypeEnum": OpaqueMarketDataAllOf.MarketDataTypeEnum,
