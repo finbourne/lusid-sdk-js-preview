@@ -2,10 +2,8 @@
 import {
   CreateTransactionPortfolioRequest, CurrencyAndAmount, TransactionRequest
 } from "../../api";
-
 import { client } from './clientBuilder'
-import { IncomingMessage } from "http";
-import { LusidProblemDetails } from "../../model/models";
+
 const uuid4 = require('uuid/v4')
 
 let scope = uuid4()
@@ -17,7 +15,7 @@ createRequest.baseCurrency = "GBP"
 createRequest.created = new Date(2020, 1, 1, 12, 0, 0)
 
 let transactionRequest = new TransactionRequest()
-transactionRequest.instrumentIdentifiers = {"Instrument/default/Currency": "GBP"}
+transactionRequest.instrumentIdentifiers = { "Instrument/default/Currency": "GBP" }
 transactionRequest.type = "FundsIn"
 transactionRequest.transactionDate = "2020-12-15T13:00:00Z"
 transactionRequest.settlementDate = "2020-12-17T13:00:00Z"
@@ -31,31 +29,30 @@ transactionRequest.transactionId = "1_-5207"
 describe('Create portfolios', () => {
   it('Should create a portfolio', (done) => {
     client.api.transactionPortfolios.createPortfolio(
-        scope,
-        createRequest
+      scope,
+      createRequest
     )
-    .then(() => done())
-    .catch((err: {response: IncomingMessage; body: LusidProblemDetails}) => done(err.body))
+      .then(() => done())
+      .catch((err) => done(`Failed to create portfolio. Error: ${err.toString()}`))
   })
 
   it('Should upsert a transaction', (done) => {
     client.api.transactionPortfolios.upsertTransactions(
-        scope,
-        createRequest.code,
-        [transactionRequest])
-    .then(() => done())
-    .catch((err: {response: IncomingMessage; body: LusidProblemDetails}) => done(err.body))
+      scope,
+      createRequest.code,
+      [transactionRequest])
+      .then(() => done())
+      .catch((err) => done(`Failed to upsert transaction. Error: ${err.toString()}`))
   })
 
   it('Should cancel a transaction', (done) => {
     client.api.transactionPortfolios.cancelTransactions(
-        scope,
-        createRequest.code,
-        [transactionRequest.transactionId])
-    .then(() => done())
-    .catch((err: {response: IncomingMessage; body: LusidProblemDetails}) => done(err.body))
+      scope,
+      createRequest.code,
+      [transactionRequest.transactionId])
+      .then(() => done())
+      .catch((err) => done(`Failed to cancel transaction. Error: ${err.toString()}`))
   })
-
 })
 
-export {};
+export { };
