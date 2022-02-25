@@ -1,0 +1,212 @@
+[
+    {
+        "Ticker": "AAPL US",
+        "Name": "Apple Inc.",
+        "ISIN": "US0378331005",
+        "CUSIP": 37833100,
+        "Figi": "BBG000B9XRY4"
+    },
+    {
+        "Ticker": "AMGN US",
+        "Name": "Amgen Inc.",
+        "ISIN": "US0311621009",
+        "CUSIP": 31162100,
+        "Figi": "BBG000BBS2Y0"
+    },
+    {
+        "Ticker": "AXP US",
+        "Name": "American Express Company",
+        "ISIN": "US0258161092",
+        "CUSIP": 25816109,
+        "Figi": "BBG000BCQZS4"
+    },
+    {
+        "Ticker": "BA US",
+        "Name": "Boeing Company",
+        "ISIN": "US0970231058",
+        "CUSIP": 97023105,
+        "Figi": "BBG000BCSST7"
+    },
+    {
+        "Ticker": "CAT US",
+        "Name": "Caterpillar Inc.",
+        "ISIN": "US1491231015",
+        "CUSIP": 149123101,
+        "Figi": "BBG000BF0K17"
+    },
+    {
+        "Ticker": "CRM US",
+        "Name": "salesforce.com inc.",
+        "ISIN": "US79466L3024",
+        "CUSIP": "79466L302",
+        "Figi": "BBG000BN2DC2"
+    },
+    {
+        "Ticker": "CSCO US",
+        "Name": "Cisco Systems Inc.",
+        "ISIN": "US17275R1023",
+        "CUSIP": "17275R102",
+        "Figi": "BBG000C3J3C9"
+    },
+    {
+        "Ticker": "CVX US",
+        "Name": "Chevron Corporation",
+        "ISIN": "US1667641005",
+        "CUSIP": 166764100,
+        "Figi": "BBG000F5P003"
+    },
+    {
+        "Ticker": "DIS US",
+        "Name": "Walt Disney Company",
+        "ISIN": "US2546871060",
+        "CUSIP": 254687106,
+        "Figi": "BBG000BH4R78"
+    },
+    {
+        "Ticker": "DOW US",
+        "Name": "Dow Inc.",
+        "ISIN": "US2605571031",
+        "CUSIP": 260557103,
+        "Figi": "BBG00BN96922"
+    },
+    {
+        "Ticker": "GS US",
+        "Name": "Goldman Sachs Group Inc.",
+        "ISIN": "US38141G1040",
+        "CUSIP": "38141G104",
+        "Figi": "BBG000C6CFJ5"
+    },
+    {
+        "Ticker": "HD US",
+        "Name": "Home Depot Inc.",
+        "ISIN": "US4370761029",
+        "CUSIP": 437076102,
+        "Figi": "BBG000BKZB36"
+    },
+    {
+        "Ticker": "HON US",
+        "Name": "Honeywell International Inc.",
+        "ISIN": "US4385161066",
+        "CUSIP": 438516106,
+        "Figi": "BBG000H556T9"
+    },
+    {
+        "Ticker": "IBM US",
+        "Name": "International Business Machines Corporation",
+        "ISIN": "US4592001014",
+        "CUSIP": 459200101,
+        "Figi": "BBG000BLNNH6"
+    },
+    {
+        "Ticker": "INTC US",
+        "Name": "Intel Corporation",
+        "ISIN": "US4581401001",
+        "CUSIP": 458140100,
+        "Figi": "BBG000BMC2L7"
+    },
+    {
+        "Ticker": "JNJ US",
+        "Name": "Johnson & Johnson",
+        "ISIN": "US4781601046",
+        "CUSIP": 478160104,
+        "Figi": "BBG000BMHYD1"
+    },
+    {
+        "Ticker": "JPM US",
+        "Name": "JPMorgan Chase & Co.",
+        "ISIN": "US46625H1005",
+        "CUSIP": "46625H100",
+        "Figi": "BBG000DMBXR2"
+    },
+    {
+        "Ticker": "KO US",
+        "Name": "Coca-Cola Company",
+        "ISIN": "US1912161007",
+        "CUSIP": 191216100,
+        "Figi": "BBG000BMX289"
+    },
+    {
+        "Ticker": "MCD US",
+        "Name": "McDonald's Corporation",
+        "ISIN": "US5801351017",
+        "CUSIP": 580135101,
+        "Figi": "BBG000BNSZP1"
+    },
+    {
+        "Ticker": "MMM US",
+        "Name": "3M Company",
+        "ISIN": "US88579Y1010",
+        "CUSIP": "88579Y101",
+        "Figi": "BBG000BP52R2"
+    },
+    {
+        "Ticker": "MRK US",
+        "Name": "Merck & Co. Inc.",
+        "ISIN": "US58933Y1055",
+        "CUSIP": "58933Y105",
+        "Figi": "BBG000BPD168"
+    },
+    {
+        "Ticker": "MSFT US",
+        "Name": "Microsoft Corporation",
+        "ISIN": "US5949181045",
+        "CUSIP": 594918104,
+        "Figi": "BBG000BPH459"
+    },
+    {
+        "Ticker": "NKE US",
+        "Name": "NIKE Inc. Class B",
+        "ISIN": "US6541061031",
+        "CUSIP": 654106103,
+        "Figi": "BBG000C5HS04"
+    },
+    {
+        "Ticker": "PG US",
+        "Name": "Procter & Gamble Company",
+        "ISIN": "US7427181091",
+        "CUSIP": 742718109,
+        "Figi": "BBG000BR2TH3"
+    },
+    {
+        "Ticker": "TRV US",
+        "Name": "Travelers Companies Inc.",
+        "ISIN": "US89417E1091",
+        "CUSIP": 8.94e+113,
+        "Figi": "BBG000BJ81C1"
+    },
+    {
+        "Ticker": "UNH US",
+        "Name": "UnitedHealth Group Incorporated",
+        "ISIN": "US91324P1021",
+        "CUSIP": "91324P102",
+        "Figi": "BBG000CH5208"
+    },
+    {
+        "Ticker": "V US",
+        "Name": "Visa Inc. Class A",
+        "ISIN": "US92826C8394",
+        "CUSIP": "92826C839",
+        "Figi": "BBG000PSKYX7"
+    },
+    {
+        "Ticker": "VZ US",
+        "Name": "Verizon Communications Inc.",
+        "ISIN": "US92343V1044",
+        "CUSIP": "92343V104",
+        "Figi": "BBG000C4T7T9"
+    },
+    {
+        "Ticker": "WBA US",
+        "Name": "Walgreens Boots Alliance Inc",
+        "ISIN": "US9314271084",
+        "CUSIP": 931427108,
+        "Figi": "BBG000BWLMJ4"
+    },
+    {
+        "Ticker": "WMT US",
+        "Name": "Walmart Inc.",
+        "ISIN": "US9311421039",
+        "CUSIP": 931142103,
+        "Figi": "BBG000BWXBC2"
+    }
+]

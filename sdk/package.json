@@ -7,8 +7,9 @@
   "main": "./lib/api.js",
   "types": "./lib/api.d.ts",
   "scripts": {
-    "test": "mocha --timeout 30000 --recursive lib/",
-    "build": "tsc --outDir lib/"
+    "test": "mocha --timeout 300000 --recursive lib/",
+    "build": "tsc --outDir lib/",
+    "postbuild": "copyfiles test/tutorials/instruments.json test/tutorials/instrument-properties.json lib/"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
     "@types/node": "^11.13.2",
     "js-yaml": ">=3.13.1",
     "mocha": "^6.1.4",
-    "typescript": "^3.5.1"
+    "typescript": "^3.5.1",
+    "copyfiles": "^2.4.1"
   }
 }
