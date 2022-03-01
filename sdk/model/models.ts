@@ -61,8 +61,6 @@ export * from './cdsFlowConventions';
 export * from './cdsIndex';
 export * from './cdsIndexAllOf';
 export * from './cdsProtectionDetailSpecification';
-export * from './cdsRestructuringType';
-export * from './cdsSeniority';
 export * from './change';
 export * from './completePortfolio';
 export * from './completeRelation';
@@ -137,7 +135,6 @@ export * from './deleteInstrumentResponse';
 export * from './deleteRelationRequest';
 export * from './deleteRelationshipRequest';
 export * from './deletedEntityResponse';
-export * from './deliveryType';
 export * from './dependencySourceFilter';
 export * from './discountFactorCurveData';
 export * from './discountFactorCurveDataAllOf';
@@ -267,7 +264,6 @@ export * from './marketContextSuppliers';
 export * from './marketDataKeyRule';
 export * from './marketDataSpecificRule';
 export * from './marketDataType';
-export * from './marketIdentifier';
 export * from './marketObservableType';
 export * from './marketOptions';
 export * from './marketQuote';
@@ -285,7 +281,6 @@ export * from './opaqueModelOptionsAllOf';
 export * from './operandType';
 export * from './operation';
 export * from './operator';
-export * from './optionType';
 export * from './order';
 export * from './orderBySpec';
 export * from './orderGraphBlock';
@@ -636,8 +631,6 @@ import { CdsFlowConventions } from './cdsFlowConventions';
 import { CdsIndex } from './cdsIndex';
 import { CdsIndexAllOf } from './cdsIndexAllOf';
 import { CdsProtectionDetailSpecification } from './cdsProtectionDetailSpecification';
-import { CdsRestructuringType } from './cdsRestructuringType';
-import { CdsSeniority } from './cdsSeniority';
 import { Change } from './change';
 import { CompletePortfolio } from './completePortfolio';
 import { CompleteRelation } from './completeRelation';
@@ -712,7 +705,6 @@ import { DeleteInstrumentResponse } from './deleteInstrumentResponse';
 import { DeleteRelationRequest } from './deleteRelationRequest';
 import { DeleteRelationshipRequest } from './deleteRelationshipRequest';
 import { DeletedEntityResponse } from './deletedEntityResponse';
-import { DeliveryType } from './deliveryType';
 import { DependencySourceFilter } from './dependencySourceFilter';
 import { DiscountFactorCurveData } from './discountFactorCurveData';
 import { DiscountFactorCurveDataAllOf } from './discountFactorCurveDataAllOf';
@@ -842,7 +834,6 @@ import { MarketContextSuppliers } from './marketContextSuppliers';
 import { MarketDataKeyRule } from './marketDataKeyRule';
 import { MarketDataSpecificRule } from './marketDataSpecificRule';
 import { MarketDataType } from './marketDataType';
-import { MarketIdentifier } from './marketIdentifier';
 import { MarketObservableType } from './marketObservableType';
 import { MarketOptions } from './marketOptions';
 import { MarketQuote } from './marketQuote';
@@ -860,7 +851,6 @@ import { OpaqueModelOptionsAllOf } from './opaqueModelOptionsAllOf';
 import { OperandType } from './operandType';
 import { Operation } from './operation';
 import { Operator } from './operator';
-import { OptionType } from './optionType';
 import { Order } from './order';
 import { OrderBySpec } from './orderBySpec';
 import { OrderGraphBlock } from './orderGraphBlock';
@@ -1176,10 +1166,6 @@ let enumsMap: {[index: string]: any} = {
         "CashPerpetualAllOf.InstrumentTypeEnum": CashPerpetualAllOf.InstrumentTypeEnum,
         "CdsIndex.InstrumentTypeEnum": CdsIndex.InstrumentTypeEnum,
         "CdsIndexAllOf.InstrumentTypeEnum": CdsIndexAllOf.InstrumentTypeEnum,
-        "CdsProtectionDetailSpecification.SeniorityEnum": CdsProtectionDetailSpecification.SeniorityEnum,
-        "CdsProtectionDetailSpecification.RestructuringTypeEnum": CdsProtectionDetailSpecification.RestructuringTypeEnum,
-        "CdsRestructuringType": CdsRestructuringType,
-        "CdsSeniority": CdsSeniority,
         "CompletePortfolio.TypeEnum": CompletePortfolio.TypeEnum,
         "ComplexMarketData.MarketDataTypeEnum": ComplexMarketData.MarketDataTypeEnum,
         "ContractForDifference.InstrumentTypeEnum": ContractForDifference.InstrumentTypeEnum,
@@ -1205,7 +1191,6 @@ let enumsMap: {[index: string]: any} = {
         "DataTypeValueRange": DataTypeValueRange,
         "DateTimeComparisonType": DateTimeComparisonType,
         "DayOfWeek": DayOfWeek,
-        "DeliveryType": DeliveryType,
         "DiscountFactorCurveData.MarketDataTypeEnum": DiscountFactorCurveData.MarketDataTypeEnum,
         "DiscountFactorCurveDataAllOf.MarketDataTypeEnum": DiscountFactorCurveDataAllOf.MarketDataTypeEnum,
         "DiscountingMethod": DiscountingMethod,
@@ -1213,13 +1198,7 @@ let enumsMap: {[index: string]: any} = {
         "EmptyModelOptionsAllOf.ModelOptionsTypeEnum": EmptyModelOptionsAllOf.ModelOptionsTypeEnum,
         "Equity.InstrumentTypeEnum": Equity.InstrumentTypeEnum,
         "EquityAllOf.InstrumentTypeEnum": EquityAllOf.InstrumentTypeEnum,
-        "EquityOption.DeliveryTypeEnum": EquityOption.DeliveryTypeEnum,
-        "EquityOption.OptionTypeEnum": EquityOption.OptionTypeEnum,
-        "EquityOption.UnderlyingIdentifierEnum": EquityOption.UnderlyingIdentifierEnum,
         "EquityOption.InstrumentTypeEnum": EquityOption.InstrumentTypeEnum,
-        "EquityOptionAllOf.DeliveryTypeEnum": EquityOptionAllOf.DeliveryTypeEnum,
-        "EquityOptionAllOf.OptionTypeEnum": EquityOptionAllOf.OptionTypeEnum,
-        "EquityOptionAllOf.UnderlyingIdentifierEnum": EquityOptionAllOf.UnderlyingIdentifierEnum,
         "EquityOptionAllOf.InstrumentTypeEnum": EquityOptionAllOf.InstrumentTypeEnum,
         "EquitySwap.InstrumentTypeEnum": EquitySwap.InstrumentTypeEnum,
         "EquitySwapAllOf.InstrumentTypeEnum": EquitySwapAllOf.InstrumentTypeEnum,
@@ -1287,7 +1266,6 @@ let enumsMap: {[index: string]: any} = {
         "MarketDataKeyRule.QuoteTypeEnum": MarketDataKeyRule.QuoteTypeEnum,
         "MarketDataSpecificRule.QuoteTypeEnum": MarketDataSpecificRule.QuoteTypeEnum,
         "MarketDataType": MarketDataType,
-        "MarketIdentifier": MarketIdentifier,
         "MarketObservableType": MarketObservableType,
         "MarketQuote.QuoteTypeEnum": MarketQuote.QuoteTypeEnum,
         "ModelOptions.ModelOptionsTypeEnum": ModelOptions.ModelOptionsTypeEnum,
@@ -1302,7 +1280,6 @@ let enumsMap: {[index: string]: any} = {
         "OpaqueModelOptionsAllOf.ModelOptionsTypeEnum": OpaqueModelOptionsAllOf.ModelOptionsTypeEnum,
         "OperandType": OperandType,
         "Operator": Operator,
-        "OptionType": OptionType,
         "OrderBySpec.SortOrderEnum": OrderBySpec.SortOrderEnum,
         "OutputTransaction.TransactionStatusEnum": OutputTransaction.TransactionStatusEnum,
         "PeriodType": PeriodType,
