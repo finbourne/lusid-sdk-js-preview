@@ -29,16 +29,6 @@ export * from './annulQuotesResponse';
 export * from './annulSingleStructuredDataResponse';
 export * from './annulStructuredDataResponse';
 export * from './assetClass';
-export * from './atomValue';
-export * from './atomValue0D';
-export * from './atomValue0DAllOf';
-export * from './atomValueDecimal';
-export * from './atomValueDecimalAllOf';
-export * from './atomValueInt';
-export * from './atomValueIntAllOf';
-export * from './atomValueString';
-export * from './atomValueStringAllOf';
-export * from './atomValueType';
 export * from './basket';
 export * from './basketAllOf';
 export * from './basketIdentifier';
@@ -54,6 +44,10 @@ export * from './calendar';
 export * from './calendarDate';
 export * from './capFloor';
 export * from './capFloorAllOf';
+export * from './cashFlowValue';
+export * from './cashFlowValueAllOf';
+export * from './cashFlowValueSet';
+export * from './cashFlowValueSetAllOf';
 export * from './cashLadderRecord';
 export * from './cashPerpetual';
 export * from './cashPerpetualAllOf';
@@ -447,6 +441,18 @@ export * from './resourceListOfTransaction';
 export * from './resourceListOfValueType';
 export * from './resultDataKeyRule';
 export * from './resultDataSchema';
+export * from './resultValue';
+export * from './resultValue0D';
+export * from './resultValue0DAllOf';
+export * from './resultValueDecimal';
+export * from './resultValueDecimalAllOf';
+export * from './resultValueDictionary';
+export * from './resultValueDictionaryAllOf';
+export * from './resultValueInt';
+export * from './resultValueIntAllOf';
+export * from './resultValueString';
+export * from './resultValueStringAllOf';
+export * from './resultValueType';
 export * from './scalingMethodology';
 export * from './schema';
 export * from './scopeDefinition';
@@ -528,6 +534,7 @@ export * from './upsertQuotesResponse';
 export * from './upsertRecipeRequest';
 export * from './upsertReferencePortfolioConstituentsRequest';
 export * from './upsertReferencePortfolioConstituentsResponse';
+export * from './upsertResultValuesDataRequest';
 export * from './upsertReturnsResponse';
 export * from './upsertSingleStructuredDataResponse';
 export * from './upsertStructuredDataResponse';
@@ -599,16 +606,6 @@ import { AnnulQuotesResponse } from './annulQuotesResponse';
 import { AnnulSingleStructuredDataResponse } from './annulSingleStructuredDataResponse';
 import { AnnulStructuredDataResponse } from './annulStructuredDataResponse';
 import { AssetClass } from './assetClass';
-import { AtomValue } from './atomValue';
-import { AtomValue0D } from './atomValue0D';
-import { AtomValue0DAllOf } from './atomValue0DAllOf';
-import { AtomValueDecimal } from './atomValueDecimal';
-import { AtomValueDecimalAllOf } from './atomValueDecimalAllOf';
-import { AtomValueInt } from './atomValueInt';
-import { AtomValueIntAllOf } from './atomValueIntAllOf';
-import { AtomValueString } from './atomValueString';
-import { AtomValueStringAllOf } from './atomValueStringAllOf';
-import { AtomValueType } from './atomValueType';
 import { Basket } from './basket';
 import { BasketAllOf } from './basketAllOf';
 import { BasketIdentifier } from './basketIdentifier';
@@ -624,6 +621,10 @@ import { Calendar } from './calendar';
 import { CalendarDate } from './calendarDate';
 import { CapFloor } from './capFloor';
 import { CapFloorAllOf } from './capFloorAllOf';
+import { CashFlowValue } from './cashFlowValue';
+import { CashFlowValueAllOf } from './cashFlowValueAllOf';
+import { CashFlowValueSet } from './cashFlowValueSet';
+import { CashFlowValueSetAllOf } from './cashFlowValueSetAllOf';
 import { CashLadderRecord } from './cashLadderRecord';
 import { CashPerpetual } from './cashPerpetual';
 import { CashPerpetualAllOf } from './cashPerpetualAllOf';
@@ -1017,6 +1018,18 @@ import { ResourceListOfTransaction } from './resourceListOfTransaction';
 import { ResourceListOfValueType } from './resourceListOfValueType';
 import { ResultDataKeyRule } from './resultDataKeyRule';
 import { ResultDataSchema } from './resultDataSchema';
+import { ResultValue } from './resultValue';
+import { ResultValue0D } from './resultValue0D';
+import { ResultValue0DAllOf } from './resultValue0DAllOf';
+import { ResultValueDecimal } from './resultValueDecimal';
+import { ResultValueDecimalAllOf } from './resultValueDecimalAllOf';
+import { ResultValueDictionary } from './resultValueDictionary';
+import { ResultValueDictionaryAllOf } from './resultValueDictionaryAllOf';
+import { ResultValueInt } from './resultValueInt';
+import { ResultValueIntAllOf } from './resultValueIntAllOf';
+import { ResultValueString } from './resultValueString';
+import { ResultValueStringAllOf } from './resultValueStringAllOf';
+import { ResultValueType } from './resultValueType';
 import { ScalingMethodology } from './scalingMethodology';
 import { Schema } from './schema';
 import { ScopeDefinition } from './scopeDefinition';
@@ -1098,6 +1111,7 @@ import { UpsertQuotesResponse } from './upsertQuotesResponse';
 import { UpsertRecipeRequest } from './upsertRecipeRequest';
 import { UpsertReferencePortfolioConstituentsRequest } from './upsertReferencePortfolioConstituentsRequest';
 import { UpsertReferencePortfolioConstituentsResponse } from './upsertReferencePortfolioConstituentsResponse';
+import { UpsertResultValuesDataRequest } from './upsertResultValuesDataRequest';
 import { UpsertReturnsResponse } from './upsertReturnsResponse';
 import { UpsertSingleStructuredDataResponse } from './upsertSingleStructuredDataResponse';
 import { UpsertStructuredDataResponse } from './upsertStructuredDataResponse';
@@ -1146,22 +1160,16 @@ let enumsMap: {[index: string]: any} = {
         "AggregationQuery.TypeEnum": AggregationQuery.TypeEnum,
         "AggregationType": AggregationType,
         "AssetClass": AssetClass,
-        "AtomValue.AtomValueTypeEnum": AtomValue.AtomValueTypeEnum,
-        "AtomValue0D.AtomValueTypeEnum": AtomValue0D.AtomValueTypeEnum,
-        "AtomValue0DAllOf.AtomValueTypeEnum": AtomValue0DAllOf.AtomValueTypeEnum,
-        "AtomValueDecimal.AtomValueTypeEnum": AtomValueDecimal.AtomValueTypeEnum,
-        "AtomValueDecimalAllOf.AtomValueTypeEnum": AtomValueDecimalAllOf.AtomValueTypeEnum,
-        "AtomValueInt.AtomValueTypeEnum": AtomValueInt.AtomValueTypeEnum,
-        "AtomValueIntAllOf.AtomValueTypeEnum": AtomValueIntAllOf.AtomValueTypeEnum,
-        "AtomValueString.AtomValueTypeEnum": AtomValueString.AtomValueTypeEnum,
-        "AtomValueStringAllOf.AtomValueTypeEnum": AtomValueStringAllOf.AtomValueTypeEnum,
-        "AtomValueType": AtomValueType,
         "Basket.InstrumentTypeEnum": Basket.InstrumentTypeEnum,
         "BasketAllOf.InstrumentTypeEnum": BasketAllOf.InstrumentTypeEnum,
         "Bond.InstrumentTypeEnum": Bond.InstrumentTypeEnum,
         "BondAllOf.InstrumentTypeEnum": BondAllOf.InstrumentTypeEnum,
         "CapFloor.InstrumentTypeEnum": CapFloor.InstrumentTypeEnum,
         "CapFloorAllOf.InstrumentTypeEnum": CapFloorAllOf.InstrumentTypeEnum,
+        "CashFlowValue.ResultValueTypeEnum": CashFlowValue.ResultValueTypeEnum,
+        "CashFlowValueAllOf.ResultValueTypeEnum": CashFlowValueAllOf.ResultValueTypeEnum,
+        "CashFlowValueSet.ResultValueTypeEnum": CashFlowValueSet.ResultValueTypeEnum,
+        "CashFlowValueSetAllOf.ResultValueTypeEnum": CashFlowValueSetAllOf.ResultValueTypeEnum,
         "CashPerpetual.InstrumentTypeEnum": CashPerpetual.InstrumentTypeEnum,
         "CashPerpetualAllOf.InstrumentTypeEnum": CashPerpetualAllOf.InstrumentTypeEnum,
         "CdsIndex.InstrumentTypeEnum": CdsIndex.InstrumentTypeEnum,
@@ -1327,6 +1335,18 @@ let enumsMap: {[index: string]: any} = {
         "ReferencePortfolioWeightType": ReferencePortfolioWeightType,
         "Repo.InstrumentTypeEnum": Repo.InstrumentTypeEnum,
         "RepoAllOf.InstrumentTypeEnum": RepoAllOf.InstrumentTypeEnum,
+        "ResultValue.ResultValueTypeEnum": ResultValue.ResultValueTypeEnum,
+        "ResultValue0D.ResultValueTypeEnum": ResultValue0D.ResultValueTypeEnum,
+        "ResultValue0DAllOf.ResultValueTypeEnum": ResultValue0DAllOf.ResultValueTypeEnum,
+        "ResultValueDecimal.ResultValueTypeEnum": ResultValueDecimal.ResultValueTypeEnum,
+        "ResultValueDecimalAllOf.ResultValueTypeEnum": ResultValueDecimalAllOf.ResultValueTypeEnum,
+        "ResultValueDictionary.ResultValueTypeEnum": ResultValueDictionary.ResultValueTypeEnum,
+        "ResultValueDictionaryAllOf.ResultValueTypeEnum": ResultValueDictionaryAllOf.ResultValueTypeEnum,
+        "ResultValueInt.ResultValueTypeEnum": ResultValueInt.ResultValueTypeEnum,
+        "ResultValueIntAllOf.ResultValueTypeEnum": ResultValueIntAllOf.ResultValueTypeEnum,
+        "ResultValueString.ResultValueTypeEnum": ResultValueString.ResultValueTypeEnum,
+        "ResultValueStringAllOf.ResultValueTypeEnum": ResultValueStringAllOf.ResultValueTypeEnum,
+        "ResultValueType": ResultValueType,
         "ScalingMethodology": ScalingMethodology,
         "SimpleInstrument.AssetClassEnum": SimpleInstrument.AssetClassEnum,
         "SimpleInstrument.InstrumentTypeEnum": SimpleInstrument.InstrumentTypeEnum,
@@ -1384,15 +1404,6 @@ let typeMap: {[index: string]: any} = {
     "AnnulQuotesResponse": AnnulQuotesResponse,
     "AnnulSingleStructuredDataResponse": AnnulSingleStructuredDataResponse,
     "AnnulStructuredDataResponse": AnnulStructuredDataResponse,
-    "AtomValue": AtomValue,
-    "AtomValue0D": AtomValue0D,
-    "AtomValue0DAllOf": AtomValue0DAllOf,
-    "AtomValueDecimal": AtomValueDecimal,
-    "AtomValueDecimalAllOf": AtomValueDecimalAllOf,
-    "AtomValueInt": AtomValueInt,
-    "AtomValueIntAllOf": AtomValueIntAllOf,
-    "AtomValueString": AtomValueString,
-    "AtomValueStringAllOf": AtomValueStringAllOf,
     "Basket": Basket,
     "BasketAllOf": BasketAllOf,
     "BasketIdentifier": BasketIdentifier,
@@ -1408,6 +1419,10 @@ let typeMap: {[index: string]: any} = {
     "CalendarDate": CalendarDate,
     "CapFloor": CapFloor,
     "CapFloorAllOf": CapFloorAllOf,
+    "CashFlowValue": CashFlowValue,
+    "CashFlowValueAllOf": CashFlowValueAllOf,
+    "CashFlowValueSet": CashFlowValueSet,
+    "CashFlowValueSetAllOf": CashFlowValueSetAllOf,
     "CashLadderRecord": CashLadderRecord,
     "CashPerpetual": CashPerpetual,
     "CashPerpetualAllOf": CashPerpetualAllOf,
@@ -1777,6 +1792,17 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfValueType": ResourceListOfValueType,
     "ResultDataKeyRule": ResultDataKeyRule,
     "ResultDataSchema": ResultDataSchema,
+    "ResultValue": ResultValue,
+    "ResultValue0D": ResultValue0D,
+    "ResultValue0DAllOf": ResultValue0DAllOf,
+    "ResultValueDecimal": ResultValueDecimal,
+    "ResultValueDecimalAllOf": ResultValueDecimalAllOf,
+    "ResultValueDictionary": ResultValueDictionary,
+    "ResultValueDictionaryAllOf": ResultValueDictionaryAllOf,
+    "ResultValueInt": ResultValueInt,
+    "ResultValueIntAllOf": ResultValueIntAllOf,
+    "ResultValueString": ResultValueString,
+    "ResultValueStringAllOf": ResultValueStringAllOf,
     "Schema": Schema,
     "ScopeDefinition": ScopeDefinition,
     "SequenceDefinition": SequenceDefinition,
@@ -1848,6 +1874,7 @@ let typeMap: {[index: string]: any} = {
     "UpsertRecipeRequest": UpsertRecipeRequest,
     "UpsertReferencePortfolioConstituentsRequest": UpsertReferencePortfolioConstituentsRequest,
     "UpsertReferencePortfolioConstituentsResponse": UpsertReferencePortfolioConstituentsResponse,
+    "UpsertResultValuesDataRequest": UpsertResultValuesDataRequest,
     "UpsertReturnsResponse": UpsertReturnsResponse,
     "UpsertSingleStructuredDataResponse": UpsertSingleStructuredDataResponse,
     "UpsertStructuredDataResponse": UpsertStructuredDataResponse,
