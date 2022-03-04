@@ -496,6 +496,10 @@ export * from './transactionRoles';
 export * from './transactionSetConfigurationData';
 export * from './transactionSetConfigurationDataRequest';
 export * from './transactionStatus';
+export * from './transactionType';
+export * from './transactionTypeAlias';
+export * from './transactionTypeMovement';
+export * from './transactionTypePropertyMapping';
 export * from './translateInstrumentDefinitionsRequest';
 export * from './translateInstrumentDefinitionsResponse';
 export * from './typedResourceId';
@@ -1073,6 +1077,10 @@ import { TransactionRoles } from './transactionRoles';
 import { TransactionSetConfigurationData } from './transactionSetConfigurationData';
 import { TransactionSetConfigurationDataRequest } from './transactionSetConfigurationDataRequest';
 import { TransactionStatus } from './transactionStatus';
+import { TransactionType } from './transactionType';
+import { TransactionTypeAlias } from './transactionTypeAlias';
+import { TransactionTypeMovement } from './transactionTypeMovement';
+import { TransactionTypePropertyMapping } from './transactionTypePropertyMapping';
 import { TranslateInstrumentDefinitionsRequest } from './translateInstrumentDefinitionsRequest';
 import { TranslateInstrumentDefinitionsResponse } from './translateInstrumentDefinitionsResponse';
 import { TypedResourceId } from './typedResourceId';
@@ -1838,6 +1846,10 @@ let typeMap: {[index: string]: any} = {
     "TransactionRequest": TransactionRequest,
     "TransactionSetConfigurationData": TransactionSetConfigurationData,
     "TransactionSetConfigurationDataRequest": TransactionSetConfigurationDataRequest,
+    "TransactionType": TransactionType,
+    "TransactionTypeAlias": TransactionTypeAlias,
+    "TransactionTypeMovement": TransactionTypeMovement,
+    "TransactionTypePropertyMapping": TransactionTypePropertyMapping,
     "TranslateInstrumentDefinitionsRequest": TranslateInstrumentDefinitionsRequest,
     "TranslateInstrumentDefinitionsResponse": TranslateInstrumentDefinitionsResponse,
     "TypedResourceId": TypedResourceId,

@@ -42,6 +42,7 @@ import {SearchApi} from './api/searchApi';
 import {SequencesApi} from './api/sequencesApi';
 import {StructuredResultDataApi} from './api/structuredResultDataApi';
 import {SystemConfigurationApi} from './api/systemConfigurationApi';
+import {TransactionConfigurationApi} from './api/transactionConfigurationApi';
 import {TransactionPortfoliosApi} from './api/transactionPortfoliosApi';
 import {TranslationApi} from './api/translationApi';
 
@@ -90,6 +91,7 @@ export class Api {
     public sequences:  SequencesApi
     public structuredResultData:  StructuredResultDataApi
     public systemConfiguration:  SystemConfigurationApi
+    public transactionConfiguration:  TransactionConfigurationApi
     public transactionPortfolios:  TransactionPortfoliosApi
     public translation:  TranslationApi
 }
