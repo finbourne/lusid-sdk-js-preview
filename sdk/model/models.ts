@@ -173,6 +173,8 @@ export * from './forwardRateAgreement';
 export * from './forwardRateAgreementAllOf';
 export * from './fundingLeg';
 export * from './fundingLegAllOf';
+export * from './fundingLegOptions';
+export * from './fundingLegOptionsAllOf';
 export * from './future';
 export * from './futureAllOf';
 export * from './futuresContractDetails';
@@ -750,6 +752,8 @@ import { ForwardRateAgreement } from './forwardRateAgreement';
 import { ForwardRateAgreementAllOf } from './forwardRateAgreementAllOf';
 import { FundingLeg } from './fundingLeg';
 import { FundingLegAllOf } from './fundingLegAllOf';
+import { FundingLegOptions } from './fundingLegOptions';
+import { FundingLegOptionsAllOf } from './fundingLegOptionsAllOf';
 import { Future } from './future';
 import { FutureAllOf } from './futureAllOf';
 import { FuturesContractDetails } from './futuresContractDetails';
@@ -1225,6 +1229,8 @@ let enumsMap: {[index: string]: any} = {
         "ForwardRateAgreementAllOf.InstrumentTypeEnum": ForwardRateAgreementAllOf.InstrumentTypeEnum,
         "FundingLeg.InstrumentTypeEnum": FundingLeg.InstrumentTypeEnum,
         "FundingLegAllOf.InstrumentTypeEnum": FundingLegAllOf.InstrumentTypeEnum,
+        "FundingLegOptions.ModelOptionsTypeEnum": FundingLegOptions.ModelOptionsTypeEnum,
+        "FundingLegOptionsAllOf.ModelOptionsTypeEnum": FundingLegOptionsAllOf.ModelOptionsTypeEnum,
         "Future.InstrumentTypeEnum": Future.InstrumentTypeEnum,
         "FutureAllOf.InstrumentTypeEnum": FutureAllOf.InstrumentTypeEnum,
         "FxForward.InstrumentTypeEnum": FxForward.InstrumentTypeEnum,
@@ -1544,6 +1550,8 @@ let typeMap: {[index: string]: any} = {
     "ForwardRateAgreementAllOf": ForwardRateAgreementAllOf,
     "FundingLeg": FundingLeg,
     "FundingLegAllOf": FundingLegAllOf,
+    "FundingLegOptions": FundingLegOptions,
+    "FundingLegOptionsAllOf": FundingLegOptionsAllOf,
     "Future": Future,
     "FutureAllOf": FutureAllOf,
     "FuturesContractDetails": FuturesContractDetails,
