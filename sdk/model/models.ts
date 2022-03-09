@@ -382,6 +382,8 @@ export * from './reconciliationResponse';
 export * from './reconciliationRule';
 export * from './reconciliationRuleType';
 export * from './referenceData';
+export * from './referenceInstrument';
+export * from './referenceInstrumentAllOf';
 export * from './referencePortfolioConstituent';
 export * from './referencePortfolioConstituentRequest';
 export * from './referencePortfolioWeightType';
@@ -965,6 +967,8 @@ import { ReconciliationResponse } from './reconciliationResponse';
 import { ReconciliationRule } from './reconciliationRule';
 import { ReconciliationRuleType } from './reconciliationRuleType';
 import { ReferenceData } from './referenceData';
+import { ReferenceInstrument } from './referenceInstrument';
+import { ReferenceInstrumentAllOf } from './referenceInstrumentAllOf';
 import { ReferencePortfolioConstituent } from './referencePortfolioConstituent';
 import { ReferencePortfolioConstituentRequest } from './referencePortfolioConstituentRequest';
 import { ReferencePortfolioWeightType } from './referencePortfolioWeightType';
@@ -1346,6 +1350,8 @@ let enumsMap: {[index: string]: any} = {
         "ReconcileStringRuleAllOf.RuleTypeEnum": ReconcileStringRuleAllOf.RuleTypeEnum,
         "ReconciliationRule.RuleTypeEnum": ReconciliationRule.RuleTypeEnum,
         "ReconciliationRuleType": ReconciliationRuleType,
+        "ReferenceInstrument.InstrumentTypeEnum": ReferenceInstrument.InstrumentTypeEnum,
+        "ReferenceInstrumentAllOf.InstrumentTypeEnum": ReferenceInstrumentAllOf.InstrumentTypeEnum,
         "ReferencePortfolioWeightType": ReferencePortfolioWeightType,
         "Repo.InstrumentTypeEnum": Repo.InstrumentTypeEnum,
         "RepoAllOf.InstrumentTypeEnum": RepoAllOf.InstrumentTypeEnum,
@@ -1748,6 +1754,8 @@ let typeMap: {[index: string]: any} = {
     "ReconciliationResponse": ReconciliationResponse,
     "ReconciliationRule": ReconciliationRule,
     "ReferenceData": ReferenceData,
+    "ReferenceInstrument": ReferenceInstrument,
+    "ReferenceInstrumentAllOf": ReferenceInstrumentAllOf,
     "ReferencePortfolioConstituent": ReferencePortfolioConstituent,
     "ReferencePortfolioConstituentRequest": ReferencePortfolioConstituentRequest,
     "RelatedEntity": RelatedEntity,
