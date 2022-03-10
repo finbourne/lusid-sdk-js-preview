@@ -340,6 +340,8 @@ export * from './portfolioGroupSearchResult';
 export * from './portfolioHolding';
 export * from './portfolioProperties';
 export * from './portfolioReconciliationRequest';
+export * from './portfolioResultDataKeyRule';
+export * from './portfolioResultDataKeyRuleAllOf';
 export * from './portfolioSearchResult';
 export * from './portfolioType';
 export * from './portfoliosReconciliationRequest';
@@ -444,7 +446,10 @@ export * from './resourceListOfString';
 export * from './resourceListOfTransaction';
 export * from './resourceListOfValueType';
 export * from './resultDataKeyRule';
+export * from './resultDataKeyRuleAllOf';
 export * from './resultDataSchema';
+export * from './resultKeyRule';
+export * from './resultKeyRuleType';
 export * from './resultValue';
 export * from './resultValue0D';
 export * from './resultValue0DAllOf';
@@ -925,6 +930,8 @@ import { PortfolioGroupSearchResult } from './portfolioGroupSearchResult';
 import { PortfolioHolding } from './portfolioHolding';
 import { PortfolioProperties } from './portfolioProperties';
 import { PortfolioReconciliationRequest } from './portfolioReconciliationRequest';
+import { PortfolioResultDataKeyRule } from './portfolioResultDataKeyRule';
+import { PortfolioResultDataKeyRuleAllOf } from './portfolioResultDataKeyRuleAllOf';
 import { PortfolioSearchResult } from './portfolioSearchResult';
 import { PortfolioType } from './portfolioType';
 import { PortfoliosReconciliationRequest } from './portfoliosReconciliationRequest';
@@ -1029,7 +1036,10 @@ import { ResourceListOfString } from './resourceListOfString';
 import { ResourceListOfTransaction } from './resourceListOfTransaction';
 import { ResourceListOfValueType } from './resourceListOfValueType';
 import { ResultDataKeyRule } from './resultDataKeyRule';
+import { ResultDataKeyRuleAllOf } from './resultDataKeyRuleAllOf';
 import { ResultDataSchema } from './resultDataSchema';
+import { ResultKeyRule } from './resultKeyRule';
+import { ResultKeyRuleType } from './resultKeyRuleType';
 import { ResultValue } from './resultValue';
 import { ResultValue0D } from './resultValue0D';
 import { ResultValue0DAllOf } from './resultValue0DAllOf';
@@ -1311,6 +1321,8 @@ let enumsMap: {[index: string]: any} = {
         "PeriodType": PeriodType,
         "PerpetualEntityState": PerpetualEntityState,
         "Portfolio.TypeEnum": Portfolio.TypeEnum,
+        "PortfolioResultDataKeyRule.ResultKeyRuleTypeEnum": PortfolioResultDataKeyRule.ResultKeyRuleTypeEnum,
+        "PortfolioResultDataKeyRuleAllOf.ResultKeyRuleTypeEnum": PortfolioResultDataKeyRuleAllOf.ResultKeyRuleTypeEnum,
         "PortfolioSearchResult.TypeEnum": PortfolioSearchResult.TypeEnum,
         "PortfolioType": PortfolioType,
         "PricingModel": PricingModel,
@@ -1355,6 +1367,10 @@ let enumsMap: {[index: string]: any} = {
         "ReferencePortfolioWeightType": ReferencePortfolioWeightType,
         "Repo.InstrumentTypeEnum": Repo.InstrumentTypeEnum,
         "RepoAllOf.InstrumentTypeEnum": RepoAllOf.InstrumentTypeEnum,
+        "ResultDataKeyRule.ResultKeyRuleTypeEnum": ResultDataKeyRule.ResultKeyRuleTypeEnum,
+        "ResultDataKeyRuleAllOf.ResultKeyRuleTypeEnum": ResultDataKeyRuleAllOf.ResultKeyRuleTypeEnum,
+        "ResultKeyRule.ResultKeyRuleTypeEnum": ResultKeyRule.ResultKeyRuleTypeEnum,
+        "ResultKeyRuleType": ResultKeyRuleType,
         "ResultValue.ResultValueTypeEnum": ResultValue.ResultValueTypeEnum,
         "ResultValue0D.ResultValueTypeEnum": ResultValue0D.ResultValueTypeEnum,
         "ResultValue0DAllOf.ResultValueTypeEnum": ResultValue0DAllOf.ResultValueTypeEnum,
@@ -1721,6 +1737,8 @@ let typeMap: {[index: string]: any} = {
     "PortfolioHolding": PortfolioHolding,
     "PortfolioProperties": PortfolioProperties,
     "PortfolioReconciliationRequest": PortfolioReconciliationRequest,
+    "PortfolioResultDataKeyRule": PortfolioResultDataKeyRule,
+    "PortfolioResultDataKeyRuleAllOf": PortfolioResultDataKeyRuleAllOf,
     "PortfolioSearchResult": PortfolioSearchResult,
     "PortfoliosReconciliationRequest": PortfoliosReconciliationRequest,
     "PortfoliosReconciliationRequestPreview": PortfoliosReconciliationRequestPreview,
@@ -1815,7 +1833,9 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfTransaction": ResourceListOfTransaction,
     "ResourceListOfValueType": ResourceListOfValueType,
     "ResultDataKeyRule": ResultDataKeyRule,
+    "ResultDataKeyRuleAllOf": ResultDataKeyRuleAllOf,
     "ResultDataSchema": ResultDataSchema,
+    "ResultKeyRule": ResultKeyRule,
     "ResultValue": ResultValue,
     "ResultValue0D": ResultValue0D,
     "ResultValue0DAllOf": ResultValue0DAllOf,
