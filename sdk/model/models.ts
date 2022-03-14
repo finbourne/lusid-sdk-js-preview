@@ -135,6 +135,7 @@ export * from './discountFactorCurveDataAllOf';
 export * from './discountingMethod';
 export * from './emptyModelOptions';
 export * from './emptyModelOptionsAllOf';
+export * from './entityIdentifier';
 export * from './equity';
 export * from './equityAllOf';
 export * from './equityAllOfIdentifiers';
@@ -725,6 +726,7 @@ import { DiscountFactorCurveDataAllOf } from './discountFactorCurveDataAllOf';
 import { DiscountingMethod } from './discountingMethod';
 import { EmptyModelOptions } from './emptyModelOptions';
 import { EmptyModelOptionsAllOf } from './emptyModelOptionsAllOf';
+import { EntityIdentifier } from './entityIdentifier';
 import { Equity } from './equity';
 import { EquityAllOf } from './equityAllOf';
 import { EquityAllOfIdentifiers } from './equityAllOfIdentifiers';
@@ -1542,6 +1544,7 @@ let typeMap: {[index: string]: any} = {
     "DiscountFactorCurveDataAllOf": DiscountFactorCurveDataAllOf,
     "EmptyModelOptions": EmptyModelOptions,
     "EmptyModelOptionsAllOf": EmptyModelOptionsAllOf,
+    "EntityIdentifier": EntityIdentifier,
     "Equity": Equity,
     "EquityAllOf": EquityAllOf,
     "EquityAllOfIdentifiers": EquityAllOfIdentifiers,

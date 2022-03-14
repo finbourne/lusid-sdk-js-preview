@@ -11,38 +11,45 @@
  */
 
 import { RequestFile } from './models';
-import { FieldSchema } from './fieldSchema';
-import { Link } from './link';
 
-export class PropertySchema {
-    'href'?: string | null;
-    'values'?: { [key: string]: FieldSchema; } | null;
+/**
+* Dto to expose mapped keys to new standardised format
+*/
+export class EntityIdentifier {
     /**
-    * Collection of links.
+    * The scope of the identifier
     */
-    'links'?: Array<Link> | null;
+    'identifierScope'?: string | null;
+    /**
+    * The type of the identifier
+    */
+    'identifierType': string;
+    /**
+    * The value of the identifier
+    */
+    'identifierValue': string;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "href",
-            "baseName": "href",
+            "name": "identifierScope",
+            "baseName": "identifierScope",
             "type": "string"
         },
         {
-            "name": "values",
-            "baseName": "values",
-            "type": "{ [key: string]: FieldSchema; }"
+            "name": "identifierType",
+            "baseName": "identifierType",
+            "type": "string"
         },
         {
-            "name": "links",
-            "baseName": "links",
-            "type": "Array<Link>"
+            "name": "identifierValue",
+            "baseName": "identifierValue",
+            "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
-        return PropertySchema.attributeTypeMap;
+        return EntityIdentifier.attributeTypeMap;
     }
 }
 
