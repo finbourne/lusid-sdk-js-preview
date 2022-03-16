@@ -510,6 +510,7 @@ export * from './transactionType';
 export * from './transactionTypeAlias';
 export * from './transactionTypeMovement';
 export * from './transactionTypePropertyMapping';
+export * from './transactionTypeRequest';
 export * from './translateInstrumentDefinitionsRequest';
 export * from './translateInstrumentDefinitionsResponse';
 export * from './typedResourceId';
@@ -1101,6 +1102,7 @@ import { TransactionType } from './transactionType';
 import { TransactionTypeAlias } from './transactionTypeAlias';
 import { TransactionTypeMovement } from './transactionTypeMovement';
 import { TransactionTypePropertyMapping } from './transactionTypePropertyMapping';
+import { TransactionTypeRequest } from './transactionTypeRequest';
 import { TranslateInstrumentDefinitionsRequest } from './translateInstrumentDefinitionsRequest';
 import { TranslateInstrumentDefinitionsResponse } from './translateInstrumentDefinitionsResponse';
 import { TypedResourceId } from './typedResourceId';
@@ -1889,6 +1891,7 @@ let typeMap: {[index: string]: any} = {
     "TransactionTypeAlias": TransactionTypeAlias,
     "TransactionTypeMovement": TransactionTypeMovement,
     "TransactionTypePropertyMapping": TransactionTypePropertyMapping,
+    "TransactionTypeRequest": TransactionTypeRequest,
     "TranslateInstrumentDefinitionsRequest": TranslateInstrumentDefinitionsRequest,
     "TranslateInstrumentDefinitionsResponse": TranslateInstrumentDefinitionsResponse,
     "TypedResourceId": TypedResourceId,

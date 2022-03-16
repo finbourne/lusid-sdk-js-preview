@@ -11,34 +11,45 @@
  */
 
 import { RequestFile } from './models';
+import { PerpetualProperty } from './perpetualProperty';
+import { TransactionTypeAlias } from './transactionTypeAlias';
+import { TransactionTypeMovement } from './transactionTypeMovement';
 
-export class ModelOptions {
+export class TransactionTypeRequest {
     /**
-    * The available values are: Invalid, OpaqueModelOptions, EmptyModelOptions, IndexModelOptions, FxForwardModelOptions, FundingLegModelOptions
+    * List of transaction types that map to this specific transaction configuration
     */
-    'modelOptionsType': ModelOptions.ModelOptionsTypeEnum;
+    'aliases': Array<TransactionTypeAlias>;
+    /**
+    * Movement data for the transaction type
+    */
+    'movements': Array<TransactionTypeMovement>;
+    /**
+    * Properties attached to the transaction type
+    */
+    'properties'?: { [key: string]: PerpetualProperty; } | null;
 
-    static discriminator: string | undefined = "modelOptionsType";
+    static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "modelOptionsType",
-            "baseName": "modelOptionsType",
-            "type": "ModelOptions.ModelOptionsTypeEnum"
+            "name": "aliases",
+            "baseName": "aliases",
+            "type": "Array<TransactionTypeAlias>"
+        },
+        {
+            "name": "movements",
+            "baseName": "movements",
+            "type": "Array<TransactionTypeMovement>"
+        },
+        {
+            "name": "properties",
+            "baseName": "properties",
+            "type": "{ [key: string]: PerpetualProperty; }"
         }    ];
 
     static getAttributeTypeMap() {
-        return ModelOptions.attributeTypeMap;
+        return TransactionTypeRequest.attributeTypeMap;
     }
 }
 
-export namespace ModelOptions {
-    export enum ModelOptionsTypeEnum {
-        Invalid = <any> 'Invalid',
-        OpaqueModelOptions = <any> 'OpaqueModelOptions',
-        EmptyModelOptions = <any> 'EmptyModelOptions',
-        IndexModelOptions = <any> 'IndexModelOptions',
-        FxForwardModelOptions = <any> 'FxForwardModelOptions',
-        FundingLegModelOptions = <any> 'FundingLegModelOptions'
-    }
-}
