@@ -475,6 +475,8 @@ export * from './setTransactionConfigurationAlias';
 export * from './setTransactionConfigurationSourceRequest';
 export * from './sideConfigurationData';
 export * from './sideConfigurationDataRequest';
+export * from './sideDefinition';
+export * from './sideDefinitionRequest';
 export * from './simpleInstrument';
 export * from './simpleInstrumentAllOf';
 export * from './sortOrder';
@@ -1067,6 +1069,8 @@ import { SetTransactionConfigurationAlias } from './setTransactionConfigurationA
 import { SetTransactionConfigurationSourceRequest } from './setTransactionConfigurationSourceRequest';
 import { SideConfigurationData } from './sideConfigurationData';
 import { SideConfigurationDataRequest } from './sideConfigurationDataRequest';
+import { SideDefinition } from './sideDefinition';
+import { SideDefinitionRequest } from './sideDefinitionRequest';
 import { SimpleInstrument } from './simpleInstrument';
 import { SimpleInstrumentAllOf } from './simpleInstrumentAllOf';
 import { SortOrder } from './sortOrder';
@@ -1863,6 +1867,8 @@ let typeMap: {[index: string]: any} = {
     "SetTransactionConfigurationSourceRequest": SetTransactionConfigurationSourceRequest,
     "SideConfigurationData": SideConfigurationData,
     "SideConfigurationDataRequest": SideConfigurationDataRequest,
+    "SideDefinition": SideDefinition,
+    "SideDefinitionRequest": SideDefinitionRequest,
     "SimpleInstrument": SimpleInstrument,
     "SimpleInstrumentAllOf": SimpleInstrumentAllOf,
     "StepSchedule": StepSchedule,
