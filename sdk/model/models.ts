@@ -299,6 +299,7 @@ export * from './pagedResourceListOfCalendar';
 export * from './pagedResourceListOfComplianceRuleResult';
 export * from './pagedResourceListOfComplianceRun';
 export * from './pagedResourceListOfCorporateActionSource';
+export * from './pagedResourceListOfCustomEntityDefinition';
 export * from './pagedResourceListOfCustomEntityResponse';
 export * from './pagedResourceListOfCutLabelDefinition';
 export * from './pagedResourceListOfDataTypeSummary';
@@ -893,6 +894,7 @@ import { PagedResourceListOfCalendar } from './pagedResourceListOfCalendar';
 import { PagedResourceListOfComplianceRuleResult } from './pagedResourceListOfComplianceRuleResult';
 import { PagedResourceListOfComplianceRun } from './pagedResourceListOfComplianceRun';
 import { PagedResourceListOfCorporateActionSource } from './pagedResourceListOfCorporateActionSource';
+import { PagedResourceListOfCustomEntityDefinition } from './pagedResourceListOfCustomEntityDefinition';
 import { PagedResourceListOfCustomEntityResponse } from './pagedResourceListOfCustomEntityResponse';
 import { PagedResourceListOfCutLabelDefinition } from './pagedResourceListOfCutLabelDefinition';
 import { PagedResourceListOfDataTypeSummary } from './pagedResourceListOfDataTypeSummary';
@@ -1706,6 +1708,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfComplianceRuleResult": PagedResourceListOfComplianceRuleResult,
     "PagedResourceListOfComplianceRun": PagedResourceListOfComplianceRun,
     "PagedResourceListOfCorporateActionSource": PagedResourceListOfCorporateActionSource,
+    "PagedResourceListOfCustomEntityDefinition": PagedResourceListOfCustomEntityDefinition,
     "PagedResourceListOfCustomEntityResponse": PagedResourceListOfCustomEntityResponse,
     "PagedResourceListOfCutLabelDefinition": PagedResourceListOfCutLabelDefinition,
     "PagedResourceListOfDataTypeSummary": PagedResourceListOfDataTypeSummary,

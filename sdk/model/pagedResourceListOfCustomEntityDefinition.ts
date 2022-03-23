@@ -11,85 +11,65 @@
  */
 
 import { RequestFile } from './models';
+import { CustomEntityDefinition } from './customEntityDefinition';
+import { Link } from './link';
 
-export class FxForwardTenorCurveDataAllOf {
+/**
+* A paginated list of resource that can be returned from a request.
+*/
+export class PagedResourceListOfCustomEntityDefinition {
     /**
-    * EffectiveAt date of the quoted rates
+    * The next page of results.
     */
-    'baseDate': Date;
+    'nextPage'?: string | null;
     /**
-    * Domestic currency of the fx forward
+    * The previous page of results.
     */
-    'domCcy': string;
+    'previousPage'?: string | null;
     /**
-    * Foreign currency of the fx forward
+    * The resources to list.
     */
-    'fgnCcy': string;
+    'values': Array<CustomEntityDefinition>;
     /**
-    * Tenors for which the forward rates apply
+    * The URI of the resource list.
     */
-    'tenors': Array<string>;
+    'href'?: string | null;
     /**
-    * Rates provided for the fx forward (price in FgnCcy per unit of DomCcy)
+    * Collection of links.
     */
-    'rates': Array<number>;
-    /**
-    * The available values are: DiscountFactorCurveData, EquityVolSurfaceData, FxVolSurfaceData, IrVolCubeData, OpaqueMarketData, YieldCurveData, FxForwardCurveData, FxForwardPipsCurveData, FxForwardTenorCurveData, FxForwardTenorPipsCurveData, FxForwardCurveByQuoteReference, CreditSpreadCurveData
-    */
-    'marketDataType': FxForwardTenorCurveDataAllOf.MarketDataTypeEnum;
+    'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "baseDate",
-            "baseName": "baseDate",
-            "type": "Date"
-        },
-        {
-            "name": "domCcy",
-            "baseName": "domCcy",
+            "name": "nextPage",
+            "baseName": "nextPage",
             "type": "string"
         },
         {
-            "name": "fgnCcy",
-            "baseName": "fgnCcy",
+            "name": "previousPage",
+            "baseName": "previousPage",
             "type": "string"
         },
         {
-            "name": "tenors",
-            "baseName": "tenors",
-            "type": "Array<string>"
+            "name": "values",
+            "baseName": "values",
+            "type": "Array<CustomEntityDefinition>"
         },
         {
-            "name": "rates",
-            "baseName": "rates",
-            "type": "Array<number>"
+            "name": "href",
+            "baseName": "href",
+            "type": "string"
         },
         {
-            "name": "marketDataType",
-            "baseName": "marketDataType",
-            "type": "FxForwardTenorCurveDataAllOf.MarketDataTypeEnum"
+            "name": "links",
+            "baseName": "links",
+            "type": "Array<Link>"
         }    ];
 
     static getAttributeTypeMap() {
-        return FxForwardTenorCurveDataAllOf.attributeTypeMap;
+        return PagedResourceListOfCustomEntityDefinition.attributeTypeMap;
     }
 }
 
-export namespace FxForwardTenorCurveDataAllOf {
-    export enum MarketDataTypeEnum {
-        DiscountFactorCurveData = <any> 'DiscountFactorCurveData',
-        EquityVolSurfaceData = <any> 'EquityVolSurfaceData',
-        FxVolSurfaceData = <any> 'FxVolSurfaceData',
-        IrVolCubeData = <any> 'IrVolCubeData',
-        OpaqueMarketData = <any> 'OpaqueMarketData',
-        YieldCurveData = <any> 'YieldCurveData',
-        FxForwardCurveData = <any> 'FxForwardCurveData',
-        FxForwardPipsCurveData = <any> 'FxForwardPipsCurveData',
-        FxForwardTenorCurveData = <any> 'FxForwardTenorCurveData',
-        FxForwardTenorPipsCurveData = <any> 'FxForwardTenorPipsCurveData',
-        FxForwardCurveByQuoteReference = <any> 'FxForwardCurveByQuoteReference',
-        CreditSpreadCurveData = <any> 'CreditSpreadCurveData'
-    }
-}
