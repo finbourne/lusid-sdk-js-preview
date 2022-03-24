@@ -16,6 +16,7 @@ export * from './adjustHoldingRequest';
 export * from './aggregateSpec';
 export * from './aggregatedReturn';
 export * from './aggregatedReturnsRequest';
+export * from './aggregatedReturnsResponse';
 export * from './aggregationContext';
 export * from './aggregationMeasureFailureDetail';
 export * from './aggregationOp';
@@ -611,6 +612,7 @@ import { AdjustHoldingRequest } from './adjustHoldingRequest';
 import { AggregateSpec } from './aggregateSpec';
 import { AggregatedReturn } from './aggregatedReturn';
 import { AggregatedReturnsRequest } from './aggregatedReturnsRequest';
+import { AggregatedReturnsResponse } from './aggregatedReturnsResponse';
 import { AggregationContext } from './aggregationContext';
 import { AggregationMeasureFailureDetail } from './aggregationMeasureFailureDetail';
 import { AggregationOp } from './aggregationOp';
@@ -1440,6 +1442,7 @@ let typeMap: {[index: string]: any} = {
     "AggregateSpec": AggregateSpec,
     "AggregatedReturn": AggregatedReturn,
     "AggregatedReturnsRequest": AggregatedReturnsRequest,
+    "AggregatedReturnsResponse": AggregatedReturnsResponse,
     "AggregationContext": AggregationContext,
     "AggregationMeasureFailureDetail": AggregationMeasureFailureDetail,
     "AggregationOptions": AggregationOptions,

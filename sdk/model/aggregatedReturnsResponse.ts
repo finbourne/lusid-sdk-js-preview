@@ -11,63 +11,44 @@
  */
 
 import { RequestFile } from './models';
+import { AggregatedReturn } from './aggregatedReturn';
+import { Link } from './link';
 
-/**
-* A list of Returns.
-*/
-export class PerformanceReturn {
+export class AggregatedReturnsResponse {
     /**
-    * The effectiveAt for the return.
+    * The specific Uniform Resource Identifier (URI) for this resource at the requested effective and asAt datetime.
     */
-    'effectiveAt': Date;
+    'href'?: string | null;
     /**
-    * The return number.
+    * Aggregated returns grouped by ReturnId
     */
-    'rateOfReturn': number;
+    'results'?: { [key: string]: Array<AggregatedReturn>; } | null;
     /**
-    * The opening market value.
+    * Collection of links.
     */
-    'openingMarketValue'?: number | null;
-    /**
-    * The closing market value.
-    */
-    'closingMarketValue'?: number | null;
-    /**
-    * Upsert the returns on a Daily or Monthly period. Defaults to Daily.
-    */
-    'period'?: string | null;
+    'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "effectiveAt",
-            "baseName": "effectiveAt",
-            "type": "Date"
-        },
-        {
-            "name": "rateOfReturn",
-            "baseName": "rateOfReturn",
-            "type": "number"
-        },
-        {
-            "name": "openingMarketValue",
-            "baseName": "openingMarketValue",
-            "type": "number"
-        },
-        {
-            "name": "closingMarketValue",
-            "baseName": "closingMarketValue",
-            "type": "number"
-        },
-        {
-            "name": "period",
-            "baseName": "period",
+            "name": "href",
+            "baseName": "href",
             "type": "string"
+        },
+        {
+            "name": "results",
+            "baseName": "results",
+            "type": "{ [key: string]: Array<AggregatedReturn>; }"
+        },
+        {
+            "name": "links",
+            "baseName": "links",
+            "type": "Array<Link>"
         }    ];
 
     static getAttributeTypeMap() {
-        return PerformanceReturn.attributeTypeMap;
+        return AggregatedReturnsResponse.attributeTypeMap;
     }
 }
 
