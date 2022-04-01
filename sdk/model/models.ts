@@ -62,7 +62,10 @@ export * from './completeRelation';
 export * from './completeRelationship';
 export * from './complexMarketData';
 export * from './complexMarketDataId';
+export * from './complianceRule';
 export * from './complianceRuleResult';
+export * from './complianceRuleUpsertRequest';
+export * from './complianceRuleUpsertResponse';
 export * from './complianceRun';
 export * from './compounding';
 export * from './configurationRecipe';
@@ -408,6 +411,7 @@ export * from './resourceListOfAllocation';
 export * from './resourceListOfBlock';
 export * from './resourceListOfCalendarDate';
 export * from './resourceListOfChange';
+export * from './resourceListOfComplianceRule';
 export * from './resourceListOfConstituentsAdjustmentHeader';
 export * from './resourceListOfCorporateAction';
 export * from './resourceListOfDataType';
@@ -658,7 +662,10 @@ import { CompleteRelation } from './completeRelation';
 import { CompleteRelationship } from './completeRelationship';
 import { ComplexMarketData } from './complexMarketData';
 import { ComplexMarketDataId } from './complexMarketDataId';
+import { ComplianceRule } from './complianceRule';
 import { ComplianceRuleResult } from './complianceRuleResult';
+import { ComplianceRuleUpsertRequest } from './complianceRuleUpsertRequest';
+import { ComplianceRuleUpsertResponse } from './complianceRuleUpsertResponse';
 import { ComplianceRun } from './complianceRun';
 import { Compounding } from './compounding';
 import { ConfigurationRecipe } from './configurationRecipe';
@@ -1004,6 +1011,7 @@ import { ResourceListOfAllocation } from './resourceListOfAllocation';
 import { ResourceListOfBlock } from './resourceListOfBlock';
 import { ResourceListOfCalendarDate } from './resourceListOfCalendarDate';
 import { ResourceListOfChange } from './resourceListOfChange';
+import { ResourceListOfComplianceRule } from './resourceListOfComplianceRule';
 import { ResourceListOfConstituentsAdjustmentHeader } from './resourceListOfConstituentsAdjustmentHeader';
 import { ResourceListOfCorporateAction } from './resourceListOfCorporateAction';
 import { ResourceListOfDataType } from './resourceListOfDataType';
@@ -1485,7 +1493,10 @@ let typeMap: {[index: string]: any} = {
     "CompleteRelationship": CompleteRelationship,
     "ComplexMarketData": ComplexMarketData,
     "ComplexMarketDataId": ComplexMarketDataId,
+    "ComplianceRule": ComplianceRule,
     "ComplianceRuleResult": ComplianceRuleResult,
+    "ComplianceRuleUpsertRequest": ComplianceRuleUpsertRequest,
+    "ComplianceRuleUpsertResponse": ComplianceRuleUpsertResponse,
     "ComplianceRun": ComplianceRun,
     "Compounding": Compounding,
     "ConfigurationRecipe": ConfigurationRecipe,
@@ -1807,6 +1818,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfBlock": ResourceListOfBlock,
     "ResourceListOfCalendarDate": ResourceListOfCalendarDate,
     "ResourceListOfChange": ResourceListOfChange,
+    "ResourceListOfComplianceRule": ResourceListOfComplianceRule,
     "ResourceListOfConstituentsAdjustmentHeader": ResourceListOfConstituentsAdjustmentHeader,
     "ResourceListOfCorporateAction": ResourceListOfCorporateAction,
     "ResourceListOfDataType": ResourceListOfDataType,
