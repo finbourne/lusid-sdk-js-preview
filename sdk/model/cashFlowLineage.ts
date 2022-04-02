@@ -11,28 +11,72 @@
  */
 
 import { RequestFile } from './models';
-import { WeightedInstrument } from './weightedInstrument';
 
 /**
-* Class that models a set of instruments of which each has some quantity and can be identified by a unique label.
+* Lineage for cash flow value
 */
-export class WeightedInstruments {
+export class CashFlowLineage {
     /**
-    * The instruments that are held in the set.
+    * The instrument type of the instrument to which the cash flow belongs to. When upserting CashFlowValues, this  should be null.
     */
-    'instruments': Array<WeightedInstrument>;
+    'instrumentType'?: string | null;
+    /**
+    * The cashflow type.When upserting CashFlowValues, this should be null, or one of [Unknown, Coupon, Notional,  Premium, Principal, Protection, Cash]
+    */
+    'cashFlowType'?: string | null;
+    /**
+    * The LUID of the instrument to which the cash flow belongs to. When upserting this should be null.
+    */
+    'instrumentId'?: string | null;
+    /**
+    * The leg id to which the cash flow belongs to.
+    */
+    'legId'?: string | null;
+    /**
+    * The source transaction of the instrument to which the cash flow belongs to. When upserting this should be null
+    */
+    'sourceTransactionId'?: string | null;
+    /**
+    * Does the cash flow belong to the Pay or Receive leg. When upserting this should either be null or one of [Pay, Receive, NotApplicable]
+    */
+    'payReceive'?: string | null;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "instruments",
-            "baseName": "instruments",
-            "type": "Array<WeightedInstrument>"
+            "name": "instrumentType",
+            "baseName": "instrumentType",
+            "type": "string"
+        },
+        {
+            "name": "cashFlowType",
+            "baseName": "cashFlowType",
+            "type": "string"
+        },
+        {
+            "name": "instrumentId",
+            "baseName": "instrumentId",
+            "type": "string"
+        },
+        {
+            "name": "legId",
+            "baseName": "legId",
+            "type": "string"
+        },
+        {
+            "name": "sourceTransactionId",
+            "baseName": "sourceTransactionId",
+            "type": "string"
+        },
+        {
+            "name": "payReceive",
+            "baseName": "payReceive",
+            "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
-        return WeightedInstruments.attributeTypeMap;
+        return CashFlowLineage.attributeTypeMap;
     }
 }
 

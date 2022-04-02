@@ -45,6 +45,7 @@ export * from './calendar';
 export * from './calendarDate';
 export * from './capFloor';
 export * from './capFloorAllOf';
+export * from './cashFlowLineage';
 export * from './cashFlowValue';
 export * from './cashFlowValueAllOf';
 export * from './cashFlowValueSet';
@@ -645,6 +646,7 @@ import { Calendar } from './calendar';
 import { CalendarDate } from './calendarDate';
 import { CapFloor } from './capFloor';
 import { CapFloorAllOf } from './capFloorAllOf';
+import { CashFlowLineage } from './cashFlowLineage';
 import { CashFlowValue } from './cashFlowValue';
 import { CashFlowValueAllOf } from './cashFlowValueAllOf';
 import { CashFlowValueSet } from './cashFlowValueSet';
@@ -1476,6 +1478,7 @@ let typeMap: {[index: string]: any} = {
     "CalendarDate": CalendarDate,
     "CapFloor": CapFloor,
     "CapFloorAllOf": CapFloorAllOf,
+    "CashFlowLineage": CashFlowLineage,
     "CashFlowValue": CashFlowValue,
     "CashFlowValueAllOf": CashFlowValueAllOf,
     "CashFlowValueSet": CashFlowValueSet,
