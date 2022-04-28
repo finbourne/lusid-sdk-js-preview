@@ -11,65 +11,33 @@
  */
 
 import { RequestFile } from './models';
-import { Link } from './link';
-import { ListComplexMarketDataWithMetaDataResponse } from './listComplexMarketDataWithMetaDataResponse';
 
-/**
-* A collection of resources that can be returned from requests.
-*/
-export class ResourceListOfListComplexMarketDataWithMetaDataResponse {
+export class LusidUniqueId {
     /**
-    * The resources to list.
+    * The type for the LUSID unique id, this will depend on the type of entity found, for instance \'Instrument\' would have a value of \'LusidInstrumentId\'
     */
-    'values': Array<ListComplexMarketDataWithMetaDataResponse>;
+    'type': string;
     /**
-    * The URI of the resource list.
+    * The value for the LUSID unique id
     */
-    'href'?: string | null;
-    /**
-    * Collection of links.
-    */
-    'links'?: Array<Link> | null;
-    /**
-    * The next page of results.
-    */
-    'nextPage'?: string | null;
-    /**
-    * The previous page of results.
-    */
-    'previousPage'?: string | null;
+    'value': string;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "values",
-            "baseName": "values",
-            "type": "Array<ListComplexMarketDataWithMetaDataResponse>"
-        },
-        {
-            "name": "href",
-            "baseName": "href",
+            "name": "type",
+            "baseName": "type",
             "type": "string"
         },
         {
-            "name": "links",
-            "baseName": "links",
-            "type": "Array<Link>"
-        },
-        {
-            "name": "nextPage",
-            "baseName": "nextPage",
-            "type": "string"
-        },
-        {
-            "name": "previousPage",
-            "baseName": "previousPage",
+            "name": "value",
+            "baseName": "value",
             "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
-        return ResourceListOfListComplexMarketDataWithMetaDataResponse.attributeTypeMap;
+        return LusidUniqueId.attributeTypeMap;
     }
 }
 
