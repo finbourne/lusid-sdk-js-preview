@@ -61,6 +61,8 @@ export * from './change';
 export * from './completePortfolio';
 export * from './completeRelation';
 export * from './completeRelationship';
+export * from './complexBond';
+export * from './complexBondAllOf';
 export * from './complexMarketData';
 export * from './complexMarketDataId';
 export * from './complianceRule';
@@ -171,6 +173,10 @@ export * from './fileResponse';
 export * from './fixedLeg';
 export * from './fixedLegAllOf';
 export * from './fixedLegAllOfOverrides';
+export * from './fixedSchedule';
+export * from './fixedScheduleAllOf';
+export * from './floatSchedule';
+export * from './floatScheduleAllOf';
 export * from './floatingLeg';
 export * from './floatingLegAllOf';
 export * from './flowConventionName';
@@ -472,6 +478,8 @@ export * from './resultValueString';
 export * from './resultValueStringAllOf';
 export * from './resultValueType';
 export * from './scalingMethodology';
+export * from './schedule';
+export * from './scheduleType';
 export * from './schema';
 export * from './scopeDefinition';
 export * from './sequenceDefinition';
@@ -663,6 +671,8 @@ import { Change } from './change';
 import { CompletePortfolio } from './completePortfolio';
 import { CompleteRelation } from './completeRelation';
 import { CompleteRelationship } from './completeRelationship';
+import { ComplexBond } from './complexBond';
+import { ComplexBondAllOf } from './complexBondAllOf';
 import { ComplexMarketData } from './complexMarketData';
 import { ComplexMarketDataId } from './complexMarketDataId';
 import { ComplianceRule } from './complianceRule';
@@ -773,6 +783,10 @@ import { FileResponse } from './fileResponse';
 import { FixedLeg } from './fixedLeg';
 import { FixedLegAllOf } from './fixedLegAllOf';
 import { FixedLegAllOfOverrides } from './fixedLegAllOfOverrides';
+import { FixedSchedule } from './fixedSchedule';
+import { FixedScheduleAllOf } from './fixedScheduleAllOf';
+import { FloatSchedule } from './floatSchedule';
+import { FloatScheduleAllOf } from './floatScheduleAllOf';
 import { FloatingLeg } from './floatingLeg';
 import { FloatingLegAllOf } from './floatingLegAllOf';
 import { FlowConventionName } from './flowConventionName';
@@ -1074,6 +1088,8 @@ import { ResultValueString } from './resultValueString';
 import { ResultValueStringAllOf } from './resultValueStringAllOf';
 import { ResultValueType } from './resultValueType';
 import { ScalingMethodology } from './scalingMethodology';
+import { Schedule } from './schedule';
+import { ScheduleType } from './scheduleType';
 import { Schema } from './schema';
 import { ScopeDefinition } from './scopeDefinition';
 import { SequenceDefinition } from './sequenceDefinition';
@@ -1225,6 +1241,8 @@ let enumsMap: {[index: string]: any} = {
         "CdsIndex.InstrumentTypeEnum": CdsIndex.InstrumentTypeEnum,
         "CdsIndexAllOf.InstrumentTypeEnum": CdsIndexAllOf.InstrumentTypeEnum,
         "CompletePortfolio.TypeEnum": CompletePortfolio.TypeEnum,
+        "ComplexBond.InstrumentTypeEnum": ComplexBond.InstrumentTypeEnum,
+        "ComplexBondAllOf.InstrumentTypeEnum": ComplexBondAllOf.InstrumentTypeEnum,
         "ComplexMarketData.MarketDataTypeEnum": ComplexMarketData.MarketDataTypeEnum,
         "ContractForDifference.InstrumentTypeEnum": ContractForDifference.InstrumentTypeEnum,
         "ContractForDifferenceAllOf.InstrumentTypeEnum": ContractForDifferenceAllOf.InstrumentTypeEnum,
@@ -1269,6 +1287,10 @@ let enumsMap: {[index: string]: any} = {
         "FieldSchema.TypeEnum": FieldSchema.TypeEnum,
         "FixedLeg.InstrumentTypeEnum": FixedLeg.InstrumentTypeEnum,
         "FixedLegAllOf.InstrumentTypeEnum": FixedLegAllOf.InstrumentTypeEnum,
+        "FixedSchedule.ScheduleTypeEnum": FixedSchedule.ScheduleTypeEnum,
+        "FixedScheduleAllOf.ScheduleTypeEnum": FixedScheduleAllOf.ScheduleTypeEnum,
+        "FloatSchedule.ScheduleTypeEnum": FloatSchedule.ScheduleTypeEnum,
+        "FloatScheduleAllOf.ScheduleTypeEnum": FloatScheduleAllOf.ScheduleTypeEnum,
         "FloatingLeg.InstrumentTypeEnum": FloatingLeg.InstrumentTypeEnum,
         "FloatingLegAllOf.InstrumentTypeEnum": FloatingLegAllOf.InstrumentTypeEnum,
         "ForwardRateAgreement.InstrumentTypeEnum": ForwardRateAgreement.InstrumentTypeEnum,
@@ -1408,6 +1430,8 @@ let enumsMap: {[index: string]: any} = {
         "ResultValueStringAllOf.ResultValueTypeEnum": ResultValueStringAllOf.ResultValueTypeEnum,
         "ResultValueType": ResultValueType,
         "ScalingMethodology": ScalingMethodology,
+        "Schedule.ScheduleTypeEnum": Schedule.ScheduleTypeEnum,
+        "ScheduleType": ScheduleType,
         "SimpleInstrument.AssetClassEnum": SimpleInstrument.AssetClassEnum,
         "SimpleInstrument.InstrumentTypeEnum": SimpleInstrument.InstrumentTypeEnum,
         "SimpleInstrumentAllOf.AssetClassEnum": SimpleInstrumentAllOf.AssetClassEnum,
@@ -1496,6 +1520,8 @@ let typeMap: {[index: string]: any} = {
     "CompletePortfolio": CompletePortfolio,
     "CompleteRelation": CompleteRelation,
     "CompleteRelationship": CompleteRelationship,
+    "ComplexBond": ComplexBond,
+    "ComplexBondAllOf": ComplexBondAllOf,
     "ComplexMarketData": ComplexMarketData,
     "ComplexMarketDataId": ComplexMarketDataId,
     "ComplianceRule": ComplianceRule,
@@ -1602,6 +1628,10 @@ let typeMap: {[index: string]: any} = {
     "FixedLeg": FixedLeg,
     "FixedLegAllOf": FixedLegAllOf,
     "FixedLegAllOfOverrides": FixedLegAllOfOverrides,
+    "FixedSchedule": FixedSchedule,
+    "FixedScheduleAllOf": FixedScheduleAllOf,
+    "FloatSchedule": FloatSchedule,
+    "FloatScheduleAllOf": FloatScheduleAllOf,
     "FloatingLeg": FloatingLeg,
     "FloatingLegAllOf": FloatingLegAllOf,
     "FlowConventionName": FlowConventionName,
@@ -1880,6 +1910,7 @@ let typeMap: {[index: string]: any} = {
     "ResultValueIntAllOf": ResultValueIntAllOf,
     "ResultValueString": ResultValueString,
     "ResultValueStringAllOf": ResultValueStringAllOf,
+    "Schedule": Schedule,
     "Schema": Schema,
     "ScopeDefinition": ScopeDefinition,
     "SequenceDefinition": SequenceDefinition,
