@@ -307,8 +307,6 @@ export * from './packageSetRequest';
 export * from './pagedResourceListOfAllocation';
 export * from './pagedResourceListOfBlock';
 export * from './pagedResourceListOfCalendar';
-export * from './pagedResourceListOfComplianceRuleResult';
-export * from './pagedResourceListOfComplianceRun';
 export * from './pagedResourceListOfCorporateActionSource';
 export * from './pagedResourceListOfCustomEntityDefinition';
 export * from './pagedResourceListOfCustomEntityResponse';
@@ -419,6 +417,8 @@ export * from './resourceListOfBlock';
 export * from './resourceListOfCalendarDate';
 export * from './resourceListOfChange';
 export * from './resourceListOfComplianceRule';
+export * from './resourceListOfComplianceRuleResult';
+export * from './resourceListOfComplianceRun';
 export * from './resourceListOfConstituentsAdjustmentHeader';
 export * from './resourceListOfCorporateAction';
 export * from './resourceListOfDataType';
@@ -916,8 +916,6 @@ import { PackageSetRequest } from './packageSetRequest';
 import { PagedResourceListOfAllocation } from './pagedResourceListOfAllocation';
 import { PagedResourceListOfBlock } from './pagedResourceListOfBlock';
 import { PagedResourceListOfCalendar } from './pagedResourceListOfCalendar';
-import { PagedResourceListOfComplianceRuleResult } from './pagedResourceListOfComplianceRuleResult';
-import { PagedResourceListOfComplianceRun } from './pagedResourceListOfComplianceRun';
 import { PagedResourceListOfCorporateActionSource } from './pagedResourceListOfCorporateActionSource';
 import { PagedResourceListOfCustomEntityDefinition } from './pagedResourceListOfCustomEntityDefinition';
 import { PagedResourceListOfCustomEntityResponse } from './pagedResourceListOfCustomEntityResponse';
@@ -1028,6 +1026,8 @@ import { ResourceListOfBlock } from './resourceListOfBlock';
 import { ResourceListOfCalendarDate } from './resourceListOfCalendarDate';
 import { ResourceListOfChange } from './resourceListOfChange';
 import { ResourceListOfComplianceRule } from './resourceListOfComplianceRule';
+import { ResourceListOfComplianceRuleResult } from './resourceListOfComplianceRuleResult';
+import { ResourceListOfComplianceRun } from './resourceListOfComplianceRun';
 import { ResourceListOfConstituentsAdjustmentHeader } from './resourceListOfConstituentsAdjustmentHeader';
 import { ResourceListOfCorporateAction } from './resourceListOfCorporateAction';
 import { ResourceListOfDataType } from './resourceListOfDataType';
@@ -1753,8 +1753,6 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfAllocation": PagedResourceListOfAllocation,
     "PagedResourceListOfBlock": PagedResourceListOfBlock,
     "PagedResourceListOfCalendar": PagedResourceListOfCalendar,
-    "PagedResourceListOfComplianceRuleResult": PagedResourceListOfComplianceRuleResult,
-    "PagedResourceListOfComplianceRun": PagedResourceListOfComplianceRun,
     "PagedResourceListOfCorporateActionSource": PagedResourceListOfCorporateActionSource,
     "PagedResourceListOfCustomEntityDefinition": PagedResourceListOfCustomEntityDefinition,
     "PagedResourceListOfCustomEntityResponse": PagedResourceListOfCustomEntityResponse,
@@ -1853,6 +1851,8 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfCalendarDate": ResourceListOfCalendarDate,
     "ResourceListOfChange": ResourceListOfChange,
     "ResourceListOfComplianceRule": ResourceListOfComplianceRule,
+    "ResourceListOfComplianceRuleResult": ResourceListOfComplianceRuleResult,
+    "ResourceListOfComplianceRun": ResourceListOfComplianceRun,
     "ResourceListOfConstituentsAdjustmentHeader": ResourceListOfConstituentsAdjustmentHeader,
     "ResourceListOfCorporateAction": ResourceListOfCorporateAction,
     "ResourceListOfDataType": ResourceListOfDataType,
