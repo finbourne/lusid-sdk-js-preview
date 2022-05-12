@@ -9,6 +9,7 @@ export * from './accessControlledResource';
 export * from './accessMetadataValue';
 export * from './accountingMethod';
 export * from './actionId';
+export * from './actionResultOfPortfolio';
 export * from './addBusinessDaysToDateRequest';
 export * from './addBusinessDaysToDateResponse';
 export * from './adjustHolding';
@@ -618,6 +619,7 @@ import { AccessControlledResource } from './accessControlledResource';
 import { AccessMetadataValue } from './accessMetadataValue';
 import { AccountingMethod } from './accountingMethod';
 import { ActionId } from './actionId';
+import { ActionResultOfPortfolio } from './actionResultOfPortfolio';
 import { AddBusinessDaysToDateRequest } from './addBusinessDaysToDateRequest';
 import { AddBusinessDaysToDateResponse } from './addBusinessDaysToDateResponse';
 import { AdjustHolding } from './adjustHolding';
@@ -1470,6 +1472,7 @@ let typeMap: {[index: string]: any} = {
     "AccessControlledResource": AccessControlledResource,
     "AccessMetadataValue": AccessMetadataValue,
     "ActionId": ActionId,
+    "ActionResultOfPortfolio": ActionResultOfPortfolio,
     "AddBusinessDaysToDateRequest": AddBusinessDaysToDateRequest,
     "AddBusinessDaysToDateResponse": AddBusinessDaysToDateResponse,
     "AdjustHolding": AdjustHolding,

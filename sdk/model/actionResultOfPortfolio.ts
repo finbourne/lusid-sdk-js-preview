@@ -11,44 +11,28 @@
  */
 
 import { RequestFile } from './models';
-import { ResourceId } from './resourceId';
-import { Version } from './version';
+import { Portfolio } from './portfolio';
 
-/**
-* A request to create or update a Participation.
-*/
-export class ParticipationRequest {
-    'id': ResourceId;
-    'placementId': ResourceId;
-    'orderId': ResourceId;
-    'version'?: Version;
+export class ActionResultOfPortfolio {
+    'result'?: object;
+    'value'?: Portfolio;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "id",
-            "baseName": "id",
-            "type": "ResourceId"
+            "name": "result",
+            "baseName": "result",
+            "type": "object"
         },
         {
-            "name": "placementId",
-            "baseName": "placementId",
-            "type": "ResourceId"
-        },
-        {
-            "name": "orderId",
-            "baseName": "orderId",
-            "type": "ResourceId"
-        },
-        {
-            "name": "version",
-            "baseName": "version",
-            "type": "Version"
+            "name": "value",
+            "baseName": "value",
+            "type": "Portfolio"
         }    ];
 
     static getAttributeTypeMap() {
-        return ParticipationRequest.attributeTypeMap;
+        return ActionResultOfPortfolio.attributeTypeMap;
     }
 }
 
