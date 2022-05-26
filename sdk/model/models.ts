@@ -293,8 +293,22 @@ export * from './operator';
 export * from './order';
 export * from './orderBySpec';
 export * from './orderGraphBlock';
+export * from './orderGraphBlockAllocationDetail';
+export * from './orderGraphBlockAllocationSynopsis';
+export * from './orderGraphBlockExecutionDetail';
+export * from './orderGraphBlockExecutionSynopsis';
+export * from './orderGraphBlockOrderDetail';
+export * from './orderGraphBlockOrderSynopsis';
+export * from './orderGraphBlockPlacementDetail';
+export * from './orderGraphBlockPlacementSynopsis';
 export * from './orderGraphPlacement';
-export * from './orderGraphSynopsis';
+export * from './orderGraphPlacementAllocationDetail';
+export * from './orderGraphPlacementAllocationSynopsis';
+export * from './orderGraphPlacementExecutionDetail';
+export * from './orderGraphPlacementExecutionSynopsis';
+export * from './orderGraphPlacementOrderDetail';
+export * from './orderGraphPlacementOrderSynopsis';
+export * from './orderGraphPlacementPlacementSynopsis';
 export * from './orderInstruction';
 export * from './orderInstructionRequest';
 export * from './orderInstructionSetRequest';
@@ -905,8 +919,22 @@ import { Operator } from './operator';
 import { Order } from './order';
 import { OrderBySpec } from './orderBySpec';
 import { OrderGraphBlock } from './orderGraphBlock';
+import { OrderGraphBlockAllocationDetail } from './orderGraphBlockAllocationDetail';
+import { OrderGraphBlockAllocationSynopsis } from './orderGraphBlockAllocationSynopsis';
+import { OrderGraphBlockExecutionDetail } from './orderGraphBlockExecutionDetail';
+import { OrderGraphBlockExecutionSynopsis } from './orderGraphBlockExecutionSynopsis';
+import { OrderGraphBlockOrderDetail } from './orderGraphBlockOrderDetail';
+import { OrderGraphBlockOrderSynopsis } from './orderGraphBlockOrderSynopsis';
+import { OrderGraphBlockPlacementDetail } from './orderGraphBlockPlacementDetail';
+import { OrderGraphBlockPlacementSynopsis } from './orderGraphBlockPlacementSynopsis';
 import { OrderGraphPlacement } from './orderGraphPlacement';
-import { OrderGraphSynopsis } from './orderGraphSynopsis';
+import { OrderGraphPlacementAllocationDetail } from './orderGraphPlacementAllocationDetail';
+import { OrderGraphPlacementAllocationSynopsis } from './orderGraphPlacementAllocationSynopsis';
+import { OrderGraphPlacementExecutionDetail } from './orderGraphPlacementExecutionDetail';
+import { OrderGraphPlacementExecutionSynopsis } from './orderGraphPlacementExecutionSynopsis';
+import { OrderGraphPlacementOrderDetail } from './orderGraphPlacementOrderDetail';
+import { OrderGraphPlacementOrderSynopsis } from './orderGraphPlacementOrderSynopsis';
+import { OrderGraphPlacementPlacementSynopsis } from './orderGraphPlacementPlacementSynopsis';
 import { OrderInstruction } from './orderInstruction';
 import { OrderInstructionRequest } from './orderInstructionRequest';
 import { OrderInstructionSetRequest } from './orderInstructionSetRequest';
@@ -1745,8 +1773,22 @@ let typeMap: {[index: string]: any} = {
     "Order": Order,
     "OrderBySpec": OrderBySpec,
     "OrderGraphBlock": OrderGraphBlock,
+    "OrderGraphBlockAllocationDetail": OrderGraphBlockAllocationDetail,
+    "OrderGraphBlockAllocationSynopsis": OrderGraphBlockAllocationSynopsis,
+    "OrderGraphBlockExecutionDetail": OrderGraphBlockExecutionDetail,
+    "OrderGraphBlockExecutionSynopsis": OrderGraphBlockExecutionSynopsis,
+    "OrderGraphBlockOrderDetail": OrderGraphBlockOrderDetail,
+    "OrderGraphBlockOrderSynopsis": OrderGraphBlockOrderSynopsis,
+    "OrderGraphBlockPlacementDetail": OrderGraphBlockPlacementDetail,
+    "OrderGraphBlockPlacementSynopsis": OrderGraphBlockPlacementSynopsis,
     "OrderGraphPlacement": OrderGraphPlacement,
-    "OrderGraphSynopsis": OrderGraphSynopsis,
+    "OrderGraphPlacementAllocationDetail": OrderGraphPlacementAllocationDetail,
+    "OrderGraphPlacementAllocationSynopsis": OrderGraphPlacementAllocationSynopsis,
+    "OrderGraphPlacementExecutionDetail": OrderGraphPlacementExecutionDetail,
+    "OrderGraphPlacementExecutionSynopsis": OrderGraphPlacementExecutionSynopsis,
+    "OrderGraphPlacementOrderDetail": OrderGraphPlacementOrderDetail,
+    "OrderGraphPlacementOrderSynopsis": OrderGraphPlacementOrderSynopsis,
+    "OrderGraphPlacementPlacementSynopsis": OrderGraphPlacementPlacementSynopsis,
     "OrderInstruction": OrderInstruction,
     "OrderInstructionRequest": OrderInstructionRequest,
     "OrderInstructionSetRequest": OrderInstructionSetRequest,
