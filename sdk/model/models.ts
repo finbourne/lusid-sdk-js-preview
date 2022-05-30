@@ -246,6 +246,9 @@ export * from './instrumentIdValue';
 export * from './instrumentLeg';
 export * from './instrumentLegAllOf';
 export * from './instrumentMatch';
+export * from './instrumentPaymentDiary';
+export * from './instrumentPaymentDiaryLeg';
+export * from './instrumentPaymentDiaryRow';
 export * from './instrumentProperties';
 export * from './instrumentSearchProperty';
 export * from './instrumentType';
@@ -872,6 +875,9 @@ import { InstrumentIdValue } from './instrumentIdValue';
 import { InstrumentLeg } from './instrumentLeg';
 import { InstrumentLegAllOf } from './instrumentLegAllOf';
 import { InstrumentMatch } from './instrumentMatch';
+import { InstrumentPaymentDiary } from './instrumentPaymentDiary';
+import { InstrumentPaymentDiaryLeg } from './instrumentPaymentDiaryLeg';
+import { InstrumentPaymentDiaryRow } from './instrumentPaymentDiaryRow';
 import { InstrumentProperties } from './instrumentProperties';
 import { InstrumentSearchProperty } from './instrumentSearchProperty';
 import { InstrumentType } from './instrumentType';
@@ -1399,6 +1405,8 @@ let enumsMap: {[index: string]: any} = {
         "PeriodType": PeriodType,
         "PerpetualEntityState": PerpetualEntityState,
         "Portfolio.TypeEnum": Portfolio.TypeEnum,
+        "Portfolio.AccountingMethodEnum": Portfolio.AccountingMethodEnum,
+        "PortfolioDetails.AccountingMethodEnum": PortfolioDetails.AccountingMethodEnum,
         "PortfolioResultDataKeyRule.ResultKeyRuleTypeEnum": PortfolioResultDataKeyRule.ResultKeyRuleTypeEnum,
         "PortfolioResultDataKeyRuleAllOf.ResultKeyRuleTypeEnum": PortfolioResultDataKeyRuleAllOf.ResultKeyRuleTypeEnum,
         "PortfolioSearchResult.TypeEnum": PortfolioSearchResult.TypeEnum,
@@ -1734,6 +1742,9 @@ let typeMap: {[index: string]: any} = {
     "InstrumentLeg": InstrumentLeg,
     "InstrumentLegAllOf": InstrumentLegAllOf,
     "InstrumentMatch": InstrumentMatch,
+    "InstrumentPaymentDiary": InstrumentPaymentDiary,
+    "InstrumentPaymentDiaryLeg": InstrumentPaymentDiaryLeg,
+    "InstrumentPaymentDiaryRow": InstrumentPaymentDiaryRow,
     "InstrumentProperties": InstrumentProperties,
     "InstrumentSearchProperty": InstrumentSearchProperty,
     "InterestRateSwap": InterestRateSwap,
