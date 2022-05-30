@@ -1405,8 +1405,6 @@ let enumsMap: {[index: string]: any} = {
         "PeriodType": PeriodType,
         "PerpetualEntityState": PerpetualEntityState,
         "Portfolio.TypeEnum": Portfolio.TypeEnum,
-        "Portfolio.AccountingMethodEnum": Portfolio.AccountingMethodEnum,
-        "PortfolioDetails.AccountingMethodEnum": PortfolioDetails.AccountingMethodEnum,
         "PortfolioResultDataKeyRule.ResultKeyRuleTypeEnum": PortfolioResultDataKeyRule.ResultKeyRuleTypeEnum,
         "PortfolioResultDataKeyRuleAllOf.ResultKeyRuleTypeEnum": PortfolioResultDataKeyRuleAllOf.ResultKeyRuleTypeEnum,
         "PortfolioSearchResult.TypeEnum": PortfolioSearchResult.TypeEnum,
