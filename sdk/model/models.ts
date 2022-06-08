@@ -374,7 +374,6 @@ export * from './portfolioResultDataKeyRuleAllOf';
 export * from './portfolioSearchResult';
 export * from './portfolioType';
 export * from './portfoliosReconciliationRequest';
-export * from './portfoliosReconciliationRequestPreview';
 export * from './premium';
 export * from './pricingContext';
 export * from './pricingModel';
@@ -524,8 +523,6 @@ export * from './targetTaxLot';
 export * from './targetTaxLotRequest';
 export * from './termDeposit';
 export * from './termDepositAllOf';
-export * from './tolerance';
-export * from './toleranceEnum';
 export * from './transaction';
 export * from './transactionConfigurationData';
 export * from './transactionConfigurationDataRequest';
@@ -1003,7 +1000,6 @@ import { PortfolioResultDataKeyRuleAllOf } from './portfolioResultDataKeyRuleAll
 import { PortfolioSearchResult } from './portfolioSearchResult';
 import { PortfolioType } from './portfolioType';
 import { PortfoliosReconciliationRequest } from './portfoliosReconciliationRequest';
-import { PortfoliosReconciliationRequestPreview } from './portfoliosReconciliationRequestPreview';
 import { Premium } from './premium';
 import { PricingContext } from './pricingContext';
 import { PricingModel } from './pricingModel';
@@ -1153,8 +1149,6 @@ import { TargetTaxLot } from './targetTaxLot';
 import { TargetTaxLotRequest } from './targetTaxLotRequest';
 import { TermDeposit } from './termDeposit';
 import { TermDepositAllOf } from './termDepositAllOf';
-import { Tolerance } from './tolerance';
-import { ToleranceEnum } from './toleranceEnum';
 import { Transaction } from './transaction';
 import { TransactionConfigurationData } from './transactionConfigurationData';
 import { TransactionConfigurationDataRequest } from './transactionConfigurationDataRequest';
@@ -1480,8 +1474,6 @@ let enumsMap: {[index: string]: any} = {
         "StringComparisonType": StringComparisonType,
         "TermDeposit.InstrumentTypeEnum": TermDeposit.InstrumentTypeEnum,
         "TermDepositAllOf.InstrumentTypeEnum": TermDepositAllOf.InstrumentTypeEnum,
-        "Tolerance.TypeEnum": Tolerance.TypeEnum,
-        "ToleranceEnum": ToleranceEnum,
         "Transaction.TransactionStatusEnum": Transaction.TransactionStatusEnum,
         "TransactionConfigurationMovementData.MovementTypesEnum": TransactionConfigurationMovementData.MovementTypesEnum,
         "TransactionConfigurationMovementDataRequest.MovementTypesEnum": TransactionConfigurationMovementDataRequest.MovementTypesEnum,
@@ -1859,7 +1851,6 @@ let typeMap: {[index: string]: any} = {
     "PortfolioResultDataKeyRuleAllOf": PortfolioResultDataKeyRuleAllOf,
     "PortfolioSearchResult": PortfolioSearchResult,
     "PortfoliosReconciliationRequest": PortfoliosReconciliationRequest,
-    "PortfoliosReconciliationRequestPreview": PortfoliosReconciliationRequestPreview,
     "Premium": Premium,
     "PricingContext": PricingContext,
     "PricingOptions": PricingOptions,
@@ -1994,7 +1985,6 @@ let typeMap: {[index: string]: any} = {
     "TargetTaxLotRequest": TargetTaxLotRequest,
     "TermDeposit": TermDeposit,
     "TermDepositAllOf": TermDepositAllOf,
-    "Tolerance": Tolerance,
     "Transaction": Transaction,
     "TransactionConfigurationData": TransactionConfigurationData,
     "TransactionConfigurationDataRequest": TransactionConfigurationDataRequest,
