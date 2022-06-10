@@ -6,6 +6,7 @@ export * from './a2BDataRecord';
 export * from './a2BMovementRecord';
 export * from './accessControlledAction';
 export * from './accessControlledResource';
+export * from './accessMetadataOperation';
 export * from './accessMetadataValue';
 export * from './accountingMethod';
 export * from './actionId';
@@ -304,6 +305,7 @@ export * from './openEvent';
 export * from './openEventAllOf';
 export * from './operandType';
 export * from './operation';
+export * from './operationType';
 export * from './operator';
 export * from './order';
 export * from './orderBySpec';
@@ -650,6 +652,7 @@ import { A2BDataRecord } from './a2BDataRecord';
 import { A2BMovementRecord } from './a2BMovementRecord';
 import { AccessControlledAction } from './accessControlledAction';
 import { AccessControlledResource } from './accessControlledResource';
+import { AccessMetadataOperation } from './accessMetadataOperation';
 import { AccessMetadataValue } from './accessMetadataValue';
 import { AccountingMethod } from './accountingMethod';
 import { ActionId } from './actionId';
@@ -948,6 +951,7 @@ import { OpenEvent } from './openEvent';
 import { OpenEventAllOf } from './openEventAllOf';
 import { OperandType } from './operandType';
 import { Operation } from './operation';
+import { OperationType } from './operationType';
 import { Operator } from './operator';
 import { Order } from './order';
 import { OrderBySpec } from './orderBySpec';
@@ -1288,6 +1292,7 @@ let primitives = [
                  ];
 
 let enumsMap: {[index: string]: any} = {
+        "AccessMetadataOperation.OpEnum": AccessMetadataOperation.OpEnum,
         "AccountingMethod": AccountingMethod,
         "AggregateSpec.OpEnum": AggregateSpec.OpEnum,
         "AggregationOp": AggregationOp,
@@ -1439,6 +1444,7 @@ let enumsMap: {[index: string]: any} = {
         "OpenEvent.InstrumentEventTypeEnum": OpenEvent.InstrumentEventTypeEnum,
         "OpenEventAllOf.InstrumentEventTypeEnum": OpenEventAllOf.InstrumentEventTypeEnum,
         "OperandType": OperandType,
+        "OperationType": OperationType,
         "Operator": Operator,
         "OrderBySpec.SortOrderEnum": OrderBySpec.SortOrderEnum,
         "OutputTransaction.TransactionStatusEnum": OutputTransaction.TransactionStatusEnum,
@@ -1550,6 +1556,7 @@ let typeMap: {[index: string]: any} = {
     "A2BMovementRecord": A2BMovementRecord,
     "AccessControlledAction": AccessControlledAction,
     "AccessControlledResource": AccessControlledResource,
+    "AccessMetadataOperation": AccessMetadataOperation,
     "AccessMetadataValue": AccessMetadataValue,
     "ActionId": ActionId,
     "ActionResultOfPortfolio": ActionResultOfPortfolio,
