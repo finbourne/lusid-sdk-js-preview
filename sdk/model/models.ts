@@ -59,6 +59,8 @@ export * from './cdsIndex';
 export * from './cdsIndexAllOf';
 export * from './cdsProtectionDetailSpecification';
 export * from './change';
+export * from './closeEvent';
+export * from './closeEventAllOf';
 export * from './completePortfolio';
 export * from './completeRelation';
 export * from './completeRelationship';
@@ -86,6 +88,8 @@ export * from './corporateActionTransitionRequest';
 export * from './counterpartyAgreement';
 export * from './counterpartyRiskInformation';
 export * from './counterpartySignatory';
+export * from './couponEvent';
+export * from './couponEventAllOf';
 export * from './createCalendarRequest';
 export * from './createCorporateActionSourceRequest';
 export * from './createCutLabelDefinitionRequest';
@@ -171,6 +175,7 @@ export * from './fieldDefinition';
 export * from './fieldSchema';
 export * from './fieldValue';
 export * from './fileResponse';
+export * from './filterInstrumentEvents';
 export * from './fixedLeg';
 export * from './fixedLegAllOf';
 export * from './fixedLegAllOfOverrides';
@@ -241,6 +246,9 @@ export * from './instrument';
 export * from './instrumentCashFlow';
 export * from './instrumentDefinition';
 export * from './instrumentDefinitionFormat';
+export * from './instrumentEvent';
+export * from './instrumentEventHolder';
+export * from './instrumentEventType';
 export * from './instrumentIdTypeDescriptor';
 export * from './instrumentIdValue';
 export * from './instrumentLeg';
@@ -256,6 +264,8 @@ export * from './interestRateSwap';
 export * from './interestRateSwapAllOf';
 export * from './interestRateSwaption';
 export * from './interestRateSwaptionAllOf';
+export * from './internalEvent';
+export * from './internalEventAllOf';
 export * from './irVolCubeData';
 export * from './irVolCubeDataAllOf';
 export * from './isBusinessDayResponse';
@@ -290,6 +300,8 @@ export * from './opaqueMarketData';
 export * from './opaqueMarketDataAllOf';
 export * from './opaqueModelOptions';
 export * from './opaqueModelOptionsAllOf';
+export * from './openEvent';
+export * from './openEventAllOf';
 export * from './operandType';
 export * from './operation';
 export * from './operator';
@@ -390,6 +402,9 @@ export * from './propertyLifeTime';
 export * from './propertySchema';
 export * from './propertyType';
 export * from './propertyValue';
+export * from './queryBucketedCashFlowsRequest';
+export * from './queryCashFlowsRequest';
+export * from './queryInstrumentEventsRequest';
 export * from './quote';
 export * from './quoteAccessMetadataRule';
 export * from './quoteAccessMetadataRuleId';
@@ -451,6 +466,7 @@ export * from './resourceListOfGetRecipeResponse';
 export * from './resourceListOfHoldingsAdjustmentHeader';
 export * from './resourceListOfIUnitDefinitionDto';
 export * from './resourceListOfInstrumentCashFlow';
+export * from './resourceListOfInstrumentEventHolder';
 export * from './resourceListOfInstrumentIdTypeDescriptor';
 export * from './resourceListOfLegalEntity';
 export * from './resourceListOfListComplexMarketDataWithMetaDataResponse';
@@ -545,6 +561,8 @@ export * from './transactionTypeAlias';
 export * from './transactionTypeMovement';
 export * from './transactionTypePropertyMapping';
 export * from './transactionTypeRequest';
+export * from './transitionEvent';
+export * from './transitionEventAllOf';
 export * from './translateInstrumentDefinitionsRequest';
 export * from './translateInstrumentDefinitionsResponse';
 export * from './typedResourceId';
@@ -685,6 +703,8 @@ import { CdsIndex } from './cdsIndex';
 import { CdsIndexAllOf } from './cdsIndexAllOf';
 import { CdsProtectionDetailSpecification } from './cdsProtectionDetailSpecification';
 import { Change } from './change';
+import { CloseEvent } from './closeEvent';
+import { CloseEventAllOf } from './closeEventAllOf';
 import { CompletePortfolio } from './completePortfolio';
 import { CompleteRelation } from './completeRelation';
 import { CompleteRelationship } from './completeRelationship';
@@ -712,6 +732,8 @@ import { CorporateActionTransitionRequest } from './corporateActionTransitionReq
 import { CounterpartyAgreement } from './counterpartyAgreement';
 import { CounterpartyRiskInformation } from './counterpartyRiskInformation';
 import { CounterpartySignatory } from './counterpartySignatory';
+import { CouponEvent } from './couponEvent';
+import { CouponEventAllOf } from './couponEventAllOf';
 import { CreateCalendarRequest } from './createCalendarRequest';
 import { CreateCorporateActionSourceRequest } from './createCorporateActionSourceRequest';
 import { CreateCutLabelDefinitionRequest } from './createCutLabelDefinitionRequest';
@@ -797,6 +819,7 @@ import { FieldDefinition } from './fieldDefinition';
 import { FieldSchema } from './fieldSchema';
 import { FieldValue } from './fieldValue';
 import { FileResponse } from './fileResponse';
+import { FilterInstrumentEvents } from './filterInstrumentEvents';
 import { FixedLeg } from './fixedLeg';
 import { FixedLegAllOf } from './fixedLegAllOf';
 import { FixedLegAllOfOverrides } from './fixedLegAllOfOverrides';
@@ -867,6 +890,9 @@ import { Instrument } from './instrument';
 import { InstrumentCashFlow } from './instrumentCashFlow';
 import { InstrumentDefinition } from './instrumentDefinition';
 import { InstrumentDefinitionFormat } from './instrumentDefinitionFormat';
+import { InstrumentEvent } from './instrumentEvent';
+import { InstrumentEventHolder } from './instrumentEventHolder';
+import { InstrumentEventType } from './instrumentEventType';
 import { InstrumentIdTypeDescriptor } from './instrumentIdTypeDescriptor';
 import { InstrumentIdValue } from './instrumentIdValue';
 import { InstrumentLeg } from './instrumentLeg';
@@ -882,6 +908,8 @@ import { InterestRateSwap } from './interestRateSwap';
 import { InterestRateSwapAllOf } from './interestRateSwapAllOf';
 import { InterestRateSwaption } from './interestRateSwaption';
 import { InterestRateSwaptionAllOf } from './interestRateSwaptionAllOf';
+import { InternalEvent } from './internalEvent';
+import { InternalEventAllOf } from './internalEventAllOf';
 import { IrVolCubeData } from './irVolCubeData';
 import { IrVolCubeDataAllOf } from './irVolCubeDataAllOf';
 import { IsBusinessDayResponse } from './isBusinessDayResponse';
@@ -916,6 +944,8 @@ import { OpaqueMarketData } from './opaqueMarketData';
 import { OpaqueMarketDataAllOf } from './opaqueMarketDataAllOf';
 import { OpaqueModelOptions } from './opaqueModelOptions';
 import { OpaqueModelOptionsAllOf } from './opaqueModelOptionsAllOf';
+import { OpenEvent } from './openEvent';
+import { OpenEventAllOf } from './openEventAllOf';
 import { OperandType } from './operandType';
 import { Operation } from './operation';
 import { Operator } from './operator';
@@ -1016,6 +1046,9 @@ import { PropertyLifeTime } from './propertyLifeTime';
 import { PropertySchema } from './propertySchema';
 import { PropertyType } from './propertyType';
 import { PropertyValue } from './propertyValue';
+import { QueryBucketedCashFlowsRequest } from './queryBucketedCashFlowsRequest';
+import { QueryCashFlowsRequest } from './queryCashFlowsRequest';
+import { QueryInstrumentEventsRequest } from './queryInstrumentEventsRequest';
 import { Quote } from './quote';
 import { QuoteAccessMetadataRule } from './quoteAccessMetadataRule';
 import { QuoteAccessMetadataRuleId } from './quoteAccessMetadataRuleId';
@@ -1077,6 +1110,7 @@ import { ResourceListOfGetRecipeResponse } from './resourceListOfGetRecipeRespon
 import { ResourceListOfHoldingsAdjustmentHeader } from './resourceListOfHoldingsAdjustmentHeader';
 import { ResourceListOfIUnitDefinitionDto } from './resourceListOfIUnitDefinitionDto';
 import { ResourceListOfInstrumentCashFlow } from './resourceListOfInstrumentCashFlow';
+import { ResourceListOfInstrumentEventHolder } from './resourceListOfInstrumentEventHolder';
 import { ResourceListOfInstrumentIdTypeDescriptor } from './resourceListOfInstrumentIdTypeDescriptor';
 import { ResourceListOfLegalEntity } from './resourceListOfLegalEntity';
 import { ResourceListOfListComplexMarketDataWithMetaDataResponse } from './resourceListOfListComplexMarketDataWithMetaDataResponse';
@@ -1171,6 +1205,8 @@ import { TransactionTypeAlias } from './transactionTypeAlias';
 import { TransactionTypeMovement } from './transactionTypeMovement';
 import { TransactionTypePropertyMapping } from './transactionTypePropertyMapping';
 import { TransactionTypeRequest } from './transactionTypeRequest';
+import { TransitionEvent } from './transitionEvent';
+import { TransitionEventAllOf } from './transitionEventAllOf';
 import { TranslateInstrumentDefinitionsRequest } from './translateInstrumentDefinitionsRequest';
 import { TranslateInstrumentDefinitionsResponse } from './translateInstrumentDefinitionsResponse';
 import { TypedResourceId } from './typedResourceId';
@@ -1272,12 +1308,16 @@ let enumsMap: {[index: string]: any} = {
         "CashPerpetualAllOf.InstrumentTypeEnum": CashPerpetualAllOf.InstrumentTypeEnum,
         "CdsIndex.InstrumentTypeEnum": CdsIndex.InstrumentTypeEnum,
         "CdsIndexAllOf.InstrumentTypeEnum": CdsIndexAllOf.InstrumentTypeEnum,
+        "CloseEvent.InstrumentEventTypeEnum": CloseEvent.InstrumentEventTypeEnum,
+        "CloseEventAllOf.InstrumentEventTypeEnum": CloseEventAllOf.InstrumentEventTypeEnum,
         "CompletePortfolio.TypeEnum": CompletePortfolio.TypeEnum,
         "ComplexBond.InstrumentTypeEnum": ComplexBond.InstrumentTypeEnum,
         "ComplexBondAllOf.InstrumentTypeEnum": ComplexBondAllOf.InstrumentTypeEnum,
         "ComplexMarketData.MarketDataTypeEnum": ComplexMarketData.MarketDataTypeEnum,
         "ContractForDifference.InstrumentTypeEnum": ContractForDifference.InstrumentTypeEnum,
         "ContractForDifferenceAllOf.InstrumentTypeEnum": ContractForDifferenceAllOf.InstrumentTypeEnum,
+        "CouponEvent.InstrumentEventTypeEnum": CouponEvent.InstrumentEventTypeEnum,
+        "CouponEventAllOf.InstrumentEventTypeEnum": CouponEventAllOf.InstrumentEventTypeEnum,
         "CreateDataTypeRequest.TypeValueRangeEnum": CreateDataTypeRequest.TypeValueRangeEnum,
         "CreateDataTypeRequest.ValueTypeEnum": CreateDataTypeRequest.ValueTypeEnum,
         "CreateDataTypeRequest.UnitSchemaEnum": CreateDataTypeRequest.UnitSchemaEnum,
@@ -1367,6 +1407,8 @@ let enumsMap: {[index: string]: any} = {
         "IndexModelOptionsAllOf.ModelOptionsTypeEnum": IndexModelOptionsAllOf.ModelOptionsTypeEnum,
         "Instrument.StateEnum": Instrument.StateEnum,
         "Instrument.AssetClassEnum": Instrument.AssetClassEnum,
+        "InstrumentEvent.InstrumentEventTypeEnum": InstrumentEvent.InstrumentEventTypeEnum,
+        "InstrumentEventType": InstrumentEventType,
         "InstrumentLeg.InstrumentTypeEnum": InstrumentLeg.InstrumentTypeEnum,
         "InstrumentLegAllOf.InstrumentTypeEnum": InstrumentLegAllOf.InstrumentTypeEnum,
         "InstrumentType": InstrumentType,
@@ -1374,6 +1416,8 @@ let enumsMap: {[index: string]: any} = {
         "InterestRateSwapAllOf.InstrumentTypeEnum": InterestRateSwapAllOf.InstrumentTypeEnum,
         "InterestRateSwaption.InstrumentTypeEnum": InterestRateSwaption.InstrumentTypeEnum,
         "InterestRateSwaptionAllOf.InstrumentTypeEnum": InterestRateSwaptionAllOf.InstrumentTypeEnum,
+        "InternalEvent.InstrumentEventTypeEnum": InternalEvent.InstrumentEventTypeEnum,
+        "InternalEventAllOf.InstrumentEventTypeEnum": InternalEventAllOf.InstrumentEventTypeEnum,
         "IrVolCubeData.MarketDataTypeEnum": IrVolCubeData.MarketDataTypeEnum,
         "IrVolCubeDataAllOf.MarketDataTypeEnum": IrVolCubeDataAllOf.MarketDataTypeEnum,
         "LusidInstrument.InstrumentTypeEnum": LusidInstrument.InstrumentTypeEnum,
@@ -1392,6 +1436,8 @@ let enumsMap: {[index: string]: any} = {
         "OpaqueMarketDataAllOf.MarketDataTypeEnum": OpaqueMarketDataAllOf.MarketDataTypeEnum,
         "OpaqueModelOptions.ModelOptionsTypeEnum": OpaqueModelOptions.ModelOptionsTypeEnum,
         "OpaqueModelOptionsAllOf.ModelOptionsTypeEnum": OpaqueModelOptionsAllOf.ModelOptionsTypeEnum,
+        "OpenEvent.InstrumentEventTypeEnum": OpenEvent.InstrumentEventTypeEnum,
+        "OpenEventAllOf.InstrumentEventTypeEnum": OpenEventAllOf.InstrumentEventTypeEnum,
         "OperandType": OperandType,
         "Operator": Operator,
         "OrderBySpec.SortOrderEnum": OrderBySpec.SortOrderEnum,
@@ -1484,6 +1530,8 @@ let enumsMap: {[index: string]: any} = {
         "TransactionQueryParameters.QueryModeEnum": TransactionQueryParameters.QueryModeEnum,
         "TransactionRoles": TransactionRoles,
         "TransactionStatus": TransactionStatus,
+        "TransitionEvent.InstrumentEventTypeEnum": TransitionEvent.InstrumentEventTypeEnum,
+        "TransitionEventAllOf.InstrumentEventTypeEnum": TransitionEventAllOf.InstrumentEventTypeEnum,
         "UnitSchema": UnitSchema,
         "UnmatchedHoldingMethod": UnmatchedHoldingMethod,
         "UpsertReferencePortfolioConstituentsRequest.WeightTypeEnum": UpsertReferencePortfolioConstituentsRequest.WeightTypeEnum,
@@ -1551,6 +1599,8 @@ let typeMap: {[index: string]: any} = {
     "CdsIndexAllOf": CdsIndexAllOf,
     "CdsProtectionDetailSpecification": CdsProtectionDetailSpecification,
     "Change": Change,
+    "CloseEvent": CloseEvent,
+    "CloseEventAllOf": CloseEventAllOf,
     "CompletePortfolio": CompletePortfolio,
     "CompleteRelation": CompleteRelation,
     "CompleteRelationship": CompleteRelationship,
@@ -1578,6 +1628,8 @@ let typeMap: {[index: string]: any} = {
     "CounterpartyAgreement": CounterpartyAgreement,
     "CounterpartyRiskInformation": CounterpartyRiskInformation,
     "CounterpartySignatory": CounterpartySignatory,
+    "CouponEvent": CouponEvent,
+    "CouponEventAllOf": CouponEventAllOf,
     "CreateCalendarRequest": CreateCalendarRequest,
     "CreateCorporateActionSourceRequest": CreateCorporateActionSourceRequest,
     "CreateCutLabelDefinitionRequest": CreateCutLabelDefinitionRequest,
@@ -1659,6 +1711,7 @@ let typeMap: {[index: string]: any} = {
     "FieldSchema": FieldSchema,
     "FieldValue": FieldValue,
     "FileResponse": FileResponse,
+    "FilterInstrumentEvents": FilterInstrumentEvents,
     "FixedLeg": FixedLeg,
     "FixedLegAllOf": FixedLegAllOf,
     "FixedLegAllOfOverrides": FixedLegAllOfOverrides,
@@ -1729,6 +1782,8 @@ let typeMap: {[index: string]: any} = {
     "InstrumentCashFlow": InstrumentCashFlow,
     "InstrumentDefinition": InstrumentDefinition,
     "InstrumentDefinitionFormat": InstrumentDefinitionFormat,
+    "InstrumentEvent": InstrumentEvent,
+    "InstrumentEventHolder": InstrumentEventHolder,
     "InstrumentIdTypeDescriptor": InstrumentIdTypeDescriptor,
     "InstrumentIdValue": InstrumentIdValue,
     "InstrumentLeg": InstrumentLeg,
@@ -1743,6 +1798,8 @@ let typeMap: {[index: string]: any} = {
     "InterestRateSwapAllOf": InterestRateSwapAllOf,
     "InterestRateSwaption": InterestRateSwaption,
     "InterestRateSwaptionAllOf": InterestRateSwaptionAllOf,
+    "InternalEvent": InternalEvent,
+    "InternalEventAllOf": InternalEventAllOf,
     "IrVolCubeData": IrVolCubeData,
     "IrVolCubeDataAllOf": IrVolCubeDataAllOf,
     "IsBusinessDayResponse": IsBusinessDayResponse,
@@ -1772,6 +1829,8 @@ let typeMap: {[index: string]: any} = {
     "OpaqueMarketDataAllOf": OpaqueMarketDataAllOf,
     "OpaqueModelOptions": OpaqueModelOptions,
     "OpaqueModelOptionsAllOf": OpaqueModelOptionsAllOf,
+    "OpenEvent": OpenEvent,
+    "OpenEventAllOf": OpenEventAllOf,
     "Operation": Operation,
     "Order": Order,
     "OrderBySpec": OrderBySpec,
@@ -1862,6 +1921,9 @@ let typeMap: {[index: string]: any} = {
     "PropertyInterval": PropertyInterval,
     "PropertySchema": PropertySchema,
     "PropertyValue": PropertyValue,
+    "QueryBucketedCashFlowsRequest": QueryBucketedCashFlowsRequest,
+    "QueryCashFlowsRequest": QueryCashFlowsRequest,
+    "QueryInstrumentEventsRequest": QueryInstrumentEventsRequest,
     "Quote": Quote,
     "QuoteAccessMetadataRule": QuoteAccessMetadataRule,
     "QuoteAccessMetadataRuleId": QuoteAccessMetadataRuleId,
@@ -1919,6 +1981,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfHoldingsAdjustmentHeader": ResourceListOfHoldingsAdjustmentHeader,
     "ResourceListOfIUnitDefinitionDto": ResourceListOfIUnitDefinitionDto,
     "ResourceListOfInstrumentCashFlow": ResourceListOfInstrumentCashFlow,
+    "ResourceListOfInstrumentEventHolder": ResourceListOfInstrumentEventHolder,
     "ResourceListOfInstrumentIdTypeDescriptor": ResourceListOfInstrumentIdTypeDescriptor,
     "ResourceListOfLegalEntity": ResourceListOfLegalEntity,
     "ResourceListOfListComplexMarketDataWithMetaDataResponse": ResourceListOfListComplexMarketDataWithMetaDataResponse,
@@ -2003,6 +2066,8 @@ let typeMap: {[index: string]: any} = {
     "TransactionTypeMovement": TransactionTypeMovement,
     "TransactionTypePropertyMapping": TransactionTypePropertyMapping,
     "TransactionTypeRequest": TransactionTypeRequest,
+    "TransitionEvent": TransitionEvent,
+    "TransitionEventAllOf": TransitionEventAllOf,
     "TranslateInstrumentDefinitionsRequest": TranslateInstrumentDefinitionsRequest,
     "TranslateInstrumentDefinitionsResponse": TranslateInstrumentDefinitionsResponse,
     "TypedResourceId": TypedResourceId,

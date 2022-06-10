@@ -17,6 +17,7 @@ import {DerivedTransactionPortfoliosApi} from './api/derivedTransactionPortfolio
 import {EntitiesApi} from './api/entitiesApi';
 import {ExecutionsApi} from './api/executionsApi';
 import {FeesAndCommissionsApi} from './api/feesAndCommissionsApi';
+import {InstrumentEventsApi} from './api/instrumentEventsApi';
 import {InstrumentsApi} from './api/instrumentsApi';
 import {LegalEntitiesApi} from './api/legalEntitiesApi';
 import {OrderGraphApi} from './api/orderGraphApi';
@@ -67,6 +68,7 @@ export class Api {
     public entities:  EntitiesApi
     public executions:  ExecutionsApi
     public feesAndCommissions:  FeesAndCommissionsApi
+    public instrumentEvents:  InstrumentEventsApi
     public instruments:  InstrumentsApi
     public legalEntities:  LegalEntitiesApi
     public orderGraph:  OrderGraphApi
