@@ -175,7 +175,6 @@ export * from './fieldDefinition';
 export * from './fieldSchema';
 export * from './fieldValue';
 export * from './fileResponse';
-export * from './filterInstrumentEvents';
 export * from './fixedLeg';
 export * from './fixedLegAllOf';
 export * from './fixedLegAllOfOverrides';
@@ -819,7 +818,6 @@ import { FieldDefinition } from './fieldDefinition';
 import { FieldSchema } from './fieldSchema';
 import { FieldValue } from './fieldValue';
 import { FileResponse } from './fileResponse';
-import { FilterInstrumentEvents } from './filterInstrumentEvents';
 import { FixedLeg } from './fixedLeg';
 import { FixedLegAllOf } from './fixedLegAllOf';
 import { FixedLegAllOfOverrides } from './fixedLegAllOfOverrides';
@@ -1713,7 +1711,6 @@ let typeMap: {[index: string]: any} = {
     "FieldSchema": FieldSchema,
     "FieldValue": FieldValue,
     "FileResponse": FileResponse,
-    "FilterInstrumentEvents": FilterInstrumentEvents,
     "FixedLeg": FixedLeg,
     "FixedLegAllOf": FixedLegAllOf,
     "FixedLegAllOfOverrides": FixedLegAllOfOverrides,
