@@ -240,6 +240,7 @@ export * from './indexModelOptionsAllOf';
 export * from './industryClassifier';
 export * from './inlineValuationRequest';
 export * from './inlineValuationsReconciliationRequest';
+export * from './inputTransition';
 export * from './instrument';
 export * from './instrumentCashFlow';
 export * from './instrumentDefinition';
@@ -329,6 +330,7 @@ export * from './orderRequest';
 export * from './orderSetRequest';
 export * from './otcConfirmation';
 export * from './outputTransaction';
+export * from './outputTransition';
 export * from './package';
 export * from './packageRequest';
 export * from './packageSetRequest';
@@ -582,6 +584,8 @@ export * from './upsertCounterpartyAgreementRequest';
 export * from './upsertCreditSupportAnnexRequest';
 export * from './upsertFlowConventionsRequest';
 export * from './upsertIndexConventionRequest';
+export * from './upsertInstrumentEventRequest';
+export * from './upsertInstrumentEventsResponse';
 export * from './upsertInstrumentPropertiesResponse';
 export * from './upsertInstrumentPropertyRequest';
 export * from './upsertInstrumentsResponse';
@@ -881,6 +885,7 @@ import { IndexModelOptionsAllOf } from './indexModelOptionsAllOf';
 import { IndustryClassifier } from './industryClassifier';
 import { InlineValuationRequest } from './inlineValuationRequest';
 import { InlineValuationsReconciliationRequest } from './inlineValuationsReconciliationRequest';
+import { InputTransition } from './inputTransition';
 import { Instrument } from './instrument';
 import { InstrumentCashFlow } from './instrumentCashFlow';
 import { InstrumentDefinition } from './instrumentDefinition';
@@ -970,6 +975,7 @@ import { OrderRequest } from './orderRequest';
 import { OrderSetRequest } from './orderSetRequest';
 import { OtcConfirmation } from './otcConfirmation';
 import { OutputTransaction } from './outputTransaction';
+import { OutputTransition } from './outputTransition';
 import { Package } from './package';
 import { PackageRequest } from './packageRequest';
 import { PackageSetRequest } from './packageSetRequest';
@@ -1223,6 +1229,8 @@ import { UpsertCounterpartyAgreementRequest } from './upsertCounterpartyAgreemen
 import { UpsertCreditSupportAnnexRequest } from './upsertCreditSupportAnnexRequest';
 import { UpsertFlowConventionsRequest } from './upsertFlowConventionsRequest';
 import { UpsertIndexConventionRequest } from './upsertIndexConventionRequest';
+import { UpsertInstrumentEventRequest } from './upsertInstrumentEventRequest';
+import { UpsertInstrumentEventsResponse } from './upsertInstrumentEventsResponse';
 import { UpsertInstrumentPropertiesResponse } from './upsertInstrumentPropertiesResponse';
 import { UpsertInstrumentPropertyRequest } from './upsertInstrumentPropertyRequest';
 import { UpsertInstrumentsResponse } from './upsertInstrumentsResponse';
@@ -1770,6 +1778,7 @@ let typeMap: {[index: string]: any} = {
     "IndustryClassifier": IndustryClassifier,
     "InlineValuationRequest": InlineValuationRequest,
     "InlineValuationsReconciliationRequest": InlineValuationsReconciliationRequest,
+    "InputTransition": InputTransition,
     "Instrument": Instrument,
     "InstrumentCashFlow": InstrumentCashFlow,
     "InstrumentDefinition": InstrumentDefinition,
@@ -1850,6 +1859,7 @@ let typeMap: {[index: string]: any} = {
     "OrderSetRequest": OrderSetRequest,
     "OtcConfirmation": OtcConfirmation,
     "OutputTransaction": OutputTransaction,
+    "OutputTransition": OutputTransition,
     "Package": Package,
     "PackageRequest": PackageRequest,
     "PackageSetRequest": PackageSetRequest,
@@ -2079,6 +2089,8 @@ let typeMap: {[index: string]: any} = {
     "UpsertCreditSupportAnnexRequest": UpsertCreditSupportAnnexRequest,
     "UpsertFlowConventionsRequest": UpsertFlowConventionsRequest,
     "UpsertIndexConventionRequest": UpsertIndexConventionRequest,
+    "UpsertInstrumentEventRequest": UpsertInstrumentEventRequest,
+    "UpsertInstrumentEventsResponse": UpsertInstrumentEventsResponse,
     "UpsertInstrumentPropertiesResponse": UpsertInstrumentPropertiesResponse,
     "UpsertInstrumentPropertyRequest": UpsertInstrumentPropertyRequest,
     "UpsertInstrumentsResponse": UpsertInstrumentsResponse,
