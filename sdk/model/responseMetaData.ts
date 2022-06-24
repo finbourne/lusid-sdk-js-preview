@@ -11,65 +11,54 @@
  */
 
 import { RequestFile } from './models';
-import { CustomEntityDefinition } from './customEntityDefinition';
-import { Link } from './link';
 
 /**
-* A paginated list of resource that can be returned from a request.
+* Metadata related to an api response
 */
-export class PagedResourceListOfCustomEntityDefinition {
+export class ResponseMetaData {
     /**
-    * The next page of results.
+    * The type of meta data information being provided
     */
-    'nextPage'?: string | null;
+    'type'?: string | null;
     /**
-    * The previous page of results.
+    * The description of what occured for this specific piece of meta data
     */
-    'previousPage'?: string | null;
+    'description'?: string | null;
     /**
-    * The resources to list.
+    * The type of the listed identifiers
     */
-    'values': Array<CustomEntityDefinition>;
+    'identifierType'?: string | null;
     /**
-    * The URI of the resource list.
+    * The related identifiers that were impacted by this event
     */
-    'href'?: string | null;
-    /**
-    * Collection of links.
-    */
-    'links'?: Array<Link> | null;
+    'identifiers'?: Array<string> | null;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "nextPage",
-            "baseName": "nextPage",
+            "name": "type",
+            "baseName": "type",
             "type": "string"
         },
         {
-            "name": "previousPage",
-            "baseName": "previousPage",
+            "name": "description",
+            "baseName": "description",
             "type": "string"
         },
         {
-            "name": "values",
-            "baseName": "values",
-            "type": "Array<CustomEntityDefinition>"
-        },
-        {
-            "name": "href",
-            "baseName": "href",
+            "name": "identifierType",
+            "baseName": "identifierType",
             "type": "string"
         },
         {
-            "name": "links",
-            "baseName": "links",
-            "type": "Array<Link>"
+            "name": "identifiers",
+            "baseName": "identifiers",
+            "type": "Array<string>"
         }    ];
 
     static getAttributeTypeMap() {
-        return PagedResourceListOfCustomEntityDefinition.attributeTypeMap;
+        return ResponseMetaData.attributeTypeMap;
     }
 }
 

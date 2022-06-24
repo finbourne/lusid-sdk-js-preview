@@ -493,6 +493,7 @@ export * from './resourceListOfScopeDefinition';
 export * from './resourceListOfString';
 export * from './resourceListOfTransaction';
 export * from './resourceListOfValueType';
+export * from './responseMetaData';
 export * from './resultDataKeyRule';
 export * from './resultDataKeyRuleAllOf';
 export * from './resultDataSchema';
@@ -1138,6 +1139,7 @@ import { ResourceListOfScopeDefinition } from './resourceListOfScopeDefinition';
 import { ResourceListOfString } from './resourceListOfString';
 import { ResourceListOfTransaction } from './resourceListOfTransaction';
 import { ResourceListOfValueType } from './resourceListOfValueType';
+import { ResponseMetaData } from './responseMetaData';
 import { ResultDataKeyRule } from './resultDataKeyRule';
 import { ResultDataKeyRuleAllOf } from './resultDataKeyRuleAllOf';
 import { ResultDataSchema } from './resultDataSchema';
@@ -2010,6 +2012,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfString": ResourceListOfString,
     "ResourceListOfTransaction": ResourceListOfTransaction,
     "ResourceListOfValueType": ResourceListOfValueType,
+    "ResponseMetaData": ResponseMetaData,
     "ResultDataKeyRule": ResultDataKeyRule,
     "ResultDataKeyRuleAllOf": ResultDataKeyRuleAllOf,
     "ResultDataSchema": ResultDataSchema,
