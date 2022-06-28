@@ -68,6 +68,7 @@ export * from './complexBond';
 export * from './complexBondAllOf';
 export * from './complexMarketData';
 export * from './complexMarketDataId';
+export * from './complianceBreachedOrderInfo';
 export * from './complianceRule';
 export * from './complianceRuleResult';
 export * from './complianceRuleUpsertRequest';
@@ -448,6 +449,7 @@ export * from './resourceListOfAllocation';
 export * from './resourceListOfBlock';
 export * from './resourceListOfCalendarDate';
 export * from './resourceListOfChange';
+export * from './resourceListOfComplianceBreachedOrderInfo';
 export * from './resourceListOfComplianceRule';
 export * from './resourceListOfComplianceRuleResult';
 export * from './resourceListOfComplianceRun';
@@ -714,6 +716,7 @@ import { ComplexBond } from './complexBond';
 import { ComplexBondAllOf } from './complexBondAllOf';
 import { ComplexMarketData } from './complexMarketData';
 import { ComplexMarketDataId } from './complexMarketDataId';
+import { ComplianceBreachedOrderInfo } from './complianceBreachedOrderInfo';
 import { ComplianceRule } from './complianceRule';
 import { ComplianceRuleResult } from './complianceRuleResult';
 import { ComplianceRuleUpsertRequest } from './complianceRuleUpsertRequest';
@@ -1094,6 +1097,7 @@ import { ResourceListOfAllocation } from './resourceListOfAllocation';
 import { ResourceListOfBlock } from './resourceListOfBlock';
 import { ResourceListOfCalendarDate } from './resourceListOfCalendarDate';
 import { ResourceListOfChange } from './resourceListOfChange';
+import { ResourceListOfComplianceBreachedOrderInfo } from './resourceListOfComplianceBreachedOrderInfo';
 import { ResourceListOfComplianceRule } from './resourceListOfComplianceRule';
 import { ResourceListOfComplianceRuleResult } from './resourceListOfComplianceRuleResult';
 import { ResourceListOfComplianceRun } from './resourceListOfComplianceRun';
@@ -1612,6 +1616,7 @@ let typeMap: {[index: string]: any} = {
     "ComplexBondAllOf": ComplexBondAllOf,
     "ComplexMarketData": ComplexMarketData,
     "ComplexMarketDataId": ComplexMarketDataId,
+    "ComplianceBreachedOrderInfo": ComplianceBreachedOrderInfo,
     "ComplianceRule": ComplianceRule,
     "ComplianceRuleResult": ComplianceRuleResult,
     "ComplianceRuleUpsertRequest": ComplianceRuleUpsertRequest,
@@ -1967,6 +1972,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfBlock": ResourceListOfBlock,
     "ResourceListOfCalendarDate": ResourceListOfCalendarDate,
     "ResourceListOfChange": ResourceListOfChange,
+    "ResourceListOfComplianceBreachedOrderInfo": ResourceListOfComplianceBreachedOrderInfo,
     "ResourceListOfComplianceRule": ResourceListOfComplianceRule,
     "ResourceListOfComplianceRuleResult": ResourceListOfComplianceRuleResult,
     "ResourceListOfComplianceRun": ResourceListOfComplianceRun,
