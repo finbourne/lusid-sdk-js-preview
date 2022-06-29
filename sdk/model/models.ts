@@ -139,6 +139,7 @@ export * from './dateTimeComparisonType';
 export * from './dayOfWeek';
 export * from './deleteInstrumentPropertiesResponse';
 export * from './deleteInstrumentResponse';
+export * from './deleteInstrumentsResponse';
 export * from './deleteRelationRequest';
 export * from './deleteRelationshipRequest';
 export * from './deletedEntityResponse';
@@ -246,6 +247,7 @@ export * from './instrument';
 export * from './instrumentCashFlow';
 export * from './instrumentDefinition';
 export * from './instrumentDefinitionFormat';
+export * from './instrumentDeleteModes';
 export * from './instrumentEvent';
 export * from './instrumentEventHolder';
 export * from './instrumentEventType';
@@ -787,6 +789,7 @@ import { DateTimeComparisonType } from './dateTimeComparisonType';
 import { DayOfWeek } from './dayOfWeek';
 import { DeleteInstrumentPropertiesResponse } from './deleteInstrumentPropertiesResponse';
 import { DeleteInstrumentResponse } from './deleteInstrumentResponse';
+import { DeleteInstrumentsResponse } from './deleteInstrumentsResponse';
 import { DeleteRelationRequest } from './deleteRelationRequest';
 import { DeleteRelationshipRequest } from './deleteRelationshipRequest';
 import { DeletedEntityResponse } from './deletedEntityResponse';
@@ -894,6 +897,7 @@ import { Instrument } from './instrument';
 import { InstrumentCashFlow } from './instrumentCashFlow';
 import { InstrumentDefinition } from './instrumentDefinition';
 import { InstrumentDefinitionFormat } from './instrumentDefinitionFormat';
+import { InstrumentDeleteModes } from './instrumentDeleteModes';
 import { InstrumentEvent } from './instrumentEvent';
 import { InstrumentEventHolder } from './instrumentEventHolder';
 import { InstrumentEventType } from './instrumentEventType';
@@ -1415,6 +1419,7 @@ let enumsMap: {[index: string]: any} = {
         "IndexModelOptionsAllOf.ModelOptionsTypeEnum": IndexModelOptionsAllOf.ModelOptionsTypeEnum,
         "Instrument.StateEnum": Instrument.StateEnum,
         "Instrument.AssetClassEnum": Instrument.AssetClassEnum,
+        "InstrumentDeleteModes": InstrumentDeleteModes,
         "InstrumentEvent.InstrumentEventTypeEnum": InstrumentEvent.InstrumentEventTypeEnum,
         "InstrumentEventType": InstrumentEventType,
         "InstrumentLeg.InstrumentTypeEnum": InstrumentLeg.InstrumentTypeEnum,
@@ -1684,6 +1689,7 @@ let typeMap: {[index: string]: any} = {
     "DateRange": DateRange,
     "DeleteInstrumentPropertiesResponse": DeleteInstrumentPropertiesResponse,
     "DeleteInstrumentResponse": DeleteInstrumentResponse,
+    "DeleteInstrumentsResponse": DeleteInstrumentsResponse,
     "DeleteRelationRequest": DeleteRelationRequest,
     "DeleteRelationshipRequest": DeleteRelationshipRequest,
     "DeletedEntityResponse": DeletedEntityResponse,
