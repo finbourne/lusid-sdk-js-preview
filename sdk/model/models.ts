@@ -32,6 +32,7 @@ export * from './annulQuotesResponse';
 export * from './annulSingleStructuredDataResponse';
 export * from './annulStructuredDataResponse';
 export * from './assetClass';
+export * from './barrier';
 export * from './basket';
 export * from './basketAllOf';
 export * from './basketIdentifier';
@@ -545,6 +546,7 @@ export * from './targetTaxLot';
 export * from './targetTaxLotRequest';
 export * from './termDeposit';
 export * from './termDepositAllOf';
+export * from './touch';
 export * from './transaction';
 export * from './transactionConfigurationData';
 export * from './transactionConfigurationDataRequest';
@@ -684,6 +686,7 @@ import { AnnulQuotesResponse } from './annulQuotesResponse';
 import { AnnulSingleStructuredDataResponse } from './annulSingleStructuredDataResponse';
 import { AnnulStructuredDataResponse } from './annulStructuredDataResponse';
 import { AssetClass } from './assetClass';
+import { Barrier } from './barrier';
 import { Basket } from './basket';
 import { BasketAllOf } from './basketAllOf';
 import { BasketIdentifier } from './basketIdentifier';
@@ -1197,6 +1200,7 @@ import { TargetTaxLot } from './targetTaxLot';
 import { TargetTaxLotRequest } from './targetTaxLotRequest';
 import { TermDeposit } from './termDeposit';
 import { TermDepositAllOf } from './termDepositAllOf';
+import { Touch } from './touch';
 import { Transaction } from './transaction';
 import { TransactionConfigurationData } from './transactionConfigurationData';
 import { TransactionConfigurationDataRequest } from './transactionConfigurationDataRequest';
@@ -1591,6 +1595,7 @@ let typeMap: {[index: string]: any} = {
     "AnnulQuotesResponse": AnnulQuotesResponse,
     "AnnulSingleStructuredDataResponse": AnnulSingleStructuredDataResponse,
     "AnnulStructuredDataResponse": AnnulStructuredDataResponse,
+    "Barrier": Barrier,
     "Basket": Basket,
     "BasketAllOf": BasketAllOf,
     "BasketIdentifier": BasketIdentifier,
@@ -2071,6 +2076,7 @@ let typeMap: {[index: string]: any} = {
     "TargetTaxLotRequest": TargetTaxLotRequest,
     "TermDeposit": TermDeposit,
     "TermDepositAllOf": TermDepositAllOf,
+    "Touch": Touch,
     "Transaction": Transaction,
     "TransactionConfigurationData": TransactionConfigurationData,
     "TransactionConfigurationDataRequest": TransactionConfigurationDataRequest,
