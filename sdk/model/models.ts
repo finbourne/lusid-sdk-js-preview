@@ -41,6 +41,8 @@ export * from './blockRequest';
 export * from './blockSetRequest';
 export * from './bond';
 export * from './bondAllOf';
+export * from './bondDefaultEvent';
+export * from './bondDefaultEventAllOf';
 export * from './bucketedCashFlowRequest';
 export * from './bucketedCashFlowResponse';
 export * from './calculationInfo';
@@ -48,6 +50,8 @@ export * from './calendar';
 export * from './calendarDate';
 export * from './capFloor';
 export * from './capFloorAllOf';
+export * from './cashDividendEvent';
+export * from './cashDividendEventAllOf';
 export * from './cashFlowLineage';
 export * from './cashFlowValue';
 export * from './cashFlowValueAllOf';
@@ -538,6 +542,8 @@ export * from './simpleInstrument';
 export * from './simpleInstrumentAllOf';
 export * from './sortOrder';
 export * from './stepSchedule';
+export * from './stockSplitEvent';
+export * from './stockSplitEventAllOf';
 export * from './stream';
 export * from './stringComparisonType';
 export * from './structuredResultData';
@@ -695,6 +701,8 @@ import { BlockRequest } from './blockRequest';
 import { BlockSetRequest } from './blockSetRequest';
 import { Bond } from './bond';
 import { BondAllOf } from './bondAllOf';
+import { BondDefaultEvent } from './bondDefaultEvent';
+import { BondDefaultEventAllOf } from './bondDefaultEventAllOf';
 import { BucketedCashFlowRequest } from './bucketedCashFlowRequest';
 import { BucketedCashFlowResponse } from './bucketedCashFlowResponse';
 import { CalculationInfo } from './calculationInfo';
@@ -702,6 +710,8 @@ import { Calendar } from './calendar';
 import { CalendarDate } from './calendarDate';
 import { CapFloor } from './capFloor';
 import { CapFloorAllOf } from './capFloorAllOf';
+import { CashDividendEvent } from './cashDividendEvent';
+import { CashDividendEventAllOf } from './cashDividendEventAllOf';
 import { CashFlowLineage } from './cashFlowLineage';
 import { CashFlowValue } from './cashFlowValue';
 import { CashFlowValueAllOf } from './cashFlowValueAllOf';
@@ -1192,6 +1202,8 @@ import { SimpleInstrument } from './simpleInstrument';
 import { SimpleInstrumentAllOf } from './simpleInstrumentAllOf';
 import { SortOrder } from './sortOrder';
 import { StepSchedule } from './stepSchedule';
+import { StockSplitEvent } from './stockSplitEvent';
+import { StockSplitEventAllOf } from './stockSplitEventAllOf';
 import { Stream } from './stream';
 import { StringComparisonType } from './stringComparisonType';
 import { StructuredResultData } from './structuredResultData';
@@ -1319,8 +1331,12 @@ let enumsMap: {[index: string]: any} = {
         "BasketAllOf.InstrumentTypeEnum": BasketAllOf.InstrumentTypeEnum,
         "Bond.InstrumentTypeEnum": Bond.InstrumentTypeEnum,
         "BondAllOf.InstrumentTypeEnum": BondAllOf.InstrumentTypeEnum,
+        "BondDefaultEvent.InstrumentEventTypeEnum": BondDefaultEvent.InstrumentEventTypeEnum,
+        "BondDefaultEventAllOf.InstrumentEventTypeEnum": BondDefaultEventAllOf.InstrumentEventTypeEnum,
         "CapFloor.InstrumentTypeEnum": CapFloor.InstrumentTypeEnum,
         "CapFloorAllOf.InstrumentTypeEnum": CapFloorAllOf.InstrumentTypeEnum,
+        "CashDividendEvent.InstrumentEventTypeEnum": CashDividendEvent.InstrumentEventTypeEnum,
+        "CashDividendEventAllOf.InstrumentEventTypeEnum": CashDividendEventAllOf.InstrumentEventTypeEnum,
         "CashFlowValue.ResultValueTypeEnum": CashFlowValue.ResultValueTypeEnum,
         "CashFlowValueAllOf.ResultValueTypeEnum": CashFlowValueAllOf.ResultValueTypeEnum,
         "CashFlowValueSet.ResultValueTypeEnum": CashFlowValueSet.ResultValueTypeEnum,
@@ -1540,6 +1556,8 @@ let enumsMap: {[index: string]: any} = {
         "SimpleInstrumentAllOf.AssetClassEnum": SimpleInstrumentAllOf.AssetClassEnum,
         "SimpleInstrumentAllOf.InstrumentTypeEnum": SimpleInstrumentAllOf.InstrumentTypeEnum,
         "SortOrder": SortOrder,
+        "StockSplitEvent.InstrumentEventTypeEnum": StockSplitEvent.InstrumentEventTypeEnum,
+        "StockSplitEventAllOf.InstrumentEventTypeEnum": StockSplitEventAllOf.InstrumentEventTypeEnum,
         "StringComparisonType": StringComparisonType,
         "TermDeposit.InstrumentTypeEnum": TermDeposit.InstrumentTypeEnum,
         "TermDepositAllOf.InstrumentTypeEnum": TermDepositAllOf.InstrumentTypeEnum,
@@ -1604,6 +1622,8 @@ let typeMap: {[index: string]: any} = {
     "BlockSetRequest": BlockSetRequest,
     "Bond": Bond,
     "BondAllOf": BondAllOf,
+    "BondDefaultEvent": BondDefaultEvent,
+    "BondDefaultEventAllOf": BondDefaultEventAllOf,
     "BucketedCashFlowRequest": BucketedCashFlowRequest,
     "BucketedCashFlowResponse": BucketedCashFlowResponse,
     "CalculationInfo": CalculationInfo,
@@ -1611,6 +1631,8 @@ let typeMap: {[index: string]: any} = {
     "CalendarDate": CalendarDate,
     "CapFloor": CapFloor,
     "CapFloorAllOf": CapFloorAllOf,
+    "CashDividendEvent": CashDividendEvent,
+    "CashDividendEventAllOf": CashDividendEventAllOf,
     "CashFlowLineage": CashFlowLineage,
     "CashFlowValue": CashFlowValue,
     "CashFlowValueAllOf": CashFlowValueAllOf,
@@ -2069,6 +2091,8 @@ let typeMap: {[index: string]: any} = {
     "SimpleInstrument": SimpleInstrument,
     "SimpleInstrumentAllOf": SimpleInstrumentAllOf,
     "StepSchedule": StepSchedule,
+    "StockSplitEvent": StockSplitEvent,
+    "StockSplitEventAllOf": StockSplitEventAllOf,
     "Stream": Stream,
     "StructuredResultData": StructuredResultData,
     "StructuredResultDataId": StructuredResultDataId,
