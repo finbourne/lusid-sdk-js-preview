@@ -79,7 +79,7 @@ export * from './complianceRule';
 export * from './complianceRuleResult';
 export * from './complianceRuleUpsertRequest';
 export * from './complianceRuleUpsertResponse';
-export * from './complianceRunInfo';
+export * from './complianceRun';
 export * from './compounding';
 export * from './configurationRecipe';
 export * from './configurationRecipeSnippet';
@@ -461,7 +461,7 @@ export * from './resourceListOfChange';
 export * from './resourceListOfComplianceBreachedOrderInfo';
 export * from './resourceListOfComplianceRule';
 export * from './resourceListOfComplianceRuleResult';
-export * from './resourceListOfComplianceRunInfo';
+export * from './resourceListOfComplianceRun';
 export * from './resourceListOfConstituentsAdjustmentHeader';
 export * from './resourceListOfCorporateAction';
 export * from './resourceListOfDataType';
@@ -739,7 +739,7 @@ import { ComplianceRule } from './complianceRule';
 import { ComplianceRuleResult } from './complianceRuleResult';
 import { ComplianceRuleUpsertRequest } from './complianceRuleUpsertRequest';
 import { ComplianceRuleUpsertResponse } from './complianceRuleUpsertResponse';
-import { ComplianceRunInfo } from './complianceRunInfo';
+import { ComplianceRun } from './complianceRun';
 import { Compounding } from './compounding';
 import { ConfigurationRecipe } from './configurationRecipe';
 import { ConfigurationRecipeSnippet } from './configurationRecipeSnippet';
@@ -1121,7 +1121,7 @@ import { ResourceListOfChange } from './resourceListOfChange';
 import { ResourceListOfComplianceBreachedOrderInfo } from './resourceListOfComplianceBreachedOrderInfo';
 import { ResourceListOfComplianceRule } from './resourceListOfComplianceRule';
 import { ResourceListOfComplianceRuleResult } from './resourceListOfComplianceRuleResult';
-import { ResourceListOfComplianceRunInfo } from './resourceListOfComplianceRunInfo';
+import { ResourceListOfComplianceRun } from './resourceListOfComplianceRun';
 import { ResourceListOfConstituentsAdjustmentHeader } from './resourceListOfConstituentsAdjustmentHeader';
 import { ResourceListOfCorporateAction } from './resourceListOfCorporateAction';
 import { ResourceListOfDataType } from './resourceListOfDataType';
@@ -1660,7 +1660,7 @@ let typeMap: {[index: string]: any} = {
     "ComplianceRuleResult": ComplianceRuleResult,
     "ComplianceRuleUpsertRequest": ComplianceRuleUpsertRequest,
     "ComplianceRuleUpsertResponse": ComplianceRuleUpsertResponse,
-    "ComplianceRunInfo": ComplianceRunInfo,
+    "ComplianceRun": ComplianceRun,
     "Compounding": Compounding,
     "ConfigurationRecipe": ConfigurationRecipe,
     "ConfigurationRecipeSnippet": ConfigurationRecipeSnippet,
@@ -2015,7 +2015,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfComplianceBreachedOrderInfo": ResourceListOfComplianceBreachedOrderInfo,
     "ResourceListOfComplianceRule": ResourceListOfComplianceRule,
     "ResourceListOfComplianceRuleResult": ResourceListOfComplianceRuleResult,
-    "ResourceListOfComplianceRunInfo": ResourceListOfComplianceRunInfo,
+    "ResourceListOfComplianceRun": ResourceListOfComplianceRun,
     "ResourceListOfConstituentsAdjustmentHeader": ResourceListOfConstituentsAdjustmentHeader,
     "ResourceListOfCorporateAction": ResourceListOfCorporateAction,
     "ResourceListOfDataType": ResourceListOfDataType,
