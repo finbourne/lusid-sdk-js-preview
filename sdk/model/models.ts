@@ -159,6 +159,10 @@ export * from './entityIdentifier';
 export * from './equity';
 export * from './equityAllOf';
 export * from './equityAllOfIdentifiers';
+export * from './equityCurveByPricesData';
+export * from './equityCurveByPricesDataAllOf';
+export * from './equityModelOptions';
+export * from './equityModelOptionsAllOf';
 export * from './equityOption';
 export * from './equityOptionAllOf';
 export * from './equitySwap';
@@ -821,6 +825,10 @@ import { EntityIdentifier } from './entityIdentifier';
 import { Equity } from './equity';
 import { EquityAllOf } from './equityAllOf';
 import { EquityAllOfIdentifiers } from './equityAllOfIdentifiers';
+import { EquityCurveByPricesData } from './equityCurveByPricesData';
+import { EquityCurveByPricesDataAllOf } from './equityCurveByPricesDataAllOf';
+import { EquityModelOptions } from './equityModelOptions';
+import { EquityModelOptionsAllOf } from './equityModelOptionsAllOf';
 import { EquityOption } from './equityOption';
 import { EquityOptionAllOf } from './equityOptionAllOf';
 import { EquitySwap } from './equitySwap';
@@ -1387,6 +1395,10 @@ let enumsMap: {[index: string]: any} = {
         "EmptyModelOptionsAllOf.ModelOptionsTypeEnum": EmptyModelOptionsAllOf.ModelOptionsTypeEnum,
         "Equity.InstrumentTypeEnum": Equity.InstrumentTypeEnum,
         "EquityAllOf.InstrumentTypeEnum": EquityAllOf.InstrumentTypeEnum,
+        "EquityCurveByPricesData.MarketDataTypeEnum": EquityCurveByPricesData.MarketDataTypeEnum,
+        "EquityCurveByPricesDataAllOf.MarketDataTypeEnum": EquityCurveByPricesDataAllOf.MarketDataTypeEnum,
+        "EquityModelOptions.ModelOptionsTypeEnum": EquityModelOptions.ModelOptionsTypeEnum,
+        "EquityModelOptionsAllOf.ModelOptionsTypeEnum": EquityModelOptionsAllOf.ModelOptionsTypeEnum,
         "EquityOption.InstrumentTypeEnum": EquityOption.InstrumentTypeEnum,
         "EquityOptionAllOf.InstrumentTypeEnum": EquityOptionAllOf.InstrumentTypeEnum,
         "EquitySwap.InstrumentTypeEnum": EquitySwap.InstrumentTypeEnum,
@@ -1742,6 +1754,10 @@ let typeMap: {[index: string]: any} = {
     "Equity": Equity,
     "EquityAllOf": EquityAllOf,
     "EquityAllOfIdentifiers": EquityAllOfIdentifiers,
+    "EquityCurveByPricesData": EquityCurveByPricesData,
+    "EquityCurveByPricesDataAllOf": EquityCurveByPricesDataAllOf,
+    "EquityModelOptions": EquityModelOptions,
+    "EquityModelOptionsAllOf": EquityModelOptionsAllOf,
     "EquityOption": EquityOption,
     "EquityOptionAllOf": EquityOptionAllOf,
     "EquitySwap": EquitySwap,
