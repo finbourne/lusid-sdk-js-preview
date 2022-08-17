@@ -559,7 +559,6 @@ export * from './targetTaxLotRequest';
 export * from './termDeposit';
 export * from './termDepositAllOf';
 export * from './touch';
-export * from './tradeTicket';
 export * from './transaction';
 export * from './transactionConfigurationData';
 export * from './transactionConfigurationDataRequest';
@@ -586,8 +585,6 @@ export * from './transitionEvent';
 export * from './transitionEventAllOf';
 export * from './translateInstrumentDefinitionsRequest';
 export * from './translateInstrumentDefinitionsResponse';
-export * from './translateTradeTicketRequest';
-export * from './translateTradeTicketsResponse';
 export * from './typedResourceId';
 export * from './unitSchema';
 export * from './unmatchedHoldingMethod';
@@ -1228,7 +1225,6 @@ import { TargetTaxLotRequest } from './targetTaxLotRequest';
 import { TermDeposit } from './termDeposit';
 import { TermDepositAllOf } from './termDepositAllOf';
 import { Touch } from './touch';
-import { TradeTicket } from './tradeTicket';
 import { Transaction } from './transaction';
 import { TransactionConfigurationData } from './transactionConfigurationData';
 import { TransactionConfigurationDataRequest } from './transactionConfigurationDataRequest';
@@ -1255,8 +1251,6 @@ import { TransitionEvent } from './transitionEvent';
 import { TransitionEventAllOf } from './transitionEventAllOf';
 import { TranslateInstrumentDefinitionsRequest } from './translateInstrumentDefinitionsRequest';
 import { TranslateInstrumentDefinitionsResponse } from './translateInstrumentDefinitionsResponse';
-import { TranslateTradeTicketRequest } from './translateTradeTicketRequest';
-import { TranslateTradeTicketsResponse } from './translateTradeTicketsResponse';
 import { TypedResourceId } from './typedResourceId';
 import { UnitSchema } from './unitSchema';
 import { UnmatchedHoldingMethod } from './unmatchedHoldingMethod';
@@ -2131,7 +2125,6 @@ let typeMap: {[index: string]: any} = {
     "TermDeposit": TermDeposit,
     "TermDepositAllOf": TermDepositAllOf,
     "Touch": Touch,
-    "TradeTicket": TradeTicket,
     "Transaction": Transaction,
     "TransactionConfigurationData": TransactionConfigurationData,
     "TransactionConfigurationDataRequest": TransactionConfigurationDataRequest,
@@ -2154,8 +2147,6 @@ let typeMap: {[index: string]: any} = {
     "TransitionEventAllOf": TransitionEventAllOf,
     "TranslateInstrumentDefinitionsRequest": TranslateInstrumentDefinitionsRequest,
     "TranslateInstrumentDefinitionsResponse": TranslateInstrumentDefinitionsResponse,
-    "TranslateTradeTicketRequest": TranslateTradeTicketRequest,
-    "TranslateTradeTicketsResponse": TranslateTradeTicketsResponse,
     "TypedResourceId": TypedResourceId,
     "UpdateCalendarRequest": UpdateCalendarRequest,
     "UpdateCutLabelDefinitionRequest": UpdateCutLabelDefinitionRequest,
