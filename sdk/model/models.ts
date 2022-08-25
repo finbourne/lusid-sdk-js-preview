@@ -65,6 +65,9 @@ export * from './cdsIndex';
 export * from './cdsIndexAllOf';
 export * from './cdsProtectionDetailSpecification';
 export * from './change';
+export * from './changeHistory';
+export * from './changeHistoryAction';
+export * from './changeItem';
 export * from './closeEvent';
 export * from './closeEventAllOf';
 export * from './completePortfolio';
@@ -464,6 +467,7 @@ export * from './resourceListOfAllocation';
 export * from './resourceListOfBlock';
 export * from './resourceListOfCalendarDate';
 export * from './resourceListOfChange';
+export * from './resourceListOfChangeHistory';
 export * from './resourceListOfComplianceBreachedOrderInfo';
 export * from './resourceListOfComplianceRule';
 export * from './resourceListOfComplianceRuleResult';
@@ -731,6 +735,9 @@ import { CdsIndex } from './cdsIndex';
 import { CdsIndexAllOf } from './cdsIndexAllOf';
 import { CdsProtectionDetailSpecification } from './cdsProtectionDetailSpecification';
 import { Change } from './change';
+import { ChangeHistory } from './changeHistory';
+import { ChangeHistoryAction } from './changeHistoryAction';
+import { ChangeItem } from './changeItem';
 import { CloseEvent } from './closeEvent';
 import { CloseEventAllOf } from './closeEventAllOf';
 import { CompletePortfolio } from './completePortfolio';
@@ -1130,6 +1137,7 @@ import { ResourceListOfAllocation } from './resourceListOfAllocation';
 import { ResourceListOfBlock } from './resourceListOfBlock';
 import { ResourceListOfCalendarDate } from './resourceListOfCalendarDate';
 import { ResourceListOfChange } from './resourceListOfChange';
+import { ResourceListOfChangeHistory } from './resourceListOfChangeHistory';
 import { ResourceListOfComplianceBreachedOrderInfo } from './resourceListOfComplianceBreachedOrderInfo';
 import { ResourceListOfComplianceRule } from './resourceListOfComplianceRule';
 import { ResourceListOfComplianceRuleResult } from './resourceListOfComplianceRuleResult';
@@ -1357,6 +1365,8 @@ let enumsMap: {[index: string]: any} = {
         "CashPerpetualAllOf.InstrumentTypeEnum": CashPerpetualAllOf.InstrumentTypeEnum,
         "CdsIndex.InstrumentTypeEnum": CdsIndex.InstrumentTypeEnum,
         "CdsIndexAllOf.InstrumentTypeEnum": CdsIndexAllOf.InstrumentTypeEnum,
+        "ChangeHistory.ActionEnum": ChangeHistory.ActionEnum,
+        "ChangeHistoryAction": ChangeHistoryAction,
         "CloseEvent.InstrumentEventTypeEnum": CloseEvent.InstrumentEventTypeEnum,
         "CloseEventAllOf.InstrumentEventTypeEnum": CloseEventAllOf.InstrumentEventTypeEnum,
         "CompletePortfolio.TypeEnum": CompletePortfolio.TypeEnum,
@@ -1664,6 +1674,8 @@ let typeMap: {[index: string]: any} = {
     "CdsIndexAllOf": CdsIndexAllOf,
     "CdsProtectionDetailSpecification": CdsProtectionDetailSpecification,
     "Change": Change,
+    "ChangeHistory": ChangeHistory,
+    "ChangeItem": ChangeItem,
     "CloseEvent": CloseEvent,
     "CloseEventAllOf": CloseEventAllOf,
     "CompletePortfolio": CompletePortfolio,
@@ -2036,6 +2048,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfBlock": ResourceListOfBlock,
     "ResourceListOfCalendarDate": ResourceListOfCalendarDate,
     "ResourceListOfChange": ResourceListOfChange,
+    "ResourceListOfChangeHistory": ResourceListOfChangeHistory,
     "ResourceListOfComplianceBreachedOrderInfo": ResourceListOfComplianceBreachedOrderInfo,
     "ResourceListOfComplianceRule": ResourceListOfComplianceRule,
     "ResourceListOfComplianceRuleResult": ResourceListOfComplianceRuleResult,
