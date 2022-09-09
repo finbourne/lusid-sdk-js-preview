@@ -424,6 +424,7 @@ export * from './propertyValue';
 export * from './queryBucketedCashFlowsRequest';
 export * from './queryCashFlowsRequest';
 export * from './queryInstrumentEventsRequest';
+export * from './queryTradeTicketsRequest';
 export * from './quote';
 export * from './quoteAccessMetadataRule';
 export * from './quoteAccessMetadataRuleId';
@@ -512,6 +513,7 @@ export * from './resourceListOfRelation';
 export * from './resourceListOfRelationship';
 export * from './resourceListOfScopeDefinition';
 export * from './resourceListOfString';
+export * from './resourceListOfTradeTicket';
 export * from './resourceListOfTransaction';
 export * from './resourceListOfValueType';
 export * from './responseMetaData';
@@ -1097,6 +1099,7 @@ import { PropertyValue } from './propertyValue';
 import { QueryBucketedCashFlowsRequest } from './queryBucketedCashFlowsRequest';
 import { QueryCashFlowsRequest } from './queryCashFlowsRequest';
 import { QueryInstrumentEventsRequest } from './queryInstrumentEventsRequest';
+import { QueryTradeTicketsRequest } from './queryTradeTicketsRequest';
 import { Quote } from './quote';
 import { QuoteAccessMetadataRule } from './quoteAccessMetadataRule';
 import { QuoteAccessMetadataRuleId } from './quoteAccessMetadataRuleId';
@@ -1185,6 +1188,7 @@ import { ResourceListOfRelation } from './resourceListOfRelation';
 import { ResourceListOfRelationship } from './resourceListOfRelationship';
 import { ResourceListOfScopeDefinition } from './resourceListOfScopeDefinition';
 import { ResourceListOfString } from './resourceListOfString';
+import { ResourceListOfTradeTicket } from './resourceListOfTradeTicket';
 import { ResourceListOfTransaction } from './resourceListOfTransaction';
 import { ResourceListOfValueType } from './resourceListOfValueType';
 import { ResponseMetaData } from './responseMetaData';
@@ -2015,6 +2019,7 @@ let typeMap: {[index: string]: any} = {
     "QueryBucketedCashFlowsRequest": QueryBucketedCashFlowsRequest,
     "QueryCashFlowsRequest": QueryCashFlowsRequest,
     "QueryInstrumentEventsRequest": QueryInstrumentEventsRequest,
+    "QueryTradeTicketsRequest": QueryTradeTicketsRequest,
     "Quote": Quote,
     "QuoteAccessMetadataRule": QuoteAccessMetadataRule,
     "QuoteAccessMetadataRuleId": QuoteAccessMetadataRuleId,
@@ -2099,6 +2104,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfRelationship": ResourceListOfRelationship,
     "ResourceListOfScopeDefinition": ResourceListOfScopeDefinition,
     "ResourceListOfString": ResourceListOfString,
+    "ResourceListOfTradeTicket": ResourceListOfTradeTicket,
     "ResourceListOfTransaction": ResourceListOfTransaction,
     "ResourceListOfValueType": ResourceListOfValueType,
     "ResponseMetaData": ResponseMetaData,
