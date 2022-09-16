@@ -388,6 +388,7 @@ export * from './pagedResourceListOfCutLabelDefinition';
 export * from './pagedResourceListOfDataTypeSummary';
 export * from './pagedResourceListOfExecution';
 export * from './pagedResourceListOfInstrument';
+export * from './pagedResourceListOfInstrumentEventHolder';
 export * from './pagedResourceListOfLegalEntity';
 export * from './pagedResourceListOfOrder';
 export * from './pagedResourceListOfOrderGraphBlock';
@@ -1092,6 +1093,7 @@ import { PagedResourceListOfCutLabelDefinition } from './pagedResourceListOfCutL
 import { PagedResourceListOfDataTypeSummary } from './pagedResourceListOfDataTypeSummary';
 import { PagedResourceListOfExecution } from './pagedResourceListOfExecution';
 import { PagedResourceListOfInstrument } from './pagedResourceListOfInstrument';
+import { PagedResourceListOfInstrumentEventHolder } from './pagedResourceListOfInstrumentEventHolder';
 import { PagedResourceListOfLegalEntity } from './pagedResourceListOfLegalEntity';
 import { PagedResourceListOfOrder } from './pagedResourceListOfOrder';
 import { PagedResourceListOfOrderGraphBlock } from './pagedResourceListOfOrderGraphBlock';
@@ -2074,6 +2076,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfDataTypeSummary": PagedResourceListOfDataTypeSummary,
     "PagedResourceListOfExecution": PagedResourceListOfExecution,
     "PagedResourceListOfInstrument": PagedResourceListOfInstrument,
+    "PagedResourceListOfInstrumentEventHolder": PagedResourceListOfInstrumentEventHolder,
     "PagedResourceListOfLegalEntity": PagedResourceListOfLegalEntity,
     "PagedResourceListOfOrder": PagedResourceListOfOrder,
     "PagedResourceListOfOrderGraphBlock": PagedResourceListOfOrderGraphBlock,

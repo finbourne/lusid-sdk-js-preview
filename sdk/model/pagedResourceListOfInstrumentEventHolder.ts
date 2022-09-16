@@ -11,93 +11,65 @@
  */
 
 import { RequestFile } from './models';
-import { PerpetualProperty } from './perpetualProperty';
-import { TransactionPropertyMappingRequest } from './transactionPropertyMappingRequest';
+import { InstrumentEventHolder } from './instrumentEventHolder';
+import { Link } from './link';
 
-export class TransactionConfigurationMovementDataRequest {
+/**
+* A paginated list of resource that can be returned from a request.
+*/
+export class PagedResourceListOfInstrumentEventHolder {
     /**
-    * . The available values are: Settlement, Traded, StockMovement, FutureCash, Commitment, Receivable, CashSettlement, CashForward, CashCommitment, CashReceivable, Accrual, CashAccrual, ForwardFx, CashFxForward, UnsettledCashTypes, Carry, CarryAsPnl, VariationMargin
+    * The next page of results.
     */
-    'movementTypes': TransactionConfigurationMovementDataRequest.MovementTypesEnum;
+    'nextPage'?: string | null;
     /**
-    * The movement side
+    * The previous page of results.
     */
-    'side': string;
+    'previousPage'?: string | null;
     /**
-    * The movement direction
+    * The resources to list.
     */
-    'direction': number;
+    'values': Array<InstrumentEventHolder>;
     /**
-    * The properties associated with the underlying Movement.
+    * The URI of the resource list.
     */
-    'properties'?: { [key: string]: PerpetualProperty; } | null;
+    'href'?: string | null;
     /**
-    * This allows you to map a transaction property to a property on the underlying holding.
+    * Collection of links.
     */
-    'mappings'?: Array<TransactionPropertyMappingRequest> | null;
-    /**
-    * The movement name (optional)
-    */
-    'name'?: string | null;
+    'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "movementTypes",
-            "baseName": "movementTypes",
-            "type": "TransactionConfigurationMovementDataRequest.MovementTypesEnum"
-        },
-        {
-            "name": "side",
-            "baseName": "side",
+            "name": "nextPage",
+            "baseName": "nextPage",
             "type": "string"
         },
         {
-            "name": "direction",
-            "baseName": "direction",
-            "type": "number"
-        },
-        {
-            "name": "properties",
-            "baseName": "properties",
-            "type": "{ [key: string]: PerpetualProperty; }"
-        },
-        {
-            "name": "mappings",
-            "baseName": "mappings",
-            "type": "Array<TransactionPropertyMappingRequest>"
-        },
-        {
-            "name": "name",
-            "baseName": "name",
+            "name": "previousPage",
+            "baseName": "previousPage",
             "type": "string"
+        },
+        {
+            "name": "values",
+            "baseName": "values",
+            "type": "Array<InstrumentEventHolder>"
+        },
+        {
+            "name": "href",
+            "baseName": "href",
+            "type": "string"
+        },
+        {
+            "name": "links",
+            "baseName": "links",
+            "type": "Array<Link>"
         }    ];
 
     static getAttributeTypeMap() {
-        return TransactionConfigurationMovementDataRequest.attributeTypeMap;
+        return PagedResourceListOfInstrumentEventHolder.attributeTypeMap;
     }
 }
 
-export namespace TransactionConfigurationMovementDataRequest {
-    export enum MovementTypesEnum {
-        Settlement = <any> 'Settlement',
-        Traded = <any> 'Traded',
-        StockMovement = <any> 'StockMovement',
-        FutureCash = <any> 'FutureCash',
-        Commitment = <any> 'Commitment',
-        Receivable = <any> 'Receivable',
-        CashSettlement = <any> 'CashSettlement',
-        CashForward = <any> 'CashForward',
-        CashCommitment = <any> 'CashCommitment',
-        CashReceivable = <any> 'CashReceivable',
-        Accrual = <any> 'Accrual',
-        CashAccrual = <any> 'CashAccrual',
-        ForwardFx = <any> 'ForwardFx',
-        CashFxForward = <any> 'CashFxForward',
-        UnsettledCashTypes = <any> 'UnsettledCashTypes',
-        Carry = <any> 'Carry',
-        CarryAsPnl = <any> 'CarryAsPnl',
-        VariationMargin = <any> 'VariationMargin'
-    }
-}
