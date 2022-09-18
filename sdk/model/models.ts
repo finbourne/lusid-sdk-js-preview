@@ -318,6 +318,7 @@ export * from './listAggregationResponse';
 export * from './listComplexMarketDataWithMetaDataResponse';
 export * from './lusidInstrument';
 export * from './lusidProblemDetails';
+export * from './lusidTradeTicket';
 export * from './lusidUniqueId';
 export * from './lusidValidationProblemDetails';
 export * from './marketContext';
@@ -429,6 +430,7 @@ export * from './portfolioReconciliationRequest';
 export * from './portfolioResultDataKeyRule';
 export * from './portfolioResultDataKeyRuleAllOf';
 export * from './portfolioSearchResult';
+export * from './portfolioTradeTicket';
 export * from './portfolioType';
 export * from './portfoliosReconciliationRequest';
 export * from './premium';
@@ -530,6 +532,7 @@ export * from './resourceListOfPortfolio';
 export * from './resourceListOfPortfolioCashFlow';
 export * from './resourceListOfPortfolioCashLadder';
 export * from './resourceListOfPortfolioGroup';
+export * from './resourceListOfPortfolioTradeTicket';
 export * from './resourceListOfProcessedCommand';
 export * from './resourceListOfProperty';
 export * from './resourceListOfPropertyDefinition';
@@ -541,7 +544,6 @@ export * from './resourceListOfRelation';
 export * from './resourceListOfRelationship';
 export * from './resourceListOfScopeDefinition';
 export * from './resourceListOfString';
-export * from './resourceListOfTradeTicket';
 export * from './resourceListOfTransaction';
 export * from './resourceListOfValueType';
 export * from './responseMetaData';
@@ -594,6 +596,7 @@ export * from './termDeposit';
 export * from './termDepositAllOf';
 export * from './touch';
 export * from './tradeTicket';
+export * from './tradeTicketType';
 export * from './transaction';
 export * from './transactionConfigurationData';
 export * from './transactionConfigurationDataRequest';
@@ -1023,6 +1026,7 @@ import { ListAggregationResponse } from './listAggregationResponse';
 import { ListComplexMarketDataWithMetaDataResponse } from './listComplexMarketDataWithMetaDataResponse';
 import { LusidInstrument } from './lusidInstrument';
 import { LusidProblemDetails } from './lusidProblemDetails';
+import { LusidTradeTicket } from './lusidTradeTicket';
 import { LusidUniqueId } from './lusidUniqueId';
 import { LusidValidationProblemDetails } from './lusidValidationProblemDetails';
 import { MarketContext } from './marketContext';
@@ -1134,6 +1138,7 @@ import { PortfolioReconciliationRequest } from './portfolioReconciliationRequest
 import { PortfolioResultDataKeyRule } from './portfolioResultDataKeyRule';
 import { PortfolioResultDataKeyRuleAllOf } from './portfolioResultDataKeyRuleAllOf';
 import { PortfolioSearchResult } from './portfolioSearchResult';
+import { PortfolioTradeTicket } from './portfolioTradeTicket';
 import { PortfolioType } from './portfolioType';
 import { PortfoliosReconciliationRequest } from './portfoliosReconciliationRequest';
 import { Premium } from './premium';
@@ -1235,6 +1240,7 @@ import { ResourceListOfPortfolio } from './resourceListOfPortfolio';
 import { ResourceListOfPortfolioCashFlow } from './resourceListOfPortfolioCashFlow';
 import { ResourceListOfPortfolioCashLadder } from './resourceListOfPortfolioCashLadder';
 import { ResourceListOfPortfolioGroup } from './resourceListOfPortfolioGroup';
+import { ResourceListOfPortfolioTradeTicket } from './resourceListOfPortfolioTradeTicket';
 import { ResourceListOfProcessedCommand } from './resourceListOfProcessedCommand';
 import { ResourceListOfProperty } from './resourceListOfProperty';
 import { ResourceListOfPropertyDefinition } from './resourceListOfPropertyDefinition';
@@ -1246,7 +1252,6 @@ import { ResourceListOfRelation } from './resourceListOfRelation';
 import { ResourceListOfRelationship } from './resourceListOfRelationship';
 import { ResourceListOfScopeDefinition } from './resourceListOfScopeDefinition';
 import { ResourceListOfString } from './resourceListOfString';
-import { ResourceListOfTradeTicket } from './resourceListOfTradeTicket';
 import { ResourceListOfTransaction } from './resourceListOfTransaction';
 import { ResourceListOfValueType } from './resourceListOfValueType';
 import { ResponseMetaData } from './responseMetaData';
@@ -1299,6 +1304,7 @@ import { TermDeposit } from './termDeposit';
 import { TermDepositAllOf } from './termDepositAllOf';
 import { Touch } from './touch';
 import { TradeTicket } from './tradeTicket';
+import { TradeTicketType } from './tradeTicketType';
 import { Transaction } from './transaction';
 import { TransactionConfigurationData } from './transactionConfigurationData';
 import { TransactionConfigurationDataRequest } from './transactionConfigurationDataRequest';
@@ -1577,6 +1583,7 @@ let enumsMap: {[index: string]: any} = {
         "IrVolDependency.DependencyTypeEnum": IrVolDependency.DependencyTypeEnum,
         "IrVolDependencyAllOf.DependencyTypeEnum": IrVolDependencyAllOf.DependencyTypeEnum,
         "LusidInstrument.InstrumentTypeEnum": LusidInstrument.InstrumentTypeEnum,
+        "LusidTradeTicket.TradeTicketTypeEnum": LusidTradeTicket.TradeTicketTypeEnum,
         "MarketDataKeyRule.QuoteTypeEnum": MarketDataKeyRule.QuoteTypeEnum,
         "MarketDataSpecificRule.QuoteTypeEnum": MarketDataSpecificRule.QuoteTypeEnum,
         "MarketDataType": MarketDataType,
@@ -1683,6 +1690,8 @@ let enumsMap: {[index: string]: any} = {
         "StringComparisonType": StringComparisonType,
         "TermDeposit.InstrumentTypeEnum": TermDeposit.InstrumentTypeEnum,
         "TermDepositAllOf.InstrumentTypeEnum": TermDepositAllOf.InstrumentTypeEnum,
+        "TradeTicket.TradeTicketTypeEnum": TradeTicket.TradeTicketTypeEnum,
+        "TradeTicketType": TradeTicketType,
         "Transaction.TransactionStatusEnum": Transaction.TransactionStatusEnum,
         "TransactionConfigurationMovementData.MovementTypesEnum": TransactionConfigurationMovementData.MovementTypesEnum,
         "TransactionConfigurationMovementDataRequest.MovementTypesEnum": TransactionConfigurationMovementDataRequest.MovementTypesEnum,
@@ -2014,6 +2023,7 @@ let typeMap: {[index: string]: any} = {
     "ListComplexMarketDataWithMetaDataResponse": ListComplexMarketDataWithMetaDataResponse,
     "LusidInstrument": LusidInstrument,
     "LusidProblemDetails": LusidProblemDetails,
+    "LusidTradeTicket": LusidTradeTicket,
     "LusidUniqueId": LusidUniqueId,
     "LusidValidationProblemDetails": LusidValidationProblemDetails,
     "MarketContext": MarketContext,
@@ -2115,6 +2125,7 @@ let typeMap: {[index: string]: any} = {
     "PortfolioResultDataKeyRule": PortfolioResultDataKeyRule,
     "PortfolioResultDataKeyRuleAllOf": PortfolioResultDataKeyRuleAllOf,
     "PortfolioSearchResult": PortfolioSearchResult,
+    "PortfolioTradeTicket": PortfolioTradeTicket,
     "PortfoliosReconciliationRequest": PortfoliosReconciliationRequest,
     "Premium": Premium,
     "PricingContext": PricingContext,
@@ -2206,6 +2217,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfPortfolioCashFlow": ResourceListOfPortfolioCashFlow,
     "ResourceListOfPortfolioCashLadder": ResourceListOfPortfolioCashLadder,
     "ResourceListOfPortfolioGroup": ResourceListOfPortfolioGroup,
+    "ResourceListOfPortfolioTradeTicket": ResourceListOfPortfolioTradeTicket,
     "ResourceListOfProcessedCommand": ResourceListOfProcessedCommand,
     "ResourceListOfProperty": ResourceListOfProperty,
     "ResourceListOfPropertyDefinition": ResourceListOfPropertyDefinition,
@@ -2217,7 +2229,6 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfRelationship": ResourceListOfRelationship,
     "ResourceListOfScopeDefinition": ResourceListOfScopeDefinition,
     "ResourceListOfString": ResourceListOfString,
-    "ResourceListOfTradeTicket": ResourceListOfTradeTicket,
     "ResourceListOfTransaction": ResourceListOfTransaction,
     "ResourceListOfValueType": ResourceListOfValueType,
     "ResponseMetaData": ResponseMetaData,
