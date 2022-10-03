@@ -241,6 +241,8 @@ export * from './fxForwardsDependency';
 export * from './fxForwardsDependencyAllOf';
 export * from './fxOption';
 export * from './fxOptionAllOf';
+export * from './fxRateSchedule';
+export * from './fxRateScheduleAllOf';
 export * from './fxSwap';
 export * from './fxSwapAllOf';
 export * from './fxVolDependency';
@@ -949,6 +951,8 @@ import { FxForwardsDependency } from './fxForwardsDependency';
 import { FxForwardsDependencyAllOf } from './fxForwardsDependencyAllOf';
 import { FxOption } from './fxOption';
 import { FxOptionAllOf } from './fxOptionAllOf';
+import { FxRateSchedule } from './fxRateSchedule';
+import { FxRateScheduleAllOf } from './fxRateScheduleAllOf';
 import { FxSwap } from './fxSwap';
 import { FxSwapAllOf } from './fxSwapAllOf';
 import { FxVolDependency } from './fxVolDependency';
@@ -1546,6 +1550,8 @@ let enumsMap: {[index: string]: any} = {
         "FxForwardsDependencyAllOf.DependencyTypeEnum": FxForwardsDependencyAllOf.DependencyTypeEnum,
         "FxOption.InstrumentTypeEnum": FxOption.InstrumentTypeEnum,
         "FxOptionAllOf.InstrumentTypeEnum": FxOptionAllOf.InstrumentTypeEnum,
+        "FxRateSchedule.ScheduleTypeEnum": FxRateSchedule.ScheduleTypeEnum,
+        "FxRateScheduleAllOf.ScheduleTypeEnum": FxRateScheduleAllOf.ScheduleTypeEnum,
         "FxSwap.InstrumentTypeEnum": FxSwap.InstrumentTypeEnum,
         "FxSwapAllOf.InstrumentTypeEnum": FxSwapAllOf.InstrumentTypeEnum,
         "FxVolDependency.DependencyTypeEnum": FxVolDependency.DependencyTypeEnum,
@@ -1949,6 +1955,8 @@ let typeMap: {[index: string]: any} = {
     "FxForwardsDependencyAllOf": FxForwardsDependencyAllOf,
     "FxOption": FxOption,
     "FxOptionAllOf": FxOptionAllOf,
+    "FxRateSchedule": FxRateSchedule,
+    "FxRateScheduleAllOf": FxRateScheduleAllOf,
     "FxSwap": FxSwap,
     "FxSwapAllOf": FxSwapAllOf,
     "FxVolDependency": FxVolDependency,
