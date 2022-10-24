@@ -278,6 +278,8 @@ export * from './indexProjectionDependencyAllOf';
 export * from './industryClassifier';
 export * from './inflationLinkedBond';
 export * from './inflationLinkedBondAllOf';
+export * from './inflationSwap';
+export * from './inflationSwapAllOf';
 export * from './inlineValuationRequest';
 export * from './inlineValuationsReconciliationRequest';
 export * from './inputTransition';
@@ -989,6 +991,8 @@ import { IndexProjectionDependencyAllOf } from './indexProjectionDependencyAllOf
 import { IndustryClassifier } from './industryClassifier';
 import { InflationLinkedBond } from './inflationLinkedBond';
 import { InflationLinkedBondAllOf } from './inflationLinkedBondAllOf';
+import { InflationSwap } from './inflationSwap';
+import { InflationSwapAllOf } from './inflationSwapAllOf';
 import { InlineValuationRequest } from './inlineValuationRequest';
 import { InlineValuationsReconciliationRequest } from './inlineValuationsReconciliationRequest';
 import { InputTransition } from './inputTransition';
@@ -1573,6 +1577,8 @@ let enumsMap: {[index: string]: any} = {
         "IndexProjectionDependencyAllOf.DependencyTypeEnum": IndexProjectionDependencyAllOf.DependencyTypeEnum,
         "InflationLinkedBond.InstrumentTypeEnum": InflationLinkedBond.InstrumentTypeEnum,
         "InflationLinkedBondAllOf.InstrumentTypeEnum": InflationLinkedBondAllOf.InstrumentTypeEnum,
+        "InflationSwap.InstrumentTypeEnum": InflationSwap.InstrumentTypeEnum,
+        "InflationSwapAllOf.InstrumentTypeEnum": InflationSwapAllOf.InstrumentTypeEnum,
         "Instrument.StateEnum": Instrument.StateEnum,
         "Instrument.AssetClassEnum": Instrument.AssetClassEnum,
         "InstrumentDeleteModes": InstrumentDeleteModes,
@@ -1995,6 +2001,8 @@ let typeMap: {[index: string]: any} = {
     "IndustryClassifier": IndustryClassifier,
     "InflationLinkedBond": InflationLinkedBond,
     "InflationLinkedBondAllOf": InflationLinkedBondAllOf,
+    "InflationSwap": InflationSwap,
+    "InflationSwapAllOf": InflationSwapAllOf,
     "InlineValuationRequest": InlineValuationRequest,
     "InlineValuationsReconciliationRequest": InlineValuationsReconciliationRequest,
     "InputTransition": InputTransition,
