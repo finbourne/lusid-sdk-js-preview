@@ -20,6 +20,7 @@ export * from './aggregateSpec';
 export * from './aggregatedReturn';
 export * from './aggregatedReturnsRequest';
 export * from './aggregatedReturnsResponse';
+export * from './aggregation';
 export * from './aggregationContext';
 export * from './aggregationMeasureFailureDetail';
 export * from './aggregationOp';
@@ -267,6 +268,7 @@ export * from './holdingAdjustment';
 export * from './holdingContext';
 export * from './holdingsAdjustment';
 export * from './holdingsAdjustmentHeader';
+export * from './iDataRecord';
 export * from './iUnitDefinitionDto';
 export * from './idSelectorDefinition';
 export * from './identifierPartSchema';
@@ -595,6 +597,7 @@ export * from './stream';
 export * from './stringComparisonType';
 export * from './structuredResultData';
 export * from './structuredResultDataId';
+export * from './supportedAnalyticsInternalRequest';
 export * from './targetTaxLot';
 export * from './targetTaxLotRequest';
 export * from './termDeposit';
@@ -733,6 +736,7 @@ import { AggregateSpec } from './aggregateSpec';
 import { AggregatedReturn } from './aggregatedReturn';
 import { AggregatedReturnsRequest } from './aggregatedReturnsRequest';
 import { AggregatedReturnsResponse } from './aggregatedReturnsResponse';
+import { Aggregation } from './aggregation';
 import { AggregationContext } from './aggregationContext';
 import { AggregationMeasureFailureDetail } from './aggregationMeasureFailureDetail';
 import { AggregationOp } from './aggregationOp';
@@ -980,6 +984,7 @@ import { HoldingAdjustment } from './holdingAdjustment';
 import { HoldingContext } from './holdingContext';
 import { HoldingsAdjustment } from './holdingsAdjustment';
 import { HoldingsAdjustmentHeader } from './holdingsAdjustmentHeader';
+import { IDataRecord } from './iDataRecord';
 import { IUnitDefinitionDto } from './iUnitDefinitionDto';
 import { IdSelectorDefinition } from './idSelectorDefinition';
 import { IdentifierPartSchema } from './identifierPartSchema';
@@ -1308,6 +1313,7 @@ import { Stream } from './stream';
 import { StringComparisonType } from './stringComparisonType';
 import { StructuredResultData } from './structuredResultData';
 import { StructuredResultDataId } from './structuredResultDataId';
+import { SupportedAnalyticsInternalRequest } from './supportedAnalyticsInternalRequest';
 import { TargetTaxLot } from './targetTaxLot';
 import { TargetTaxLotRequest } from './targetTaxLotRequest';
 import { TermDeposit } from './termDeposit';
@@ -1752,6 +1758,7 @@ let typeMap: {[index: string]: any} = {
     "AggregatedReturn": AggregatedReturn,
     "AggregatedReturnsRequest": AggregatedReturnsRequest,
     "AggregatedReturnsResponse": AggregatedReturnsResponse,
+    "Aggregation": Aggregation,
     "AggregationContext": AggregationContext,
     "AggregationMeasureFailureDetail": AggregationMeasureFailureDetail,
     "AggregationOptions": AggregationOptions,
@@ -1990,6 +1997,7 @@ let typeMap: {[index: string]: any} = {
     "HoldingContext": HoldingContext,
     "HoldingsAdjustment": HoldingsAdjustment,
     "HoldingsAdjustmentHeader": HoldingsAdjustmentHeader,
+    "IDataRecord": IDataRecord,
     "IUnitDefinitionDto": IUnitDefinitionDto,
     "IdSelectorDefinition": IdSelectorDefinition,
     "IdentifierPartSchema": IdentifierPartSchema,
@@ -2289,6 +2297,7 @@ let typeMap: {[index: string]: any} = {
     "Stream": Stream,
     "StructuredResultData": StructuredResultData,
     "StructuredResultDataId": StructuredResultDataId,
+    "SupportedAnalyticsInternalRequest": SupportedAnalyticsInternalRequest,
     "TargetTaxLot": TargetTaxLot,
     "TargetTaxLotRequest": TargetTaxLotRequest,
     "TermDeposit": TermDeposit,
