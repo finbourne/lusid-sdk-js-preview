@@ -11,72 +11,43 @@
  */
 
 import { RequestFile } from './models';
-import { ReferencePortfolioConstituentRequest } from './referencePortfolioConstituentRequest';
+import { CustomEntityFieldDefinition } from './customEntityFieldDefinition';
 
-export class UpsertReferencePortfolioConstituentsRequest {
+export class UpdateCustomEntityDefinitionRequest {
     /**
-    * The first date from which the weights will apply
+    * A display label for the custom entity type.
     */
-    'effectiveFrom': string;
+    'displayName': string;
     /**
-    * The available values are: Static, Floating, Periodical
+    * A description for the custom entity type.
     */
-    'weightType': UpsertReferencePortfolioConstituentsRequest.WeightTypeEnum;
+    'description': string;
     /**
-    * The available values are: Daily, Weekly, Monthly, Quarterly, Annually
+    * The description of the fields on the custom entity type.
     */
-    'periodType'?: UpsertReferencePortfolioConstituentsRequest.PeriodTypeEnum;
-    'periodCount'?: number | null;
-    /**
-    * Set of constituents (instrument/weight pairings)
-    */
-    'constituents': Array<ReferencePortfolioConstituentRequest>;
+    'fieldSchema': Array<CustomEntityFieldDefinition>;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "effectiveFrom",
-            "baseName": "effectiveFrom",
+            "name": "displayName",
+            "baseName": "displayName",
             "type": "string"
         },
         {
-            "name": "weightType",
-            "baseName": "weightType",
-            "type": "UpsertReferencePortfolioConstituentsRequest.WeightTypeEnum"
+            "name": "description",
+            "baseName": "description",
+            "type": "string"
         },
         {
-            "name": "periodType",
-            "baseName": "periodType",
-            "type": "UpsertReferencePortfolioConstituentsRequest.PeriodTypeEnum"
-        },
-        {
-            "name": "periodCount",
-            "baseName": "periodCount",
-            "type": "number"
-        },
-        {
-            "name": "constituents",
-            "baseName": "constituents",
-            "type": "Array<ReferencePortfolioConstituentRequest>"
+            "name": "fieldSchema",
+            "baseName": "fieldSchema",
+            "type": "Array<CustomEntityFieldDefinition>"
         }    ];
 
     static getAttributeTypeMap() {
-        return UpsertReferencePortfolioConstituentsRequest.attributeTypeMap;
+        return UpdateCustomEntityDefinitionRequest.attributeTypeMap;
     }
 }
 
-export namespace UpsertReferencePortfolioConstituentsRequest {
-    export enum WeightTypeEnum {
-        Static = <any> 'Static',
-        Floating = <any> 'Floating',
-        Periodical = <any> 'Periodical'
-    }
-    export enum PeriodTypeEnum {
-        Daily = <any> 'Daily',
-        Weekly = <any> 'Weekly',
-        Monthly = <any> 'Monthly',
-        Quarterly = <any> 'Quarterly',
-        Annually = <any> 'Annually'
-    }
-}
