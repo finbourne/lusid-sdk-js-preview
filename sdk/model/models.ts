@@ -122,7 +122,6 @@ export * from './createRelationRequest';
 export * from './createRelationshipDefinitionRequest';
 export * from './createRelationshipRequest';
 export * from './createSequenceRequest';
-export * from './createTaxRuleSetRequest';
 export * from './createTransactionPortfolioRequest';
 export * from './createUnitDefinition';
 export * from './creditDefaultSwap';
@@ -131,7 +130,6 @@ export * from './creditRating';
 export * from './creditSpreadCurveData';
 export * from './creditSpreadCurveDataAllOf';
 export * from './creditSupportAnnex';
-export * from './criterionOp';
 export * from './currencyAndAmount';
 export * from './customEntityDefinition';
 export * from './customEntityDefinitionRequest';
@@ -448,7 +446,6 @@ export * from './pricingModel';
 export * from './pricingOptions';
 export * from './processedCommand';
 export * from './property';
-export * from './propertyCriterion';
 export * from './propertyDefinition';
 export * from './propertyDefinitionSearchResult';
 export * from './propertyDefinitionType';
@@ -554,7 +551,6 @@ export * from './resourceListOfRelation';
 export * from './resourceListOfRelationship';
 export * from './resourceListOfScopeDefinition';
 export * from './resourceListOfString';
-export * from './resourceListOfTaxRuleSet';
 export * from './resourceListOfTransaction';
 export * from './resourceListOfValueType';
 export * from './responseMetaData';
@@ -599,17 +595,11 @@ export * from './stockSplitEvent';
 export * from './stockSplitEventAllOf';
 export * from './stream';
 export * from './stringComparisonType';
-export * from './stringEqualsCriterion';
-export * from './stringEqualsCriterionAllOf';
-export * from './stringInCriterion';
-export * from './stringInCriterionAllOf';
 export * from './structuredResultData';
 export * from './structuredResultDataId';
 export * from './supportedAnalyticsInternalRequest';
 export * from './targetTaxLot';
 export * from './targetTaxLotRequest';
-export * from './taxRule';
-export * from './taxRuleSet';
 export * from './termDeposit';
 export * from './termDepositAllOf';
 export * from './touch';
@@ -655,7 +645,6 @@ export * from './updatePortfolioGroupRequest';
 export * from './updatePortfolioRequest';
 export * from './updatePropertyDefinitionRequest';
 export * from './updateRelationshipDefinitionRequest';
-export * from './updateTaxRuleSetRequest';
 export * from './updateUnitRequest';
 export * from './upsertCdsFlowConventionsRequest';
 export * from './upsertComplexMarketDataRequest';
@@ -851,7 +840,6 @@ import { CreateRelationRequest } from './createRelationRequest';
 import { CreateRelationshipDefinitionRequest } from './createRelationshipDefinitionRequest';
 import { CreateRelationshipRequest } from './createRelationshipRequest';
 import { CreateSequenceRequest } from './createSequenceRequest';
-import { CreateTaxRuleSetRequest } from './createTaxRuleSetRequest';
 import { CreateTransactionPortfolioRequest } from './createTransactionPortfolioRequest';
 import { CreateUnitDefinition } from './createUnitDefinition';
 import { CreditDefaultSwap } from './creditDefaultSwap';
@@ -860,7 +848,6 @@ import { CreditRating } from './creditRating';
 import { CreditSpreadCurveData } from './creditSpreadCurveData';
 import { CreditSpreadCurveDataAllOf } from './creditSpreadCurveDataAllOf';
 import { CreditSupportAnnex } from './creditSupportAnnex';
-import { CriterionOp } from './criterionOp';
 import { CurrencyAndAmount } from './currencyAndAmount';
 import { CustomEntityDefinition } from './customEntityDefinition';
 import { CustomEntityDefinitionRequest } from './customEntityDefinitionRequest';
@@ -1177,7 +1164,6 @@ import { PricingModel } from './pricingModel';
 import { PricingOptions } from './pricingOptions';
 import { ProcessedCommand } from './processedCommand';
 import { Property } from './property';
-import { PropertyCriterion } from './propertyCriterion';
 import { PropertyDefinition } from './propertyDefinition';
 import { PropertyDefinitionSearchResult } from './propertyDefinitionSearchResult';
 import { PropertyDefinitionType } from './propertyDefinitionType';
@@ -1283,7 +1269,6 @@ import { ResourceListOfRelation } from './resourceListOfRelation';
 import { ResourceListOfRelationship } from './resourceListOfRelationship';
 import { ResourceListOfScopeDefinition } from './resourceListOfScopeDefinition';
 import { ResourceListOfString } from './resourceListOfString';
-import { ResourceListOfTaxRuleSet } from './resourceListOfTaxRuleSet';
 import { ResourceListOfTransaction } from './resourceListOfTransaction';
 import { ResourceListOfValueType } from './resourceListOfValueType';
 import { ResponseMetaData } from './responseMetaData';
@@ -1328,17 +1313,11 @@ import { StockSplitEvent } from './stockSplitEvent';
 import { StockSplitEventAllOf } from './stockSplitEventAllOf';
 import { Stream } from './stream';
 import { StringComparisonType } from './stringComparisonType';
-import { StringEqualsCriterion } from './stringEqualsCriterion';
-import { StringEqualsCriterionAllOf } from './stringEqualsCriterionAllOf';
-import { StringInCriterion } from './stringInCriterion';
-import { StringInCriterionAllOf } from './stringInCriterionAllOf';
 import { StructuredResultData } from './structuredResultData';
 import { StructuredResultDataId } from './structuredResultDataId';
 import { SupportedAnalyticsInternalRequest } from './supportedAnalyticsInternalRequest';
 import { TargetTaxLot } from './targetTaxLot';
 import { TargetTaxLotRequest } from './targetTaxLotRequest';
-import { TaxRule } from './taxRule';
-import { TaxRuleSet } from './taxRuleSet';
 import { TermDeposit } from './termDeposit';
 import { TermDepositAllOf } from './termDepositAllOf';
 import { Touch } from './touch';
@@ -1384,7 +1363,6 @@ import { UpdatePortfolioGroupRequest } from './updatePortfolioGroupRequest';
 import { UpdatePortfolioRequest } from './updatePortfolioRequest';
 import { UpdatePropertyDefinitionRequest } from './updatePropertyDefinitionRequest';
 import { UpdateRelationshipDefinitionRequest } from './updateRelationshipDefinitionRequest';
-import { UpdateTaxRuleSetRequest } from './updateTaxRuleSetRequest';
 import { UpdateUnitRequest } from './updateUnitRequest';
 import { UpsertCdsFlowConventionsRequest } from './upsertCdsFlowConventionsRequest';
 import { UpsertComplexMarketDataRequest } from './upsertComplexMarketDataRequest';
@@ -1510,7 +1488,6 @@ let enumsMap: {[index: string]: any} = {
         "CreditDefaultSwapAllOf.InstrumentTypeEnum": CreditDefaultSwapAllOf.InstrumentTypeEnum,
         "CreditSpreadCurveData.MarketDataTypeEnum": CreditSpreadCurveData.MarketDataTypeEnum,
         "CreditSpreadCurveDataAllOf.MarketDataTypeEnum": CreditSpreadCurveDataAllOf.MarketDataTypeEnum,
-        "CriterionOp": CriterionOp,
         "DataType.TypeValueRangeEnum": DataType.TypeValueRangeEnum,
         "DataType.ValueTypeEnum": DataType.ValueTypeEnum,
         "DataType.UnitSchemaEnum": DataType.UnitSchemaEnum,
@@ -1666,7 +1643,6 @@ let enumsMap: {[index: string]: any} = {
         "PortfolioSearchResult.TypeEnum": PortfolioSearchResult.TypeEnum,
         "PortfolioType": PortfolioType,
         "PricingModel": PricingModel,
-        "PropertyCriterion.OpEnum": PropertyCriterion.OpEnum,
         "PropertyDefinition.ValueTypeEnum": PropertyDefinition.ValueTypeEnum,
         "PropertyDefinition.TypeEnum": PropertyDefinition.TypeEnum,
         "PropertyDefinition.UnitSchemaEnum": PropertyDefinition.UnitSchemaEnum,
@@ -1737,10 +1713,6 @@ let enumsMap: {[index: string]: any} = {
         "StockSplitEvent.InstrumentEventTypeEnum": StockSplitEvent.InstrumentEventTypeEnum,
         "StockSplitEventAllOf.InstrumentEventTypeEnum": StockSplitEventAllOf.InstrumentEventTypeEnum,
         "StringComparisonType": StringComparisonType,
-        "StringEqualsCriterion.OpEnum": StringEqualsCriterion.OpEnum,
-        "StringEqualsCriterionAllOf.OpEnum": StringEqualsCriterionAllOf.OpEnum,
-        "StringInCriterion.OpEnum": StringInCriterion.OpEnum,
-        "StringInCriterionAllOf.OpEnum": StringInCriterionAllOf.OpEnum,
         "TermDeposit.InstrumentTypeEnum": TermDeposit.InstrumentTypeEnum,
         "TermDepositAllOf.InstrumentTypeEnum": TermDepositAllOf.InstrumentTypeEnum,
         "TradeTicket.TradeTicketTypeEnum": TradeTicket.TradeTicketTypeEnum,
@@ -1888,7 +1860,6 @@ let typeMap: {[index: string]: any} = {
     "CreateRelationshipDefinitionRequest": CreateRelationshipDefinitionRequest,
     "CreateRelationshipRequest": CreateRelationshipRequest,
     "CreateSequenceRequest": CreateSequenceRequest,
-    "CreateTaxRuleSetRequest": CreateTaxRuleSetRequest,
     "CreateTransactionPortfolioRequest": CreateTransactionPortfolioRequest,
     "CreateUnitDefinition": CreateUnitDefinition,
     "CreditDefaultSwap": CreditDefaultSwap,
@@ -2193,7 +2164,6 @@ let typeMap: {[index: string]: any} = {
     "PricingOptions": PricingOptions,
     "ProcessedCommand": ProcessedCommand,
     "Property": Property,
-    "PropertyCriterion": PropertyCriterion,
     "PropertyDefinition": PropertyDefinition,
     "PropertyDefinitionSearchResult": PropertyDefinitionSearchResult,
     "PropertyFilter": PropertyFilter,
@@ -2291,7 +2261,6 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfRelationship": ResourceListOfRelationship,
     "ResourceListOfScopeDefinition": ResourceListOfScopeDefinition,
     "ResourceListOfString": ResourceListOfString,
-    "ResourceListOfTaxRuleSet": ResourceListOfTaxRuleSet,
     "ResourceListOfTransaction": ResourceListOfTransaction,
     "ResourceListOfValueType": ResourceListOfValueType,
     "ResponseMetaData": ResponseMetaData,
@@ -2330,17 +2299,11 @@ let typeMap: {[index: string]: any} = {
     "StockSplitEvent": StockSplitEvent,
     "StockSplitEventAllOf": StockSplitEventAllOf,
     "Stream": Stream,
-    "StringEqualsCriterion": StringEqualsCriterion,
-    "StringEqualsCriterionAllOf": StringEqualsCriterionAllOf,
-    "StringInCriterion": StringInCriterion,
-    "StringInCriterionAllOf": StringInCriterionAllOf,
     "StructuredResultData": StructuredResultData,
     "StructuredResultDataId": StructuredResultDataId,
     "SupportedAnalyticsInternalRequest": SupportedAnalyticsInternalRequest,
     "TargetTaxLot": TargetTaxLot,
     "TargetTaxLotRequest": TargetTaxLotRequest,
-    "TaxRule": TaxRule,
-    "TaxRuleSet": TaxRuleSet,
     "TermDeposit": TermDeposit,
     "TermDepositAllOf": TermDepositAllOf,
     "Touch": Touch,
@@ -2379,7 +2342,6 @@ let typeMap: {[index: string]: any} = {
     "UpdatePortfolioRequest": UpdatePortfolioRequest,
     "UpdatePropertyDefinitionRequest": UpdatePropertyDefinitionRequest,
     "UpdateRelationshipDefinitionRequest": UpdateRelationshipDefinitionRequest,
-    "UpdateTaxRuleSetRequest": UpdateTaxRuleSetRequest,
     "UpdateUnitRequest": UpdateUnitRequest,
     "UpsertCdsFlowConventionsRequest": UpsertCdsFlowConventionsRequest,
     "UpsertComplexMarketDataRequest": UpsertComplexMarketDataRequest,

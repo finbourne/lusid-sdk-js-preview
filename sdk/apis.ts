@@ -45,7 +45,6 @@ import {SystemConfigurationApi} from './api/systemConfigurationApi';
 import {TransactionConfigurationApi} from './api/transactionConfigurationApi';
 import {TransactionFeesApi} from './api/transactionFeesApi';
 import {TransactionPortfoliosApi} from './api/transactionPortfoliosApi';
-import {TransactionTaxRulesApi} from './api/transactionTaxRulesApi';
 import {TranslationApi} from './api/translationApi';
 
 export class Api {
@@ -96,6 +95,5 @@ export class Api {
     public transactionConfiguration:  TransactionConfigurationApi
     public transactionFees:  TransactionFeesApi
     public transactionPortfolios:  TransactionPortfoliosApi
-    public transactionTaxRules:  TransactionTaxRulesApi
     public translation:  TranslationApi
 }
