@@ -11,81 +11,54 @@
  */
 
 import { RequestFile } from './models';
-import { EconomicDependency } from './economicDependency';
-import { IndexProjectionDependencyAllOf } from './indexProjectionDependencyAllOf';
+import { CustomEntityResponse } from './customEntityResponse';
+import { ErrorDetail } from './errorDetail';
+import { Link } from './link';
 
-/**
-* Represents either a dependency on projections of an index.  E.g. If the interest leg of a swap is a FloatingLeg, then it will declare an IndexProjectionDependency upon pricing.  This is to indicate that pricing the floating leg requires predictions of future fixings of the index.
-*/
-export class IndexProjectionDependency extends EconomicDependency {
+export class UpsertCustomEntitiesResponse {
     /**
-    * The currency of the corresponding IndexConvention. E.g. this would be USD for a convention named USD.6M.LIBOR
+    * The specific Uniform Resource Identifier (URI) for this resource at the requested effective and asAt datetime.
     */
-    'currency': string;
+    'href'?: string | null;
     /**
-    * The tenor of the corresponding IndexConvention. E.g. this would be \"6M\" for a convention named USD.6M.LIBOR
+    * The custom-entities which have been successfully updated or created.
     */
-    'tenor': string;
+    'values'?: { [key: string]: CustomEntityResponse; } | null;
     /**
-    * The IndexName of the corresponding IndexConvention. E.g. this would be \"LIBOR\" for a convention named USD.6M.LIBOR
+    * The custom-entities that could not be updated or created or were left unchanged without error along with a reason for their failure.
     */
-    'indexName': string;
+    'failed'?: { [key: string]: ErrorDetail; } | null;
     /**
-    * The effectiveDate of the entity that this is a dependency for.  Unless there is an obvious date this should be, like for a historic reset, then this is the valuation date.
+    * Collection of links.
     */
-    'date': Date;
-    /**
-    * The available values are: Opaque, Cash, Discounting, EquityCurve, EquityVol, Fx, FxForwards, FxVol, IndexProjection, IrVol, Quote, Vendor
-    */
-    'dependencyType': IndexProjectionDependency.DependencyTypeEnum;
+    'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "currency",
-            "baseName": "currency",
+            "name": "href",
+            "baseName": "href",
             "type": "string"
         },
         {
-            "name": "tenor",
-            "baseName": "tenor",
-            "type": "string"
+            "name": "values",
+            "baseName": "values",
+            "type": "{ [key: string]: CustomEntityResponse; }"
         },
         {
-            "name": "indexName",
-            "baseName": "indexName",
-            "type": "string"
+            "name": "failed",
+            "baseName": "failed",
+            "type": "{ [key: string]: ErrorDetail; }"
         },
         {
-            "name": "date",
-            "baseName": "date",
-            "type": "Date"
-        },
-        {
-            "name": "dependencyType",
-            "baseName": "dependencyType",
-            "type": "IndexProjectionDependency.DependencyTypeEnum"
+            "name": "links",
+            "baseName": "links",
+            "type": "Array<Link>"
         }    ];
 
     static getAttributeTypeMap() {
-        return super.getAttributeTypeMap().concat(IndexProjectionDependency.attributeTypeMap);
+        return UpsertCustomEntitiesResponse.attributeTypeMap;
     }
 }
 
-export namespace IndexProjectionDependency {
-    export enum DependencyTypeEnum {
-        Opaque = <any> 'Opaque',
-        Cash = <any> 'Cash',
-        Discounting = <any> 'Discounting',
-        EquityCurve = <any> 'EquityCurve',
-        EquityVol = <any> 'EquityVol',
-        Fx = <any> 'Fx',
-        FxForwards = <any> 'FxForwards',
-        FxVol = <any> 'FxVol',
-        IndexProjection = <any> 'IndexProjection',
-        IrVol = <any> 'IrVol',
-        Quote = <any> 'Quote',
-        Vendor = <any> 'Vendor'
-    }
-}

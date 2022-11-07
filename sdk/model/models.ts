@@ -652,6 +652,7 @@ export * from './upsertCorporateActionRequest';
 export * from './upsertCorporateActionsResponse';
 export * from './upsertCounterpartyAgreementRequest';
 export * from './upsertCreditSupportAnnexRequest';
+export * from './upsertCustomEntitiesResponse';
 export * from './upsertFlowConventionsRequest';
 export * from './upsertIndexConventionRequest';
 export * from './upsertInstrumentEventRequest';
@@ -1369,6 +1370,7 @@ import { UpsertCorporateActionRequest } from './upsertCorporateActionRequest';
 import { UpsertCorporateActionsResponse } from './upsertCorporateActionsResponse';
 import { UpsertCounterpartyAgreementRequest } from './upsertCounterpartyAgreementRequest';
 import { UpsertCreditSupportAnnexRequest } from './upsertCreditSupportAnnexRequest';
+import { UpsertCustomEntitiesResponse } from './upsertCustomEntitiesResponse';
 import { UpsertFlowConventionsRequest } from './upsertFlowConventionsRequest';
 import { UpsertIndexConventionRequest } from './upsertIndexConventionRequest';
 import { UpsertInstrumentEventRequest } from './upsertInstrumentEventRequest';
@@ -2347,6 +2349,7 @@ let typeMap: {[index: string]: any} = {
     "UpsertCorporateActionsResponse": UpsertCorporateActionsResponse,
     "UpsertCounterpartyAgreementRequest": UpsertCounterpartyAgreementRequest,
     "UpsertCreditSupportAnnexRequest": UpsertCreditSupportAnnexRequest,
+    "UpsertCustomEntitiesResponse": UpsertCustomEntitiesResponse,
     "UpsertFlowConventionsRequest": UpsertFlowConventionsRequest,
     "UpsertIndexConventionRequest": UpsertIndexConventionRequest,
     "UpsertInstrumentEventRequest": UpsertInstrumentEventRequest,
