@@ -131,7 +131,7 @@ export * from './creditRating';
 export * from './creditSpreadCurveData';
 export * from './creditSpreadCurveDataAllOf';
 export * from './creditSupportAnnex';
-export * from './criterionOp';
+export * from './criterionType';
 export * from './currencyAndAmount';
 export * from './customEntityDefinition';
 export * from './customEntityDefinitionRequest';
@@ -339,6 +339,7 @@ export * from './marketDataType';
 export * from './marketObservableType';
 export * from './marketOptions';
 export * from './marketQuote';
+export * from './matchCriterion';
 export * from './metricValue';
 export * from './modelOptions';
 export * from './modelOptionsType';
@@ -448,7 +449,6 @@ export * from './pricingModel';
 export * from './pricingOptions';
 export * from './processedCommand';
 export * from './property';
-export * from './propertyCriterion';
 export * from './propertyDefinition';
 export * from './propertyDefinitionSearchResult';
 export * from './propertyDefinitionType';
@@ -459,6 +459,10 @@ export * from './propertyLifeTime';
 export * from './propertySchema';
 export * from './propertyType';
 export * from './propertyValue';
+export * from './propertyValueEquals';
+export * from './propertyValueEqualsAllOf';
+export * from './propertyValueIn';
+export * from './propertyValueInAllOf';
 export * from './queryBucketedCashFlowsRequest';
 export * from './queryCashFlowsRequest';
 export * from './queryInstrumentEventsRequest';
@@ -599,10 +603,6 @@ export * from './stockSplitEvent';
 export * from './stockSplitEventAllOf';
 export * from './stream';
 export * from './stringComparisonType';
-export * from './stringEqualsCriterion';
-export * from './stringEqualsCriterionAllOf';
-export * from './stringInCriterion';
-export * from './stringInCriterionAllOf';
 export * from './structuredResultData';
 export * from './structuredResultDataId';
 export * from './supportedAnalyticsInternalRequest';
@@ -860,7 +860,7 @@ import { CreditRating } from './creditRating';
 import { CreditSpreadCurveData } from './creditSpreadCurveData';
 import { CreditSpreadCurveDataAllOf } from './creditSpreadCurveDataAllOf';
 import { CreditSupportAnnex } from './creditSupportAnnex';
-import { CriterionOp } from './criterionOp';
+import { CriterionType } from './criterionType';
 import { CurrencyAndAmount } from './currencyAndAmount';
 import { CustomEntityDefinition } from './customEntityDefinition';
 import { CustomEntityDefinitionRequest } from './customEntityDefinitionRequest';
@@ -1068,6 +1068,7 @@ import { MarketDataType } from './marketDataType';
 import { MarketObservableType } from './marketObservableType';
 import { MarketOptions } from './marketOptions';
 import { MarketQuote } from './marketQuote';
+import { MatchCriterion } from './matchCriterion';
 import { MetricValue } from './metricValue';
 import { ModelOptions } from './modelOptions';
 import { ModelOptionsType } from './modelOptionsType';
@@ -1177,7 +1178,6 @@ import { PricingModel } from './pricingModel';
 import { PricingOptions } from './pricingOptions';
 import { ProcessedCommand } from './processedCommand';
 import { Property } from './property';
-import { PropertyCriterion } from './propertyCriterion';
 import { PropertyDefinition } from './propertyDefinition';
 import { PropertyDefinitionSearchResult } from './propertyDefinitionSearchResult';
 import { PropertyDefinitionType } from './propertyDefinitionType';
@@ -1188,6 +1188,10 @@ import { PropertyLifeTime } from './propertyLifeTime';
 import { PropertySchema } from './propertySchema';
 import { PropertyType } from './propertyType';
 import { PropertyValue } from './propertyValue';
+import { PropertyValueEquals } from './propertyValueEquals';
+import { PropertyValueEqualsAllOf } from './propertyValueEqualsAllOf';
+import { PropertyValueIn } from './propertyValueIn';
+import { PropertyValueInAllOf } from './propertyValueInAllOf';
 import { QueryBucketedCashFlowsRequest } from './queryBucketedCashFlowsRequest';
 import { QueryCashFlowsRequest } from './queryCashFlowsRequest';
 import { QueryInstrumentEventsRequest } from './queryInstrumentEventsRequest';
@@ -1328,10 +1332,6 @@ import { StockSplitEvent } from './stockSplitEvent';
 import { StockSplitEventAllOf } from './stockSplitEventAllOf';
 import { Stream } from './stream';
 import { StringComparisonType } from './stringComparisonType';
-import { StringEqualsCriterion } from './stringEqualsCriterion';
-import { StringEqualsCriterionAllOf } from './stringEqualsCriterionAllOf';
-import { StringInCriterion } from './stringInCriterion';
-import { StringInCriterionAllOf } from './stringInCriterionAllOf';
 import { StructuredResultData } from './structuredResultData';
 import { StructuredResultDataId } from './structuredResultDataId';
 import { SupportedAnalyticsInternalRequest } from './supportedAnalyticsInternalRequest';
@@ -1510,7 +1510,7 @@ let enumsMap: {[index: string]: any} = {
         "CreditDefaultSwapAllOf.InstrumentTypeEnum": CreditDefaultSwapAllOf.InstrumentTypeEnum,
         "CreditSpreadCurveData.MarketDataTypeEnum": CreditSpreadCurveData.MarketDataTypeEnum,
         "CreditSpreadCurveDataAllOf.MarketDataTypeEnum": CreditSpreadCurveDataAllOf.MarketDataTypeEnum,
-        "CriterionOp": CriterionOp,
+        "CriterionType": CriterionType,
         "DataType.TypeValueRangeEnum": DataType.TypeValueRangeEnum,
         "DataType.ValueTypeEnum": DataType.ValueTypeEnum,
         "DataType.UnitSchemaEnum": DataType.UnitSchemaEnum,
@@ -1637,6 +1637,7 @@ let enumsMap: {[index: string]: any} = {
         "MarketDataType": MarketDataType,
         "MarketObservableType": MarketObservableType,
         "MarketQuote.QuoteTypeEnum": MarketQuote.QuoteTypeEnum,
+        "MatchCriterion.CriterionTypeEnum": MatchCriterion.CriterionTypeEnum,
         "ModelOptions.ModelOptionsTypeEnum": ModelOptions.ModelOptionsTypeEnum,
         "ModelOptionsType": ModelOptionsType,
         "ModelSelection.LibraryEnum": ModelSelection.LibraryEnum,
@@ -1666,7 +1667,6 @@ let enumsMap: {[index: string]: any} = {
         "PortfolioSearchResult.TypeEnum": PortfolioSearchResult.TypeEnum,
         "PortfolioType": PortfolioType,
         "PricingModel": PricingModel,
-        "PropertyCriterion.OpEnum": PropertyCriterion.OpEnum,
         "PropertyDefinition.ValueTypeEnum": PropertyDefinition.ValueTypeEnum,
         "PropertyDefinition.TypeEnum": PropertyDefinition.TypeEnum,
         "PropertyDefinition.UnitSchemaEnum": PropertyDefinition.UnitSchemaEnum,
@@ -1685,6 +1685,10 @@ let enumsMap: {[index: string]: any} = {
         "PropertyFilter.RightOperandTypeEnum": PropertyFilter.RightOperandTypeEnum,
         "PropertyLifeTime": PropertyLifeTime,
         "PropertyType": PropertyType,
+        "PropertyValueEquals.CriterionTypeEnum": PropertyValueEquals.CriterionTypeEnum,
+        "PropertyValueEqualsAllOf.CriterionTypeEnum": PropertyValueEqualsAllOf.CriterionTypeEnum,
+        "PropertyValueIn.CriterionTypeEnum": PropertyValueIn.CriterionTypeEnum,
+        "PropertyValueInAllOf.CriterionTypeEnum": PropertyValueInAllOf.CriterionTypeEnum,
         "QuoteDependency.DependencyTypeEnum": QuoteDependency.DependencyTypeEnum,
         "QuoteDependencyAllOf.DependencyTypeEnum": QuoteDependencyAllOf.DependencyTypeEnum,
         "QuoteInstrumentIdType": QuoteInstrumentIdType,
@@ -1737,10 +1741,6 @@ let enumsMap: {[index: string]: any} = {
         "StockSplitEvent.InstrumentEventTypeEnum": StockSplitEvent.InstrumentEventTypeEnum,
         "StockSplitEventAllOf.InstrumentEventTypeEnum": StockSplitEventAllOf.InstrumentEventTypeEnum,
         "StringComparisonType": StringComparisonType,
-        "StringEqualsCriterion.OpEnum": StringEqualsCriterion.OpEnum,
-        "StringEqualsCriterionAllOf.OpEnum": StringEqualsCriterionAllOf.OpEnum,
-        "StringInCriterion.OpEnum": StringInCriterion.OpEnum,
-        "StringInCriterionAllOf.OpEnum": StringInCriterionAllOf.OpEnum,
         "TermDeposit.InstrumentTypeEnum": TermDeposit.InstrumentTypeEnum,
         "TermDepositAllOf.InstrumentTypeEnum": TermDepositAllOf.InstrumentTypeEnum,
         "TradeTicket.TradeTicketTypeEnum": TradeTicket.TradeTicketTypeEnum,
@@ -2094,6 +2094,7 @@ let typeMap: {[index: string]: any} = {
     "MarketDataSpecificRule": MarketDataSpecificRule,
     "MarketOptions": MarketOptions,
     "MarketQuote": MarketQuote,
+    "MatchCriterion": MatchCriterion,
     "MetricValue": MetricValue,
     "ModelOptions": ModelOptions,
     "ModelSelection": ModelSelection,
@@ -2193,13 +2194,16 @@ let typeMap: {[index: string]: any} = {
     "PricingOptions": PricingOptions,
     "ProcessedCommand": ProcessedCommand,
     "Property": Property,
-    "PropertyCriterion": PropertyCriterion,
     "PropertyDefinition": PropertyDefinition,
     "PropertyDefinitionSearchResult": PropertyDefinitionSearchResult,
     "PropertyFilter": PropertyFilter,
     "PropertyInterval": PropertyInterval,
     "PropertySchema": PropertySchema,
     "PropertyValue": PropertyValue,
+    "PropertyValueEquals": PropertyValueEquals,
+    "PropertyValueEqualsAllOf": PropertyValueEqualsAllOf,
+    "PropertyValueIn": PropertyValueIn,
+    "PropertyValueInAllOf": PropertyValueInAllOf,
     "QueryBucketedCashFlowsRequest": QueryBucketedCashFlowsRequest,
     "QueryCashFlowsRequest": QueryCashFlowsRequest,
     "QueryInstrumentEventsRequest": QueryInstrumentEventsRequest,
@@ -2330,10 +2334,6 @@ let typeMap: {[index: string]: any} = {
     "StockSplitEvent": StockSplitEvent,
     "StockSplitEventAllOf": StockSplitEventAllOf,
     "Stream": Stream,
-    "StringEqualsCriterion": StringEqualsCriterion,
-    "StringEqualsCriterionAllOf": StringEqualsCriterionAllOf,
-    "StringInCriterion": StringInCriterion,
-    "StringInCriterionAllOf": StringInCriterionAllOf,
     "StructuredResultData": StructuredResultData,
     "StructuredResultDataId": StructuredResultDataId,
     "SupportedAnalyticsInternalRequest": SupportedAnalyticsInternalRequest,

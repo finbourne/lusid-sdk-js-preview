@@ -42,10 +42,10 @@ import {SearchApi} from './api/searchApi';
 import {SequencesApi} from './api/sequencesApi';
 import {StructuredResultDataApi} from './api/structuredResultDataApi';
 import {SystemConfigurationApi} from './api/systemConfigurationApi';
+import {TaxRuleSetsApi} from './api/taxRuleSetsApi';
 import {TransactionConfigurationApi} from './api/transactionConfigurationApi';
 import {TransactionFeesApi} from './api/transactionFeesApi';
 import {TransactionPortfoliosApi} from './api/transactionPortfoliosApi';
-import {TransactionTaxRulesApi} from './api/transactionTaxRulesApi';
 import {TranslationApi} from './api/translationApi';
 
 export class Api {
@@ -93,9 +93,9 @@ export class Api {
     public sequences:  SequencesApi
     public structuredResultData:  StructuredResultDataApi
     public systemConfiguration:  SystemConfigurationApi
+    public taxRuleSets:  TaxRuleSetsApi
     public transactionConfiguration:  TransactionConfigurationApi
     public transactionFees:  TransactionFeesApi
     public transactionPortfolios:  TransactionPortfoliosApi
-    public transactionTaxRules:  TransactionTaxRulesApi
     public translation:  TranslationApi
 }

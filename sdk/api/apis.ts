@@ -86,17 +86,17 @@ export * from './structuredResultDataApi';
 import { StructuredResultDataApi } from './structuredResultDataApi';
 export * from './systemConfigurationApi';
 import { SystemConfigurationApi } from './systemConfigurationApi';
+export * from './taxRuleSetsApi';
+import { TaxRuleSetsApi } from './taxRuleSetsApi';
 export * from './transactionConfigurationApi';
 import { TransactionConfigurationApi } from './transactionConfigurationApi';
 export * from './transactionFeesApi';
 import { TransactionFeesApi } from './transactionFeesApi';
 export * from './transactionPortfoliosApi';
 import { TransactionPortfoliosApi } from './transactionPortfoliosApi';
-export * from './transactionTaxRulesApi';
-import { TransactionTaxRulesApi } from './transactionTaxRulesApi';
 export * from './translationApi';
 import { TranslationApi } from './translationApi';
 
 export { RequestFile } from '../model/models';
 
-export const APIS = [AggregationApi, AllocationsApi, ApplicationMetadataApi, BlocksApi, CalendarsApi, ComplexMarketDataApi, ComplianceApi, ConfigurationRecipeApi, ConventionsApi, CorporateActionSourcesApi, CounterpartiesApi, CustomEntitiesApi, CustomEntityDefinitionsApi, CutLabelDefinitionsApi, DataTypesApi, DerivedTransactionPortfoliosApi, EntitiesApi, ExecutionsApi, InstrumentEventsApi, InstrumentsApi, LegalEntitiesApi, OrderGraphApi, OrderInstructionsApi, OrdersApi, PackagesApi, ParticipationsApi, PersonsApi, PlacementsApi, PortfolioGroupsApi, PortfoliosApi, PropertyDefinitionsApi, QuotesApi, ReconciliationsApi, ReferencePortfolioApi, RelationDefinitionsApi, RelationsApi, RelationshipDefinitionsApi, RelationshipsApi, SchemasApi, ScopesApi, SearchApi, SequencesApi, StructuredResultDataApi, SystemConfigurationApi, TransactionConfigurationApi, TransactionFeesApi, TransactionPortfoliosApi, TransactionTaxRulesApi, TranslationApi];
+export const APIS = [AggregationApi, AllocationsApi, ApplicationMetadataApi, BlocksApi, CalendarsApi, ComplexMarketDataApi, ComplianceApi, ConfigurationRecipeApi, ConventionsApi, CorporateActionSourcesApi, CounterpartiesApi, CustomEntitiesApi, CustomEntityDefinitionsApi, CutLabelDefinitionsApi, DataTypesApi, DerivedTransactionPortfoliosApi, EntitiesApi, ExecutionsApi, InstrumentEventsApi, InstrumentsApi, LegalEntitiesApi, OrderGraphApi, OrderInstructionsApi, OrdersApi, PackagesApi, ParticipationsApi, PersonsApi, PlacementsApi, PortfolioGroupsApi, PortfoliosApi, PropertyDefinitionsApi, QuotesApi, ReconciliationsApi, ReferencePortfolioApi, RelationDefinitionsApi, RelationsApi, RelationshipDefinitionsApi, RelationshipsApi, SchemasApi, ScopesApi, SearchApi, SequencesApi, StructuredResultDataApi, SystemConfigurationApi, TaxRuleSetsApi, TransactionConfigurationApi, TransactionFeesApi, TransactionPortfoliosApi, TranslationApi];
