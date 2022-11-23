@@ -11,48 +11,74 @@
  */
 
 import { RequestFile } from './models';
-import { AccessMetadataValue } from './accessMetadataValue';
+import { EconomicDependency } from './economicDependency';
+import { Link } from './link';
 
-export class AccessMetadataOperation {
-    'value': Array<AccessMetadataValue>;
-    'path': string;
+/**
+* Instrument capabilities containing useful information about the instrument and the model. This includes  - features corresponding to the instrument i.e. Optionality:American, Other:InflationLinked  - supported addresses (if model provided) i.e. Valuation/Pv, Valuation/DirtyPriceKey, Valuation/Accrued  - economic dependencies (if model provided) i.e. Cash:USD, Fx:GBP.USD, Rates:GBP.GBPOIS
+*/
+export class InstrumentCapabilities {
     /**
-    * The available values are: add
+    * The Lusid insturment id for the instrument e.g. \'LUID_00003D4X\'.
     */
-    'op': AccessMetadataOperation.OpEnum;
-    'from'?: string | null;
+    'instrumentId'?: string | null;
+    /**
+    * The pricing model e.g. \'Discounting\'.
+    */
+    'model'?: string | null;
+    /**
+    * Features of the instrument describing its optionality, payoff type and more e.g. \'Other:Callable\', \'Other:Delivery\', \'Optionality:European\'
+    */
+    'features'?: Array<string> | null;
+    /**
+    * Queryable addresses supported by the model, e.g. \'Valuation/Pv\', \'Valuation/Accrued\'.
+    */
+    'supportedAddresses'?: Array<string> | null;
+    /**
+    * Economic dependencies for the model, e.g. \'Fx:GBP.USD\', \'Cash:GBP\', \'Rates:GBP.GBPOIS\'.
+    */
+    'economicDependencies'?: Array<EconomicDependency> | null;
+    /**
+    * Collection of links.
+    */
+    'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "value",
-            "baseName": "value",
-            "type": "Array<AccessMetadataValue>"
-        },
-        {
-            "name": "path",
-            "baseName": "path",
+            "name": "instrumentId",
+            "baseName": "instrumentId",
             "type": "string"
         },
         {
-            "name": "op",
-            "baseName": "op",
-            "type": "AccessMetadataOperation.OpEnum"
+            "name": "model",
+            "baseName": "model",
+            "type": "string"
         },
         {
-            "name": "from",
-            "baseName": "from",
-            "type": "string"
+            "name": "features",
+            "baseName": "features",
+            "type": "Array<string>"
+        },
+        {
+            "name": "supportedAddresses",
+            "baseName": "supportedAddresses",
+            "type": "Array<string>"
+        },
+        {
+            "name": "economicDependencies",
+            "baseName": "economicDependencies",
+            "type": "Array<EconomicDependency>"
+        },
+        {
+            "name": "links",
+            "baseName": "links",
+            "type": "Array<Link>"
         }    ];
 
     static getAttributeTypeMap() {
-        return AccessMetadataOperation.attributeTypeMap;
+        return InstrumentCapabilities.attributeTypeMap;
     }
 }
 
-export namespace AccessMetadataOperation {
-    export enum OpEnum {
-        Add = <any> 'add'
-    }
-}
