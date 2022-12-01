@@ -31,6 +31,8 @@ export * from './aggregationType';
 export * from './allocation';
 export * from './allocationRequest';
 export * from './allocationSetRequest';
+export * from './amortisationEvent';
+export * from './amortisationEventAllOf';
 export * from './annulQuotesResponse';
 export * from './annulSingleStructuredDataResponse';
 export * from './annulStructuredDataResponse';
@@ -58,6 +60,8 @@ export * from './cashDependency';
 export * from './cashDependencyAllOf';
 export * from './cashDividendEvent';
 export * from './cashDividendEventAllOf';
+export * from './cashFlowEvent';
+export * from './cashFlowEventAllOf';
 export * from './cashFlowLineage';
 export * from './cashFlowValue';
 export * from './cashFlowValueAllOf';
@@ -104,8 +108,6 @@ export * from './corporateActionTransitionRequest';
 export * from './counterpartyAgreement';
 export * from './counterpartyRiskInformation';
 export * from './counterpartySignatory';
-export * from './couponEvent';
-export * from './couponEventAllOf';
 export * from './createCalendarRequest';
 export * from './createCorporateActionSourceRequest';
 export * from './createCutLabelDefinitionRequest';
@@ -197,6 +199,8 @@ export * from './exchangeTradedOptionContractDetails';
 export * from './execution';
 export * from './executionRequest';
 export * from './executionSetRequest';
+export * from './exerciseEvent';
+export * from './exerciseEventAllOf';
 export * from './exoticInstrument';
 export * from './exoticInstrumentAllOf';
 export * from './expandedGroup';
@@ -287,6 +291,8 @@ export * from './inflationLinkedBond';
 export * from './inflationLinkedBondAllOf';
 export * from './inflationSwap';
 export * from './inflationSwapAllOf';
+export * from './informationalEvent';
+export * from './informationalEventAllOf';
 export * from './inlineValuationRequest';
 export * from './inlineValuationsReconciliationRequest';
 export * from './inputTransition';
@@ -314,8 +320,6 @@ export * from './interestRateSwap';
 export * from './interestRateSwapAllOf';
 export * from './interestRateSwaption';
 export * from './interestRateSwaptionAllOf';
-export * from './internalEvent';
-export * from './internalEventAllOf';
 export * from './irVolCubeData';
 export * from './irVolCubeDataAllOf';
 export * from './irVolDependency';
@@ -507,6 +511,8 @@ export * from './relationship';
 export * from './relationshipDefinition';
 export * from './repo';
 export * from './repoAllOf';
+export * from './resetEvent';
+export * from './resetEventAllOf';
 export * from './resourceId';
 export * from './resourceListOfAccessControlledResource';
 export * from './resourceListOfAccessMetadataValueOf';
@@ -764,6 +770,8 @@ import { AggregationType } from './aggregationType';
 import { Allocation } from './allocation';
 import { AllocationRequest } from './allocationRequest';
 import { AllocationSetRequest } from './allocationSetRequest';
+import { AmortisationEvent } from './amortisationEvent';
+import { AmortisationEventAllOf } from './amortisationEventAllOf';
 import { AnnulQuotesResponse } from './annulQuotesResponse';
 import { AnnulSingleStructuredDataResponse } from './annulSingleStructuredDataResponse';
 import { AnnulStructuredDataResponse } from './annulStructuredDataResponse';
@@ -791,6 +799,8 @@ import { CashDependency } from './cashDependency';
 import { CashDependencyAllOf } from './cashDependencyAllOf';
 import { CashDividendEvent } from './cashDividendEvent';
 import { CashDividendEventAllOf } from './cashDividendEventAllOf';
+import { CashFlowEvent } from './cashFlowEvent';
+import { CashFlowEventAllOf } from './cashFlowEventAllOf';
 import { CashFlowLineage } from './cashFlowLineage';
 import { CashFlowValue } from './cashFlowValue';
 import { CashFlowValueAllOf } from './cashFlowValueAllOf';
@@ -837,8 +847,6 @@ import { CorporateActionTransitionRequest } from './corporateActionTransitionReq
 import { CounterpartyAgreement } from './counterpartyAgreement';
 import { CounterpartyRiskInformation } from './counterpartyRiskInformation';
 import { CounterpartySignatory } from './counterpartySignatory';
-import { CouponEvent } from './couponEvent';
-import { CouponEventAllOf } from './couponEventAllOf';
 import { CreateCalendarRequest } from './createCalendarRequest';
 import { CreateCorporateActionSourceRequest } from './createCorporateActionSourceRequest';
 import { CreateCutLabelDefinitionRequest } from './createCutLabelDefinitionRequest';
@@ -930,6 +938,8 @@ import { ExchangeTradedOptionContractDetails } from './exchangeTradedOptionContr
 import { Execution } from './execution';
 import { ExecutionRequest } from './executionRequest';
 import { ExecutionSetRequest } from './executionSetRequest';
+import { ExerciseEvent } from './exerciseEvent';
+import { ExerciseEventAllOf } from './exerciseEventAllOf';
 import { ExoticInstrument } from './exoticInstrument';
 import { ExoticInstrumentAllOf } from './exoticInstrumentAllOf';
 import { ExpandedGroup } from './expandedGroup';
@@ -1020,6 +1030,8 @@ import { InflationLinkedBond } from './inflationLinkedBond';
 import { InflationLinkedBondAllOf } from './inflationLinkedBondAllOf';
 import { InflationSwap } from './inflationSwap';
 import { InflationSwapAllOf } from './inflationSwapAllOf';
+import { InformationalEvent } from './informationalEvent';
+import { InformationalEventAllOf } from './informationalEventAllOf';
 import { InlineValuationRequest } from './inlineValuationRequest';
 import { InlineValuationsReconciliationRequest } from './inlineValuationsReconciliationRequest';
 import { InputTransition } from './inputTransition';
@@ -1047,8 +1059,6 @@ import { InterestRateSwap } from './interestRateSwap';
 import { InterestRateSwapAllOf } from './interestRateSwapAllOf';
 import { InterestRateSwaption } from './interestRateSwaption';
 import { InterestRateSwaptionAllOf } from './interestRateSwaptionAllOf';
-import { InternalEvent } from './internalEvent';
-import { InternalEventAllOf } from './internalEventAllOf';
 import { IrVolCubeData } from './irVolCubeData';
 import { IrVolCubeDataAllOf } from './irVolCubeDataAllOf';
 import { IrVolDependency } from './irVolDependency';
@@ -1240,6 +1250,8 @@ import { Relationship } from './relationship';
 import { RelationshipDefinition } from './relationshipDefinition';
 import { Repo } from './repo';
 import { RepoAllOf } from './repoAllOf';
+import { ResetEvent } from './resetEvent';
+import { ResetEventAllOf } from './resetEventAllOf';
 import { ResourceId } from './resourceId';
 import { ResourceListOfAccessControlledResource } from './resourceListOfAccessControlledResource';
 import { ResourceListOfAccessMetadataValueOf } from './resourceListOfAccessMetadataValueOf';
@@ -1473,6 +1485,8 @@ let enumsMap: {[index: string]: any} = {
         "AggregationOp": AggregationOp,
         "AggregationQuery.TypeEnum": AggregationQuery.TypeEnum,
         "AggregationType": AggregationType,
+        "AmortisationEvent.InstrumentEventTypeEnum": AmortisationEvent.InstrumentEventTypeEnum,
+        "AmortisationEventAllOf.InstrumentEventTypeEnum": AmortisationEventAllOf.InstrumentEventTypeEnum,
         "AssetClass": AssetClass,
         "Basket.InstrumentTypeEnum": Basket.InstrumentTypeEnum,
         "BasketAllOf.InstrumentTypeEnum": BasketAllOf.InstrumentTypeEnum,
@@ -1486,6 +1500,8 @@ let enumsMap: {[index: string]: any} = {
         "CashDependencyAllOf.DependencyTypeEnum": CashDependencyAllOf.DependencyTypeEnum,
         "CashDividendEvent.InstrumentEventTypeEnum": CashDividendEvent.InstrumentEventTypeEnum,
         "CashDividendEventAllOf.InstrumentEventTypeEnum": CashDividendEventAllOf.InstrumentEventTypeEnum,
+        "CashFlowEvent.InstrumentEventTypeEnum": CashFlowEvent.InstrumentEventTypeEnum,
+        "CashFlowEventAllOf.InstrumentEventTypeEnum": CashFlowEventAllOf.InstrumentEventTypeEnum,
         "CashFlowValue.ResultValueTypeEnum": CashFlowValue.ResultValueTypeEnum,
         "CashFlowValueAllOf.ResultValueTypeEnum": CashFlowValueAllOf.ResultValueTypeEnum,
         "CashFlowValueSet.ResultValueTypeEnum": CashFlowValueSet.ResultValueTypeEnum,
@@ -1504,8 +1520,6 @@ let enumsMap: {[index: string]: any} = {
         "ComplexMarketData.MarketDataTypeEnum": ComplexMarketData.MarketDataTypeEnum,
         "ContractForDifference.InstrumentTypeEnum": ContractForDifference.InstrumentTypeEnum,
         "ContractForDifferenceAllOf.InstrumentTypeEnum": ContractForDifferenceAllOf.InstrumentTypeEnum,
-        "CouponEvent.InstrumentEventTypeEnum": CouponEvent.InstrumentEventTypeEnum,
-        "CouponEventAllOf.InstrumentEventTypeEnum": CouponEventAllOf.InstrumentEventTypeEnum,
         "CreateDataTypeRequest.TypeValueRangeEnum": CreateDataTypeRequest.TypeValueRangeEnum,
         "CreateDataTypeRequest.ValueTypeEnum": CreateDataTypeRequest.ValueTypeEnum,
         "CreateDataTypeRequest.UnitSchemaEnum": CreateDataTypeRequest.UnitSchemaEnum,
@@ -1555,6 +1569,8 @@ let enumsMap: {[index: string]: any} = {
         "EquityVolSurfaceDataAllOf.MarketDataTypeEnum": EquityVolSurfaceDataAllOf.MarketDataTypeEnum,
         "ExchangeTradedOption.InstrumentTypeEnum": ExchangeTradedOption.InstrumentTypeEnum,
         "ExchangeTradedOptionAllOf.InstrumentTypeEnum": ExchangeTradedOptionAllOf.InstrumentTypeEnum,
+        "ExerciseEvent.InstrumentEventTypeEnum": ExerciseEvent.InstrumentEventTypeEnum,
+        "ExerciseEventAllOf.InstrumentEventTypeEnum": ExerciseEventAllOf.InstrumentEventTypeEnum,
         "ExoticInstrument.InstrumentTypeEnum": ExoticInstrument.InstrumentTypeEnum,
         "ExoticInstrumentAllOf.InstrumentTypeEnum": ExoticInstrumentAllOf.InstrumentTypeEnum,
         "FieldSchema.TypeEnum": FieldSchema.TypeEnum,
@@ -1620,6 +1636,8 @@ let enumsMap: {[index: string]: any} = {
         "InflationLinkedBondAllOf.InstrumentTypeEnum": InflationLinkedBondAllOf.InstrumentTypeEnum,
         "InflationSwap.InstrumentTypeEnum": InflationSwap.InstrumentTypeEnum,
         "InflationSwapAllOf.InstrumentTypeEnum": InflationSwapAllOf.InstrumentTypeEnum,
+        "InformationalEvent.InstrumentEventTypeEnum": InformationalEvent.InstrumentEventTypeEnum,
+        "InformationalEventAllOf.InstrumentEventTypeEnum": InformationalEventAllOf.InstrumentEventTypeEnum,
         "Instrument.StateEnum": Instrument.StateEnum,
         "Instrument.AssetClassEnum": Instrument.AssetClassEnum,
         "InstrumentDeleteModes": InstrumentDeleteModes,
@@ -1632,8 +1650,6 @@ let enumsMap: {[index: string]: any} = {
         "InterestRateSwapAllOf.InstrumentTypeEnum": InterestRateSwapAllOf.InstrumentTypeEnum,
         "InterestRateSwaption.InstrumentTypeEnum": InterestRateSwaption.InstrumentTypeEnum,
         "InterestRateSwaptionAllOf.InstrumentTypeEnum": InterestRateSwaptionAllOf.InstrumentTypeEnum,
-        "InternalEvent.InstrumentEventTypeEnum": InternalEvent.InstrumentEventTypeEnum,
-        "InternalEventAllOf.InstrumentEventTypeEnum": InternalEventAllOf.InstrumentEventTypeEnum,
         "IrVolCubeData.MarketDataTypeEnum": IrVolCubeData.MarketDataTypeEnum,
         "IrVolCubeDataAllOf.MarketDataTypeEnum": IrVolCubeDataAllOf.MarketDataTypeEnum,
         "IrVolDependency.DependencyTypeEnum": IrVolDependency.DependencyTypeEnum,
@@ -1722,6 +1738,8 @@ let enumsMap: {[index: string]: any} = {
         "ReferencePortfolioWeightType": ReferencePortfolioWeightType,
         "Repo.InstrumentTypeEnum": Repo.InstrumentTypeEnum,
         "RepoAllOf.InstrumentTypeEnum": RepoAllOf.InstrumentTypeEnum,
+        "ResetEvent.InstrumentEventTypeEnum": ResetEvent.InstrumentEventTypeEnum,
+        "ResetEventAllOf.InstrumentEventTypeEnum": ResetEventAllOf.InstrumentEventTypeEnum,
         "ResultDataKeyRule.ResultKeyRuleTypeEnum": ResultDataKeyRule.ResultKeyRuleTypeEnum,
         "ResultDataKeyRuleAllOf.ResultKeyRuleTypeEnum": ResultDataKeyRuleAllOf.ResultKeyRuleTypeEnum,
         "ResultKeyRule.ResultKeyRuleTypeEnum": ResultKeyRule.ResultKeyRuleTypeEnum,
@@ -1807,6 +1825,8 @@ let typeMap: {[index: string]: any} = {
     "Allocation": Allocation,
     "AllocationRequest": AllocationRequest,
     "AllocationSetRequest": AllocationSetRequest,
+    "AmortisationEvent": AmortisationEvent,
+    "AmortisationEventAllOf": AmortisationEventAllOf,
     "AnnulQuotesResponse": AnnulQuotesResponse,
     "AnnulSingleStructuredDataResponse": AnnulSingleStructuredDataResponse,
     "AnnulStructuredDataResponse": AnnulStructuredDataResponse,
@@ -1833,6 +1853,8 @@ let typeMap: {[index: string]: any} = {
     "CashDependencyAllOf": CashDependencyAllOf,
     "CashDividendEvent": CashDividendEvent,
     "CashDividendEventAllOf": CashDividendEventAllOf,
+    "CashFlowEvent": CashFlowEvent,
+    "CashFlowEventAllOf": CashFlowEventAllOf,
     "CashFlowLineage": CashFlowLineage,
     "CashFlowValue": CashFlowValue,
     "CashFlowValueAllOf": CashFlowValueAllOf,
@@ -1878,8 +1900,6 @@ let typeMap: {[index: string]: any} = {
     "CounterpartyAgreement": CounterpartyAgreement,
     "CounterpartyRiskInformation": CounterpartyRiskInformation,
     "CounterpartySignatory": CounterpartySignatory,
-    "CouponEvent": CouponEvent,
-    "CouponEventAllOf": CouponEventAllOf,
     "CreateCalendarRequest": CreateCalendarRequest,
     "CreateCorporateActionSourceRequest": CreateCorporateActionSourceRequest,
     "CreateCutLabelDefinitionRequest": CreateCutLabelDefinitionRequest,
@@ -1965,6 +1985,8 @@ let typeMap: {[index: string]: any} = {
     "Execution": Execution,
     "ExecutionRequest": ExecutionRequest,
     "ExecutionSetRequest": ExecutionSetRequest,
+    "ExerciseEvent": ExerciseEvent,
+    "ExerciseEventAllOf": ExerciseEventAllOf,
     "ExoticInstrument": ExoticInstrument,
     "ExoticInstrumentAllOf": ExoticInstrumentAllOf,
     "ExpandedGroup": ExpandedGroup,
@@ -2055,6 +2077,8 @@ let typeMap: {[index: string]: any} = {
     "InflationLinkedBondAllOf": InflationLinkedBondAllOf,
     "InflationSwap": InflationSwap,
     "InflationSwapAllOf": InflationSwapAllOf,
+    "InformationalEvent": InformationalEvent,
+    "InformationalEventAllOf": InformationalEventAllOf,
     "InlineValuationRequest": InlineValuationRequest,
     "InlineValuationsReconciliationRequest": InlineValuationsReconciliationRequest,
     "InputTransition": InputTransition,
@@ -2079,8 +2103,6 @@ let typeMap: {[index: string]: any} = {
     "InterestRateSwapAllOf": InterestRateSwapAllOf,
     "InterestRateSwaption": InterestRateSwaption,
     "InterestRateSwaptionAllOf": InterestRateSwaptionAllOf,
-    "InternalEvent": InternalEvent,
-    "InternalEventAllOf": InternalEventAllOf,
     "IrVolCubeData": IrVolCubeData,
     "IrVolCubeDataAllOf": IrVolCubeDataAllOf,
     "IrVolDependency": IrVolDependency,
@@ -2252,6 +2274,8 @@ let typeMap: {[index: string]: any} = {
     "RelationshipDefinition": RelationshipDefinition,
     "Repo": Repo,
     "RepoAllOf": RepoAllOf,
+    "ResetEvent": ResetEvent,
+    "ResetEventAllOf": ResetEventAllOf,
     "ResourceId": ResourceId,
     "ResourceListOfAccessControlledResource": ResourceListOfAccessControlledResource,
     "ResourceListOfAccessMetadataValueOf": ResourceListOfAccessMetadataValueOf,
