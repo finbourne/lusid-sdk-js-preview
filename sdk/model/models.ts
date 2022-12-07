@@ -338,6 +338,9 @@ export * from './lusidProblemDetails';
 export * from './lusidTradeTicket';
 export * from './lusidUniqueId';
 export * from './lusidValidationProblemDetails';
+export * from './mappedString';
+export * from './mapping';
+export * from './mappingRule';
 export * from './marketContext';
 export * from './marketContextSuppliers';
 export * from './marketDataKeyRule';
@@ -491,6 +494,7 @@ export * from './reconcileNumericRule';
 export * from './reconcileNumericRuleAllOf';
 export * from './reconcileStringRule';
 export * from './reconcileStringRuleAllOf';
+export * from './reconciledTransaction';
 export * from './reconciliationBreak';
 export * from './reconciliationLeftRightAddressKeyPair';
 export * from './reconciliationLine';
@@ -545,6 +549,7 @@ export * from './resourceListOfInstrumentEventHolder';
 export * from './resourceListOfInstrumentIdTypeDescriptor';
 export * from './resourceListOfLegalEntity';
 export * from './resourceListOfListComplexMarketDataWithMetaDataResponse';
+export * from './resourceListOfMapping';
 export * from './resourceListOfOrder';
 export * from './resourceListOfOrderInstruction';
 export * from './resourceListOfPackage';
@@ -637,6 +642,7 @@ export * from './transactionPropertyMapping';
 export * from './transactionPropertyMappingRequest';
 export * from './transactionQueryMode';
 export * from './transactionQueryParameters';
+export * from './transactionReconciliationRequest';
 export * from './transactionRequest';
 export * from './transactionRoles';
 export * from './transactionSetConfigurationData';
@@ -647,6 +653,7 @@ export * from './transactionTypeAlias';
 export * from './transactionTypeMovement';
 export * from './transactionTypePropertyMapping';
 export * from './transactionTypeRequest';
+export * from './transactionsReconciliationsResponse';
 export * from './transitionEvent';
 export * from './transitionEventAllOf';
 export * from './translateInstrumentDefinitionsRequest';
@@ -1077,6 +1084,9 @@ import { LusidProblemDetails } from './lusidProblemDetails';
 import { LusidTradeTicket } from './lusidTradeTicket';
 import { LusidUniqueId } from './lusidUniqueId';
 import { LusidValidationProblemDetails } from './lusidValidationProblemDetails';
+import { MappedString } from './mappedString';
+import { Mapping } from './mapping';
+import { MappingRule } from './mappingRule';
 import { MarketContext } from './marketContext';
 import { MarketContextSuppliers } from './marketContextSuppliers';
 import { MarketDataKeyRule } from './marketDataKeyRule';
@@ -1230,6 +1240,7 @@ import { ReconcileNumericRule } from './reconcileNumericRule';
 import { ReconcileNumericRuleAllOf } from './reconcileNumericRuleAllOf';
 import { ReconcileStringRule } from './reconcileStringRule';
 import { ReconcileStringRuleAllOf } from './reconcileStringRuleAllOf';
+import { ReconciledTransaction } from './reconciledTransaction';
 import { ReconciliationBreak } from './reconciliationBreak';
 import { ReconciliationLeftRightAddressKeyPair } from './reconciliationLeftRightAddressKeyPair';
 import { ReconciliationLine } from './reconciliationLine';
@@ -1284,6 +1295,7 @@ import { ResourceListOfInstrumentEventHolder } from './resourceListOfInstrumentE
 import { ResourceListOfInstrumentIdTypeDescriptor } from './resourceListOfInstrumentIdTypeDescriptor';
 import { ResourceListOfLegalEntity } from './resourceListOfLegalEntity';
 import { ResourceListOfListComplexMarketDataWithMetaDataResponse } from './resourceListOfListComplexMarketDataWithMetaDataResponse';
+import { ResourceListOfMapping } from './resourceListOfMapping';
 import { ResourceListOfOrder } from './resourceListOfOrder';
 import { ResourceListOfOrderInstruction } from './resourceListOfOrderInstruction';
 import { ResourceListOfPackage } from './resourceListOfPackage';
@@ -1376,6 +1388,7 @@ import { TransactionPropertyMapping } from './transactionPropertyMapping';
 import { TransactionPropertyMappingRequest } from './transactionPropertyMappingRequest';
 import { TransactionQueryMode } from './transactionQueryMode';
 import { TransactionQueryParameters } from './transactionQueryParameters';
+import { TransactionReconciliationRequest } from './transactionReconciliationRequest';
 import { TransactionRequest } from './transactionRequest';
 import { TransactionRoles } from './transactionRoles';
 import { TransactionSetConfigurationData } from './transactionSetConfigurationData';
@@ -1386,6 +1399,7 @@ import { TransactionTypeAlias } from './transactionTypeAlias';
 import { TransactionTypeMovement } from './transactionTypeMovement';
 import { TransactionTypePropertyMapping } from './transactionTypePropertyMapping';
 import { TransactionTypeRequest } from './transactionTypeRequest';
+import { TransactionsReconciliationsResponse } from './transactionsReconciliationsResponse';
 import { TransitionEvent } from './transitionEvent';
 import { TransitionEventAllOf } from './transitionEventAllOf';
 import { TranslateInstrumentDefinitionsRequest } from './translateInstrumentDefinitionsRequest';
@@ -2121,6 +2135,9 @@ let typeMap: {[index: string]: any} = {
     "LusidTradeTicket": LusidTradeTicket,
     "LusidUniqueId": LusidUniqueId,
     "LusidValidationProblemDetails": LusidValidationProblemDetails,
+    "MappedString": MappedString,
+    "Mapping": Mapping,
+    "MappingRule": MappingRule,
     "MarketContext": MarketContext,
     "MarketContextSuppliers": MarketContextSuppliers,
     "MarketDataKeyRule": MarketDataKeyRule,
@@ -2256,6 +2273,7 @@ let typeMap: {[index: string]: any} = {
     "ReconcileNumericRuleAllOf": ReconcileNumericRuleAllOf,
     "ReconcileStringRule": ReconcileStringRule,
     "ReconcileStringRuleAllOf": ReconcileStringRuleAllOf,
+    "ReconciledTransaction": ReconciledTransaction,
     "ReconciliationBreak": ReconciliationBreak,
     "ReconciliationLeftRightAddressKeyPair": ReconciliationLeftRightAddressKeyPair,
     "ReconciliationLine": ReconciliationLine,
@@ -2308,6 +2326,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfInstrumentIdTypeDescriptor": ResourceListOfInstrumentIdTypeDescriptor,
     "ResourceListOfLegalEntity": ResourceListOfLegalEntity,
     "ResourceListOfListComplexMarketDataWithMetaDataResponse": ResourceListOfListComplexMarketDataWithMetaDataResponse,
+    "ResourceListOfMapping": ResourceListOfMapping,
     "ResourceListOfOrder": ResourceListOfOrder,
     "ResourceListOfOrderInstruction": ResourceListOfOrderInstruction,
     "ResourceListOfPackage": ResourceListOfPackage,
@@ -2391,6 +2410,7 @@ let typeMap: {[index: string]: any} = {
     "TransactionPropertyMapping": TransactionPropertyMapping,
     "TransactionPropertyMappingRequest": TransactionPropertyMappingRequest,
     "TransactionQueryParameters": TransactionQueryParameters,
+    "TransactionReconciliationRequest": TransactionReconciliationRequest,
     "TransactionRequest": TransactionRequest,
     "TransactionSetConfigurationData": TransactionSetConfigurationData,
     "TransactionSetConfigurationDataRequest": TransactionSetConfigurationDataRequest,
@@ -2399,6 +2419,7 @@ let typeMap: {[index: string]: any} = {
     "TransactionTypeMovement": TransactionTypeMovement,
     "TransactionTypePropertyMapping": TransactionTypePropertyMapping,
     "TransactionTypeRequest": TransactionTypeRequest,
+    "TransactionsReconciliationsResponse": TransactionsReconciliationsResponse,
     "TransitionEvent": TransitionEvent,
     "TransitionEventAllOf": TransitionEventAllOf,
     "TranslateInstrumentDefinitionsRequest": TranslateInstrumentDefinitionsRequest,
