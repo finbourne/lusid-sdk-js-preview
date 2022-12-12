@@ -8,7 +8,10 @@ export * from './accessControlledAction';
 export * from './accessControlledResource';
 export * from './accessMetadataOperation';
 export * from './accessMetadataValue';
+export * from './account';
+export * from './accountProperties';
 export * from './accountingMethod';
+export * from './accountsUpsertResponse';
 export * from './actionId';
 export * from './actionResultOfPortfolio';
 export * from './addBusinessDaysToDateRequest';
@@ -78,6 +81,9 @@ export * from './change';
 export * from './changeHistory';
 export * from './changeHistoryAction';
 export * from './changeItem';
+export * from './chartOfAccounts';
+export * from './chartOfAccountsProperties';
+export * from './chartOfAccountsRequest';
 export * from './closeEvent';
 export * from './closeEventAllOf';
 export * from './completePortfolio';
@@ -156,9 +162,11 @@ export * from './dateAttributes';
 export * from './dateRange';
 export * from './dateTimeComparisonType';
 export * from './dayOfWeek';
+export * from './deleteAccountsResponse';
 export * from './deleteInstrumentPropertiesResponse';
 export * from './deleteInstrumentResponse';
 export * from './deleteInstrumentsResponse';
+export * from './deleteModes';
 export * from './deleteRelationRequest';
 export * from './deleteRelationshipRequest';
 export * from './deletedEntityResponse';
@@ -405,9 +413,11 @@ export * from './outputTransition';
 export * from './package';
 export * from './packageRequest';
 export * from './packageSetRequest';
+export * from './pagedResourceListOfAccount';
 export * from './pagedResourceListOfAllocation';
 export * from './pagedResourceListOfBlock';
 export * from './pagedResourceListOfCalendar';
+export * from './pagedResourceListOfChartOfAccounts';
 export * from './pagedResourceListOfCorporateActionSource';
 export * from './pagedResourceListOfCustomEntityDefinition';
 export * from './pagedResourceListOfCustomEntityResponse';
@@ -763,7 +773,10 @@ import { AccessControlledAction } from './accessControlledAction';
 import { AccessControlledResource } from './accessControlledResource';
 import { AccessMetadataOperation } from './accessMetadataOperation';
 import { AccessMetadataValue } from './accessMetadataValue';
+import { Account } from './account';
+import { AccountProperties } from './accountProperties';
 import { AccountingMethod } from './accountingMethod';
+import { AccountsUpsertResponse } from './accountsUpsertResponse';
 import { ActionId } from './actionId';
 import { ActionResultOfPortfolio } from './actionResultOfPortfolio';
 import { AddBusinessDaysToDateRequest } from './addBusinessDaysToDateRequest';
@@ -833,6 +846,9 @@ import { Change } from './change';
 import { ChangeHistory } from './changeHistory';
 import { ChangeHistoryAction } from './changeHistoryAction';
 import { ChangeItem } from './changeItem';
+import { ChartOfAccounts } from './chartOfAccounts';
+import { ChartOfAccountsProperties } from './chartOfAccountsProperties';
+import { ChartOfAccountsRequest } from './chartOfAccountsRequest';
 import { CloseEvent } from './closeEvent';
 import { CloseEventAllOf } from './closeEventAllOf';
 import { CompletePortfolio } from './completePortfolio';
@@ -911,9 +927,11 @@ import { DateAttributes } from './dateAttributes';
 import { DateRange } from './dateRange';
 import { DateTimeComparisonType } from './dateTimeComparisonType';
 import { DayOfWeek } from './dayOfWeek';
+import { DeleteAccountsResponse } from './deleteAccountsResponse';
 import { DeleteInstrumentPropertiesResponse } from './deleteInstrumentPropertiesResponse';
 import { DeleteInstrumentResponse } from './deleteInstrumentResponse';
 import { DeleteInstrumentsResponse } from './deleteInstrumentsResponse';
+import { DeleteModes } from './deleteModes';
 import { DeleteRelationRequest } from './deleteRelationRequest';
 import { DeleteRelationshipRequest } from './deleteRelationshipRequest';
 import { DeletedEntityResponse } from './deletedEntityResponse';
@@ -1160,9 +1178,11 @@ import { OutputTransition } from './outputTransition';
 import { Package } from './package';
 import { PackageRequest } from './packageRequest';
 import { PackageSetRequest } from './packageSetRequest';
+import { PagedResourceListOfAccount } from './pagedResourceListOfAccount';
 import { PagedResourceListOfAllocation } from './pagedResourceListOfAllocation';
 import { PagedResourceListOfBlock } from './pagedResourceListOfBlock';
 import { PagedResourceListOfCalendar } from './pagedResourceListOfCalendar';
+import { PagedResourceListOfChartOfAccounts } from './pagedResourceListOfChartOfAccounts';
 import { PagedResourceListOfCorporateActionSource } from './pagedResourceListOfCorporateActionSource';
 import { PagedResourceListOfCustomEntityDefinition } from './pagedResourceListOfCustomEntityDefinition';
 import { PagedResourceListOfCustomEntityResponse } from './pagedResourceListOfCustomEntityResponse';
@@ -1511,6 +1531,7 @@ let primitives = [
 
 let enumsMap: {[index: string]: any} = {
         "AccessMetadataOperation.OpEnum": AccessMetadataOperation.OpEnum,
+        "Account.StatusEnum": Account.StatusEnum,
         "AccountingMethod": AccountingMethod,
         "AddressDefinition.TypeEnum": AddressDefinition.TypeEnum,
         "AggregateSpec.OpEnum": AggregateSpec.OpEnum,
@@ -1574,6 +1595,7 @@ let enumsMap: {[index: string]: any} = {
         "DataTypeValueRange": DataTypeValueRange,
         "DateTimeComparisonType": DateTimeComparisonType,
         "DayOfWeek": DayOfWeek,
+        "DeleteModes": DeleteModes,
         "DiscountFactorCurveData.MarketDataTypeEnum": DiscountFactorCurveData.MarketDataTypeEnum,
         "DiscountFactorCurveDataAllOf.MarketDataTypeEnum": DiscountFactorCurveDataAllOf.MarketDataTypeEnum,
         "DiscountingDependency.DependencyTypeEnum": DiscountingDependency.DependencyTypeEnum,
@@ -1845,6 +1867,9 @@ let typeMap: {[index: string]: any} = {
     "AccessControlledResource": AccessControlledResource,
     "AccessMetadataOperation": AccessMetadataOperation,
     "AccessMetadataValue": AccessMetadataValue,
+    "Account": Account,
+    "AccountProperties": AccountProperties,
+    "AccountsUpsertResponse": AccountsUpsertResponse,
     "ActionId": ActionId,
     "ActionResultOfPortfolio": ActionResultOfPortfolio,
     "AddBusinessDaysToDateRequest": AddBusinessDaysToDateRequest,
@@ -1910,6 +1935,9 @@ let typeMap: {[index: string]: any} = {
     "Change": Change,
     "ChangeHistory": ChangeHistory,
     "ChangeItem": ChangeItem,
+    "ChartOfAccounts": ChartOfAccounts,
+    "ChartOfAccountsProperties": ChartOfAccountsProperties,
+    "ChartOfAccountsRequest": ChartOfAccountsRequest,
     "CloseEvent": CloseEvent,
     "CloseEventAllOf": CloseEventAllOf,
     "CompletePortfolio": CompletePortfolio,
@@ -1984,6 +2012,7 @@ let typeMap: {[index: string]: any} = {
     "DataTypeSummary": DataTypeSummary,
     "DateAttributes": DateAttributes,
     "DateRange": DateRange,
+    "DeleteAccountsResponse": DeleteAccountsResponse,
     "DeleteInstrumentPropertiesResponse": DeleteInstrumentPropertiesResponse,
     "DeleteInstrumentResponse": DeleteInstrumentResponse,
     "DeleteInstrumentsResponse": DeleteInstrumentsResponse,
@@ -2220,9 +2249,11 @@ let typeMap: {[index: string]: any} = {
     "Package": Package,
     "PackageRequest": PackageRequest,
     "PackageSetRequest": PackageSetRequest,
+    "PagedResourceListOfAccount": PagedResourceListOfAccount,
     "PagedResourceListOfAllocation": PagedResourceListOfAllocation,
     "PagedResourceListOfBlock": PagedResourceListOfBlock,
     "PagedResourceListOfCalendar": PagedResourceListOfCalendar,
+    "PagedResourceListOfChartOfAccounts": PagedResourceListOfChartOfAccounts,
     "PagedResourceListOfCorporateActionSource": PagedResourceListOfCorporateActionSource,
     "PagedResourceListOfCustomEntityDefinition": PagedResourceListOfCustomEntityDefinition,
     "PagedResourceListOfCustomEntityResponse": PagedResourceListOfCustomEntityResponse,

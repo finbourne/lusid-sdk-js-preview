@@ -3,6 +3,7 @@ import {AllocationsApi} from './api/allocationsApi';
 import {ApplicationMetadataApi} from './api/applicationMetadataApi';
 import {BlocksApi} from './api/blocksApi';
 import {CalendarsApi} from './api/calendarsApi';
+import {ChartOfAccountsApi} from './api/chartOfAccountsApi';
 import {ComplexMarketDataApi} from './api/complexMarketDataApi';
 import {ComplianceApi} from './api/complianceApi';
 import {ConfigurationRecipeApi} from './api/configurationRecipeApi';
@@ -54,6 +55,7 @@ export class Api {
     public applicationMetadata:  ApplicationMetadataApi
     public blocks:  BlocksApi
     public calendars:  CalendarsApi
+    public chartOfAccounts:  ChartOfAccountsApi
     public complexMarketData:  ComplexMarketDataApi
     public compliance:  ComplianceApi
     public configurationRecipe:  ConfigurationRecipeApi
