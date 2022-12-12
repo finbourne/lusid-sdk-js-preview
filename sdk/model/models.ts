@@ -291,6 +291,8 @@ export * from './inflationLinkedBond';
 export * from './inflationLinkedBondAllOf';
 export * from './inflationSwap';
 export * from './inflationSwapAllOf';
+export * from './informationalErrorEvent';
+export * from './informationalErrorEventAllOf';
 export * from './informationalEvent';
 export * from './informationalEventAllOf';
 export * from './inlineValuationRequest';
@@ -329,6 +331,9 @@ export * from './labelValueSet';
 export * from './legDefinition';
 export * from './legalEntity';
 export * from './levelStep';
+export * from './lifeCycleEventLineage';
+export * from './lifeCycleEventValue';
+export * from './lifeCycleEventValueAllOf';
 export * from './link';
 export * from './listAggregationReconciliation';
 export * from './listAggregationResponse';
@@ -487,6 +492,8 @@ export * from './quoteId';
 export * from './quoteInstrumentIdType';
 export * from './quoteSeriesId';
 export * from './quoteType';
+export * from './rawVendorEvent';
+export * from './rawVendorEventAllOf';
 export * from './realisedGainLoss';
 export * from './reconcileDateTimeRule';
 export * from './reconcileDateTimeRuleAllOf';
@@ -585,6 +592,8 @@ export * from './resultKeyRuleType';
 export * from './resultValue';
 export * from './resultValue0D';
 export * from './resultValue0DAllOf';
+export * from './resultValueDateTimeOffset';
+export * from './resultValueDateTimeOffsetAllOf';
 export * from './resultValueDecimal';
 export * from './resultValueDecimalAllOf';
 export * from './resultValueDictionary';
@@ -1037,6 +1046,8 @@ import { InflationLinkedBond } from './inflationLinkedBond';
 import { InflationLinkedBondAllOf } from './inflationLinkedBondAllOf';
 import { InflationSwap } from './inflationSwap';
 import { InflationSwapAllOf } from './inflationSwapAllOf';
+import { InformationalErrorEvent } from './informationalErrorEvent';
+import { InformationalErrorEventAllOf } from './informationalErrorEventAllOf';
 import { InformationalEvent } from './informationalEvent';
 import { InformationalEventAllOf } from './informationalEventAllOf';
 import { InlineValuationRequest } from './inlineValuationRequest';
@@ -1075,6 +1086,9 @@ import { LabelValueSet } from './labelValueSet';
 import { LegDefinition } from './legDefinition';
 import { LegalEntity } from './legalEntity';
 import { LevelStep } from './levelStep';
+import { LifeCycleEventLineage } from './lifeCycleEventLineage';
+import { LifeCycleEventValue } from './lifeCycleEventValue';
+import { LifeCycleEventValueAllOf } from './lifeCycleEventValueAllOf';
 import { Link } from './link';
 import { ListAggregationReconciliation } from './listAggregationReconciliation';
 import { ListAggregationResponse } from './listAggregationResponse';
@@ -1233,6 +1247,8 @@ import { QuoteId } from './quoteId';
 import { QuoteInstrumentIdType } from './quoteInstrumentIdType';
 import { QuoteSeriesId } from './quoteSeriesId';
 import { QuoteType } from './quoteType';
+import { RawVendorEvent } from './rawVendorEvent';
+import { RawVendorEventAllOf } from './rawVendorEventAllOf';
 import { RealisedGainLoss } from './realisedGainLoss';
 import { ReconcileDateTimeRule } from './reconcileDateTimeRule';
 import { ReconcileDateTimeRuleAllOf } from './reconcileDateTimeRuleAllOf';
@@ -1331,6 +1347,8 @@ import { ResultKeyRuleType } from './resultKeyRuleType';
 import { ResultValue } from './resultValue';
 import { ResultValue0D } from './resultValue0D';
 import { ResultValue0DAllOf } from './resultValue0DAllOf';
+import { ResultValueDateTimeOffset } from './resultValueDateTimeOffset';
+import { ResultValueDateTimeOffsetAllOf } from './resultValueDateTimeOffsetAllOf';
 import { ResultValueDecimal } from './resultValueDecimal';
 import { ResultValueDecimalAllOf } from './resultValueDecimalAllOf';
 import { ResultValueDictionary } from './resultValueDictionary';
@@ -1650,6 +1668,8 @@ let enumsMap: {[index: string]: any} = {
         "InflationLinkedBondAllOf.InstrumentTypeEnum": InflationLinkedBondAllOf.InstrumentTypeEnum,
         "InflationSwap.InstrumentTypeEnum": InflationSwap.InstrumentTypeEnum,
         "InflationSwapAllOf.InstrumentTypeEnum": InflationSwapAllOf.InstrumentTypeEnum,
+        "InformationalErrorEvent.InstrumentEventTypeEnum": InformationalErrorEvent.InstrumentEventTypeEnum,
+        "InformationalErrorEventAllOf.InstrumentEventTypeEnum": InformationalErrorEventAllOf.InstrumentEventTypeEnum,
         "InformationalEvent.InstrumentEventTypeEnum": InformationalEvent.InstrumentEventTypeEnum,
         "InformationalEventAllOf.InstrumentEventTypeEnum": InformationalEventAllOf.InstrumentEventTypeEnum,
         "Instrument.StateEnum": Instrument.StateEnum,
@@ -1668,6 +1688,8 @@ let enumsMap: {[index: string]: any} = {
         "IrVolCubeDataAllOf.MarketDataTypeEnum": IrVolCubeDataAllOf.MarketDataTypeEnum,
         "IrVolDependency.DependencyTypeEnum": IrVolDependency.DependencyTypeEnum,
         "IrVolDependencyAllOf.DependencyTypeEnum": IrVolDependencyAllOf.DependencyTypeEnum,
+        "LifeCycleEventValue.ResultValueTypeEnum": LifeCycleEventValue.ResultValueTypeEnum,
+        "LifeCycleEventValueAllOf.ResultValueTypeEnum": LifeCycleEventValueAllOf.ResultValueTypeEnum,
         "LusidInstrument.InstrumentTypeEnum": LusidInstrument.InstrumentTypeEnum,
         "LusidTradeTicket.TradeTicketTypeEnum": LusidTradeTicket.TradeTicketTypeEnum,
         "MarketDataKeyRule.QuoteTypeEnum": MarketDataKeyRule.QuoteTypeEnum,
@@ -1733,6 +1755,8 @@ let enumsMap: {[index: string]: any} = {
         "QuoteSeriesId.InstrumentIdTypeEnum": QuoteSeriesId.InstrumentIdTypeEnum,
         "QuoteSeriesId.QuoteTypeEnum": QuoteSeriesId.QuoteTypeEnum,
         "QuoteType": QuoteType,
+        "RawVendorEvent.InstrumentEventTypeEnum": RawVendorEvent.InstrumentEventTypeEnum,
+        "RawVendorEventAllOf.InstrumentEventTypeEnum": RawVendorEventAllOf.InstrumentEventTypeEnum,
         "ReconcileDateTimeRule.ComparisonTypeEnum": ReconcileDateTimeRule.ComparisonTypeEnum,
         "ReconcileDateTimeRule.RuleTypeEnum": ReconcileDateTimeRule.RuleTypeEnum,
         "ReconcileDateTimeRuleAllOf.ComparisonTypeEnum": ReconcileDateTimeRuleAllOf.ComparisonTypeEnum,
@@ -1761,6 +1785,8 @@ let enumsMap: {[index: string]: any} = {
         "ResultValue.ResultValueTypeEnum": ResultValue.ResultValueTypeEnum,
         "ResultValue0D.ResultValueTypeEnum": ResultValue0D.ResultValueTypeEnum,
         "ResultValue0DAllOf.ResultValueTypeEnum": ResultValue0DAllOf.ResultValueTypeEnum,
+        "ResultValueDateTimeOffset.ResultValueTypeEnum": ResultValueDateTimeOffset.ResultValueTypeEnum,
+        "ResultValueDateTimeOffsetAllOf.ResultValueTypeEnum": ResultValueDateTimeOffsetAllOf.ResultValueTypeEnum,
         "ResultValueDecimal.ResultValueTypeEnum": ResultValueDecimal.ResultValueTypeEnum,
         "ResultValueDecimalAllOf.ResultValueTypeEnum": ResultValueDecimalAllOf.ResultValueTypeEnum,
         "ResultValueDictionary.ResultValueTypeEnum": ResultValueDictionary.ResultValueTypeEnum,
@@ -2091,6 +2117,8 @@ let typeMap: {[index: string]: any} = {
     "InflationLinkedBondAllOf": InflationLinkedBondAllOf,
     "InflationSwap": InflationSwap,
     "InflationSwapAllOf": InflationSwapAllOf,
+    "InformationalErrorEvent": InformationalErrorEvent,
+    "InformationalErrorEventAllOf": InformationalErrorEventAllOf,
     "InformationalEvent": InformationalEvent,
     "InformationalEventAllOf": InformationalEventAllOf,
     "InlineValuationRequest": InlineValuationRequest,
@@ -2126,6 +2154,9 @@ let typeMap: {[index: string]: any} = {
     "LegDefinition": LegDefinition,
     "LegalEntity": LegalEntity,
     "LevelStep": LevelStep,
+    "LifeCycleEventLineage": LifeCycleEventLineage,
+    "LifeCycleEventValue": LifeCycleEventValue,
+    "LifeCycleEventValueAllOf": LifeCycleEventValueAllOf,
     "Link": Link,
     "ListAggregationReconciliation": ListAggregationReconciliation,
     "ListAggregationResponse": ListAggregationResponse,
@@ -2266,6 +2297,8 @@ let typeMap: {[index: string]: any} = {
     "QuoteDependencyAllOf": QuoteDependencyAllOf,
     "QuoteId": QuoteId,
     "QuoteSeriesId": QuoteSeriesId,
+    "RawVendorEvent": RawVendorEvent,
+    "RawVendorEventAllOf": RawVendorEventAllOf,
     "RealisedGainLoss": RealisedGainLoss,
     "ReconcileDateTimeRule": ReconcileDateTimeRule,
     "ReconcileDateTimeRuleAllOf": ReconcileDateTimeRuleAllOf,
@@ -2361,6 +2394,8 @@ let typeMap: {[index: string]: any} = {
     "ResultValue": ResultValue,
     "ResultValue0D": ResultValue0D,
     "ResultValue0DAllOf": ResultValue0DAllOf,
+    "ResultValueDateTimeOffset": ResultValueDateTimeOffset,
+    "ResultValueDateTimeOffsetAllOf": ResultValueDateTimeOffsetAllOf,
     "ResultValueDecimal": ResultValueDecimal,
     "ResultValueDecimalAllOf": ResultValueDecimalAllOf,
     "ResultValueDictionary": ResultValueDictionary,
