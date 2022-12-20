@@ -679,6 +679,8 @@ export * from './translateInstrumentDefinitionsRequest';
 export * from './translateInstrumentDefinitionsResponse';
 export * from './translateTradeTicketRequest';
 export * from './translateTradeTicketsResponse';
+export * from './triggerEvent';
+export * from './triggerEventAllOf';
 export * from './typedResourceId';
 export * from './unitSchema';
 export * from './unmatchedHoldingMethod';
@@ -1444,6 +1446,8 @@ import { TranslateInstrumentDefinitionsRequest } from './translateInstrumentDefi
 import { TranslateInstrumentDefinitionsResponse } from './translateInstrumentDefinitionsResponse';
 import { TranslateTradeTicketRequest } from './translateTradeTicketRequest';
 import { TranslateTradeTicketsResponse } from './translateTradeTicketsResponse';
+import { TriggerEvent } from './triggerEvent';
+import { TriggerEventAllOf } from './triggerEventAllOf';
 import { TypedResourceId } from './typedResourceId';
 import { UnitSchema } from './unitSchema';
 import { UnmatchedHoldingMethod } from './unmatchedHoldingMethod';
@@ -1846,6 +1850,8 @@ let enumsMap: {[index: string]: any} = {
         "TransactionStatus": TransactionStatus,
         "TransitionEvent.InstrumentEventTypeEnum": TransitionEvent.InstrumentEventTypeEnum,
         "TransitionEventAllOf.InstrumentEventTypeEnum": TransitionEventAllOf.InstrumentEventTypeEnum,
+        "TriggerEvent.InstrumentEventTypeEnum": TriggerEvent.InstrumentEventTypeEnum,
+        "TriggerEventAllOf.InstrumentEventTypeEnum": TriggerEventAllOf.InstrumentEventTypeEnum,
         "UnitSchema": UnitSchema,
         "UnmatchedHoldingMethod": UnmatchedHoldingMethod,
         "UpsertReferencePortfolioConstituentsRequest.WeightTypeEnum": UpsertReferencePortfolioConstituentsRequest.WeightTypeEnum,
@@ -2493,6 +2499,8 @@ let typeMap: {[index: string]: any} = {
     "TranslateInstrumentDefinitionsResponse": TranslateInstrumentDefinitionsResponse,
     "TranslateTradeTicketRequest": TranslateTradeTicketRequest,
     "TranslateTradeTicketsResponse": TranslateTradeTicketsResponse,
+    "TriggerEvent": TriggerEvent,
+    "TriggerEventAllOf": TriggerEventAllOf,
     "TypedResourceId": TypedResourceId,
     "UpdateCalendarRequest": UpdateCalendarRequest,
     "UpdateCustomEntityDefinitionRequest": UpdateCustomEntityDefinitionRequest,
