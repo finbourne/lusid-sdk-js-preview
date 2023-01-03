@@ -45,6 +45,7 @@ export * from './basket';
 export * from './basketAllOf';
 export * from './basketIdentifier';
 export * from './batchAdjustHoldingsResponse';
+export * from './batchUpsertPortfolioTransactionsResponse';
 export * from './block';
 export * from './blockRequest';
 export * from './blockSetRequest';
@@ -812,6 +813,7 @@ import { Basket } from './basket';
 import { BasketAllOf } from './basketAllOf';
 import { BasketIdentifier } from './basketIdentifier';
 import { BatchAdjustHoldingsResponse } from './batchAdjustHoldingsResponse';
+import { BatchUpsertPortfolioTransactionsResponse } from './batchUpsertPortfolioTransactionsResponse';
 import { Block } from './block';
 import { BlockRequest } from './blockRequest';
 import { BlockSetRequest } from './blockSetRequest';
@@ -1907,6 +1909,7 @@ let typeMap: {[index: string]: any} = {
     "BasketAllOf": BasketAllOf,
     "BasketIdentifier": BasketIdentifier,
     "BatchAdjustHoldingsResponse": BatchAdjustHoldingsResponse,
+    "BatchUpsertPortfolioTransactionsResponse": BatchUpsertPortfolioTransactionsResponse,
     "Block": Block,
     "BlockRequest": BlockRequest,
     "BlockSetRequest": BlockSetRequest,
