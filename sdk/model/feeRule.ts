@@ -32,9 +32,6 @@ export class FeeRule {
     'additionalKeys'?: { [key: string]: string; } | null;
     'description'?: string | null;
     'version'?: Version;
-    /**
-    * Collection of links.
-    */
     'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
