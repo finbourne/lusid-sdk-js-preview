@@ -42,9 +42,6 @@ export class SideDefinition {
     * The value, field or property key defining the side\'s notional amount
     */
     'notionalAmount'?: string | null;
-    /**
-    * Collection of links.
-    */
     'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
