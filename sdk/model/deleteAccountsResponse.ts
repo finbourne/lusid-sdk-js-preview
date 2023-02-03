@@ -23,9 +23,6 @@ export class DeleteAccountsResponse {
     * The Accounts which have been soft/hard deleted.
     */
     'accountIds'?: Array<string> | null;
-    /**
-    * Collection of links.
-    */
     'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
