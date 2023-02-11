@@ -31,9 +31,6 @@ export class TaxRule {
     * A set of criteria to be met for this rule to be applied
     */
     'matchCriteria': Array<MatchCriterion>;
-    /**
-    * Collection of links.
-    */
     'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
