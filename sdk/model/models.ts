@@ -704,6 +704,7 @@ export * from './upsertCorporateActionsResponse';
 export * from './upsertCounterpartyAgreementRequest';
 export * from './upsertCreditSupportAnnexRequest';
 export * from './upsertCustomEntitiesResponse';
+export * from './upsertCustomEntityAccessMetadataRequest';
 export * from './upsertFlowConventionsRequest';
 export * from './upsertIndexConventionRequest';
 export * from './upsertInstrumentEventRequest';
@@ -1473,6 +1474,7 @@ import { UpsertCorporateActionsResponse } from './upsertCorporateActionsResponse
 import { UpsertCounterpartyAgreementRequest } from './upsertCounterpartyAgreementRequest';
 import { UpsertCreditSupportAnnexRequest } from './upsertCreditSupportAnnexRequest';
 import { UpsertCustomEntitiesResponse } from './upsertCustomEntitiesResponse';
+import { UpsertCustomEntityAccessMetadataRequest } from './upsertCustomEntityAccessMetadataRequest';
 import { UpsertFlowConventionsRequest } from './upsertFlowConventionsRequest';
 import { UpsertIndexConventionRequest } from './upsertIndexConventionRequest';
 import { UpsertInstrumentEventRequest } from './upsertInstrumentEventRequest';
@@ -2526,6 +2528,7 @@ let typeMap: {[index: string]: any} = {
     "UpsertCounterpartyAgreementRequest": UpsertCounterpartyAgreementRequest,
     "UpsertCreditSupportAnnexRequest": UpsertCreditSupportAnnexRequest,
     "UpsertCustomEntitiesResponse": UpsertCustomEntitiesResponse,
+    "UpsertCustomEntityAccessMetadataRequest": UpsertCustomEntityAccessMetadataRequest,
     "UpsertFlowConventionsRequest": UpsertFlowConventionsRequest,
     "UpsertIndexConventionRequest": UpsertIndexConventionRequest,
     "UpsertInstrumentEventRequest": UpsertInstrumentEventRequest,
