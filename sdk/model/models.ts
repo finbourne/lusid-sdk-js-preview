@@ -604,6 +604,10 @@ export * from './resultKeyRuleType';
 export * from './resultValue';
 export * from './resultValue0D';
 export * from './resultValue0DAllOf';
+export * from './resultValueBool';
+export * from './resultValueBoolAllOf';
+export * from './resultValueCurrency';
+export * from './resultValueCurrencyAllOf';
 export * from './resultValueDateTimeOffset';
 export * from './resultValueDateTimeOffsetAllOf';
 export * from './resultValueDecimal';
@@ -1374,6 +1378,10 @@ import { ResultKeyRuleType } from './resultKeyRuleType';
 import { ResultValue } from './resultValue';
 import { ResultValue0D } from './resultValue0D';
 import { ResultValue0DAllOf } from './resultValue0DAllOf';
+import { ResultValueBool } from './resultValueBool';
+import { ResultValueBoolAllOf } from './resultValueBoolAllOf';
+import { ResultValueCurrency } from './resultValueCurrency';
+import { ResultValueCurrencyAllOf } from './resultValueCurrencyAllOf';
 import { ResultValueDateTimeOffset } from './resultValueDateTimeOffset';
 import { ResultValueDateTimeOffsetAllOf } from './resultValueDateTimeOffsetAllOf';
 import { ResultValueDecimal } from './resultValueDecimal';
@@ -1818,6 +1826,10 @@ let enumsMap: {[index: string]: any} = {
         "ResultValue.ResultValueTypeEnum": ResultValue.ResultValueTypeEnum,
         "ResultValue0D.ResultValueTypeEnum": ResultValue0D.ResultValueTypeEnum,
         "ResultValue0DAllOf.ResultValueTypeEnum": ResultValue0DAllOf.ResultValueTypeEnum,
+        "ResultValueBool.ResultValueTypeEnum": ResultValueBool.ResultValueTypeEnum,
+        "ResultValueBoolAllOf.ResultValueTypeEnum": ResultValueBoolAllOf.ResultValueTypeEnum,
+        "ResultValueCurrency.ResultValueTypeEnum": ResultValueCurrency.ResultValueTypeEnum,
+        "ResultValueCurrencyAllOf.ResultValueTypeEnum": ResultValueCurrencyAllOf.ResultValueTypeEnum,
         "ResultValueDateTimeOffset.ResultValueTypeEnum": ResultValueDateTimeOffset.ResultValueTypeEnum,
         "ResultValueDateTimeOffsetAllOf.ResultValueTypeEnum": ResultValueDateTimeOffsetAllOf.ResultValueTypeEnum,
         "ResultValueDecimal.ResultValueTypeEnum": ResultValueDecimal.ResultValueTypeEnum,
@@ -2440,6 +2452,10 @@ let typeMap: {[index: string]: any} = {
     "ResultValue": ResultValue,
     "ResultValue0D": ResultValue0D,
     "ResultValue0DAllOf": ResultValue0DAllOf,
+    "ResultValueBool": ResultValueBool,
+    "ResultValueBoolAllOf": ResultValueBoolAllOf,
+    "ResultValueCurrency": ResultValueCurrency,
+    "ResultValueCurrencyAllOf": ResultValueCurrencyAllOf,
     "ResultValueDateTimeOffset": ResultValueDateTimeOffset,
     "ResultValueDateTimeOffsetAllOf": ResultValueDateTimeOffsetAllOf,
     "ResultValueDecimal": ResultValueDecimal,
