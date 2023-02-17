@@ -144,6 +144,10 @@ export * from './creditSpreadCurveDataAllOf';
 export * from './creditSupportAnnex';
 export * from './criterionType';
 export * from './currencyAndAmount';
+export * from './custodianAccount';
+export * from './custodianAccountProperties';
+export * from './custodianAccountRequest';
+export * from './custodianAccountsUpsertResponse';
 export * from './customEntityDefinition';
 export * from './customEntityDefinitionRequest';
 export * from './customEntityField';
@@ -164,6 +168,7 @@ export * from './dateRange';
 export * from './dateTimeComparisonType';
 export * from './dayOfWeek';
 export * from './deleteAccountsResponse';
+export * from './deleteCustodianAccountsResponse';
 export * from './deleteInstrumentPropertiesResponse';
 export * from './deleteInstrumentResponse';
 export * from './deleteInstrumentsResponse';
@@ -421,6 +426,7 @@ export * from './pagedResourceListOfBlock';
 export * from './pagedResourceListOfCalendar';
 export * from './pagedResourceListOfChartOfAccounts';
 export * from './pagedResourceListOfCorporateActionSource';
+export * from './pagedResourceListOfCustodianAccount';
 export * from './pagedResourceListOfCustomEntityDefinition';
 export * from './pagedResourceListOfCustomEntityResponse';
 export * from './pagedResourceListOfCutLabelDefinition';
@@ -918,6 +924,10 @@ import { CreditSpreadCurveDataAllOf } from './creditSpreadCurveDataAllOf';
 import { CreditSupportAnnex } from './creditSupportAnnex';
 import { CriterionType } from './criterionType';
 import { CurrencyAndAmount } from './currencyAndAmount';
+import { CustodianAccount } from './custodianAccount';
+import { CustodianAccountProperties } from './custodianAccountProperties';
+import { CustodianAccountRequest } from './custodianAccountRequest';
+import { CustodianAccountsUpsertResponse } from './custodianAccountsUpsertResponse';
 import { CustomEntityDefinition } from './customEntityDefinition';
 import { CustomEntityDefinitionRequest } from './customEntityDefinitionRequest';
 import { CustomEntityField } from './customEntityField';
@@ -938,6 +948,7 @@ import { DateRange } from './dateRange';
 import { DateTimeComparisonType } from './dateTimeComparisonType';
 import { DayOfWeek } from './dayOfWeek';
 import { DeleteAccountsResponse } from './deleteAccountsResponse';
+import { DeleteCustodianAccountsResponse } from './deleteCustodianAccountsResponse';
 import { DeleteInstrumentPropertiesResponse } from './deleteInstrumentPropertiesResponse';
 import { DeleteInstrumentResponse } from './deleteInstrumentResponse';
 import { DeleteInstrumentsResponse } from './deleteInstrumentsResponse';
@@ -1195,6 +1206,7 @@ import { PagedResourceListOfBlock } from './pagedResourceListOfBlock';
 import { PagedResourceListOfCalendar } from './pagedResourceListOfCalendar';
 import { PagedResourceListOfChartOfAccounts } from './pagedResourceListOfChartOfAccounts';
 import { PagedResourceListOfCorporateActionSource } from './pagedResourceListOfCorporateActionSource';
+import { PagedResourceListOfCustodianAccount } from './pagedResourceListOfCustodianAccount';
 import { PagedResourceListOfCustomEntityDefinition } from './pagedResourceListOfCustomEntityDefinition';
 import { PagedResourceListOfCustomEntityResponse } from './pagedResourceListOfCustomEntityResponse';
 import { PagedResourceListOfCutLabelDefinition } from './pagedResourceListOfCutLabelDefinition';
@@ -2022,6 +2034,10 @@ let typeMap: {[index: string]: any} = {
     "CreditSpreadCurveDataAllOf": CreditSpreadCurveDataAllOf,
     "CreditSupportAnnex": CreditSupportAnnex,
     "CurrencyAndAmount": CurrencyAndAmount,
+    "CustodianAccount": CustodianAccount,
+    "CustodianAccountProperties": CustodianAccountProperties,
+    "CustodianAccountRequest": CustodianAccountRequest,
+    "CustodianAccountsUpsertResponse": CustodianAccountsUpsertResponse,
     "CustomEntityDefinition": CustomEntityDefinition,
     "CustomEntityDefinitionRequest": CustomEntityDefinitionRequest,
     "CustomEntityField": CustomEntityField,
@@ -2039,6 +2055,7 @@ let typeMap: {[index: string]: any} = {
     "DateAttributes": DateAttributes,
     "DateRange": DateRange,
     "DeleteAccountsResponse": DeleteAccountsResponse,
+    "DeleteCustodianAccountsResponse": DeleteCustodianAccountsResponse,
     "DeleteInstrumentPropertiesResponse": DeleteInstrumentPropertiesResponse,
     "DeleteInstrumentResponse": DeleteInstrumentResponse,
     "DeleteInstrumentsResponse": DeleteInstrumentsResponse,
@@ -2282,6 +2299,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfCalendar": PagedResourceListOfCalendar,
     "PagedResourceListOfChartOfAccounts": PagedResourceListOfChartOfAccounts,
     "PagedResourceListOfCorporateActionSource": PagedResourceListOfCorporateActionSource,
+    "PagedResourceListOfCustodianAccount": PagedResourceListOfCustodianAccount,
     "PagedResourceListOfCustomEntityDefinition": PagedResourceListOfCustomEntityDefinition,
     "PagedResourceListOfCustomEntityResponse": PagedResourceListOfCustomEntityResponse,
     "PagedResourceListOfCutLabelDefinition": PagedResourceListOfCutLabelDefinition,
