@@ -4,6 +4,9 @@ export * from './a2BBreakdown';
 export * from './a2BCategory';
 export * from './a2BDataRecord';
 export * from './a2BMovementRecord';
+export * from './aborConfiguration';
+export * from './aborConfigurationProperties';
+export * from './aborConfigurationRequest';
 export * from './accessControlledAction';
 export * from './accessControlledResource';
 export * from './accessMetadataOperation';
@@ -420,6 +423,7 @@ export * from './outputTransition';
 export * from './package';
 export * from './packageRequest';
 export * from './packageSetRequest';
+export * from './pagedResourceListOfAborConfiguration';
 export * from './pagedResourceListOfAccount';
 export * from './pagedResourceListOfAllocation';
 export * from './pagedResourceListOfBlock';
@@ -784,6 +788,9 @@ import { A2BBreakdown } from './a2BBreakdown';
 import { A2BCategory } from './a2BCategory';
 import { A2BDataRecord } from './a2BDataRecord';
 import { A2BMovementRecord } from './a2BMovementRecord';
+import { AborConfiguration } from './aborConfiguration';
+import { AborConfigurationProperties } from './aborConfigurationProperties';
+import { AborConfigurationRequest } from './aborConfigurationRequest';
 import { AccessControlledAction } from './accessControlledAction';
 import { AccessControlledResource } from './accessControlledResource';
 import { AccessMetadataOperation } from './accessMetadataOperation';
@@ -1200,6 +1207,7 @@ import { OutputTransition } from './outputTransition';
 import { Package } from './package';
 import { PackageRequest } from './packageRequest';
 import { PackageSetRequest } from './packageSetRequest';
+import { PagedResourceListOfAborConfiguration } from './pagedResourceListOfAborConfiguration';
 import { PagedResourceListOfAccount } from './pagedResourceListOfAccount';
 import { PagedResourceListOfAllocation } from './pagedResourceListOfAllocation';
 import { PagedResourceListOfBlock } from './pagedResourceListOfBlock';
@@ -1900,6 +1908,9 @@ let typeMap: {[index: string]: any} = {
     "A2BCategory": A2BCategory,
     "A2BDataRecord": A2BDataRecord,
     "A2BMovementRecord": A2BMovementRecord,
+    "AborConfiguration": AborConfiguration,
+    "AborConfigurationProperties": AborConfigurationProperties,
+    "AborConfigurationRequest": AborConfigurationRequest,
     "AccessControlledAction": AccessControlledAction,
     "AccessControlledResource": AccessControlledResource,
     "AccessMetadataOperation": AccessMetadataOperation,
@@ -2293,6 +2304,7 @@ let typeMap: {[index: string]: any} = {
     "Package": Package,
     "PackageRequest": PackageRequest,
     "PackageSetRequest": PackageSetRequest,
+    "PagedResourceListOfAborConfiguration": PagedResourceListOfAborConfiguration,
     "PagedResourceListOfAccount": PagedResourceListOfAccount,
     "PagedResourceListOfAllocation": PagedResourceListOfAllocation,
     "PagedResourceListOfBlock": PagedResourceListOfBlock,
