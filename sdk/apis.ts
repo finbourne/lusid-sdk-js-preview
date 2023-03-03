@@ -1,3 +1,4 @@
+import {AborApi} from './api/aborApi';
 import {AborConfigurationApi} from './api/aborConfigurationApi';
 import {AggregationApi} from './api/aggregationApi';
 import {AllocationsApi} from './api/allocationsApi';
@@ -51,6 +52,7 @@ import {TransactionPortfoliosApi} from './api/transactionPortfoliosApi';
 import {TranslationApi} from './api/translationApi';
 
 export class Api {
+    public abor:  AborApi
     public aborConfiguration:  AborConfigurationApi
     public aggregation:  AggregationApi
     public allocations:  AllocationsApi

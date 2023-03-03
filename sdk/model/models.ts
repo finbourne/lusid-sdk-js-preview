@@ -4,9 +4,12 @@ export * from './a2BBreakdown';
 export * from './a2BCategory';
 export * from './a2BDataRecord';
 export * from './a2BMovementRecord';
+export * from './abor';
 export * from './aborConfiguration';
 export * from './aborConfigurationProperties';
 export * from './aborConfigurationRequest';
+export * from './aborProperties';
+export * from './aborRequest';
 export * from './accessControlledAction';
 export * from './accessControlledResource';
 export * from './accessMetadataOperation';
@@ -423,6 +426,7 @@ export * from './outputTransition';
 export * from './package';
 export * from './packageRequest';
 export * from './packageSetRequest';
+export * from './pagedResourceListOfAbor';
 export * from './pagedResourceListOfAborConfiguration';
 export * from './pagedResourceListOfAccount';
 export * from './pagedResourceListOfAllocation';
@@ -788,9 +792,12 @@ import { A2BBreakdown } from './a2BBreakdown';
 import { A2BCategory } from './a2BCategory';
 import { A2BDataRecord } from './a2BDataRecord';
 import { A2BMovementRecord } from './a2BMovementRecord';
+import { Abor } from './abor';
 import { AborConfiguration } from './aborConfiguration';
 import { AborConfigurationProperties } from './aborConfigurationProperties';
 import { AborConfigurationRequest } from './aborConfigurationRequest';
+import { AborProperties } from './aborProperties';
+import { AborRequest } from './aborRequest';
 import { AccessControlledAction } from './accessControlledAction';
 import { AccessControlledResource } from './accessControlledResource';
 import { AccessMetadataOperation } from './accessMetadataOperation';
@@ -1207,6 +1214,7 @@ import { OutputTransition } from './outputTransition';
 import { Package } from './package';
 import { PackageRequest } from './packageRequest';
 import { PackageSetRequest } from './packageSetRequest';
+import { PagedResourceListOfAbor } from './pagedResourceListOfAbor';
 import { PagedResourceListOfAborConfiguration } from './pagedResourceListOfAborConfiguration';
 import { PagedResourceListOfAccount } from './pagedResourceListOfAccount';
 import { PagedResourceListOfAllocation } from './pagedResourceListOfAllocation';
@@ -1908,9 +1916,12 @@ let typeMap: {[index: string]: any} = {
     "A2BCategory": A2BCategory,
     "A2BDataRecord": A2BDataRecord,
     "A2BMovementRecord": A2BMovementRecord,
+    "Abor": Abor,
     "AborConfiguration": AborConfiguration,
     "AborConfigurationProperties": AborConfigurationProperties,
     "AborConfigurationRequest": AborConfigurationRequest,
+    "AborProperties": AborProperties,
+    "AborRequest": AborRequest,
     "AccessControlledAction": AccessControlledAction,
     "AccessControlledResource": AccessControlledResource,
     "AccessMetadataOperation": AccessMetadataOperation,
@@ -2304,6 +2315,7 @@ let typeMap: {[index: string]: any} = {
     "Package": Package,
     "PackageRequest": PackageRequest,
     "PackageSetRequest": PackageSetRequest,
+    "PagedResourceListOfAbor": PagedResourceListOfAbor,
     "PagedResourceListOfAborConfiguration": PagedResourceListOfAborConfiguration,
     "PagedResourceListOfAccount": PagedResourceListOfAccount,
     "PagedResourceListOfAllocation": PagedResourceListOfAllocation,
