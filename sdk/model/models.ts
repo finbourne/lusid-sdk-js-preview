@@ -659,6 +659,8 @@ export * from './stream';
 export * from './stringComparisonType';
 export * from './structuredResultData';
 export * from './structuredResultDataId';
+export * from './subHoldingKeyValueEquals';
+export * from './subHoldingKeyValueEqualsAllOf';
 export * from './supportedAnalyticsInternalRequest';
 export * from './targetTaxLot';
 export * from './targetTaxLotRequest';
@@ -1447,6 +1449,8 @@ import { Stream } from './stream';
 import { StringComparisonType } from './stringComparisonType';
 import { StructuredResultData } from './structuredResultData';
 import { StructuredResultDataId } from './structuredResultDataId';
+import { SubHoldingKeyValueEquals } from './subHoldingKeyValueEquals';
+import { SubHoldingKeyValueEqualsAllOf } from './subHoldingKeyValueEqualsAllOf';
 import { SupportedAnalyticsInternalRequest } from './supportedAnalyticsInternalRequest';
 import { TargetTaxLot } from './targetTaxLot';
 import { TargetTaxLotRequest } from './targetTaxLotRequest';
@@ -1880,6 +1884,8 @@ let enumsMap: {[index: string]: any} = {
         "StockSplitEvent.InstrumentEventTypeEnum": StockSplitEvent.InstrumentEventTypeEnum,
         "StockSplitEventAllOf.InstrumentEventTypeEnum": StockSplitEventAllOf.InstrumentEventTypeEnum,
         "StringComparisonType": StringComparisonType,
+        "SubHoldingKeyValueEquals.CriterionTypeEnum": SubHoldingKeyValueEquals.CriterionTypeEnum,
+        "SubHoldingKeyValueEqualsAllOf.CriterionTypeEnum": SubHoldingKeyValueEqualsAllOf.CriterionTypeEnum,
         "TermDeposit.InstrumentTypeEnum": TermDeposit.InstrumentTypeEnum,
         "TermDepositAllOf.InstrumentTypeEnum": TermDepositAllOf.InstrumentTypeEnum,
         "TradeTicket.TradeTicketTypeEnum": TradeTicket.TradeTicketTypeEnum,
@@ -2530,6 +2536,8 @@ let typeMap: {[index: string]: any} = {
     "Stream": Stream,
     "StructuredResultData": StructuredResultData,
     "StructuredResultDataId": StructuredResultDataId,
+    "SubHoldingKeyValueEquals": SubHoldingKeyValueEquals,
+    "SubHoldingKeyValueEqualsAllOf": SubHoldingKeyValueEqualsAllOf,
     "SupportedAnalyticsInternalRequest": SupportedAnalyticsInternalRequest,
     "TargetTaxLot": TargetTaxLot,
     "TargetTaxLotRequest": TargetTaxLotRequest,
