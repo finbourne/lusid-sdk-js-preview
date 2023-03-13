@@ -28,9 +28,6 @@ export class CustodianAccountsUpsertResponse {
     * The Custodian Accounts which have been upserted.
     */
     'custodianAccounts'?: Array<CustodianAccount> | null;
-    /**
-    * Collection of links.
-    */
     'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
