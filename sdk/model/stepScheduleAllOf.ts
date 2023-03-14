@@ -11,81 +11,63 @@
  */
 
 import { RequestFile } from './models';
-import { EconomicDependency } from './economicDependency';
-import { IndexProjectionDependencyAllOf } from './indexProjectionDependencyAllOf';
+import { LevelStep } from './levelStep';
 
-/**
-* Represents either a dependency on projections of an index.  E.g. If the interest leg of a swap is a FloatingLeg, then it will declare an IndexProjectionDependency upon pricing.  This is to indicate that pricing the floating leg requires predictions of future fixings of the index.
-*/
-export class IndexProjectionDependency extends EconomicDependency {
+export class StepScheduleAllOf {
     /**
-    * The currency of the corresponding IndexConvention. E.g. this would be USD for a convention named USD.6M.LIBOR
+    * The type of shift or adjustment that the quantity represents.    Supported string (enumeration) values are: [Absolute, AbsoluteShift, Percentage, AbsolutePercentage].
     */
-    'currency': string;
+    'levelType': string;
     /**
-    * The tenor of the corresponding IndexConvention. E.g. this would be \"6M\" for a convention named USD.6M.LIBOR
+    * The type of step that this schedule is for.  Supported string (enumeration) values are: [Coupon, Notional, Spread].
     */
-    'tenor': string;
+    'stepScheduleType': string;
     /**
-    * The IndexName of the corresponding IndexConvention. E.g. this would be \"LIBOR\" for a convention named USD.6M.LIBOR
+    * The level steps which are applied.
     */
-    'indexName': string;
+    'steps': Array<LevelStep>;
     /**
-    * The effectiveDate of the entity that this is a dependency for.  Unless there is an obvious date this should be, like for a historic reset, then this is the valuation date.
+    * The available values are: Fixed, Float, Optionality, Step, Exercise, FxRate, Invalid
     */
-    'date': Date;
-    /**
-    * The available values are: Opaque, Cash, Discounting, EquityCurve, EquityVol, Fx, FxForwards, FxVol, IndexProjection, IrVol, Quote, Vendor
-    */
-    'dependencyType': IndexProjectionDependency.DependencyTypeEnum;
+    'scheduleType': StepScheduleAllOf.ScheduleTypeEnum;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "currency",
-            "baseName": "currency",
+            "name": "levelType",
+            "baseName": "levelType",
             "type": "string"
         },
         {
-            "name": "tenor",
-            "baseName": "tenor",
+            "name": "stepScheduleType",
+            "baseName": "stepScheduleType",
             "type": "string"
         },
         {
-            "name": "indexName",
-            "baseName": "indexName",
-            "type": "string"
+            "name": "steps",
+            "baseName": "steps",
+            "type": "Array<LevelStep>"
         },
         {
-            "name": "date",
-            "baseName": "date",
-            "type": "Date"
-        },
-        {
-            "name": "dependencyType",
-            "baseName": "dependencyType",
-            "type": "IndexProjectionDependency.DependencyTypeEnum"
+            "name": "scheduleType",
+            "baseName": "scheduleType",
+            "type": "StepScheduleAllOf.ScheduleTypeEnum"
         }    ];
 
     static getAttributeTypeMap() {
-        return super.getAttributeTypeMap().concat(IndexProjectionDependency.attributeTypeMap);
+        return StepScheduleAllOf.attributeTypeMap;
     }
 }
 
-export namespace IndexProjectionDependency {
-    export enum DependencyTypeEnum {
-        Opaque = <any> 'Opaque',
-        Cash = <any> 'Cash',
-        Discounting = <any> 'Discounting',
-        EquityCurve = <any> 'EquityCurve',
-        EquityVol = <any> 'EquityVol',
-        Fx = <any> 'Fx',
-        FxForwards = <any> 'FxForwards',
-        FxVol = <any> 'FxVol',
-        IndexProjection = <any> 'IndexProjection',
-        IrVol = <any> 'IrVol',
-        Quote = <any> 'Quote',
-        Vendor = <any> 'Vendor'
+export namespace StepScheduleAllOf {
+    export enum ScheduleTypeEnum {
+        Fixed = <any> 'Fixed',
+        Float = <any> 'Float',
+        Optionality = <any> 'Optionality',
+        Step = <any> 'Step',
+        Exercise = <any> 'Exercise',
+        FxRate = <any> 'FxRate',
+        Invalid = <any> 'Invalid'
     }
 }

@@ -655,6 +655,7 @@ export * from './simpleInstrument';
 export * from './simpleInstrumentAllOf';
 export * from './sortOrder';
 export * from './stepSchedule';
+export * from './stepScheduleAllOf';
 export * from './stockSplitEvent';
 export * from './stockSplitEventAllOf';
 export * from './stream';
@@ -1448,6 +1449,7 @@ import { SimpleInstrument } from './simpleInstrument';
 import { SimpleInstrumentAllOf } from './simpleInstrumentAllOf';
 import { SortOrder } from './sortOrder';
 import { StepSchedule } from './stepSchedule';
+import { StepScheduleAllOf } from './stepScheduleAllOf';
 import { StockSplitEvent } from './stockSplitEvent';
 import { StockSplitEventAllOf } from './stockSplitEventAllOf';
 import { Stream } from './stream';
@@ -1887,6 +1889,8 @@ let enumsMap: {[index: string]: any} = {
         "SimpleInstrumentAllOf.AssetClassEnum": SimpleInstrumentAllOf.AssetClassEnum,
         "SimpleInstrumentAllOf.InstrumentTypeEnum": SimpleInstrumentAllOf.InstrumentTypeEnum,
         "SortOrder": SortOrder,
+        "StepSchedule.ScheduleTypeEnum": StepSchedule.ScheduleTypeEnum,
+        "StepScheduleAllOf.ScheduleTypeEnum": StepScheduleAllOf.ScheduleTypeEnum,
         "StockSplitEvent.InstrumentEventTypeEnum": StockSplitEvent.InstrumentEventTypeEnum,
         "StockSplitEventAllOf.InstrumentEventTypeEnum": StockSplitEventAllOf.InstrumentEventTypeEnum,
         "StringComparisonType": StringComparisonType,
@@ -2539,6 +2543,7 @@ let typeMap: {[index: string]: any} = {
     "SimpleInstrument": SimpleInstrument,
     "SimpleInstrumentAllOf": SimpleInstrumentAllOf,
     "StepSchedule": StepSchedule,
+    "StepScheduleAllOf": StepScheduleAllOf,
     "StockSplitEvent": StockSplitEvent,
     "StockSplitEventAllOf": StockSplitEventAllOf,
     "Stream": Stream,
