@@ -11,22 +11,43 @@
  */
 
 import { RequestFile } from './models';
-import { ResourceId } from './resourceId';
+import { ResultValue } from './resultValue';
 
-export class OrderGraphPlacementAllocationDetail {
-    'id': ResourceId;
+/**
+* Class specifying a filtering operation
+*/
+export class AddressKeyFilter {
+    /**
+    * Address for the value in the row
+    */
+    'left'?: string | null;
+    /**
+    * What sort of comparison is the filter preforming
+    */
+    'operator'?: string | null;
+    'right'?: ResultValue;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "id",
-            "baseName": "id",
-            "type": "ResourceId"
+            "name": "left",
+            "baseName": "left",
+            "type": "string"
+        },
+        {
+            "name": "operator",
+            "baseName": "operator",
+            "type": "string"
+        },
+        {
+            "name": "right",
+            "baseName": "right",
+            "type": "ResultValue"
         }    ];
 
     static getAttributeTypeMap() {
-        return OrderGraphPlacementAllocationDetail.attributeTypeMap;
+        return AddressKeyFilter.attributeTypeMap;
     }
 }
 
