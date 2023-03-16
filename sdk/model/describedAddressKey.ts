@@ -13,25 +13,34 @@
 import { RequestFile } from './models';
 
 /**
-* Holding context node.  Contains settings that control how LUSID handles holdings within portfolios.
+* An address key with additional data describing what this key is for.
 */
-export class HoldingContext {
+export class DescribedAddressKey {
     /**
-    * Whether or not to expand the holdings to return the underlying tax-lots. Defaults to True.
+    * Address key of some underlying object e.g. Valuation/PV, Instrument/Features
     */
-    'taxLotLevelHoldings'?: boolean;
+    'addressKey'?: string | null;
+    /**
+    * Description of the address key.
+    */
+    'description'?: string | null;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "taxLotLevelHoldings",
-            "baseName": "taxLotLevelHoldings",
-            "type": "boolean"
+            "name": "addressKey",
+            "baseName": "addressKey",
+            "type": "string"
+        },
+        {
+            "name": "description",
+            "baseName": "description",
+            "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
-        return HoldingContext.attributeTypeMap;
+        return DescribedAddressKey.attributeTypeMap;
     }
 }
 
