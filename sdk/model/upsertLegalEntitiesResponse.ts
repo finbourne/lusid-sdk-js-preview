@@ -11,25 +11,54 @@
  */
 
 import { RequestFile } from './models';
-import { IndexConvention } from './indexConvention';
+import { ErrorDetail } from './errorDetail';
+import { LegalEntity } from './legalEntity';
+import { Link } from './link';
 
-/**
-* Index convention that is to be stored in the convention data store.  Only one of these must be present.
-*/
-export class UpsertIndexConventionRequest {
-    'indexConvention'?: IndexConvention;
+export class UpsertLegalEntitiesResponse {
+    /**
+    * The specific Uniform Resource Identifier (URI) for this resource at the requested effective and asAt datetime.
+    */
+    'href'?: string | null;
+    /**
+    * The legal entities which have been successfully updated or created.
+    */
+    'values'?: { [key: string]: LegalEntity; } | null;
+    /**
+    * The legal entities that could not be updated or created or were left unchanged without error along with a reason for their failure.
+    */
+    'failed'?: { [key: string]: ErrorDetail; } | null;
+    /**
+    * Collection of links.
+    */
+    'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "indexConvention",
-            "baseName": "indexConvention",
-            "type": "IndexConvention"
+            "name": "href",
+            "baseName": "href",
+            "type": "string"
+        },
+        {
+            "name": "values",
+            "baseName": "values",
+            "type": "{ [key: string]: LegalEntity; }"
+        },
+        {
+            "name": "failed",
+            "baseName": "failed",
+            "type": "{ [key: string]: ErrorDetail; }"
+        },
+        {
+            "name": "links",
+            "baseName": "links",
+            "type": "Array<Link>"
         }    ];
 
     static getAttributeTypeMap() {
-        return UpsertIndexConventionRequest.attributeTypeMap;
+        return UpsertLegalEntitiesResponse.attributeTypeMap;
     }
 }
 
