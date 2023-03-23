@@ -73,9 +73,6 @@ export class JELines {
     * Properties to add to the Abor.
     */
     'properties'?: { [key: string]: Property; } | null;
-    /**
-    * Collection of links.
-    */
     'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
