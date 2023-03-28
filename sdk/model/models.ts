@@ -716,7 +716,6 @@ export * from './updateCalendarRequest';
 export * from './updateCustomEntityDefinitionRequest';
 export * from './updateCutLabelDefinitionRequest';
 export * from './updateDataTypeRequest';
-export * from './updateDerivedPropertyDefinitionRequest';
 export * from './updateInstrumentIdentifierRequest';
 export * from './updatePortfolioGroupRequest';
 export * from './updatePortfolioRequest';
@@ -1515,7 +1514,6 @@ import { UpdateCalendarRequest } from './updateCalendarRequest';
 import { UpdateCustomEntityDefinitionRequest } from './updateCustomEntityDefinitionRequest';
 import { UpdateCutLabelDefinitionRequest } from './updateCutLabelDefinitionRequest';
 import { UpdateDataTypeRequest } from './updateDataTypeRequest';
-import { UpdateDerivedPropertyDefinitionRequest } from './updateDerivedPropertyDefinitionRequest';
 import { UpdateInstrumentIdentifierRequest } from './updateInstrumentIdentifierRequest';
 import { UpdatePortfolioGroupRequest } from './updatePortfolioGroupRequest';
 import { UpdatePortfolioRequest } from './updatePortfolioRequest';
@@ -2606,7 +2604,6 @@ let typeMap: {[index: string]: any} = {
     "UpdateCustomEntityDefinitionRequest": UpdateCustomEntityDefinitionRequest,
     "UpdateCutLabelDefinitionRequest": UpdateCutLabelDefinitionRequest,
     "UpdateDataTypeRequest": UpdateDataTypeRequest,
-    "UpdateDerivedPropertyDefinitionRequest": UpdateDerivedPropertyDefinitionRequest,
     "UpdateInstrumentIdentifierRequest": UpdateInstrumentIdentifierRequest,
     "UpdatePortfolioGroupRequest": UpdatePortfolioGroupRequest,
     "UpdatePortfolioRequest": UpdatePortfolioRequest,
