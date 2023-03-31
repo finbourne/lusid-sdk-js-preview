@@ -336,6 +336,7 @@ export * from './instrumentIdValue';
 export * from './instrumentLeg';
 export * from './instrumentLegAllOf';
 export * from './instrumentMatch';
+export * from './instrumentModels';
 export * from './instrumentPaymentDiary';
 export * from './instrumentPaymentDiaryLeg';
 export * from './instrumentPaymentDiaryRow';
@@ -1135,6 +1136,7 @@ import { InstrumentIdValue } from './instrumentIdValue';
 import { InstrumentLeg } from './instrumentLeg';
 import { InstrumentLegAllOf } from './instrumentLegAllOf';
 import { InstrumentMatch } from './instrumentMatch';
+import { InstrumentModels } from './instrumentModels';
 import { InstrumentPaymentDiary } from './instrumentPaymentDiary';
 import { InstrumentPaymentDiaryLeg } from './instrumentPaymentDiaryLeg';
 import { InstrumentPaymentDiaryRow } from './instrumentPaymentDiaryRow';
@@ -2260,6 +2262,7 @@ let typeMap: {[index: string]: any} = {
     "InstrumentLeg": InstrumentLeg,
     "InstrumentLegAllOf": InstrumentLegAllOf,
     "InstrumentMatch": InstrumentMatch,
+    "InstrumentModels": InstrumentModels,
     "InstrumentPaymentDiary": InstrumentPaymentDiary,
     "InstrumentPaymentDiaryLeg": InstrumentPaymentDiaryLeg,
     "InstrumentPaymentDiaryRow": InstrumentPaymentDiaryRow,
