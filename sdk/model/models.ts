@@ -152,6 +152,8 @@ export * from './creditSpreadCurveDataAllOf';
 export * from './creditSupportAnnex';
 export * from './criterionType';
 export * from './currencyAndAmount';
+export * from './curveOptions';
+export * from './curveOptionsAllOf';
 export * from './custodianAccount';
 export * from './custodianAccountProperties';
 export * from './custodianAccountRequest';
@@ -376,6 +378,8 @@ export * from './mappingRule';
 export * from './marketContext';
 export * from './marketContextSuppliers';
 export * from './marketDataKeyRule';
+export * from './marketDataOptions';
+export * from './marketDataOptionsType';
 export * from './marketDataOverrides';
 export * from './marketDataSpecificRule';
 export * from './marketDataType';
@@ -952,6 +956,8 @@ import { CreditSpreadCurveDataAllOf } from './creditSpreadCurveDataAllOf';
 import { CreditSupportAnnex } from './creditSupportAnnex';
 import { CriterionType } from './criterionType';
 import { CurrencyAndAmount } from './currencyAndAmount';
+import { CurveOptions } from './curveOptions';
+import { CurveOptionsAllOf } from './curveOptionsAllOf';
 import { CustodianAccount } from './custodianAccount';
 import { CustodianAccountProperties } from './custodianAccountProperties';
 import { CustodianAccountRequest } from './custodianAccountRequest';
@@ -1176,6 +1182,8 @@ import { MappingRule } from './mappingRule';
 import { MarketContext } from './marketContext';
 import { MarketContextSuppliers } from './marketContextSuppliers';
 import { MarketDataKeyRule } from './marketDataKeyRule';
+import { MarketDataOptions } from './marketDataOptions';
+import { MarketDataOptionsType } from './marketDataOptionsType';
 import { MarketDataOverrides } from './marketDataOverrides';
 import { MarketDataSpecificRule } from './marketDataSpecificRule';
 import { MarketDataType } from './marketDataType';
@@ -1657,6 +1665,8 @@ let enumsMap: {[index: string]: any} = {
         "CreditSpreadCurveData.MarketDataTypeEnum": CreditSpreadCurveData.MarketDataTypeEnum,
         "CreditSpreadCurveDataAllOf.MarketDataTypeEnum": CreditSpreadCurveDataAllOf.MarketDataTypeEnum,
         "CriterionType": CriterionType,
+        "CurveOptions.MarketDataOptionsTypeEnum": CurveOptions.MarketDataOptionsTypeEnum,
+        "CurveOptionsAllOf.MarketDataOptionsTypeEnum": CurveOptionsAllOf.MarketDataOptionsTypeEnum,
         "DataType.TypeValueRangeEnum": DataType.TypeValueRangeEnum,
         "DataType.ValueTypeEnum": DataType.ValueTypeEnum,
         "DataType.UnitSchemaEnum": DataType.UnitSchemaEnum,
@@ -1786,6 +1796,8 @@ let enumsMap: {[index: string]: any} = {
         "LusidInstrument.InstrumentTypeEnum": LusidInstrument.InstrumentTypeEnum,
         "LusidTradeTicket.TradeTicketTypeEnum": LusidTradeTicket.TradeTicketTypeEnum,
         "MarketDataKeyRule.QuoteTypeEnum": MarketDataKeyRule.QuoteTypeEnum,
+        "MarketDataOptions.MarketDataOptionsTypeEnum": MarketDataOptions.MarketDataOptionsTypeEnum,
+        "MarketDataOptionsType": MarketDataOptionsType,
         "MarketDataSpecificRule.QuoteTypeEnum": MarketDataSpecificRule.QuoteTypeEnum,
         "MarketDataType": MarketDataType,
         "MarketObservableType": MarketObservableType,
@@ -2086,6 +2098,8 @@ let typeMap: {[index: string]: any} = {
     "CreditSpreadCurveDataAllOf": CreditSpreadCurveDataAllOf,
     "CreditSupportAnnex": CreditSupportAnnex,
     "CurrencyAndAmount": CurrencyAndAmount,
+    "CurveOptions": CurveOptions,
+    "CurveOptionsAllOf": CurveOptionsAllOf,
     "CustodianAccount": CustodianAccount,
     "CustodianAccountProperties": CustodianAccountProperties,
     "CustodianAccountRequest": CustodianAccountRequest,
@@ -2301,6 +2315,7 @@ let typeMap: {[index: string]: any} = {
     "MarketContext": MarketContext,
     "MarketContextSuppliers": MarketContextSuppliers,
     "MarketDataKeyRule": MarketDataKeyRule,
+    "MarketDataOptions": MarketDataOptions,
     "MarketDataOverrides": MarketDataOverrides,
     "MarketDataSpecificRule": MarketDataSpecificRule,
     "MarketOptions": MarketOptions,
