@@ -1818,7 +1818,6 @@ let enumsMap: {[index: string]: any} = {
         "OpenEvent.InstrumentEventTypeEnum": OpenEvent.InstrumentEventTypeEnum,
         "OpenEventAllOf.InstrumentEventTypeEnum": OpenEventAllOf.InstrumentEventTypeEnum,
         "OperandType": OperandType,
-        "Operation.OpEnum": Operation.OpEnum,
         "OperationType": OperationType,
         "Operator": Operator,
         "OrderBySpec.SortOrderEnum": OrderBySpec.SortOrderEnum,
