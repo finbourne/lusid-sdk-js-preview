@@ -39,9 +39,6 @@ export class InstrumentCapabilities {
     * Economic dependencies for the model, e.g. \'Fx:GBP.USD\', \'Cash:GBP\', \'Rates:GBP.GBPOIS\'.
     */
     'economicDependencies'?: Array<EconomicDependency> | null;
-    /**
-    * Collection of links.
-    */
     'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;

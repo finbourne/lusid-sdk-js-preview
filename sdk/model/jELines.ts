@@ -85,9 +85,6 @@ export class JELines {
     * Defines the broad category holding within the portfolio.
     */
     'holdingType': string;
-    /**
-    * Collection of links.
-    */
     'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
