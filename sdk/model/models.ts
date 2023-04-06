@@ -367,6 +367,7 @@ export * from './link';
 export * from './listAggregationReconciliation';
 export * from './listAggregationResponse';
 export * from './listComplexMarketDataWithMetaDataResponse';
+export * from './loanPeriod';
 export * from './lusidInstrument';
 export * from './lusidProblemDetails';
 export * from './lusidTradeTicket';
@@ -659,6 +660,8 @@ export * from './sideConfigurationData';
 export * from './sideConfigurationDataRequest';
 export * from './sideDefinition';
 export * from './sideDefinitionRequest';
+export * from './simpleCashFlowLoan';
+export * from './simpleCashFlowLoanAllOf';
 export * from './simpleInstrument';
 export * from './simpleInstrumentAllOf';
 export * from './sortOrder';
@@ -1171,6 +1174,7 @@ import { Link } from './link';
 import { ListAggregationReconciliation } from './listAggregationReconciliation';
 import { ListAggregationResponse } from './listAggregationResponse';
 import { ListComplexMarketDataWithMetaDataResponse } from './listComplexMarketDataWithMetaDataResponse';
+import { LoanPeriod } from './loanPeriod';
 import { LusidInstrument } from './lusidInstrument';
 import { LusidProblemDetails } from './lusidProblemDetails';
 import { LusidTradeTicket } from './lusidTradeTicket';
@@ -1463,6 +1467,8 @@ import { SideConfigurationData } from './sideConfigurationData';
 import { SideConfigurationDataRequest } from './sideConfigurationDataRequest';
 import { SideDefinition } from './sideDefinition';
 import { SideDefinitionRequest } from './sideDefinitionRequest';
+import { SimpleCashFlowLoan } from './simpleCashFlowLoan';
+import { SimpleCashFlowLoanAllOf } from './simpleCashFlowLoanAllOf';
 import { SimpleInstrument } from './simpleInstrument';
 import { SimpleInstrumentAllOf } from './simpleInstrumentAllOf';
 import { SortOrder } from './sortOrder';
@@ -1908,6 +1914,8 @@ let enumsMap: {[index: string]: any} = {
         "ScalingMethodology": ScalingMethodology,
         "Schedule.ScheduleTypeEnum": Schedule.ScheduleTypeEnum,
         "ScheduleType": ScheduleType,
+        "SimpleCashFlowLoan.InstrumentTypeEnum": SimpleCashFlowLoan.InstrumentTypeEnum,
+        "SimpleCashFlowLoanAllOf.InstrumentTypeEnum": SimpleCashFlowLoanAllOf.InstrumentTypeEnum,
         "SimpleInstrument.AssetClassEnum": SimpleInstrument.AssetClassEnum,
         "SimpleInstrument.InstrumentTypeEnum": SimpleInstrument.InstrumentTypeEnum,
         "SimpleInstrumentAllOf.AssetClassEnum": SimpleInstrumentAllOf.AssetClassEnum,
@@ -2304,6 +2312,7 @@ let typeMap: {[index: string]: any} = {
     "ListAggregationReconciliation": ListAggregationReconciliation,
     "ListAggregationResponse": ListAggregationResponse,
     "ListComplexMarketDataWithMetaDataResponse": ListComplexMarketDataWithMetaDataResponse,
+    "LoanPeriod": LoanPeriod,
     "LusidInstrument": LusidInstrument,
     "LusidProblemDetails": LusidProblemDetails,
     "LusidTradeTicket": LusidTradeTicket,
@@ -2571,6 +2580,8 @@ let typeMap: {[index: string]: any} = {
     "SideConfigurationDataRequest": SideConfigurationDataRequest,
     "SideDefinition": SideDefinition,
     "SideDefinitionRequest": SideDefinitionRequest,
+    "SimpleCashFlowLoan": SimpleCashFlowLoan,
+    "SimpleCashFlowLoanAllOf": SimpleCashFlowLoanAllOf,
     "SimpleInstrument": SimpleInstrument,
     "SimpleInstrumentAllOf": SimpleInstrumentAllOf,
     "StepSchedule": StepSchedule,
