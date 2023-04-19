@@ -1,6 +1,7 @@
 import {AborApi} from './api/aborApi';
 import {AborConfigurationApi} from './api/aborConfigurationApi';
 import {AggregationApi} from './api/aggregationApi';
+import {AllocationServiceApi} from './api/allocationServiceApi';
 import {AllocationsApi} from './api/allocationsApi';
 import {ApplicationMetadataApi} from './api/applicationMetadataApi';
 import {BlocksApi} from './api/blocksApi';
@@ -55,6 +56,7 @@ export class Api {
     public abor:  AborApi
     public aborConfiguration:  AborConfigurationApi
     public aggregation:  AggregationApi
+    public allocationService:  AllocationServiceApi
     public allocations:  AllocationsApi
     public applicationMetadata:  ApplicationMetadataApi
     public blocks:  BlocksApi

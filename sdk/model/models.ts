@@ -41,6 +41,7 @@ export * from './aggregationQuery';
 export * from './aggregationType';
 export * from './allocation';
 export * from './allocationRequest';
+export * from './allocationServiceRunResult';
 export * from './allocationSetRequest';
 export * from './amortisationEvent';
 export * from './amortisationEventAllOf';
@@ -848,6 +849,7 @@ import { AggregationQuery } from './aggregationQuery';
 import { AggregationType } from './aggregationType';
 import { Allocation } from './allocation';
 import { AllocationRequest } from './allocationRequest';
+import { AllocationServiceRunResult } from './allocationServiceRunResult';
 import { AllocationSetRequest } from './allocationSetRequest';
 import { AmortisationEvent } from './amortisationEvent';
 import { AmortisationEventAllOf } from './amortisationEventAllOf';
@@ -1998,6 +2000,7 @@ let typeMap: {[index: string]: any} = {
     "AggregationQuery": AggregationQuery,
     "Allocation": Allocation,
     "AllocationRequest": AllocationRequest,
+    "AllocationServiceRunResult": AllocationServiceRunResult,
     "AllocationSetRequest": AllocationSetRequest,
     "AmortisationEvent": AmortisationEvent,
     "AmortisationEventAllOf": AmortisationEventAllOf,
