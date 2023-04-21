@@ -13,7 +13,7 @@
 import { RequestFile } from './models';
 import { ResourceId } from './resourceId';
 
-export class OrderGraphBlockExecutionDetail {
+export class OrderGraphPlacementChildPlacementDetail {
     'id': ResourceId;
 
     static discriminator: string | undefined = undefined;
@@ -26,7 +26,7 @@ export class OrderGraphBlockExecutionDetail {
         }    ];
 
     static getAttributeTypeMap() {
-        return OrderGraphBlockExecutionDetail.attributeTypeMap;
+        return OrderGraphPlacementChildPlacementDetail.attributeTypeMap;
     }
 }
 

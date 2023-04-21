@@ -422,6 +422,7 @@ export * from './orderGraphBlockPlacementSynopsis';
 export * from './orderGraphPlacement';
 export * from './orderGraphPlacementAllocationDetail';
 export * from './orderGraphPlacementAllocationSynopsis';
+export * from './orderGraphPlacementChildPlacementDetail';
 export * from './orderGraphPlacementExecutionDetail';
 export * from './orderGraphPlacementExecutionSynopsis';
 export * from './orderGraphPlacementOrderDetail';
@@ -1230,6 +1231,7 @@ import { OrderGraphBlockPlacementSynopsis } from './orderGraphBlockPlacementSyno
 import { OrderGraphPlacement } from './orderGraphPlacement';
 import { OrderGraphPlacementAllocationDetail } from './orderGraphPlacementAllocationDetail';
 import { OrderGraphPlacementAllocationSynopsis } from './orderGraphPlacementAllocationSynopsis';
+import { OrderGraphPlacementChildPlacementDetail } from './orderGraphPlacementChildPlacementDetail';
 import { OrderGraphPlacementExecutionDetail } from './orderGraphPlacementExecutionDetail';
 import { OrderGraphPlacementExecutionSynopsis } from './orderGraphPlacementExecutionSynopsis';
 import { OrderGraphPlacementOrderDetail } from './orderGraphPlacementOrderDetail';
@@ -2360,6 +2362,7 @@ let typeMap: {[index: string]: any} = {
     "OrderGraphPlacement": OrderGraphPlacement,
     "OrderGraphPlacementAllocationDetail": OrderGraphPlacementAllocationDetail,
     "OrderGraphPlacementAllocationSynopsis": OrderGraphPlacementAllocationSynopsis,
+    "OrderGraphPlacementChildPlacementDetail": OrderGraphPlacementChildPlacementDetail,
     "OrderGraphPlacementExecutionDetail": OrderGraphPlacementExecutionDetail,
     "OrderGraphPlacementExecutionSynopsis": OrderGraphPlacementExecutionSynopsis,
     "OrderGraphPlacementOrderDetail": OrderGraphPlacementOrderDetail,
