@@ -94,7 +94,6 @@ export * from './changeItem';
 export * from './chartOfAccounts';
 export * from './chartOfAccountsProperties';
 export * from './chartOfAccountsRequest';
-export * from './client';
 export * from './closeEvent';
 export * from './closeEventAllOf';
 export * from './completePortfolio';
@@ -137,7 +136,6 @@ export * from './createPortfolioDetails';
 export * from './createPortfolioGroupRequest';
 export * from './createPropertyDefinitionRequest';
 export * from './createRecipeRequest';
-export * from './createReconciliationRequest';
 export * from './createReferencePortfolioRequest';
 export * from './createRelationDefinitionRequest';
 export * from './createRelationRequest';
@@ -173,7 +171,6 @@ export * from './cutLocalTime';
 export * from './dataDefinition';
 export * from './dataMapKey';
 export * from './dataMapping';
-export * from './dataScope';
 export * from './dataType';
 export * from './dataTypeSummary';
 export * from './dataTypeValueRange';
@@ -470,7 +467,6 @@ export * from './pagedResourceListOfPlacement';
 export * from './pagedResourceListOfPortfolioGroupSearchResult';
 export * from './pagedResourceListOfPortfolioSearchResult';
 export * from './pagedResourceListOfPropertyDefinitionSearchResult';
-export * from './pagedResourceListOfReconciliation';
 export * from './pagedResourceListOfRelationshipDefinition';
 export * from './pagedResourceListOfSequenceDefinition';
 export * from './participation';
@@ -545,18 +541,13 @@ export * from './reconcileNumericRuleAllOf';
 export * from './reconcileStringRule';
 export * from './reconcileStringRuleAllOf';
 export * from './reconciledTransaction';
-export * from './reconciliation';
 export * from './reconciliationBreak';
-export * from './reconciliationConfiguration';
-export * from './reconciliationId';
 export * from './reconciliationLeftRightAddressKeyPair';
 export * from './reconciliationLine';
 export * from './reconciliationRequest';
 export * from './reconciliationResponse';
 export * from './reconciliationRule';
 export * from './reconciliationRuleType';
-export * from './reconciliationSideConfiguration';
-export * from './reconciliationTransactions';
 export * from './referenceData';
 export * from './referenceInstrument';
 export * from './referenceInstrumentAllOf';
@@ -741,7 +732,6 @@ export * from './updateInstrumentIdentifierRequest';
 export * from './updatePortfolioGroupRequest';
 export * from './updatePortfolioRequest';
 export * from './updatePropertyDefinitionRequest';
-export * from './updateReconciliationRequest';
 export * from './updateRelationshipDefinitionRequest';
 export * from './updateTaxRuleSetRequest';
 export * from './updateUnitRequest';
@@ -914,7 +904,6 @@ import { ChangeItem } from './changeItem';
 import { ChartOfAccounts } from './chartOfAccounts';
 import { ChartOfAccountsProperties } from './chartOfAccountsProperties';
 import { ChartOfAccountsRequest } from './chartOfAccountsRequest';
-import { Client } from './client';
 import { CloseEvent } from './closeEvent';
 import { CloseEventAllOf } from './closeEventAllOf';
 import { CompletePortfolio } from './completePortfolio';
@@ -957,7 +946,6 @@ import { CreatePortfolioDetails } from './createPortfolioDetails';
 import { CreatePortfolioGroupRequest } from './createPortfolioGroupRequest';
 import { CreatePropertyDefinitionRequest } from './createPropertyDefinitionRequest';
 import { CreateRecipeRequest } from './createRecipeRequest';
-import { CreateReconciliationRequest } from './createReconciliationRequest';
 import { CreateReferencePortfolioRequest } from './createReferencePortfolioRequest';
 import { CreateRelationDefinitionRequest } from './createRelationDefinitionRequest';
 import { CreateRelationRequest } from './createRelationRequest';
@@ -993,7 +981,6 @@ import { CutLocalTime } from './cutLocalTime';
 import { DataDefinition } from './dataDefinition';
 import { DataMapKey } from './dataMapKey';
 import { DataMapping } from './dataMapping';
-import { DataScope } from './dataScope';
 import { DataType } from './dataType';
 import { DataTypeSummary } from './dataTypeSummary';
 import { DataTypeValueRange } from './dataTypeValueRange';
@@ -1290,7 +1277,6 @@ import { PagedResourceListOfPlacement } from './pagedResourceListOfPlacement';
 import { PagedResourceListOfPortfolioGroupSearchResult } from './pagedResourceListOfPortfolioGroupSearchResult';
 import { PagedResourceListOfPortfolioSearchResult } from './pagedResourceListOfPortfolioSearchResult';
 import { PagedResourceListOfPropertyDefinitionSearchResult } from './pagedResourceListOfPropertyDefinitionSearchResult';
-import { PagedResourceListOfReconciliation } from './pagedResourceListOfReconciliation';
 import { PagedResourceListOfRelationshipDefinition } from './pagedResourceListOfRelationshipDefinition';
 import { PagedResourceListOfSequenceDefinition } from './pagedResourceListOfSequenceDefinition';
 import { Participation } from './participation';
@@ -1365,18 +1351,13 @@ import { ReconcileNumericRuleAllOf } from './reconcileNumericRuleAllOf';
 import { ReconcileStringRule } from './reconcileStringRule';
 import { ReconcileStringRuleAllOf } from './reconcileStringRuleAllOf';
 import { ReconciledTransaction } from './reconciledTransaction';
-import { Reconciliation } from './reconciliation';
 import { ReconciliationBreak } from './reconciliationBreak';
-import { ReconciliationConfiguration } from './reconciliationConfiguration';
-import { ReconciliationId } from './reconciliationId';
 import { ReconciliationLeftRightAddressKeyPair } from './reconciliationLeftRightAddressKeyPair';
 import { ReconciliationLine } from './reconciliationLine';
 import { ReconciliationRequest } from './reconciliationRequest';
 import { ReconciliationResponse } from './reconciliationResponse';
 import { ReconciliationRule } from './reconciliationRule';
 import { ReconciliationRuleType } from './reconciliationRuleType';
-import { ReconciliationSideConfiguration } from './reconciliationSideConfiguration';
-import { ReconciliationTransactions } from './reconciliationTransactions';
 import { ReferenceData } from './referenceData';
 import { ReferenceInstrument } from './referenceInstrument';
 import { ReferenceInstrumentAllOf } from './referenceInstrumentAllOf';
@@ -1561,7 +1542,6 @@ import { UpdateInstrumentIdentifierRequest } from './updateInstrumentIdentifierR
 import { UpdatePortfolioGroupRequest } from './updatePortfolioGroupRequest';
 import { UpdatePortfolioRequest } from './updatePortfolioRequest';
 import { UpdatePropertyDefinitionRequest } from './updatePropertyDefinitionRequest';
-import { UpdateReconciliationRequest } from './updateReconciliationRequest';
 import { UpdateRelationshipDefinitionRequest } from './updateRelationshipDefinitionRequest';
 import { UpdateTaxRuleSetRequest } from './updateTaxRuleSetRequest';
 import { UpdateUnitRequest } from './updateUnitRequest';
@@ -2075,7 +2055,6 @@ let typeMap: {[index: string]: any} = {
     "ChartOfAccounts": ChartOfAccounts,
     "ChartOfAccountsProperties": ChartOfAccountsProperties,
     "ChartOfAccountsRequest": ChartOfAccountsRequest,
-    "Client": Client,
     "CloseEvent": CloseEvent,
     "CloseEventAllOf": CloseEventAllOf,
     "CompletePortfolio": CompletePortfolio,
@@ -2118,7 +2097,6 @@ let typeMap: {[index: string]: any} = {
     "CreatePortfolioGroupRequest": CreatePortfolioGroupRequest,
     "CreatePropertyDefinitionRequest": CreatePropertyDefinitionRequest,
     "CreateRecipeRequest": CreateRecipeRequest,
-    "CreateReconciliationRequest": CreateReconciliationRequest,
     "CreateReferencePortfolioRequest": CreateReferencePortfolioRequest,
     "CreateRelationDefinitionRequest": CreateRelationDefinitionRequest,
     "CreateRelationRequest": CreateRelationRequest,
@@ -2153,7 +2131,6 @@ let typeMap: {[index: string]: any} = {
     "DataDefinition": DataDefinition,
     "DataMapKey": DataMapKey,
     "DataMapping": DataMapping,
-    "DataScope": DataScope,
     "DataType": DataType,
     "DataTypeSummary": DataTypeSummary,
     "DateAttributes": DateAttributes,
@@ -2432,7 +2409,6 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfPortfolioGroupSearchResult": PagedResourceListOfPortfolioGroupSearchResult,
     "PagedResourceListOfPortfolioSearchResult": PagedResourceListOfPortfolioSearchResult,
     "PagedResourceListOfPropertyDefinitionSearchResult": PagedResourceListOfPropertyDefinitionSearchResult,
-    "PagedResourceListOfReconciliation": PagedResourceListOfReconciliation,
     "PagedResourceListOfRelationshipDefinition": PagedResourceListOfRelationshipDefinition,
     "PagedResourceListOfSequenceDefinition": PagedResourceListOfSequenceDefinition,
     "Participation": Participation,
@@ -2497,17 +2473,12 @@ let typeMap: {[index: string]: any} = {
     "ReconcileStringRule": ReconcileStringRule,
     "ReconcileStringRuleAllOf": ReconcileStringRuleAllOf,
     "ReconciledTransaction": ReconciledTransaction,
-    "Reconciliation": Reconciliation,
     "ReconciliationBreak": ReconciliationBreak,
-    "ReconciliationConfiguration": ReconciliationConfiguration,
-    "ReconciliationId": ReconciliationId,
     "ReconciliationLeftRightAddressKeyPair": ReconciliationLeftRightAddressKeyPair,
     "ReconciliationLine": ReconciliationLine,
     "ReconciliationRequest": ReconciliationRequest,
     "ReconciliationResponse": ReconciliationResponse,
     "ReconciliationRule": ReconciliationRule,
-    "ReconciliationSideConfiguration": ReconciliationSideConfiguration,
-    "ReconciliationTransactions": ReconciliationTransactions,
     "ReferenceData": ReferenceData,
     "ReferenceInstrument": ReferenceInstrument,
     "ReferenceInstrumentAllOf": ReferenceInstrumentAllOf,
@@ -2678,7 +2649,6 @@ let typeMap: {[index: string]: any} = {
     "UpdatePortfolioGroupRequest": UpdatePortfolioGroupRequest,
     "UpdatePortfolioRequest": UpdatePortfolioRequest,
     "UpdatePropertyDefinitionRequest": UpdatePropertyDefinitionRequest,
-    "UpdateReconciliationRequest": UpdateReconciliationRequest,
     "UpdateRelationshipDefinitionRequest": UpdateRelationshipDefinitionRequest,
     "UpdateTaxRuleSetRequest": UpdateTaxRuleSetRequest,
     "UpdateUnitRequest": UpdateUnitRequest,
