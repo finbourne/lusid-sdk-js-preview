@@ -471,6 +471,7 @@ export * from './pagedResourceListOfPortfolioGroupSearchResult';
 export * from './pagedResourceListOfPortfolioSearchResult';
 export * from './pagedResourceListOfPropertyDefinitionSearchResult';
 export * from './pagedResourceListOfReconciliation';
+export * from './pagedResourceListOfReconciliationRun';
 export * from './pagedResourceListOfRelationshipDefinition';
 export * from './pagedResourceListOfSequenceDefinition';
 export * from './participation';
@@ -555,6 +556,8 @@ export * from './reconciliationRequest';
 export * from './reconciliationResponse';
 export * from './reconciliationRule';
 export * from './reconciliationRuleType';
+export * from './reconciliationRun';
+export * from './reconciliationRunId';
 export * from './reconciliationSideConfiguration';
 export * from './reconciliationTransactions';
 export * from './referenceData';
@@ -772,6 +775,7 @@ export * from './upsertQuoteAccessMetadataRuleRequest';
 export * from './upsertQuoteRequest';
 export * from './upsertQuotesResponse';
 export * from './upsertRecipeRequest';
+export * from './upsertReconciliationRunRequest';
 export * from './upsertReferencePortfolioConstituentsRequest';
 export * from './upsertReferencePortfolioConstituentsResponse';
 export * from './upsertResultValuesDataRequest';
@@ -1291,6 +1295,7 @@ import { PagedResourceListOfPortfolioGroupSearchResult } from './pagedResourceLi
 import { PagedResourceListOfPortfolioSearchResult } from './pagedResourceListOfPortfolioSearchResult';
 import { PagedResourceListOfPropertyDefinitionSearchResult } from './pagedResourceListOfPropertyDefinitionSearchResult';
 import { PagedResourceListOfReconciliation } from './pagedResourceListOfReconciliation';
+import { PagedResourceListOfReconciliationRun } from './pagedResourceListOfReconciliationRun';
 import { PagedResourceListOfRelationshipDefinition } from './pagedResourceListOfRelationshipDefinition';
 import { PagedResourceListOfSequenceDefinition } from './pagedResourceListOfSequenceDefinition';
 import { Participation } from './participation';
@@ -1375,6 +1380,8 @@ import { ReconciliationRequest } from './reconciliationRequest';
 import { ReconciliationResponse } from './reconciliationResponse';
 import { ReconciliationRule } from './reconciliationRule';
 import { ReconciliationRuleType } from './reconciliationRuleType';
+import { ReconciliationRun } from './reconciliationRun';
+import { ReconciliationRunId } from './reconciliationRunId';
 import { ReconciliationSideConfiguration } from './reconciliationSideConfiguration';
 import { ReconciliationTransactions } from './reconciliationTransactions';
 import { ReferenceData } from './referenceData';
@@ -1592,6 +1599,7 @@ import { UpsertQuoteAccessMetadataRuleRequest } from './upsertQuoteAccessMetadat
 import { UpsertQuoteRequest } from './upsertQuoteRequest';
 import { UpsertQuotesResponse } from './upsertQuotesResponse';
 import { UpsertRecipeRequest } from './upsertRecipeRequest';
+import { UpsertReconciliationRunRequest } from './upsertReconciliationRunRequest';
 import { UpsertReferencePortfolioConstituentsRequest } from './upsertReferencePortfolioConstituentsRequest';
 import { UpsertReferencePortfolioConstituentsResponse } from './upsertReferencePortfolioConstituentsResponse';
 import { UpsertResultValuesDataRequest } from './upsertResultValuesDataRequest';
@@ -2433,6 +2441,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfPortfolioSearchResult": PagedResourceListOfPortfolioSearchResult,
     "PagedResourceListOfPropertyDefinitionSearchResult": PagedResourceListOfPropertyDefinitionSearchResult,
     "PagedResourceListOfReconciliation": PagedResourceListOfReconciliation,
+    "PagedResourceListOfReconciliationRun": PagedResourceListOfReconciliationRun,
     "PagedResourceListOfRelationshipDefinition": PagedResourceListOfRelationshipDefinition,
     "PagedResourceListOfSequenceDefinition": PagedResourceListOfSequenceDefinition,
     "Participation": Participation,
@@ -2506,6 +2515,8 @@ let typeMap: {[index: string]: any} = {
     "ReconciliationRequest": ReconciliationRequest,
     "ReconciliationResponse": ReconciliationResponse,
     "ReconciliationRule": ReconciliationRule,
+    "ReconciliationRun": ReconciliationRun,
+    "ReconciliationRunId": ReconciliationRunId,
     "ReconciliationSideConfiguration": ReconciliationSideConfiguration,
     "ReconciliationTransactions": ReconciliationTransactions,
     "ReferenceData": ReferenceData,
@@ -2709,6 +2720,7 @@ let typeMap: {[index: string]: any} = {
     "UpsertQuoteRequest": UpsertQuoteRequest,
     "UpsertQuotesResponse": UpsertQuotesResponse,
     "UpsertRecipeRequest": UpsertRecipeRequest,
+    "UpsertReconciliationRunRequest": UpsertReconciliationRunRequest,
     "UpsertReferencePortfolioConstituentsRequest": UpsertReferencePortfolioConstituentsRequest,
     "UpsertReferencePortfolioConstituentsResponse": UpsertReferencePortfolioConstituentsResponse,
     "UpsertResultValuesDataRequest": UpsertResultValuesDataRequest,
