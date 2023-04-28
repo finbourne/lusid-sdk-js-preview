@@ -472,7 +472,6 @@ export * from './pagedResourceListOfPortfolioSearchResult';
 export * from './pagedResourceListOfPropertyDefinitionSearchResult';
 export * from './pagedResourceListOfReconciliation';
 export * from './pagedResourceListOfReconciliationRun';
-export * from './pagedResourceListOfReconciliationRunBreak';
 export * from './pagedResourceListOfRelationshipDefinition';
 export * from './pagedResourceListOfSequenceDefinition';
 export * from './participation';
@@ -549,7 +548,6 @@ export * from './reconcileStringRuleAllOf';
 export * from './reconciledTransaction';
 export * from './reconciliation';
 export * from './reconciliationBreak';
-export * from './reconciliationBreakId';
 export * from './reconciliationConfiguration';
 export * from './reconciliationId';
 export * from './reconciliationLeftRightAddressKeyPair';
@@ -559,7 +557,6 @@ export * from './reconciliationResponse';
 export * from './reconciliationRule';
 export * from './reconciliationRuleType';
 export * from './reconciliationRun';
-export * from './reconciliationRunBreak';
 export * from './reconciliationRunId';
 export * from './reconciliationSideConfiguration';
 export * from './reconciliationTransactions';
@@ -778,7 +775,6 @@ export * from './upsertQuoteAccessMetadataRuleRequest';
 export * from './upsertQuoteRequest';
 export * from './upsertQuotesResponse';
 export * from './upsertRecipeRequest';
-export * from './upsertReconciliationBreakRequest';
 export * from './upsertReconciliationRunRequest';
 export * from './upsertReferencePortfolioConstituentsRequest';
 export * from './upsertReferencePortfolioConstituentsResponse';
@@ -1300,7 +1296,6 @@ import { PagedResourceListOfPortfolioSearchResult } from './pagedResourceListOfP
 import { PagedResourceListOfPropertyDefinitionSearchResult } from './pagedResourceListOfPropertyDefinitionSearchResult';
 import { PagedResourceListOfReconciliation } from './pagedResourceListOfReconciliation';
 import { PagedResourceListOfReconciliationRun } from './pagedResourceListOfReconciliationRun';
-import { PagedResourceListOfReconciliationRunBreak } from './pagedResourceListOfReconciliationRunBreak';
 import { PagedResourceListOfRelationshipDefinition } from './pagedResourceListOfRelationshipDefinition';
 import { PagedResourceListOfSequenceDefinition } from './pagedResourceListOfSequenceDefinition';
 import { Participation } from './participation';
@@ -1377,7 +1372,6 @@ import { ReconcileStringRuleAllOf } from './reconcileStringRuleAllOf';
 import { ReconciledTransaction } from './reconciledTransaction';
 import { Reconciliation } from './reconciliation';
 import { ReconciliationBreak } from './reconciliationBreak';
-import { ReconciliationBreakId } from './reconciliationBreakId';
 import { ReconciliationConfiguration } from './reconciliationConfiguration';
 import { ReconciliationId } from './reconciliationId';
 import { ReconciliationLeftRightAddressKeyPair } from './reconciliationLeftRightAddressKeyPair';
@@ -1387,7 +1381,6 @@ import { ReconciliationResponse } from './reconciliationResponse';
 import { ReconciliationRule } from './reconciliationRule';
 import { ReconciliationRuleType } from './reconciliationRuleType';
 import { ReconciliationRun } from './reconciliationRun';
-import { ReconciliationRunBreak } from './reconciliationRunBreak';
 import { ReconciliationRunId } from './reconciliationRunId';
 import { ReconciliationSideConfiguration } from './reconciliationSideConfiguration';
 import { ReconciliationTransactions } from './reconciliationTransactions';
@@ -1606,7 +1599,6 @@ import { UpsertQuoteAccessMetadataRuleRequest } from './upsertQuoteAccessMetadat
 import { UpsertQuoteRequest } from './upsertQuoteRequest';
 import { UpsertQuotesResponse } from './upsertQuotesResponse';
 import { UpsertRecipeRequest } from './upsertRecipeRequest';
-import { UpsertReconciliationBreakRequest } from './upsertReconciliationBreakRequest';
 import { UpsertReconciliationRunRequest } from './upsertReconciliationRunRequest';
 import { UpsertReferencePortfolioConstituentsRequest } from './upsertReferencePortfolioConstituentsRequest';
 import { UpsertReferencePortfolioConstituentsResponse } from './upsertReferencePortfolioConstituentsResponse';
@@ -2450,7 +2442,6 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfPropertyDefinitionSearchResult": PagedResourceListOfPropertyDefinitionSearchResult,
     "PagedResourceListOfReconciliation": PagedResourceListOfReconciliation,
     "PagedResourceListOfReconciliationRun": PagedResourceListOfReconciliationRun,
-    "PagedResourceListOfReconciliationRunBreak": PagedResourceListOfReconciliationRunBreak,
     "PagedResourceListOfRelationshipDefinition": PagedResourceListOfRelationshipDefinition,
     "PagedResourceListOfSequenceDefinition": PagedResourceListOfSequenceDefinition,
     "Participation": Participation,
@@ -2517,7 +2508,6 @@ let typeMap: {[index: string]: any} = {
     "ReconciledTransaction": ReconciledTransaction,
     "Reconciliation": Reconciliation,
     "ReconciliationBreak": ReconciliationBreak,
-    "ReconciliationBreakId": ReconciliationBreakId,
     "ReconciliationConfiguration": ReconciliationConfiguration,
     "ReconciliationId": ReconciliationId,
     "ReconciliationLeftRightAddressKeyPair": ReconciliationLeftRightAddressKeyPair,
@@ -2526,7 +2516,6 @@ let typeMap: {[index: string]: any} = {
     "ReconciliationResponse": ReconciliationResponse,
     "ReconciliationRule": ReconciliationRule,
     "ReconciliationRun": ReconciliationRun,
-    "ReconciliationRunBreak": ReconciliationRunBreak,
     "ReconciliationRunId": ReconciliationRunId,
     "ReconciliationSideConfiguration": ReconciliationSideConfiguration,
     "ReconciliationTransactions": ReconciliationTransactions,
@@ -2731,7 +2720,6 @@ let typeMap: {[index: string]: any} = {
     "UpsertQuoteRequest": UpsertQuoteRequest,
     "UpsertQuotesResponse": UpsertQuotesResponse,
     "UpsertRecipeRequest": UpsertRecipeRequest,
-    "UpsertReconciliationBreakRequest": UpsertReconciliationBreakRequest,
     "UpsertReconciliationRunRequest": UpsertReconciliationRunRequest,
     "UpsertReferencePortfolioConstituentsRequest": UpsertReferencePortfolioConstituentsRequest,
     "UpsertReferencePortfolioConstituentsResponse": UpsertReferencePortfolioConstituentsResponse,
