@@ -30,6 +30,7 @@ export * from './adjustHoldingForDateRequest';
 export * from './adjustHoldingRequest';
 export * from './aggregateSpec';
 export * from './aggregatedReturn';
+export * from './aggregatedReturnsDispersionRequest';
 export * from './aggregatedReturnsRequest';
 export * from './aggregatedReturnsResponse';
 export * from './aggregation';
@@ -110,6 +111,8 @@ export * from './complianceRuleResult';
 export * from './complianceRuleUpsertRequest';
 export * from './complianceRuleUpsertResponse';
 export * from './complianceRunInfo';
+export * from './compositeDispersion';
+export * from './compositeDispersionResponse';
 export * from './compounding';
 export * from './configurationRecipe';
 export * from './configurationRecipeSnippet';
@@ -858,6 +861,7 @@ import { AdjustHoldingForDateRequest } from './adjustHoldingForDateRequest';
 import { AdjustHoldingRequest } from './adjustHoldingRequest';
 import { AggregateSpec } from './aggregateSpec';
 import { AggregatedReturn } from './aggregatedReturn';
+import { AggregatedReturnsDispersionRequest } from './aggregatedReturnsDispersionRequest';
 import { AggregatedReturnsRequest } from './aggregatedReturnsRequest';
 import { AggregatedReturnsResponse } from './aggregatedReturnsResponse';
 import { Aggregation } from './aggregation';
@@ -938,6 +942,8 @@ import { ComplianceRuleResult } from './complianceRuleResult';
 import { ComplianceRuleUpsertRequest } from './complianceRuleUpsertRequest';
 import { ComplianceRuleUpsertResponse } from './complianceRuleUpsertResponse';
 import { ComplianceRunInfo } from './complianceRunInfo';
+import { CompositeDispersion } from './compositeDispersion';
+import { CompositeDispersionResponse } from './compositeDispersionResponse';
 import { Compounding } from './compounding';
 import { ConfigurationRecipe } from './configurationRecipe';
 import { ConfigurationRecipeSnippet } from './configurationRecipeSnippet';
@@ -2031,6 +2037,7 @@ let typeMap: {[index: string]: any} = {
     "AdjustHoldingRequest": AdjustHoldingRequest,
     "AggregateSpec": AggregateSpec,
     "AggregatedReturn": AggregatedReturn,
+    "AggregatedReturnsDispersionRequest": AggregatedReturnsDispersionRequest,
     "AggregatedReturnsRequest": AggregatedReturnsRequest,
     "AggregatedReturnsResponse": AggregatedReturnsResponse,
     "Aggregation": Aggregation,
@@ -2107,6 +2114,8 @@ let typeMap: {[index: string]: any} = {
     "ComplianceRuleUpsertRequest": ComplianceRuleUpsertRequest,
     "ComplianceRuleUpsertResponse": ComplianceRuleUpsertResponse,
     "ComplianceRunInfo": ComplianceRunInfo,
+    "CompositeDispersion": CompositeDispersion,
+    "CompositeDispersionResponse": CompositeDispersionResponse,
     "Compounding": Compounding,
     "ConfigurationRecipe": ConfigurationRecipe,
     "ConfigurationRecipeSnippet": ConfigurationRecipeSnippet,
