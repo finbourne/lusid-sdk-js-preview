@@ -288,6 +288,7 @@ export * from './fxRateSchedule';
 export * from './fxRateScheduleAllOf';
 export * from './fxSwap';
 export * from './fxSwapAllOf';
+export * from './fxTenorConvention';
 export * from './fxVolDependency';
 export * from './fxVolDependencyAllOf';
 export * from './fxVolSurfaceData';
@@ -1119,6 +1120,7 @@ import { FxRateSchedule } from './fxRateSchedule';
 import { FxRateScheduleAllOf } from './fxRateScheduleAllOf';
 import { FxSwap } from './fxSwap';
 import { FxSwapAllOf } from './fxSwapAllOf';
+import { FxTenorConvention } from './fxTenorConvention';
 import { FxVolDependency } from './fxVolDependency';
 import { FxVolDependencyAllOf } from './fxVolDependencyAllOf';
 import { FxVolSurfaceData } from './fxVolSurfaceData';
@@ -2284,6 +2286,7 @@ let typeMap: {[index: string]: any} = {
     "FxRateScheduleAllOf": FxRateScheduleAllOf,
     "FxSwap": FxSwap,
     "FxSwapAllOf": FxSwapAllOf,
+    "FxTenorConvention": FxTenorConvention,
     "FxVolDependency": FxVolDependency,
     "FxVolDependencyAllOf": FxVolDependencyAllOf,
     "FxVolSurfaceData": FxVolSurfaceData,
