@@ -415,6 +415,9 @@ export * from './operandType';
 export * from './operation';
 export * from './operationType';
 export * from './operator';
+export * from './optionEntry';
+export * from './optionalitySchedule';
+export * from './optionalityScheduleAllOf';
 export * from './order';
 export * from './orderBySpec';
 export * from './orderGraphBlock';
@@ -1247,6 +1250,9 @@ import { OperandType } from './operandType';
 import { Operation } from './operation';
 import { OperationType } from './operationType';
 import { Operator } from './operator';
+import { OptionEntry } from './optionEntry';
+import { OptionalitySchedule } from './optionalitySchedule';
+import { OptionalityScheduleAllOf } from './optionalityScheduleAllOf';
 import { Order } from './order';
 import { OrderBySpec } from './orderBySpec';
 import { OrderGraphBlock } from './orderGraphBlock';
@@ -1876,6 +1882,8 @@ let enumsMap: {[index: string]: any} = {
         "OperandType": OperandType,
         "OperationType": OperationType,
         "Operator": Operator,
+        "OptionalitySchedule.ScheduleTypeEnum": OptionalitySchedule.ScheduleTypeEnum,
+        "OptionalityScheduleAllOf.ScheduleTypeEnum": OptionalityScheduleAllOf.ScheduleTypeEnum,
         "OrderBySpec.SortOrderEnum": OrderBySpec.SortOrderEnum,
         "OutputTransaction.TransactionStatusEnum": OutputTransaction.TransactionStatusEnum,
         "PeriodType": PeriodType,
@@ -2401,6 +2409,9 @@ let typeMap: {[index: string]: any} = {
     "OpenEvent": OpenEvent,
     "OpenEventAllOf": OpenEventAllOf,
     "Operation": Operation,
+    "OptionEntry": OptionEntry,
+    "OptionalitySchedule": OptionalitySchedule,
+    "OptionalityScheduleAllOf": OptionalityScheduleAllOf,
     "Order": Order,
     "OrderBySpec": OrderBySpec,
     "OrderGraphBlock": OrderGraphBlock,
