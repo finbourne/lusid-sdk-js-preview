@@ -641,9 +641,11 @@ export * from './resourceListOfReconciliationBreak';
 export * from './resourceListOfRelation';
 export * from './resourceListOfRelationship';
 export * from './resourceListOfScopeDefinition';
+export * from './resourceListOfSideDefinition';
 export * from './resourceListOfString';
 export * from './resourceListOfTaxRuleSet';
 export * from './resourceListOfTransaction';
+export * from './resourceListOfTransactionType';
 export * from './resourceListOfValueType';
 export * from './responseMetaData';
 export * from './resultDataKeyRule';
@@ -686,6 +688,7 @@ export * from './sideConfigurationData';
 export * from './sideConfigurationDataRequest';
 export * from './sideDefinition';
 export * from './sideDefinitionRequest';
+export * from './sidesDefinitionRequest';
 export * from './simpleCashFlowLoan';
 export * from './simpleCashFlowLoanAllOf';
 export * from './simpleInstrument';
@@ -1477,9 +1480,11 @@ import { ResourceListOfReconciliationBreak } from './resourceListOfReconciliatio
 import { ResourceListOfRelation } from './resourceListOfRelation';
 import { ResourceListOfRelationship } from './resourceListOfRelationship';
 import { ResourceListOfScopeDefinition } from './resourceListOfScopeDefinition';
+import { ResourceListOfSideDefinition } from './resourceListOfSideDefinition';
 import { ResourceListOfString } from './resourceListOfString';
 import { ResourceListOfTaxRuleSet } from './resourceListOfTaxRuleSet';
 import { ResourceListOfTransaction } from './resourceListOfTransaction';
+import { ResourceListOfTransactionType } from './resourceListOfTransactionType';
 import { ResourceListOfValueType } from './resourceListOfValueType';
 import { ResponseMetaData } from './responseMetaData';
 import { ResultDataKeyRule } from './resultDataKeyRule';
@@ -1522,6 +1527,7 @@ import { SideConfigurationData } from './sideConfigurationData';
 import { SideConfigurationDataRequest } from './sideConfigurationDataRequest';
 import { SideDefinition } from './sideDefinition';
 import { SideDefinitionRequest } from './sideDefinitionRequest';
+import { SidesDefinitionRequest } from './sidesDefinitionRequest';
 import { SimpleCashFlowLoan } from './simpleCashFlowLoan';
 import { SimpleCashFlowLoanAllOf } from './simpleCashFlowLoanAllOf';
 import { SimpleInstrument } from './simpleInstrument';
@@ -2625,9 +2631,11 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfRelation": ResourceListOfRelation,
     "ResourceListOfRelationship": ResourceListOfRelationship,
     "ResourceListOfScopeDefinition": ResourceListOfScopeDefinition,
+    "ResourceListOfSideDefinition": ResourceListOfSideDefinition,
     "ResourceListOfString": ResourceListOfString,
     "ResourceListOfTaxRuleSet": ResourceListOfTaxRuleSet,
     "ResourceListOfTransaction": ResourceListOfTransaction,
+    "ResourceListOfTransactionType": ResourceListOfTransactionType,
     "ResourceListOfValueType": ResourceListOfValueType,
     "ResponseMetaData": ResponseMetaData,
     "ResultDataKeyRule": ResultDataKeyRule,
@@ -2666,6 +2674,7 @@ let typeMap: {[index: string]: any} = {
     "SideConfigurationDataRequest": SideConfigurationDataRequest,
     "SideDefinition": SideDefinition,
     "SideDefinitionRequest": SideDefinitionRequest,
+    "SidesDefinitionRequest": SidesDefinitionRequest,
     "SimpleCashFlowLoan": SimpleCashFlowLoan,
     "SimpleCashFlowLoanAllOf": SimpleCashFlowLoanAllOf,
     "SimpleInstrument": SimpleInstrument,
