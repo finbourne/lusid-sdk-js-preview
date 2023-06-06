@@ -455,7 +455,6 @@ export * from './packageSetRequest';
 export * from './pagedResourceListOfAbor';
 export * from './pagedResourceListOfAborConfiguration';
 export * from './pagedResourceListOfAccount';
-export * from './pagedResourceListOfAddressKeyDefinition';
 export * from './pagedResourceListOfAllocation';
 export * from './pagedResourceListOfBlock';
 export * from './pagedResourceListOfCalendar';
@@ -1297,7 +1296,6 @@ import { PackageSetRequest } from './packageSetRequest';
 import { PagedResourceListOfAbor } from './pagedResourceListOfAbor';
 import { PagedResourceListOfAborConfiguration } from './pagedResourceListOfAborConfiguration';
 import { PagedResourceListOfAccount } from './pagedResourceListOfAccount';
-import { PagedResourceListOfAddressKeyDefinition } from './pagedResourceListOfAddressKeyDefinition';
 import { PagedResourceListOfAllocation } from './pagedResourceListOfAllocation';
 import { PagedResourceListOfBlock } from './pagedResourceListOfBlock';
 import { PagedResourceListOfCalendar } from './pagedResourceListOfCalendar';
@@ -2463,7 +2461,6 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfAbor": PagedResourceListOfAbor,
     "PagedResourceListOfAborConfiguration": PagedResourceListOfAborConfiguration,
     "PagedResourceListOfAccount": PagedResourceListOfAccount,
-    "PagedResourceListOfAddressKeyDefinition": PagedResourceListOfAddressKeyDefinition,
     "PagedResourceListOfAllocation": PagedResourceListOfAllocation,
     "PagedResourceListOfBlock": PagedResourceListOfBlock,
     "PagedResourceListOfCalendar": PagedResourceListOfCalendar,
