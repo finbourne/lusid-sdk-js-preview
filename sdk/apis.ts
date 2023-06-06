@@ -1,5 +1,6 @@
 import {AborApi} from './api/aborApi';
 import {AborConfigurationApi} from './api/aborConfigurationApi';
+import {AddressKeyDefinitionApi} from './api/addressKeyDefinitionApi';
 import {AggregationApi} from './api/aggregationApi';
 import {AllocationServiceApi} from './api/allocationServiceApi';
 import {AllocationsApi} from './api/allocationsApi';
@@ -55,6 +56,7 @@ import {TranslationApi} from './api/translationApi';
 export class Api {
     public abor:  AborApi
     public aborConfiguration:  AborConfigurationApi
+    public addressKeyDefinition:  AddressKeyDefinitionApi
     public aggregation:  AggregationApi
     public allocationService:  AllocationServiceApi
     public allocations:  AllocationsApi

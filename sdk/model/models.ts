@@ -23,6 +23,7 @@ export * from './actionResultOfPortfolio';
 export * from './addBusinessDaysToDateRequest';
 export * from './addBusinessDaysToDateResponse';
 export * from './addressDefinition';
+export * from './addressKeyDefinition';
 export * from './addressKeyFilter';
 export * from './addressKeyOptionDefinition';
 export * from './adjustHolding';
@@ -129,6 +130,7 @@ export * from './corporateActionTransitionRequest';
 export * from './counterpartyAgreement';
 export * from './counterpartyRiskInformation';
 export * from './counterpartySignatory';
+export * from './createAddressKeyDefinitionRequest';
 export * from './createCalendarRequest';
 export * from './createCorporateActionSourceRequest';
 export * from './createCutLabelDefinitionRequest';
@@ -453,6 +455,7 @@ export * from './packageSetRequest';
 export * from './pagedResourceListOfAbor';
 export * from './pagedResourceListOfAborConfiguration';
 export * from './pagedResourceListOfAccount';
+export * from './pagedResourceListOfAddressKeyDefinition';
 export * from './pagedResourceListOfAllocation';
 export * from './pagedResourceListOfBlock';
 export * from './pagedResourceListOfCalendar';
@@ -862,6 +865,7 @@ import { ActionResultOfPortfolio } from './actionResultOfPortfolio';
 import { AddBusinessDaysToDateRequest } from './addBusinessDaysToDateRequest';
 import { AddBusinessDaysToDateResponse } from './addBusinessDaysToDateResponse';
 import { AddressDefinition } from './addressDefinition';
+import { AddressKeyDefinition } from './addressKeyDefinition';
 import { AddressKeyFilter } from './addressKeyFilter';
 import { AddressKeyOptionDefinition } from './addressKeyOptionDefinition';
 import { AdjustHolding } from './adjustHolding';
@@ -968,6 +972,7 @@ import { CorporateActionTransitionRequest } from './corporateActionTransitionReq
 import { CounterpartyAgreement } from './counterpartyAgreement';
 import { CounterpartyRiskInformation } from './counterpartyRiskInformation';
 import { CounterpartySignatory } from './counterpartySignatory';
+import { CreateAddressKeyDefinitionRequest } from './createAddressKeyDefinitionRequest';
 import { CreateCalendarRequest } from './createCalendarRequest';
 import { CreateCorporateActionSourceRequest } from './createCorporateActionSourceRequest';
 import { CreateCutLabelDefinitionRequest } from './createCutLabelDefinitionRequest';
@@ -1292,6 +1297,7 @@ import { PackageSetRequest } from './packageSetRequest';
 import { PagedResourceListOfAbor } from './pagedResourceListOfAbor';
 import { PagedResourceListOfAborConfiguration } from './pagedResourceListOfAborConfiguration';
 import { PagedResourceListOfAccount } from './pagedResourceListOfAccount';
+import { PagedResourceListOfAddressKeyDefinition } from './pagedResourceListOfAddressKeyDefinition';
 import { PagedResourceListOfAllocation } from './pagedResourceListOfAllocation';
 import { PagedResourceListOfBlock } from './pagedResourceListOfBlock';
 import { PagedResourceListOfCalendar } from './pagedResourceListOfCalendar';
@@ -2048,6 +2054,7 @@ let typeMap: {[index: string]: any} = {
     "AddBusinessDaysToDateRequest": AddBusinessDaysToDateRequest,
     "AddBusinessDaysToDateResponse": AddBusinessDaysToDateResponse,
     "AddressDefinition": AddressDefinition,
+    "AddressKeyDefinition": AddressKeyDefinition,
     "AddressKeyFilter": AddressKeyFilter,
     "AddressKeyOptionDefinition": AddressKeyOptionDefinition,
     "AdjustHolding": AdjustHolding,
@@ -2150,6 +2157,7 @@ let typeMap: {[index: string]: any} = {
     "CounterpartyAgreement": CounterpartyAgreement,
     "CounterpartyRiskInformation": CounterpartyRiskInformation,
     "CounterpartySignatory": CounterpartySignatory,
+    "CreateAddressKeyDefinitionRequest": CreateAddressKeyDefinitionRequest,
     "CreateCalendarRequest": CreateCalendarRequest,
     "CreateCorporateActionSourceRequest": CreateCorporateActionSourceRequest,
     "CreateCutLabelDefinitionRequest": CreateCutLabelDefinitionRequest,
@@ -2455,6 +2463,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfAbor": PagedResourceListOfAbor,
     "PagedResourceListOfAborConfiguration": PagedResourceListOfAborConfiguration,
     "PagedResourceListOfAccount": PagedResourceListOfAccount,
+    "PagedResourceListOfAddressKeyDefinition": PagedResourceListOfAddressKeyDefinition,
     "PagedResourceListOfAllocation": PagedResourceListOfAllocation,
     "PagedResourceListOfBlock": PagedResourceListOfBlock,
     "PagedResourceListOfCalendar": PagedResourceListOfCalendar,
