@@ -35,9 +35,6 @@ export class VersionedResourceListWithWarningsOfPortfolioHolding {
     */
     'previousPage'?: string | null;
     'warnings'?: Array<Warning> | null;
-    /**
-    * Collection of links.
-    */
     'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
