@@ -10,6 +10,7 @@ import {CalendarsApi} from './api/calendarsApi';
 import {ChartOfAccountsApi} from './api/chartOfAccountsApi';
 import {ComplexMarketDataApi} from './api/complexMarketDataApi';
 import {ComplianceApi} from './api/complianceApi';
+import {ComplianceGenericApi} from './api/complianceGenericApi';
 import {ConfigurationRecipeApi} from './api/configurationRecipeApi';
 import {ConventionsApi} from './api/conventionsApi';
 import {CorporateActionSourcesApi} from './api/corporateActionSourcesApi';
@@ -66,6 +67,7 @@ export class Api {
     public chartOfAccounts:  ChartOfAccountsApi
     public complexMarketData:  ComplexMarketDataApi
     public compliance:  ComplianceApi
+    public complianceGeneric:  ComplianceGenericApi
     public configurationRecipe:  ConfigurationRecipeApi
     public conventions:  ConventionsApi
     public corporateActionSources:  CorporateActionSourcesApi

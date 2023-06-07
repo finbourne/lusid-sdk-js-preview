@@ -113,6 +113,9 @@ export * from './complianceRuleResult';
 export * from './complianceRuleUpsertRequest';
 export * from './complianceRuleUpsertResponse';
 export * from './complianceRunInfo';
+export * from './complianceTemplate';
+export * from './complianceTemplateParameter';
+export * from './complianceTemplateVariation';
 export * from './compositeDispersion';
 export * from './compositeDispersionResponse';
 export * from './compounding';
@@ -459,6 +462,7 @@ export * from './pagedResourceListOfAllocation';
 export * from './pagedResourceListOfBlock';
 export * from './pagedResourceListOfCalendar';
 export * from './pagedResourceListOfChartOfAccounts';
+export * from './pagedResourceListOfComplianceTemplate';
 export * from './pagedResourceListOfCorporateActionSource';
 export * from './pagedResourceListOfCustodianAccount';
 export * from './pagedResourceListOfCustomEntityDefinition';
@@ -954,6 +958,9 @@ import { ComplianceRuleResult } from './complianceRuleResult';
 import { ComplianceRuleUpsertRequest } from './complianceRuleUpsertRequest';
 import { ComplianceRuleUpsertResponse } from './complianceRuleUpsertResponse';
 import { ComplianceRunInfo } from './complianceRunInfo';
+import { ComplianceTemplate } from './complianceTemplate';
+import { ComplianceTemplateParameter } from './complianceTemplateParameter';
+import { ComplianceTemplateVariation } from './complianceTemplateVariation';
 import { CompositeDispersion } from './compositeDispersion';
 import { CompositeDispersionResponse } from './compositeDispersionResponse';
 import { Compounding } from './compounding';
@@ -1300,6 +1307,7 @@ import { PagedResourceListOfAllocation } from './pagedResourceListOfAllocation';
 import { PagedResourceListOfBlock } from './pagedResourceListOfBlock';
 import { PagedResourceListOfCalendar } from './pagedResourceListOfCalendar';
 import { PagedResourceListOfChartOfAccounts } from './pagedResourceListOfChartOfAccounts';
+import { PagedResourceListOfComplianceTemplate } from './pagedResourceListOfComplianceTemplate';
 import { PagedResourceListOfCorporateActionSource } from './pagedResourceListOfCorporateActionSource';
 import { PagedResourceListOfCustodianAccount } from './pagedResourceListOfCustodianAccount';
 import { PagedResourceListOfCustomEntityDefinition } from './pagedResourceListOfCustomEntityDefinition';
@@ -2138,6 +2146,9 @@ let typeMap: {[index: string]: any} = {
     "ComplianceRuleUpsertRequest": ComplianceRuleUpsertRequest,
     "ComplianceRuleUpsertResponse": ComplianceRuleUpsertResponse,
     "ComplianceRunInfo": ComplianceRunInfo,
+    "ComplianceTemplate": ComplianceTemplate,
+    "ComplianceTemplateParameter": ComplianceTemplateParameter,
+    "ComplianceTemplateVariation": ComplianceTemplateVariation,
     "CompositeDispersion": CompositeDispersion,
     "CompositeDispersionResponse": CompositeDispersionResponse,
     "Compounding": Compounding,
@@ -2465,6 +2476,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfBlock": PagedResourceListOfBlock,
     "PagedResourceListOfCalendar": PagedResourceListOfCalendar,
     "PagedResourceListOfChartOfAccounts": PagedResourceListOfChartOfAccounts,
+    "PagedResourceListOfComplianceTemplate": PagedResourceListOfComplianceTemplate,
     "PagedResourceListOfCorporateActionSource": PagedResourceListOfCorporateActionSource,
     "PagedResourceListOfCustodianAccount": PagedResourceListOfCustodianAccount,
     "PagedResourceListOfCustomEntityDefinition": PagedResourceListOfCustomEntityDefinition,
