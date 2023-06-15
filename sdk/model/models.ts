@@ -35,7 +35,6 @@ export * from './aggregatedReturn';
 export * from './aggregatedReturnsDispersionRequest';
 export * from './aggregatedReturnsRequest';
 export * from './aggregatedReturnsResponse';
-export * from './aggregation';
 export * from './aggregationContext';
 export * from './aggregationMeasureFailureDetail';
 export * from './aggregationOp';
@@ -319,7 +318,6 @@ export * from './holdingAdjustmentWithDate';
 export * from './holdingContext';
 export * from './holdingsAdjustment';
 export * from './holdingsAdjustmentHeader';
-export * from './iDataRecord';
 export * from './iUnitDefinitionDto';
 export * from './idSelectorDefinition';
 export * from './identifierPartSchema';
@@ -718,7 +716,6 @@ export * from './structuredResultData';
 export * from './structuredResultDataId';
 export * from './subHoldingKeyValueEquals';
 export * from './subHoldingKeyValueEqualsAllOf';
-export * from './supportedAnalyticsInternalRequest';
 export * from './targetTaxLot';
 export * from './targetTaxLotRequest';
 export * from './taxRule';
@@ -888,7 +885,6 @@ import { AggregatedReturn } from './aggregatedReturn';
 import { AggregatedReturnsDispersionRequest } from './aggregatedReturnsDispersionRequest';
 import { AggregatedReturnsRequest } from './aggregatedReturnsRequest';
 import { AggregatedReturnsResponse } from './aggregatedReturnsResponse';
-import { Aggregation } from './aggregation';
 import { AggregationContext } from './aggregationContext';
 import { AggregationMeasureFailureDetail } from './aggregationMeasureFailureDetail';
 import { AggregationOp } from './aggregationOp';
@@ -1172,7 +1168,6 @@ import { HoldingAdjustmentWithDate } from './holdingAdjustmentWithDate';
 import { HoldingContext } from './holdingContext';
 import { HoldingsAdjustment } from './holdingsAdjustment';
 import { HoldingsAdjustmentHeader } from './holdingsAdjustmentHeader';
-import { IDataRecord } from './iDataRecord';
 import { IUnitDefinitionDto } from './iUnitDefinitionDto';
 import { IdSelectorDefinition } from './idSelectorDefinition';
 import { IdentifierPartSchema } from './identifierPartSchema';
@@ -1571,7 +1566,6 @@ import { StructuredResultData } from './structuredResultData';
 import { StructuredResultDataId } from './structuredResultDataId';
 import { SubHoldingKeyValueEquals } from './subHoldingKeyValueEquals';
 import { SubHoldingKeyValueEqualsAllOf } from './subHoldingKeyValueEqualsAllOf';
-import { SupportedAnalyticsInternalRequest } from './supportedAnalyticsInternalRequest';
 import { TargetTaxLot } from './targetTaxLot';
 import { TargetTaxLotRequest } from './targetTaxLotRequest';
 import { TaxRule } from './taxRule';
@@ -2095,7 +2089,6 @@ let typeMap: {[index: string]: any} = {
     "AggregatedReturnsDispersionRequest": AggregatedReturnsDispersionRequest,
     "AggregatedReturnsRequest": AggregatedReturnsRequest,
     "AggregatedReturnsResponse": AggregatedReturnsResponse,
-    "Aggregation": Aggregation,
     "AggregationContext": AggregationContext,
     "AggregationMeasureFailureDetail": AggregationMeasureFailureDetail,
     "AggregationOptions": AggregationOptions,
@@ -2368,7 +2361,6 @@ let typeMap: {[index: string]: any} = {
     "HoldingContext": HoldingContext,
     "HoldingsAdjustment": HoldingsAdjustment,
     "HoldingsAdjustmentHeader": HoldingsAdjustmentHeader,
-    "IDataRecord": IDataRecord,
     "IUnitDefinitionDto": IUnitDefinitionDto,
     "IdSelectorDefinition": IdSelectorDefinition,
     "IdentifierPartSchema": IdentifierPartSchema,
@@ -2736,7 +2728,6 @@ let typeMap: {[index: string]: any} = {
     "StructuredResultDataId": StructuredResultDataId,
     "SubHoldingKeyValueEquals": SubHoldingKeyValueEquals,
     "SubHoldingKeyValueEqualsAllOf": SubHoldingKeyValueEqualsAllOf,
-    "SupportedAnalyticsInternalRequest": SupportedAnalyticsInternalRequest,
     "TargetTaxLot": TargetTaxLot,
     "TargetTaxLotRequest": TargetTaxLotRequest,
     "TaxRule": TaxRule,
