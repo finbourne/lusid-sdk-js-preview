@@ -37,6 +37,7 @@ import {PortfoliosApi} from './api/portfoliosApi';
 import {PropertyDefinitionsApi} from './api/propertyDefinitionsApi';
 import {QuotesApi} from './api/quotesApi';
 import {ReconciliationsApi} from './api/reconciliationsApi';
+import {ReferenceListsApi} from './api/referenceListsApi';
 import {ReferencePortfolioApi} from './api/referencePortfolioApi';
 import {RelationDefinitionsApi} from './api/relationDefinitionsApi';
 import {RelationsApi} from './api/relationsApi';
@@ -94,6 +95,7 @@ export class Api {
     public propertyDefinitions:  PropertyDefinitionsApi
     public quotes:  QuotesApi
     public reconciliations:  ReconciliationsApi
+    public referenceLists:  ReferenceListsApi
     public referencePortfolio:  ReferencePortfolioApi
     public relationDefinitions:  RelationDefinitionsApi
     public relations:  RelationsApi
