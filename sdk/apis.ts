@@ -24,7 +24,6 @@ import {EntitiesApi} from './api/entitiesApi';
 import {ExecutionsApi} from './api/executionsApi';
 import {InstrumentEventsApi} from './api/instrumentEventsApi';
 import {InstrumentsApi} from './api/instrumentsApi';
-import {LegacyComplianceApi} from './api/legacyComplianceApi';
 import {LegalEntitiesApi} from './api/legalEntitiesApi';
 import {OrderGraphApi} from './api/orderGraphApi';
 import {OrderInstructionsApi} from './api/orderInstructionsApi';
@@ -83,7 +82,6 @@ export class Api {
     public executions:  ExecutionsApi
     public instrumentEvents:  InstrumentEventsApi
     public instruments:  InstrumentsApi
-    public legacyCompliance:  LegacyComplianceApi
     public legalEntities:  LegalEntitiesApi
     public orderGraph:  OrderGraphApi
     public orderInstructions:  OrderInstructionsApi
