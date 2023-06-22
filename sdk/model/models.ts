@@ -109,9 +109,7 @@ export * from './complexBondAllOf';
 export * from './complexMarketData';
 export * from './complexMarketDataId';
 export * from './complianceBreachedOrderInfo';
-export * from './complianceParameter';
 export * from './complianceRule';
-export * from './complianceRuleResponse';
 export * from './complianceRuleResult';
 export * from './complianceRuleUpsertRequest';
 export * from './complianceRuleUpsertResponse';
@@ -469,7 +467,6 @@ export * from './pagedResourceListOfAllocation';
 export * from './pagedResourceListOfBlock';
 export * from './pagedResourceListOfCalendar';
 export * from './pagedResourceListOfChartOfAccounts';
-export * from './pagedResourceListOfComplianceRuleResponse';
 export * from './pagedResourceListOfComplianceTemplate';
 export * from './pagedResourceListOfCorporateActionSource';
 export * from './pagedResourceListOfCustodianAccount';
@@ -786,7 +783,6 @@ export * from './updateTaxRuleSetRequest';
 export * from './updateUnitRequest';
 export * from './upsertCdsFlowConventionsRequest';
 export * from './upsertComplexMarketDataRequest';
-export * from './upsertComplianceRuleRequest';
 export * from './upsertCorporateActionRequest';
 export * from './upsertCorporateActionsResponse';
 export * from './upsertCounterpartyAgreementRequest';
@@ -971,9 +967,7 @@ import { ComplexBondAllOf } from './complexBondAllOf';
 import { ComplexMarketData } from './complexMarketData';
 import { ComplexMarketDataId } from './complexMarketDataId';
 import { ComplianceBreachedOrderInfo } from './complianceBreachedOrderInfo';
-import { ComplianceParameter } from './complianceParameter';
 import { ComplianceRule } from './complianceRule';
-import { ComplianceRuleResponse } from './complianceRuleResponse';
 import { ComplianceRuleResult } from './complianceRuleResult';
 import { ComplianceRuleUpsertRequest } from './complianceRuleUpsertRequest';
 import { ComplianceRuleUpsertResponse } from './complianceRuleUpsertResponse';
@@ -1331,7 +1325,6 @@ import { PagedResourceListOfAllocation } from './pagedResourceListOfAllocation';
 import { PagedResourceListOfBlock } from './pagedResourceListOfBlock';
 import { PagedResourceListOfCalendar } from './pagedResourceListOfCalendar';
 import { PagedResourceListOfChartOfAccounts } from './pagedResourceListOfChartOfAccounts';
-import { PagedResourceListOfComplianceRuleResponse } from './pagedResourceListOfComplianceRuleResponse';
 import { PagedResourceListOfComplianceTemplate } from './pagedResourceListOfComplianceTemplate';
 import { PagedResourceListOfCorporateActionSource } from './pagedResourceListOfCorporateActionSource';
 import { PagedResourceListOfCustodianAccount } from './pagedResourceListOfCustodianAccount';
@@ -1648,7 +1641,6 @@ import { UpdateTaxRuleSetRequest } from './updateTaxRuleSetRequest';
 import { UpdateUnitRequest } from './updateUnitRequest';
 import { UpsertCdsFlowConventionsRequest } from './upsertCdsFlowConventionsRequest';
 import { UpsertComplexMarketDataRequest } from './upsertComplexMarketDataRequest';
-import { UpsertComplianceRuleRequest } from './upsertComplianceRuleRequest';
 import { UpsertCorporateActionRequest } from './upsertCorporateActionRequest';
 import { UpsertCorporateActionsResponse } from './upsertCorporateActionsResponse';
 import { UpsertCounterpartyAgreementRequest } from './upsertCounterpartyAgreementRequest';
@@ -2188,9 +2180,7 @@ let typeMap: {[index: string]: any} = {
     "ComplexMarketData": ComplexMarketData,
     "ComplexMarketDataId": ComplexMarketDataId,
     "ComplianceBreachedOrderInfo": ComplianceBreachedOrderInfo,
-    "ComplianceParameter": ComplianceParameter,
     "ComplianceRule": ComplianceRule,
-    "ComplianceRuleResponse": ComplianceRuleResponse,
     "ComplianceRuleResult": ComplianceRuleResult,
     "ComplianceRuleUpsertRequest": ComplianceRuleUpsertRequest,
     "ComplianceRuleUpsertResponse": ComplianceRuleUpsertResponse,
@@ -2529,7 +2519,6 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfBlock": PagedResourceListOfBlock,
     "PagedResourceListOfCalendar": PagedResourceListOfCalendar,
     "PagedResourceListOfChartOfAccounts": PagedResourceListOfChartOfAccounts,
-    "PagedResourceListOfComplianceRuleResponse": PagedResourceListOfComplianceRuleResponse,
     "PagedResourceListOfComplianceTemplate": PagedResourceListOfComplianceTemplate,
     "PagedResourceListOfCorporateActionSource": PagedResourceListOfCorporateActionSource,
     "PagedResourceListOfCustodianAccount": PagedResourceListOfCustodianAccount,
@@ -2820,7 +2809,6 @@ let typeMap: {[index: string]: any} = {
     "UpdateUnitRequest": UpdateUnitRequest,
     "UpsertCdsFlowConventionsRequest": UpsertCdsFlowConventionsRequest,
     "UpsertComplexMarketDataRequest": UpsertComplexMarketDataRequest,
-    "UpsertComplianceRuleRequest": UpsertComplianceRuleRequest,
     "UpsertCorporateActionRequest": UpsertCorporateActionRequest,
     "UpsertCorporateActionsResponse": UpsertCorporateActionsResponse,
     "UpsertCounterpartyAgreementRequest": UpsertCounterpartyAgreementRequest,
