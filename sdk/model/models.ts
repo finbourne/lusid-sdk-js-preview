@@ -612,6 +612,7 @@ export * from './resetEventAllOf';
 export * from './resourceId';
 export * from './resourceListOfAccessControlledResource';
 export * from './resourceListOfAccessMetadataValueOf';
+export * from './resourceListOfAddressKeyDefinition';
 export * from './resourceListOfAggregatedReturn';
 export * from './resourceListOfAggregationQuery';
 export * from './resourceListOfAllocation';
@@ -1475,6 +1476,7 @@ import { ResetEventAllOf } from './resetEventAllOf';
 import { ResourceId } from './resourceId';
 import { ResourceListOfAccessControlledResource } from './resourceListOfAccessControlledResource';
 import { ResourceListOfAccessMetadataValueOf } from './resourceListOfAccessMetadataValueOf';
+import { ResourceListOfAddressKeyDefinition } from './resourceListOfAddressKeyDefinition';
 import { ResourceListOfAggregatedReturn } from './resourceListOfAggregatedReturn';
 import { ResourceListOfAggregationQuery } from './resourceListOfAggregationQuery';
 import { ResourceListOfAllocation } from './resourceListOfAllocation';
@@ -2661,6 +2663,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceId": ResourceId,
     "ResourceListOfAccessControlledResource": ResourceListOfAccessControlledResource,
     "ResourceListOfAccessMetadataValueOf": ResourceListOfAccessMetadataValueOf,
+    "ResourceListOfAddressKeyDefinition": ResourceListOfAddressKeyDefinition,
     "ResourceListOfAggregatedReturn": ResourceListOfAggregatedReturn,
     "ResourceListOfAggregationQuery": ResourceListOfAggregationQuery,
     "ResourceListOfAllocation": ResourceListOfAllocation,

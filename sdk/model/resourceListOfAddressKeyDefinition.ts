@@ -11,211 +11,65 @@
  */
 
 import { RequestFile } from './models';
-import { CurrencyAndAmount } from './currencyAndAmount';
-import { CustodianAccount } from './custodianAccount';
-import { OtcConfirmation } from './otcConfirmation';
-import { PerpetualProperty } from './perpetualProperty';
-import { ResourceId } from './resourceId';
-import { TransactionPrice } from './transactionPrice';
+import { AddressKeyDefinition } from './addressKeyDefinition';
+import { Link } from './link';
 
 /**
-* A list of transactions.
+* A collection of resources that can be returned from requests.
 */
-export class Transaction {
+export class ResourceListOfAddressKeyDefinition {
     /**
-    * The unique identifier for the transaction.
+    * The resources to list.
     */
-    'transactionId': string;
+    'values': Array<AddressKeyDefinition>;
     /**
-    * The type of the transaction e.g. \'Buy\', \'Sell\'. The transaction type should have been pre-configured via the System Configuration API endpoint.
+    * The URI of the resource list.
     */
-    'type': string;
+    'href'?: string | null;
     /**
-    * A set of instrument identifiers that can resolve the transaction to a unique instrument.
+    * Collection of links.
     */
-    'instrumentIdentifiers'?: { [key: string]: string; } | null;
+    'links'?: Array<Link> | null;
     /**
-    * The scope in which the transaction\'s instrument lies.
+    * The next page of results.
     */
-    'instrumentScope'?: string | null;
+    'nextPage'?: string | null;
     /**
-    * The unqiue Lusid Instrument Id (LUID) of the instrument that the transaction is in.
+    * The previous page of results.
     */
-    'instrumentUid': string;
-    /**
-    * The date of the transaction.
-    */
-    'transactionDate': Date;
-    /**
-    * The settlement date of the transaction.
-    */
-    'settlementDate': Date;
-    /**
-    * The number of units transacted in the associated instrument.
-    */
-    'units': number;
-    'transactionPrice'?: TransactionPrice;
-    'totalConsideration': CurrencyAndAmount;
-    /**
-    * The exchange rate between the transaction and settlement currency (settlement currency being represented by the TotalConsideration.Currency). For example if the transaction currency is in USD and the settlement currency is in GBP this this the USD/GBP rate.
-    */
-    'exchangeRate'?: number | null;
-    /**
-    * The transaction currency.
-    */
-    'transactionCurrency'?: string | null;
-    /**
-    * Set of unique transaction properties and associated values to stored with the transaction. Each property will be from the \'Transaction\' domain.
-    */
-    'properties'?: { [key: string]: PerpetualProperty; } | null;
-    /**
-    * The identifier for the counterparty of the transaction.
-    */
-    'counterpartyId'?: string | null;
-    /**
-    * The source of the transaction. This is used to look up the appropriate transaction group set in the transaction type configuration.
-    */
-    'source'?: string | null;
-    /**
-    * The asAt datetime that the transaction was added to LUSID.
-    */
-    'entryDateTime'?: Date;
-    'otcConfirmation'?: OtcConfirmation;
-    /**
-    * The status of the transaction. The available values are: Active, Amended, Cancelled
-    */
-    'transactionStatus'?: Transaction.TransactionStatusEnum;
-    /**
-    * If the transaction has been cancelled, the asAt datetime that the transaction was cancelled.
-    */
-    'cancelDateTime'?: Date | null;
-    'orderId'?: ResourceId;
-    'allocationId'?: ResourceId;
-    'custodianAccount'?: CustodianAccount;
+    'previousPage'?: string | null;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "transactionId",
-            "baseName": "transactionId",
+            "name": "values",
+            "baseName": "values",
+            "type": "Array<AddressKeyDefinition>"
+        },
+        {
+            "name": "href",
+            "baseName": "href",
             "type": "string"
         },
         {
-            "name": "type",
-            "baseName": "type",
+            "name": "links",
+            "baseName": "links",
+            "type": "Array<Link>"
+        },
+        {
+            "name": "nextPage",
+            "baseName": "nextPage",
             "type": "string"
         },
         {
-            "name": "instrumentIdentifiers",
-            "baseName": "instrumentIdentifiers",
-            "type": "{ [key: string]: string; }"
-        },
-        {
-            "name": "instrumentScope",
-            "baseName": "instrumentScope",
+            "name": "previousPage",
+            "baseName": "previousPage",
             "type": "string"
-        },
-        {
-            "name": "instrumentUid",
-            "baseName": "instrumentUid",
-            "type": "string"
-        },
-        {
-            "name": "transactionDate",
-            "baseName": "transactionDate",
-            "type": "Date"
-        },
-        {
-            "name": "settlementDate",
-            "baseName": "settlementDate",
-            "type": "Date"
-        },
-        {
-            "name": "units",
-            "baseName": "units",
-            "type": "number"
-        },
-        {
-            "name": "transactionPrice",
-            "baseName": "transactionPrice",
-            "type": "TransactionPrice"
-        },
-        {
-            "name": "totalConsideration",
-            "baseName": "totalConsideration",
-            "type": "CurrencyAndAmount"
-        },
-        {
-            "name": "exchangeRate",
-            "baseName": "exchangeRate",
-            "type": "number"
-        },
-        {
-            "name": "transactionCurrency",
-            "baseName": "transactionCurrency",
-            "type": "string"
-        },
-        {
-            "name": "properties",
-            "baseName": "properties",
-            "type": "{ [key: string]: PerpetualProperty; }"
-        },
-        {
-            "name": "counterpartyId",
-            "baseName": "counterpartyId",
-            "type": "string"
-        },
-        {
-            "name": "source",
-            "baseName": "source",
-            "type": "string"
-        },
-        {
-            "name": "entryDateTime",
-            "baseName": "entryDateTime",
-            "type": "Date"
-        },
-        {
-            "name": "otcConfirmation",
-            "baseName": "otcConfirmation",
-            "type": "OtcConfirmation"
-        },
-        {
-            "name": "transactionStatus",
-            "baseName": "transactionStatus",
-            "type": "Transaction.TransactionStatusEnum"
-        },
-        {
-            "name": "cancelDateTime",
-            "baseName": "cancelDateTime",
-            "type": "Date"
-        },
-        {
-            "name": "orderId",
-            "baseName": "orderId",
-            "type": "ResourceId"
-        },
-        {
-            "name": "allocationId",
-            "baseName": "allocationId",
-            "type": "ResourceId"
-        },
-        {
-            "name": "custodianAccount",
-            "baseName": "custodianAccount",
-            "type": "CustodianAccount"
         }    ];
 
     static getAttributeTypeMap() {
-        return Transaction.attributeTypeMap;
+        return ResourceListOfAddressKeyDefinition.attributeTypeMap;
     }
 }
 
-export namespace Transaction {
-    export enum TransactionStatusEnum {
-        Active = <any> 'Active',
-        Amended = <any> 'Amended',
-        Cancelled = <any> 'Cancelled'
-    }
-}
