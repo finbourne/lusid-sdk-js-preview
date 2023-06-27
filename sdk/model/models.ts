@@ -331,6 +331,7 @@ export * from './indexModelOptionsAllOf';
 export * from './indexProjectionDependency';
 export * from './indexProjectionDependencyAllOf';
 export * from './industryClassifier';
+export * from './inflationIndexConventions';
 export * from './inflationLinkedBond';
 export * from './inflationLinkedBondAllOf';
 export * from './inflationSwap';
@@ -1193,6 +1194,7 @@ import { IndexModelOptionsAllOf } from './indexModelOptionsAllOf';
 import { IndexProjectionDependency } from './indexProjectionDependency';
 import { IndexProjectionDependencyAllOf } from './indexProjectionDependencyAllOf';
 import { IndustryClassifier } from './industryClassifier';
+import { InflationIndexConventions } from './inflationIndexConventions';
 import { InflationLinkedBond } from './inflationLinkedBond';
 import { InflationLinkedBondAllOf } from './inflationLinkedBondAllOf';
 import { InflationSwap } from './inflationSwap';
@@ -2403,6 +2405,7 @@ let typeMap: {[index: string]: any} = {
     "IndexProjectionDependency": IndexProjectionDependency,
     "IndexProjectionDependencyAllOf": IndexProjectionDependencyAllOf,
     "IndustryClassifier": IndustryClassifier,
+    "InflationIndexConventions": InflationIndexConventions,
     "InflationLinkedBond": InflationLinkedBond,
     "InflationLinkedBondAllOf": InflationLinkedBondAllOf,
     "InflationSwap": InflationSwap,
