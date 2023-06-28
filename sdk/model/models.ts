@@ -116,6 +116,7 @@ export * from './complianceRuleResult';
 export * from './complianceRuleUpsertRequest';
 export * from './complianceRuleUpsertResponse';
 export * from './complianceRunInfo';
+export * from './complianceRunInfoV2';
 export * from './complianceTemplate';
 export * from './complianceTemplateParameter';
 export * from './complianceTemplateVariation';
@@ -980,6 +981,7 @@ import { ComplianceRuleResult } from './complianceRuleResult';
 import { ComplianceRuleUpsertRequest } from './complianceRuleUpsertRequest';
 import { ComplianceRuleUpsertResponse } from './complianceRuleUpsertResponse';
 import { ComplianceRunInfo } from './complianceRunInfo';
+import { ComplianceRunInfoV2 } from './complianceRunInfoV2';
 import { ComplianceTemplate } from './complianceTemplate';
 import { ComplianceTemplateParameter } from './complianceTemplateParameter';
 import { ComplianceTemplateVariation } from './complianceTemplateVariation';
@@ -2199,6 +2201,7 @@ let typeMap: {[index: string]: any} = {
     "ComplianceRuleUpsertRequest": ComplianceRuleUpsertRequest,
     "ComplianceRuleUpsertResponse": ComplianceRuleUpsertResponse,
     "ComplianceRunInfo": ComplianceRunInfo,
+    "ComplianceRunInfoV2": ComplianceRunInfoV2,
     "ComplianceTemplate": ComplianceTemplate,
     "ComplianceTemplateParameter": ComplianceTemplateParameter,
     "ComplianceTemplateVariation": ComplianceTemplateVariation,
