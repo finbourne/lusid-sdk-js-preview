@@ -11,21 +11,40 @@
  */
 
 import { RequestFile } from './models';
+import { ResourceId } from './resourceId';
 
-/**
-* Discriminator for EconomicDependency.
-*/
-export enum EconomicDependencyType {
-    OpaqueDependency = <any> 'OpaqueDependency',
-    CashDependency = <any> 'CashDependency',
-    DiscountingDependency = <any> 'DiscountingDependency',
-    EquityCurveDependency = <any> 'EquityCurveDependency',
-    EquityVolDependency = <any> 'EquityVolDependency',
-    FxDependency = <any> 'FxDependency',
-    FxForwardsDependency = <any> 'FxForwardsDependency',
-    FxVolDependency = <any> 'FxVolDependency',
-    IndexProjectionDependency = <any> 'IndexProjectionDependency',
-    IrVolDependency = <any> 'IrVolDependency',
-    QuoteDependency = <any> 'QuoteDependency',
-    Vendor = <any> 'Vendor'
+export class ComplianceRunInfoV2 {
+    'runId': ResourceId;
+    'instigatedAt': Date;
+    'completedAt': Date;
+    'schedule': string;
+
+    static discriminator: string | undefined = undefined;
+
+    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+        {
+            "name": "runId",
+            "baseName": "runId",
+            "type": "ResourceId"
+        },
+        {
+            "name": "instigatedAt",
+            "baseName": "instigatedAt",
+            "type": "Date"
+        },
+        {
+            "name": "completedAt",
+            "baseName": "completedAt",
+            "type": "Date"
+        },
+        {
+            "name": "schedule",
+            "baseName": "schedule",
+            "type": "string"
+        }    ];
+
+    static getAttributeTypeMap() {
+        return ComplianceRunInfoV2.attributeTypeMap;
+    }
 }
+
