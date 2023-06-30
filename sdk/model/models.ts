@@ -111,12 +111,15 @@ export * from './complexMarketDataId';
 export * from './complianceBreachedOrderInfo';
 export * from './complianceParameter';
 export * from './complianceRule';
+export * from './complianceRuleBreakdown';
 export * from './complianceRuleResponse';
 export * from './complianceRuleResult';
 export * from './complianceRuleUpsertRequest';
 export * from './complianceRuleUpsertResponse';
 export * from './complianceRunInfo';
 export * from './complianceRunInfoV2';
+export * from './complianceRunSummary';
+export * from './complianceSummaryRuleResult';
 export * from './complianceTemplate';
 export * from './complianceTemplateParameter';
 export * from './complianceTemplateVariation';
@@ -976,12 +979,15 @@ import { ComplexMarketDataId } from './complexMarketDataId';
 import { ComplianceBreachedOrderInfo } from './complianceBreachedOrderInfo';
 import { ComplianceParameter } from './complianceParameter';
 import { ComplianceRule } from './complianceRule';
+import { ComplianceRuleBreakdown } from './complianceRuleBreakdown';
 import { ComplianceRuleResponse } from './complianceRuleResponse';
 import { ComplianceRuleResult } from './complianceRuleResult';
 import { ComplianceRuleUpsertRequest } from './complianceRuleUpsertRequest';
 import { ComplianceRuleUpsertResponse } from './complianceRuleUpsertResponse';
 import { ComplianceRunInfo } from './complianceRunInfo';
 import { ComplianceRunInfoV2 } from './complianceRunInfoV2';
+import { ComplianceRunSummary } from './complianceRunSummary';
+import { ComplianceSummaryRuleResult } from './complianceSummaryRuleResult';
 import { ComplianceTemplate } from './complianceTemplate';
 import { ComplianceTemplateParameter } from './complianceTemplateParameter';
 import { ComplianceTemplateVariation } from './complianceTemplateVariation';
@@ -2196,12 +2202,15 @@ let typeMap: {[index: string]: any} = {
     "ComplianceBreachedOrderInfo": ComplianceBreachedOrderInfo,
     "ComplianceParameter": ComplianceParameter,
     "ComplianceRule": ComplianceRule,
+    "ComplianceRuleBreakdown": ComplianceRuleBreakdown,
     "ComplianceRuleResponse": ComplianceRuleResponse,
     "ComplianceRuleResult": ComplianceRuleResult,
     "ComplianceRuleUpsertRequest": ComplianceRuleUpsertRequest,
     "ComplianceRuleUpsertResponse": ComplianceRuleUpsertResponse,
     "ComplianceRunInfo": ComplianceRunInfo,
     "ComplianceRunInfoV2": ComplianceRunInfoV2,
+    "ComplianceRunSummary": ComplianceRunSummary,
+    "ComplianceSummaryRuleResult": ComplianceSummaryRuleResult,
     "ComplianceTemplate": ComplianceTemplate,
     "ComplianceTemplateParameter": ComplianceTemplateParameter,
     "ComplianceTemplateVariation": ComplianceTemplateVariation,
