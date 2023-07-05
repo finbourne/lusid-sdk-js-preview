@@ -699,6 +699,8 @@ export * from './resultValueIntAllOf';
 export * from './resultValueString';
 export * from './resultValueStringAllOf';
 export * from './resultValueType';
+export * from './roundingConfiguration';
+export * from './roundingConfigurationComponent';
 export * from './roundingConvention';
 export * from './scalingMethodology';
 export * from './schedule';
@@ -1567,6 +1569,8 @@ import { ResultValueIntAllOf } from './resultValueIntAllOf';
 import { ResultValueString } from './resultValueString';
 import { ResultValueStringAllOf } from './resultValueStringAllOf';
 import { ResultValueType } from './resultValueType';
+import { RoundingConfiguration } from './roundingConfiguration';
+import { RoundingConfigurationComponent } from './roundingConfigurationComponent';
 import { RoundingConvention } from './roundingConvention';
 import { ScalingMethodology } from './scalingMethodology';
 import { Schedule } from './schedule';
@@ -2756,6 +2760,8 @@ let typeMap: {[index: string]: any} = {
     "ResultValueIntAllOf": ResultValueIntAllOf,
     "ResultValueString": ResultValueString,
     "ResultValueStringAllOf": ResultValueStringAllOf,
+    "RoundingConfiguration": RoundingConfiguration,
+    "RoundingConfigurationComponent": RoundingConfigurationComponent,
     "RoundingConvention": RoundingConvention,
     "Schedule": Schedule,
     "Schema": Schema,
