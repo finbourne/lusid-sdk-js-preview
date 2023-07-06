@@ -2,6 +2,7 @@ import {AborApi} from './api/aborApi';
 import {AborConfigurationApi} from './api/aborConfigurationApi';
 import {AddressKeyDefinitionApi} from './api/addressKeyDefinitionApi';
 import {AggregationApi} from './api/aggregationApi';
+import {AllocationServiceApi} from './api/allocationServiceApi';
 import {AllocationsApi} from './api/allocationsApi';
 import {ApplicationMetadataApi} from './api/applicationMetadataApi';
 import {BlocksApi} from './api/blocksApi';
@@ -27,7 +28,6 @@ import {LegacyComplianceApi} from './api/legacyComplianceApi';
 import {LegalEntitiesApi} from './api/legalEntitiesApi';
 import {OrderGraphApi} from './api/orderGraphApi';
 import {OrderInstructionsApi} from './api/orderInstructionsApi';
-import {OrderManagementApi} from './api/orderManagementApi';
 import {OrdersApi} from './api/ordersApi';
 import {PackagesApi} from './api/packagesApi';
 import {ParticipationsApi} from './api/participationsApi';
@@ -61,6 +61,7 @@ export class Api {
     public aborConfiguration:  AborConfigurationApi
     public addressKeyDefinition:  AddressKeyDefinitionApi
     public aggregation:  AggregationApi
+    public allocationService:  AllocationServiceApi
     public allocations:  AllocationsApi
     public applicationMetadata:  ApplicationMetadataApi
     public blocks:  BlocksApi
@@ -86,7 +87,6 @@ export class Api {
     public legalEntities:  LegalEntitiesApi
     public orderGraph:  OrderGraphApi
     public orderInstructions:  OrderInstructionsApi
-    public orderManagement:  OrderManagementApi
     public orders:  OrdersApi
     public packages:  PackagesApi
     public participations:  ParticipationsApi

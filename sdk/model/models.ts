@@ -44,7 +44,7 @@ export * from './aggregationQuery';
 export * from './aggregationType';
 export * from './allocation';
 export * from './allocationRequest';
-export * from './allocationServiceRunResponse';
+export * from './allocationServiceRunResult';
 export * from './allocationSetRequest';
 export * from './amortisationEvent';
 export * from './amortisationEventAllOf';
@@ -66,7 +66,6 @@ export * from './bond';
 export * from './bondAllOf';
 export * from './bondDefaultEvent';
 export * from './bondDefaultEventAllOf';
-export * from './bookTransactionsResponse';
 export * from './bucketedCashFlowRequest';
 export * from './bucketedCashFlowResponse';
 export * from './calculationInfo';
@@ -915,7 +914,7 @@ import { AggregationQuery } from './aggregationQuery';
 import { AggregationType } from './aggregationType';
 import { Allocation } from './allocation';
 import { AllocationRequest } from './allocationRequest';
-import { AllocationServiceRunResponse } from './allocationServiceRunResponse';
+import { AllocationServiceRunResult } from './allocationServiceRunResult';
 import { AllocationSetRequest } from './allocationSetRequest';
 import { AmortisationEvent } from './amortisationEvent';
 import { AmortisationEventAllOf } from './amortisationEventAllOf';
@@ -937,7 +936,6 @@ import { Bond } from './bond';
 import { BondAllOf } from './bondAllOf';
 import { BondDefaultEvent } from './bondDefaultEvent';
 import { BondDefaultEventAllOf } from './bondDefaultEventAllOf';
-import { BookTransactionsResponse } from './bookTransactionsResponse';
 import { BucketedCashFlowRequest } from './bucketedCashFlowRequest';
 import { BucketedCashFlowResponse } from './bucketedCashFlowResponse';
 import { CalculationInfo } from './calculationInfo';
@@ -2143,7 +2141,7 @@ let typeMap: {[index: string]: any} = {
     "AggregationQuery": AggregationQuery,
     "Allocation": Allocation,
     "AllocationRequest": AllocationRequest,
-    "AllocationServiceRunResponse": AllocationServiceRunResponse,
+    "AllocationServiceRunResult": AllocationServiceRunResult,
     "AllocationSetRequest": AllocationSetRequest,
     "AmortisationEvent": AmortisationEvent,
     "AmortisationEventAllOf": AmortisationEventAllOf,
@@ -2164,7 +2162,6 @@ let typeMap: {[index: string]: any} = {
     "BondAllOf": BondAllOf,
     "BondDefaultEvent": BondDefaultEvent,
     "BondDefaultEventAllOf": BondDefaultEventAllOf,
-    "BookTransactionsResponse": BookTransactionsResponse,
     "BucketedCashFlowRequest": BucketedCashFlowRequest,
     "BucketedCashFlowResponse": BucketedCashFlowResponse,
     "CalculationInfo": CalculationInfo,
