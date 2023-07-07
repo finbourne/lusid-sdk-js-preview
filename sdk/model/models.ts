@@ -44,7 +44,7 @@ export * from './aggregationQuery';
 export * from './aggregationType';
 export * from './allocation';
 export * from './allocationRequest';
-export * from './allocationServiceRunResult';
+export * from './allocationServiceRunResponse';
 export * from './allocationSetRequest';
 export * from './amortisationEvent';
 export * from './amortisationEventAllOf';
@@ -66,6 +66,7 @@ export * from './bond';
 export * from './bondAllOf';
 export * from './bondDefaultEvent';
 export * from './bondDefaultEventAllOf';
+export * from './bookTransactionsResponse';
 export * from './bucketedCashFlowRequest';
 export * from './bucketedCashFlowResponse';
 export * from './calculationInfo';
@@ -393,6 +394,8 @@ export * from './listAggregationReconciliation';
 export * from './listAggregationResponse';
 export * from './listComplexMarketDataWithMetaDataResponse';
 export * from './loanPeriod';
+export * from './lookUpPricingModelOptions';
+export * from './lookUpPricingModelOptionsAllOf';
 export * from './lusidInstrument';
 export * from './lusidProblemDetails';
 export * from './lusidTradeTicket';
@@ -914,7 +917,7 @@ import { AggregationQuery } from './aggregationQuery';
 import { AggregationType } from './aggregationType';
 import { Allocation } from './allocation';
 import { AllocationRequest } from './allocationRequest';
-import { AllocationServiceRunResult } from './allocationServiceRunResult';
+import { AllocationServiceRunResponse } from './allocationServiceRunResponse';
 import { AllocationSetRequest } from './allocationSetRequest';
 import { AmortisationEvent } from './amortisationEvent';
 import { AmortisationEventAllOf } from './amortisationEventAllOf';
@@ -936,6 +939,7 @@ import { Bond } from './bond';
 import { BondAllOf } from './bondAllOf';
 import { BondDefaultEvent } from './bondDefaultEvent';
 import { BondDefaultEventAllOf } from './bondDefaultEventAllOf';
+import { BookTransactionsResponse } from './bookTransactionsResponse';
 import { BucketedCashFlowRequest } from './bucketedCashFlowRequest';
 import { BucketedCashFlowResponse } from './bucketedCashFlowResponse';
 import { CalculationInfo } from './calculationInfo';
@@ -1263,6 +1267,8 @@ import { ListAggregationReconciliation } from './listAggregationReconciliation';
 import { ListAggregationResponse } from './listAggregationResponse';
 import { ListComplexMarketDataWithMetaDataResponse } from './listComplexMarketDataWithMetaDataResponse';
 import { LoanPeriod } from './loanPeriod';
+import { LookUpPricingModelOptions } from './lookUpPricingModelOptions';
+import { LookUpPricingModelOptionsAllOf } from './lookUpPricingModelOptionsAllOf';
 import { LusidInstrument } from './lusidInstrument';
 import { LusidProblemDetails } from './lusidProblemDetails';
 import { LusidTradeTicket } from './lusidTradeTicket';
@@ -1931,6 +1937,8 @@ let enumsMap: {[index: string]: any} = {
         "IrVolDependencyAllOf.DependencyTypeEnum": IrVolDependencyAllOf.DependencyTypeEnum,
         "LifeCycleEventValue.ResultValueTypeEnum": LifeCycleEventValue.ResultValueTypeEnum,
         "LifeCycleEventValueAllOf.ResultValueTypeEnum": LifeCycleEventValueAllOf.ResultValueTypeEnum,
+        "LookUpPricingModelOptions.ModelOptionsTypeEnum": LookUpPricingModelOptions.ModelOptionsTypeEnum,
+        "LookUpPricingModelOptionsAllOf.ModelOptionsTypeEnum": LookUpPricingModelOptionsAllOf.ModelOptionsTypeEnum,
         "LusidInstrument.InstrumentTypeEnum": LusidInstrument.InstrumentTypeEnum,
         "LusidTradeTicket.TradeTicketTypeEnum": LusidTradeTicket.TradeTicketTypeEnum,
         "MarketDataKeyRule.QuoteTypeEnum": MarketDataKeyRule.QuoteTypeEnum,
@@ -2141,7 +2149,7 @@ let typeMap: {[index: string]: any} = {
     "AggregationQuery": AggregationQuery,
     "Allocation": Allocation,
     "AllocationRequest": AllocationRequest,
-    "AllocationServiceRunResult": AllocationServiceRunResult,
+    "AllocationServiceRunResponse": AllocationServiceRunResponse,
     "AllocationSetRequest": AllocationSetRequest,
     "AmortisationEvent": AmortisationEvent,
     "AmortisationEventAllOf": AmortisationEventAllOf,
@@ -2162,6 +2170,7 @@ let typeMap: {[index: string]: any} = {
     "BondAllOf": BondAllOf,
     "BondDefaultEvent": BondDefaultEvent,
     "BondDefaultEventAllOf": BondDefaultEventAllOf,
+    "BookTransactionsResponse": BookTransactionsResponse,
     "BucketedCashFlowRequest": BucketedCashFlowRequest,
     "BucketedCashFlowResponse": BucketedCashFlowResponse,
     "CalculationInfo": CalculationInfo,
@@ -2478,6 +2487,8 @@ let typeMap: {[index: string]: any} = {
     "ListAggregationResponse": ListAggregationResponse,
     "ListComplexMarketDataWithMetaDataResponse": ListComplexMarketDataWithMetaDataResponse,
     "LoanPeriod": LoanPeriod,
+    "LookUpPricingModelOptions": LookUpPricingModelOptions,
+    "LookUpPricingModelOptionsAllOf": LookUpPricingModelOptionsAllOf,
     "LusidInstrument": LusidInstrument,
     "LusidProblemDetails": LusidProblemDetails,
     "LusidTradeTicket": LusidTradeTicket,
