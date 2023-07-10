@@ -499,6 +499,8 @@ export * from './pagedResourceListOfPerson';
 export * from './pagedResourceListOfPlacement';
 export * from './pagedResourceListOfPortfolioGroupSearchResult';
 export * from './pagedResourceListOfPortfolioSearchResult';
+export * from './pagedResourceListOfPostingModuleResponse';
+export * from './pagedResourceListOfPostingModuleRule';
 export * from './pagedResourceListOfPropertyDefinitionSearchResult';
 export * from './pagedResourceListOfReconciliation';
 export * from './pagedResourceListOfReconciliationRun';
@@ -538,6 +540,12 @@ export * from './portfolioSearchResult';
 export * from './portfolioTradeTicket';
 export * from './portfolioType';
 export * from './portfoliosReconciliationRequest';
+export * from './postingModuleCreateResponse';
+export * from './postingModuleDetails';
+export * from './postingModuleRequest';
+export * from './postingModuleResponse';
+export * from './postingModuleRule';
+export * from './postingModuleRulesUpdatedResponse';
 export * from './premium';
 export * from './pricingContext';
 export * from './pricingModel';
@@ -1372,6 +1380,8 @@ import { PagedResourceListOfPerson } from './pagedResourceListOfPerson';
 import { PagedResourceListOfPlacement } from './pagedResourceListOfPlacement';
 import { PagedResourceListOfPortfolioGroupSearchResult } from './pagedResourceListOfPortfolioGroupSearchResult';
 import { PagedResourceListOfPortfolioSearchResult } from './pagedResourceListOfPortfolioSearchResult';
+import { PagedResourceListOfPostingModuleResponse } from './pagedResourceListOfPostingModuleResponse';
+import { PagedResourceListOfPostingModuleRule } from './pagedResourceListOfPostingModuleRule';
 import { PagedResourceListOfPropertyDefinitionSearchResult } from './pagedResourceListOfPropertyDefinitionSearchResult';
 import { PagedResourceListOfReconciliation } from './pagedResourceListOfReconciliation';
 import { PagedResourceListOfReconciliationRun } from './pagedResourceListOfReconciliationRun';
@@ -1411,6 +1421,12 @@ import { PortfolioSearchResult } from './portfolioSearchResult';
 import { PortfolioTradeTicket } from './portfolioTradeTicket';
 import { PortfolioType } from './portfolioType';
 import { PortfoliosReconciliationRequest } from './portfoliosReconciliationRequest';
+import { PostingModuleCreateResponse } from './postingModuleCreateResponse';
+import { PostingModuleDetails } from './postingModuleDetails';
+import { PostingModuleRequest } from './postingModuleRequest';
+import { PostingModuleResponse } from './postingModuleResponse';
+import { PostingModuleRule } from './postingModuleRule';
+import { PostingModuleRulesUpdatedResponse } from './postingModuleRulesUpdatedResponse';
 import { Premium } from './premium';
 import { PricingContext } from './pricingContext';
 import { PricingModel } from './pricingModel';
@@ -2583,6 +2599,8 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfPlacement": PagedResourceListOfPlacement,
     "PagedResourceListOfPortfolioGroupSearchResult": PagedResourceListOfPortfolioGroupSearchResult,
     "PagedResourceListOfPortfolioSearchResult": PagedResourceListOfPortfolioSearchResult,
+    "PagedResourceListOfPostingModuleResponse": PagedResourceListOfPostingModuleResponse,
+    "PagedResourceListOfPostingModuleRule": PagedResourceListOfPostingModuleRule,
     "PagedResourceListOfPropertyDefinitionSearchResult": PagedResourceListOfPropertyDefinitionSearchResult,
     "PagedResourceListOfReconciliation": PagedResourceListOfReconciliation,
     "PagedResourceListOfReconciliationRun": PagedResourceListOfReconciliationRun,
@@ -2619,6 +2637,12 @@ let typeMap: {[index: string]: any} = {
     "PortfolioSearchResult": PortfolioSearchResult,
     "PortfolioTradeTicket": PortfolioTradeTicket,
     "PortfoliosReconciliationRequest": PortfoliosReconciliationRequest,
+    "PostingModuleCreateResponse": PostingModuleCreateResponse,
+    "PostingModuleDetails": PostingModuleDetails,
+    "PostingModuleRequest": PostingModuleRequest,
+    "PostingModuleResponse": PostingModuleResponse,
+    "PostingModuleRule": PostingModuleRule,
+    "PostingModuleRulesUpdatedResponse": PostingModuleRulesUpdatedResponse,
     "Premium": Premium,
     "PricingContext": PricingContext,
     "PricingOptions": PricingOptions,
