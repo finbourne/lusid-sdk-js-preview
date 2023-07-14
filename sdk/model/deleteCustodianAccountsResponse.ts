@@ -24,9 +24,6 @@ export class DeleteCustodianAccountsResponse {
     * The Custodian Accounts which have been soft/hard deleted.
     */
     'custodianAccountIds'?: Array<ResourceId> | null;
-    /**
-    * Collection of links.
-    */
     'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;

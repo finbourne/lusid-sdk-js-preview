@@ -32,9 +32,6 @@ export class ReconciliationRunBreak {
     * The difference between two matching fields
     */
     'diff'?: string | null;
-    /**
-    * Collection of links.
-    */
     'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
