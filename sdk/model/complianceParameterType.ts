@@ -11,32 +11,22 @@
  */
 
 import { RequestFile } from './models';
-import { AccessMetadataValue } from './accessMetadataValue';
-import { QuoteAccessMetadataRuleId } from './quoteAccessMetadataRuleId';
 
-export class QuoteAccessMetadataRule {
-    'id': QuoteAccessMetadataRuleId;
-    /**
-    * The access control metadata to assign to quotes that match the identifier
-    */
-    'metadata': { [key: string]: Array<AccessMetadataValue>; };
-
-    static discriminator: string | undefined = undefined;
-
-    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-        {
-            "name": "id",
-            "baseName": "id",
-            "type": "QuoteAccessMetadataRuleId"
-        },
-        {
-            "name": "metadata",
-            "baseName": "metadata",
-            "type": "{ [key: string]: Array<AccessMetadataValue>; }"
-        }    ];
-
-    static getAttributeTypeMap() {
-        return QuoteAccessMetadataRule.attributeTypeMap;
-    }
+export enum ComplianceParameterType {
+    BoolComplianceParameter = <any> 'BoolComplianceParameter',
+    StringComplianceParameter = <any> 'StringComplianceParameter',
+    DecimalComplianceParameter = <any> 'DecimalComplianceParameter',
+    DateTimeComplianceParameter = <any> 'DateTimeComplianceParameter',
+    PropertyKeyComplianceParameter = <any> 'PropertyKeyComplianceParameter',
+    AddressKeyComplianceParameter = <any> 'AddressKeyComplianceParameter',
+    PortfolioIdComplianceParameter = <any> 'PortfolioIdComplianceParameter',
+    PortfolioGroupIdComplianceParameter = <any> 'PortfolioGroupIdComplianceParameter',
+    StringListComplianceParameter = <any> 'StringListComplianceParameter',
+    BoolListComplianceParameter = <any> 'BoolListComplianceParameter',
+    DateTimeListComplianceParameter = <any> 'DateTimeListComplianceParameter',
+    DecimalListComplianceParameter = <any> 'DecimalListComplianceParameter',
+    PropertyKeyListComplianceParameter = <any> 'PropertyKeyListComplianceParameter',
+    AddressKeyListComplianceParameter = <any> 'AddressKeyListComplianceParameter',
+    PortfolioIdListComplianceParameter = <any> 'PortfolioIdListComplianceParameter',
+    PortfolioGroupIdListComplianceParameter = <any> 'PortfolioGroupIdListComplianceParameter'
 }
-

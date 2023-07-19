@@ -111,6 +111,7 @@ export * from './complexMarketData';
 export * from './complexMarketDataId';
 export * from './complianceBreachedOrderInfo';
 export * from './complianceParameter';
+export * from './complianceParameterType';
 export * from './complianceRule';
 export * from './complianceRuleBreakdown';
 export * from './complianceRuleResponse';
@@ -992,6 +993,7 @@ import { ComplexMarketData } from './complexMarketData';
 import { ComplexMarketDataId } from './complexMarketDataId';
 import { ComplianceBreachedOrderInfo } from './complianceBreachedOrderInfo';
 import { ComplianceParameter } from './complianceParameter';
+import { ComplianceParameterType } from './complianceParameterType';
 import { ComplianceRule } from './complianceRule';
 import { ComplianceRuleBreakdown } from './complianceRuleBreakdown';
 import { ComplianceRuleResponse } from './complianceRuleResponse';
@@ -1806,6 +1808,8 @@ let enumsMap: {[index: string]: any} = {
         "ComplexBond.InstrumentTypeEnum": ComplexBond.InstrumentTypeEnum,
         "ComplexBondAllOf.InstrumentTypeEnum": ComplexBondAllOf.InstrumentTypeEnum,
         "ComplexMarketData.MarketDataTypeEnum": ComplexMarketData.MarketDataTypeEnum,
+        "ComplianceParameter.ParameterTypeEnum": ComplianceParameter.ParameterTypeEnum,
+        "ComplianceParameterType": ComplianceParameterType,
         "ContractForDifference.InstrumentTypeEnum": ContractForDifference.InstrumentTypeEnum,
         "ContractForDifferenceAllOf.InstrumentTypeEnum": ContractForDifferenceAllOf.InstrumentTypeEnum,
         "CreateDataTypeRequest.TypeValueRangeEnum": CreateDataTypeRequest.TypeValueRangeEnum,
