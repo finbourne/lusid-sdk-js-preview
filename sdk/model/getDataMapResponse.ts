@@ -28,9 +28,6 @@ export class GetDataMapResponse {
     * The set of values that could not be retrieved along with a reason for this, e.g. badly formed request.
     */
     'failed'?: { [key: string]: ErrorDetail; } | null;
-    /**
-    * Collection of links.
-    */
     'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
