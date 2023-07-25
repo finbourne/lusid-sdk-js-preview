@@ -492,6 +492,7 @@ export * from './pagedResourceListOfBlock';
 export * from './pagedResourceListOfCalendar';
 export * from './pagedResourceListOfChartOfAccounts';
 export * from './pagedResourceListOfComplianceRuleResponse';
+export * from './pagedResourceListOfComplianceRunInfoV2';
 export * from './pagedResourceListOfComplianceTemplate';
 export * from './pagedResourceListOfCorporateActionSource';
 export * from './pagedResourceListOfCustodianAccount';
@@ -1397,6 +1398,7 @@ import { PagedResourceListOfBlock } from './pagedResourceListOfBlock';
 import { PagedResourceListOfCalendar } from './pagedResourceListOfCalendar';
 import { PagedResourceListOfChartOfAccounts } from './pagedResourceListOfChartOfAccounts';
 import { PagedResourceListOfComplianceRuleResponse } from './pagedResourceListOfComplianceRuleResponse';
+import { PagedResourceListOfComplianceRunInfoV2 } from './pagedResourceListOfComplianceRunInfoV2';
 import { PagedResourceListOfComplianceTemplate } from './pagedResourceListOfComplianceTemplate';
 import { PagedResourceListOfCorporateActionSource } from './pagedResourceListOfCorporateActionSource';
 import { PagedResourceListOfCustodianAccount } from './pagedResourceListOfCustodianAccount';
@@ -2664,6 +2666,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfCalendar": PagedResourceListOfCalendar,
     "PagedResourceListOfChartOfAccounts": PagedResourceListOfChartOfAccounts,
     "PagedResourceListOfComplianceRuleResponse": PagedResourceListOfComplianceRuleResponse,
+    "PagedResourceListOfComplianceRunInfoV2": PagedResourceListOfComplianceRunInfoV2,
     "PagedResourceListOfComplianceTemplate": PagedResourceListOfComplianceTemplate,
     "PagedResourceListOfCorporateActionSource": PagedResourceListOfCorporateActionSource,
     "PagedResourceListOfCustodianAccount": PagedResourceListOfCustodianAccount,
