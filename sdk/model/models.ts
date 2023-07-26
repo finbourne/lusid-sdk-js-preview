@@ -152,6 +152,7 @@ export * from './counterpartySignatory';
 export * from './createAddressKeyDefinitionRequest';
 export * from './createCalendarRequest';
 export * from './createCorporateActionSourceRequest';
+export * from './createCustomEntityTypeRequest';
 export * from './createCutLabelDefinitionRequest';
 export * from './createDataMapRequest';
 export * from './createDataTypeRequest';
@@ -193,6 +194,7 @@ export * from './customEntityFieldDefinition';
 export * from './customEntityId';
 export * from './customEntityRequest';
 export * from './customEntityResponse';
+export * from './customEntityType';
 export * from './cutLabelDefinition';
 export * from './cutLocalTime';
 export * from './dataDefinition';
@@ -498,6 +500,7 @@ export * from './pagedResourceListOfCorporateActionSource';
 export * from './pagedResourceListOfCustodianAccount';
 export * from './pagedResourceListOfCustomEntityDefinition';
 export * from './pagedResourceListOfCustomEntityResponse';
+export * from './pagedResourceListOfCustomEntityType';
 export * from './pagedResourceListOfCutLabelDefinition';
 export * from './pagedResourceListOfDataTypeSummary';
 export * from './pagedResourceListOfExecution';
@@ -817,6 +820,7 @@ export * from './unitSchema';
 export * from './unmatchedHoldingMethod';
 export * from './updateCalendarRequest';
 export * from './updateCustomEntityDefinitionRequest';
+export * from './updateCustomEntityTypeRequest';
 export * from './updateCutLabelDefinitionRequest';
 export * from './updateDataTypeRequest';
 export * from './updateDerivedPropertyDefinitionRequest';
@@ -1058,6 +1062,7 @@ import { CounterpartySignatory } from './counterpartySignatory';
 import { CreateAddressKeyDefinitionRequest } from './createAddressKeyDefinitionRequest';
 import { CreateCalendarRequest } from './createCalendarRequest';
 import { CreateCorporateActionSourceRequest } from './createCorporateActionSourceRequest';
+import { CreateCustomEntityTypeRequest } from './createCustomEntityTypeRequest';
 import { CreateCutLabelDefinitionRequest } from './createCutLabelDefinitionRequest';
 import { CreateDataMapRequest } from './createDataMapRequest';
 import { CreateDataTypeRequest } from './createDataTypeRequest';
@@ -1099,6 +1104,7 @@ import { CustomEntityFieldDefinition } from './customEntityFieldDefinition';
 import { CustomEntityId } from './customEntityId';
 import { CustomEntityRequest } from './customEntityRequest';
 import { CustomEntityResponse } from './customEntityResponse';
+import { CustomEntityType } from './customEntityType';
 import { CutLabelDefinition } from './cutLabelDefinition';
 import { CutLocalTime } from './cutLocalTime';
 import { DataDefinition } from './dataDefinition';
@@ -1404,6 +1410,7 @@ import { PagedResourceListOfCorporateActionSource } from './pagedResourceListOfC
 import { PagedResourceListOfCustodianAccount } from './pagedResourceListOfCustodianAccount';
 import { PagedResourceListOfCustomEntityDefinition } from './pagedResourceListOfCustomEntityDefinition';
 import { PagedResourceListOfCustomEntityResponse } from './pagedResourceListOfCustomEntityResponse';
+import { PagedResourceListOfCustomEntityType } from './pagedResourceListOfCustomEntityType';
 import { PagedResourceListOfCutLabelDefinition } from './pagedResourceListOfCutLabelDefinition';
 import { PagedResourceListOfDataTypeSummary } from './pagedResourceListOfDataTypeSummary';
 import { PagedResourceListOfExecution } from './pagedResourceListOfExecution';
@@ -1723,6 +1730,7 @@ import { UnitSchema } from './unitSchema';
 import { UnmatchedHoldingMethod } from './unmatchedHoldingMethod';
 import { UpdateCalendarRequest } from './updateCalendarRequest';
 import { UpdateCustomEntityDefinitionRequest } from './updateCustomEntityDefinitionRequest';
+import { UpdateCustomEntityTypeRequest } from './updateCustomEntityTypeRequest';
 import { UpdateCutLabelDefinitionRequest } from './updateCutLabelDefinitionRequest';
 import { UpdateDataTypeRequest } from './updateDataTypeRequest';
 import { UpdateDerivedPropertyDefinitionRequest } from './updateDerivedPropertyDefinitionRequest';
@@ -2345,6 +2353,7 @@ let typeMap: {[index: string]: any} = {
     "CreateAddressKeyDefinitionRequest": CreateAddressKeyDefinitionRequest,
     "CreateCalendarRequest": CreateCalendarRequest,
     "CreateCorporateActionSourceRequest": CreateCorporateActionSourceRequest,
+    "CreateCustomEntityTypeRequest": CreateCustomEntityTypeRequest,
     "CreateCutLabelDefinitionRequest": CreateCutLabelDefinitionRequest,
     "CreateDataMapRequest": CreateDataMapRequest,
     "CreateDataTypeRequest": CreateDataTypeRequest,
@@ -2385,6 +2394,7 @@ let typeMap: {[index: string]: any} = {
     "CustomEntityId": CustomEntityId,
     "CustomEntityRequest": CustomEntityRequest,
     "CustomEntityResponse": CustomEntityResponse,
+    "CustomEntityType": CustomEntityType,
     "CutLabelDefinition": CutLabelDefinition,
     "CutLocalTime": CutLocalTime,
     "DataDefinition": DataDefinition,
@@ -2672,6 +2682,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfCustodianAccount": PagedResourceListOfCustodianAccount,
     "PagedResourceListOfCustomEntityDefinition": PagedResourceListOfCustomEntityDefinition,
     "PagedResourceListOfCustomEntityResponse": PagedResourceListOfCustomEntityResponse,
+    "PagedResourceListOfCustomEntityType": PagedResourceListOfCustomEntityType,
     "PagedResourceListOfCutLabelDefinition": PagedResourceListOfCutLabelDefinition,
     "PagedResourceListOfDataTypeSummary": PagedResourceListOfDataTypeSummary,
     "PagedResourceListOfExecution": PagedResourceListOfExecution,
@@ -2965,6 +2976,7 @@ let typeMap: {[index: string]: any} = {
     "TypedResourceId": TypedResourceId,
     "UpdateCalendarRequest": UpdateCalendarRequest,
     "UpdateCustomEntityDefinitionRequest": UpdateCustomEntityDefinitionRequest,
+    "UpdateCustomEntityTypeRequest": UpdateCustomEntityTypeRequest,
     "UpdateCutLabelDefinitionRequest": UpdateCutLabelDefinitionRequest,
     "UpdateDataTypeRequest": UpdateDataTypeRequest,
     "UpdateDerivedPropertyDefinitionRequest": UpdateDerivedPropertyDefinitionRequest,
