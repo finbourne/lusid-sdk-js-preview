@@ -515,6 +515,7 @@ export * from './pagedResourceListOfPackage';
 export * from './pagedResourceListOfParticipation';
 export * from './pagedResourceListOfPerson';
 export * from './pagedResourceListOfPlacement';
+export * from './pagedResourceListOfPortfolioGroup';
 export * from './pagedResourceListOfPortfolioGroupSearchResult';
 export * from './pagedResourceListOfPortfolioSearchResult';
 export * from './pagedResourceListOfPostingModuleResponse';
@@ -693,7 +694,6 @@ export * from './resourceListOfPlacement';
 export * from './resourceListOfPortfolio';
 export * from './resourceListOfPortfolioCashFlow';
 export * from './resourceListOfPortfolioCashLadder';
-export * from './resourceListOfPortfolioGroup';
 export * from './resourceListOfPortfolioTradeTicket';
 export * from './resourceListOfProcessedCommand';
 export * from './resourceListOfProperty';
@@ -1425,6 +1425,7 @@ import { PagedResourceListOfPackage } from './pagedResourceListOfPackage';
 import { PagedResourceListOfParticipation } from './pagedResourceListOfParticipation';
 import { PagedResourceListOfPerson } from './pagedResourceListOfPerson';
 import { PagedResourceListOfPlacement } from './pagedResourceListOfPlacement';
+import { PagedResourceListOfPortfolioGroup } from './pagedResourceListOfPortfolioGroup';
 import { PagedResourceListOfPortfolioGroupSearchResult } from './pagedResourceListOfPortfolioGroupSearchResult';
 import { PagedResourceListOfPortfolioSearchResult } from './pagedResourceListOfPortfolioSearchResult';
 import { PagedResourceListOfPostingModuleResponse } from './pagedResourceListOfPostingModuleResponse';
@@ -1603,7 +1604,6 @@ import { ResourceListOfPlacement } from './resourceListOfPlacement';
 import { ResourceListOfPortfolio } from './resourceListOfPortfolio';
 import { ResourceListOfPortfolioCashFlow } from './resourceListOfPortfolioCashFlow';
 import { ResourceListOfPortfolioCashLadder } from './resourceListOfPortfolioCashLadder';
-import { ResourceListOfPortfolioGroup } from './resourceListOfPortfolioGroup';
 import { ResourceListOfPortfolioTradeTicket } from './resourceListOfPortfolioTradeTicket';
 import { ResourceListOfProcessedCommand } from './resourceListOfProcessedCommand';
 import { ResourceListOfProperty } from './resourceListOfProperty';
@@ -2697,6 +2697,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfParticipation": PagedResourceListOfParticipation,
     "PagedResourceListOfPerson": PagedResourceListOfPerson,
     "PagedResourceListOfPlacement": PagedResourceListOfPlacement,
+    "PagedResourceListOfPortfolioGroup": PagedResourceListOfPortfolioGroup,
     "PagedResourceListOfPortfolioGroupSearchResult": PagedResourceListOfPortfolioGroupSearchResult,
     "PagedResourceListOfPortfolioSearchResult": PagedResourceListOfPortfolioSearchResult,
     "PagedResourceListOfPostingModuleResponse": PagedResourceListOfPostingModuleResponse,
@@ -2862,7 +2863,6 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfPortfolio": ResourceListOfPortfolio,
     "ResourceListOfPortfolioCashFlow": ResourceListOfPortfolioCashFlow,
     "ResourceListOfPortfolioCashLadder": ResourceListOfPortfolioCashLadder,
-    "ResourceListOfPortfolioGroup": ResourceListOfPortfolioGroup,
     "ResourceListOfPortfolioTradeTicket": ResourceListOfPortfolioTradeTicket,
     "ResourceListOfProcessedCommand": ResourceListOfProcessedCommand,
     "ResourceListOfProperty": ResourceListOfProperty,
