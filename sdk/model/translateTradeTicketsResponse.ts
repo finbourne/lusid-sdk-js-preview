@@ -31,9 +31,6 @@ export class TranslateTradeTicketsResponse {
     * The instruments that could not be translated along with a reason for their failure.
     */
     'failed'?: { [key: string]: ErrorDetail; } | null;
-    /**
-    * Collection of links.
-    */
     'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
