@@ -11,153 +11,54 @@
  */
 
 import { RequestFile } from './models';
+import { ErrorDetail } from './errorDetail';
+import { Link } from './link';
+import { Property } from './property';
 
-/**
-* An individual row containing details of a single cashflow in the diary.
-*/
-export class InstrumentPaymentDiaryRow {
+export class BatchUpsertInstrumentPropertiesResponse {
     /**
-    * The quantity (amount) that will be paid. Note that this can be empty if the payment is in the future and a model is used that cannot estimate it.
+    * The properties that have been successfully upserted
     */
-    'quantity'?: number;
+    'values': { [key: string]: Array<Property>; };
     /**
-    * The payment currency of the cash flow.
+    * The properties that could not be upserted along with a reason for their failure.
     */
-    'currency'?: string | null;
+    'failed': { [key: string]: ErrorDetail; };
     /**
-    * The date at which the given cash flow is due to be paid.
+    * The as-at datetime at which properties were created or updated.
     */
-    'paymentDate'?: Date;
+    'asAtDate': Date;
     /**
-    * Does the cash flow belong to the Pay or Receive leg.
+    * Collection of links.
     */
-    'payOrReceive'?: string | null;
-    /**
-    * The date on which accruals start for this cashflow.
-    */
-    'accrualStart'?: Date;
-    /**
-    * The date on which accruals end for this cashflow.
-    */
-    'accrualEnd'?: Date;
-    /**
-    * The type of cashflow.
-    */
-    'cashFlowType'?: string | null;
-    /**
-    * Is the cashflow determined as of the effective date time.
-    */
-    'isCashFlowDetermined'?: boolean;
-    /**
-    * Has the cashflow been paid, i.e. has it become a historic cashflow, as of the date and time pointed to be effectiveAt.
-    */
-    'isCashFlowHistoric'?: boolean;
-    /**
-    * Weighting factor to discount cashflow to the present value.
-    */
-    'discountFactor'?: number;
-    /**
-    * The expected cashflow amount taking into account the discount factor.
-    */
-    'discountedExpectedCashFlowAmount'?: number;
-    /**
-    * The day count fraction, if appropriate.
-    */
-    'dayCountFraction'?: number | null;
-    /**
-    * Forward rate for cash flow if appropriate. (as in for a rates fixed or floating leg)
-    */
-    'forwardRate'?: number | null;
-    /**
-    * The value of the reset, if any.
-    */
-    'resetRate'?: number | null;
-    /**
-    * The spread that exists on the payoff.
-    */
-    'spread'?: number | null;
+    'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "quantity",
-            "baseName": "quantity",
-            "type": "number"
+            "name": "values",
+            "baseName": "values",
+            "type": "{ [key: string]: Array<Property>; }"
         },
         {
-            "name": "currency",
-            "baseName": "currency",
-            "type": "string"
+            "name": "failed",
+            "baseName": "failed",
+            "type": "{ [key: string]: ErrorDetail; }"
         },
         {
-            "name": "paymentDate",
-            "baseName": "paymentDate",
+            "name": "asAtDate",
+            "baseName": "asAtDate",
             "type": "Date"
         },
         {
-            "name": "payOrReceive",
-            "baseName": "payOrReceive",
-            "type": "string"
-        },
-        {
-            "name": "accrualStart",
-            "baseName": "accrualStart",
-            "type": "Date"
-        },
-        {
-            "name": "accrualEnd",
-            "baseName": "accrualEnd",
-            "type": "Date"
-        },
-        {
-            "name": "cashFlowType",
-            "baseName": "cashFlowType",
-            "type": "string"
-        },
-        {
-            "name": "isCashFlowDetermined",
-            "baseName": "isCashFlowDetermined",
-            "type": "boolean"
-        },
-        {
-            "name": "isCashFlowHistoric",
-            "baseName": "isCashFlowHistoric",
-            "type": "boolean"
-        },
-        {
-            "name": "discountFactor",
-            "baseName": "discountFactor",
-            "type": "number"
-        },
-        {
-            "name": "discountedExpectedCashFlowAmount",
-            "baseName": "discountedExpectedCashFlowAmount",
-            "type": "number"
-        },
-        {
-            "name": "dayCountFraction",
-            "baseName": "dayCountFraction",
-            "type": "number"
-        },
-        {
-            "name": "forwardRate",
-            "baseName": "forwardRate",
-            "type": "number"
-        },
-        {
-            "name": "resetRate",
-            "baseName": "resetRate",
-            "type": "number"
-        },
-        {
-            "name": "spread",
-            "baseName": "spread",
-            "type": "number"
+            "name": "links",
+            "baseName": "links",
+            "type": "Array<Link>"
         }    ];
 
     static getAttributeTypeMap() {
-        return InstrumentPaymentDiaryRow.attributeTypeMap;
+        return BatchUpsertInstrumentPropertiesResponse.attributeTypeMap;
     }
 }
 
