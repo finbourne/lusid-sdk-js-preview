@@ -231,6 +231,8 @@ export * from './deleteRelationshipRequest';
 export * from './deletedEntityResponse';
 export * from './dependencySourceFilter';
 export * from './describedAddressKey';
+export * from './diaryEntry';
+export * from './diaryEntryRequest';
 export * from './discountFactorCurveData';
 export * from './discountFactorCurveDataAllOf';
 export * from './discountingDependency';
@@ -507,6 +509,7 @@ export * from './pagedResourceListOfCustomEntityResponse';
 export * from './pagedResourceListOfCustomEntityType';
 export * from './pagedResourceListOfCutLabelDefinition';
 export * from './pagedResourceListOfDataTypeSummary';
+export * from './pagedResourceListOfDiaryEntry';
 export * from './pagedResourceListOfExecution';
 export * from './pagedResourceListOfInstrument';
 export * from './pagedResourceListOfInstrumentEventHolder';
@@ -1146,6 +1149,8 @@ import { DeleteRelationshipRequest } from './deleteRelationshipRequest';
 import { DeletedEntityResponse } from './deletedEntityResponse';
 import { DependencySourceFilter } from './dependencySourceFilter';
 import { DescribedAddressKey } from './describedAddressKey';
+import { DiaryEntry } from './diaryEntry';
+import { DiaryEntryRequest } from './diaryEntryRequest';
 import { DiscountFactorCurveData } from './discountFactorCurveData';
 import { DiscountFactorCurveDataAllOf } from './discountFactorCurveDataAllOf';
 import { DiscountingDependency } from './discountingDependency';
@@ -1422,6 +1427,7 @@ import { PagedResourceListOfCustomEntityResponse } from './pagedResourceListOfCu
 import { PagedResourceListOfCustomEntityType } from './pagedResourceListOfCustomEntityType';
 import { PagedResourceListOfCutLabelDefinition } from './pagedResourceListOfCutLabelDefinition';
 import { PagedResourceListOfDataTypeSummary } from './pagedResourceListOfDataTypeSummary';
+import { PagedResourceListOfDiaryEntry } from './pagedResourceListOfDiaryEntry';
 import { PagedResourceListOfExecution } from './pagedResourceListOfExecution';
 import { PagedResourceListOfInstrument } from './pagedResourceListOfInstrument';
 import { PagedResourceListOfInstrumentEventHolder } from './pagedResourceListOfInstrumentEventHolder';
@@ -2437,6 +2443,8 @@ let typeMap: {[index: string]: any} = {
     "DeletedEntityResponse": DeletedEntityResponse,
     "DependencySourceFilter": DependencySourceFilter,
     "DescribedAddressKey": DescribedAddressKey,
+    "DiaryEntry": DiaryEntry,
+    "DiaryEntryRequest": DiaryEntryRequest,
     "DiscountFactorCurveData": DiscountFactorCurveData,
     "DiscountFactorCurveDataAllOf": DiscountFactorCurveDataAllOf,
     "DiscountingDependency": DiscountingDependency,
@@ -2699,6 +2707,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfCustomEntityType": PagedResourceListOfCustomEntityType,
     "PagedResourceListOfCutLabelDefinition": PagedResourceListOfCutLabelDefinition,
     "PagedResourceListOfDataTypeSummary": PagedResourceListOfDataTypeSummary,
+    "PagedResourceListOfDiaryEntry": PagedResourceListOfDiaryEntry,
     "PagedResourceListOfExecution": PagedResourceListOfExecution,
     "PagedResourceListOfInstrument": PagedResourceListOfInstrument,
     "PagedResourceListOfInstrumentEventHolder": PagedResourceListOfInstrumentEventHolder,
