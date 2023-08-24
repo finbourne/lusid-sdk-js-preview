@@ -12,44 +12,53 @@
 
 import { RequestFile } from './models';
 
-export class SetTransactionConfigurationAlias {
-    'type': string;
-    'description': string;
-    'transactionClass': string;
-    'transactionRole': string;
-    'isDefault'?: boolean;
+/**
+* Record describing an upfront payment entity.
+*/
+export class UpFrontPayment {
+    /**
+    * The upfront amount.
+    */
+    'amount': number;
+    /**
+    * The upfront currency.
+    */
+    'currency': string;
+    /**
+    * Date when the upfront is paid.
+    */
+    'payDate': Date;
+    /**
+    * Is it pay or receive.    Supported string (enumeration) values are: [Pay, Receive].
+    */
+    'payReceive': string;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "type",
-            "baseName": "type",
+            "name": "amount",
+            "baseName": "amount",
+            "type": "number"
+        },
+        {
+            "name": "currency",
+            "baseName": "currency",
             "type": "string"
         },
         {
-            "name": "description",
-            "baseName": "description",
-            "type": "string"
+            "name": "payDate",
+            "baseName": "payDate",
+            "type": "Date"
         },
         {
-            "name": "transactionClass",
-            "baseName": "transactionClass",
+            "name": "payReceive",
+            "baseName": "payReceive",
             "type": "string"
-        },
-        {
-            "name": "transactionRole",
-            "baseName": "transactionRole",
-            "type": "string"
-        },
-        {
-            "name": "isDefault",
-            "baseName": "isDefault",
-            "type": "boolean"
         }    ];
 
     static getAttributeTypeMap() {
-        return SetTransactionConfigurationAlias.attributeTypeMap;
+        return UpFrontPayment.attributeTypeMap;
     }
 }
 
