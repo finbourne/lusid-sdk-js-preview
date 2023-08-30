@@ -17,7 +17,7 @@ import { RequestFile } from './models';
 */
 export class MarketQuote {
     /**
-    * The available values are: Price, Spread, Rate, LogNormalVol, NormalVol, ParSpread, IsdaSpread, Upfront, Index, Ratio, Delta, PoolFactor
+    * The available values are: Price, Spread, Rate, LogNormalVol, NormalVol, ParSpread, IsdaSpread, Upfront, Index, Ratio, Delta, PoolFactor, InflationAssumption
     */
     'quoteType': MarketQuote.QuoteTypeEnum;
     /**
@@ -57,6 +57,7 @@ export namespace MarketQuote {
         Index = <any> 'Index',
         Ratio = <any> 'Ratio',
         Delta = <any> 'Delta',
-        PoolFactor = <any> 'PoolFactor'
+        PoolFactor = <any> 'PoolFactor',
+        InflationAssumption = <any> 'InflationAssumption'
     }
 }

@@ -24,5 +24,6 @@ export enum QuoteType {
     Index = <any> 'Index',
     Ratio = <any> 'Ratio',
     Delta = <any> 'Delta',
-    PoolFactor = <any> 'PoolFactor'
+    PoolFactor = <any> 'PoolFactor',
+    InflationAssumption = <any> 'InflationAssumption'
 }

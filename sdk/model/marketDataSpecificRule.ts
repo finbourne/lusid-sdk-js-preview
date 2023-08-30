@@ -30,7 +30,7 @@ export class MarketDataSpecificRule {
     */
     'dataScope': string;
     /**
-    * The available values are: Price, Spread, Rate, LogNormalVol, NormalVol, ParSpread, IsdaSpread, Upfront, Index, Ratio, Delta, PoolFactor
+    * The available values are: Price, Spread, Rate, LogNormalVol, NormalVol, ParSpread, IsdaSpread, Upfront, Index, Ratio, Delta, PoolFactor, InflationAssumption
     */
     'quoteType': MarketDataSpecificRule.QuoteTypeEnum;
     /**
@@ -136,6 +136,7 @@ export namespace MarketDataSpecificRule {
         Index = <any> 'Index',
         Ratio = <any> 'Ratio',
         Delta = <any> 'Delta',
-        PoolFactor = <any> 'PoolFactor'
+        PoolFactor = <any> 'PoolFactor',
+        InflationAssumption = <any> 'InflationAssumption'
     }
 }

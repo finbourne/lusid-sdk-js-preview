@@ -29,7 +29,7 @@ export class MarketDataKeyRule {
     */
     'dataScope': string;
     /**
-    * The available values are: Price, Spread, Rate, LogNormalVol, NormalVol, ParSpread, IsdaSpread, Upfront, Index, Ratio, Delta, PoolFactor
+    * The available values are: Price, Spread, Rate, LogNormalVol, NormalVol, ParSpread, IsdaSpread, Upfront, Index, Ratio, Delta, PoolFactor, InflationAssumption
     */
     'quoteType': MarketDataKeyRule.QuoteTypeEnum;
     /**
@@ -129,6 +129,7 @@ export namespace MarketDataKeyRule {
         Index = <any> 'Index',
         Ratio = <any> 'Ratio',
         Delta = <any> 'Delta',
-        PoolFactor = <any> 'PoolFactor'
+        PoolFactor = <any> 'PoolFactor',
+        InflationAssumption = <any> 'InflationAssumption'
     }
 }

@@ -33,7 +33,7 @@ export class QuoteSeriesId {
     */
     'instrumentIdType': QuoteSeriesId.InstrumentIdTypeEnum;
     /**
-    * The type of the quote. This allows for quotes other than prices e.g. rates or spreads to be used. The available values are: Price, Spread, Rate, LogNormalVol, NormalVol, ParSpread, IsdaSpread, Upfront, Index, Ratio, Delta, PoolFactor
+    * The type of the quote. This allows for quotes other than prices e.g. rates or spreads to be used. The available values are: Price, Spread, Rate, LogNormalVol, NormalVol, ParSpread, IsdaSpread, Upfront, Index, Ratio, Delta, PoolFactor, InflationAssumption
     */
     'quoteType': QuoteSeriesId.QuoteTypeEnum;
     /**
@@ -104,6 +104,7 @@ export namespace QuoteSeriesId {
         Index = <any> 'Index',
         Ratio = <any> 'Ratio',
         Delta = <any> 'Delta',
-        PoolFactor = <any> 'PoolFactor'
+        PoolFactor = <any> 'PoolFactor',
+        InflationAssumption = <any> 'InflationAssumption'
     }
 }
