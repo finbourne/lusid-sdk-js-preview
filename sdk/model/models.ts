@@ -542,7 +542,6 @@ export * from './pagedResourceListOfReferenceListResponse';
 export * from './pagedResourceListOfRelationshipDefinition';
 export * from './pagedResourceListOfSequenceDefinition';
 export * from './pagedResourceListOfTranslationScriptId';
-export * from './pagedResourceListOfVirtualRow';
 export * from './participation';
 export * from './participationRequest';
 export * from './participationSetRequest';
@@ -916,7 +915,6 @@ export * from './versionedResourceListOfTransaction';
 export * from './versionedResourceListWithWarningsOfPortfolioHolding';
 export * from './virtualDocument';
 export * from './virtualDocumentRow';
-export * from './virtualRow';
 export * from './warning';
 export * from './weekendMask';
 export * from './weightedInstrument';
@@ -1479,7 +1477,6 @@ import { PagedResourceListOfReferenceListResponse } from './pagedResourceListOfR
 import { PagedResourceListOfRelationshipDefinition } from './pagedResourceListOfRelationshipDefinition';
 import { PagedResourceListOfSequenceDefinition } from './pagedResourceListOfSequenceDefinition';
 import { PagedResourceListOfTranslationScriptId } from './pagedResourceListOfTranslationScriptId';
-import { PagedResourceListOfVirtualRow } from './pagedResourceListOfVirtualRow';
 import { Participation } from './participation';
 import { ParticipationRequest } from './participationRequest';
 import { ParticipationSetRequest } from './participationSetRequest';
@@ -1853,7 +1850,6 @@ import { VersionedResourceListOfTransaction } from './versionedResourceListOfTra
 import { VersionedResourceListWithWarningsOfPortfolioHolding } from './versionedResourceListWithWarningsOfPortfolioHolding';
 import { VirtualDocument } from './virtualDocument';
 import { VirtualDocumentRow } from './virtualDocumentRow';
-import { VirtualRow } from './virtualRow';
 import { Warning } from './warning';
 import { WeekendMask } from './weekendMask';
 import { WeightedInstrument } from './weightedInstrument';
@@ -2778,7 +2774,6 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfRelationshipDefinition": PagedResourceListOfRelationshipDefinition,
     "PagedResourceListOfSequenceDefinition": PagedResourceListOfSequenceDefinition,
     "PagedResourceListOfTranslationScriptId": PagedResourceListOfTranslationScriptId,
-    "PagedResourceListOfVirtualRow": PagedResourceListOfVirtualRow,
     "Participation": Participation,
     "ParticipationRequest": ParticipationRequest,
     "ParticipationSetRequest": ParticipationSetRequest,
@@ -3124,7 +3119,6 @@ let typeMap: {[index: string]: any} = {
     "VersionedResourceListWithWarningsOfPortfolioHolding": VersionedResourceListWithWarningsOfPortfolioHolding,
     "VirtualDocument": VirtualDocument,
     "VirtualDocumentRow": VirtualDocumentRow,
-    "VirtualRow": VirtualRow,
     "Warning": Warning,
     "WeekendMask": WeekendMask,
     "WeightedInstrument": WeightedInstrument,
