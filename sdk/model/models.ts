@@ -40,6 +40,7 @@ export * from './aggregatedReturn';
 export * from './aggregatedReturnsDispersionRequest';
 export * from './aggregatedReturnsRequest';
 export * from './aggregatedReturnsResponse';
+export * from './aggregatedTransactionsRequest';
 export * from './aggregationContext';
 export * from './aggregationMeasureFailureDetail';
 export * from './aggregationOp';
@@ -391,6 +392,7 @@ export * from './instrumentLeg';
 export * from './instrumentLegAllOf';
 export * from './instrumentList';
 export * from './instrumentListAllOf';
+export * from './instrumentListComplianceParameter';
 export * from './instrumentMatch';
 export * from './instrumentModels';
 export * from './instrumentPaymentDiary';
@@ -813,6 +815,7 @@ export * from './transactionPropertyMappingRequest';
 export * from './transactionQueryMode';
 export * from './transactionQueryParameters';
 export * from './transactionReconciliationRequest';
+export * from './transactionReconciliationRequestV2';
 export * from './transactionRequest';
 export * from './transactionRoles';
 export * from './transactionSetConfigurationData';
@@ -976,6 +979,7 @@ import { AggregatedReturn } from './aggregatedReturn';
 import { AggregatedReturnsDispersionRequest } from './aggregatedReturnsDispersionRequest';
 import { AggregatedReturnsRequest } from './aggregatedReturnsRequest';
 import { AggregatedReturnsResponse } from './aggregatedReturnsResponse';
+import { AggregatedTransactionsRequest } from './aggregatedTransactionsRequest';
 import { AggregationContext } from './aggregationContext';
 import { AggregationMeasureFailureDetail } from './aggregationMeasureFailureDetail';
 import { AggregationOp } from './aggregationOp';
@@ -1327,6 +1331,7 @@ import { InstrumentLeg } from './instrumentLeg';
 import { InstrumentLegAllOf } from './instrumentLegAllOf';
 import { InstrumentList } from './instrumentList';
 import { InstrumentListAllOf } from './instrumentListAllOf';
+import { InstrumentListComplianceParameter } from './instrumentListComplianceParameter';
 import { InstrumentMatch } from './instrumentMatch';
 import { InstrumentModels } from './instrumentModels';
 import { InstrumentPaymentDiary } from './instrumentPaymentDiary';
@@ -1749,6 +1754,7 @@ import { TransactionPropertyMappingRequest } from './transactionPropertyMappingR
 import { TransactionQueryMode } from './transactionQueryMode';
 import { TransactionQueryParameters } from './transactionQueryParameters';
 import { TransactionReconciliationRequest } from './transactionReconciliationRequest';
+import { TransactionReconciliationRequestV2 } from './transactionReconciliationRequestV2';
 import { TransactionRequest } from './transactionRequest';
 import { TransactionRoles } from './transactionRoles';
 import { TransactionSetConfigurationData } from './transactionSetConfigurationData';
@@ -2067,6 +2073,7 @@ let enumsMap: {[index: string]: any} = {
         "InstrumentLegAllOf.InstrumentTypeEnum": InstrumentLegAllOf.InstrumentTypeEnum,
         "InstrumentList.ReferenceListTypeEnum": InstrumentList.ReferenceListTypeEnum,
         "InstrumentListAllOf.ReferenceListTypeEnum": InstrumentListAllOf.ReferenceListTypeEnum,
+        "InstrumentListComplianceParameter.ComplianceParameterTypeEnum": InstrumentListComplianceParameter.ComplianceParameterTypeEnum,
         "InstrumentType": InstrumentType,
         "InterestRateSwap.InstrumentTypeEnum": InterestRateSwap.InstrumentTypeEnum,
         "InterestRateSwapAllOf.InstrumentTypeEnum": InterestRateSwapAllOf.InstrumentTypeEnum,
@@ -2298,6 +2305,7 @@ let typeMap: {[index: string]: any} = {
     "AggregatedReturnsDispersionRequest": AggregatedReturnsDispersionRequest,
     "AggregatedReturnsRequest": AggregatedReturnsRequest,
     "AggregatedReturnsResponse": AggregatedReturnsResponse,
+    "AggregatedTransactionsRequest": AggregatedTransactionsRequest,
     "AggregationContext": AggregationContext,
     "AggregationMeasureFailureDetail": AggregationMeasureFailureDetail,
     "AggregationOptions": AggregationOptions,
@@ -2635,6 +2643,7 @@ let typeMap: {[index: string]: any} = {
     "InstrumentLegAllOf": InstrumentLegAllOf,
     "InstrumentList": InstrumentList,
     "InstrumentListAllOf": InstrumentListAllOf,
+    "InstrumentListComplianceParameter": InstrumentListComplianceParameter,
     "InstrumentMatch": InstrumentMatch,
     "InstrumentModels": InstrumentModels,
     "InstrumentPaymentDiary": InstrumentPaymentDiary,
@@ -3025,6 +3034,7 @@ let typeMap: {[index: string]: any} = {
     "TransactionPropertyMappingRequest": TransactionPropertyMappingRequest,
     "TransactionQueryParameters": TransactionQueryParameters,
     "TransactionReconciliationRequest": TransactionReconciliationRequest,
+    "TransactionReconciliationRequestV2": TransactionReconciliationRequestV2,
     "TransactionRequest": TransactionRequest,
     "TransactionSetConfigurationData": TransactionSetConfigurationData,
     "TransactionSetConfigurationDataRequest": TransactionSetConfigurationDataRequest,
