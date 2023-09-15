@@ -81,6 +81,8 @@ export * from './bucketedCashFlowResponse';
 export * from './calculationInfo';
 export * from './calendar';
 export * from './calendarDate';
+export * from './calendarDependency';
+export * from './calendarDependencyAllOf';
 export * from './capFloor';
 export * from './capFloorAllOf';
 export * from './cashDependency';
@@ -365,6 +367,8 @@ export * from './indexModelOptionsAllOf';
 export * from './indexProjectionDependency';
 export * from './indexProjectionDependencyAllOf';
 export * from './industryClassifier';
+export * from './inflationFixingDependency';
+export * from './inflationFixingDependencyAllOf';
 export * from './inflationIndexConventions';
 export * from './inflationLinkedBond';
 export * from './inflationLinkedBondAllOf';
@@ -1020,6 +1024,8 @@ import { BucketedCashFlowResponse } from './bucketedCashFlowResponse';
 import { CalculationInfo } from './calculationInfo';
 import { Calendar } from './calendar';
 import { CalendarDate } from './calendarDate';
+import { CalendarDependency } from './calendarDependency';
+import { CalendarDependencyAllOf } from './calendarDependencyAllOf';
 import { CapFloor } from './capFloor';
 import { CapFloorAllOf } from './capFloorAllOf';
 import { CashDependency } from './cashDependency';
@@ -1304,6 +1310,8 @@ import { IndexModelOptionsAllOf } from './indexModelOptionsAllOf';
 import { IndexProjectionDependency } from './indexProjectionDependency';
 import { IndexProjectionDependencyAllOf } from './indexProjectionDependencyAllOf';
 import { IndustryClassifier } from './industryClassifier';
+import { InflationFixingDependency } from './inflationFixingDependency';
+import { InflationFixingDependencyAllOf } from './inflationFixingDependencyAllOf';
 import { InflationIndexConventions } from './inflationIndexConventions';
 import { InflationLinkedBond } from './inflationLinkedBond';
 import { InflationLinkedBondAllOf } from './inflationLinkedBondAllOf';
@@ -1905,6 +1913,8 @@ let enumsMap: {[index: string]: any} = {
         "BoolComplianceParameter.ComplianceParameterTypeEnum": BoolComplianceParameter.ComplianceParameterTypeEnum,
         "BoolComplianceParameterAllOf.ComplianceParameterTypeEnum": BoolComplianceParameterAllOf.ComplianceParameterTypeEnum,
         "BoolListComplianceParameter.ComplianceParameterTypeEnum": BoolListComplianceParameter.ComplianceParameterTypeEnum,
+        "CalendarDependency.DependencyTypeEnum": CalendarDependency.DependencyTypeEnum,
+        "CalendarDependencyAllOf.DependencyTypeEnum": CalendarDependencyAllOf.DependencyTypeEnum,
         "CapFloor.InstrumentTypeEnum": CapFloor.InstrumentTypeEnum,
         "CapFloorAllOf.InstrumentTypeEnum": CapFloorAllOf.InstrumentTypeEnum,
         "CashDependency.DependencyTypeEnum": CashDependency.DependencyTypeEnum,
@@ -2056,6 +2066,8 @@ let enumsMap: {[index: string]: any} = {
         "IndexModelOptionsAllOf.ModelOptionsTypeEnum": IndexModelOptionsAllOf.ModelOptionsTypeEnum,
         "IndexProjectionDependency.DependencyTypeEnum": IndexProjectionDependency.DependencyTypeEnum,
         "IndexProjectionDependencyAllOf.DependencyTypeEnum": IndexProjectionDependencyAllOf.DependencyTypeEnum,
+        "InflationFixingDependency.DependencyTypeEnum": InflationFixingDependency.DependencyTypeEnum,
+        "InflationFixingDependencyAllOf.DependencyTypeEnum": InflationFixingDependencyAllOf.DependencyTypeEnum,
         "InflationLinkedBond.InstrumentTypeEnum": InflationLinkedBond.InstrumentTypeEnum,
         "InflationLinkedBondAllOf.InstrumentTypeEnum": InflationLinkedBondAllOf.InstrumentTypeEnum,
         "InflationSwap.InstrumentTypeEnum": InflationSwap.InstrumentTypeEnum,
@@ -2343,6 +2355,8 @@ let typeMap: {[index: string]: any} = {
     "CalculationInfo": CalculationInfo,
     "Calendar": Calendar,
     "CalendarDate": CalendarDate,
+    "CalendarDependency": CalendarDependency,
+    "CalendarDependencyAllOf": CalendarDependencyAllOf,
     "CapFloor": CapFloor,
     "CapFloorAllOf": CapFloorAllOf,
     "CashDependency": CashDependency,
@@ -2618,6 +2632,8 @@ let typeMap: {[index: string]: any} = {
     "IndexProjectionDependency": IndexProjectionDependency,
     "IndexProjectionDependencyAllOf": IndexProjectionDependencyAllOf,
     "IndustryClassifier": IndustryClassifier,
+    "InflationFixingDependency": InflationFixingDependency,
+    "InflationFixingDependencyAllOf": InflationFixingDependencyAllOf,
     "InflationIndexConventions": InflationIndexConventions,
     "InflationLinkedBond": InflationLinkedBond,
     "InflationLinkedBondAllOf": InflationLinkedBondAllOf,
