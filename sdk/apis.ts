@@ -35,7 +35,6 @@ import {PersonsApi} from './api/personsApi';
 import {PlacementsApi} from './api/placementsApi';
 import {PortfolioGroupsApi} from './api/portfolioGroupsApi';
 import {PortfoliosApi} from './api/portfoliosApi';
-import {PostingModulesApi} from './api/postingModulesApi';
 import {PropertyDefinitionsApi} from './api/propertyDefinitionsApi';
 import {QuotesApi} from './api/quotesApi';
 import {ReconciliationsApi} from './api/reconciliationsApi';
@@ -96,7 +95,6 @@ export class Api {
     public placements:  PlacementsApi
     public portfolioGroups:  PortfolioGroupsApi
     public portfolios:  PortfoliosApi
-    public postingModules:  PostingModulesApi
     public propertyDefinitions:  PropertyDefinitionsApi
     public quotes:  QuotesApi
     public reconciliations:  ReconciliationsApi
