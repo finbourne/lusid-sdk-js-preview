@@ -92,9 +92,6 @@ export class JELines {
     * Raw JE Line details of the economic bucket for the JE Line.
     */
     'economicBucket': string;
-    /**
-    * Collection of links.
-    */
     'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
