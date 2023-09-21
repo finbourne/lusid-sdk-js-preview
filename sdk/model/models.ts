@@ -474,6 +474,7 @@ export * from './optionalitySchedule';
 export * from './optionalityScheduleAllOf';
 export * from './order';
 export * from './orderBySpec';
+export * from './orderFlowConfiguration';
 export * from './orderGraphBlock';
 export * from './orderGraphBlockAllocationDetail';
 export * from './orderGraphBlockAllocationSynopsis';
@@ -1417,6 +1418,7 @@ import { OptionalitySchedule } from './optionalitySchedule';
 import { OptionalityScheduleAllOf } from './optionalityScheduleAllOf';
 import { Order } from './order';
 import { OrderBySpec } from './orderBySpec';
+import { OrderFlowConfiguration } from './orderFlowConfiguration';
 import { OrderGraphBlock } from './orderGraphBlock';
 import { OrderGraphBlockAllocationDetail } from './orderGraphBlockAllocationDetail';
 import { OrderGraphBlockAllocationSynopsis } from './orderGraphBlockAllocationSynopsis';
@@ -2727,6 +2729,7 @@ let typeMap: {[index: string]: any} = {
     "OptionalityScheduleAllOf": OptionalityScheduleAllOf,
     "Order": Order,
     "OrderBySpec": OrderBySpec,
+    "OrderFlowConfiguration": OrderFlowConfiguration,
     "OrderGraphBlock": OrderGraphBlock,
     "OrderGraphBlockAllocationDetail": OrderGraphBlockAllocationDetail,
     "OrderGraphBlockAllocationSynopsis": OrderGraphBlockAllocationSynopsis,
