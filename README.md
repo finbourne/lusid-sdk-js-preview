@@ -1,3 +1,9 @@
+# Deprecated
+
+Please note that this repository is deprecated and will be archived early 2024.
+
+All functionality is now contained, in the [lusid-sdk-java](https://github.com/finbourne/lusid-sdk-java) repository on the `main` branch.
+
 ![LUSID_by_Finbourne](https://content.finbourne.com/LUSID_repo.png)
 
 # LUSID<sup>®</sup> JavaScript SDK
