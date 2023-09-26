@@ -587,7 +587,6 @@ export * from './portfolioSearchResult';
 export * from './portfolioTradeTicket';
 export * from './portfolioType';
 export * from './portfoliosReconciliationRequest';
-export * from './postingModuleCreateResponse';
 export * from './postingModuleDetails';
 export * from './postingModuleRequest';
 export * from './postingModuleResponse';
@@ -1531,7 +1530,6 @@ import { PortfolioSearchResult } from './portfolioSearchResult';
 import { PortfolioTradeTicket } from './portfolioTradeTicket';
 import { PortfolioType } from './portfolioType';
 import { PortfoliosReconciliationRequest } from './portfoliosReconciliationRequest';
-import { PostingModuleCreateResponse } from './postingModuleCreateResponse';
 import { PostingModuleDetails } from './postingModuleDetails';
 import { PostingModuleRequest } from './postingModuleRequest';
 import { PostingModuleResponse } from './postingModuleResponse';
@@ -2839,7 +2837,6 @@ let typeMap: {[index: string]: any} = {
     "PortfolioSearchResult": PortfolioSearchResult,
     "PortfolioTradeTicket": PortfolioTradeTicket,
     "PortfoliosReconciliationRequest": PortfoliosReconciliationRequest,
-    "PostingModuleCreateResponse": PostingModuleCreateResponse,
     "PostingModuleDetails": PostingModuleDetails,
     "PostingModuleRequest": PostingModuleRequest,
     "PostingModuleResponse": PostingModuleResponse,
