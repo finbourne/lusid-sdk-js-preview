@@ -11,34 +11,33 @@
  */
 
 import { RequestFile } from './models';
-import { QuoteSeriesId } from './quoteSeriesId';
 
-/**
-* The unique identifier of the quote.
-*/
-export class QuoteId {
-    'quoteSeriesId': QuoteSeriesId;
+export class TransactionTypeCalculation {
     /**
-    * The effective datetime or cut label at which the quote is valid from.
+    * The type of calculation to perform
     */
-    'effectiveAt': string;
+    'type': string;
+    /**
+    * The Side determines which of the fields from our transaction are used to generate the Movement. Side1 means the \'security\' side of the transaction, ie the Instrument and Units; Side2 means the \'cash\' side, ie the Total Consideration
+    */
+    'side': string;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "quoteSeriesId",
-            "baseName": "quoteSeriesId",
-            "type": "QuoteSeriesId"
+            "name": "type",
+            "baseName": "type",
+            "type": "string"
         },
         {
-            "name": "effectiveAt",
-            "baseName": "effectiveAt",
+            "name": "side",
+            "baseName": "side",
             "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
-        return QuoteId.attributeTypeMap;
+        return TransactionTypeCalculation.attributeTypeMap;
     }
 }
 

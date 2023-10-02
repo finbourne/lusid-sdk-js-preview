@@ -827,6 +827,7 @@ export * from './transactionSetConfigurationDataRequest';
 export * from './transactionStatus';
 export * from './transactionType';
 export * from './transactionTypeAlias';
+export * from './transactionTypeCalculation';
 export * from './transactionTypeMovement';
 export * from './transactionTypePropertyMapping';
 export * from './transactionTypeRequest';
@@ -1770,6 +1771,7 @@ import { TransactionSetConfigurationDataRequest } from './transactionSetConfigur
 import { TransactionStatus } from './transactionStatus';
 import { TransactionType } from './transactionType';
 import { TransactionTypeAlias } from './transactionTypeAlias';
+import { TransactionTypeCalculation } from './transactionTypeCalculation';
 import { TransactionTypeMovement } from './transactionTypeMovement';
 import { TransactionTypePropertyMapping } from './transactionTypePropertyMapping';
 import { TransactionTypeRequest } from './transactionTypeRequest';
@@ -3056,6 +3058,7 @@ let typeMap: {[index: string]: any} = {
     "TransactionSetConfigurationDataRequest": TransactionSetConfigurationDataRequest,
     "TransactionType": TransactionType,
     "TransactionTypeAlias": TransactionTypeAlias,
+    "TransactionTypeCalculation": TransactionTypeCalculation,
     "TransactionTypeMovement": TransactionTypeMovement,
     "TransactionTypePropertyMapping": TransactionTypePropertyMapping,
     "TransactionTypeRequest": TransactionTypeRequest,
