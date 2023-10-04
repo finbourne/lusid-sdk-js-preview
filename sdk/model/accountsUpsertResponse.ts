@@ -28,9 +28,6 @@ export class AccountsUpsertResponse {
     * The Accounts which have been upserted.
     */
     'accounts'?: Array<Account> | null;
-    /**
-    * Collection of links.
-    */
     'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
