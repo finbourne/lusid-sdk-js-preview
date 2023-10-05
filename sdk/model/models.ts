@@ -803,6 +803,8 @@ export * from './taxRule';
 export * from './taxRuleSet';
 export * from './termDeposit';
 export * from './termDepositAllOf';
+export * from './totalReturnSwap';
+export * from './totalReturnSwapAllOf';
 export * from './touch';
 export * from './tradeTicket';
 export * from './tradeTicketType';
@@ -848,6 +850,7 @@ export * from './translationScriptId';
 export * from './triggerEvent';
 export * from './triggerEventAllOf';
 export * from './typedResourceId';
+export * from './underlyingLeg';
 export * from './unitSchema';
 export * from './unmatchedHoldingMethod';
 export * from './updateCalendarRequest';
@@ -1747,6 +1750,8 @@ import { TaxRule } from './taxRule';
 import { TaxRuleSet } from './taxRuleSet';
 import { TermDeposit } from './termDeposit';
 import { TermDepositAllOf } from './termDepositAllOf';
+import { TotalReturnSwap } from './totalReturnSwap';
+import { TotalReturnSwapAllOf } from './totalReturnSwapAllOf';
 import { Touch } from './touch';
 import { TradeTicket } from './tradeTicket';
 import { TradeTicketType } from './tradeTicketType';
@@ -1792,6 +1797,7 @@ import { TranslationScriptId } from './translationScriptId';
 import { TriggerEvent } from './triggerEvent';
 import { TriggerEventAllOf } from './triggerEventAllOf';
 import { TypedResourceId } from './typedResourceId';
+import { UnderlyingLeg } from './underlyingLeg';
 import { UnitSchema } from './unitSchema';
 import { UnmatchedHoldingMethod } from './unmatchedHoldingMethod';
 import { UpdateCalendarRequest } from './updateCalendarRequest';
@@ -2250,6 +2256,8 @@ let enumsMap: {[index: string]: any} = {
         "SubHoldingKeyValueEqualsAllOf.CriterionTypeEnum": SubHoldingKeyValueEqualsAllOf.CriterionTypeEnum,
         "TermDeposit.InstrumentTypeEnum": TermDeposit.InstrumentTypeEnum,
         "TermDepositAllOf.InstrumentTypeEnum": TermDepositAllOf.InstrumentTypeEnum,
+        "TotalReturnSwap.InstrumentTypeEnum": TotalReturnSwap.InstrumentTypeEnum,
+        "TotalReturnSwapAllOf.InstrumentTypeEnum": TotalReturnSwapAllOf.InstrumentTypeEnum,
         "TradeTicket.TradeTicketTypeEnum": TradeTicket.TradeTicketTypeEnum,
         "TradeTicketType": TradeTicketType,
         "Transaction.TransactionStatusEnum": Transaction.TransactionStatusEnum,
@@ -3039,6 +3047,8 @@ let typeMap: {[index: string]: any} = {
     "TaxRuleSet": TaxRuleSet,
     "TermDeposit": TermDeposit,
     "TermDepositAllOf": TermDepositAllOf,
+    "TotalReturnSwap": TotalReturnSwap,
+    "TotalReturnSwapAllOf": TotalReturnSwapAllOf,
     "Touch": Touch,
     "TradeTicket": TradeTicket,
     "Transaction": Transaction,
@@ -3079,6 +3089,7 @@ let typeMap: {[index: string]: any} = {
     "TriggerEvent": TriggerEvent,
     "TriggerEventAllOf": TriggerEventAllOf,
     "TypedResourceId": TypedResourceId,
+    "UnderlyingLeg": UnderlyingLeg,
     "UpdateCalendarRequest": UpdateCalendarRequest,
     "UpdateCustomEntityDefinitionRequest": UpdateCustomEntityDefinitionRequest,
     "UpdateCustomEntityTypeRequest": UpdateCustomEntityTypeRequest,
