@@ -214,6 +214,7 @@ export * from './dataType';
 export * from './dataTypeSummary';
 export * from './dataTypeValueRange';
 export * from './dateAttributes';
+export * from './dateOrDiaryEntry';
 export * from './dateRange';
 export * from './dateTimeComparisonType';
 export * from './dateTimeComplianceParameter';
@@ -414,8 +415,9 @@ export * from './irVolCubeDataAllOf';
 export * from './irVolDependency';
 export * from './irVolDependencyAllOf';
 export * from './isBusinessDayResponse';
-export * from './jELines';
 export * from './jELinesQueryParameters';
+export * from './journalEntryLine';
+export * from './journalEntryLinesQueryParameters';
 export * from './labelValueSet';
 export * from './legDefinition';
 export * from './legalEntity';
@@ -919,7 +921,7 @@ export * from './version';
 export * from './versionSummaryDto';
 export * from './versionedResourceListOfA2BDataRecord';
 export * from './versionedResourceListOfA2BMovementRecord';
-export * from './versionedResourceListOfJELines';
+export * from './versionedResourceListOfJournalEntryLine';
 export * from './versionedResourceListOfOutputTransaction';
 export * from './versionedResourceListOfPortfolioHolding';
 export * from './versionedResourceListOfTransaction';
@@ -1161,6 +1163,7 @@ import { DataType } from './dataType';
 import { DataTypeSummary } from './dataTypeSummary';
 import { DataTypeValueRange } from './dataTypeValueRange';
 import { DateAttributes } from './dateAttributes';
+import { DateOrDiaryEntry } from './dateOrDiaryEntry';
 import { DateRange } from './dateRange';
 import { DateTimeComparisonType } from './dateTimeComparisonType';
 import { DateTimeComplianceParameter } from './dateTimeComplianceParameter';
@@ -1361,8 +1364,9 @@ import { IrVolCubeDataAllOf } from './irVolCubeDataAllOf';
 import { IrVolDependency } from './irVolDependency';
 import { IrVolDependencyAllOf } from './irVolDependencyAllOf';
 import { IsBusinessDayResponse } from './isBusinessDayResponse';
-import { JELines } from './jELines';
 import { JELinesQueryParameters } from './jELinesQueryParameters';
+import { JournalEntryLine } from './journalEntryLine';
+import { JournalEntryLinesQueryParameters } from './journalEntryLinesQueryParameters';
 import { LabelValueSet } from './labelValueSet';
 import { LegDefinition } from './legDefinition';
 import { LegalEntity } from './legalEntity';
@@ -1866,7 +1870,7 @@ import { Version } from './version';
 import { VersionSummaryDto } from './versionSummaryDto';
 import { VersionedResourceListOfA2BDataRecord } from './versionedResourceListOfA2BDataRecord';
 import { VersionedResourceListOfA2BMovementRecord } from './versionedResourceListOfA2BMovementRecord';
-import { VersionedResourceListOfJELines } from './versionedResourceListOfJELines';
+import { VersionedResourceListOfJournalEntryLine } from './versionedResourceListOfJournalEntryLine';
 import { VersionedResourceListOfOutputTransaction } from './versionedResourceListOfOutputTransaction';
 import { VersionedResourceListOfPortfolioHolding } from './versionedResourceListOfPortfolioHolding';
 import { VersionedResourceListOfTransaction } from './versionedResourceListOfTransaction';
@@ -2494,6 +2498,7 @@ let typeMap: {[index: string]: any} = {
     "DataType": DataType,
     "DataTypeSummary": DataTypeSummary,
     "DateAttributes": DateAttributes,
+    "DateOrDiaryEntry": DateOrDiaryEntry,
     "DateRange": DateRange,
     "DateTimeComplianceParameter": DateTimeComplianceParameter,
     "DateTimeComplianceParameterAllOf": DateTimeComplianceParameterAllOf,
@@ -2686,8 +2691,9 @@ let typeMap: {[index: string]: any} = {
     "IrVolDependency": IrVolDependency,
     "IrVolDependencyAllOf": IrVolDependencyAllOf,
     "IsBusinessDayResponse": IsBusinessDayResponse,
-    "JELines": JELines,
     "JELinesQueryParameters": JELinesQueryParameters,
+    "JournalEntryLine": JournalEntryLine,
+    "JournalEntryLinesQueryParameters": JournalEntryLinesQueryParameters,
     "LabelValueSet": LabelValueSet,
     "LegDefinition": LegDefinition,
     "LegalEntity": LegalEntity,
@@ -3154,7 +3160,7 @@ let typeMap: {[index: string]: any} = {
     "VersionSummaryDto": VersionSummaryDto,
     "VersionedResourceListOfA2BDataRecord": VersionedResourceListOfA2BDataRecord,
     "VersionedResourceListOfA2BMovementRecord": VersionedResourceListOfA2BMovementRecord,
-    "VersionedResourceListOfJELines": VersionedResourceListOfJELines,
+    "VersionedResourceListOfJournalEntryLine": VersionedResourceListOfJournalEntryLine,
     "VersionedResourceListOfOutputTransaction": VersionedResourceListOfOutputTransaction,
     "VersionedResourceListOfPortfolioHolding": VersionedResourceListOfPortfolioHolding,
     "VersionedResourceListOfTransaction": VersionedResourceListOfTransaction,
