@@ -34,9 +34,6 @@ export class TransactionType {
     * Calculations to be performed for the transaction type
     */
     'calculations'?: Array<TransactionTypeCalculation> | null;
-    /**
-    * Collection of links.
-    */
     'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
