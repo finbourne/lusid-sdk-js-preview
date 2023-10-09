@@ -128,6 +128,8 @@ export * from './complianceRuleBreakdown';
 export * from './complianceRuleBreakdownRequest';
 export * from './complianceRuleResponse';
 export * from './complianceRuleResult';
+export * from './complianceRuleResultDetail';
+export * from './complianceRuleResultPortfolioDetail';
 export * from './complianceRuleUpsertRequest';
 export * from './complianceRuleUpsertResponse';
 export * from './complianceRunInfo';
@@ -226,6 +228,7 @@ export * from './decimalComplianceParameterAllOf';
 export * from './decimalList';
 export * from './decimalListAllOf';
 export * from './decimalListComplianceParameter';
+export * from './decoratedComplianceRunSummary';
 export * from './deleteAccountsResponse';
 export * from './deleteCustodianAccountsResponse';
 export * from './deleteInstrumentPropertiesResponse';
@@ -1084,6 +1087,8 @@ import { ComplianceRuleBreakdown } from './complianceRuleBreakdown';
 import { ComplianceRuleBreakdownRequest } from './complianceRuleBreakdownRequest';
 import { ComplianceRuleResponse } from './complianceRuleResponse';
 import { ComplianceRuleResult } from './complianceRuleResult';
+import { ComplianceRuleResultDetail } from './complianceRuleResultDetail';
+import { ComplianceRuleResultPortfolioDetail } from './complianceRuleResultPortfolioDetail';
 import { ComplianceRuleUpsertRequest } from './complianceRuleUpsertRequest';
 import { ComplianceRuleUpsertResponse } from './complianceRuleUpsertResponse';
 import { ComplianceRunInfo } from './complianceRunInfo';
@@ -1182,6 +1187,7 @@ import { DecimalComplianceParameterAllOf } from './decimalComplianceParameterAll
 import { DecimalList } from './decimalList';
 import { DecimalListAllOf } from './decimalListAllOf';
 import { DecimalListComplianceParameter } from './decimalListComplianceParameter';
+import { DecoratedComplianceRunSummary } from './decoratedComplianceRunSummary';
 import { DeleteAccountsResponse } from './deleteAccountsResponse';
 import { DeleteCustodianAccountsResponse } from './deleteCustodianAccountsResponse';
 import { DeleteInstrumentPropertiesResponse } from './deleteInstrumentPropertiesResponse';
@@ -2428,6 +2434,8 @@ let typeMap: {[index: string]: any} = {
     "ComplianceRuleBreakdownRequest": ComplianceRuleBreakdownRequest,
     "ComplianceRuleResponse": ComplianceRuleResponse,
     "ComplianceRuleResult": ComplianceRuleResult,
+    "ComplianceRuleResultDetail": ComplianceRuleResultDetail,
+    "ComplianceRuleResultPortfolioDetail": ComplianceRuleResultPortfolioDetail,
     "ComplianceRuleUpsertRequest": ComplianceRuleUpsertRequest,
     "ComplianceRuleUpsertResponse": ComplianceRuleUpsertResponse,
     "ComplianceRunInfo": ComplianceRunInfo,
@@ -2522,6 +2530,7 @@ let typeMap: {[index: string]: any} = {
     "DecimalList": DecimalList,
     "DecimalListAllOf": DecimalListAllOf,
     "DecimalListComplianceParameter": DecimalListComplianceParameter,
+    "DecoratedComplianceRunSummary": DecoratedComplianceRunSummary,
     "DeleteAccountsResponse": DeleteAccountsResponse,
     "DeleteCustodianAccountsResponse": DeleteCustodianAccountsResponse,
     "DeleteInstrumentPropertiesResponse": DeleteInstrumentPropertiesResponse,
