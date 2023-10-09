@@ -340,6 +340,9 @@ export * from './fxTenorConvention';
 export * from './fxVolDependency';
 export * from './fxVolDependencyAllOf';
 export * from './fxVolSurfaceData';
+export * from './generalLedgerProfileMapping';
+export * from './generalLedgerProfileRequest';
+export * from './generalLedgerProfileResponse';
 export * from './getCdsFlowConventionsResponse';
 export * from './getComplexMarketDataResponse';
 export * from './getCounterpartyAgreementResponse';
@@ -527,6 +530,7 @@ export * from './pagedResourceListOfDataTypeSummary';
 export * from './pagedResourceListOfDialectId';
 export * from './pagedResourceListOfDiaryEntry';
 export * from './pagedResourceListOfExecution';
+export * from './pagedResourceListOfGeneralLedgerProfileResponse';
 export * from './pagedResourceListOfInstrument';
 export * from './pagedResourceListOfInstrumentEventHolder';
 export * from './pagedResourceListOfLegalEntity';
@@ -849,6 +853,8 @@ export * from './translationInput';
 export * from './translationResult';
 export * from './translationScript';
 export * from './translationScriptId';
+export * from './trialBalance';
+export * from './trialBalanceQueryParameters';
 export * from './triggerEvent';
 export * from './triggerEventAllOf';
 export * from './typedResourceId';
@@ -925,6 +931,7 @@ export * from './versionedResourceListOfJournalEntryLine';
 export * from './versionedResourceListOfOutputTransaction';
 export * from './versionedResourceListOfPortfolioHolding';
 export * from './versionedResourceListOfTransaction';
+export * from './versionedResourceListOfTrialBalance';
 export * from './versionedResourceListWithWarningsOfPortfolioHolding';
 export * from './virtualDocument';
 export * from './virtualDocumentRow';
@@ -1289,6 +1296,9 @@ import { FxTenorConvention } from './fxTenorConvention';
 import { FxVolDependency } from './fxVolDependency';
 import { FxVolDependencyAllOf } from './fxVolDependencyAllOf';
 import { FxVolSurfaceData } from './fxVolSurfaceData';
+import { GeneralLedgerProfileMapping } from './generalLedgerProfileMapping';
+import { GeneralLedgerProfileRequest } from './generalLedgerProfileRequest';
+import { GeneralLedgerProfileResponse } from './generalLedgerProfileResponse';
 import { GetCdsFlowConventionsResponse } from './getCdsFlowConventionsResponse';
 import { GetComplexMarketDataResponse } from './getComplexMarketDataResponse';
 import { GetCounterpartyAgreementResponse } from './getCounterpartyAgreementResponse';
@@ -1476,6 +1486,7 @@ import { PagedResourceListOfDataTypeSummary } from './pagedResourceListOfDataTyp
 import { PagedResourceListOfDialectId } from './pagedResourceListOfDialectId';
 import { PagedResourceListOfDiaryEntry } from './pagedResourceListOfDiaryEntry';
 import { PagedResourceListOfExecution } from './pagedResourceListOfExecution';
+import { PagedResourceListOfGeneralLedgerProfileResponse } from './pagedResourceListOfGeneralLedgerProfileResponse';
 import { PagedResourceListOfInstrument } from './pagedResourceListOfInstrument';
 import { PagedResourceListOfInstrumentEventHolder } from './pagedResourceListOfInstrumentEventHolder';
 import { PagedResourceListOfLegalEntity } from './pagedResourceListOfLegalEntity';
@@ -1798,6 +1809,8 @@ import { TranslationInput } from './translationInput';
 import { TranslationResult } from './translationResult';
 import { TranslationScript } from './translationScript';
 import { TranslationScriptId } from './translationScriptId';
+import { TrialBalance } from './trialBalance';
+import { TrialBalanceQueryParameters } from './trialBalanceQueryParameters';
 import { TriggerEvent } from './triggerEvent';
 import { TriggerEventAllOf } from './triggerEventAllOf';
 import { TypedResourceId } from './typedResourceId';
@@ -1874,6 +1887,7 @@ import { VersionedResourceListOfJournalEntryLine } from './versionedResourceList
 import { VersionedResourceListOfOutputTransaction } from './versionedResourceListOfOutputTransaction';
 import { VersionedResourceListOfPortfolioHolding } from './versionedResourceListOfPortfolioHolding';
 import { VersionedResourceListOfTransaction } from './versionedResourceListOfTransaction';
+import { VersionedResourceListOfTrialBalance } from './versionedResourceListOfTrialBalance';
 import { VersionedResourceListWithWarningsOfPortfolioHolding } from './versionedResourceListWithWarningsOfPortfolioHolding';
 import { VirtualDocument } from './virtualDocument';
 import { VirtualDocumentRow } from './virtualDocumentRow';
@@ -2619,6 +2633,9 @@ let typeMap: {[index: string]: any} = {
     "FxVolDependency": FxVolDependency,
     "FxVolDependencyAllOf": FxVolDependencyAllOf,
     "FxVolSurfaceData": FxVolSurfaceData,
+    "GeneralLedgerProfileMapping": GeneralLedgerProfileMapping,
+    "GeneralLedgerProfileRequest": GeneralLedgerProfileRequest,
+    "GeneralLedgerProfileResponse": GeneralLedgerProfileResponse,
     "GetCdsFlowConventionsResponse": GetCdsFlowConventionsResponse,
     "GetComplexMarketDataResponse": GetComplexMarketDataResponse,
     "GetCounterpartyAgreementResponse": GetCounterpartyAgreementResponse,
@@ -2794,6 +2811,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfDialectId": PagedResourceListOfDialectId,
     "PagedResourceListOfDiaryEntry": PagedResourceListOfDiaryEntry,
     "PagedResourceListOfExecution": PagedResourceListOfExecution,
+    "PagedResourceListOfGeneralLedgerProfileResponse": PagedResourceListOfGeneralLedgerProfileResponse,
     "PagedResourceListOfInstrument": PagedResourceListOfInstrument,
     "PagedResourceListOfInstrumentEventHolder": PagedResourceListOfInstrumentEventHolder,
     "PagedResourceListOfLegalEntity": PagedResourceListOfLegalEntity,
@@ -3092,6 +3110,8 @@ let typeMap: {[index: string]: any} = {
     "TranslationResult": TranslationResult,
     "TranslationScript": TranslationScript,
     "TranslationScriptId": TranslationScriptId,
+    "TrialBalance": TrialBalance,
+    "TrialBalanceQueryParameters": TrialBalanceQueryParameters,
     "TriggerEvent": TriggerEvent,
     "TriggerEventAllOf": TriggerEventAllOf,
     "TypedResourceId": TypedResourceId,
@@ -3164,6 +3184,7 @@ let typeMap: {[index: string]: any} = {
     "VersionedResourceListOfOutputTransaction": VersionedResourceListOfOutputTransaction,
     "VersionedResourceListOfPortfolioHolding": VersionedResourceListOfPortfolioHolding,
     "VersionedResourceListOfTransaction": VersionedResourceListOfTransaction,
+    "VersionedResourceListOfTrialBalance": VersionedResourceListOfTrialBalance,
     "VersionedResourceListWithWarningsOfPortfolioHolding": VersionedResourceListWithWarningsOfPortfolioHolding,
     "VirtualDocument": VirtualDocument,
     "VirtualDocumentRow": VirtualDocumentRow,
