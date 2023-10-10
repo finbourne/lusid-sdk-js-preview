@@ -49,9 +49,6 @@ export class TrialBalance {
     * All credits that occured in the period
     */
     'credit': number;
-    /**
-    * Collection of links.
-    */
     'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
