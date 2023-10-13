@@ -22,6 +22,7 @@ export * from './actionId';
 export * from './actionResultOfPortfolio';
 export * from './addBusinessDaysToDateRequest';
 export * from './addBusinessDaysToDateResponse';
+export * from './additionalPayment';
 export * from './addressDefinition';
 export * from './addressKeyComplianceParameter';
 export * from './addressKeyComplianceParameterAllOf';
@@ -983,6 +984,7 @@ import { ActionId } from './actionId';
 import { ActionResultOfPortfolio } from './actionResultOfPortfolio';
 import { AddBusinessDaysToDateRequest } from './addBusinessDaysToDateRequest';
 import { AddBusinessDaysToDateResponse } from './addBusinessDaysToDateResponse';
+import { AdditionalPayment } from './additionalPayment';
 import { AddressDefinition } from './addressDefinition';
 import { AddressKeyComplianceParameter } from './addressKeyComplianceParameter';
 import { AddressKeyComplianceParameterAllOf } from './addressKeyComplianceParameterAllOf';
@@ -2339,6 +2341,7 @@ let typeMap: {[index: string]: any} = {
     "ActionResultOfPortfolio": ActionResultOfPortfolio,
     "AddBusinessDaysToDateRequest": AddBusinessDaysToDateRequest,
     "AddBusinessDaysToDateResponse": AddBusinessDaysToDateResponse,
+    "AdditionalPayment": AdditionalPayment,
     "AddressDefinition": AddressDefinition,
     "AddressKeyComplianceParameter": AddressKeyComplianceParameter,
     "AddressKeyComplianceParameterAllOf": AddressKeyComplianceParameterAllOf,
