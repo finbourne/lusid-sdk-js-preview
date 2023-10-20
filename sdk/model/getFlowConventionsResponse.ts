@@ -25,9 +25,6 @@ export class GetFlowConventionsResponse {
     * The identifiers that did not resolve to a conventions along with the nature of the failure.
     */
     'failed'?: { [key: string]: ErrorDetail; } | null;
-    /**
-    * Collection of links.
-    */
     'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
