@@ -79,7 +79,6 @@ export * from './boolComplianceParameterAllOf';
 export * from './boolListComplianceParameter';
 export * from './bucketedCashFlowRequest';
 export * from './bucketedCashFlowResponse';
-export * from './bucketingSchedule';
 export * from './calculationInfo';
 export * from './calendar';
 export * from './calendarDate';
@@ -1042,7 +1041,6 @@ import { BoolComplianceParameterAllOf } from './boolComplianceParameterAllOf';
 import { BoolListComplianceParameter } from './boolListComplianceParameter';
 import { BucketedCashFlowRequest } from './bucketedCashFlowRequest';
 import { BucketedCashFlowResponse } from './bucketedCashFlowResponse';
-import { BucketingSchedule } from './bucketingSchedule';
 import { CalculationInfo } from './calculationInfo';
 import { Calendar } from './calendar';
 import { CalendarDate } from './calendarDate';
@@ -2397,7 +2395,6 @@ let typeMap: {[index: string]: any} = {
     "BoolListComplianceParameter": BoolListComplianceParameter,
     "BucketedCashFlowRequest": BucketedCashFlowRequest,
     "BucketedCashFlowResponse": BucketedCashFlowResponse,
-    "BucketingSchedule": BucketingSchedule,
     "CalculationInfo": CalculationInfo,
     "Calendar": Calendar,
     "CalendarDate": CalendarDate,
