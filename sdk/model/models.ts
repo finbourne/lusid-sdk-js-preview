@@ -365,6 +365,7 @@ export * from './groupedResultOfAddressKey';
 export * from './holdingAdjustment';
 export * from './holdingAdjustmentWithDate';
 export * from './holdingContext';
+export * from './holdingContributor';
 export * from './holdingsAdjustment';
 export * from './holdingsAdjustmentHeader';
 export * from './iUnitDefinitionDto';
@@ -934,6 +935,7 @@ export * from './version';
 export * from './versionSummaryDto';
 export * from './versionedResourceListOfA2BDataRecord';
 export * from './versionedResourceListOfA2BMovementRecord';
+export * from './versionedResourceListOfHoldingContributor';
 export * from './versionedResourceListOfJournalEntryLine';
 export * from './versionedResourceListOfOutputTransaction';
 export * from './versionedResourceListOfPortfolioHolding';
@@ -1328,6 +1330,7 @@ import { GroupedResultOfAddressKey } from './groupedResultOfAddressKey';
 import { HoldingAdjustment } from './holdingAdjustment';
 import { HoldingAdjustmentWithDate } from './holdingAdjustmentWithDate';
 import { HoldingContext } from './holdingContext';
+import { HoldingContributor } from './holdingContributor';
 import { HoldingsAdjustment } from './holdingsAdjustment';
 import { HoldingsAdjustmentHeader } from './holdingsAdjustmentHeader';
 import { IUnitDefinitionDto } from './iUnitDefinitionDto';
@@ -1897,6 +1900,7 @@ import { Version } from './version';
 import { VersionSummaryDto } from './versionSummaryDto';
 import { VersionedResourceListOfA2BDataRecord } from './versionedResourceListOfA2BDataRecord';
 import { VersionedResourceListOfA2BMovementRecord } from './versionedResourceListOfA2BMovementRecord';
+import { VersionedResourceListOfHoldingContributor } from './versionedResourceListOfHoldingContributor';
 import { VersionedResourceListOfJournalEntryLine } from './versionedResourceListOfJournalEntryLine';
 import { VersionedResourceListOfOutputTransaction } from './versionedResourceListOfOutputTransaction';
 import { VersionedResourceListOfPortfolioHolding } from './versionedResourceListOfPortfolioHolding';
@@ -2674,6 +2678,7 @@ let typeMap: {[index: string]: any} = {
     "HoldingAdjustment": HoldingAdjustment,
     "HoldingAdjustmentWithDate": HoldingAdjustmentWithDate,
     "HoldingContext": HoldingContext,
+    "HoldingContributor": HoldingContributor,
     "HoldingsAdjustment": HoldingsAdjustment,
     "HoldingsAdjustmentHeader": HoldingsAdjustmentHeader,
     "IUnitDefinitionDto": IUnitDefinitionDto,
@@ -3203,6 +3208,7 @@ let typeMap: {[index: string]: any} = {
     "VersionSummaryDto": VersionSummaryDto,
     "VersionedResourceListOfA2BDataRecord": VersionedResourceListOfA2BDataRecord,
     "VersionedResourceListOfA2BMovementRecord": VersionedResourceListOfA2BMovementRecord,
+    "VersionedResourceListOfHoldingContributor": VersionedResourceListOfHoldingContributor,
     "VersionedResourceListOfJournalEntryLine": VersionedResourceListOfJournalEntryLine,
     "VersionedResourceListOfOutputTransaction": VersionedResourceListOfOutputTransaction,
     "VersionedResourceListOfPortfolioHolding": VersionedResourceListOfPortfolioHolding,
