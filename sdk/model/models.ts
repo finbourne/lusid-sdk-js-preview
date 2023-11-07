@@ -256,6 +256,7 @@ export * from './economicDependency';
 export * from './economicDependencyType';
 export * from './economicDependencyWithComplexMarketData';
 export * from './economicDependencyWithQuote';
+export * from './electionSpecification';
 export * from './emptyModelOptions';
 export * from './emptyModelOptionsAllOf';
 export * from './entityIdentifier';
@@ -815,6 +816,7 @@ export * from './targetTaxLot';
 export * from './targetTaxLotRequest';
 export * from './taxRule';
 export * from './taxRuleSet';
+export * from './templateField';
 export * from './termDeposit';
 export * from './termDepositAllOf';
 export * from './totalReturnSwap';
@@ -841,6 +843,7 @@ export * from './transactionRoles';
 export * from './transactionSetConfigurationData';
 export * from './transactionSetConfigurationDataRequest';
 export * from './transactionStatus';
+export * from './transactionTemplateSpecification';
 export * from './transactionType';
 export * from './transactionTypeAlias';
 export * from './transactionTypeCalculation';
@@ -1221,6 +1224,7 @@ import { EconomicDependency } from './economicDependency';
 import { EconomicDependencyType } from './economicDependencyType';
 import { EconomicDependencyWithComplexMarketData } from './economicDependencyWithComplexMarketData';
 import { EconomicDependencyWithQuote } from './economicDependencyWithQuote';
+import { ElectionSpecification } from './electionSpecification';
 import { EmptyModelOptions } from './emptyModelOptions';
 import { EmptyModelOptionsAllOf } from './emptyModelOptionsAllOf';
 import { EntityIdentifier } from './entityIdentifier';
@@ -1780,6 +1784,7 @@ import { TargetTaxLot } from './targetTaxLot';
 import { TargetTaxLotRequest } from './targetTaxLotRequest';
 import { TaxRule } from './taxRule';
 import { TaxRuleSet } from './taxRuleSet';
+import { TemplateField } from './templateField';
 import { TermDeposit } from './termDeposit';
 import { TermDepositAllOf } from './termDepositAllOf';
 import { TotalReturnSwap } from './totalReturnSwap';
@@ -1806,6 +1811,7 @@ import { TransactionRoles } from './transactionRoles';
 import { TransactionSetConfigurationData } from './transactionSetConfigurationData';
 import { TransactionSetConfigurationDataRequest } from './transactionSetConfigurationDataRequest';
 import { TransactionStatus } from './transactionStatus';
+import { TransactionTemplateSpecification } from './transactionTemplateSpecification';
 import { TransactionType } from './transactionType';
 import { TransactionTypeAlias } from './transactionTypeAlias';
 import { TransactionTypeCalculation } from './transactionTypeCalculation';
@@ -2569,6 +2575,7 @@ let typeMap: {[index: string]: any} = {
     "EconomicDependency": EconomicDependency,
     "EconomicDependencyWithComplexMarketData": EconomicDependencyWithComplexMarketData,
     "EconomicDependencyWithQuote": EconomicDependencyWithQuote,
+    "ElectionSpecification": ElectionSpecification,
     "EmptyModelOptions": EmptyModelOptions,
     "EmptyModelOptionsAllOf": EmptyModelOptionsAllOf,
     "EntityIdentifier": EntityIdentifier,
@@ -3097,6 +3104,7 @@ let typeMap: {[index: string]: any} = {
     "TargetTaxLotRequest": TargetTaxLotRequest,
     "TaxRule": TaxRule,
     "TaxRuleSet": TaxRuleSet,
+    "TemplateField": TemplateField,
     "TermDeposit": TermDeposit,
     "TermDepositAllOf": TermDepositAllOf,
     "TotalReturnSwap": TotalReturnSwap,
@@ -3118,6 +3126,7 @@ let typeMap: {[index: string]: any} = {
     "TransactionRequest": TransactionRequest,
     "TransactionSetConfigurationData": TransactionSetConfigurationData,
     "TransactionSetConfigurationDataRequest": TransactionSetConfigurationDataRequest,
+    "TransactionTemplateSpecification": TransactionTemplateSpecification,
     "TransactionType": TransactionType,
     "TransactionTypeAlias": TransactionTypeAlias,
     "TransactionTypeCalculation": TransactionTypeCalculation,
