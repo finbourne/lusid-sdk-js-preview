@@ -30,9 +30,6 @@ export class BucketedCashFlowResponse {
     * Information about where instruments have failed to return cashflows in so far as it is available.  e.g., failure to retrieve a market quote for a floating rate instrument.
     */
     'failed'?: { [key: string]: ErrorDetail; } | null;
-    /**
-    * Collection of links.
-    */
     'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;

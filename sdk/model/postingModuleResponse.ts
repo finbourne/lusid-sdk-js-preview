@@ -46,9 +46,6 @@ export class PostingModuleResponse {
     */
     'status': string;
     'version'?: Version;
-    /**
-    * Collection of links.
-    */
     'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
