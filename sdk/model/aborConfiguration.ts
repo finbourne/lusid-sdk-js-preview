@@ -48,9 +48,6 @@ export class AborConfiguration {
     * The Cleardown Module Codes from which the rules to be applied are retrieved.
     */
     'cleardownModuleCodes'?: Array<string> | null;
-    /**
-    * Collection of links.
-    */
     'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;

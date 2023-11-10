@@ -23,9 +23,6 @@ export class ReconciliationRun {
     * The specific Uniform Resource Identifier (URI) for this resource at the requested effective and asAt datetime.
     */
     'href'?: string | null;
-    /**
-    * Collection of links.
-    */
     'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
