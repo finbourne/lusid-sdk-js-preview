@@ -152,7 +152,6 @@ export * from './compositeDispersion';
 export * from './compositeDispersionResponse';
 export * from './compounding';
 export * from './configurationRecipe';
-export * from './configurationRecipeSnippet';
 export * from './constituentsAdjustmentHeader';
 export * from './contractForDifference';
 export * from './contractForDifferenceAllOf';
@@ -301,6 +300,8 @@ export * from './fieldDefinition';
 export * from './fieldSchema';
 export * from './fieldValue';
 export * from './fileResponse';
+export * from './filterPredicateComplianceParameter';
+export * from './filterPredicateComplianceParameterAllOf';
 export * from './fixedLeg';
 export * from './fixedLegAllOf';
 export * from './fixedLegAllOfOverrides';
@@ -808,7 +809,6 @@ export * from './stockSplitEventAllOf';
 export * from './stream';
 export * from './stringComparisonType';
 export * from './stringComplianceParameter';
-export * from './stringComplianceParameterAllOf';
 export * from './stringList';
 export * from './stringListComplianceParameter';
 export * from './structuredResultData';
@@ -1123,7 +1123,6 @@ import { CompositeDispersion } from './compositeDispersion';
 import { CompositeDispersionResponse } from './compositeDispersionResponse';
 import { Compounding } from './compounding';
 import { ConfigurationRecipe } from './configurationRecipe';
-import { ConfigurationRecipeSnippet } from './configurationRecipeSnippet';
 import { ConstituentsAdjustmentHeader } from './constituentsAdjustmentHeader';
 import { ContractForDifference } from './contractForDifference';
 import { ContractForDifferenceAllOf } from './contractForDifferenceAllOf';
@@ -1272,6 +1271,8 @@ import { FieldDefinition } from './fieldDefinition';
 import { FieldSchema } from './fieldSchema';
 import { FieldValue } from './fieldValue';
 import { FileResponse } from './fileResponse';
+import { FilterPredicateComplianceParameter } from './filterPredicateComplianceParameter';
+import { FilterPredicateComplianceParameterAllOf } from './filterPredicateComplianceParameterAllOf';
 import { FixedLeg } from './fixedLeg';
 import { FixedLegAllOf } from './fixedLegAllOf';
 import { FixedLegAllOfOverrides } from './fixedLegAllOfOverrides';
@@ -1779,7 +1780,6 @@ import { StockSplitEventAllOf } from './stockSplitEventAllOf';
 import { Stream } from './stream';
 import { StringComparisonType } from './stringComparisonType';
 import { StringComplianceParameter } from './stringComplianceParameter';
-import { StringComplianceParameterAllOf } from './stringComplianceParameterAllOf';
 import { StringList } from './stringList';
 import { StringListComplianceParameter } from './stringListComplianceParameter';
 import { StructuredResultData } from './structuredResultData';
@@ -2066,6 +2066,8 @@ let enumsMap: {[index: string]: any} = {
         "ExoticInstrument.InstrumentTypeEnum": ExoticInstrument.InstrumentTypeEnum,
         "ExoticInstrumentAllOf.InstrumentTypeEnum": ExoticInstrumentAllOf.InstrumentTypeEnum,
         "FieldSchema.TypeEnum": FieldSchema.TypeEnum,
+        "FilterPredicateComplianceParameter.ComplianceParameterTypeEnum": FilterPredicateComplianceParameter.ComplianceParameterTypeEnum,
+        "FilterPredicateComplianceParameterAllOf.ComplianceParameterTypeEnum": FilterPredicateComplianceParameterAllOf.ComplianceParameterTypeEnum,
         "FixedLeg.InstrumentTypeEnum": FixedLeg.InstrumentTypeEnum,
         "FixedLegAllOf.InstrumentTypeEnum": FixedLegAllOf.InstrumentTypeEnum,
         "FixedSchedule.ScheduleTypeEnum": FixedSchedule.ScheduleTypeEnum,
@@ -2301,7 +2303,6 @@ let enumsMap: {[index: string]: any} = {
         "StockSplitEventAllOf.InstrumentEventTypeEnum": StockSplitEventAllOf.InstrumentEventTypeEnum,
         "StringComparisonType": StringComparisonType,
         "StringComplianceParameter.ComplianceParameterTypeEnum": StringComplianceParameter.ComplianceParameterTypeEnum,
-        "StringComplianceParameterAllOf.ComplianceParameterTypeEnum": StringComplianceParameterAllOf.ComplianceParameterTypeEnum,
         "StringList.ReferenceListTypeEnum": StringList.ReferenceListTypeEnum,
         "StringListComplianceParameter.ComplianceParameterTypeEnum": StringListComplianceParameter.ComplianceParameterTypeEnum,
         "SubHoldingKeyValueEquals.CriterionTypeEnum": SubHoldingKeyValueEquals.CriterionTypeEnum,
@@ -2486,7 +2487,6 @@ let typeMap: {[index: string]: any} = {
     "CompositeDispersionResponse": CompositeDispersionResponse,
     "Compounding": Compounding,
     "ConfigurationRecipe": ConfigurationRecipe,
-    "ConfigurationRecipeSnippet": ConfigurationRecipeSnippet,
     "ConstituentsAdjustmentHeader": ConstituentsAdjustmentHeader,
     "ContractForDifference": ContractForDifference,
     "ContractForDifferenceAllOf": ContractForDifferenceAllOf,
@@ -2628,6 +2628,8 @@ let typeMap: {[index: string]: any} = {
     "FieldSchema": FieldSchema,
     "FieldValue": FieldValue,
     "FileResponse": FileResponse,
+    "FilterPredicateComplianceParameter": FilterPredicateComplianceParameter,
+    "FilterPredicateComplianceParameterAllOf": FilterPredicateComplianceParameterAllOf,
     "FixedLeg": FixedLeg,
     "FixedLegAllOf": FixedLegAllOf,
     "FixedLegAllOfOverrides": FixedLegAllOfOverrides,
@@ -3104,7 +3106,6 @@ let typeMap: {[index: string]: any} = {
     "StockSplitEventAllOf": StockSplitEventAllOf,
     "Stream": Stream,
     "StringComplianceParameter": StringComplianceParameter,
-    "StringComplianceParameterAllOf": StringComplianceParameterAllOf,
     "StringList": StringList,
     "StringListComplianceParameter": StringListComplianceParameter,
     "StructuredResultData": StructuredResultData,
