@@ -58,6 +58,7 @@ export * from './annulQuotesResponse';
 export * from './annulSingleStructuredDataResponse';
 export * from './annulStructuredDataResponse';
 export * from './assetClass';
+export * from './assetLeg';
 export * from './barrier';
 export * from './basket';
 export * from './basketAllOf';
@@ -872,7 +873,6 @@ export * from './trialBalanceQueryParameters';
 export * from './triggerEvent';
 export * from './triggerEventAllOf';
 export * from './typedResourceId';
-export * from './underlyingLeg';
 export * from './unitSchema';
 export * from './unmatchedHoldingMethod';
 export * from './updateCalendarRequest';
@@ -1029,6 +1029,7 @@ import { AnnulQuotesResponse } from './annulQuotesResponse';
 import { AnnulSingleStructuredDataResponse } from './annulSingleStructuredDataResponse';
 import { AnnulStructuredDataResponse } from './annulStructuredDataResponse';
 import { AssetClass } from './assetClass';
+import { AssetLeg } from './assetLeg';
 import { Barrier } from './barrier';
 import { Basket } from './basket';
 import { BasketAllOf } from './basketAllOf';
@@ -1843,7 +1844,6 @@ import { TrialBalanceQueryParameters } from './trialBalanceQueryParameters';
 import { TriggerEvent } from './triggerEvent';
 import { TriggerEventAllOf } from './triggerEventAllOf';
 import { TypedResourceId } from './typedResourceId';
-import { UnderlyingLeg } from './underlyingLeg';
 import { UnitSchema } from './unitSchema';
 import { UnmatchedHoldingMethod } from './unmatchedHoldingMethod';
 import { UpdateCalendarRequest } from './updateCalendarRequest';
@@ -2395,6 +2395,7 @@ let typeMap: {[index: string]: any} = {
     "AnnulQuotesResponse": AnnulQuotesResponse,
     "AnnulSingleStructuredDataResponse": AnnulSingleStructuredDataResponse,
     "AnnulStructuredDataResponse": AnnulStructuredDataResponse,
+    "AssetLeg": AssetLeg,
     "Barrier": Barrier,
     "Basket": Basket,
     "BasketAllOf": BasketAllOf,
@@ -3164,7 +3165,6 @@ let typeMap: {[index: string]: any} = {
     "TriggerEvent": TriggerEvent,
     "TriggerEventAllOf": TriggerEventAllOf,
     "TypedResourceId": TypedResourceId,
-    "UnderlyingLeg": UnderlyingLeg,
     "UpdateCalendarRequest": UpdateCalendarRequest,
     "UpdateCustomEntityDefinitionRequest": UpdateCustomEntityDefinitionRequest,
     "UpdateCustomEntityTypeRequest": UpdateCustomEntityTypeRequest,
