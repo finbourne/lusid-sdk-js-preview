@@ -369,7 +369,6 @@ export * from './getRecipeResponse';
 export * from './getReferencePortfolioConstituentsResponse';
 export * from './getStructuredResultDataResponse';
 export * from './getVirtualDocumentResponse';
-export * from './groupOfMarketDataKeyRules';
 export * from './groupedResultOfAddressKey';
 export * from './holdingAdjustment';
 export * from './holdingAdjustmentWithDate';
@@ -1344,7 +1343,6 @@ import { GetRecipeResponse } from './getRecipeResponse';
 import { GetReferencePortfolioConstituentsResponse } from './getReferencePortfolioConstituentsResponse';
 import { GetStructuredResultDataResponse } from './getStructuredResultDataResponse';
 import { GetVirtualDocumentResponse } from './getVirtualDocumentResponse';
-import { GroupOfMarketDataKeyRules } from './groupOfMarketDataKeyRules';
 import { GroupedResultOfAddressKey } from './groupedResultOfAddressKey';
 import { HoldingAdjustment } from './holdingAdjustment';
 import { HoldingAdjustmentWithDate } from './holdingAdjustmentWithDate';
@@ -2707,7 +2705,6 @@ let typeMap: {[index: string]: any} = {
     "GetReferencePortfolioConstituentsResponse": GetReferencePortfolioConstituentsResponse,
     "GetStructuredResultDataResponse": GetStructuredResultDataResponse,
     "GetVirtualDocumentResponse": GetVirtualDocumentResponse,
-    "GroupOfMarketDataKeyRules": GroupOfMarketDataKeyRules,
     "GroupedResultOfAddressKey": GroupedResultOfAddressKey,
     "HoldingAdjustment": HoldingAdjustment,
     "HoldingAdjustmentWithDate": HoldingAdjustmentWithDate,
