@@ -255,6 +255,8 @@ export * from './discountFactorCurveDataAllOf';
 export * from './discountingDependency';
 export * from './discountingDependencyAllOf';
 export * from './discountingMethod';
+export * from './dividendReinvestmentEvent';
+export * from './dividendReinvestmentEventAllOf';
 export * from './economicDependency';
 export * from './economicDependencyType';
 export * from './economicDependencyWithComplexMarketData';
@@ -786,6 +788,7 @@ export * from './schedule';
 export * from './scheduleType';
 export * from './schema';
 export * from './scopeDefinition';
+export * from './securityElection';
 export * from './sequenceDefinition';
 export * from './setLegalEntityIdentifiersRequest';
 export * from './setLegalEntityPropertiesRequest';
@@ -1226,6 +1229,8 @@ import { DiscountFactorCurveDataAllOf } from './discountFactorCurveDataAllOf';
 import { DiscountingDependency } from './discountingDependency';
 import { DiscountingDependencyAllOf } from './discountingDependencyAllOf';
 import { DiscountingMethod } from './discountingMethod';
+import { DividendReinvestmentEvent } from './dividendReinvestmentEvent';
+import { DividendReinvestmentEventAllOf } from './dividendReinvestmentEventAllOf';
 import { EconomicDependency } from './economicDependency';
 import { EconomicDependencyType } from './economicDependencyType';
 import { EconomicDependencyWithComplexMarketData } from './economicDependencyWithComplexMarketData';
@@ -1757,6 +1762,7 @@ import { Schedule } from './schedule';
 import { ScheduleType } from './scheduleType';
 import { Schema } from './schema';
 import { ScopeDefinition } from './scopeDefinition';
+import { SecurityElection } from './securityElection';
 import { SequenceDefinition } from './sequenceDefinition';
 import { SetLegalEntityIdentifiersRequest } from './setLegalEntityIdentifiersRequest';
 import { SetLegalEntityPropertiesRequest } from './setLegalEntityPropertiesRequest';
@@ -2039,6 +2045,8 @@ let enumsMap: {[index: string]: any} = {
         "DiscountingDependency.DependencyTypeEnum": DiscountingDependency.DependencyTypeEnum,
         "DiscountingDependencyAllOf.DependencyTypeEnum": DiscountingDependencyAllOf.DependencyTypeEnum,
         "DiscountingMethod": DiscountingMethod,
+        "DividendReinvestmentEvent.InstrumentEventTypeEnum": DividendReinvestmentEvent.InstrumentEventTypeEnum,
+        "DividendReinvestmentEventAllOf.InstrumentEventTypeEnum": DividendReinvestmentEventAllOf.InstrumentEventTypeEnum,
         "EconomicDependency.DependencyTypeEnum": EconomicDependency.DependencyTypeEnum,
         "EconomicDependencyType": EconomicDependencyType,
         "EmptyModelOptions.ModelOptionsTypeEnum": EmptyModelOptions.ModelOptionsTypeEnum,
@@ -2584,6 +2592,8 @@ let typeMap: {[index: string]: any} = {
     "DiscountFactorCurveDataAllOf": DiscountFactorCurveDataAllOf,
     "DiscountingDependency": DiscountingDependency,
     "DiscountingDependencyAllOf": DiscountingDependencyAllOf,
+    "DividendReinvestmentEvent": DividendReinvestmentEvent,
+    "DividendReinvestmentEventAllOf": DividendReinvestmentEventAllOf,
     "EconomicDependency": EconomicDependency,
     "EconomicDependencyWithComplexMarketData": EconomicDependencyWithComplexMarketData,
     "EconomicDependencyWithQuote": EconomicDependencyWithQuote,
@@ -3085,6 +3095,7 @@ let typeMap: {[index: string]: any} = {
     "Schedule": Schedule,
     "Schema": Schema,
     "ScopeDefinition": ScopeDefinition,
+    "SecurityElection": SecurityElection,
     "SequenceDefinition": SequenceDefinition,
     "SetLegalEntityIdentifiersRequest": SetLegalEntityIdentifiersRequest,
     "SetLegalEntityPropertiesRequest": SetLegalEntityPropertiesRequest,
