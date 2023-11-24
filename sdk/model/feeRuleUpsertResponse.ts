@@ -16,9 +16,6 @@ import { Link } from './link';
 
 export class FeeRuleUpsertResponse {
     'values': { [key: string]: FeeRule; };
-    /**
-    * Collection of links.
-    */
     'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
