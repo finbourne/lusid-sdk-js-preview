@@ -116,6 +116,11 @@ export * from './changeItem';
 export * from './chartOfAccounts';
 export * from './chartOfAccountsProperties';
 export * from './chartOfAccountsRequest';
+export * from './cleardownModuleDetails';
+export * from './cleardownModuleRequest';
+export * from './cleardownModuleResponse';
+export * from './cleardownModuleRule';
+export * from './cleardownModuleRulesUpdatedResponse';
 export * from './client';
 export * from './closeEvent';
 export * from './closeEventAllOf';
@@ -534,6 +539,8 @@ export * from './pagedResourceListOfAllocation';
 export * from './pagedResourceListOfBlock';
 export * from './pagedResourceListOfCalendar';
 export * from './pagedResourceListOfChartOfAccounts';
+export * from './pagedResourceListOfCleardownModuleResponse';
+export * from './pagedResourceListOfCleardownModuleRule';
 export * from './pagedResourceListOfComplianceRuleResponse';
 export * from './pagedResourceListOfComplianceRunInfoV2';
 export * from './pagedResourceListOfComplianceTemplate';
@@ -1091,6 +1098,11 @@ import { ChangeItem } from './changeItem';
 import { ChartOfAccounts } from './chartOfAccounts';
 import { ChartOfAccountsProperties } from './chartOfAccountsProperties';
 import { ChartOfAccountsRequest } from './chartOfAccountsRequest';
+import { CleardownModuleDetails } from './cleardownModuleDetails';
+import { CleardownModuleRequest } from './cleardownModuleRequest';
+import { CleardownModuleResponse } from './cleardownModuleResponse';
+import { CleardownModuleRule } from './cleardownModuleRule';
+import { CleardownModuleRulesUpdatedResponse } from './cleardownModuleRulesUpdatedResponse';
 import { Client } from './client';
 import { CloseEvent } from './closeEvent';
 import { CloseEventAllOf } from './closeEventAllOf';
@@ -1509,6 +1521,8 @@ import { PagedResourceListOfAllocation } from './pagedResourceListOfAllocation';
 import { PagedResourceListOfBlock } from './pagedResourceListOfBlock';
 import { PagedResourceListOfCalendar } from './pagedResourceListOfCalendar';
 import { PagedResourceListOfChartOfAccounts } from './pagedResourceListOfChartOfAccounts';
+import { PagedResourceListOfCleardownModuleResponse } from './pagedResourceListOfCleardownModuleResponse';
+import { PagedResourceListOfCleardownModuleRule } from './pagedResourceListOfCleardownModuleRule';
 import { PagedResourceListOfComplianceRuleResponse } from './pagedResourceListOfComplianceRuleResponse';
 import { PagedResourceListOfComplianceRunInfoV2 } from './pagedResourceListOfComplianceRunInfoV2';
 import { PagedResourceListOfComplianceTemplate } from './pagedResourceListOfComplianceTemplate';
@@ -2462,6 +2476,11 @@ let typeMap: {[index: string]: any} = {
     "ChartOfAccounts": ChartOfAccounts,
     "ChartOfAccountsProperties": ChartOfAccountsProperties,
     "ChartOfAccountsRequest": ChartOfAccountsRequest,
+    "CleardownModuleDetails": CleardownModuleDetails,
+    "CleardownModuleRequest": CleardownModuleRequest,
+    "CleardownModuleResponse": CleardownModuleResponse,
+    "CleardownModuleRule": CleardownModuleRule,
+    "CleardownModuleRulesUpdatedResponse": CleardownModuleRulesUpdatedResponse,
     "Client": Client,
     "CloseEvent": CloseEvent,
     "CloseEventAllOf": CloseEventAllOf,
@@ -2860,6 +2879,8 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfBlock": PagedResourceListOfBlock,
     "PagedResourceListOfCalendar": PagedResourceListOfCalendar,
     "PagedResourceListOfChartOfAccounts": PagedResourceListOfChartOfAccounts,
+    "PagedResourceListOfCleardownModuleResponse": PagedResourceListOfCleardownModuleResponse,
+    "PagedResourceListOfCleardownModuleRule": PagedResourceListOfCleardownModuleRule,
     "PagedResourceListOfComplianceRuleResponse": PagedResourceListOfComplianceRuleResponse,
     "PagedResourceListOfComplianceRunInfoV2": PagedResourceListOfComplianceRunInfoV2,
     "PagedResourceListOfComplianceTemplate": PagedResourceListOfComplianceTemplate,
