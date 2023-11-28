@@ -54,9 +54,6 @@ export class TrialBalance {
     * Properties found on the mapped \'Account\', as specified in request
     */
     'properties'?: { [key: string]: Property; } | null;
-    /**
-    * Collection of links.
-    */
     'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;

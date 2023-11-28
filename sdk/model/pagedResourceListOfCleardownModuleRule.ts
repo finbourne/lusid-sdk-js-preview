@@ -14,29 +14,11 @@ import { RequestFile } from './models';
 import { CleardownModuleRule } from './cleardownModuleRule';
 import { Link } from './link';
 
-/**
-* A paginated list of resource that can be returned from a request.
-*/
 export class PagedResourceListOfCleardownModuleRule {
-    /**
-    * The next page of results.
-    */
     'nextPage'?: string | null;
-    /**
-    * The previous page of results.
-    */
     'previousPage'?: string | null;
-    /**
-    * The resources to list.
-    */
     'values': Array<CleardownModuleRule>;
-    /**
-    * The URI of the resource list.
-    */
     'href'?: string | null;
-    /**
-    * Collection of links.
-    */
     'links'?: Array<Link> | null;
 
     static discriminator: string | undefined = undefined;
