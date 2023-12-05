@@ -18,6 +18,8 @@ export * from './account';
 export * from './accountProperties';
 export * from './accountingMethod';
 export * from './accountsUpsertResponse';
+export * from './accumulationEvent';
+export * from './accumulationEventAllOf';
 export * from './actionId';
 export * from './actionResultOfPortfolio';
 export * from './addBusinessDaysToDateRequest';
@@ -573,8 +575,6 @@ export * from './pagedResourceListOfPostingModuleResponse';
 export * from './pagedResourceListOfPostingModuleRule';
 export * from './pagedResourceListOfPropertyDefinitionSearchResult';
 export * from './pagedResourceListOfReconciliation';
-export * from './pagedResourceListOfReconciliationRun';
-export * from './pagedResourceListOfReconciliationRunBreak';
 export * from './pagedResourceListOfReferenceListResponse';
 export * from './pagedResourceListOfRelationshipDefinition';
 export * from './pagedResourceListOfSequenceDefinition';
@@ -670,7 +670,6 @@ export * from './reconcileStringRuleAllOf';
 export * from './reconciledTransaction';
 export * from './reconciliation';
 export * from './reconciliationBreak';
-export * from './reconciliationBreakId';
 export * from './reconciliationConfiguration';
 export * from './reconciliationId';
 export * from './reconciliationLeftRightAddressKeyPair';
@@ -679,9 +678,6 @@ export * from './reconciliationRequest';
 export * from './reconciliationResponse';
 export * from './reconciliationRule';
 export * from './reconciliationRuleType';
-export * from './reconciliationRun';
-export * from './reconciliationRunBreak';
-export * from './reconciliationRunId';
 export * from './reconciliationSideConfiguration';
 export * from './reconciliationTransactions';
 export * from './referenceData';
@@ -930,8 +926,6 @@ export * from './upsertQuoteAccessMetadataRuleRequest';
 export * from './upsertQuoteRequest';
 export * from './upsertQuotesResponse';
 export * from './upsertRecipeRequest';
-export * from './upsertReconciliationBreakRequest';
-export * from './upsertReconciliationRunRequest';
 export * from './upsertReferencePortfolioConstituentsRequest';
 export * from './upsertReferencePortfolioConstituentsResponse';
 export * from './upsertResultValuesDataRequest';
@@ -1002,6 +996,8 @@ import { Account } from './account';
 import { AccountProperties } from './accountProperties';
 import { AccountingMethod } from './accountingMethod';
 import { AccountsUpsertResponse } from './accountsUpsertResponse';
+import { AccumulationEvent } from './accumulationEvent';
+import { AccumulationEventAllOf } from './accumulationEventAllOf';
 import { ActionId } from './actionId';
 import { ActionResultOfPortfolio } from './actionResultOfPortfolio';
 import { AddBusinessDaysToDateRequest } from './addBusinessDaysToDateRequest';
@@ -1557,8 +1553,6 @@ import { PagedResourceListOfPostingModuleResponse } from './pagedResourceListOfP
 import { PagedResourceListOfPostingModuleRule } from './pagedResourceListOfPostingModuleRule';
 import { PagedResourceListOfPropertyDefinitionSearchResult } from './pagedResourceListOfPropertyDefinitionSearchResult';
 import { PagedResourceListOfReconciliation } from './pagedResourceListOfReconciliation';
-import { PagedResourceListOfReconciliationRun } from './pagedResourceListOfReconciliationRun';
-import { PagedResourceListOfReconciliationRunBreak } from './pagedResourceListOfReconciliationRunBreak';
 import { PagedResourceListOfReferenceListResponse } from './pagedResourceListOfReferenceListResponse';
 import { PagedResourceListOfRelationshipDefinition } from './pagedResourceListOfRelationshipDefinition';
 import { PagedResourceListOfSequenceDefinition } from './pagedResourceListOfSequenceDefinition';
@@ -1654,7 +1648,6 @@ import { ReconcileStringRuleAllOf } from './reconcileStringRuleAllOf';
 import { ReconciledTransaction } from './reconciledTransaction';
 import { Reconciliation } from './reconciliation';
 import { ReconciliationBreak } from './reconciliationBreak';
-import { ReconciliationBreakId } from './reconciliationBreakId';
 import { ReconciliationConfiguration } from './reconciliationConfiguration';
 import { ReconciliationId } from './reconciliationId';
 import { ReconciliationLeftRightAddressKeyPair } from './reconciliationLeftRightAddressKeyPair';
@@ -1663,9 +1656,6 @@ import { ReconciliationRequest } from './reconciliationRequest';
 import { ReconciliationResponse } from './reconciliationResponse';
 import { ReconciliationRule } from './reconciliationRule';
 import { ReconciliationRuleType } from './reconciliationRuleType';
-import { ReconciliationRun } from './reconciliationRun';
-import { ReconciliationRunBreak } from './reconciliationRunBreak';
-import { ReconciliationRunId } from './reconciliationRunId';
 import { ReconciliationSideConfiguration } from './reconciliationSideConfiguration';
 import { ReconciliationTransactions } from './reconciliationTransactions';
 import { ReferenceData } from './referenceData';
@@ -1914,8 +1904,6 @@ import { UpsertQuoteAccessMetadataRuleRequest } from './upsertQuoteAccessMetadat
 import { UpsertQuoteRequest } from './upsertQuoteRequest';
 import { UpsertQuotesResponse } from './upsertQuotesResponse';
 import { UpsertRecipeRequest } from './upsertRecipeRequest';
-import { UpsertReconciliationBreakRequest } from './upsertReconciliationBreakRequest';
-import { UpsertReconciliationRunRequest } from './upsertReconciliationRunRequest';
 import { UpsertReferencePortfolioConstituentsRequest } from './upsertReferencePortfolioConstituentsRequest';
 import { UpsertReferencePortfolioConstituentsResponse } from './upsertReferencePortfolioConstituentsResponse';
 import { UpsertResultValuesDataRequest } from './upsertResultValuesDataRequest';
@@ -1971,6 +1959,8 @@ let enumsMap: {[index: string]: any} = {
         "AccessMetadataOperation.OpEnum": AccessMetadataOperation.OpEnum,
         "Account.StatusEnum": Account.StatusEnum,
         "AccountingMethod": AccountingMethod,
+        "AccumulationEvent.InstrumentEventTypeEnum": AccumulationEvent.InstrumentEventTypeEnum,
+        "AccumulationEventAllOf.InstrumentEventTypeEnum": AccumulationEventAllOf.InstrumentEventTypeEnum,
         "AddressDefinition.TypeEnum": AddressDefinition.TypeEnum,
         "AddressKeyComplianceParameter.ComplianceParameterTypeEnum": AddressKeyComplianceParameter.ComplianceParameterTypeEnum,
         "AddressKeyComplianceParameterAllOf.ComplianceParameterTypeEnum": AddressKeyComplianceParameterAllOf.ComplianceParameterTypeEnum,
@@ -2386,6 +2376,8 @@ let typeMap: {[index: string]: any} = {
     "Account": Account,
     "AccountProperties": AccountProperties,
     "AccountsUpsertResponse": AccountsUpsertResponse,
+    "AccumulationEvent": AccumulationEvent,
+    "AccumulationEventAllOf": AccumulationEventAllOf,
     "ActionId": ActionId,
     "ActionResultOfPortfolio": ActionResultOfPortfolio,
     "AddBusinessDaysToDateRequest": AddBusinessDaysToDateRequest,
@@ -2917,8 +2909,6 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfPostingModuleRule": PagedResourceListOfPostingModuleRule,
     "PagedResourceListOfPropertyDefinitionSearchResult": PagedResourceListOfPropertyDefinitionSearchResult,
     "PagedResourceListOfReconciliation": PagedResourceListOfReconciliation,
-    "PagedResourceListOfReconciliationRun": PagedResourceListOfReconciliationRun,
-    "PagedResourceListOfReconciliationRunBreak": PagedResourceListOfReconciliationRunBreak,
     "PagedResourceListOfReferenceListResponse": PagedResourceListOfReferenceListResponse,
     "PagedResourceListOfRelationshipDefinition": PagedResourceListOfRelationshipDefinition,
     "PagedResourceListOfSequenceDefinition": PagedResourceListOfSequenceDefinition,
@@ -3004,7 +2994,6 @@ let typeMap: {[index: string]: any} = {
     "ReconciledTransaction": ReconciledTransaction,
     "Reconciliation": Reconciliation,
     "ReconciliationBreak": ReconciliationBreak,
-    "ReconciliationBreakId": ReconciliationBreakId,
     "ReconciliationConfiguration": ReconciliationConfiguration,
     "ReconciliationId": ReconciliationId,
     "ReconciliationLeftRightAddressKeyPair": ReconciliationLeftRightAddressKeyPair,
@@ -3012,9 +3001,6 @@ let typeMap: {[index: string]: any} = {
     "ReconciliationRequest": ReconciliationRequest,
     "ReconciliationResponse": ReconciliationResponse,
     "ReconciliationRule": ReconciliationRule,
-    "ReconciliationRun": ReconciliationRun,
-    "ReconciliationRunBreak": ReconciliationRunBreak,
-    "ReconciliationRunId": ReconciliationRunId,
     "ReconciliationSideConfiguration": ReconciliationSideConfiguration,
     "ReconciliationTransactions": ReconciliationTransactions,
     "ReferenceData": ReferenceData,
@@ -3248,8 +3234,6 @@ let typeMap: {[index: string]: any} = {
     "UpsertQuoteRequest": UpsertQuoteRequest,
     "UpsertQuotesResponse": UpsertQuotesResponse,
     "UpsertRecipeRequest": UpsertRecipeRequest,
-    "UpsertReconciliationBreakRequest": UpsertReconciliationBreakRequest,
-    "UpsertReconciliationRunRequest": UpsertReconciliationRunRequest,
     "UpsertReferencePortfolioConstituentsRequest": UpsertReferencePortfolioConstituentsRequest,
     "UpsertReferencePortfolioConstituentsResponse": UpsertReferencePortfolioConstituentsResponse,
     "UpsertResultValuesDataRequest": UpsertResultValuesDataRequest,
