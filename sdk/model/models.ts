@@ -484,6 +484,7 @@ export * from './modelOptions';
 export * from './modelOptionsType';
 export * from './modelSelection';
 export * from './movementType';
+export * from './multiCurrencyAmounts';
 export * from './nextValueInSequenceResponse';
 export * from './numericComparisonType';
 export * from './opaqueDependency';
@@ -1462,6 +1463,7 @@ import { ModelOptions } from './modelOptions';
 import { ModelOptionsType } from './modelOptionsType';
 import { ModelSelection } from './modelSelection';
 import { MovementType } from './movementType';
+import { MultiCurrencyAmounts } from './multiCurrencyAmounts';
 import { NextValueInSequenceResponse } from './nextValueInSequenceResponse';
 import { NumericComparisonType } from './numericComparisonType';
 import { OpaqueDependency } from './opaqueDependency';
@@ -2822,6 +2824,7 @@ let typeMap: {[index: string]: any} = {
     "MetricValue": MetricValue,
     "ModelOptions": ModelOptions,
     "ModelSelection": ModelSelection,
+    "MultiCurrencyAmounts": MultiCurrencyAmounts,
     "NextValueInSequenceResponse": NextValueInSequenceResponse,
     "OpaqueDependency": OpaqueDependency,
     "OpaqueDependencyAllOf": OpaqueDependencyAllOf,
