@@ -155,6 +155,7 @@ export * from './complianceSummaryRuleResultRequest';
 export * from './complianceTemplate';
 export * from './complianceTemplateParameter';
 export * from './complianceTemplateVariation';
+export * from './componentTransaction';
 export * from './compositeBreakdown';
 export * from './compositeBreakdownRequest';
 export * from './compositeBreakdownResponse';
@@ -844,7 +845,10 @@ export * from './transactionConfigurationDataRequest';
 export * from './transactionConfigurationMovementData';
 export * from './transactionConfigurationMovementDataRequest';
 export * from './transactionConfigurationTypeAlias';
+export * from './transactionCurrencyAndAmount';
+export * from './transactionFieldMap';
 export * from './transactionPrice';
+export * from './transactionPriceAndType';
 export * from './transactionPriceType';
 export * from './transactionPropertyMapping';
 export * from './transactionPropertyMappingRequest';
@@ -857,6 +861,8 @@ export * from './transactionRoles';
 export * from './transactionSetConfigurationData';
 export * from './transactionSetConfigurationDataRequest';
 export * from './transactionStatus';
+export * from './transactionTemplateRequest';
+export * from './transactionTemplateResponse';
 export * from './transactionTemplateSpecification';
 export * from './transactionType';
 export * from './transactionTypeAlias';
@@ -1136,6 +1142,7 @@ import { ComplianceSummaryRuleResultRequest } from './complianceSummaryRuleResul
 import { ComplianceTemplate } from './complianceTemplate';
 import { ComplianceTemplateParameter } from './complianceTemplateParameter';
 import { ComplianceTemplateVariation } from './complianceTemplateVariation';
+import { ComponentTransaction } from './componentTransaction';
 import { CompositeBreakdown } from './compositeBreakdown';
 import { CompositeBreakdownRequest } from './compositeBreakdownRequest';
 import { CompositeBreakdownResponse } from './compositeBreakdownResponse';
@@ -1825,7 +1832,10 @@ import { TransactionConfigurationDataRequest } from './transactionConfigurationD
 import { TransactionConfigurationMovementData } from './transactionConfigurationMovementData';
 import { TransactionConfigurationMovementDataRequest } from './transactionConfigurationMovementDataRequest';
 import { TransactionConfigurationTypeAlias } from './transactionConfigurationTypeAlias';
+import { TransactionCurrencyAndAmount } from './transactionCurrencyAndAmount';
+import { TransactionFieldMap } from './transactionFieldMap';
 import { TransactionPrice } from './transactionPrice';
+import { TransactionPriceAndType } from './transactionPriceAndType';
 import { TransactionPriceType } from './transactionPriceType';
 import { TransactionPropertyMapping } from './transactionPropertyMapping';
 import { TransactionPropertyMappingRequest } from './transactionPropertyMappingRequest';
@@ -1838,6 +1848,8 @@ import { TransactionRoles } from './transactionRoles';
 import { TransactionSetConfigurationData } from './transactionSetConfigurationData';
 import { TransactionSetConfigurationDataRequest } from './transactionSetConfigurationDataRequest';
 import { TransactionStatus } from './transactionStatus';
+import { TransactionTemplateRequest } from './transactionTemplateRequest';
+import { TransactionTemplateResponse } from './transactionTemplateResponse';
 import { TransactionTemplateSpecification } from './transactionTemplateSpecification';
 import { TransactionType } from './transactionType';
 import { TransactionTypeAlias } from './transactionTypeAlias';
@@ -2516,6 +2528,7 @@ let typeMap: {[index: string]: any} = {
     "ComplianceTemplate": ComplianceTemplate,
     "ComplianceTemplateParameter": ComplianceTemplateParameter,
     "ComplianceTemplateVariation": ComplianceTemplateVariation,
+    "ComponentTransaction": ComponentTransaction,
     "CompositeBreakdown": CompositeBreakdown,
     "CompositeBreakdownRequest": CompositeBreakdownRequest,
     "CompositeBreakdownResponse": CompositeBreakdownResponse,
@@ -3166,7 +3179,10 @@ let typeMap: {[index: string]: any} = {
     "TransactionConfigurationMovementData": TransactionConfigurationMovementData,
     "TransactionConfigurationMovementDataRequest": TransactionConfigurationMovementDataRequest,
     "TransactionConfigurationTypeAlias": TransactionConfigurationTypeAlias,
+    "TransactionCurrencyAndAmount": TransactionCurrencyAndAmount,
+    "TransactionFieldMap": TransactionFieldMap,
     "TransactionPrice": TransactionPrice,
+    "TransactionPriceAndType": TransactionPriceAndType,
     "TransactionPropertyMapping": TransactionPropertyMapping,
     "TransactionPropertyMappingRequest": TransactionPropertyMappingRequest,
     "TransactionQueryParameters": TransactionQueryParameters,
@@ -3175,6 +3191,8 @@ let typeMap: {[index: string]: any} = {
     "TransactionRequest": TransactionRequest,
     "TransactionSetConfigurationData": TransactionSetConfigurationData,
     "TransactionSetConfigurationDataRequest": TransactionSetConfigurationDataRequest,
+    "TransactionTemplateRequest": TransactionTemplateRequest,
+    "TransactionTemplateResponse": TransactionTemplateResponse,
     "TransactionTemplateSpecification": TransactionTemplateSpecification,
     "TransactionType": TransactionType,
     "TransactionTypeAlias": TransactionTypeAlias,
