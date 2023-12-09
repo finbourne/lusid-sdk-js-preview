@@ -265,6 +265,8 @@ export * from './discountFactorCurveDataAllOf';
 export * from './discountingDependency';
 export * from './discountingDependencyAllOf';
 export * from './discountingMethod';
+export * from './dividendOptionEvent';
+export * from './dividendOptionEventAllOf';
 export * from './dividendReinvestmentEvent';
 export * from './dividendReinvestmentEventAllOf';
 export * from './economicDependency';
@@ -890,6 +892,7 @@ export * from './triggerEvent';
 export * from './triggerEventAllOf';
 export * from './typedResourceId';
 export * from './unitSchema';
+export * from './unitsRatio';
 export * from './unmatchedHoldingMethod';
 export * from './updateCalendarRequest';
 export * from './updateCustomEntityDefinitionRequest';
@@ -1252,6 +1255,8 @@ import { DiscountFactorCurveDataAllOf } from './discountFactorCurveDataAllOf';
 import { DiscountingDependency } from './discountingDependency';
 import { DiscountingDependencyAllOf } from './discountingDependencyAllOf';
 import { DiscountingMethod } from './discountingMethod';
+import { DividendOptionEvent } from './dividendOptionEvent';
+import { DividendOptionEventAllOf } from './dividendOptionEventAllOf';
 import { DividendReinvestmentEvent } from './dividendReinvestmentEvent';
 import { DividendReinvestmentEventAllOf } from './dividendReinvestmentEventAllOf';
 import { EconomicDependency } from './economicDependency';
@@ -1877,6 +1882,7 @@ import { TriggerEvent } from './triggerEvent';
 import { TriggerEventAllOf } from './triggerEventAllOf';
 import { TypedResourceId } from './typedResourceId';
 import { UnitSchema } from './unitSchema';
+import { UnitsRatio } from './unitsRatio';
 import { UnmatchedHoldingMethod } from './unmatchedHoldingMethod';
 import { UpdateCalendarRequest } from './updateCalendarRequest';
 import { UpdateCustomEntityDefinitionRequest } from './updateCustomEntityDefinitionRequest';
@@ -2075,6 +2081,8 @@ let enumsMap: {[index: string]: any} = {
         "DiscountingDependency.DependencyTypeEnum": DiscountingDependency.DependencyTypeEnum,
         "DiscountingDependencyAllOf.DependencyTypeEnum": DiscountingDependencyAllOf.DependencyTypeEnum,
         "DiscountingMethod": DiscountingMethod,
+        "DividendOptionEvent.InstrumentEventTypeEnum": DividendOptionEvent.InstrumentEventTypeEnum,
+        "DividendOptionEventAllOf.InstrumentEventTypeEnum": DividendOptionEventAllOf.InstrumentEventTypeEnum,
         "DividendReinvestmentEvent.InstrumentEventTypeEnum": DividendReinvestmentEvent.InstrumentEventTypeEnum,
         "DividendReinvestmentEventAllOf.InstrumentEventTypeEnum": DividendReinvestmentEventAllOf.InstrumentEventTypeEnum,
         "EconomicDependency.DependencyTypeEnum": EconomicDependency.DependencyTypeEnum,
@@ -2632,6 +2640,8 @@ let typeMap: {[index: string]: any} = {
     "DiscountFactorCurveDataAllOf": DiscountFactorCurveDataAllOf,
     "DiscountingDependency": DiscountingDependency,
     "DiscountingDependencyAllOf": DiscountingDependencyAllOf,
+    "DividendOptionEvent": DividendOptionEvent,
+    "DividendOptionEventAllOf": DividendOptionEventAllOf,
     "DividendReinvestmentEvent": DividendReinvestmentEvent,
     "DividendReinvestmentEventAllOf": DividendReinvestmentEventAllOf,
     "EconomicDependency": EconomicDependency,
@@ -3219,6 +3229,7 @@ let typeMap: {[index: string]: any} = {
     "TriggerEvent": TriggerEvent,
     "TriggerEventAllOf": TriggerEventAllOf,
     "TypedResourceId": TypedResourceId,
+    "UnitsRatio": UnitsRatio,
     "UpdateCalendarRequest": UpdateCalendarRequest,
     "UpdateCustomEntityDefinitionRequest": UpdateCustomEntityDefinitionRequest,
     "UpdateCustomEntityTypeRequest": UpdateCustomEntityTypeRequest,
