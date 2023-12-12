@@ -163,6 +163,8 @@ export * from './compositeDispersion';
 export * from './compositeDispersionResponse';
 export * from './compounding';
 export * from './configurationRecipe';
+export * from './constantVolatilitySurface';
+export * from './constantVolatilitySurfaceAllOf';
 export * from './constituentsAdjustmentHeader';
 export * from './contractForDifference';
 export * from './contractForDifferenceAllOf';
@@ -1153,6 +1155,8 @@ import { CompositeDispersion } from './compositeDispersion';
 import { CompositeDispersionResponse } from './compositeDispersionResponse';
 import { Compounding } from './compounding';
 import { ConfigurationRecipe } from './configurationRecipe';
+import { ConstantVolatilitySurface } from './constantVolatilitySurface';
+import { ConstantVolatilitySurfaceAllOf } from './constantVolatilitySurfaceAllOf';
 import { ConstituentsAdjustmentHeader } from './constituentsAdjustmentHeader';
 import { ContractForDifference } from './contractForDifference';
 import { ContractForDifferenceAllOf } from './contractForDifferenceAllOf';
@@ -2041,6 +2045,8 @@ let enumsMap: {[index: string]: any} = {
         "ComplexMarketData.MarketDataTypeEnum": ComplexMarketData.MarketDataTypeEnum,
         "ComplianceParameter.ComplianceParameterTypeEnum": ComplianceParameter.ComplianceParameterTypeEnum,
         "ComplianceParameterType": ComplianceParameterType,
+        "ConstantVolatilitySurface.MarketDataTypeEnum": ConstantVolatilitySurface.MarketDataTypeEnum,
+        "ConstantVolatilitySurfaceAllOf.MarketDataTypeEnum": ConstantVolatilitySurfaceAllOf.MarketDataTypeEnum,
         "ContractForDifference.InstrumentTypeEnum": ContractForDifference.InstrumentTypeEnum,
         "ContractForDifferenceAllOf.InstrumentTypeEnum": ContractForDifferenceAllOf.InstrumentTypeEnum,
         "CreateDataTypeRequest.TypeValueRangeEnum": CreateDataTypeRequest.TypeValueRangeEnum,
@@ -2544,6 +2550,8 @@ let typeMap: {[index: string]: any} = {
     "CompositeDispersionResponse": CompositeDispersionResponse,
     "Compounding": Compounding,
     "ConfigurationRecipe": ConfigurationRecipe,
+    "ConstantVolatilitySurface": ConstantVolatilitySurface,
+    "ConstantVolatilitySurfaceAllOf": ConstantVolatilitySurfaceAllOf,
     "ConstituentsAdjustmentHeader": ConstituentsAdjustmentHeader,
     "ContractForDifference": ContractForDifference,
     "ContractForDifferenceAllOf": ContractForDifferenceAllOf,
