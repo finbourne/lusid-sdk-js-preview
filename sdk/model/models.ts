@@ -145,11 +145,11 @@ export * from './complianceRuleResponse';
 export * from './complianceRuleResult';
 export * from './complianceRuleResultDetail';
 export * from './complianceRuleResultPortfolioDetail';
+export * from './complianceRuleResultV2';
 export * from './complianceRuleUpsertRequest';
 export * from './complianceRuleUpsertResponse';
 export * from './complianceRunInfo';
 export * from './complianceRunInfoV2';
-export * from './complianceRunSummary';
 export * from './complianceSummaryRuleResult';
 export * from './complianceSummaryRuleResultRequest';
 export * from './complianceTemplate';
@@ -914,6 +914,7 @@ export * from './upsertCdsFlowConventionsRequest';
 export * from './upsertComplexMarketDataRequest';
 export * from './upsertComplianceRuleRequest';
 export * from './upsertComplianceRunSummaryRequest';
+export * from './upsertComplianceRunSummaryResult';
 export * from './upsertCorporateActionRequest';
 export * from './upsertCorporateActionsResponse';
 export * from './upsertCounterpartyAgreementRequest';
@@ -1138,11 +1139,11 @@ import { ComplianceRuleResponse } from './complianceRuleResponse';
 import { ComplianceRuleResult } from './complianceRuleResult';
 import { ComplianceRuleResultDetail } from './complianceRuleResultDetail';
 import { ComplianceRuleResultPortfolioDetail } from './complianceRuleResultPortfolioDetail';
+import { ComplianceRuleResultV2 } from './complianceRuleResultV2';
 import { ComplianceRuleUpsertRequest } from './complianceRuleUpsertRequest';
 import { ComplianceRuleUpsertResponse } from './complianceRuleUpsertResponse';
 import { ComplianceRunInfo } from './complianceRunInfo';
 import { ComplianceRunInfoV2 } from './complianceRunInfoV2';
-import { ComplianceRunSummary } from './complianceRunSummary';
 import { ComplianceSummaryRuleResult } from './complianceSummaryRuleResult';
 import { ComplianceSummaryRuleResultRequest } from './complianceSummaryRuleResultRequest';
 import { ComplianceTemplate } from './complianceTemplate';
@@ -1907,6 +1908,7 @@ import { UpsertCdsFlowConventionsRequest } from './upsertCdsFlowConventionsReque
 import { UpsertComplexMarketDataRequest } from './upsertComplexMarketDataRequest';
 import { UpsertComplianceRuleRequest } from './upsertComplianceRuleRequest';
 import { UpsertComplianceRunSummaryRequest } from './upsertComplianceRunSummaryRequest';
+import { UpsertComplianceRunSummaryResult } from './upsertComplianceRunSummaryResult';
 import { UpsertCorporateActionRequest } from './upsertCorporateActionRequest';
 import { UpsertCorporateActionsResponse } from './upsertCorporateActionsResponse';
 import { UpsertCounterpartyAgreementRequest } from './upsertCounterpartyAgreementRequest';
@@ -2534,11 +2536,11 @@ let typeMap: {[index: string]: any} = {
     "ComplianceRuleResult": ComplianceRuleResult,
     "ComplianceRuleResultDetail": ComplianceRuleResultDetail,
     "ComplianceRuleResultPortfolioDetail": ComplianceRuleResultPortfolioDetail,
+    "ComplianceRuleResultV2": ComplianceRuleResultV2,
     "ComplianceRuleUpsertRequest": ComplianceRuleUpsertRequest,
     "ComplianceRuleUpsertResponse": ComplianceRuleUpsertResponse,
     "ComplianceRunInfo": ComplianceRunInfo,
     "ComplianceRunInfoV2": ComplianceRunInfoV2,
-    "ComplianceRunSummary": ComplianceRunSummary,
     "ComplianceSummaryRuleResult": ComplianceSummaryRuleResult,
     "ComplianceSummaryRuleResultRequest": ComplianceSummaryRuleResultRequest,
     "ComplianceTemplate": ComplianceTemplate,
@@ -3258,6 +3260,7 @@ let typeMap: {[index: string]: any} = {
     "UpsertComplexMarketDataRequest": UpsertComplexMarketDataRequest,
     "UpsertComplianceRuleRequest": UpsertComplianceRuleRequest,
     "UpsertComplianceRunSummaryRequest": UpsertComplianceRunSummaryRequest,
+    "UpsertComplianceRunSummaryResult": UpsertComplianceRunSummaryResult,
     "UpsertCorporateActionRequest": UpsertCorporateActionRequest,
     "UpsertCorporateActionsResponse": UpsertCorporateActionsResponse,
     "UpsertCounterpartyAgreementRequest": UpsertCounterpartyAgreementRequest,
