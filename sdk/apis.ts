@@ -38,6 +38,7 @@ import {PortfolioGroupsApi} from './api/portfolioGroupsApi';
 import {PortfoliosApi} from './api/portfoliosApi';
 import {PropertyDefinitionsApi} from './api/propertyDefinitionsApi';
 import {QuotesApi} from './api/quotesApi';
+import {RecipeComposerApi} from './api/recipeComposerApi';
 import {ReconciliationsApi} from './api/reconciliationsApi';
 import {ReferenceListsApi} from './api/referenceListsApi';
 import {ReferencePortfolioApi} from './api/referencePortfolioApi';
@@ -99,6 +100,7 @@ export class Api {
     public portfolios:  PortfoliosApi
     public propertyDefinitions:  PropertyDefinitionsApi
     public quotes:  QuotesApi
+    public recipeComposer:  RecipeComposerApi
     public reconciliations:  ReconciliationsApi
     public referenceLists:  ReferenceListsApi
     public referencePortfolio:  ReferencePortfolioApi

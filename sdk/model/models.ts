@@ -332,6 +332,7 @@ export * from './flowConventionName';
 export * from './flowConventions';
 export * from './forwardRateAgreement';
 export * from './forwardRateAgreementAllOf';
+export * from './fromRecipe';
 export * from './fundingLeg';
 export * from './fundingLegAllOf';
 export * from './fundingLegOptions';
@@ -669,6 +670,9 @@ export * from './quoteType';
 export * from './rawVendorEvent';
 export * from './rawVendorEventAllOf';
 export * from './realisedGainLoss';
+export * from './recipeBlock';
+export * from './recipeComposer';
+export * from './recipeValue';
 export * from './reconcileDateTimeRule';
 export * from './reconcileDateTimeRuleAllOf';
 export * from './reconcileNumericRule';
@@ -940,6 +944,7 @@ export * from './upsertPortfolioTransactionsResponse';
 export * from './upsertQuoteAccessMetadataRuleRequest';
 export * from './upsertQuoteRequest';
 export * from './upsertQuotesResponse';
+export * from './upsertRecipeComposerRequest';
 export * from './upsertRecipeRequest';
 export * from './upsertReferencePortfolioConstituentsRequest';
 export * from './upsertReferencePortfolioConstituentsResponse';
@@ -1326,6 +1331,7 @@ import { FlowConventionName } from './flowConventionName';
 import { FlowConventions } from './flowConventions';
 import { ForwardRateAgreement } from './forwardRateAgreement';
 import { ForwardRateAgreementAllOf } from './forwardRateAgreementAllOf';
+import { FromRecipe } from './fromRecipe';
 import { FundingLeg } from './fundingLeg';
 import { FundingLegAllOf } from './fundingLegAllOf';
 import { FundingLegOptions } from './fundingLegOptions';
@@ -1663,6 +1669,9 @@ import { QuoteType } from './quoteType';
 import { RawVendorEvent } from './rawVendorEvent';
 import { RawVendorEventAllOf } from './rawVendorEventAllOf';
 import { RealisedGainLoss } from './realisedGainLoss';
+import { RecipeBlock } from './recipeBlock';
+import { RecipeComposer } from './recipeComposer';
+import { RecipeValue } from './recipeValue';
 import { ReconcileDateTimeRule } from './reconcileDateTimeRule';
 import { ReconcileDateTimeRuleAllOf } from './reconcileDateTimeRuleAllOf';
 import { ReconcileNumericRule } from './reconcileNumericRule';
@@ -1934,6 +1943,7 @@ import { UpsertPortfolioTransactionsResponse } from './upsertPortfolioTransactio
 import { UpsertQuoteAccessMetadataRuleRequest } from './upsertQuoteAccessMetadataRuleRequest';
 import { UpsertQuoteRequest } from './upsertQuoteRequest';
 import { UpsertQuotesResponse } from './upsertQuotesResponse';
+import { UpsertRecipeComposerRequest } from './upsertRecipeComposerRequest';
 import { UpsertRecipeRequest } from './upsertRecipeRequest';
 import { UpsertReferencePortfolioConstituentsRequest } from './upsertReferencePortfolioConstituentsRequest';
 import { UpsertReferencePortfolioConstituentsResponse } from './upsertReferencePortfolioConstituentsResponse';
@@ -2716,6 +2726,7 @@ let typeMap: {[index: string]: any} = {
     "FlowConventions": FlowConventions,
     "ForwardRateAgreement": ForwardRateAgreement,
     "ForwardRateAgreementAllOf": ForwardRateAgreementAllOf,
+    "FromRecipe": FromRecipe,
     "FundingLeg": FundingLeg,
     "FundingLegAllOf": FundingLegAllOf,
     "FundingLegOptions": FundingLegOptions,
@@ -3031,6 +3042,9 @@ let typeMap: {[index: string]: any} = {
     "RawVendorEvent": RawVendorEvent,
     "RawVendorEventAllOf": RawVendorEventAllOf,
     "RealisedGainLoss": RealisedGainLoss,
+    "RecipeBlock": RecipeBlock,
+    "RecipeComposer": RecipeComposer,
+    "RecipeValue": RecipeValue,
     "ReconcileDateTimeRule": ReconcileDateTimeRule,
     "ReconcileDateTimeRuleAllOf": ReconcileDateTimeRuleAllOf,
     "ReconcileNumericRule": ReconcileNumericRule,
@@ -3286,6 +3300,7 @@ let typeMap: {[index: string]: any} = {
     "UpsertQuoteAccessMetadataRuleRequest": UpsertQuoteAccessMetadataRuleRequest,
     "UpsertQuoteRequest": UpsertQuoteRequest,
     "UpsertQuotesResponse": UpsertQuotesResponse,
+    "UpsertRecipeComposerRequest": UpsertRecipeComposerRequest,
     "UpsertRecipeRequest": UpsertRecipeRequest,
     "UpsertReferencePortfolioConstituentsRequest": UpsertReferencePortfolioConstituentsRequest,
     "UpsertReferencePortfolioConstituentsResponse": UpsertReferencePortfolioConstituentsResponse,
