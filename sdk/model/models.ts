@@ -128,6 +128,7 @@ export * from './cleardownModuleRulesUpdatedResponse';
 export * from './client';
 export * from './closeEvent';
 export * from './closeEventAllOf';
+export * from './closePeriodDiaryEntryRequest';
 export * from './completePortfolio';
 export * from './completeRelation';
 export * from './completeRelationship';
@@ -465,6 +466,7 @@ export * from './listAggregationReconciliation';
 export * from './listAggregationResponse';
 export * from './listComplexMarketDataWithMetaDataResponse';
 export * from './loanPeriod';
+export * from './lockPeriodDiaryEntryRequest';
 export * from './lookUpPricingModelOptions';
 export * from './lookUpPricingModelOptionsAllOf';
 export * from './lusidInstrument';
@@ -594,6 +596,7 @@ export * from './participationRequest';
 export * from './participationSetRequest';
 export * from './performanceReturn';
 export * from './performanceReturnsMetric';
+export * from './periodDiaryEntriesReopenedResponse';
 export * from './periodType';
 export * from './perpetualEntityState';
 export * from './perpetualProperty';
@@ -669,6 +672,7 @@ export * from './quoteSeriesId';
 export * from './quoteType';
 export * from './rawVendorEvent';
 export * from './rawVendorEventAllOf';
+export * from './reOpenPeriodDiaryEntryRequest';
 export * from './realisedGainLoss';
 export * from './recipeBlock';
 export * from './recipeComposer';
@@ -1127,6 +1131,7 @@ import { CleardownModuleRulesUpdatedResponse } from './cleardownModuleRulesUpdat
 import { Client } from './client';
 import { CloseEvent } from './closeEvent';
 import { CloseEventAllOf } from './closeEventAllOf';
+import { ClosePeriodDiaryEntryRequest } from './closePeriodDiaryEntryRequest';
 import { CompletePortfolio } from './completePortfolio';
 import { CompleteRelation } from './completeRelation';
 import { CompleteRelationship } from './completeRelationship';
@@ -1464,6 +1469,7 @@ import { ListAggregationReconciliation } from './listAggregationReconciliation';
 import { ListAggregationResponse } from './listAggregationResponse';
 import { ListComplexMarketDataWithMetaDataResponse } from './listComplexMarketDataWithMetaDataResponse';
 import { LoanPeriod } from './loanPeriod';
+import { LockPeriodDiaryEntryRequest } from './lockPeriodDiaryEntryRequest';
 import { LookUpPricingModelOptions } from './lookUpPricingModelOptions';
 import { LookUpPricingModelOptionsAllOf } from './lookUpPricingModelOptionsAllOf';
 import { LusidInstrument } from './lusidInstrument';
@@ -1593,6 +1599,7 @@ import { ParticipationRequest } from './participationRequest';
 import { ParticipationSetRequest } from './participationSetRequest';
 import { PerformanceReturn } from './performanceReturn';
 import { PerformanceReturnsMetric } from './performanceReturnsMetric';
+import { PeriodDiaryEntriesReopenedResponse } from './periodDiaryEntriesReopenedResponse';
 import { PeriodType } from './periodType';
 import { PerpetualEntityState } from './perpetualEntityState';
 import { PerpetualProperty } from './perpetualProperty';
@@ -1668,6 +1675,7 @@ import { QuoteSeriesId } from './quoteSeriesId';
 import { QuoteType } from './quoteType';
 import { RawVendorEvent } from './rawVendorEvent';
 import { RawVendorEventAllOf } from './rawVendorEventAllOf';
+import { ReOpenPeriodDiaryEntryRequest } from './reOpenPeriodDiaryEntryRequest';
 import { RealisedGainLoss } from './realisedGainLoss';
 import { RecipeBlock } from './recipeBlock';
 import { RecipeComposer } from './recipeComposer';
@@ -2530,6 +2538,7 @@ let typeMap: {[index: string]: any} = {
     "Client": Client,
     "CloseEvent": CloseEvent,
     "CloseEventAllOf": CloseEventAllOf,
+    "ClosePeriodDiaryEntryRequest": ClosePeriodDiaryEntryRequest,
     "CompletePortfolio": CompletePortfolio,
     "CompleteRelation": CompleteRelation,
     "CompleteRelationship": CompleteRelationship,
@@ -2856,6 +2865,7 @@ let typeMap: {[index: string]: any} = {
     "ListAggregationResponse": ListAggregationResponse,
     "ListComplexMarketDataWithMetaDataResponse": ListComplexMarketDataWithMetaDataResponse,
     "LoanPeriod": LoanPeriod,
+    "LockPeriodDiaryEntryRequest": LockPeriodDiaryEntryRequest,
     "LookUpPricingModelOptions": LookUpPricingModelOptions,
     "LookUpPricingModelOptionsAllOf": LookUpPricingModelOptionsAllOf,
     "LusidInstrument": LusidInstrument,
@@ -2976,6 +2986,7 @@ let typeMap: {[index: string]: any} = {
     "ParticipationSetRequest": ParticipationSetRequest,
     "PerformanceReturn": PerformanceReturn,
     "PerformanceReturnsMetric": PerformanceReturnsMetric,
+    "PeriodDiaryEntriesReopenedResponse": PeriodDiaryEntriesReopenedResponse,
     "PerpetualProperty": PerpetualProperty,
     "Person": Person,
     "Placement": Placement,
@@ -3041,6 +3052,7 @@ let typeMap: {[index: string]: any} = {
     "QuoteSeriesId": QuoteSeriesId,
     "RawVendorEvent": RawVendorEvent,
     "RawVendorEventAllOf": RawVendorEventAllOf,
+    "ReOpenPeriodDiaryEntryRequest": ReOpenPeriodDiaryEntryRequest,
     "RealisedGainLoss": RealisedGainLoss,
     "RecipeBlock": RecipeBlock,
     "RecipeComposer": RecipeComposer,
