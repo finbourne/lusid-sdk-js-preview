@@ -425,6 +425,7 @@ export * from './instrumentDefinition';
 export * from './instrumentDefinitionFormat';
 export * from './instrumentDeleteModes';
 export * from './instrumentEvent';
+export * from './instrumentEventConfiguration';
 export * from './instrumentEventHolder';
 export * from './instrumentEventType';
 export * from './instrumentIdTypeDescriptor';
@@ -461,6 +462,7 @@ export * from './levelStep';
 export * from './lifeCycleEventLineage';
 export * from './lifeCycleEventValue';
 export * from './lifeCycleEventValueAllOf';
+export * from './lineageMember';
 export * from './link';
 export * from './listAggregationReconciliation';
 export * from './listAggregationResponse';
@@ -873,8 +875,8 @@ export * from './transactionRoles';
 export * from './transactionSetConfigurationData';
 export * from './transactionSetConfigurationDataRequest';
 export * from './transactionStatus';
+export * from './transactionTemplate';
 export * from './transactionTemplateRequest';
-export * from './transactionTemplateResponse';
 export * from './transactionTemplateSpecification';
 export * from './transactionType';
 export * from './transactionTypeAlias';
@@ -1428,6 +1430,7 @@ import { InstrumentDefinition } from './instrumentDefinition';
 import { InstrumentDefinitionFormat } from './instrumentDefinitionFormat';
 import { InstrumentDeleteModes } from './instrumentDeleteModes';
 import { InstrumentEvent } from './instrumentEvent';
+import { InstrumentEventConfiguration } from './instrumentEventConfiguration';
 import { InstrumentEventHolder } from './instrumentEventHolder';
 import { InstrumentEventType } from './instrumentEventType';
 import { InstrumentIdTypeDescriptor } from './instrumentIdTypeDescriptor';
@@ -1464,6 +1467,7 @@ import { LevelStep } from './levelStep';
 import { LifeCycleEventLineage } from './lifeCycleEventLineage';
 import { LifeCycleEventValue } from './lifeCycleEventValue';
 import { LifeCycleEventValueAllOf } from './lifeCycleEventValueAllOf';
+import { LineageMember } from './lineageMember';
 import { Link } from './link';
 import { ListAggregationReconciliation } from './listAggregationReconciliation';
 import { ListAggregationResponse } from './listAggregationResponse';
@@ -1876,8 +1880,8 @@ import { TransactionRoles } from './transactionRoles';
 import { TransactionSetConfigurationData } from './transactionSetConfigurationData';
 import { TransactionSetConfigurationDataRequest } from './transactionSetConfigurationDataRequest';
 import { TransactionStatus } from './transactionStatus';
+import { TransactionTemplate } from './transactionTemplate';
 import { TransactionTemplateRequest } from './transactionTemplateRequest';
-import { TransactionTemplateResponse } from './transactionTemplateResponse';
 import { TransactionTemplateSpecification } from './transactionTemplateSpecification';
 import { TransactionType } from './transactionType';
 import { TransactionTypeAlias } from './transactionTypeAlias';
@@ -2826,6 +2830,7 @@ let typeMap: {[index: string]: any} = {
     "InstrumentDefinition": InstrumentDefinition,
     "InstrumentDefinitionFormat": InstrumentDefinitionFormat,
     "InstrumentEvent": InstrumentEvent,
+    "InstrumentEventConfiguration": InstrumentEventConfiguration,
     "InstrumentEventHolder": InstrumentEventHolder,
     "InstrumentIdTypeDescriptor": InstrumentIdTypeDescriptor,
     "InstrumentIdValue": InstrumentIdValue,
@@ -2860,6 +2865,7 @@ let typeMap: {[index: string]: any} = {
     "LifeCycleEventLineage": LifeCycleEventLineage,
     "LifeCycleEventValue": LifeCycleEventValue,
     "LifeCycleEventValueAllOf": LifeCycleEventValueAllOf,
+    "LineageMember": LineageMember,
     "Link": Link,
     "ListAggregationReconciliation": ListAggregationReconciliation,
     "ListAggregationResponse": ListAggregationResponse,
@@ -3239,8 +3245,8 @@ let typeMap: {[index: string]: any} = {
     "TransactionRequest": TransactionRequest,
     "TransactionSetConfigurationData": TransactionSetConfigurationData,
     "TransactionSetConfigurationDataRequest": TransactionSetConfigurationDataRequest,
+    "TransactionTemplate": TransactionTemplate,
     "TransactionTemplateRequest": TransactionTemplateRequest,
-    "TransactionTemplateResponse": TransactionTemplateResponse,
     "TransactionTemplateSpecification": TransactionTemplateSpecification,
     "TransactionType": TransactionType,
     "TransactionTypeAlias": TransactionTypeAlias,
