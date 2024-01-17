@@ -491,6 +491,8 @@ export * from './marketObservableType';
 export * from './marketOptions';
 export * from './marketQuote';
 export * from './matchCriterion';
+export * from './maturityEvent';
+export * from './maturityEventAllOf';
 export * from './metricValue';
 export * from './modelOptions';
 export * from './modelOptionsType';
@@ -603,6 +605,7 @@ export * from './periodType';
 export * from './perpetualEntityState';
 export * from './perpetualProperty';
 export * from './person';
+export * from './placeBlocksRequest';
 export * from './placement';
 export * from './placementRequest';
 export * from './placementSetRequest';
@@ -1496,6 +1499,8 @@ import { MarketObservableType } from './marketObservableType';
 import { MarketOptions } from './marketOptions';
 import { MarketQuote } from './marketQuote';
 import { MatchCriterion } from './matchCriterion';
+import { MaturityEvent } from './maturityEvent';
+import { MaturityEventAllOf } from './maturityEventAllOf';
 import { MetricValue } from './metricValue';
 import { ModelOptions } from './modelOptions';
 import { ModelOptionsType } from './modelOptionsType';
@@ -1608,6 +1613,7 @@ import { PeriodType } from './periodType';
 import { PerpetualEntityState } from './perpetualEntityState';
 import { PerpetualProperty } from './perpetualProperty';
 import { Person } from './person';
+import { PlaceBlocksRequest } from './placeBlocksRequest';
 import { Placement } from './placement';
 import { PlacementRequest } from './placementRequest';
 import { PlacementSetRequest } from './placementSetRequest';
@@ -2249,6 +2255,8 @@ let enumsMap: {[index: string]: any} = {
         "MarketObservableType": MarketObservableType,
         "MarketQuote.QuoteTypeEnum": MarketQuote.QuoteTypeEnum,
         "MatchCriterion.CriterionTypeEnum": MatchCriterion.CriterionTypeEnum,
+        "MaturityEvent.InstrumentEventTypeEnum": MaturityEvent.InstrumentEventTypeEnum,
+        "MaturityEventAllOf.InstrumentEventTypeEnum": MaturityEventAllOf.InstrumentEventTypeEnum,
         "ModelOptions.ModelOptionsTypeEnum": ModelOptions.ModelOptionsTypeEnum,
         "ModelOptionsType": ModelOptionsType,
         "ModelSelection.LibraryEnum": ModelSelection.LibraryEnum,
@@ -2891,6 +2899,8 @@ let typeMap: {[index: string]: any} = {
     "MarketOptions": MarketOptions,
     "MarketQuote": MarketQuote,
     "MatchCriterion": MatchCriterion,
+    "MaturityEvent": MaturityEvent,
+    "MaturityEventAllOf": MaturityEventAllOf,
     "MetricValue": MetricValue,
     "ModelOptions": ModelOptions,
     "ModelSelection": ModelSelection,
@@ -2995,6 +3005,7 @@ let typeMap: {[index: string]: any} = {
     "PeriodDiaryEntriesReopenedResponse": PeriodDiaryEntriesReopenedResponse,
     "PerpetualProperty": PerpetualProperty,
     "Person": Person,
+    "PlaceBlocksRequest": PlaceBlocksRequest,
     "Placement": Placement,
     "PlacementRequest": PlacementRequest,
     "PlacementSetRequest": PlacementSetRequest,
