@@ -814,6 +814,7 @@ export * from './schedule';
 export * from './scheduleType';
 export * from './schema';
 export * from './scopeDefinition';
+export * from './scriptMapReference';
 export * from './securityElection';
 export * from './sequenceDefinition';
 export * from './setLegalEntityIdentifiersRequest';
@@ -898,6 +899,7 @@ export * from './translateInstrumentDefinitionsRequest';
 export * from './translateInstrumentDefinitionsResponse';
 export * from './translateTradeTicketRequest';
 export * from './translateTradeTicketsResponse';
+export * from './translationContext';
 export * from './translationInput';
 export * from './translationResult';
 export * from './translationScript';
@@ -1823,6 +1825,7 @@ import { Schedule } from './schedule';
 import { ScheduleType } from './scheduleType';
 import { Schema } from './schema';
 import { ScopeDefinition } from './scopeDefinition';
+import { ScriptMapReference } from './scriptMapReference';
 import { SecurityElection } from './securityElection';
 import { SequenceDefinition } from './sequenceDefinition';
 import { SetLegalEntityIdentifiersRequest } from './setLegalEntityIdentifiersRequest';
@@ -1907,6 +1910,7 @@ import { TranslateInstrumentDefinitionsRequest } from './translateInstrumentDefi
 import { TranslateInstrumentDefinitionsResponse } from './translateInstrumentDefinitionsResponse';
 import { TranslateTradeTicketRequest } from './translateTradeTicketRequest';
 import { TranslateTradeTicketsResponse } from './translateTradeTicketsResponse';
+import { TranslationContext } from './translationContext';
 import { TranslationInput } from './translationInput';
 import { TranslationResult } from './translationResult';
 import { TranslationScript } from './translationScript';
@@ -3202,6 +3206,7 @@ let typeMap: {[index: string]: any} = {
     "Schedule": Schedule,
     "Schema": Schema,
     "ScopeDefinition": ScopeDefinition,
+    "ScriptMapReference": ScriptMapReference,
     "SecurityElection": SecurityElection,
     "SequenceDefinition": SequenceDefinition,
     "SetLegalEntityIdentifiersRequest": SetLegalEntityIdentifiersRequest,
@@ -3279,6 +3284,7 @@ let typeMap: {[index: string]: any} = {
     "TranslateInstrumentDefinitionsResponse": TranslateInstrumentDefinitionsResponse,
     "TranslateTradeTicketRequest": TranslateTradeTicketRequest,
     "TranslateTradeTicketsResponse": TranslateTradeTicketsResponse,
+    "TranslationContext": TranslationContext,
     "TranslationInput": TranslationInput,
     "TranslationResult": TranslationResult,
     "TranslationScript": TranslationScript,
