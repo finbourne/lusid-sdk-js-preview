@@ -461,7 +461,6 @@ export * from './irVolCubeDataAllOf';
 export * from './irVolDependency';
 export * from './irVolDependencyAllOf';
 export * from './isBusinessDayResponse';
-export * from './jELinesQueryParameters';
 export * from './journalEntryLine';
 export * from './journalEntryLinesQueryParameters';
 export * from './labelValueSet';
@@ -1481,7 +1480,6 @@ import { IrVolCubeDataAllOf } from './irVolCubeDataAllOf';
 import { IrVolDependency } from './irVolDependency';
 import { IrVolDependencyAllOf } from './irVolDependencyAllOf';
 import { IsBusinessDayResponse } from './isBusinessDayResponse';
-import { JELinesQueryParameters } from './jELinesQueryParameters';
 import { JournalEntryLine } from './journalEntryLine';
 import { JournalEntryLinesQueryParameters } from './journalEntryLinesQueryParameters';
 import { LabelValueSet } from './labelValueSet';
@@ -2905,7 +2903,6 @@ let typeMap: {[index: string]: any} = {
     "IrVolDependency": IrVolDependency,
     "IrVolDependencyAllOf": IrVolDependencyAllOf,
     "IsBusinessDayResponse": IsBusinessDayResponse,
-    "JELinesQueryParameters": JELinesQueryParameters,
     "JournalEntryLine": JournalEntryLine,
     "JournalEntryLinesQueryParameters": JournalEntryLinesQueryParameters,
     "LabelValueSet": LabelValueSet,
