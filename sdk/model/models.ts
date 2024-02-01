@@ -70,6 +70,9 @@ export * from './batchUpsertInstrumentPropertiesResponse';
 export * from './batchUpsertPortfolioTransactionsResponse';
 export * from './batchUpsertPropertyDefinitionPropertiesResponse';
 export * from './block';
+export * from './blockAndOrder';
+export * from './blockAndOrderCreateRequest';
+export * from './blockAndOrderRequest';
 export * from './blockRequest';
 export * from './blockSetRequest';
 export * from './bond';
@@ -743,6 +746,7 @@ export * from './resourceListOfAggregatedReturn';
 export * from './resourceListOfAggregationQuery';
 export * from './resourceListOfAllocation';
 export * from './resourceListOfBlock';
+export * from './resourceListOfBlockAndOrder';
 export * from './resourceListOfCalendarDate';
 export * from './resourceListOfChange';
 export * from './resourceListOfChangeHistory';
@@ -1095,6 +1099,9 @@ import { BatchUpsertInstrumentPropertiesResponse } from './batchUpsertInstrument
 import { BatchUpsertPortfolioTransactionsResponse } from './batchUpsertPortfolioTransactionsResponse';
 import { BatchUpsertPropertyDefinitionPropertiesResponse } from './batchUpsertPropertyDefinitionPropertiesResponse';
 import { Block } from './block';
+import { BlockAndOrder } from './blockAndOrder';
+import { BlockAndOrderCreateRequest } from './blockAndOrderCreateRequest';
+import { BlockAndOrderRequest } from './blockAndOrderRequest';
 import { BlockRequest } from './blockRequest';
 import { BlockSetRequest } from './blockSetRequest';
 import { Bond } from './bond';
@@ -1768,6 +1775,7 @@ import { ResourceListOfAggregatedReturn } from './resourceListOfAggregatedReturn
 import { ResourceListOfAggregationQuery } from './resourceListOfAggregationQuery';
 import { ResourceListOfAllocation } from './resourceListOfAllocation';
 import { ResourceListOfBlock } from './resourceListOfBlock';
+import { ResourceListOfBlockAndOrder } from './resourceListOfBlockAndOrder';
 import { ResourceListOfCalendarDate } from './resourceListOfCalendarDate';
 import { ResourceListOfChange } from './resourceListOfChange';
 import { ResourceListOfChangeHistory } from './resourceListOfChangeHistory';
@@ -2541,6 +2549,9 @@ let typeMap: {[index: string]: any} = {
     "BatchUpsertPortfolioTransactionsResponse": BatchUpsertPortfolioTransactionsResponse,
     "BatchUpsertPropertyDefinitionPropertiesResponse": BatchUpsertPropertyDefinitionPropertiesResponse,
     "Block": Block,
+    "BlockAndOrder": BlockAndOrder,
+    "BlockAndOrderCreateRequest": BlockAndOrderCreateRequest,
+    "BlockAndOrderRequest": BlockAndOrderRequest,
     "BlockRequest": BlockRequest,
     "BlockSetRequest": BlockSetRequest,
     "Bond": Bond,
@@ -3179,6 +3190,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfAggregationQuery": ResourceListOfAggregationQuery,
     "ResourceListOfAllocation": ResourceListOfAllocation,
     "ResourceListOfBlock": ResourceListOfBlock,
+    "ResourceListOfBlockAndOrder": ResourceListOfBlockAndOrder,
     "ResourceListOfCalendarDate": ResourceListOfCalendarDate,
     "ResourceListOfChange": ResourceListOfChange,
     "ResourceListOfChangeHistory": ResourceListOfChangeHistory,
