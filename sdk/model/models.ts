@@ -398,6 +398,7 @@ export * from './getRecipeResponse';
 export * from './getReferencePortfolioConstituentsResponse';
 export * from './getStructuredResultDataResponse';
 export * from './getVirtualDocumentResponse';
+export * from './groupBySelectorComplianceParameter';
 export * from './groupByStep';
 export * from './groupFilterPredicateComplianceParameter';
 export * from './groupFilterStep';
@@ -1430,6 +1431,7 @@ import { GetRecipeResponse } from './getRecipeResponse';
 import { GetReferencePortfolioConstituentsResponse } from './getReferencePortfolioConstituentsResponse';
 import { GetStructuredResultDataResponse } from './getStructuredResultDataResponse';
 import { GetVirtualDocumentResponse } from './getVirtualDocumentResponse';
+import { GroupBySelectorComplianceParameter } from './groupBySelectorComplianceParameter';
 import { GroupByStep } from './groupByStep';
 import { GroupFilterPredicateComplianceParameter } from './groupFilterPredicateComplianceParameter';
 import { GroupFilterStep } from './groupFilterStep';
@@ -2256,6 +2258,7 @@ let enumsMap: {[index: string]: any} = {
         "FxVolSurfaceData.MarketDataTypeEnum": FxVolSurfaceData.MarketDataTypeEnum,
         "GetReferencePortfolioConstituentsResponse.WeightTypeEnum": GetReferencePortfolioConstituentsResponse.WeightTypeEnum,
         "GetReferencePortfolioConstituentsResponse.PeriodTypeEnum": GetReferencePortfolioConstituentsResponse.PeriodTypeEnum,
+        "GroupBySelectorComplianceParameter.ComplianceParameterTypeEnum": GroupBySelectorComplianceParameter.ComplianceParameterTypeEnum,
         "GroupByStep.ComplianceStepTypeEnum": GroupByStep.ComplianceStepTypeEnum,
         "GroupFilterPredicateComplianceParameter.ComplianceParameterTypeEnum": GroupFilterPredicateComplianceParameter.ComplianceParameterTypeEnum,
         "GroupFilterStep.ComplianceStepTypeEnum": GroupFilterStep.ComplianceStepTypeEnum,
@@ -2873,6 +2876,7 @@ let typeMap: {[index: string]: any} = {
     "GetReferencePortfolioConstituentsResponse": GetReferencePortfolioConstituentsResponse,
     "GetStructuredResultDataResponse": GetStructuredResultDataResponse,
     "GetVirtualDocumentResponse": GetVirtualDocumentResponse,
+    "GroupBySelectorComplianceParameter": GroupBySelectorComplianceParameter,
     "GroupByStep": GroupByStep,
     "GroupFilterPredicateComplianceParameter": GroupFilterPredicateComplianceParameter,
     "GroupFilterStep": GroupFilterStep,
