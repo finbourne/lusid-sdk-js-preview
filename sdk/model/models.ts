@@ -343,6 +343,8 @@ export * from './flowConventions';
 export * from './forwardRateAgreement';
 export * from './forwardRateAgreementAllOf';
 export * from './fromRecipe';
+export * from './fundShareClass';
+export * from './fundShareClassAllOf';
 export * from './fundingLeg';
 export * from './fundingLegAllOf';
 export * from './fundingLegOptions';
@@ -1376,6 +1378,8 @@ import { FlowConventions } from './flowConventions';
 import { ForwardRateAgreement } from './forwardRateAgreement';
 import { ForwardRateAgreementAllOf } from './forwardRateAgreementAllOf';
 import { FromRecipe } from './fromRecipe';
+import { FundShareClass } from './fundShareClass';
+import { FundShareClassAllOf } from './fundShareClassAllOf';
 import { FundingLeg } from './fundingLeg';
 import { FundingLegAllOf } from './fundingLegAllOf';
 import { FundingLegOptions } from './fundingLegOptions';
@@ -2217,6 +2221,8 @@ let enumsMap: {[index: string]: any} = {
         "FloatingLegAllOf.InstrumentTypeEnum": FloatingLegAllOf.InstrumentTypeEnum,
         "ForwardRateAgreement.InstrumentTypeEnum": ForwardRateAgreement.InstrumentTypeEnum,
         "ForwardRateAgreementAllOf.InstrumentTypeEnum": ForwardRateAgreementAllOf.InstrumentTypeEnum,
+        "FundShareClass.InstrumentTypeEnum": FundShareClass.InstrumentTypeEnum,
+        "FundShareClassAllOf.InstrumentTypeEnum": FundShareClassAllOf.InstrumentTypeEnum,
         "FundingLeg.InstrumentTypeEnum": FundingLeg.InstrumentTypeEnum,
         "FundingLegAllOf.InstrumentTypeEnum": FundingLegAllOf.InstrumentTypeEnum,
         "FundingLegOptions.ModelOptionsTypeEnum": FundingLegOptions.ModelOptionsTypeEnum,
@@ -2821,6 +2827,8 @@ let typeMap: {[index: string]: any} = {
     "ForwardRateAgreement": ForwardRateAgreement,
     "ForwardRateAgreementAllOf": ForwardRateAgreementAllOf,
     "FromRecipe": FromRecipe,
+    "FundShareClass": FundShareClass,
+    "FundShareClassAllOf": FundShareClassAllOf,
     "FundingLeg": FundingLeg,
     "FundingLegAllOf": FundingLegAllOf,
     "FundingLegOptions": FundingLegOptions,
