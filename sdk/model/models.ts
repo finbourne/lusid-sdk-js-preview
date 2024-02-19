@@ -126,6 +126,8 @@ export * from './changeItem';
 export * from './chartOfAccounts';
 export * from './chartOfAccountsProperties';
 export * from './chartOfAccountsRequest';
+export * from './checkStep';
+export * from './checkStepAllOf';
 export * from './cleardownModuleDetails';
 export * from './cleardownModuleRequest';
 export * from './cleardownModuleResponse';
@@ -406,7 +408,6 @@ export * from './groupBySelectorComplianceParameter';
 export * from './groupByStep';
 export * from './groupFilterPredicateComplianceParameter';
 export * from './groupFilterStep';
-export * from './groupFilterStepAllOf';
 export * from './groupOfMarketDataKeyRules';
 export * from './groupedResultOfAddressKey';
 export * from './holdingAdjustment';
@@ -1163,6 +1164,8 @@ import { ChangeItem } from './changeItem';
 import { ChartOfAccounts } from './chartOfAccounts';
 import { ChartOfAccountsProperties } from './chartOfAccountsProperties';
 import { ChartOfAccountsRequest } from './chartOfAccountsRequest';
+import { CheckStep } from './checkStep';
+import { CheckStepAllOf } from './checkStepAllOf';
 import { CleardownModuleDetails } from './cleardownModuleDetails';
 import { CleardownModuleRequest } from './cleardownModuleRequest';
 import { CleardownModuleResponse } from './cleardownModuleResponse';
@@ -1443,7 +1446,6 @@ import { GroupBySelectorComplianceParameter } from './groupBySelectorComplianceP
 import { GroupByStep } from './groupByStep';
 import { GroupFilterPredicateComplianceParameter } from './groupFilterPredicateComplianceParameter';
 import { GroupFilterStep } from './groupFilterStep';
-import { GroupFilterStepAllOf } from './groupFilterStepAllOf';
 import { GroupOfMarketDataKeyRules } from './groupOfMarketDataKeyRules';
 import { GroupedResultOfAddressKey } from './groupedResultOfAddressKey';
 import { HoldingAdjustment } from './holdingAdjustment';
@@ -2129,6 +2131,8 @@ let enumsMap: {[index: string]: any} = {
         "CdsIndexAllOf.InstrumentTypeEnum": CdsIndexAllOf.InstrumentTypeEnum,
         "ChangeHistory.ActionEnum": ChangeHistory.ActionEnum,
         "ChangeHistoryAction": ChangeHistoryAction,
+        "CheckStep.ComplianceStepTypeEnum": CheckStep.ComplianceStepTypeEnum,
+        "CheckStepAllOf.ComplianceStepTypeEnum": CheckStepAllOf.ComplianceStepTypeEnum,
         "CloseEvent.InstrumentEventTypeEnum": CloseEvent.InstrumentEventTypeEnum,
         "CloseEventAllOf.InstrumentEventTypeEnum": CloseEventAllOf.InstrumentEventTypeEnum,
         "CompletePortfolio.TypeEnum": CompletePortfolio.TypeEnum,
@@ -2274,7 +2278,6 @@ let enumsMap: {[index: string]: any} = {
         "GroupByStep.ComplianceStepTypeEnum": GroupByStep.ComplianceStepTypeEnum,
         "GroupFilterPredicateComplianceParameter.ComplianceParameterTypeEnum": GroupFilterPredicateComplianceParameter.ComplianceParameterTypeEnum,
         "GroupFilterStep.ComplianceStepTypeEnum": GroupFilterStep.ComplianceStepTypeEnum,
-        "GroupFilterStepAllOf.ComplianceStepTypeEnum": GroupFilterStepAllOf.ComplianceStepTypeEnum,
         "HoldingsAdjustment.UnmatchedHoldingMethodEnum": HoldingsAdjustment.UnmatchedHoldingMethodEnum,
         "HoldingsAdjustmentHeader.UnmatchedHoldingMethodEnum": HoldingsAdjustmentHeader.UnmatchedHoldingMethodEnum,
         "IUnitDefinitionDto.SchemaEnum": IUnitDefinitionDto.SchemaEnum,
@@ -2625,6 +2628,8 @@ let typeMap: {[index: string]: any} = {
     "ChartOfAccounts": ChartOfAccounts,
     "ChartOfAccountsProperties": ChartOfAccountsProperties,
     "ChartOfAccountsRequest": ChartOfAccountsRequest,
+    "CheckStep": CheckStep,
+    "CheckStepAllOf": CheckStepAllOf,
     "CleardownModuleDetails": CleardownModuleDetails,
     "CleardownModuleRequest": CleardownModuleRequest,
     "CleardownModuleResponse": CleardownModuleResponse,
@@ -2896,7 +2901,6 @@ let typeMap: {[index: string]: any} = {
     "GroupByStep": GroupByStep,
     "GroupFilterPredicateComplianceParameter": GroupFilterPredicateComplianceParameter,
     "GroupFilterStep": GroupFilterStep,
-    "GroupFilterStepAllOf": GroupFilterStepAllOf,
     "GroupOfMarketDataKeyRules": GroupOfMarketDataKeyRules,
     "GroupedResultOfAddressKey": GroupedResultOfAddressKey,
     "HoldingAdjustment": HoldingAdjustment,
