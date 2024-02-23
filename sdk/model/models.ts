@@ -84,6 +84,7 @@ export * from './bondDefaultEvent';
 export * from './bondDefaultEventAllOf';
 export * from './bondPrincipalEvent';
 export * from './bondPrincipalEventAllOf';
+export * from './bookTransactionsRequest';
 export * from './bookTransactionsResponse';
 export * from './boolComplianceParameter';
 export * from './boolComplianceParameterAllOf';
@@ -1122,6 +1123,7 @@ import { BondDefaultEvent } from './bondDefaultEvent';
 import { BondDefaultEventAllOf } from './bondDefaultEventAllOf';
 import { BondPrincipalEvent } from './bondPrincipalEvent';
 import { BondPrincipalEventAllOf } from './bondPrincipalEventAllOf';
+import { BookTransactionsRequest } from './bookTransactionsRequest';
 import { BookTransactionsResponse } from './bookTransactionsResponse';
 import { BoolComplianceParameter } from './boolComplianceParameter';
 import { BoolComplianceParameterAllOf } from './boolComplianceParameterAllOf';
@@ -2587,6 +2589,7 @@ let typeMap: {[index: string]: any} = {
     "BondDefaultEventAllOf": BondDefaultEventAllOf,
     "BondPrincipalEvent": BondPrincipalEvent,
     "BondPrincipalEventAllOf": BondPrincipalEventAllOf,
+    "BookTransactionsRequest": BookTransactionsRequest,
     "BookTransactionsResponse": BookTransactionsResponse,
     "BoolComplianceParameter": BoolComplianceParameter,
     "BoolComplianceParameterAllOf": BoolComplianceParameterAllOf,
