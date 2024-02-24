@@ -897,6 +897,7 @@ export * from './transactionFieldMap';
 export * from './transactionPrice';
 export * from './transactionPriceAndType';
 export * from './transactionPriceType';
+export * from './transactionPropertyMap';
 export * from './transactionPropertyMapping';
 export * from './transactionPropertyMappingRequest';
 export * from './transactionQueryMode';
@@ -1936,6 +1937,7 @@ import { TransactionFieldMap } from './transactionFieldMap';
 import { TransactionPrice } from './transactionPrice';
 import { TransactionPriceAndType } from './transactionPriceAndType';
 import { TransactionPriceType } from './transactionPriceType';
+import { TransactionPropertyMap } from './transactionPropertyMap';
 import { TransactionPropertyMapping } from './transactionPropertyMapping';
 import { TransactionPropertyMappingRequest } from './transactionPropertyMappingRequest';
 import { TransactionQueryMode } from './transactionQueryMode';
@@ -3359,6 +3361,7 @@ let typeMap: {[index: string]: any} = {
     "TransactionFieldMap": TransactionFieldMap,
     "TransactionPrice": TransactionPrice,
     "TransactionPriceAndType": TransactionPriceAndType,
+    "TransactionPropertyMap": TransactionPropertyMap,
     "TransactionPropertyMapping": TransactionPropertyMapping,
     "TransactionPropertyMappingRequest": TransactionPropertyMappingRequest,
     "TransactionQueryParameters": TransactionQueryParameters,
