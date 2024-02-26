@@ -70,6 +70,7 @@ export * from './batchUpsertInstrumentPropertiesResponse';
 export * from './batchUpsertPortfolioTransactionsResponse';
 export * from './batchUpsertPropertyDefinitionPropertiesResponse';
 export * from './block';
+export * from './blockAndOrderIdRequest';
 export * from './blockAndOrders';
 export * from './blockAndOrdersCreateRequest';
 export * from './blockAndOrdersRequest';
@@ -522,6 +523,8 @@ export * from './metricValue';
 export * from './modelOptions';
 export * from './modelOptionsType';
 export * from './modelSelection';
+export * from './moveOrdersToDifferentBlocksRequest';
+export * from './movedOrderToDifferentBlockResponse';
 export * from './movementType';
 export * from './multiCurrencyAmounts';
 export * from './nextValueInSequenceResponse';
@@ -783,6 +786,7 @@ export * from './resourceListOfInstrumentIdTypeDescriptor';
 export * from './resourceListOfLegalEntity';
 export * from './resourceListOfListComplexMarketDataWithMetaDataResponse';
 export * from './resourceListOfMapping';
+export * from './resourceListOfMovedOrderToDifferentBlockResponse';
 export * from './resourceListOfOrder';
 export * from './resourceListOfOrderInstruction';
 export * from './resourceListOfPackage';
@@ -1110,6 +1114,7 @@ import { BatchUpsertInstrumentPropertiesResponse } from './batchUpsertInstrument
 import { BatchUpsertPortfolioTransactionsResponse } from './batchUpsertPortfolioTransactionsResponse';
 import { BatchUpsertPropertyDefinitionPropertiesResponse } from './batchUpsertPropertyDefinitionPropertiesResponse';
 import { Block } from './block';
+import { BlockAndOrderIdRequest } from './blockAndOrderIdRequest';
 import { BlockAndOrders } from './blockAndOrders';
 import { BlockAndOrdersCreateRequest } from './blockAndOrdersCreateRequest';
 import { BlockAndOrdersRequest } from './blockAndOrdersRequest';
@@ -1562,6 +1567,8 @@ import { MetricValue } from './metricValue';
 import { ModelOptions } from './modelOptions';
 import { ModelOptionsType } from './modelOptionsType';
 import { ModelSelection } from './modelSelection';
+import { MoveOrdersToDifferentBlocksRequest } from './moveOrdersToDifferentBlocksRequest';
+import { MovedOrderToDifferentBlockResponse } from './movedOrderToDifferentBlockResponse';
 import { MovementType } from './movementType';
 import { MultiCurrencyAmounts } from './multiCurrencyAmounts';
 import { NextValueInSequenceResponse } from './nextValueInSequenceResponse';
@@ -1823,6 +1830,7 @@ import { ResourceListOfInstrumentIdTypeDescriptor } from './resourceListOfInstru
 import { ResourceListOfLegalEntity } from './resourceListOfLegalEntity';
 import { ResourceListOfListComplexMarketDataWithMetaDataResponse } from './resourceListOfListComplexMarketDataWithMetaDataResponse';
 import { ResourceListOfMapping } from './resourceListOfMapping';
+import { ResourceListOfMovedOrderToDifferentBlockResponse } from './resourceListOfMovedOrderToDifferentBlockResponse';
 import { ResourceListOfOrder } from './resourceListOfOrder';
 import { ResourceListOfOrderInstruction } from './resourceListOfOrderInstruction';
 import { ResourceListOfPackage } from './resourceListOfPackage';
@@ -2577,6 +2585,7 @@ let typeMap: {[index: string]: any} = {
     "BatchUpsertPortfolioTransactionsResponse": BatchUpsertPortfolioTransactionsResponse,
     "BatchUpsertPropertyDefinitionPropertiesResponse": BatchUpsertPropertyDefinitionPropertiesResponse,
     "Block": Block,
+    "BlockAndOrderIdRequest": BlockAndOrderIdRequest,
     "BlockAndOrders": BlockAndOrders,
     "BlockAndOrdersCreateRequest": BlockAndOrdersCreateRequest,
     "BlockAndOrdersRequest": BlockAndOrdersRequest,
@@ -3012,6 +3021,8 @@ let typeMap: {[index: string]: any} = {
     "MetricValue": MetricValue,
     "ModelOptions": ModelOptions,
     "ModelSelection": ModelSelection,
+    "MoveOrdersToDifferentBlocksRequest": MoveOrdersToDifferentBlocksRequest,
+    "MovedOrderToDifferentBlockResponse": MovedOrderToDifferentBlockResponse,
     "MultiCurrencyAmounts": MultiCurrencyAmounts,
     "NextValueInSequenceResponse": NextValueInSequenceResponse,
     "OpaqueDependency": OpaqueDependency,
@@ -3255,6 +3266,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfLegalEntity": ResourceListOfLegalEntity,
     "ResourceListOfListComplexMarketDataWithMetaDataResponse": ResourceListOfListComplexMarketDataWithMetaDataResponse,
     "ResourceListOfMapping": ResourceListOfMapping,
+    "ResourceListOfMovedOrderToDifferentBlockResponse": ResourceListOfMovedOrderToDifferentBlockResponse,
     "ResourceListOfOrder": ResourceListOfOrder,
     "ResourceListOfOrderInstruction": ResourceListOfOrderInstruction,
     "ResourceListOfPackage": ResourceListOfPackage,
