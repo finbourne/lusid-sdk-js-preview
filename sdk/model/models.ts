@@ -212,6 +212,7 @@ export * from './createRelationshipDefinitionRequest';
 export * from './createRelationshipRequest';
 export * from './createSequenceRequest';
 export * from './createTaxRuleSetRequest';
+export * from './createTradeTicketsResponse';
 export * from './createTransactionPortfolioRequest';
 export * from './createUnitDefinition';
 export * from './creditDefaultSwap';
@@ -1256,6 +1257,7 @@ import { CreateRelationshipDefinitionRequest } from './createRelationshipDefinit
 import { CreateRelationshipRequest } from './createRelationshipRequest';
 import { CreateSequenceRequest } from './createSequenceRequest';
 import { CreateTaxRuleSetRequest } from './createTaxRuleSetRequest';
+import { CreateTradeTicketsResponse } from './createTradeTicketsResponse';
 import { CreateTransactionPortfolioRequest } from './createTransactionPortfolioRequest';
 import { CreateUnitDefinition } from './createUnitDefinition';
 import { CreditDefaultSwap } from './creditDefaultSwap';
@@ -2724,6 +2726,7 @@ let typeMap: {[index: string]: any} = {
     "CreateRelationshipRequest": CreateRelationshipRequest,
     "CreateSequenceRequest": CreateSequenceRequest,
     "CreateTaxRuleSetRequest": CreateTaxRuleSetRequest,
+    "CreateTradeTicketsResponse": CreateTradeTicketsResponse,
     "CreateTransactionPortfolioRequest": CreateTransactionPortfolioRequest,
     "CreateUnitDefinition": CreateUnitDefinition,
     "CreditDefaultSwap": CreditDefaultSwap,
