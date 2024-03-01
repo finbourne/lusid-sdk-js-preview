@@ -339,6 +339,8 @@ export * from './fixedLegAllOf';
 export * from './fixedLegAllOfOverrides';
 export * from './fixedSchedule';
 export * from './fixedScheduleAllOf';
+export * from './flexibleLoan';
+export * from './flexibleLoanAllOf';
 export * from './floatSchedule';
 export * from './floatScheduleAllOf';
 export * from './floatingLeg';
@@ -1384,6 +1386,8 @@ import { FixedLegAllOf } from './fixedLegAllOf';
 import { FixedLegAllOfOverrides } from './fixedLegAllOfOverrides';
 import { FixedSchedule } from './fixedSchedule';
 import { FixedScheduleAllOf } from './fixedScheduleAllOf';
+import { FlexibleLoan } from './flexibleLoan';
+import { FlexibleLoanAllOf } from './flexibleLoanAllOf';
 import { FloatSchedule } from './floatSchedule';
 import { FloatScheduleAllOf } from './floatScheduleAllOf';
 import { FloatingLeg } from './floatingLeg';
@@ -2237,6 +2241,8 @@ let enumsMap: {[index: string]: any} = {
         "FixedLegAllOf.InstrumentTypeEnum": FixedLegAllOf.InstrumentTypeEnum,
         "FixedSchedule.ScheduleTypeEnum": FixedSchedule.ScheduleTypeEnum,
         "FixedScheduleAllOf.ScheduleTypeEnum": FixedScheduleAllOf.ScheduleTypeEnum,
+        "FlexibleLoan.InstrumentTypeEnum": FlexibleLoan.InstrumentTypeEnum,
+        "FlexibleLoanAllOf.InstrumentTypeEnum": FlexibleLoanAllOf.InstrumentTypeEnum,
         "FloatSchedule.ScheduleTypeEnum": FloatSchedule.ScheduleTypeEnum,
         "FloatScheduleAllOf.ScheduleTypeEnum": FloatScheduleAllOf.ScheduleTypeEnum,
         "FloatingLeg.InstrumentTypeEnum": FloatingLeg.InstrumentTypeEnum,
@@ -2846,6 +2852,8 @@ let typeMap: {[index: string]: any} = {
     "FixedLegAllOfOverrides": FixedLegAllOfOverrides,
     "FixedSchedule": FixedSchedule,
     "FixedScheduleAllOf": FixedScheduleAllOf,
+    "FlexibleLoan": FlexibleLoan,
+    "FlexibleLoanAllOf": FlexibleLoanAllOf,
     "FloatSchedule": FloatSchedule,
     "FloatScheduleAllOf": FloatScheduleAllOf,
     "FloatingLeg": FloatingLeg,
