@@ -625,6 +625,7 @@ export * from './pagedResourceListOfReferenceListResponse';
 export * from './pagedResourceListOfRelationshipDefinition';
 export * from './pagedResourceListOfSequenceDefinition';
 export * from './pagedResourceListOfTransactionTemplate';
+export * from './pagedResourceListOfTransactionTemplateSpecification';
 export * from './pagedResourceListOfTranslationScriptId';
 export * from './pagedResourceListOfVirtualRow';
 export * from './participation';
@@ -1673,6 +1674,7 @@ import { PagedResourceListOfReferenceListResponse } from './pagedResourceListOfR
 import { PagedResourceListOfRelationshipDefinition } from './pagedResourceListOfRelationshipDefinition';
 import { PagedResourceListOfSequenceDefinition } from './pagedResourceListOfSequenceDefinition';
 import { PagedResourceListOfTransactionTemplate } from './pagedResourceListOfTransactionTemplate';
+import { PagedResourceListOfTransactionTemplateSpecification } from './pagedResourceListOfTransactionTemplateSpecification';
 import { PagedResourceListOfTranslationScriptId } from './pagedResourceListOfTranslationScriptId';
 import { PagedResourceListOfVirtualRow } from './pagedResourceListOfVirtualRow';
 import { Participation } from './participation';
@@ -3128,6 +3130,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfRelationshipDefinition": PagedResourceListOfRelationshipDefinition,
     "PagedResourceListOfSequenceDefinition": PagedResourceListOfSequenceDefinition,
     "PagedResourceListOfTransactionTemplate": PagedResourceListOfTransactionTemplate,
+    "PagedResourceListOfTransactionTemplateSpecification": PagedResourceListOfTransactionTemplateSpecification,
     "PagedResourceListOfTranslationScriptId": PagedResourceListOfTranslationScriptId,
     "PagedResourceListOfVirtualRow": PagedResourceListOfVirtualRow,
     "Participation": Participation,
