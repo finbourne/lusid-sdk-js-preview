@@ -21,6 +21,7 @@ import {DataTypesApi} from './api/dataTypesApi';
 import {DerivedTransactionPortfoliosApi} from './api/derivedTransactionPortfoliosApi';
 import {EntitiesApi} from './api/entitiesApi';
 import {ExecutionsApi} from './api/executionsApi';
+import {FundsApi} from './api/fundsApi';
 import {InstrumentEventTypesApi} from './api/instrumentEventTypesApi';
 import {InstrumentEventsApi} from './api/instrumentEventsApi';
 import {InstrumentsApi} from './api/instrumentsApi';
@@ -82,6 +83,7 @@ export class Api {
     public derivedTransactionPortfolios:  DerivedTransactionPortfoliosApi
     public entities:  EntitiesApi
     public executions:  ExecutionsApi
+    public funds:  FundsApi
     public instrumentEventTypes:  InstrumentEventTypesApi
     public instrumentEvents:  InstrumentEventsApi
     public instruments:  InstrumentsApi

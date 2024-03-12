@@ -253,6 +253,7 @@ export * from './dateTimeComparisonType';
 export * from './dateTimeComplianceParameter';
 export * from './dateTimeComplianceParameterAllOf';
 export * from './dateTimeListComplianceParameter';
+export * from './dayMonth';
 export * from './dayOfWeek';
 export * from './decimalComplianceParameter';
 export * from './decimalComplianceParameterAllOf';
@@ -350,6 +351,9 @@ export * from './flowConventions';
 export * from './forwardRateAgreement';
 export * from './forwardRateAgreementAllOf';
 export * from './fromRecipe';
+export * from './fund';
+export * from './fundProperties';
+export * from './fundRequest';
 export * from './fundShareClass';
 export * from './fundShareClassAllOf';
 export * from './fundingLeg';
@@ -469,6 +473,7 @@ export * from './instrumentPaymentDiary';
 export * from './instrumentPaymentDiaryLeg';
 export * from './instrumentPaymentDiaryRow';
 export * from './instrumentProperties';
+export * from './instrumentResolutionDetail';
 export * from './instrumentSearchProperty';
 export * from './instrumentType';
 export * from './interestRateSwap';
@@ -602,6 +607,7 @@ export * from './pagedResourceListOfDataTypeSummary';
 export * from './pagedResourceListOfDialectId';
 export * from './pagedResourceListOfDiaryEntry';
 export * from './pagedResourceListOfExecution';
+export * from './pagedResourceListOfFund';
 export * from './pagedResourceListOfGeneralLedgerProfileResponse';
 export * from './pagedResourceListOfInstrument';
 export * from './pagedResourceListOfInstrumentEventHolder';
@@ -619,6 +625,7 @@ export * from './pagedResourceListOfPortfolioGroupSearchResult';
 export * from './pagedResourceListOfPortfolioSearchResult';
 export * from './pagedResourceListOfPostingModuleResponse';
 export * from './pagedResourceListOfPostingModuleRule';
+export * from './pagedResourceListOfPropertyDefinition';
 export * from './pagedResourceListOfPropertyDefinitionSearchResult';
 export * from './pagedResourceListOfReconciliation';
 export * from './pagedResourceListOfReferenceListResponse';
@@ -1302,6 +1309,7 @@ import { DateTimeComparisonType } from './dateTimeComparisonType';
 import { DateTimeComplianceParameter } from './dateTimeComplianceParameter';
 import { DateTimeComplianceParameterAllOf } from './dateTimeComplianceParameterAllOf';
 import { DateTimeListComplianceParameter } from './dateTimeListComplianceParameter';
+import { DayMonth } from './dayMonth';
 import { DayOfWeek } from './dayOfWeek';
 import { DecimalComplianceParameter } from './decimalComplianceParameter';
 import { DecimalComplianceParameterAllOf } from './decimalComplianceParameterAllOf';
@@ -1399,6 +1407,9 @@ import { FlowConventions } from './flowConventions';
 import { ForwardRateAgreement } from './forwardRateAgreement';
 import { ForwardRateAgreementAllOf } from './forwardRateAgreementAllOf';
 import { FromRecipe } from './fromRecipe';
+import { Fund } from './fund';
+import { FundProperties } from './fundProperties';
+import { FundRequest } from './fundRequest';
 import { FundShareClass } from './fundShareClass';
 import { FundShareClassAllOf } from './fundShareClassAllOf';
 import { FundingLeg } from './fundingLeg';
@@ -1518,6 +1529,7 @@ import { InstrumentPaymentDiary } from './instrumentPaymentDiary';
 import { InstrumentPaymentDiaryLeg } from './instrumentPaymentDiaryLeg';
 import { InstrumentPaymentDiaryRow } from './instrumentPaymentDiaryRow';
 import { InstrumentProperties } from './instrumentProperties';
+import { InstrumentResolutionDetail } from './instrumentResolutionDetail';
 import { InstrumentSearchProperty } from './instrumentSearchProperty';
 import { InstrumentType } from './instrumentType';
 import { InterestRateSwap } from './interestRateSwap';
@@ -1651,6 +1663,7 @@ import { PagedResourceListOfDataTypeSummary } from './pagedResourceListOfDataTyp
 import { PagedResourceListOfDialectId } from './pagedResourceListOfDialectId';
 import { PagedResourceListOfDiaryEntry } from './pagedResourceListOfDiaryEntry';
 import { PagedResourceListOfExecution } from './pagedResourceListOfExecution';
+import { PagedResourceListOfFund } from './pagedResourceListOfFund';
 import { PagedResourceListOfGeneralLedgerProfileResponse } from './pagedResourceListOfGeneralLedgerProfileResponse';
 import { PagedResourceListOfInstrument } from './pagedResourceListOfInstrument';
 import { PagedResourceListOfInstrumentEventHolder } from './pagedResourceListOfInstrumentEventHolder';
@@ -1668,6 +1681,7 @@ import { PagedResourceListOfPortfolioGroupSearchResult } from './pagedResourceLi
 import { PagedResourceListOfPortfolioSearchResult } from './pagedResourceListOfPortfolioSearchResult';
 import { PagedResourceListOfPostingModuleResponse } from './pagedResourceListOfPostingModuleResponse';
 import { PagedResourceListOfPostingModuleRule } from './pagedResourceListOfPostingModuleRule';
+import { PagedResourceListOfPropertyDefinition } from './pagedResourceListOfPropertyDefinition';
 import { PagedResourceListOfPropertyDefinitionSearchResult } from './pagedResourceListOfPropertyDefinitionSearchResult';
 import { PagedResourceListOfReconciliation } from './pagedResourceListOfReconciliation';
 import { PagedResourceListOfReferenceListResponse } from './pagedResourceListOfReferenceListResponse';
@@ -2774,6 +2788,7 @@ let typeMap: {[index: string]: any} = {
     "DateTimeComplianceParameter": DateTimeComplianceParameter,
     "DateTimeComplianceParameterAllOf": DateTimeComplianceParameterAllOf,
     "DateTimeListComplianceParameter": DateTimeListComplianceParameter,
+    "DayMonth": DayMonth,
     "DecimalComplianceParameter": DecimalComplianceParameter,
     "DecimalComplianceParameterAllOf": DecimalComplianceParameterAllOf,
     "DecimalList": DecimalList,
@@ -2867,6 +2882,9 @@ let typeMap: {[index: string]: any} = {
     "ForwardRateAgreement": ForwardRateAgreement,
     "ForwardRateAgreementAllOf": ForwardRateAgreementAllOf,
     "FromRecipe": FromRecipe,
+    "Fund": Fund,
+    "FundProperties": FundProperties,
+    "FundRequest": FundRequest,
     "FundShareClass": FundShareClass,
     "FundShareClassAllOf": FundShareClassAllOf,
     "FundingLeg": FundingLeg,
@@ -2984,6 +3002,7 @@ let typeMap: {[index: string]: any} = {
     "InstrumentPaymentDiaryLeg": InstrumentPaymentDiaryLeg,
     "InstrumentPaymentDiaryRow": InstrumentPaymentDiaryRow,
     "InstrumentProperties": InstrumentProperties,
+    "InstrumentResolutionDetail": InstrumentResolutionDetail,
     "InstrumentSearchProperty": InstrumentSearchProperty,
     "InterestRateSwap": InterestRateSwap,
     "InterestRateSwapAllOf": InterestRateSwapAllOf,
@@ -3107,6 +3126,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfDialectId": PagedResourceListOfDialectId,
     "PagedResourceListOfDiaryEntry": PagedResourceListOfDiaryEntry,
     "PagedResourceListOfExecution": PagedResourceListOfExecution,
+    "PagedResourceListOfFund": PagedResourceListOfFund,
     "PagedResourceListOfGeneralLedgerProfileResponse": PagedResourceListOfGeneralLedgerProfileResponse,
     "PagedResourceListOfInstrument": PagedResourceListOfInstrument,
     "PagedResourceListOfInstrumentEventHolder": PagedResourceListOfInstrumentEventHolder,
@@ -3124,6 +3144,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfPortfolioSearchResult": PagedResourceListOfPortfolioSearchResult,
     "PagedResourceListOfPostingModuleResponse": PagedResourceListOfPostingModuleResponse,
     "PagedResourceListOfPostingModuleRule": PagedResourceListOfPostingModuleRule,
+    "PagedResourceListOfPropertyDefinition": PagedResourceListOfPropertyDefinition,
     "PagedResourceListOfPropertyDefinitionSearchResult": PagedResourceListOfPropertyDefinitionSearchResult,
     "PagedResourceListOfReconciliation": PagedResourceListOfReconciliation,
     "PagedResourceListOfReferenceListResponse": PagedResourceListOfReferenceListResponse,
