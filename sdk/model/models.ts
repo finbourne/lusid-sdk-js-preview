@@ -503,8 +503,6 @@ export * from './listAggregationResponse';
 export * from './listComplexMarketDataWithMetaDataResponse';
 export * from './loanPeriod';
 export * from './lockPeriodDiaryEntryRequest';
-export * from './lookUpPricingModelOptions';
-export * from './lookUpPricingModelOptionsAllOf';
 export * from './lusidInstrument';
 export * from './lusidProblemDetails';
 export * from './lusidTradeTicket';
@@ -1559,8 +1557,6 @@ import { ListAggregationResponse } from './listAggregationResponse';
 import { ListComplexMarketDataWithMetaDataResponse } from './listComplexMarketDataWithMetaDataResponse';
 import { LoanPeriod } from './loanPeriod';
 import { LockPeriodDiaryEntryRequest } from './lockPeriodDiaryEntryRequest';
-import { LookUpPricingModelOptions } from './lookUpPricingModelOptions';
-import { LookUpPricingModelOptionsAllOf } from './lookUpPricingModelOptionsAllOf';
 import { LusidInstrument } from './lusidInstrument';
 import { LusidProblemDetails } from './lusidProblemDetails';
 import { LusidTradeTicket } from './lusidTradeTicket';
@@ -2360,8 +2356,6 @@ let enumsMap: {[index: string]: any} = {
         "IrVolDependencyAllOf.DependencyTypeEnum": IrVolDependencyAllOf.DependencyTypeEnum,
         "LifeCycleEventValue.ResultValueTypeEnum": LifeCycleEventValue.ResultValueTypeEnum,
         "LifeCycleEventValueAllOf.ResultValueTypeEnum": LifeCycleEventValueAllOf.ResultValueTypeEnum,
-        "LookUpPricingModelOptions.ModelOptionsTypeEnum": LookUpPricingModelOptions.ModelOptionsTypeEnum,
-        "LookUpPricingModelOptionsAllOf.ModelOptionsTypeEnum": LookUpPricingModelOptionsAllOf.ModelOptionsTypeEnum,
         "LusidInstrument.InstrumentTypeEnum": LusidInstrument.InstrumentTypeEnum,
         "LusidTradeTicket.TradeTicketTypeEnum": LusidTradeTicket.TradeTicketTypeEnum,
         "MarketDataKeyRule.QuoteTypeEnum": MarketDataKeyRule.QuoteTypeEnum,
@@ -3031,8 +3025,6 @@ let typeMap: {[index: string]: any} = {
     "ListComplexMarketDataWithMetaDataResponse": ListComplexMarketDataWithMetaDataResponse,
     "LoanPeriod": LoanPeriod,
     "LockPeriodDiaryEntryRequest": LockPeriodDiaryEntryRequest,
-    "LookUpPricingModelOptions": LookUpPricingModelOptions,
-    "LookUpPricingModelOptionsAllOf": LookUpPricingModelOptionsAllOf,
     "LusidInstrument": LusidInstrument,
     "LusidProblemDetails": LusidProblemDetails,
     "LusidTradeTicket": LusidTradeTicket,
