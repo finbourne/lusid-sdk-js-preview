@@ -291,6 +291,7 @@ export * from './economicDependencyType';
 export * from './economicDependencyWithComplexMarketData';
 export * from './economicDependencyWithQuote';
 export * from './electionSpecification';
+export * from './eligibilityCalculation';
 export * from './emptyModelOptions';
 export * from './emptyModelOptionsAllOf';
 export * from './entityIdentifier';
@@ -1345,6 +1346,7 @@ import { EconomicDependencyType } from './economicDependencyType';
 import { EconomicDependencyWithComplexMarketData } from './economicDependencyWithComplexMarketData';
 import { EconomicDependencyWithQuote } from './economicDependencyWithQuote';
 import { ElectionSpecification } from './electionSpecification';
+import { EligibilityCalculation } from './eligibilityCalculation';
 import { EmptyModelOptions } from './emptyModelOptions';
 import { EmptyModelOptionsAllOf } from './emptyModelOptionsAllOf';
 import { EntityIdentifier } from './entityIdentifier';
@@ -2816,6 +2818,7 @@ let typeMap: {[index: string]: any} = {
     "EconomicDependencyWithComplexMarketData": EconomicDependencyWithComplexMarketData,
     "EconomicDependencyWithQuote": EconomicDependencyWithQuote,
     "ElectionSpecification": ElectionSpecification,
+    "EligibilityCalculation": EligibilityCalculation,
     "EmptyModelOptions": EmptyModelOptions,
     "EmptyModelOptionsAllOf": EmptyModelOptionsAllOf,
     "EntityIdentifier": EntityIdentifier,
