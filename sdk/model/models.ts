@@ -326,6 +326,8 @@ export * from './exerciseEventAllOf';
 export * from './exoticInstrument';
 export * from './exoticInstrumentAllOf';
 export * from './expandedGroup';
+export * from './expiryEvent';
+export * from './expiryEventAllOf';
 export * from './feeRule';
 export * from './feeRuleUpsertRequest';
 export * from './feeRuleUpsertResponse';
@@ -1383,6 +1385,8 @@ import { ExerciseEventAllOf } from './exerciseEventAllOf';
 import { ExoticInstrument } from './exoticInstrument';
 import { ExoticInstrumentAllOf } from './exoticInstrumentAllOf';
 import { ExpandedGroup } from './expandedGroup';
+import { ExpiryEvent } from './expiryEvent';
+import { ExpiryEventAllOf } from './expiryEventAllOf';
 import { FeeRule } from './feeRule';
 import { FeeRuleUpsertRequest } from './feeRuleUpsertRequest';
 import { FeeRuleUpsertResponse } from './feeRuleUpsertResponse';
@@ -2253,6 +2257,8 @@ let enumsMap: {[index: string]: any} = {
         "ExerciseEventAllOf.InstrumentEventTypeEnum": ExerciseEventAllOf.InstrumentEventTypeEnum,
         "ExoticInstrument.InstrumentTypeEnum": ExoticInstrument.InstrumentTypeEnum,
         "ExoticInstrumentAllOf.InstrumentTypeEnum": ExoticInstrumentAllOf.InstrumentTypeEnum,
+        "ExpiryEvent.InstrumentEventTypeEnum": ExpiryEvent.InstrumentEventTypeEnum,
+        "ExpiryEventAllOf.InstrumentEventTypeEnum": ExpiryEventAllOf.InstrumentEventTypeEnum,
         "FieldSchema.TypeEnum": FieldSchema.TypeEnum,
         "FilterPredicateComplianceParameter.ComplianceParameterTypeEnum": FilterPredicateComplianceParameter.ComplianceParameterTypeEnum,
         "FilterPredicateComplianceParameterAllOf.ComplianceParameterTypeEnum": FilterPredicateComplianceParameterAllOf.ComplianceParameterTypeEnum,
@@ -2857,6 +2863,8 @@ let typeMap: {[index: string]: any} = {
     "ExoticInstrument": ExoticInstrument,
     "ExoticInstrumentAllOf": ExoticInstrumentAllOf,
     "ExpandedGroup": ExpandedGroup,
+    "ExpiryEvent": ExpiryEvent,
+    "ExpiryEventAllOf": ExpiryEventAllOf,
     "FeeRule": FeeRule,
     "FeeRuleUpsertRequest": FeeRuleUpsertRequest,
     "FeeRuleUpsertResponse": FeeRuleUpsertResponse,
