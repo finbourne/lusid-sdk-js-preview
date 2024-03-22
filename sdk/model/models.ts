@@ -705,6 +705,7 @@ export * from './queryBucketedCashFlowsRequest';
 export * from './queryCashFlowsRequest';
 export * from './queryInstrumentEventsRequest';
 export * from './queryTradeTicketsRequest';
+export * from './queryableKey';
 export * from './quote';
 export * from './quoteAccessMetadataRule';
 export * from './quoteAccessMetadataRuleId';
@@ -813,6 +814,7 @@ export * from './resourceListOfProcessedCommand';
 export * from './resourceListOfProperty';
 export * from './resourceListOfPropertyDefinition';
 export * from './resourceListOfPropertyInterval';
+export * from './resourceListOfQueryableKey';
 export * from './resourceListOfQuote';
 export * from './resourceListOfQuoteAccessMetadataRule';
 export * from './resourceListOfReconciliationBreak';
@@ -1760,6 +1762,7 @@ import { QueryBucketedCashFlowsRequest } from './queryBucketedCashFlowsRequest';
 import { QueryCashFlowsRequest } from './queryCashFlowsRequest';
 import { QueryInstrumentEventsRequest } from './queryInstrumentEventsRequest';
 import { QueryTradeTicketsRequest } from './queryTradeTicketsRequest';
+import { QueryableKey } from './queryableKey';
 import { Quote } from './quote';
 import { QuoteAccessMetadataRule } from './quoteAccessMetadataRule';
 import { QuoteAccessMetadataRuleId } from './quoteAccessMetadataRuleId';
@@ -1868,6 +1871,7 @@ import { ResourceListOfProcessedCommand } from './resourceListOfProcessedCommand
 import { ResourceListOfProperty } from './resourceListOfProperty';
 import { ResourceListOfPropertyDefinition } from './resourceListOfPropertyDefinition';
 import { ResourceListOfPropertyInterval } from './resourceListOfPropertyInterval';
+import { ResourceListOfQueryableKey } from './resourceListOfQueryableKey';
 import { ResourceListOfQuote } from './resourceListOfQuote';
 import { ResourceListOfQuoteAccessMetadataRule } from './resourceListOfQuoteAccessMetadataRule';
 import { ResourceListOfReconciliationBreak } from './resourceListOfReconciliationBreak';
@@ -3212,6 +3216,7 @@ let typeMap: {[index: string]: any} = {
     "QueryCashFlowsRequest": QueryCashFlowsRequest,
     "QueryInstrumentEventsRequest": QueryInstrumentEventsRequest,
     "QueryTradeTicketsRequest": QueryTradeTicketsRequest,
+    "QueryableKey": QueryableKey,
     "Quote": Quote,
     "QuoteAccessMetadataRule": QuoteAccessMetadataRule,
     "QuoteAccessMetadataRuleId": QuoteAccessMetadataRuleId,
@@ -3315,6 +3320,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfProperty": ResourceListOfProperty,
     "ResourceListOfPropertyDefinition": ResourceListOfPropertyDefinition,
     "ResourceListOfPropertyInterval": ResourceListOfPropertyInterval,
+    "ResourceListOfQueryableKey": ResourceListOfQueryableKey,
     "ResourceListOfQuote": ResourceListOfQuote,
     "ResourceListOfQuoteAccessMetadataRule": ResourceListOfQuoteAccessMetadataRule,
     "ResourceListOfReconciliationBreak": ResourceListOfReconciliationBreak,
