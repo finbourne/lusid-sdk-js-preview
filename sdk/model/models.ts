@@ -211,6 +211,7 @@ export * from './createRelationRequest';
 export * from './createRelationshipDefinitionRequest';
 export * from './createRelationshipRequest';
 export * from './createSequenceRequest';
+export * from './createStagingRuleSetRequest';
 export * from './createTaxRuleSetRequest';
 export * from './createTradeTicketsResponse';
 export * from './createTransactionPortfolioRequest';
@@ -632,6 +633,7 @@ export * from './pagedResourceListOfReconciliation';
 export * from './pagedResourceListOfReferenceListResponse';
 export * from './pagedResourceListOfRelationshipDefinition';
 export * from './pagedResourceListOfSequenceDefinition';
+export * from './pagedResourceListOfStagingRuleSet';
 export * from './pagedResourceListOfTransactionTemplate';
 export * from './pagedResourceListOfTransactionTemplateSpecification';
 export * from './pagedResourceListOfTranslationScriptId';
@@ -880,6 +882,10 @@ export * from './simpleCashFlowLoanAllOf';
 export * from './simpleInstrument';
 export * from './simpleInstrumentAllOf';
 export * from './sortOrder';
+export * from './stagingRule';
+export * from './stagingRuleApprovalCriteria';
+export * from './stagingRuleMatchCriteria';
+export * from './stagingRuleSet';
 export * from './stepSchedule';
 export * from './stepScheduleAllOf';
 export * from './stockSplitEvent';
@@ -972,6 +978,7 @@ export * from './updatePortfolioRequest';
 export * from './updatePropertyDefinitionRequest';
 export * from './updateReconciliationRequest';
 export * from './updateRelationshipDefinitionRequest';
+export * from './updateStagingRuleSetRequest';
 export * from './updateTaxRuleSetRequest';
 export * from './updateUnitRequest';
 export * from './upsertCdsFlowConventionsRequest';
@@ -1270,6 +1277,7 @@ import { CreateRelationRequest } from './createRelationRequest';
 import { CreateRelationshipDefinitionRequest } from './createRelationshipDefinitionRequest';
 import { CreateRelationshipRequest } from './createRelationshipRequest';
 import { CreateSequenceRequest } from './createSequenceRequest';
+import { CreateStagingRuleSetRequest } from './createStagingRuleSetRequest';
 import { CreateTaxRuleSetRequest } from './createTaxRuleSetRequest';
 import { CreateTradeTicketsResponse } from './createTradeTicketsResponse';
 import { CreateTransactionPortfolioRequest } from './createTransactionPortfolioRequest';
@@ -1691,6 +1699,7 @@ import { PagedResourceListOfReconciliation } from './pagedResourceListOfReconcil
 import { PagedResourceListOfReferenceListResponse } from './pagedResourceListOfReferenceListResponse';
 import { PagedResourceListOfRelationshipDefinition } from './pagedResourceListOfRelationshipDefinition';
 import { PagedResourceListOfSequenceDefinition } from './pagedResourceListOfSequenceDefinition';
+import { PagedResourceListOfStagingRuleSet } from './pagedResourceListOfStagingRuleSet';
 import { PagedResourceListOfTransactionTemplate } from './pagedResourceListOfTransactionTemplate';
 import { PagedResourceListOfTransactionTemplateSpecification } from './pagedResourceListOfTransactionTemplateSpecification';
 import { PagedResourceListOfTranslationScriptId } from './pagedResourceListOfTranslationScriptId';
@@ -1939,6 +1948,10 @@ import { SimpleCashFlowLoanAllOf } from './simpleCashFlowLoanAllOf';
 import { SimpleInstrument } from './simpleInstrument';
 import { SimpleInstrumentAllOf } from './simpleInstrumentAllOf';
 import { SortOrder } from './sortOrder';
+import { StagingRule } from './stagingRule';
+import { StagingRuleApprovalCriteria } from './stagingRuleApprovalCriteria';
+import { StagingRuleMatchCriteria } from './stagingRuleMatchCriteria';
+import { StagingRuleSet } from './stagingRuleSet';
 import { StepSchedule } from './stepSchedule';
 import { StepScheduleAllOf } from './stepScheduleAllOf';
 import { StockSplitEvent } from './stockSplitEvent';
@@ -2031,6 +2044,7 @@ import { UpdatePortfolioRequest } from './updatePortfolioRequest';
 import { UpdatePropertyDefinitionRequest } from './updatePropertyDefinitionRequest';
 import { UpdateReconciliationRequest } from './updateReconciliationRequest';
 import { UpdateRelationshipDefinitionRequest } from './updateRelationshipDefinitionRequest';
+import { UpdateStagingRuleSetRequest } from './updateStagingRuleSetRequest';
 import { UpdateTaxRuleSetRequest } from './updateTaxRuleSetRequest';
 import { UpdateUnitRequest } from './updateUnitRequest';
 import { UpsertCdsFlowConventionsRequest } from './upsertCdsFlowConventionsRequest';
@@ -2755,6 +2769,7 @@ let typeMap: {[index: string]: any} = {
     "CreateRelationshipDefinitionRequest": CreateRelationshipDefinitionRequest,
     "CreateRelationshipRequest": CreateRelationshipRequest,
     "CreateSequenceRequest": CreateSequenceRequest,
+    "CreateStagingRuleSetRequest": CreateStagingRuleSetRequest,
     "CreateTaxRuleSetRequest": CreateTaxRuleSetRequest,
     "CreateTradeTicketsResponse": CreateTradeTicketsResponse,
     "CreateTransactionPortfolioRequest": CreateTransactionPortfolioRequest,
@@ -3157,6 +3172,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfReferenceListResponse": PagedResourceListOfReferenceListResponse,
     "PagedResourceListOfRelationshipDefinition": PagedResourceListOfRelationshipDefinition,
     "PagedResourceListOfSequenceDefinition": PagedResourceListOfSequenceDefinition,
+    "PagedResourceListOfStagingRuleSet": PagedResourceListOfStagingRuleSet,
     "PagedResourceListOfTransactionTemplate": PagedResourceListOfTransactionTemplate,
     "PagedResourceListOfTransactionTemplateSpecification": PagedResourceListOfTransactionTemplateSpecification,
     "PagedResourceListOfTranslationScriptId": PagedResourceListOfTranslationScriptId,
@@ -3387,6 +3403,10 @@ let typeMap: {[index: string]: any} = {
     "SimpleCashFlowLoanAllOf": SimpleCashFlowLoanAllOf,
     "SimpleInstrument": SimpleInstrument,
     "SimpleInstrumentAllOf": SimpleInstrumentAllOf,
+    "StagingRule": StagingRule,
+    "StagingRuleApprovalCriteria": StagingRuleApprovalCriteria,
+    "StagingRuleMatchCriteria": StagingRuleMatchCriteria,
+    "StagingRuleSet": StagingRuleSet,
     "StepSchedule": StepSchedule,
     "StepScheduleAllOf": StepScheduleAllOf,
     "StockSplitEvent": StockSplitEvent,
@@ -3471,6 +3491,7 @@ let typeMap: {[index: string]: any} = {
     "UpdatePropertyDefinitionRequest": UpdatePropertyDefinitionRequest,
     "UpdateReconciliationRequest": UpdateReconciliationRequest,
     "UpdateRelationshipDefinitionRequest": UpdateRelationshipDefinitionRequest,
+    "UpdateStagingRuleSetRequest": UpdateStagingRuleSetRequest,
     "UpdateTaxRuleSetRequest": UpdateTaxRuleSetRequest,
     "UpdateUnitRequest": UpdateUnitRequest,
     "UpsertCdsFlowConventionsRequest": UpsertCdsFlowConventionsRequest,
