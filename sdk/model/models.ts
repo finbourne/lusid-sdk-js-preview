@@ -1023,7 +1023,11 @@ export * from './upsertStructuredDataResponse';
 export * from './upsertStructuredResultDataRequest';
 export * from './upsertTransactionPropertiesResponse';
 export * from './upsertTranslationScriptRequest';
+export * from './upsertValuationPointRequest';
 export * from './user';
+export * from './valuationPointDataQueryParameters';
+export * from './valuationPointDataRequest';
+export * from './valuationPointDataResponse';
 export * from './valuationRequest';
 export * from './valuationSchedule';
 export * from './valuationsReconciliationRequest';
@@ -2090,7 +2094,11 @@ import { UpsertStructuredDataResponse } from './upsertStructuredDataResponse';
 import { UpsertStructuredResultDataRequest } from './upsertStructuredResultDataRequest';
 import { UpsertTransactionPropertiesResponse } from './upsertTransactionPropertiesResponse';
 import { UpsertTranslationScriptRequest } from './upsertTranslationScriptRequest';
+import { UpsertValuationPointRequest } from './upsertValuationPointRequest';
 import { User } from './user';
+import { ValuationPointDataQueryParameters } from './valuationPointDataQueryParameters';
+import { ValuationPointDataRequest } from './valuationPointDataRequest';
+import { ValuationPointDataResponse } from './valuationPointDataResponse';
 import { ValuationRequest } from './valuationRequest';
 import { ValuationSchedule } from './valuationSchedule';
 import { ValuationsReconciliationRequest } from './valuationsReconciliationRequest';
@@ -3538,7 +3546,11 @@ let typeMap: {[index: string]: any} = {
     "UpsertStructuredResultDataRequest": UpsertStructuredResultDataRequest,
     "UpsertTransactionPropertiesResponse": UpsertTransactionPropertiesResponse,
     "UpsertTranslationScriptRequest": UpsertTranslationScriptRequest,
+    "UpsertValuationPointRequest": UpsertValuationPointRequest,
     "User": User,
+    "ValuationPointDataQueryParameters": ValuationPointDataQueryParameters,
+    "ValuationPointDataRequest": ValuationPointDataRequest,
+    "ValuationPointDataResponse": ValuationPointDataResponse,
     "ValuationRequest": ValuationRequest,
     "ValuationSchedule": ValuationSchedule,
     "ValuationsReconciliationRequest": ValuationsReconciliationRequest,
