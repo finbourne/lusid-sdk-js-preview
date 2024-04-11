@@ -56,6 +56,8 @@ export * from './allocationServiceRunResponse';
 export * from './allocationSetRequest';
 export * from './amortisationEvent';
 export * from './amortisationEventAllOf';
+export * from './amortisationRule';
+export * from './amortisationRuleSet';
 export * from './annulQuotesResponse';
 export * from './annulSingleStructuredDataResponse';
 export * from './annulStructuredDataResponse';
@@ -191,6 +193,7 @@ export * from './counterpartyAgreement';
 export * from './counterpartyRiskInformation';
 export * from './counterpartySignatory';
 export * from './createAddressKeyDefinitionRequest';
+export * from './createAmortisationRuleSetRequest';
 export * from './createCalendarRequest';
 export * from './createCorporateActionSourceRequest';
 export * from './createCustomEntityTypeRequest';
@@ -591,6 +594,7 @@ export * from './pagedResourceListOfAborConfiguration';
 export * from './pagedResourceListOfAccount';
 export * from './pagedResourceListOfAddressKeyDefinition';
 export * from './pagedResourceListOfAllocation';
+export * from './pagedResourceListOfAmortisationRuleSet';
 export * from './pagedResourceListOfBlock';
 export * from './pagedResourceListOfCalendar';
 export * from './pagedResourceListOfChartOfAccounts';
@@ -967,6 +971,7 @@ export * from './typedResourceId';
 export * from './unitSchema';
 export * from './unitsRatio';
 export * from './unmatchedHoldingMethod';
+export * from './updateAmortisationRuleSetDetailsRequest';
 export * from './updateCalendarRequest';
 export * from './updateCustomEntityDefinitionRequest';
 export * from './updateCustomEntityTypeRequest';
@@ -1127,6 +1132,8 @@ import { AllocationServiceRunResponse } from './allocationServiceRunResponse';
 import { AllocationSetRequest } from './allocationSetRequest';
 import { AmortisationEvent } from './amortisationEvent';
 import { AmortisationEventAllOf } from './amortisationEventAllOf';
+import { AmortisationRule } from './amortisationRule';
+import { AmortisationRuleSet } from './amortisationRuleSet';
 import { AnnulQuotesResponse } from './annulQuotesResponse';
 import { AnnulSingleStructuredDataResponse } from './annulSingleStructuredDataResponse';
 import { AnnulStructuredDataResponse } from './annulStructuredDataResponse';
@@ -1262,6 +1269,7 @@ import { CounterpartyAgreement } from './counterpartyAgreement';
 import { CounterpartyRiskInformation } from './counterpartyRiskInformation';
 import { CounterpartySignatory } from './counterpartySignatory';
 import { CreateAddressKeyDefinitionRequest } from './createAddressKeyDefinitionRequest';
+import { CreateAmortisationRuleSetRequest } from './createAmortisationRuleSetRequest';
 import { CreateCalendarRequest } from './createCalendarRequest';
 import { CreateCorporateActionSourceRequest } from './createCorporateActionSourceRequest';
 import { CreateCustomEntityTypeRequest } from './createCustomEntityTypeRequest';
@@ -1662,6 +1670,7 @@ import { PagedResourceListOfAborConfiguration } from './pagedResourceListOfAborC
 import { PagedResourceListOfAccount } from './pagedResourceListOfAccount';
 import { PagedResourceListOfAddressKeyDefinition } from './pagedResourceListOfAddressKeyDefinition';
 import { PagedResourceListOfAllocation } from './pagedResourceListOfAllocation';
+import { PagedResourceListOfAmortisationRuleSet } from './pagedResourceListOfAmortisationRuleSet';
 import { PagedResourceListOfBlock } from './pagedResourceListOfBlock';
 import { PagedResourceListOfCalendar } from './pagedResourceListOfCalendar';
 import { PagedResourceListOfChartOfAccounts } from './pagedResourceListOfChartOfAccounts';
@@ -2038,6 +2047,7 @@ import { TypedResourceId } from './typedResourceId';
 import { UnitSchema } from './unitSchema';
 import { UnitsRatio } from './unitsRatio';
 import { UnmatchedHoldingMethod } from './unmatchedHoldingMethod';
+import { UpdateAmortisationRuleSetDetailsRequest } from './updateAmortisationRuleSetDetailsRequest';
 import { UpdateCalendarRequest } from './updateCalendarRequest';
 import { UpdateCustomEntityDefinitionRequest } from './updateCustomEntityDefinitionRequest';
 import { UpdateCustomEntityTypeRequest } from './updateCustomEntityTypeRequest';
@@ -2628,6 +2638,8 @@ let typeMap: {[index: string]: any} = {
     "AllocationSetRequest": AllocationSetRequest,
     "AmortisationEvent": AmortisationEvent,
     "AmortisationEventAllOf": AmortisationEventAllOf,
+    "AmortisationRule": AmortisationRule,
+    "AmortisationRuleSet": AmortisationRuleSet,
     "AnnulQuotesResponse": AnnulQuotesResponse,
     "AnnulSingleStructuredDataResponse": AnnulSingleStructuredDataResponse,
     "AnnulStructuredDataResponse": AnnulStructuredDataResponse,
@@ -2759,6 +2771,7 @@ let typeMap: {[index: string]: any} = {
     "CounterpartyRiskInformation": CounterpartyRiskInformation,
     "CounterpartySignatory": CounterpartySignatory,
     "CreateAddressKeyDefinitionRequest": CreateAddressKeyDefinitionRequest,
+    "CreateAmortisationRuleSetRequest": CreateAmortisationRuleSetRequest,
     "CreateCalendarRequest": CreateCalendarRequest,
     "CreateCorporateActionSourceRequest": CreateCorporateActionSourceRequest,
     "CreateCustomEntityTypeRequest": CreateCustomEntityTypeRequest,
@@ -3140,6 +3153,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfAccount": PagedResourceListOfAccount,
     "PagedResourceListOfAddressKeyDefinition": PagedResourceListOfAddressKeyDefinition,
     "PagedResourceListOfAllocation": PagedResourceListOfAllocation,
+    "PagedResourceListOfAmortisationRuleSet": PagedResourceListOfAmortisationRuleSet,
     "PagedResourceListOfBlock": PagedResourceListOfBlock,
     "PagedResourceListOfCalendar": PagedResourceListOfCalendar,
     "PagedResourceListOfChartOfAccounts": PagedResourceListOfChartOfAccounts,
@@ -3490,6 +3504,7 @@ let typeMap: {[index: string]: any} = {
     "TriggerEventAllOf": TriggerEventAllOf,
     "TypedResourceId": TypedResourceId,
     "UnitsRatio": UnitsRatio,
+    "UpdateAmortisationRuleSetDetailsRequest": UpdateAmortisationRuleSetDetailsRequest,
     "UpdateCalendarRequest": UpdateCalendarRequest,
     "UpdateCustomEntityDefinitionRequest": UpdateCustomEntityDefinitionRequest,
     "UpdateCustomEntityTypeRequest": UpdateCustomEntityTypeRequest,

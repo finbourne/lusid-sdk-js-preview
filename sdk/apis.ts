@@ -3,6 +3,7 @@ import {AborConfigurationApi} from './api/aborConfigurationApi';
 import {AddressKeyDefinitionApi} from './api/addressKeyDefinitionApi';
 import {AggregationApi} from './api/aggregationApi';
 import {AllocationsApi} from './api/allocationsApi';
+import {AmortisationRuleSetsApi} from './api/amortisationRuleSetsApi';
 import {ApplicationMetadataApi} from './api/applicationMetadataApi';
 import {BlocksApi} from './api/blocksApi';
 import {CalendarsApi} from './api/calendarsApi';
@@ -67,6 +68,7 @@ export class Api {
     public addressKeyDefinition:  AddressKeyDefinitionApi
     public aggregation:  AggregationApi
     public allocations:  AllocationsApi
+    public amortisationRuleSets:  AmortisationRuleSetsApi
     public applicationMetadata:  ApplicationMetadataApi
     public blocks:  BlocksApi
     public calendars:  CalendarsApi
