@@ -702,6 +702,8 @@ export * from './propertyKeyComplianceParameter';
 export * from './propertyKeyComplianceParameterAllOf';
 export * from './propertyKeyListComplianceParameter';
 export * from './propertyLifeTime';
+export * from './propertyList';
+export * from './propertyListAllOf';
 export * from './propertySchema';
 export * from './propertyType';
 export * from './propertyValue';
@@ -1778,6 +1780,8 @@ import { PropertyKeyComplianceParameter } from './propertyKeyComplianceParameter
 import { PropertyKeyComplianceParameterAllOf } from './propertyKeyComplianceParameterAllOf';
 import { PropertyKeyListComplianceParameter } from './propertyKeyListComplianceParameter';
 import { PropertyLifeTime } from './propertyLifeTime';
+import { PropertyList } from './propertyList';
+import { PropertyListAllOf } from './propertyListAllOf';
 import { PropertySchema } from './propertySchema';
 import { PropertyType } from './propertyType';
 import { PropertyValue } from './propertyValue';
@@ -2472,6 +2476,8 @@ let enumsMap: {[index: string]: any} = {
         "PropertyKeyComplianceParameterAllOf.ComplianceParameterTypeEnum": PropertyKeyComplianceParameterAllOf.ComplianceParameterTypeEnum,
         "PropertyKeyListComplianceParameter.ComplianceParameterTypeEnum": PropertyKeyListComplianceParameter.ComplianceParameterTypeEnum,
         "PropertyLifeTime": PropertyLifeTime,
+        "PropertyList.ReferenceListTypeEnum": PropertyList.ReferenceListTypeEnum,
+        "PropertyListAllOf.ReferenceListTypeEnum": PropertyListAllOf.ReferenceListTypeEnum,
         "PropertyType": PropertyType,
         "PropertyValueEquals.CriterionTypeEnum": PropertyValueEquals.CriterionTypeEnum,
         "PropertyValueEqualsAllOf.CriterionTypeEnum": PropertyValueEqualsAllOf.CriterionTypeEnum,
@@ -3254,6 +3260,8 @@ let typeMap: {[index: string]: any} = {
     "PropertyKeyComplianceParameter": PropertyKeyComplianceParameter,
     "PropertyKeyComplianceParameterAllOf": PropertyKeyComplianceParameterAllOf,
     "PropertyKeyListComplianceParameter": PropertyKeyListComplianceParameter,
+    "PropertyList": PropertyList,
+    "PropertyListAllOf": PropertyListAllOf,
     "PropertySchema": PropertySchema,
     "PropertyValue": PropertyValue,
     "PropertyValueEquals": PropertyValueEquals,
