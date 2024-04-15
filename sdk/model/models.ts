@@ -869,6 +869,8 @@ export * from './schedule';
 export * from './scheduleType';
 export * from './schema';
 export * from './scopeDefinition';
+export * from './scripDividendEvent';
+export * from './scripDividendEventAllOf';
 export * from './scriptMapReference';
 export * from './securityElection';
 export * from './sequenceDefinition';
@@ -1947,6 +1949,8 @@ import { Schedule } from './schedule';
 import { ScheduleType } from './scheduleType';
 import { Schema } from './schema';
 import { ScopeDefinition } from './scopeDefinition';
+import { ScripDividendEvent } from './scripDividendEvent';
+import { ScripDividendEventAllOf } from './scripDividendEventAllOf';
 import { ScriptMapReference } from './scriptMapReference';
 import { SecurityElection } from './securityElection';
 import { SequenceDefinition } from './sequenceDefinition';
@@ -2540,6 +2544,8 @@ let enumsMap: {[index: string]: any} = {
         "ScalingMethodology": ScalingMethodology,
         "Schedule.ScheduleTypeEnum": Schedule.ScheduleTypeEnum,
         "ScheduleType": ScheduleType,
+        "ScripDividendEvent.InstrumentEventTypeEnum": ScripDividendEvent.InstrumentEventTypeEnum,
+        "ScripDividendEventAllOf.InstrumentEventTypeEnum": ScripDividendEventAllOf.InstrumentEventTypeEnum,
         "SimpleCashFlowLoan.InstrumentTypeEnum": SimpleCashFlowLoan.InstrumentTypeEnum,
         "SimpleCashFlowLoanAllOf.InstrumentTypeEnum": SimpleCashFlowLoanAllOf.InstrumentTypeEnum,
         "SimpleInstrument.AssetClassEnum": SimpleInstrument.AssetClassEnum,
@@ -3417,6 +3423,8 @@ let typeMap: {[index: string]: any} = {
     "Schedule": Schedule,
     "Schema": Schema,
     "ScopeDefinition": ScopeDefinition,
+    "ScripDividendEvent": ScripDividendEvent,
+    "ScripDividendEventAllOf": ScripDividendEventAllOf,
     "ScriptMapReference": ScriptMapReference,
     "SecurityElection": SecurityElection,
     "SequenceDefinition": SequenceDefinition,
