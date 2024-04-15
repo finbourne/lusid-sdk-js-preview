@@ -897,6 +897,8 @@ export * from './stagingRuleMatchCriteria';
 export * from './stagingRuleSet';
 export * from './stepSchedule';
 export * from './stepScheduleAllOf';
+export * from './stockDividendEvent';
+export * from './stockDividendEventAllOf';
 export * from './stockSplitEvent';
 export * from './stockSplitEventAllOf';
 export * from './stream';
@@ -1977,6 +1979,8 @@ import { StagingRuleMatchCriteria } from './stagingRuleMatchCriteria';
 import { StagingRuleSet } from './stagingRuleSet';
 import { StepSchedule } from './stepSchedule';
 import { StepScheduleAllOf } from './stepScheduleAllOf';
+import { StockDividendEvent } from './stockDividendEvent';
+import { StockDividendEventAllOf } from './stockDividendEventAllOf';
 import { StockSplitEvent } from './stockSplitEvent';
 import { StockSplitEventAllOf } from './stockSplitEventAllOf';
 import { Stream } from './stream';
@@ -2555,6 +2559,8 @@ let enumsMap: {[index: string]: any} = {
         "SortOrder": SortOrder,
         "StepSchedule.ScheduleTypeEnum": StepSchedule.ScheduleTypeEnum,
         "StepScheduleAllOf.ScheduleTypeEnum": StepScheduleAllOf.ScheduleTypeEnum,
+        "StockDividendEvent.InstrumentEventTypeEnum": StockDividendEvent.InstrumentEventTypeEnum,
+        "StockDividendEventAllOf.InstrumentEventTypeEnum": StockDividendEventAllOf.InstrumentEventTypeEnum,
         "StockSplitEvent.InstrumentEventTypeEnum": StockSplitEvent.InstrumentEventTypeEnum,
         "StockSplitEventAllOf.InstrumentEventTypeEnum": StockSplitEventAllOf.InstrumentEventTypeEnum,
         "StringComparisonType": StringComparisonType,
@@ -3450,6 +3456,8 @@ let typeMap: {[index: string]: any} = {
     "StagingRuleSet": StagingRuleSet,
     "StepSchedule": StepSchedule,
     "StepScheduleAllOf": StepScheduleAllOf,
+    "StockDividendEvent": StockDividendEvent,
+    "StockDividendEventAllOf": StockDividendEventAllOf,
     "StockSplitEvent": StockSplitEvent,
     "StockSplitEventAllOf": StockSplitEventAllOf,
     "Stream": Stream,
