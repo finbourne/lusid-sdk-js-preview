@@ -21,7 +21,6 @@ export * from './accountsUpsertResponse';
 export * from './accumulationEvent';
 export * from './accumulationEventAllOf';
 export * from './actionId';
-export * from './actionResultOfPortfolio';
 export * from './addBusinessDaysToDateRequest';
 export * from './addBusinessDaysToDateResponse';
 export * from './additionalPayment';
@@ -1105,7 +1104,6 @@ import { AccountsUpsertResponse } from './accountsUpsertResponse';
 import { AccumulationEvent } from './accumulationEvent';
 import { AccumulationEventAllOf } from './accumulationEventAllOf';
 import { ActionId } from './actionId';
-import { ActionResultOfPortfolio } from './actionResultOfPortfolio';
 import { AddBusinessDaysToDateRequest } from './addBusinessDaysToDateRequest';
 import { AddBusinessDaysToDateResponse } from './addBusinessDaysToDateResponse';
 import { AdditionalPayment } from './additionalPayment';
@@ -2627,7 +2625,6 @@ let typeMap: {[index: string]: any} = {
     "AccumulationEvent": AccumulationEvent,
     "AccumulationEventAllOf": AccumulationEventAllOf,
     "ActionId": ActionId,
-    "ActionResultOfPortfolio": ActionResultOfPortfolio,
     "AddBusinessDaysToDateRequest": AddBusinessDaysToDateRequest,
     "AddBusinessDaysToDateResponse": AddBusinessDaysToDateResponse,
     "AdditionalPayment": AdditionalPayment,
