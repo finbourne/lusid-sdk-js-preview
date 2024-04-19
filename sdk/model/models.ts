@@ -705,6 +705,7 @@ export * from './propertyKeyListComplianceParameter';
 export * from './propertyLifeTime';
 export * from './propertyList';
 export * from './propertyListAllOf';
+export * from './propertyListComplianceParameter';
 export * from './propertySchema';
 export * from './propertyType';
 export * from './propertyValue';
@@ -1788,6 +1789,7 @@ import { PropertyKeyListComplianceParameter } from './propertyKeyListComplianceP
 import { PropertyLifeTime } from './propertyLifeTime';
 import { PropertyList } from './propertyList';
 import { PropertyListAllOf } from './propertyListAllOf';
+import { PropertyListComplianceParameter } from './propertyListComplianceParameter';
 import { PropertySchema } from './propertySchema';
 import { PropertyType } from './propertyType';
 import { PropertyValue } from './propertyValue';
@@ -2488,6 +2490,7 @@ let enumsMap: {[index: string]: any} = {
         "PropertyLifeTime": PropertyLifeTime,
         "PropertyList.ReferenceListTypeEnum": PropertyList.ReferenceListTypeEnum,
         "PropertyListAllOf.ReferenceListTypeEnum": PropertyListAllOf.ReferenceListTypeEnum,
+        "PropertyListComplianceParameter.ComplianceParameterTypeEnum": PropertyListComplianceParameter.ComplianceParameterTypeEnum,
         "PropertyType": PropertyType,
         "PropertyValueEquals.CriterionTypeEnum": PropertyValueEquals.CriterionTypeEnum,
         "PropertyValueEqualsAllOf.CriterionTypeEnum": PropertyValueEqualsAllOf.CriterionTypeEnum,
@@ -3277,6 +3280,7 @@ let typeMap: {[index: string]: any} = {
     "PropertyKeyListComplianceParameter": PropertyKeyListComplianceParameter,
     "PropertyList": PropertyList,
     "PropertyListAllOf": PropertyListAllOf,
+    "PropertyListComplianceParameter": PropertyListComplianceParameter,
     "PropertySchema": PropertySchema,
     "PropertyValue": PropertyValue,
     "PropertyValueEquals": PropertyValueEquals,
