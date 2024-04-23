@@ -863,6 +863,8 @@ export * from './resultValueIntAllOf';
 export * from './resultValueString';
 export * from './resultValueStringAllOf';
 export * from './resultValueType';
+export * from './reverseStockSplitEvent';
+export * from './reverseStockSplitEventAllOf';
 export * from './roundingConfiguration';
 export * from './roundingConfigurationComponent';
 export * from './roundingConvention';
@@ -1947,6 +1949,8 @@ import { ResultValueIntAllOf } from './resultValueIntAllOf';
 import { ResultValueString } from './resultValueString';
 import { ResultValueStringAllOf } from './resultValueStringAllOf';
 import { ResultValueType } from './resultValueType';
+import { ReverseStockSplitEvent } from './reverseStockSplitEvent';
+import { ReverseStockSplitEventAllOf } from './reverseStockSplitEventAllOf';
 import { RoundingConfiguration } from './roundingConfiguration';
 import { RoundingConfigurationComponent } from './roundingConfigurationComponent';
 import { RoundingConvention } from './roundingConvention';
@@ -2550,6 +2554,8 @@ let enumsMap: {[index: string]: any} = {
         "ResultValueString.ResultValueTypeEnum": ResultValueString.ResultValueTypeEnum,
         "ResultValueStringAllOf.ResultValueTypeEnum": ResultValueStringAllOf.ResultValueTypeEnum,
         "ResultValueType": ResultValueType,
+        "ReverseStockSplitEvent.InstrumentEventTypeEnum": ReverseStockSplitEvent.InstrumentEventTypeEnum,
+        "ReverseStockSplitEventAllOf.InstrumentEventTypeEnum": ReverseStockSplitEventAllOf.InstrumentEventTypeEnum,
         "ScalingMethodology": ScalingMethodology,
         "Schedule.ScheduleTypeEnum": Schedule.ScheduleTypeEnum,
         "ScheduleType": ScheduleType,
@@ -3430,6 +3436,8 @@ let typeMap: {[index: string]: any} = {
     "ResultValueIntAllOf": ResultValueIntAllOf,
     "ResultValueString": ResultValueString,
     "ResultValueStringAllOf": ResultValueStringAllOf,
+    "ReverseStockSplitEvent": ReverseStockSplitEvent,
+    "ReverseStockSplitEventAllOf": ReverseStockSplitEventAllOf,
     "RoundingConfiguration": RoundingConfiguration,
     "RoundingConfigurationComponent": RoundingConfigurationComponent,
     "RoundingConvention": RoundingConvention,
