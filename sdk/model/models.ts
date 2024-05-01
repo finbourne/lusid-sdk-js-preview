@@ -661,6 +661,7 @@ export * from './portfolio';
 export * from './portfolioCashFlow';
 export * from './portfolioCashLadder';
 export * from './portfolioDetails';
+export * from './portfolioEntity';
 export * from './portfolioEntityId';
 export * from './portfolioGroup';
 export * from './portfolioGroupIdComplianceParameter';
@@ -681,6 +682,7 @@ export * from './portfolioReturnBreakdown';
 export * from './portfolioSearchResult';
 export * from './portfolioTradeTicket';
 export * from './portfolioType';
+export * from './portfolioWithoutHref';
 export * from './portfoliosReconciliationRequest';
 export * from './postingModuleDetails';
 export * from './postingModuleRequest';
@@ -1747,6 +1749,7 @@ import { Portfolio } from './portfolio';
 import { PortfolioCashFlow } from './portfolioCashFlow';
 import { PortfolioCashLadder } from './portfolioCashLadder';
 import { PortfolioDetails } from './portfolioDetails';
+import { PortfolioEntity } from './portfolioEntity';
 import { PortfolioEntityId } from './portfolioEntityId';
 import { PortfolioGroup } from './portfolioGroup';
 import { PortfolioGroupIdComplianceParameter } from './portfolioGroupIdComplianceParameter';
@@ -1767,6 +1770,7 @@ import { PortfolioReturnBreakdown } from './portfolioReturnBreakdown';
 import { PortfolioSearchResult } from './portfolioSearchResult';
 import { PortfolioTradeTicket } from './portfolioTradeTicket';
 import { PortfolioType } from './portfolioType';
+import { PortfolioWithoutHref } from './portfolioWithoutHref';
 import { PortfoliosReconciliationRequest } from './portfoliosReconciliationRequest';
 import { PostingModuleDetails } from './postingModuleDetails';
 import { PostingModuleRequest } from './postingModuleRequest';
@@ -2471,6 +2475,8 @@ let enumsMap: {[index: string]: any} = {
         "PortfolioResultDataKeyRuleAllOf.ResultKeyRuleTypeEnum": PortfolioResultDataKeyRuleAllOf.ResultKeyRuleTypeEnum,
         "PortfolioSearchResult.TypeEnum": PortfolioSearchResult.TypeEnum,
         "PortfolioType": PortfolioType,
+        "PortfolioWithoutHref.TypeEnum": PortfolioWithoutHref.TypeEnum,
+        "PortfolioWithoutHref.AccountingMethodEnum": PortfolioWithoutHref.AccountingMethodEnum,
         "PricingModel": PricingModel,
         "PropertyDefinition.ValueTypeEnum": PropertyDefinition.ValueTypeEnum,
         "PropertyDefinition.TypeEnum": PropertyDefinition.TypeEnum,
@@ -3247,6 +3253,7 @@ let typeMap: {[index: string]: any} = {
     "PortfolioCashFlow": PortfolioCashFlow,
     "PortfolioCashLadder": PortfolioCashLadder,
     "PortfolioDetails": PortfolioDetails,
+    "PortfolioEntity": PortfolioEntity,
     "PortfolioEntityId": PortfolioEntityId,
     "PortfolioGroup": PortfolioGroup,
     "PortfolioGroupIdComplianceParameter": PortfolioGroupIdComplianceParameter,
@@ -3266,6 +3273,7 @@ let typeMap: {[index: string]: any} = {
     "PortfolioReturnBreakdown": PortfolioReturnBreakdown,
     "PortfolioSearchResult": PortfolioSearchResult,
     "PortfolioTradeTicket": PortfolioTradeTicket,
+    "PortfolioWithoutHref": PortfolioWithoutHref,
     "PortfoliosReconciliationRequest": PortfoliosReconciliationRequest,
     "PostingModuleDetails": PostingModuleDetails,
     "PostingModuleRequest": PostingModuleRequest,
