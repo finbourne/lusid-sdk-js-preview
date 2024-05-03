@@ -53,6 +53,7 @@ import {ScopesApi} from './api/scopesApi';
 import {ScriptedTranslationApi} from './api/scriptedTranslationApi';
 import {SearchApi} from './api/searchApi';
 import {SequencesApi} from './api/sequencesApi';
+import {StagedModificationsApi} from './api/stagedModificationsApi';
 import {StagingRuleSetApi} from './api/stagingRuleSetApi';
 import {StructuredResultDataApi} from './api/structuredResultDataApi';
 import {SystemConfigurationApi} from './api/systemConfigurationApi';
@@ -118,6 +119,7 @@ export class Api {
     public scriptedTranslation:  ScriptedTranslationApi
     public search:  SearchApi
     public sequences:  SequencesApi
+    public stagedModifications:  StagedModificationsApi
     public stagingRuleSet:  StagingRuleSetApi
     public structuredResultData:  StructuredResultDataApi
     public systemConfiguration:  SystemConfigurationApi

@@ -638,6 +638,8 @@ export * from './pagedResourceListOfReconciliation';
 export * from './pagedResourceListOfReferenceListResponse';
 export * from './pagedResourceListOfRelationshipDefinition';
 export * from './pagedResourceListOfSequenceDefinition';
+export * from './pagedResourceListOfStagedModification';
+export * from './pagedResourceListOfStagedModificationsRequestedChangeInterval';
 export * from './pagedResourceListOfStagingRuleSet';
 export * from './pagedResourceListOfTransactionTemplate';
 export * from './pagedResourceListOfTransactionTemplateSpecification';
@@ -774,6 +776,7 @@ export * from './relationshipDefinition';
 export * from './relativeDateOffset';
 export * from './repo';
 export * from './repoAllOf';
+export * from './requestedChanges';
 export * from './resetEvent';
 export * from './resetEventAllOf';
 export * from './resourceId';
@@ -897,7 +900,14 @@ export * from './simpleCashFlowLoanAllOf';
 export * from './simpleInstrument';
 export * from './simpleInstrumentAllOf';
 export * from './sortOrder';
+export * from './stagedModification';
+export * from './stagedModificationDecision';
+export * from './stagedModificationDecisionRequest';
+export * from './stagedModificationEffectiveRange';
+export * from './stagedModificationStagingRule';
+export * from './stagedModificationsEntityHrefs';
 export * from './stagedModificationsInfo';
+export * from './stagedModificationsRequestedChangeInterval';
 export * from './stagingRule';
 export * from './stagingRuleApprovalCriteria';
 export * from './stagingRuleMatchCriteria';
@@ -1727,6 +1737,8 @@ import { PagedResourceListOfReconciliation } from './pagedResourceListOfReconcil
 import { PagedResourceListOfReferenceListResponse } from './pagedResourceListOfReferenceListResponse';
 import { PagedResourceListOfRelationshipDefinition } from './pagedResourceListOfRelationshipDefinition';
 import { PagedResourceListOfSequenceDefinition } from './pagedResourceListOfSequenceDefinition';
+import { PagedResourceListOfStagedModification } from './pagedResourceListOfStagedModification';
+import { PagedResourceListOfStagedModificationsRequestedChangeInterval } from './pagedResourceListOfStagedModificationsRequestedChangeInterval';
 import { PagedResourceListOfStagingRuleSet } from './pagedResourceListOfStagingRuleSet';
 import { PagedResourceListOfTransactionTemplate } from './pagedResourceListOfTransactionTemplate';
 import { PagedResourceListOfTransactionTemplateSpecification } from './pagedResourceListOfTransactionTemplateSpecification';
@@ -1863,6 +1875,7 @@ import { RelationshipDefinition } from './relationshipDefinition';
 import { RelativeDateOffset } from './relativeDateOffset';
 import { Repo } from './repo';
 import { RepoAllOf } from './repoAllOf';
+import { RequestedChanges } from './requestedChanges';
 import { ResetEvent } from './resetEvent';
 import { ResetEventAllOf } from './resetEventAllOf';
 import { ResourceId } from './resourceId';
@@ -1986,7 +1999,14 @@ import { SimpleCashFlowLoanAllOf } from './simpleCashFlowLoanAllOf';
 import { SimpleInstrument } from './simpleInstrument';
 import { SimpleInstrumentAllOf } from './simpleInstrumentAllOf';
 import { SortOrder } from './sortOrder';
+import { StagedModification } from './stagedModification';
+import { StagedModificationDecision } from './stagedModificationDecision';
+import { StagedModificationDecisionRequest } from './stagedModificationDecisionRequest';
+import { StagedModificationEffectiveRange } from './stagedModificationEffectiveRange';
+import { StagedModificationStagingRule } from './stagedModificationStagingRule';
+import { StagedModificationsEntityHrefs } from './stagedModificationsEntityHrefs';
 import { StagedModificationsInfo } from './stagedModificationsInfo';
+import { StagedModificationsRequestedChangeInterval } from './stagedModificationsRequestedChangeInterval';
 import { StagingRule } from './stagingRule';
 import { StagingRuleApprovalCriteria } from './stagingRuleApprovalCriteria';
 import { StagingRuleMatchCriteria } from './stagingRuleMatchCriteria';
@@ -3234,6 +3254,8 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfReferenceListResponse": PagedResourceListOfReferenceListResponse,
     "PagedResourceListOfRelationshipDefinition": PagedResourceListOfRelationshipDefinition,
     "PagedResourceListOfSequenceDefinition": PagedResourceListOfSequenceDefinition,
+    "PagedResourceListOfStagedModification": PagedResourceListOfStagedModification,
+    "PagedResourceListOfStagedModificationsRequestedChangeInterval": PagedResourceListOfStagedModificationsRequestedChangeInterval,
     "PagedResourceListOfStagingRuleSet": PagedResourceListOfStagingRuleSet,
     "PagedResourceListOfTransactionTemplate": PagedResourceListOfTransactionTemplate,
     "PagedResourceListOfTransactionTemplateSpecification": PagedResourceListOfTransactionTemplateSpecification,
@@ -3357,6 +3379,7 @@ let typeMap: {[index: string]: any} = {
     "RelativeDateOffset": RelativeDateOffset,
     "Repo": Repo,
     "RepoAllOf": RepoAllOf,
+    "RequestedChanges": RequestedChanges,
     "ResetEvent": ResetEvent,
     "ResetEventAllOf": ResetEventAllOf,
     "ResourceId": ResourceId,
@@ -3475,7 +3498,14 @@ let typeMap: {[index: string]: any} = {
     "SimpleCashFlowLoanAllOf": SimpleCashFlowLoanAllOf,
     "SimpleInstrument": SimpleInstrument,
     "SimpleInstrumentAllOf": SimpleInstrumentAllOf,
+    "StagedModification": StagedModification,
+    "StagedModificationDecision": StagedModificationDecision,
+    "StagedModificationDecisionRequest": StagedModificationDecisionRequest,
+    "StagedModificationEffectiveRange": StagedModificationEffectiveRange,
+    "StagedModificationStagingRule": StagedModificationStagingRule,
+    "StagedModificationsEntityHrefs": StagedModificationsEntityHrefs,
     "StagedModificationsInfo": StagedModificationsInfo,
+    "StagedModificationsRequestedChangeInterval": StagedModificationsRequestedChangeInterval,
     "StagingRule": StagingRule,
     "StagingRuleApprovalCriteria": StagingRuleApprovalCriteria,
     "StagingRuleMatchCriteria": StagingRuleMatchCriteria,
