@@ -897,6 +897,7 @@ export * from './simpleCashFlowLoanAllOf';
 export * from './simpleInstrument';
 export * from './simpleInstrumentAllOf';
 export * from './sortOrder';
+export * from './stagedModificationsInfo';
 export * from './stagingRule';
 export * from './stagingRuleApprovalCriteria';
 export * from './stagingRuleMatchCriteria';
@@ -1985,6 +1986,7 @@ import { SimpleCashFlowLoanAllOf } from './simpleCashFlowLoanAllOf';
 import { SimpleInstrument } from './simpleInstrument';
 import { SimpleInstrumentAllOf } from './simpleInstrumentAllOf';
 import { SortOrder } from './sortOrder';
+import { StagedModificationsInfo } from './stagedModificationsInfo';
 import { StagingRule } from './stagingRule';
 import { StagingRuleApprovalCriteria } from './stagingRuleApprovalCriteria';
 import { StagingRuleMatchCriteria } from './stagingRuleMatchCriteria';
@@ -3473,6 +3475,7 @@ let typeMap: {[index: string]: any} = {
     "SimpleCashFlowLoanAllOf": SimpleCashFlowLoanAllOf,
     "SimpleInstrument": SimpleInstrument,
     "SimpleInstrumentAllOf": SimpleInstrumentAllOf,
+    "StagedModificationsInfo": StagedModificationsInfo,
     "StagingRule": StagingRule,
     "StagingRuleApprovalCriteria": StagingRuleApprovalCriteria,
     "StagingRuleMatchCriteria": StagingRuleMatchCriteria,
