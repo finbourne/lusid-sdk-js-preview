@@ -465,6 +465,9 @@ export * from './instrumentDeleteModes';
 export * from './instrumentEvent';
 export * from './instrumentEventConfiguration';
 export * from './instrumentEventHolder';
+export * from './instrumentEventInstruction';
+export * from './instrumentEventInstructionRequest';
+export * from './instrumentEventInstructionsResponse';
 export * from './instrumentEventType';
 export * from './instrumentIdTypeDescriptor';
 export * from './instrumentIdValue';
@@ -1564,6 +1567,9 @@ import { InstrumentDeleteModes } from './instrumentDeleteModes';
 import { InstrumentEvent } from './instrumentEvent';
 import { InstrumentEventConfiguration } from './instrumentEventConfiguration';
 import { InstrumentEventHolder } from './instrumentEventHolder';
+import { InstrumentEventInstruction } from './instrumentEventInstruction';
+import { InstrumentEventInstructionRequest } from './instrumentEventInstructionRequest';
+import { InstrumentEventInstructionsResponse } from './instrumentEventInstructionsResponse';
 import { InstrumentEventType } from './instrumentEventType';
 import { InstrumentIdTypeDescriptor } from './instrumentIdTypeDescriptor';
 import { InstrumentIdValue } from './instrumentIdValue';
@@ -3092,6 +3098,9 @@ let typeMap: {[index: string]: any} = {
     "InstrumentEvent": InstrumentEvent,
     "InstrumentEventConfiguration": InstrumentEventConfiguration,
     "InstrumentEventHolder": InstrumentEventHolder,
+    "InstrumentEventInstruction": InstrumentEventInstruction,
+    "InstrumentEventInstructionRequest": InstrumentEventInstructionRequest,
+    "InstrumentEventInstructionsResponse": InstrumentEventInstructionsResponse,
     "InstrumentIdTypeDescriptor": InstrumentIdTypeDescriptor,
     "InstrumentIdValue": InstrumentIdValue,
     "InstrumentLeg": InstrumentLeg,
