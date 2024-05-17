@@ -60,6 +60,7 @@ export * from './amortisationRuleSet';
 export * from './annulQuotesResponse';
 export * from './annulSingleStructuredDataResponse';
 export * from './annulStructuredDataResponse';
+export * from './applicableInstrumentEvent';
 export * from './assetClass';
 export * from './assetLeg';
 export * from './barrier';
@@ -333,6 +334,7 @@ export * from './exoticInstrumentAllOf';
 export * from './expandedGroup';
 export * from './expiryEvent';
 export * from './expiryEventAllOf';
+export * from './feeAccrual';
 export * from './feeRule';
 export * from './feeRuleUpsertRequest';
 export * from './feeRuleUpsertResponse';
@@ -623,6 +625,7 @@ export * from './pagedResourceListOfFund';
 export * from './pagedResourceListOfGeneralLedgerProfileResponse';
 export * from './pagedResourceListOfInstrument';
 export * from './pagedResourceListOfInstrumentEventHolder';
+export * from './pagedResourceListOfInstrumentEventInstruction';
 export * from './pagedResourceListOfLegalEntity';
 export * from './pagedResourceListOfOrder';
 export * from './pagedResourceListOfOrderGraphBlock';
@@ -722,6 +725,7 @@ export * from './propertyValueEquals';
 export * from './propertyValueEqualsAllOf';
 export * from './propertyValueIn';
 export * from './propertyValueInAllOf';
+export * from './queryApplicableInstrumentEventsRequest';
 export * from './queryBucketedCashFlowsRequest';
 export * from './queryCashFlowsRequest';
 export * from './queryInstrumentEventsRequest';
@@ -791,6 +795,7 @@ export * from './resourceListOfAddressKeyDefinition';
 export * from './resourceListOfAggregatedReturn';
 export * from './resourceListOfAggregationQuery';
 export * from './resourceListOfAllocation';
+export * from './resourceListOfApplicableInstrumentEvent';
 export * from './resourceListOfBlock';
 export * from './resourceListOfBlockAndOrders';
 export * from './resourceListOfCalendarDate';
@@ -1164,6 +1169,7 @@ import { AmortisationRuleSet } from './amortisationRuleSet';
 import { AnnulQuotesResponse } from './annulQuotesResponse';
 import { AnnulSingleStructuredDataResponse } from './annulSingleStructuredDataResponse';
 import { AnnulStructuredDataResponse } from './annulStructuredDataResponse';
+import { ApplicableInstrumentEvent } from './applicableInstrumentEvent';
 import { AssetClass } from './assetClass';
 import { AssetLeg } from './assetLeg';
 import { Barrier } from './barrier';
@@ -1437,6 +1443,7 @@ import { ExoticInstrumentAllOf } from './exoticInstrumentAllOf';
 import { ExpandedGroup } from './expandedGroup';
 import { ExpiryEvent } from './expiryEvent';
 import { ExpiryEventAllOf } from './expiryEventAllOf';
+import { FeeAccrual } from './feeAccrual';
 import { FeeRule } from './feeRule';
 import { FeeRuleUpsertRequest } from './feeRuleUpsertRequest';
 import { FeeRuleUpsertResponse } from './feeRuleUpsertResponse';
@@ -1727,6 +1734,7 @@ import { PagedResourceListOfFund } from './pagedResourceListOfFund';
 import { PagedResourceListOfGeneralLedgerProfileResponse } from './pagedResourceListOfGeneralLedgerProfileResponse';
 import { PagedResourceListOfInstrument } from './pagedResourceListOfInstrument';
 import { PagedResourceListOfInstrumentEventHolder } from './pagedResourceListOfInstrumentEventHolder';
+import { PagedResourceListOfInstrumentEventInstruction } from './pagedResourceListOfInstrumentEventInstruction';
 import { PagedResourceListOfLegalEntity } from './pagedResourceListOfLegalEntity';
 import { PagedResourceListOfOrder } from './pagedResourceListOfOrder';
 import { PagedResourceListOfOrderGraphBlock } from './pagedResourceListOfOrderGraphBlock';
@@ -1826,6 +1834,7 @@ import { PropertyValueEquals } from './propertyValueEquals';
 import { PropertyValueEqualsAllOf } from './propertyValueEqualsAllOf';
 import { PropertyValueIn } from './propertyValueIn';
 import { PropertyValueInAllOf } from './propertyValueInAllOf';
+import { QueryApplicableInstrumentEventsRequest } from './queryApplicableInstrumentEventsRequest';
 import { QueryBucketedCashFlowsRequest } from './queryBucketedCashFlowsRequest';
 import { QueryCashFlowsRequest } from './queryCashFlowsRequest';
 import { QueryInstrumentEventsRequest } from './queryInstrumentEventsRequest';
@@ -1895,6 +1904,7 @@ import { ResourceListOfAddressKeyDefinition } from './resourceListOfAddressKeyDe
 import { ResourceListOfAggregatedReturn } from './resourceListOfAggregatedReturn';
 import { ResourceListOfAggregationQuery } from './resourceListOfAggregationQuery';
 import { ResourceListOfAllocation } from './resourceListOfAllocation';
+import { ResourceListOfApplicableInstrumentEvent } from './resourceListOfApplicableInstrumentEvent';
 import { ResourceListOfBlock } from './resourceListOfBlock';
 import { ResourceListOfBlockAndOrders } from './resourceListOfBlockAndOrders';
 import { ResourceListOfCalendarDate } from './resourceListOfCalendarDate';
@@ -2711,6 +2721,7 @@ let typeMap: {[index: string]: any} = {
     "AnnulQuotesResponse": AnnulQuotesResponse,
     "AnnulSingleStructuredDataResponse": AnnulSingleStructuredDataResponse,
     "AnnulStructuredDataResponse": AnnulStructuredDataResponse,
+    "ApplicableInstrumentEvent": ApplicableInstrumentEvent,
     "AssetLeg": AssetLeg,
     "Barrier": Barrier,
     "Basket": Basket,
@@ -2973,6 +2984,7 @@ let typeMap: {[index: string]: any} = {
     "ExpandedGroup": ExpandedGroup,
     "ExpiryEvent": ExpiryEvent,
     "ExpiryEventAllOf": ExpiryEventAllOf,
+    "FeeAccrual": FeeAccrual,
     "FeeRule": FeeRule,
     "FeeRuleUpsertRequest": FeeRuleUpsertRequest,
     "FeeRuleUpsertResponse": FeeRuleUpsertResponse,
@@ -3251,6 +3263,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfGeneralLedgerProfileResponse": PagedResourceListOfGeneralLedgerProfileResponse,
     "PagedResourceListOfInstrument": PagedResourceListOfInstrument,
     "PagedResourceListOfInstrumentEventHolder": PagedResourceListOfInstrumentEventHolder,
+    "PagedResourceListOfInstrumentEventInstruction": PagedResourceListOfInstrumentEventInstruction,
     "PagedResourceListOfLegalEntity": PagedResourceListOfLegalEntity,
     "PagedResourceListOfOrder": PagedResourceListOfOrder,
     "PagedResourceListOfOrderGraphBlock": PagedResourceListOfOrderGraphBlock,
@@ -3342,6 +3355,7 @@ let typeMap: {[index: string]: any} = {
     "PropertyValueEqualsAllOf": PropertyValueEqualsAllOf,
     "PropertyValueIn": PropertyValueIn,
     "PropertyValueInAllOf": PropertyValueInAllOf,
+    "QueryApplicableInstrumentEventsRequest": QueryApplicableInstrumentEventsRequest,
     "QueryBucketedCashFlowsRequest": QueryBucketedCashFlowsRequest,
     "QueryCashFlowsRequest": QueryCashFlowsRequest,
     "QueryInstrumentEventsRequest": QueryInstrumentEventsRequest,
@@ -3406,6 +3420,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfAggregatedReturn": ResourceListOfAggregatedReturn,
     "ResourceListOfAggregationQuery": ResourceListOfAggregationQuery,
     "ResourceListOfAllocation": ResourceListOfAllocation,
+    "ResourceListOfApplicableInstrumentEvent": ResourceListOfApplicableInstrumentEvent,
     "ResourceListOfBlock": ResourceListOfBlock,
     "ResourceListOfBlockAndOrders": ResourceListOfBlockAndOrders,
     "ResourceListOfCalendarDate": ResourceListOfCalendarDate,
