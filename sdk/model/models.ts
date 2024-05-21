@@ -344,6 +344,8 @@ export * from './feeAccrual';
 export * from './feeRule';
 export * from './feeRuleUpsertRequest';
 export * from './feeRuleUpsertResponse';
+export * from './feeType';
+export * from './feeTypeRequest';
 export * from './fieldDefinition';
 export * from './fieldSchema';
 export * from './fieldValue';
@@ -627,6 +629,7 @@ export * from './pagedResourceListOfDataTypeSummary';
 export * from './pagedResourceListOfDialectId';
 export * from './pagedResourceListOfDiaryEntry';
 export * from './pagedResourceListOfExecution';
+export * from './pagedResourceListOfFeeType';
 export * from './pagedResourceListOfFund';
 export * from './pagedResourceListOfGeneralLedgerProfileResponse';
 export * from './pagedResourceListOfInstrument';
@@ -889,6 +892,7 @@ export * from './reverseStockSplitEventAllOf';
 export * from './roundingConfiguration';
 export * from './roundingConfigurationComponent';
 export * from './roundingConvention';
+export * from './rulesInterval';
 export * from './scalingMethodology';
 export * from './schedule';
 export * from './scheduleType';
@@ -899,6 +903,7 @@ export * from './scripDividendEventAllOf';
 export * from './scriptMapReference';
 export * from './securityElection';
 export * from './sequenceDefinition';
+export * from './setAmortisationRulesRequest';
 export * from './setLegalEntityIdentifiersRequest';
 export * from './setLegalEntityPropertiesRequest';
 export * from './setPersonIdentifiersRequest';
@@ -1018,6 +1023,7 @@ export * from './updateCustomEntityTypeRequest';
 export * from './updateCutLabelDefinitionRequest';
 export * from './updateDataTypeRequest';
 export * from './updateDerivedPropertyDefinitionRequest';
+export * from './updateFeeTypeRequest';
 export * from './updateInstrumentIdentifierRequest';
 export * from './updatePortfolioGroupRequest';
 export * from './updatePortfolioRequest';
@@ -1460,6 +1466,8 @@ import { FeeAccrual } from './feeAccrual';
 import { FeeRule } from './feeRule';
 import { FeeRuleUpsertRequest } from './feeRuleUpsertRequest';
 import { FeeRuleUpsertResponse } from './feeRuleUpsertResponse';
+import { FeeType } from './feeType';
+import { FeeTypeRequest } from './feeTypeRequest';
 import { FieldDefinition } from './fieldDefinition';
 import { FieldSchema } from './fieldSchema';
 import { FieldValue } from './fieldValue';
@@ -1743,6 +1751,7 @@ import { PagedResourceListOfDataTypeSummary } from './pagedResourceListOfDataTyp
 import { PagedResourceListOfDialectId } from './pagedResourceListOfDialectId';
 import { PagedResourceListOfDiaryEntry } from './pagedResourceListOfDiaryEntry';
 import { PagedResourceListOfExecution } from './pagedResourceListOfExecution';
+import { PagedResourceListOfFeeType } from './pagedResourceListOfFeeType';
 import { PagedResourceListOfFund } from './pagedResourceListOfFund';
 import { PagedResourceListOfGeneralLedgerProfileResponse } from './pagedResourceListOfGeneralLedgerProfileResponse';
 import { PagedResourceListOfInstrument } from './pagedResourceListOfInstrument';
@@ -2005,6 +2014,7 @@ import { ReverseStockSplitEventAllOf } from './reverseStockSplitEventAllOf';
 import { RoundingConfiguration } from './roundingConfiguration';
 import { RoundingConfigurationComponent } from './roundingConfigurationComponent';
 import { RoundingConvention } from './roundingConvention';
+import { RulesInterval } from './rulesInterval';
 import { ScalingMethodology } from './scalingMethodology';
 import { Schedule } from './schedule';
 import { ScheduleType } from './scheduleType';
@@ -2015,6 +2025,7 @@ import { ScripDividendEventAllOf } from './scripDividendEventAllOf';
 import { ScriptMapReference } from './scriptMapReference';
 import { SecurityElection } from './securityElection';
 import { SequenceDefinition } from './sequenceDefinition';
+import { SetAmortisationRulesRequest } from './setAmortisationRulesRequest';
 import { SetLegalEntityIdentifiersRequest } from './setLegalEntityIdentifiersRequest';
 import { SetLegalEntityPropertiesRequest } from './setLegalEntityPropertiesRequest';
 import { SetPersonIdentifiersRequest } from './setPersonIdentifiersRequest';
@@ -2134,6 +2145,7 @@ import { UpdateCustomEntityTypeRequest } from './updateCustomEntityTypeRequest';
 import { UpdateCutLabelDefinitionRequest } from './updateCutLabelDefinitionRequest';
 import { UpdateDataTypeRequest } from './updateDataTypeRequest';
 import { UpdateDerivedPropertyDefinitionRequest } from './updateDerivedPropertyDefinitionRequest';
+import { UpdateFeeTypeRequest } from './updateFeeTypeRequest';
 import { UpdateInstrumentIdentifierRequest } from './updateInstrumentIdentifierRequest';
 import { UpdatePortfolioGroupRequest } from './updatePortfolioGroupRequest';
 import { UpdatePortfolioRequest } from './updatePortfolioRequest';
@@ -3009,6 +3021,8 @@ let typeMap: {[index: string]: any} = {
     "FeeRule": FeeRule,
     "FeeRuleUpsertRequest": FeeRuleUpsertRequest,
     "FeeRuleUpsertResponse": FeeRuleUpsertResponse,
+    "FeeType": FeeType,
+    "FeeTypeRequest": FeeTypeRequest,
     "FieldDefinition": FieldDefinition,
     "FieldSchema": FieldSchema,
     "FieldValue": FieldValue,
@@ -3280,6 +3294,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfDialectId": PagedResourceListOfDialectId,
     "PagedResourceListOfDiaryEntry": PagedResourceListOfDiaryEntry,
     "PagedResourceListOfExecution": PagedResourceListOfExecution,
+    "PagedResourceListOfFeeType": PagedResourceListOfFeeType,
     "PagedResourceListOfFund": PagedResourceListOfFund,
     "PagedResourceListOfGeneralLedgerProfileResponse": PagedResourceListOfGeneralLedgerProfileResponse,
     "PagedResourceListOfInstrument": PagedResourceListOfInstrument,
@@ -3527,6 +3542,7 @@ let typeMap: {[index: string]: any} = {
     "RoundingConfiguration": RoundingConfiguration,
     "RoundingConfigurationComponent": RoundingConfigurationComponent,
     "RoundingConvention": RoundingConvention,
+    "RulesInterval": RulesInterval,
     "Schedule": Schedule,
     "Schema": Schema,
     "ScopeDefinition": ScopeDefinition,
@@ -3535,6 +3551,7 @@ let typeMap: {[index: string]: any} = {
     "ScriptMapReference": ScriptMapReference,
     "SecurityElection": SecurityElection,
     "SequenceDefinition": SequenceDefinition,
+    "SetAmortisationRulesRequest": SetAmortisationRulesRequest,
     "SetLegalEntityIdentifiersRequest": SetLegalEntityIdentifiersRequest,
     "SetLegalEntityPropertiesRequest": SetLegalEntityPropertiesRequest,
     "SetPersonIdentifiersRequest": SetPersonIdentifiersRequest,
@@ -3645,6 +3662,7 @@ let typeMap: {[index: string]: any} = {
     "UpdateCutLabelDefinitionRequest": UpdateCutLabelDefinitionRequest,
     "UpdateDataTypeRequest": UpdateDataTypeRequest,
     "UpdateDerivedPropertyDefinitionRequest": UpdateDerivedPropertyDefinitionRequest,
+    "UpdateFeeTypeRequest": UpdateFeeTypeRequest,
     "UpdateInstrumentIdentifierRequest": UpdateInstrumentIdentifierRequest,
     "UpdatePortfolioGroupRequest": UpdatePortfolioGroupRequest,
     "UpdatePortfolioRequest": UpdatePortfolioRequest,
