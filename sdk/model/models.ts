@@ -911,6 +911,7 @@ export * from './setPersonPropertiesRequest';
 export * from './setShareClassInstrumentsRequest';
 export * from './setTransactionConfigurationAlias';
 export * from './setTransactionConfigurationSourceRequest';
+export * from './settlementSchedule';
 export * from './sideConfigurationData';
 export * from './sideConfigurationDataRequest';
 export * from './sideDefinition';
@@ -2033,6 +2034,7 @@ import { SetPersonPropertiesRequest } from './setPersonPropertiesRequest';
 import { SetShareClassInstrumentsRequest } from './setShareClassInstrumentsRequest';
 import { SetTransactionConfigurationAlias } from './setTransactionConfigurationAlias';
 import { SetTransactionConfigurationSourceRequest } from './setTransactionConfigurationSourceRequest';
+import { SettlementSchedule } from './settlementSchedule';
 import { SideConfigurationData } from './sideConfigurationData';
 import { SideConfigurationDataRequest } from './sideConfigurationDataRequest';
 import { SideDefinition } from './sideDefinition';
@@ -3559,6 +3561,7 @@ let typeMap: {[index: string]: any} = {
     "SetShareClassInstrumentsRequest": SetShareClassInstrumentsRequest,
     "SetTransactionConfigurationAlias": SetTransactionConfigurationAlias,
     "SetTransactionConfigurationSourceRequest": SetTransactionConfigurationSourceRequest,
+    "SettlementSchedule": SettlementSchedule,
     "SideConfigurationData": SideConfigurationData,
     "SideConfigurationDataRequest": SideConfigurationDataRequest,
     "SideDefinition": SideDefinition,
