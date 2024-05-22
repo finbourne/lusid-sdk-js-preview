@@ -94,6 +94,8 @@ export * from './boolComplianceParameterAllOf';
 export * from './boolListComplianceParameter';
 export * from './branchStep';
 export * from './branchStepAllOf';
+export * from './branchStepRequest';
+export * from './branchStepRequestAllOf';
 export * from './bucketedCashFlowRequest';
 export * from './bucketedCashFlowResponse';
 export * from './bucketingSchedule';
@@ -134,6 +136,7 @@ export * from './chartOfAccountsProperties';
 export * from './chartOfAccountsRequest';
 export * from './checkStep';
 export * from './checkStepAllOf';
+export * from './checkStepRequest';
 export * from './cleardownModuleDetails';
 export * from './cleardownModuleRequest';
 export * from './cleardownModuleResponse';
@@ -353,6 +356,7 @@ export * from './fileResponse';
 export * from './filterPredicateComplianceParameter';
 export * from './filterPredicateComplianceParameterAllOf';
 export * from './filterStep';
+export * from './filterStepRequest';
 export * from './fixedLeg';
 export * from './fixedLegAllOf';
 export * from './fixedLegAllOfOverrides';
@@ -433,8 +437,10 @@ export * from './getStructuredResultDataResponse';
 export * from './getVirtualDocumentResponse';
 export * from './groupBySelectorComplianceParameter';
 export * from './groupByStep';
+export * from './groupByStepRequest';
 export * from './groupFilterPredicateComplianceParameter';
 export * from './groupFilterStep';
+export * from './groupFilterStepRequest';
 export * from './groupOfMarketDataKeyRules';
 export * from './groupedResultOfAddressKey';
 export * from './holdingAdjustment';
@@ -503,6 +509,7 @@ export * from './interestRateSwaption';
 export * from './interestRateSwaptionAllOf';
 export * from './intermediateComplianceStep';
 export * from './intermediateComplianceStepAllOf';
+export * from './intermediateComplianceStepRequest';
 export * from './irVolCubeData';
 export * from './irVolCubeDataAllOf';
 export * from './irVolDependency';
@@ -1217,6 +1224,8 @@ import { BoolComplianceParameterAllOf } from './boolComplianceParameterAllOf';
 import { BoolListComplianceParameter } from './boolListComplianceParameter';
 import { BranchStep } from './branchStep';
 import { BranchStepAllOf } from './branchStepAllOf';
+import { BranchStepRequest } from './branchStepRequest';
+import { BranchStepRequestAllOf } from './branchStepRequestAllOf';
 import { BucketedCashFlowRequest } from './bucketedCashFlowRequest';
 import { BucketedCashFlowResponse } from './bucketedCashFlowResponse';
 import { BucketingSchedule } from './bucketingSchedule';
@@ -1257,6 +1266,7 @@ import { ChartOfAccountsProperties } from './chartOfAccountsProperties';
 import { ChartOfAccountsRequest } from './chartOfAccountsRequest';
 import { CheckStep } from './checkStep';
 import { CheckStepAllOf } from './checkStepAllOf';
+import { CheckStepRequest } from './checkStepRequest';
 import { CleardownModuleDetails } from './cleardownModuleDetails';
 import { CleardownModuleRequest } from './cleardownModuleRequest';
 import { CleardownModuleResponse } from './cleardownModuleResponse';
@@ -1476,6 +1486,7 @@ import { FileResponse } from './fileResponse';
 import { FilterPredicateComplianceParameter } from './filterPredicateComplianceParameter';
 import { FilterPredicateComplianceParameterAllOf } from './filterPredicateComplianceParameterAllOf';
 import { FilterStep } from './filterStep';
+import { FilterStepRequest } from './filterStepRequest';
 import { FixedLeg } from './fixedLeg';
 import { FixedLegAllOf } from './fixedLegAllOf';
 import { FixedLegAllOfOverrides } from './fixedLegAllOfOverrides';
@@ -1556,8 +1567,10 @@ import { GetStructuredResultDataResponse } from './getStructuredResultDataRespon
 import { GetVirtualDocumentResponse } from './getVirtualDocumentResponse';
 import { GroupBySelectorComplianceParameter } from './groupBySelectorComplianceParameter';
 import { GroupByStep } from './groupByStep';
+import { GroupByStepRequest } from './groupByStepRequest';
 import { GroupFilterPredicateComplianceParameter } from './groupFilterPredicateComplianceParameter';
 import { GroupFilterStep } from './groupFilterStep';
+import { GroupFilterStepRequest } from './groupFilterStepRequest';
 import { GroupOfMarketDataKeyRules } from './groupOfMarketDataKeyRules';
 import { GroupedResultOfAddressKey } from './groupedResultOfAddressKey';
 import { HoldingAdjustment } from './holdingAdjustment';
@@ -1626,6 +1639,7 @@ import { InterestRateSwaption } from './interestRateSwaption';
 import { InterestRateSwaptionAllOf } from './interestRateSwaptionAllOf';
 import { IntermediateComplianceStep } from './intermediateComplianceStep';
 import { IntermediateComplianceStepAllOf } from './intermediateComplianceStepAllOf';
+import { IntermediateComplianceStepRequest } from './intermediateComplianceStepRequest';
 import { IrVolCubeData } from './irVolCubeData';
 import { IrVolCubeDataAllOf } from './irVolCubeDataAllOf';
 import { IrVolDependency } from './irVolDependency';
@@ -2281,6 +2295,8 @@ let enumsMap: {[index: string]: any} = {
         "BoolListComplianceParameter.ComplianceParameterTypeEnum": BoolListComplianceParameter.ComplianceParameterTypeEnum,
         "BranchStep.ComplianceStepTypeEnum": BranchStep.ComplianceStepTypeEnum,
         "BranchStepAllOf.ComplianceStepTypeEnum": BranchStepAllOf.ComplianceStepTypeEnum,
+        "BranchStepRequest.ComplianceStepTypeRequestEnum": BranchStepRequest.ComplianceStepTypeRequestEnum,
+        "BranchStepRequestAllOf.ComplianceStepTypeRequestEnum": BranchStepRequestAllOf.ComplianceStepTypeRequestEnum,
         "CalendarDependency.DependencyTypeEnum": CalendarDependency.DependencyTypeEnum,
         "CalendarDependencyAllOf.DependencyTypeEnum": CalendarDependencyAllOf.DependencyTypeEnum,
         "CapFloor.InstrumentTypeEnum": CapFloor.InstrumentTypeEnum,
@@ -2305,6 +2321,7 @@ let enumsMap: {[index: string]: any} = {
         "ChangeHistoryAction": ChangeHistoryAction,
         "CheckStep.ComplianceStepTypeEnum": CheckStep.ComplianceStepTypeEnum,
         "CheckStepAllOf.ComplianceStepTypeEnum": CheckStepAllOf.ComplianceStepTypeEnum,
+        "CheckStepRequest.ComplianceStepTypeRequestEnum": CheckStepRequest.ComplianceStepTypeRequestEnum,
         "CloseEvent.InstrumentEventTypeEnum": CloseEvent.InstrumentEventTypeEnum,
         "CloseEventAllOf.InstrumentEventTypeEnum": CloseEventAllOf.InstrumentEventTypeEnum,
         "CompletePortfolio.TypeEnum": CompletePortfolio.TypeEnum,
@@ -2314,7 +2331,7 @@ let enumsMap: {[index: string]: any} = {
         "ComplianceParameter.ComplianceParameterTypeEnum": ComplianceParameter.ComplianceParameterTypeEnum,
         "ComplianceParameterType": ComplianceParameterType,
         "ComplianceStep.ComplianceStepTypeEnum": ComplianceStep.ComplianceStepTypeEnum,
-        "ComplianceStepRequest.ComplianceStepTypeEnum": ComplianceStepRequest.ComplianceStepTypeEnum,
+        "ComplianceStepRequest.ComplianceStepTypeRequestEnum": ComplianceStepRequest.ComplianceStepTypeRequestEnum,
         "ComplianceStepType": ComplianceStepType,
         "ComplianceStepTypeRequest": ComplianceStepTypeRequest,
         "ConstantVolatilitySurface.MarketDataTypeEnum": ConstantVolatilitySurface.MarketDataTypeEnum,
@@ -2395,6 +2412,7 @@ let enumsMap: {[index: string]: any} = {
         "FilterPredicateComplianceParameter.ComplianceParameterTypeEnum": FilterPredicateComplianceParameter.ComplianceParameterTypeEnum,
         "FilterPredicateComplianceParameterAllOf.ComplianceParameterTypeEnum": FilterPredicateComplianceParameterAllOf.ComplianceParameterTypeEnum,
         "FilterStep.ComplianceStepTypeEnum": FilterStep.ComplianceStepTypeEnum,
+        "FilterStepRequest.ComplianceStepTypeRequestEnum": FilterStepRequest.ComplianceStepTypeRequestEnum,
         "FixedLeg.InstrumentTypeEnum": FixedLeg.InstrumentTypeEnum,
         "FixedLegAllOf.InstrumentTypeEnum": FixedLegAllOf.InstrumentTypeEnum,
         "FixedSchedule.ScheduleTypeEnum": FixedSchedule.ScheduleTypeEnum,
@@ -2454,8 +2472,10 @@ let enumsMap: {[index: string]: any} = {
         "GetReferencePortfolioConstituentsResponse.PeriodTypeEnum": GetReferencePortfolioConstituentsResponse.PeriodTypeEnum,
         "GroupBySelectorComplianceParameter.ComplianceParameterTypeEnum": GroupBySelectorComplianceParameter.ComplianceParameterTypeEnum,
         "GroupByStep.ComplianceStepTypeEnum": GroupByStep.ComplianceStepTypeEnum,
+        "GroupByStepRequest.ComplianceStepTypeRequestEnum": GroupByStepRequest.ComplianceStepTypeRequestEnum,
         "GroupFilterPredicateComplianceParameter.ComplianceParameterTypeEnum": GroupFilterPredicateComplianceParameter.ComplianceParameterTypeEnum,
         "GroupFilterStep.ComplianceStepTypeEnum": GroupFilterStep.ComplianceStepTypeEnum,
+        "GroupFilterStepRequest.ComplianceStepTypeRequestEnum": GroupFilterStepRequest.ComplianceStepTypeRequestEnum,
         "HoldingsAdjustment.UnmatchedHoldingMethodEnum": HoldingsAdjustment.UnmatchedHoldingMethodEnum,
         "HoldingsAdjustmentHeader.UnmatchedHoldingMethodEnum": HoldingsAdjustmentHeader.UnmatchedHoldingMethodEnum,
         "IUnitDefinitionDto.SchemaEnum": IUnitDefinitionDto.SchemaEnum,
@@ -2494,6 +2514,7 @@ let enumsMap: {[index: string]: any} = {
         "InterestRateSwaptionAllOf.InstrumentTypeEnum": InterestRateSwaptionAllOf.InstrumentTypeEnum,
         "IntermediateComplianceStep.ComplianceStepTypeEnum": IntermediateComplianceStep.ComplianceStepTypeEnum,
         "IntermediateComplianceStepAllOf.ComplianceStepTypeEnum": IntermediateComplianceStepAllOf.ComplianceStepTypeEnum,
+        "IntermediateComplianceStepRequest.ComplianceStepTypeRequestEnum": IntermediateComplianceStepRequest.ComplianceStepTypeRequestEnum,
         "IrVolCubeData.MarketDataTypeEnum": IrVolCubeData.MarketDataTypeEnum,
         "IrVolCubeDataAllOf.MarketDataTypeEnum": IrVolCubeDataAllOf.MarketDataTypeEnum,
         "IrVolDependency.DependencyTypeEnum": IrVolDependency.DependencyTypeEnum,
@@ -2784,6 +2805,8 @@ let typeMap: {[index: string]: any} = {
     "BoolListComplianceParameter": BoolListComplianceParameter,
     "BranchStep": BranchStep,
     "BranchStepAllOf": BranchStepAllOf,
+    "BranchStepRequest": BranchStepRequest,
+    "BranchStepRequestAllOf": BranchStepRequestAllOf,
     "BucketedCashFlowRequest": BucketedCashFlowRequest,
     "BucketedCashFlowResponse": BucketedCashFlowResponse,
     "BucketingSchedule": BucketingSchedule,
@@ -2823,6 +2846,7 @@ let typeMap: {[index: string]: any} = {
     "ChartOfAccountsRequest": ChartOfAccountsRequest,
     "CheckStep": CheckStep,
     "CheckStepAllOf": CheckStepAllOf,
+    "CheckStepRequest": CheckStepRequest,
     "CleardownModuleDetails": CleardownModuleDetails,
     "CleardownModuleRequest": CleardownModuleRequest,
     "CleardownModuleResponse": CleardownModuleResponse,
@@ -3032,6 +3056,7 @@ let typeMap: {[index: string]: any} = {
     "FilterPredicateComplianceParameter": FilterPredicateComplianceParameter,
     "FilterPredicateComplianceParameterAllOf": FilterPredicateComplianceParameterAllOf,
     "FilterStep": FilterStep,
+    "FilterStepRequest": FilterStepRequest,
     "FixedLeg": FixedLeg,
     "FixedLegAllOf": FixedLegAllOf,
     "FixedLegAllOfOverrides": FixedLegAllOfOverrides,
@@ -3112,8 +3137,10 @@ let typeMap: {[index: string]: any} = {
     "GetVirtualDocumentResponse": GetVirtualDocumentResponse,
     "GroupBySelectorComplianceParameter": GroupBySelectorComplianceParameter,
     "GroupByStep": GroupByStep,
+    "GroupByStepRequest": GroupByStepRequest,
     "GroupFilterPredicateComplianceParameter": GroupFilterPredicateComplianceParameter,
     "GroupFilterStep": GroupFilterStep,
+    "GroupFilterStepRequest": GroupFilterStepRequest,
     "GroupOfMarketDataKeyRules": GroupOfMarketDataKeyRules,
     "GroupedResultOfAddressKey": GroupedResultOfAddressKey,
     "HoldingAdjustment": HoldingAdjustment,
@@ -3179,6 +3206,7 @@ let typeMap: {[index: string]: any} = {
     "InterestRateSwaptionAllOf": InterestRateSwaptionAllOf,
     "IntermediateComplianceStep": IntermediateComplianceStep,
     "IntermediateComplianceStepAllOf": IntermediateComplianceStepAllOf,
+    "IntermediateComplianceStepRequest": IntermediateComplianceStepRequest,
     "IrVolCubeData": IrVolCubeData,
     "IrVolCubeDataAllOf": IrVolCubeDataAllOf,
     "IrVolDependency": IrVolDependency,
