@@ -563,6 +563,7 @@ export * from './moveOrdersToDifferentBlocksRequest';
 export * from './movedOrderToDifferentBlockResponse';
 export * from './movementType';
 export * from './multiCurrencyAmounts';
+export * from './newInstrument';
 export * from './nextValueInSequenceResponse';
 export * from './numericComparisonType';
 export * from './opaqueDependency';
@@ -932,6 +933,8 @@ export * from './simpleCashFlowLoanAllOf';
 export * from './simpleInstrument';
 export * from './simpleInstrumentAllOf';
 export * from './sortOrder';
+export * from './spinOffEvent';
+export * from './spinOffEventAllOf';
 export * from './stagedModification';
 export * from './stagedModificationDecision';
 export * from './stagedModificationDecisionRequest';
@@ -1696,6 +1699,7 @@ import { MoveOrdersToDifferentBlocksRequest } from './moveOrdersToDifferentBlock
 import { MovedOrderToDifferentBlockResponse } from './movedOrderToDifferentBlockResponse';
 import { MovementType } from './movementType';
 import { MultiCurrencyAmounts } from './multiCurrencyAmounts';
+import { NewInstrument } from './newInstrument';
 import { NextValueInSequenceResponse } from './nextValueInSequenceResponse';
 import { NumericComparisonType } from './numericComparisonType';
 import { OpaqueDependency } from './opaqueDependency';
@@ -2065,6 +2069,8 @@ import { SimpleCashFlowLoanAllOf } from './simpleCashFlowLoanAllOf';
 import { SimpleInstrument } from './simpleInstrument';
 import { SimpleInstrumentAllOf } from './simpleInstrumentAllOf';
 import { SortOrder } from './sortOrder';
+import { SpinOffEvent } from './spinOffEvent';
+import { SpinOffEventAllOf } from './spinOffEventAllOf';
 import { StagedModification } from './stagedModification';
 import { StagedModificationDecision } from './stagedModificationDecision';
 import { StagedModificationDecisionRequest } from './stagedModificationDecisionRequest';
@@ -2675,6 +2681,8 @@ let enumsMap: {[index: string]: any} = {
         "SimpleInstrumentAllOf.AssetClassEnum": SimpleInstrumentAllOf.AssetClassEnum,
         "SimpleInstrumentAllOf.InstrumentTypeEnum": SimpleInstrumentAllOf.InstrumentTypeEnum,
         "SortOrder": SortOrder,
+        "SpinOffEvent.InstrumentEventTypeEnum": SpinOffEvent.InstrumentEventTypeEnum,
+        "SpinOffEventAllOf.InstrumentEventTypeEnum": SpinOffEventAllOf.InstrumentEventTypeEnum,
         "StepSchedule.ScheduleTypeEnum": StepSchedule.ScheduleTypeEnum,
         "StepScheduleAllOf.ScheduleTypeEnum": StepScheduleAllOf.ScheduleTypeEnum,
         "StockDividendEvent.InstrumentEventTypeEnum": StockDividendEvent.InstrumentEventTypeEnum,
@@ -3261,6 +3269,7 @@ let typeMap: {[index: string]: any} = {
     "MoveOrdersToDifferentBlocksRequest": MoveOrdersToDifferentBlocksRequest,
     "MovedOrderToDifferentBlockResponse": MovedOrderToDifferentBlockResponse,
     "MultiCurrencyAmounts": MultiCurrencyAmounts,
+    "NewInstrument": NewInstrument,
     "NextValueInSequenceResponse": NextValueInSequenceResponse,
     "OpaqueDependency": OpaqueDependency,
     "OpaqueDependencyAllOf": OpaqueDependencyAllOf,
@@ -3608,6 +3617,8 @@ let typeMap: {[index: string]: any} = {
     "SimpleCashFlowLoanAllOf": SimpleCashFlowLoanAllOf,
     "SimpleInstrument": SimpleInstrument,
     "SimpleInstrumentAllOf": SimpleInstrumentAllOf,
+    "SpinOffEvent": SpinOffEvent,
+    "SpinOffEventAllOf": SpinOffEventAllOf,
     "StagedModification": StagedModification,
     "StagedModificationDecision": StagedModificationDecision,
     "StagedModificationDecisionRequest": StagedModificationDecisionRequest,
