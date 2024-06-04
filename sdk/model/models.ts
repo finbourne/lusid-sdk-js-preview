@@ -81,6 +81,9 @@ export * from './blockSetRequest';
 export * from './blockedOrderRequest';
 export * from './bond';
 export * from './bondAllOf';
+export * from './bondConversionEntry';
+export * from './bondConversionSchedule';
+export * from './bondConversionScheduleAllOf';
 export * from './bondCouponEvent';
 export * from './bondCouponEventAllOf';
 export * from './bondDefaultEvent';
@@ -1217,6 +1220,9 @@ import { BlockSetRequest } from './blockSetRequest';
 import { BlockedOrderRequest } from './blockedOrderRequest';
 import { Bond } from './bond';
 import { BondAllOf } from './bondAllOf';
+import { BondConversionEntry } from './bondConversionEntry';
+import { BondConversionSchedule } from './bondConversionSchedule';
+import { BondConversionScheduleAllOf } from './bondConversionScheduleAllOf';
 import { BondCouponEvent } from './bondCouponEvent';
 import { BondCouponEventAllOf } from './bondCouponEventAllOf';
 import { BondDefaultEvent } from './bondDefaultEvent';
@@ -2296,6 +2302,8 @@ let enumsMap: {[index: string]: any} = {
         "BasketAllOf.InstrumentTypeEnum": BasketAllOf.InstrumentTypeEnum,
         "Bond.InstrumentTypeEnum": Bond.InstrumentTypeEnum,
         "BondAllOf.InstrumentTypeEnum": BondAllOf.InstrumentTypeEnum,
+        "BondConversionSchedule.ScheduleTypeEnum": BondConversionSchedule.ScheduleTypeEnum,
+        "BondConversionScheduleAllOf.ScheduleTypeEnum": BondConversionScheduleAllOf.ScheduleTypeEnum,
         "BondCouponEvent.InstrumentEventTypeEnum": BondCouponEvent.InstrumentEventTypeEnum,
         "BondCouponEventAllOf.InstrumentEventTypeEnum": BondCouponEventAllOf.InstrumentEventTypeEnum,
         "BondDefaultEvent.InstrumentEventTypeEnum": BondDefaultEvent.InstrumentEventTypeEnum,
@@ -2806,6 +2814,9 @@ let typeMap: {[index: string]: any} = {
     "BlockedOrderRequest": BlockedOrderRequest,
     "Bond": Bond,
     "BondAllOf": BondAllOf,
+    "BondConversionEntry": BondConversionEntry,
+    "BondConversionSchedule": BondConversionSchedule,
+    "BondConversionScheduleAllOf": BondConversionScheduleAllOf,
     "BondCouponEvent": BondCouponEvent,
     "BondCouponEventAllOf": BondCouponEventAllOf,
     "BondDefaultEvent": BondDefaultEvent,
