@@ -350,6 +350,7 @@ export * from './expiryEvent';
 export * from './expiryEventAllOf';
 export * from './fee';
 export * from './feeAccrual';
+export * from './feeProperties';
 export * from './feeRequest';
 export * from './feeRule';
 export * from './feeRuleUpsertRequest';
@@ -1494,6 +1495,7 @@ import { ExpiryEvent } from './expiryEvent';
 import { ExpiryEventAllOf } from './expiryEventAllOf';
 import { Fee } from './fee';
 import { FeeAccrual } from './feeAccrual';
+import { FeeProperties } from './feeProperties';
 import { FeeRequest } from './feeRequest';
 import { FeeRule } from './feeRule';
 import { FeeRuleUpsertRequest } from './feeRuleUpsertRequest';
@@ -3084,6 +3086,7 @@ let typeMap: {[index: string]: any} = {
     "ExpiryEventAllOf": ExpiryEventAllOf,
     "Fee": Fee,
     "FeeAccrual": FeeAccrual,
+    "FeeProperties": FeeProperties,
     "FeeRequest": FeeRequest,
     "FeeRule": FeeRule,
     "FeeRuleUpsertRequest": FeeRuleUpsertRequest,
