@@ -448,6 +448,7 @@ export * from './groupByStep';
 export * from './groupByStepRequest';
 export * from './groupFilterPredicateComplianceParameter';
 export * from './groupFilterStep';
+export * from './groupFilterStepAllOf';
 export * from './groupFilterStepRequest';
 export * from './groupOfMarketDataKeyRules';
 export * from './groupedResultOfAddressKey';
@@ -1593,6 +1594,7 @@ import { GroupByStep } from './groupByStep';
 import { GroupByStepRequest } from './groupByStepRequest';
 import { GroupFilterPredicateComplianceParameter } from './groupFilterPredicateComplianceParameter';
 import { GroupFilterStep } from './groupFilterStep';
+import { GroupFilterStepAllOf } from './groupFilterStepAllOf';
 import { GroupFilterStepRequest } from './groupFilterStepRequest';
 import { GroupOfMarketDataKeyRules } from './groupOfMarketDataKeyRules';
 import { GroupedResultOfAddressKey } from './groupedResultOfAddressKey';
@@ -2507,6 +2509,7 @@ let enumsMap: {[index: string]: any} = {
         "GroupByStepRequest.ComplianceStepTypeRequestEnum": GroupByStepRequest.ComplianceStepTypeRequestEnum,
         "GroupFilterPredicateComplianceParameter.ComplianceParameterTypeEnum": GroupFilterPredicateComplianceParameter.ComplianceParameterTypeEnum,
         "GroupFilterStep.ComplianceStepTypeEnum": GroupFilterStep.ComplianceStepTypeEnum,
+        "GroupFilterStepAllOf.ComplianceStepTypeEnum": GroupFilterStepAllOf.ComplianceStepTypeEnum,
         "GroupFilterStepRequest.ComplianceStepTypeRequestEnum": GroupFilterStepRequest.ComplianceStepTypeRequestEnum,
         "HoldingsAdjustment.UnmatchedHoldingMethodEnum": HoldingsAdjustment.UnmatchedHoldingMethodEnum,
         "HoldingsAdjustmentHeader.UnmatchedHoldingMethodEnum": HoldingsAdjustmentHeader.UnmatchedHoldingMethodEnum,
@@ -3184,6 +3187,7 @@ let typeMap: {[index: string]: any} = {
     "GroupByStepRequest": GroupByStepRequest,
     "GroupFilterPredicateComplianceParameter": GroupFilterPredicateComplianceParameter,
     "GroupFilterStep": GroupFilterStep,
+    "GroupFilterStepAllOf": GroupFilterStepAllOf,
     "GroupFilterStepRequest": GroupFilterStepRequest,
     "GroupOfMarketDataKeyRules": GroupOfMarketDataKeyRules,
     "GroupedResultOfAddressKey": GroupedResultOfAddressKey,
