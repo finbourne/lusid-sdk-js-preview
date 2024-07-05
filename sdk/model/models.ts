@@ -699,6 +699,7 @@ export * from './placeBlocksRequest';
 export * from './placement';
 export * from './placementRequest';
 export * from './placementSetRequest';
+export * from './placementUpdateRequest';
 export * from './portfolio';
 export * from './portfolioCashFlow';
 export * from './portfolioCashLadder';
@@ -738,6 +739,7 @@ export * from './pricingOptions';
 export * from './processedCommand';
 export * from './property';
 export * from './propertyDefinition';
+export * from './propertyDefinitionEntity';
 export * from './propertyDefinitionSearchResult';
 export * from './propertyDefinitionType';
 export * from './propertyDomain';
@@ -1052,6 +1054,7 @@ export * from './updateDataTypeRequest';
 export * from './updateDerivedPropertyDefinitionRequest';
 export * from './updateFeeTypeRequest';
 export * from './updateInstrumentIdentifierRequest';
+export * from './updatePlacementsResponse';
 export * from './updatePortfolioGroupRequest';
 export * from './updatePortfolioRequest';
 export * from './updatePropertyDefinitionRequest';
@@ -1849,6 +1852,7 @@ import { PlaceBlocksRequest } from './placeBlocksRequest';
 import { Placement } from './placement';
 import { PlacementRequest } from './placementRequest';
 import { PlacementSetRequest } from './placementSetRequest';
+import { PlacementUpdateRequest } from './placementUpdateRequest';
 import { Portfolio } from './portfolio';
 import { PortfolioCashFlow } from './portfolioCashFlow';
 import { PortfolioCashLadder } from './portfolioCashLadder';
@@ -1888,6 +1892,7 @@ import { PricingOptions } from './pricingOptions';
 import { ProcessedCommand } from './processedCommand';
 import { Property } from './property';
 import { PropertyDefinition } from './propertyDefinition';
+import { PropertyDefinitionEntity } from './propertyDefinitionEntity';
 import { PropertyDefinitionSearchResult } from './propertyDefinitionSearchResult';
 import { PropertyDefinitionType } from './propertyDefinitionType';
 import { PropertyDomain } from './propertyDomain';
@@ -2202,6 +2207,7 @@ import { UpdateDataTypeRequest } from './updateDataTypeRequest';
 import { UpdateDerivedPropertyDefinitionRequest } from './updateDerivedPropertyDefinitionRequest';
 import { UpdateFeeTypeRequest } from './updateFeeTypeRequest';
 import { UpdateInstrumentIdentifierRequest } from './updateInstrumentIdentifierRequest';
+import { UpdatePlacementsResponse } from './updatePlacementsResponse';
 import { UpdatePortfolioGroupRequest } from './updatePortfolioGroupRequest';
 import { UpdatePortfolioRequest } from './updatePortfolioRequest';
 import { UpdatePropertyDefinitionRequest } from './updatePropertyDefinitionRequest';
@@ -3435,6 +3441,7 @@ let typeMap: {[index: string]: any} = {
     "Placement": Placement,
     "PlacementRequest": PlacementRequest,
     "PlacementSetRequest": PlacementSetRequest,
+    "PlacementUpdateRequest": PlacementUpdateRequest,
     "Portfolio": Portfolio,
     "PortfolioCashFlow": PortfolioCashFlow,
     "PortfolioCashLadder": PortfolioCashLadder,
@@ -3472,6 +3479,7 @@ let typeMap: {[index: string]: any} = {
     "ProcessedCommand": ProcessedCommand,
     "Property": Property,
     "PropertyDefinition": PropertyDefinition,
+    "PropertyDefinitionEntity": PropertyDefinitionEntity,
     "PropertyDefinitionSearchResult": PropertyDefinitionSearchResult,
     "PropertyFilter": PropertyFilter,
     "PropertyInterval": PropertyInterval,
@@ -3764,6 +3772,7 @@ let typeMap: {[index: string]: any} = {
     "UpdateDerivedPropertyDefinitionRequest": UpdateDerivedPropertyDefinitionRequest,
     "UpdateFeeTypeRequest": UpdateFeeTypeRequest,
     "UpdateInstrumentIdentifierRequest": UpdateInstrumentIdentifierRequest,
+    "UpdatePlacementsResponse": UpdatePlacementsResponse,
     "UpdatePortfolioGroupRequest": UpdatePortfolioGroupRequest,
     "UpdatePortfolioRequest": UpdatePortfolioRequest,
     "UpdatePropertyDefinitionRequest": UpdatePropertyDefinitionRequest,
