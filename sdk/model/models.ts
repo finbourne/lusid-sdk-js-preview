@@ -490,6 +490,7 @@ export * from './instrumentCashFlow';
 export * from './instrumentDefinition';
 export * from './instrumentDefinitionFormat';
 export * from './instrumentDeleteModes';
+export * from './instrumentEntity';
 export * from './instrumentEvent';
 export * from './instrumentEventConfiguration';
 export * from './instrumentEventHolder';
@@ -1643,6 +1644,7 @@ import { InstrumentCashFlow } from './instrumentCashFlow';
 import { InstrumentDefinition } from './instrumentDefinition';
 import { InstrumentDefinitionFormat } from './instrumentDefinitionFormat';
 import { InstrumentDeleteModes } from './instrumentDeleteModes';
+import { InstrumentEntity } from './instrumentEntity';
 import { InstrumentEvent } from './instrumentEvent';
 import { InstrumentEventConfiguration } from './instrumentEventConfiguration';
 import { InstrumentEventHolder } from './instrumentEventHolder';
@@ -3245,6 +3247,7 @@ let typeMap: {[index: string]: any} = {
     "InstrumentCashFlow": InstrumentCashFlow,
     "InstrumentDefinition": InstrumentDefinition,
     "InstrumentDefinitionFormat": InstrumentDefinitionFormat,
+    "InstrumentEntity": InstrumentEntity,
     "InstrumentEvent": InstrumentEvent,
     "InstrumentEventConfiguration": InstrumentEventConfiguration,
     "InstrumentEventHolder": InstrumentEventHolder,
