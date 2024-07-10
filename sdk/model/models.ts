@@ -355,6 +355,7 @@ export * from './feeRequest';
 export * from './feeRule';
 export * from './feeRuleUpsertRequest';
 export * from './feeRuleUpsertResponse';
+export * from './feeTransactionTemplateSpecification';
 export * from './feeType';
 export * from './feeTypeRequest';
 export * from './fieldDefinition';
@@ -1509,6 +1510,7 @@ import { FeeRequest } from './feeRequest';
 import { FeeRule } from './feeRule';
 import { FeeRuleUpsertRequest } from './feeRuleUpsertRequest';
 import { FeeRuleUpsertResponse } from './feeRuleUpsertResponse';
+import { FeeTransactionTemplateSpecification } from './feeTransactionTemplateSpecification';
 import { FeeType } from './feeType';
 import { FeeTypeRequest } from './feeTypeRequest';
 import { FieldDefinition } from './fieldDefinition';
@@ -3113,6 +3115,7 @@ let typeMap: {[index: string]: any} = {
     "FeeRule": FeeRule,
     "FeeRuleUpsertRequest": FeeRuleUpsertRequest,
     "FeeRuleUpsertResponse": FeeRuleUpsertResponse,
+    "FeeTransactionTemplateSpecification": FeeTransactionTemplateSpecification,
     "FeeType": FeeType,
     "FeeTypeRequest": FeeTypeRequest,
     "FieldDefinition": FieldDefinition,
