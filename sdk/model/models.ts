@@ -107,6 +107,8 @@ export * from './calendar';
 export * from './calendarDate';
 export * from './calendarDependency';
 export * from './calendarDependencyAllOf';
+export * from './cancelPlacementsResponse';
+export * from './cancelledPlacementResult';
 export * from './capFloor';
 export * from './capFloorAllOf';
 export * from './capitalDistributionEvent';
@@ -185,6 +187,7 @@ export * from './complianceTemplateParameter';
 export * from './complianceTemplateVariation';
 export * from './complianceTemplateVariationDto';
 export * from './complianceTemplateVariationRequest';
+export * from './componentRule';
 export * from './componentTransaction';
 export * from './compositeBreakdown';
 export * from './compositeBreakdownRequest';
@@ -383,6 +386,9 @@ export * from './forwardRateAgreement';
 export * from './forwardRateAgreementAllOf';
 export * from './fromRecipe';
 export * from './fund';
+export * from './fundConfiguration';
+export * from './fundConfigurationProperties';
+export * from './fundConfigurationRequest';
 export * from './fundProperties';
 export * from './fundRequest';
 export * from './fundShareClass';
@@ -393,6 +399,8 @@ export * from './fundingLegOptions';
 export * from './fundingLegOptionsAllOf';
 export * from './future';
 export * from './futureAllOf';
+export * from './futureExpiryEvent';
+export * from './futureExpiryEventAllOf';
 export * from './futuresContractDetails';
 export * from './fxConventions';
 export * from './fxDependency';
@@ -654,6 +662,7 @@ export * from './pagedResourceListOfExecution';
 export * from './pagedResourceListOfFee';
 export * from './pagedResourceListOfFeeType';
 export * from './pagedResourceListOfFund';
+export * from './pagedResourceListOfFundConfiguration';
 export * from './pagedResourceListOfGeneralLedgerProfileResponse';
 export * from './pagedResourceListOfInstrument';
 export * from './pagedResourceListOfInstrumentEventHolder';
@@ -1262,6 +1271,8 @@ import { Calendar } from './calendar';
 import { CalendarDate } from './calendarDate';
 import { CalendarDependency } from './calendarDependency';
 import { CalendarDependencyAllOf } from './calendarDependencyAllOf';
+import { CancelPlacementsResponse } from './cancelPlacementsResponse';
+import { CancelledPlacementResult } from './cancelledPlacementResult';
 import { CapFloor } from './capFloor';
 import { CapFloorAllOf } from './capFloorAllOf';
 import { CapitalDistributionEvent } from './capitalDistributionEvent';
@@ -1340,6 +1351,7 @@ import { ComplianceTemplateParameter } from './complianceTemplateParameter';
 import { ComplianceTemplateVariation } from './complianceTemplateVariation';
 import { ComplianceTemplateVariationDto } from './complianceTemplateVariationDto';
 import { ComplianceTemplateVariationRequest } from './complianceTemplateVariationRequest';
+import { ComponentRule } from './componentRule';
 import { ComponentTransaction } from './componentTransaction';
 import { CompositeBreakdown } from './compositeBreakdown';
 import { CompositeBreakdownRequest } from './compositeBreakdownRequest';
@@ -1538,6 +1550,9 @@ import { ForwardRateAgreement } from './forwardRateAgreement';
 import { ForwardRateAgreementAllOf } from './forwardRateAgreementAllOf';
 import { FromRecipe } from './fromRecipe';
 import { Fund } from './fund';
+import { FundConfiguration } from './fundConfiguration';
+import { FundConfigurationProperties } from './fundConfigurationProperties';
+import { FundConfigurationRequest } from './fundConfigurationRequest';
 import { FundProperties } from './fundProperties';
 import { FundRequest } from './fundRequest';
 import { FundShareClass } from './fundShareClass';
@@ -1548,6 +1563,8 @@ import { FundingLegOptions } from './fundingLegOptions';
 import { FundingLegOptionsAllOf } from './fundingLegOptionsAllOf';
 import { Future } from './future';
 import { FutureAllOf } from './futureAllOf';
+import { FutureExpiryEvent } from './futureExpiryEvent';
+import { FutureExpiryEventAllOf } from './futureExpiryEventAllOf';
 import { FuturesContractDetails } from './futuresContractDetails';
 import { FxConventions } from './fxConventions';
 import { FxDependency } from './fxDependency';
@@ -1809,6 +1826,7 @@ import { PagedResourceListOfExecution } from './pagedResourceListOfExecution';
 import { PagedResourceListOfFee } from './pagedResourceListOfFee';
 import { PagedResourceListOfFeeType } from './pagedResourceListOfFeeType';
 import { PagedResourceListOfFund } from './pagedResourceListOfFund';
+import { PagedResourceListOfFundConfiguration } from './pagedResourceListOfFundConfiguration';
 import { PagedResourceListOfGeneralLedgerProfileResponse } from './pagedResourceListOfGeneralLedgerProfileResponse';
 import { PagedResourceListOfInstrument } from './pagedResourceListOfInstrument';
 import { PagedResourceListOfInstrumentEventHolder } from './pagedResourceListOfInstrumentEventHolder';
@@ -2485,6 +2503,8 @@ let enumsMap: {[index: string]: any} = {
         "FundingLegOptionsAllOf.ModelOptionsTypeEnum": FundingLegOptionsAllOf.ModelOptionsTypeEnum,
         "Future.InstrumentTypeEnum": Future.InstrumentTypeEnum,
         "FutureAllOf.InstrumentTypeEnum": FutureAllOf.InstrumentTypeEnum,
+        "FutureExpiryEvent.InstrumentEventTypeEnum": FutureExpiryEvent.InstrumentEventTypeEnum,
+        "FutureExpiryEventAllOf.InstrumentEventTypeEnum": FutureExpiryEventAllOf.InstrumentEventTypeEnum,
         "FxDependency.DependencyTypeEnum": FxDependency.DependencyTypeEnum,
         "FxDependencyAllOf.DependencyTypeEnum": FxDependencyAllOf.DependencyTypeEnum,
         "FxForward.InstrumentTypeEnum": FxForward.InstrumentTypeEnum,
@@ -2878,6 +2898,8 @@ let typeMap: {[index: string]: any} = {
     "CalendarDate": CalendarDate,
     "CalendarDependency": CalendarDependency,
     "CalendarDependencyAllOf": CalendarDependencyAllOf,
+    "CancelPlacementsResponse": CancelPlacementsResponse,
+    "CancelledPlacementResult": CancelledPlacementResult,
     "CapFloor": CapFloor,
     "CapFloorAllOf": CapFloorAllOf,
     "CapitalDistributionEvent": CapitalDistributionEvent,
@@ -2952,6 +2974,7 @@ let typeMap: {[index: string]: any} = {
     "ComplianceTemplateVariation": ComplianceTemplateVariation,
     "ComplianceTemplateVariationDto": ComplianceTemplateVariationDto,
     "ComplianceTemplateVariationRequest": ComplianceTemplateVariationRequest,
+    "ComponentRule": ComponentRule,
     "ComponentTransaction": ComponentTransaction,
     "CompositeBreakdown": CompositeBreakdown,
     "CompositeBreakdownRequest": CompositeBreakdownRequest,
@@ -3143,6 +3166,9 @@ let typeMap: {[index: string]: any} = {
     "ForwardRateAgreementAllOf": ForwardRateAgreementAllOf,
     "FromRecipe": FromRecipe,
     "Fund": Fund,
+    "FundConfiguration": FundConfiguration,
+    "FundConfigurationProperties": FundConfigurationProperties,
+    "FundConfigurationRequest": FundConfigurationRequest,
     "FundProperties": FundProperties,
     "FundRequest": FundRequest,
     "FundShareClass": FundShareClass,
@@ -3153,6 +3179,8 @@ let typeMap: {[index: string]: any} = {
     "FundingLegOptionsAllOf": FundingLegOptionsAllOf,
     "Future": Future,
     "FutureAllOf": FutureAllOf,
+    "FutureExpiryEvent": FutureExpiryEvent,
+    "FutureExpiryEventAllOf": FutureExpiryEventAllOf,
     "FuturesContractDetails": FuturesContractDetails,
     "FxConventions": FxConventions,
     "FxDependency": FxDependency,
@@ -3402,6 +3430,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfFee": PagedResourceListOfFee,
     "PagedResourceListOfFeeType": PagedResourceListOfFeeType,
     "PagedResourceListOfFund": PagedResourceListOfFund,
+    "PagedResourceListOfFundConfiguration": PagedResourceListOfFundConfiguration,
     "PagedResourceListOfGeneralLedgerProfileResponse": PagedResourceListOfGeneralLedgerProfileResponse,
     "PagedResourceListOfInstrument": PagedResourceListOfInstrument,
     "PagedResourceListOfInstrumentEventHolder": PagedResourceListOfInstrumentEventHolder,
