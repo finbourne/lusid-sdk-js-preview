@@ -113,6 +113,8 @@ export * from './capFloor';
 export * from './capFloorAllOf';
 export * from './capitalDistributionEvent';
 export * from './capitalDistributionEventAllOf';
+export * from './cash';
+export * from './cashAllOf';
 export * from './cashAndSecurityOfferElection';
 export * from './cashDependency';
 export * from './cashDependencyAllOf';
@@ -187,6 +189,7 @@ export * from './complianceTemplateParameter';
 export * from './complianceTemplateVariation';
 export * from './complianceTemplateVariationDto';
 export * from './complianceTemplateVariationRequest';
+export * from './componentFilter';
 export * from './componentRule';
 export * from './componentTransaction';
 export * from './compositeBreakdown';
@@ -386,13 +389,16 @@ export * from './forwardRateAgreement';
 export * from './forwardRateAgreementAllOf';
 export * from './fromRecipe';
 export * from './fund';
+export * from './fundAmount';
 export * from './fundConfiguration';
 export * from './fundConfigurationProperties';
 export * from './fundConfigurationRequest';
+export * from './fundPreviousNAV';
 export * from './fundProperties';
 export * from './fundRequest';
 export * from './fundShareClass';
 export * from './fundShareClassAllOf';
+export * from './fundValuationPointData';
 export * from './fundingLeg';
 export * from './fundingLegAllOf';
 export * from './fundingLegOptions';
@@ -744,6 +750,9 @@ export * from './postingModuleResponse';
 export * from './postingModuleRule';
 export * from './postingModuleRulesUpdatedResponse';
 export * from './premium';
+export * from './previousFundValuationPointData';
+export * from './previousNAV';
+export * from './previousShareClassBreakdown';
 export * from './pricingContext';
 export * from './pricingModel';
 export * from './pricingOptions';
@@ -949,6 +958,10 @@ export * from './setShareClassInstrumentsRequest';
 export * from './setTransactionConfigurationAlias';
 export * from './setTransactionConfigurationSourceRequest';
 export * from './settlementSchedule';
+export * from './shareClassAmount';
+export * from './shareClassBreakdown';
+export * from './shareClassData';
+export * from './shareClassDetails';
 export * from './sideConfigurationData';
 export * from './sideConfigurationDataRequest';
 export * from './sideDefinition';
@@ -1053,6 +1066,7 @@ export * from './triggerEvent';
 export * from './triggerEventAllOf';
 export * from './typedResourceId';
 export * from './unitSchema';
+export * from './unitisationData';
 export * from './unitsRatio';
 export * from './unmatchedHoldingMethod';
 export * from './updateAmortisationRuleSetDetailsRequest';
@@ -1277,6 +1291,8 @@ import { CapFloor } from './capFloor';
 import { CapFloorAllOf } from './capFloorAllOf';
 import { CapitalDistributionEvent } from './capitalDistributionEvent';
 import { CapitalDistributionEventAllOf } from './capitalDistributionEventAllOf';
+import { Cash } from './cash';
+import { CashAllOf } from './cashAllOf';
 import { CashAndSecurityOfferElection } from './cashAndSecurityOfferElection';
 import { CashDependency } from './cashDependency';
 import { CashDependencyAllOf } from './cashDependencyAllOf';
@@ -1351,6 +1367,7 @@ import { ComplianceTemplateParameter } from './complianceTemplateParameter';
 import { ComplianceTemplateVariation } from './complianceTemplateVariation';
 import { ComplianceTemplateVariationDto } from './complianceTemplateVariationDto';
 import { ComplianceTemplateVariationRequest } from './complianceTemplateVariationRequest';
+import { ComponentFilter } from './componentFilter';
 import { ComponentRule } from './componentRule';
 import { ComponentTransaction } from './componentTransaction';
 import { CompositeBreakdown } from './compositeBreakdown';
@@ -1550,13 +1567,16 @@ import { ForwardRateAgreement } from './forwardRateAgreement';
 import { ForwardRateAgreementAllOf } from './forwardRateAgreementAllOf';
 import { FromRecipe } from './fromRecipe';
 import { Fund } from './fund';
+import { FundAmount } from './fundAmount';
 import { FundConfiguration } from './fundConfiguration';
 import { FundConfigurationProperties } from './fundConfigurationProperties';
 import { FundConfigurationRequest } from './fundConfigurationRequest';
+import { FundPreviousNAV } from './fundPreviousNAV';
 import { FundProperties } from './fundProperties';
 import { FundRequest } from './fundRequest';
 import { FundShareClass } from './fundShareClass';
 import { FundShareClassAllOf } from './fundShareClassAllOf';
+import { FundValuationPointData } from './fundValuationPointData';
 import { FundingLeg } from './fundingLeg';
 import { FundingLegAllOf } from './fundingLegAllOf';
 import { FundingLegOptions } from './fundingLegOptions';
@@ -1908,6 +1928,9 @@ import { PostingModuleResponse } from './postingModuleResponse';
 import { PostingModuleRule } from './postingModuleRule';
 import { PostingModuleRulesUpdatedResponse } from './postingModuleRulesUpdatedResponse';
 import { Premium } from './premium';
+import { PreviousFundValuationPointData } from './previousFundValuationPointData';
+import { PreviousNAV } from './previousNAV';
+import { PreviousShareClassBreakdown } from './previousShareClassBreakdown';
 import { PricingContext } from './pricingContext';
 import { PricingModel } from './pricingModel';
 import { PricingOptions } from './pricingOptions';
@@ -2113,6 +2136,10 @@ import { SetShareClassInstrumentsRequest } from './setShareClassInstrumentsReque
 import { SetTransactionConfigurationAlias } from './setTransactionConfigurationAlias';
 import { SetTransactionConfigurationSourceRequest } from './setTransactionConfigurationSourceRequest';
 import { SettlementSchedule } from './settlementSchedule';
+import { ShareClassAmount } from './shareClassAmount';
+import { ShareClassBreakdown } from './shareClassBreakdown';
+import { ShareClassData } from './shareClassData';
+import { ShareClassDetails } from './shareClassDetails';
 import { SideConfigurationData } from './sideConfigurationData';
 import { SideConfigurationDataRequest } from './sideConfigurationDataRequest';
 import { SideDefinition } from './sideDefinition';
@@ -2217,6 +2244,7 @@ import { TriggerEvent } from './triggerEvent';
 import { TriggerEventAllOf } from './triggerEventAllOf';
 import { TypedResourceId } from './typedResourceId';
 import { UnitSchema } from './unitSchema';
+import { UnitisationData } from './unitisationData';
 import { UnitsRatio } from './unitsRatio';
 import { UnmatchedHoldingMethod } from './unmatchedHoldingMethod';
 import { UpdateAmortisationRuleSetDetailsRequest } from './updateAmortisationRuleSetDetailsRequest';
@@ -2373,6 +2401,8 @@ let enumsMap: {[index: string]: any} = {
         "CapFloorAllOf.InstrumentTypeEnum": CapFloorAllOf.InstrumentTypeEnum,
         "CapitalDistributionEvent.InstrumentEventTypeEnum": CapitalDistributionEvent.InstrumentEventTypeEnum,
         "CapitalDistributionEventAllOf.InstrumentEventTypeEnum": CapitalDistributionEventAllOf.InstrumentEventTypeEnum,
+        "Cash.InstrumentTypeEnum": Cash.InstrumentTypeEnum,
+        "CashAllOf.InstrumentTypeEnum": CashAllOf.InstrumentTypeEnum,
         "CashDependency.DependencyTypeEnum": CashDependency.DependencyTypeEnum,
         "CashDependencyAllOf.DependencyTypeEnum": CashDependencyAllOf.DependencyTypeEnum,
         "CashDividendEvent.InstrumentEventTypeEnum": CashDividendEvent.InstrumentEventTypeEnum,
@@ -2904,6 +2934,8 @@ let typeMap: {[index: string]: any} = {
     "CapFloorAllOf": CapFloorAllOf,
     "CapitalDistributionEvent": CapitalDistributionEvent,
     "CapitalDistributionEventAllOf": CapitalDistributionEventAllOf,
+    "Cash": Cash,
+    "CashAllOf": CashAllOf,
     "CashAndSecurityOfferElection": CashAndSecurityOfferElection,
     "CashDependency": CashDependency,
     "CashDependencyAllOf": CashDependencyAllOf,
@@ -2974,6 +3006,7 @@ let typeMap: {[index: string]: any} = {
     "ComplianceTemplateVariation": ComplianceTemplateVariation,
     "ComplianceTemplateVariationDto": ComplianceTemplateVariationDto,
     "ComplianceTemplateVariationRequest": ComplianceTemplateVariationRequest,
+    "ComponentFilter": ComponentFilter,
     "ComponentRule": ComponentRule,
     "ComponentTransaction": ComponentTransaction,
     "CompositeBreakdown": CompositeBreakdown,
@@ -3166,13 +3199,16 @@ let typeMap: {[index: string]: any} = {
     "ForwardRateAgreementAllOf": ForwardRateAgreementAllOf,
     "FromRecipe": FromRecipe,
     "Fund": Fund,
+    "FundAmount": FundAmount,
     "FundConfiguration": FundConfiguration,
     "FundConfigurationProperties": FundConfigurationProperties,
     "FundConfigurationRequest": FundConfigurationRequest,
+    "FundPreviousNAV": FundPreviousNAV,
     "FundProperties": FundProperties,
     "FundRequest": FundRequest,
     "FundShareClass": FundShareClass,
     "FundShareClassAllOf": FundShareClassAllOf,
+    "FundValuationPointData": FundValuationPointData,
     "FundingLeg": FundingLeg,
     "FundingLegAllOf": FundingLegAllOf,
     "FundingLegOptions": FundingLegOptions,
@@ -3509,6 +3545,9 @@ let typeMap: {[index: string]: any} = {
     "PostingModuleRule": PostingModuleRule,
     "PostingModuleRulesUpdatedResponse": PostingModuleRulesUpdatedResponse,
     "Premium": Premium,
+    "PreviousFundValuationPointData": PreviousFundValuationPointData,
+    "PreviousNAV": PreviousNAV,
+    "PreviousShareClassBreakdown": PreviousShareClassBreakdown,
     "PricingContext": PricingContext,
     "PricingOptions": PricingOptions,
     "ProcessedCommand": ProcessedCommand,
@@ -3700,6 +3739,10 @@ let typeMap: {[index: string]: any} = {
     "SetTransactionConfigurationAlias": SetTransactionConfigurationAlias,
     "SetTransactionConfigurationSourceRequest": SetTransactionConfigurationSourceRequest,
     "SettlementSchedule": SettlementSchedule,
+    "ShareClassAmount": ShareClassAmount,
+    "ShareClassBreakdown": ShareClassBreakdown,
+    "ShareClassData": ShareClassData,
+    "ShareClassDetails": ShareClassDetails,
     "SideConfigurationData": SideConfigurationData,
     "SideConfigurationDataRequest": SideConfigurationDataRequest,
     "SideDefinition": SideDefinition,
@@ -3796,6 +3839,7 @@ let typeMap: {[index: string]: any} = {
     "TriggerEvent": TriggerEvent,
     "TriggerEventAllOf": TriggerEventAllOf,
     "TypedResourceId": TypedResourceId,
+    "UnitisationData": UnitisationData,
     "UnitsRatio": UnitsRatio,
     "UpdateAmortisationRuleSetDetailsRequest": UpdateAmortisationRuleSetDetailsRequest,
     "UpdateCalendarRequest": UpdateCalendarRequest,
