@@ -20,6 +20,7 @@ enum FileType {
 const uuid4 = require('uuid/v4')
 const csv = require('csvtojson')
 let uniqueScope = 'Performance' + uuid4()
+const debugHeaders = ['lusid-meta-requestid']
 
 // Create a custom property using the LUSID model
 let sectorDataTypeId = new ResourceId()
@@ -104,7 +105,10 @@ function upsertInstruments(instruments: InstrumentDefinition[])
     });
 
     client.api.instruments.upsertInstruments(body, uniqueScope)
-      .then((res: any) => resolve(res.body))
+      .then((res: any) => {
+        getLoggingInfo(res?.response?.rawHeaders,debugHeaders,'upsertInstruments')
+        resolve(res.body)
+      })
       .catch((err: any) => reject(err))
   })
 }
@@ -116,7 +120,10 @@ function createProperty(
   return new Promise((resolve, reject) => {
     // Use your client to call create property definition
     client.api.propertyDefinitions.createPropertyDefinition(propertyDefintion)
-      .then((res: any) => resolve(res.body))
+      .then((res: any) => {
+        getLoggingInfo(res?.response?.rawHeaders,debugHeaders,'createPropertyDefinition')
+        resolve(res.body)
+      })
       .catch((err: any) => reject(err))
   })
 }
@@ -141,7 +148,10 @@ function upsertInstrumentProperties(
   Promise<UpsertInstrumentPropertiesResponse> {
   return new Promise((resolve, reject) => {
     client.api.instruments.upsertInstrumentsProperties(requests, uniqueScope)
-      .then((res) => resolve(res.body))
+      .then((res: any) => {
+        getLoggingInfo(res?.response?.rawHeaders,debugHeaders,'upsertInstrumentProperties')
+        resolve(res.body)
+      })
       .catch((err: any) => reject(err))
   })
 }
@@ -216,6 +226,19 @@ function getPropertyRequestsFromFile(
       return instrumentPropertyRequest
     })
   })
+}
+
+function getLoggingInfo(headers: string[], keysToSearch: string[], functionCallName: string)
+{
+  if(headers) {
+    for(const key of keysToSearch) {
+      const index = headers.findIndex((header)=> header===key)
+      if(index > -1){
+        console.log(`${functionCallName}: ${headers[index]}: ${headers[index+1]}`)
+      }
+    }
+  }
+
 }
 
 export { };
