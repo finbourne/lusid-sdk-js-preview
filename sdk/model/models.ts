@@ -176,6 +176,7 @@ export * from './complianceRuleResultV2';
 export * from './complianceRuleTemplate';
 export * from './complianceRuleUpsertRequest';
 export * from './complianceRuleUpsertResponse';
+export * from './complianceRunConfiguration';
 export * from './complianceRunInfo';
 export * from './complianceRunInfoV2';
 export * from './complianceStep';
@@ -749,6 +750,7 @@ export * from './postingModuleRequest';
 export * from './postingModuleResponse';
 export * from './postingModuleRule';
 export * from './postingModuleRulesUpdatedResponse';
+export * from './preTradeConfiguration';
 export * from './premium';
 export * from './previousFundValuationPointData';
 export * from './previousNAV';
@@ -1354,6 +1356,7 @@ import { ComplianceRuleResultV2 } from './complianceRuleResultV2';
 import { ComplianceRuleTemplate } from './complianceRuleTemplate';
 import { ComplianceRuleUpsertRequest } from './complianceRuleUpsertRequest';
 import { ComplianceRuleUpsertResponse } from './complianceRuleUpsertResponse';
+import { ComplianceRunConfiguration } from './complianceRunConfiguration';
 import { ComplianceRunInfo } from './complianceRunInfo';
 import { ComplianceRunInfoV2 } from './complianceRunInfoV2';
 import { ComplianceStep } from './complianceStep';
@@ -1927,6 +1930,7 @@ import { PostingModuleRequest } from './postingModuleRequest';
 import { PostingModuleResponse } from './postingModuleResponse';
 import { PostingModuleRule } from './postingModuleRule';
 import { PostingModuleRulesUpdatedResponse } from './postingModuleRulesUpdatedResponse';
+import { PreTradeConfiguration } from './preTradeConfiguration';
 import { Premium } from './premium';
 import { PreviousFundValuationPointData } from './previousFundValuationPointData';
 import { PreviousNAV } from './previousNAV';
@@ -2995,6 +2999,7 @@ let typeMap: {[index: string]: any} = {
     "ComplianceRuleTemplate": ComplianceRuleTemplate,
     "ComplianceRuleUpsertRequest": ComplianceRuleUpsertRequest,
     "ComplianceRuleUpsertResponse": ComplianceRuleUpsertResponse,
+    "ComplianceRunConfiguration": ComplianceRunConfiguration,
     "ComplianceRunInfo": ComplianceRunInfo,
     "ComplianceRunInfoV2": ComplianceRunInfoV2,
     "ComplianceStep": ComplianceStep,
@@ -3544,6 +3549,7 @@ let typeMap: {[index: string]: any} = {
     "PostingModuleResponse": PostingModuleResponse,
     "PostingModuleRule": PostingModuleRule,
     "PostingModuleRulesUpdatedResponse": PostingModuleRulesUpdatedResponse,
+    "PreTradeConfiguration": PreTradeConfiguration,
     "Premium": Premium,
     "PreviousFundValuationPointData": PreviousFundValuationPointData,
     "PreviousNAV": PreviousNAV,
