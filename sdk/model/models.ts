@@ -394,6 +394,7 @@ export * from './fundAmount';
 export * from './fundConfiguration';
 export * from './fundConfigurationProperties';
 export * from './fundConfigurationRequest';
+export * from './fundPnlBreakdown';
 export * from './fundPreviousNAV';
 export * from './fundProperties';
 export * from './fundRequest';
@@ -964,6 +965,7 @@ export * from './shareClassAmount';
 export * from './shareClassBreakdown';
 export * from './shareClassData';
 export * from './shareClassDetails';
+export * from './shareClassPnlBreakdown';
 export * from './sideConfigurationData';
 export * from './sideConfigurationDataRequest';
 export * from './sideDefinition';
@@ -1574,6 +1576,7 @@ import { FundAmount } from './fundAmount';
 import { FundConfiguration } from './fundConfiguration';
 import { FundConfigurationProperties } from './fundConfigurationProperties';
 import { FundConfigurationRequest } from './fundConfigurationRequest';
+import { FundPnlBreakdown } from './fundPnlBreakdown';
 import { FundPreviousNAV } from './fundPreviousNAV';
 import { FundProperties } from './fundProperties';
 import { FundRequest } from './fundRequest';
@@ -2144,6 +2147,7 @@ import { ShareClassAmount } from './shareClassAmount';
 import { ShareClassBreakdown } from './shareClassBreakdown';
 import { ShareClassData } from './shareClassData';
 import { ShareClassDetails } from './shareClassDetails';
+import { ShareClassPnlBreakdown } from './shareClassPnlBreakdown';
 import { SideConfigurationData } from './sideConfigurationData';
 import { SideConfigurationDataRequest } from './sideConfigurationDataRequest';
 import { SideDefinition } from './sideDefinition';
@@ -3208,6 +3212,7 @@ let typeMap: {[index: string]: any} = {
     "FundConfiguration": FundConfiguration,
     "FundConfigurationProperties": FundConfigurationProperties,
     "FundConfigurationRequest": FundConfigurationRequest,
+    "FundPnlBreakdown": FundPnlBreakdown,
     "FundPreviousNAV": FundPreviousNAV,
     "FundProperties": FundProperties,
     "FundRequest": FundRequest,
@@ -3749,6 +3754,7 @@ let typeMap: {[index: string]: any} = {
     "ShareClassBreakdown": ShareClassBreakdown,
     "ShareClassData": ShareClassData,
     "ShareClassDetails": ShareClassDetails,
+    "ShareClassPnlBreakdown": ShareClassPnlBreakdown,
     "SideConfigurationData": SideConfigurationData,
     "SideConfigurationDataRequest": SideConfigurationDataRequest,
     "SideDefinition": SideDefinition,
