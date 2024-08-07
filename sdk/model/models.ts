@@ -107,7 +107,9 @@ export * from './calendar';
 export * from './calendarDate';
 export * from './calendarDependency';
 export * from './calendarDependencyAllOf';
+export * from './cancelOrdersResponse';
 export * from './cancelPlacementsResponse';
+export * from './cancelledOrderResult';
 export * from './cancelledPlacementResult';
 export * from './capFloor';
 export * from './capFloorAllOf';
@@ -1289,7 +1291,9 @@ import { Calendar } from './calendar';
 import { CalendarDate } from './calendarDate';
 import { CalendarDependency } from './calendarDependency';
 import { CalendarDependencyAllOf } from './calendarDependencyAllOf';
+import { CancelOrdersResponse } from './cancelOrdersResponse';
 import { CancelPlacementsResponse } from './cancelPlacementsResponse';
+import { CancelledOrderResult } from './cancelledOrderResult';
 import { CancelledPlacementResult } from './cancelledPlacementResult';
 import { CapFloor } from './capFloor';
 import { CapFloorAllOf } from './capFloorAllOf';
@@ -2936,7 +2940,9 @@ let typeMap: {[index: string]: any} = {
     "CalendarDate": CalendarDate,
     "CalendarDependency": CalendarDependency,
     "CalendarDependencyAllOf": CalendarDependencyAllOf,
+    "CancelOrdersResponse": CancelOrdersResponse,
     "CancelPlacementsResponse": CancelPlacementsResponse,
+    "CancelledOrderResult": CancelledOrderResult,
     "CancelledPlacementResult": CancelledPlacementResult,
     "CapFloor": CapFloor,
     "CapFloorAllOf": CapFloorAllOf,
