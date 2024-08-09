@@ -273,6 +273,7 @@ export * from './dataMapKey';
 export * from './dataMapping';
 export * from './dataScope';
 export * from './dataType';
+export * from './dataTypeEntity';
 export * from './dataTypeSummary';
 export * from './dataTypeValueRange';
 export * from './dateAttributes';
@@ -1459,6 +1460,7 @@ import { DataMapKey } from './dataMapKey';
 import { DataMapping } from './dataMapping';
 import { DataScope } from './dataScope';
 import { DataType } from './dataType';
+import { DataTypeEntity } from './dataTypeEntity';
 import { DataTypeSummary } from './dataTypeSummary';
 import { DataTypeValueRange } from './dataTypeValueRange';
 import { DateAttributes } from './dateAttributes';
@@ -3105,6 +3107,7 @@ let typeMap: {[index: string]: any} = {
     "DataMapping": DataMapping,
     "DataScope": DataScope,
     "DataType": DataType,
+    "DataTypeEntity": DataTypeEntity,
     "DataTypeSummary": DataTypeSummary,
     "DateAttributes": DateAttributes,
     "DateOrDiaryEntry": DateOrDiaryEntry,
