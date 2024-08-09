@@ -703,6 +703,7 @@ export * from './pagedResourceListOfStagingRuleSet';
 export * from './pagedResourceListOfTransactionTemplate';
 export * from './pagedResourceListOfTransactionTemplateSpecification';
 export * from './pagedResourceListOfTranslationScriptId';
+export * from './pagedResourceListOfValuationPointOverview';
 export * from './pagedResourceListOfVirtualRow';
 export * from './participation';
 export * from './participationRequest';
@@ -1141,6 +1142,7 @@ export * from './user';
 export * from './valuationPointDataQueryParameters';
 export * from './valuationPointDataRequest';
 export * from './valuationPointDataResponse';
+export * from './valuationPointOverview';
 export * from './valuationRequest';
 export * from './valuationSchedule';
 export * from './valuationsReconciliationRequest';
@@ -1887,6 +1889,7 @@ import { PagedResourceListOfStagingRuleSet } from './pagedResourceListOfStagingR
 import { PagedResourceListOfTransactionTemplate } from './pagedResourceListOfTransactionTemplate';
 import { PagedResourceListOfTransactionTemplateSpecification } from './pagedResourceListOfTransactionTemplateSpecification';
 import { PagedResourceListOfTranslationScriptId } from './pagedResourceListOfTranslationScriptId';
+import { PagedResourceListOfValuationPointOverview } from './pagedResourceListOfValuationPointOverview';
 import { PagedResourceListOfVirtualRow } from './pagedResourceListOfVirtualRow';
 import { Participation } from './participation';
 import { ParticipationRequest } from './participationRequest';
@@ -2325,6 +2328,7 @@ import { User } from './user';
 import { ValuationPointDataQueryParameters } from './valuationPointDataQueryParameters';
 import { ValuationPointDataRequest } from './valuationPointDataRequest';
 import { ValuationPointDataResponse } from './valuationPointDataResponse';
+import { ValuationPointOverview } from './valuationPointOverview';
 import { ValuationRequest } from './valuationRequest';
 import { ValuationSchedule } from './valuationSchedule';
 import { ValuationsReconciliationRequest } from './valuationsReconciliationRequest';
@@ -3513,6 +3517,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfTransactionTemplate": PagedResourceListOfTransactionTemplate,
     "PagedResourceListOfTransactionTemplateSpecification": PagedResourceListOfTransactionTemplateSpecification,
     "PagedResourceListOfTranslationScriptId": PagedResourceListOfTranslationScriptId,
+    "PagedResourceListOfValuationPointOverview": PagedResourceListOfValuationPointOverview,
     "PagedResourceListOfVirtualRow": PagedResourceListOfVirtualRow,
     "Participation": Participation,
     "ParticipationRequest": ParticipationRequest,
@@ -3925,6 +3930,7 @@ let typeMap: {[index: string]: any} = {
     "ValuationPointDataQueryParameters": ValuationPointDataQueryParameters,
     "ValuationPointDataRequest": ValuationPointDataRequest,
     "ValuationPointDataResponse": ValuationPointDataResponse,
+    "ValuationPointOverview": ValuationPointOverview,
     "ValuationRequest": ValuationRequest,
     "ValuationSchedule": ValuationSchedule,
     "ValuationsReconciliationRequest": ValuationsReconciliationRequest,
