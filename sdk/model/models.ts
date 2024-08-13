@@ -640,6 +640,7 @@ export * from './orderInstructionRequest';
 export * from './orderInstructionSetRequest';
 export * from './orderRequest';
 export * from './orderSetRequest';
+export * from './orderUpdateRequest';
 export * from './otcConfirmation';
 export * from './outputTransaction';
 export * from './outputTransition';
@@ -1087,6 +1088,7 @@ export * from './updateDataTypeRequest';
 export * from './updateDerivedPropertyDefinitionRequest';
 export * from './updateFeeTypeRequest';
 export * from './updateInstrumentIdentifierRequest';
+export * from './updateOrdersResponse';
 export * from './updatePlacementsResponse';
 export * from './updatePortfolioGroupRequest';
 export * from './updatePortfolioRequest';
@@ -1827,6 +1829,7 @@ import { OrderInstructionRequest } from './orderInstructionRequest';
 import { OrderInstructionSetRequest } from './orderInstructionSetRequest';
 import { OrderRequest } from './orderRequest';
 import { OrderSetRequest } from './orderSetRequest';
+import { OrderUpdateRequest } from './orderUpdateRequest';
 import { OtcConfirmation } from './otcConfirmation';
 import { OutputTransaction } from './outputTransaction';
 import { OutputTransition } from './outputTransition';
@@ -2274,6 +2277,7 @@ import { UpdateDataTypeRequest } from './updateDataTypeRequest';
 import { UpdateDerivedPropertyDefinitionRequest } from './updateDerivedPropertyDefinitionRequest';
 import { UpdateFeeTypeRequest } from './updateFeeTypeRequest';
 import { UpdateInstrumentIdentifierRequest } from './updateInstrumentIdentifierRequest';
+import { UpdateOrdersResponse } from './updateOrdersResponse';
 import { UpdatePlacementsResponse } from './updatePlacementsResponse';
 import { UpdatePortfolioGroupRequest } from './updatePortfolioGroupRequest';
 import { UpdatePortfolioRequest } from './updatePortfolioRequest';
@@ -3456,6 +3460,7 @@ let typeMap: {[index: string]: any} = {
     "OrderInstructionSetRequest": OrderInstructionSetRequest,
     "OrderRequest": OrderRequest,
     "OrderSetRequest": OrderSetRequest,
+    "OrderUpdateRequest": OrderUpdateRequest,
     "OtcConfirmation": OtcConfirmation,
     "OutputTransaction": OutputTransaction,
     "OutputTransition": OutputTransition,
@@ -3877,6 +3882,7 @@ let typeMap: {[index: string]: any} = {
     "UpdateDerivedPropertyDefinitionRequest": UpdateDerivedPropertyDefinitionRequest,
     "UpdateFeeTypeRequest": UpdateFeeTypeRequest,
     "UpdateInstrumentIdentifierRequest": UpdateInstrumentIdentifierRequest,
+    "UpdateOrdersResponse": UpdateOrdersResponse,
     "UpdatePlacementsResponse": UpdatePlacementsResponse,
     "UpdatePortfolioGroupRequest": UpdatePortfolioGroupRequest,
     "UpdatePortfolioRequest": UpdatePortfolioRequest,
