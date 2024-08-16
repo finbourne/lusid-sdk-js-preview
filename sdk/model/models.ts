@@ -707,6 +707,8 @@ export * from './pagedResourceListOfTransactionTemplateSpecification';
 export * from './pagedResourceListOfTranslationScriptId';
 export * from './pagedResourceListOfValuationPointOverview';
 export * from './pagedResourceListOfVirtualRow';
+export * from './pagedResourceListOfWorkspace';
+export * from './pagedResourceListOfWorkspaceItem';
 export * from './participation';
 export * from './participationRequest';
 export * from './participationSetRequest';
@@ -969,6 +971,7 @@ export * from './settlementSchedule';
 export * from './shareClassAmount';
 export * from './shareClassBreakdown';
 export * from './shareClassData';
+export * from './shareClassDealingBreakdown';
 export * from './shareClassDetails';
 export * from './shareClassPnlBreakdown';
 export * from './sideConfigurationData';
@@ -1173,6 +1176,12 @@ export * from './weekendMask';
 export * from './weightedInstrument';
 export * from './weightedInstrumentInLineLookupIdentifiers';
 export * from './weightedInstruments';
+export * from './workspace';
+export * from './workspaceCreationRequest';
+export * from './workspaceItem';
+export * from './workspaceItemCreationRequest';
+export * from './workspaceItemUpdateRequest';
+export * from './workspaceUpdateRequest';
 export * from './yieldCurveData';
 export * from './yieldCurveDataAllOf';
 
@@ -1896,6 +1905,8 @@ import { PagedResourceListOfTransactionTemplateSpecification } from './pagedReso
 import { PagedResourceListOfTranslationScriptId } from './pagedResourceListOfTranslationScriptId';
 import { PagedResourceListOfValuationPointOverview } from './pagedResourceListOfValuationPointOverview';
 import { PagedResourceListOfVirtualRow } from './pagedResourceListOfVirtualRow';
+import { PagedResourceListOfWorkspace } from './pagedResourceListOfWorkspace';
+import { PagedResourceListOfWorkspaceItem } from './pagedResourceListOfWorkspaceItem';
 import { Participation } from './participation';
 import { ParticipationRequest } from './participationRequest';
 import { ParticipationSetRequest } from './participationSetRequest';
@@ -2158,6 +2169,7 @@ import { SettlementSchedule } from './settlementSchedule';
 import { ShareClassAmount } from './shareClassAmount';
 import { ShareClassBreakdown } from './shareClassBreakdown';
 import { ShareClassData } from './shareClassData';
+import { ShareClassDealingBreakdown } from './shareClassDealingBreakdown';
 import { ShareClassDetails } from './shareClassDetails';
 import { ShareClassPnlBreakdown } from './shareClassPnlBreakdown';
 import { SideConfigurationData } from './sideConfigurationData';
@@ -2362,6 +2374,12 @@ import { WeekendMask } from './weekendMask';
 import { WeightedInstrument } from './weightedInstrument';
 import { WeightedInstrumentInLineLookupIdentifiers } from './weightedInstrumentInLineLookupIdentifiers';
 import { WeightedInstruments } from './weightedInstruments';
+import { Workspace } from './workspace';
+import { WorkspaceCreationRequest } from './workspaceCreationRequest';
+import { WorkspaceItem } from './workspaceItem';
+import { WorkspaceItemCreationRequest } from './workspaceItemCreationRequest';
+import { WorkspaceItemUpdateRequest } from './workspaceItemUpdateRequest';
+import { WorkspaceUpdateRequest } from './workspaceUpdateRequest';
 import { YieldCurveData } from './yieldCurveData';
 import { YieldCurveDataAllOf } from './yieldCurveDataAllOf';
 
@@ -3527,6 +3545,8 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfTranslationScriptId": PagedResourceListOfTranslationScriptId,
     "PagedResourceListOfValuationPointOverview": PagedResourceListOfValuationPointOverview,
     "PagedResourceListOfVirtualRow": PagedResourceListOfVirtualRow,
+    "PagedResourceListOfWorkspace": PagedResourceListOfWorkspace,
+    "PagedResourceListOfWorkspaceItem": PagedResourceListOfWorkspaceItem,
     "Participation": Participation,
     "ParticipationRequest": ParticipationRequest,
     "ParticipationSetRequest": ParticipationSetRequest,
@@ -3772,6 +3792,7 @@ let typeMap: {[index: string]: any} = {
     "ShareClassAmount": ShareClassAmount,
     "ShareClassBreakdown": ShareClassBreakdown,
     "ShareClassData": ShareClassData,
+    "ShareClassDealingBreakdown": ShareClassDealingBreakdown,
     "ShareClassDetails": ShareClassDetails,
     "ShareClassPnlBreakdown": ShareClassPnlBreakdown,
     "SideConfigurationData": SideConfigurationData,
@@ -3965,6 +3986,12 @@ let typeMap: {[index: string]: any} = {
     "WeightedInstrument": WeightedInstrument,
     "WeightedInstrumentInLineLookupIdentifiers": WeightedInstrumentInLineLookupIdentifiers,
     "WeightedInstruments": WeightedInstruments,
+    "Workspace": Workspace,
+    "WorkspaceCreationRequest": WorkspaceCreationRequest,
+    "WorkspaceItem": WorkspaceItem,
+    "WorkspaceItemCreationRequest": WorkspaceItemCreationRequest,
+    "WorkspaceItemUpdateRequest": WorkspaceItemUpdateRequest,
+    "WorkspaceUpdateRequest": WorkspaceUpdateRequest,
     "YieldCurveData": YieldCurveData,
     "YieldCurveDataAllOf": YieldCurveDataAllOf,
 }
