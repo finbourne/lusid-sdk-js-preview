@@ -1013,6 +1013,8 @@ export * from './structuredResultData';
 export * from './structuredResultDataId';
 export * from './subHoldingKeyValueEquals';
 export * from './subHoldingKeyValueEqualsAllOf';
+export * from './swapCashFlowEvent';
+export * from './swapCashFlowEventAllOf';
 export * from './targetTaxLot';
 export * from './targetTaxLotRequest';
 export * from './taxRule';
@@ -2211,6 +2213,8 @@ import { StructuredResultData } from './structuredResultData';
 import { StructuredResultDataId } from './structuredResultDataId';
 import { SubHoldingKeyValueEquals } from './subHoldingKeyValueEquals';
 import { SubHoldingKeyValueEqualsAllOf } from './subHoldingKeyValueEqualsAllOf';
+import { SwapCashFlowEvent } from './swapCashFlowEvent';
+import { SwapCashFlowEventAllOf } from './swapCashFlowEventAllOf';
 import { TargetTaxLot } from './targetTaxLot';
 import { TargetTaxLotRequest } from './targetTaxLotRequest';
 import { TaxRule } from './taxRule';
@@ -2831,6 +2835,8 @@ let enumsMap: {[index: string]: any} = {
         "StringListComplianceParameter.ComplianceParameterTypeEnum": StringListComplianceParameter.ComplianceParameterTypeEnum,
         "SubHoldingKeyValueEquals.CriterionTypeEnum": SubHoldingKeyValueEquals.CriterionTypeEnum,
         "SubHoldingKeyValueEqualsAllOf.CriterionTypeEnum": SubHoldingKeyValueEqualsAllOf.CriterionTypeEnum,
+        "SwapCashFlowEvent.InstrumentEventTypeEnum": SwapCashFlowEvent.InstrumentEventTypeEnum,
+        "SwapCashFlowEventAllOf.InstrumentEventTypeEnum": SwapCashFlowEventAllOf.InstrumentEventTypeEnum,
         "TermDeposit.InstrumentTypeEnum": TermDeposit.InstrumentTypeEnum,
         "TermDepositAllOf.InstrumentTypeEnum": TermDepositAllOf.InstrumentTypeEnum,
         "TotalReturnSwap.InstrumentTypeEnum": TotalReturnSwap.InstrumentTypeEnum,
@@ -3832,6 +3838,8 @@ let typeMap: {[index: string]: any} = {
     "StructuredResultDataId": StructuredResultDataId,
     "SubHoldingKeyValueEquals": SubHoldingKeyValueEquals,
     "SubHoldingKeyValueEqualsAllOf": SubHoldingKeyValueEqualsAllOf,
+    "SwapCashFlowEvent": SwapCashFlowEvent,
+    "SwapCashFlowEventAllOf": SwapCashFlowEventAllOf,
     "TargetTaxLot": TargetTaxLot,
     "TargetTaxLotRequest": TargetTaxLotRequest,
     "TaxRule": TaxRule,
