@@ -10,6 +10,7 @@ export * from './aborConfigurationProperties';
 export * from './aborConfigurationRequest';
 export * from './aborProperties';
 export * from './aborRequest';
+export * from './acceptEstimateValuationPointResponse';
 export * from './accessControlledAction';
 export * from './accessControlledResource';
 export * from './accessMetadataOperation';
@@ -1015,6 +1016,8 @@ export * from './subHoldingKeyValueEquals';
 export * from './subHoldingKeyValueEqualsAllOf';
 export * from './swapCashFlowEvent';
 export * from './swapCashFlowEventAllOf';
+export * from './swapPrincipalEvent';
+export * from './swapPrincipalEventAllOf';
 export * from './targetTaxLot';
 export * from './targetTaxLotRequest';
 export * from './taxRule';
@@ -1210,6 +1213,7 @@ import { AborConfigurationProperties } from './aborConfigurationProperties';
 import { AborConfigurationRequest } from './aborConfigurationRequest';
 import { AborProperties } from './aborProperties';
 import { AborRequest } from './aborRequest';
+import { AcceptEstimateValuationPointResponse } from './acceptEstimateValuationPointResponse';
 import { AccessControlledAction } from './accessControlledAction';
 import { AccessControlledResource } from './accessControlledResource';
 import { AccessMetadataOperation } from './accessMetadataOperation';
@@ -2215,6 +2219,8 @@ import { SubHoldingKeyValueEquals } from './subHoldingKeyValueEquals';
 import { SubHoldingKeyValueEqualsAllOf } from './subHoldingKeyValueEqualsAllOf';
 import { SwapCashFlowEvent } from './swapCashFlowEvent';
 import { SwapCashFlowEventAllOf } from './swapCashFlowEventAllOf';
+import { SwapPrincipalEvent } from './swapPrincipalEvent';
+import { SwapPrincipalEventAllOf } from './swapPrincipalEventAllOf';
 import { TargetTaxLot } from './targetTaxLot';
 import { TargetTaxLotRequest } from './targetTaxLotRequest';
 import { TaxRule } from './taxRule';
@@ -2837,6 +2843,8 @@ let enumsMap: {[index: string]: any} = {
         "SubHoldingKeyValueEqualsAllOf.CriterionTypeEnum": SubHoldingKeyValueEqualsAllOf.CriterionTypeEnum,
         "SwapCashFlowEvent.InstrumentEventTypeEnum": SwapCashFlowEvent.InstrumentEventTypeEnum,
         "SwapCashFlowEventAllOf.InstrumentEventTypeEnum": SwapCashFlowEventAllOf.InstrumentEventTypeEnum,
+        "SwapPrincipalEvent.InstrumentEventTypeEnum": SwapPrincipalEvent.InstrumentEventTypeEnum,
+        "SwapPrincipalEventAllOf.InstrumentEventTypeEnum": SwapPrincipalEventAllOf.InstrumentEventTypeEnum,
         "TermDeposit.InstrumentTypeEnum": TermDeposit.InstrumentTypeEnum,
         "TermDepositAllOf.InstrumentTypeEnum": TermDepositAllOf.InstrumentTypeEnum,
         "TotalReturnSwap.InstrumentTypeEnum": TotalReturnSwap.InstrumentTypeEnum,
@@ -2881,6 +2889,7 @@ let typeMap: {[index: string]: any} = {
     "AborConfigurationRequest": AborConfigurationRequest,
     "AborProperties": AborProperties,
     "AborRequest": AborRequest,
+    "AcceptEstimateValuationPointResponse": AcceptEstimateValuationPointResponse,
     "AccessControlledAction": AccessControlledAction,
     "AccessControlledResource": AccessControlledResource,
     "AccessMetadataOperation": AccessMetadataOperation,
@@ -3840,6 +3849,8 @@ let typeMap: {[index: string]: any} = {
     "SubHoldingKeyValueEqualsAllOf": SubHoldingKeyValueEqualsAllOf,
     "SwapCashFlowEvent": SwapCashFlowEvent,
     "SwapCashFlowEventAllOf": SwapCashFlowEventAllOf,
+    "SwapPrincipalEvent": SwapPrincipalEvent,
+    "SwapPrincipalEventAllOf": SwapPrincipalEventAllOf,
     "TargetTaxLot": TargetTaxLot,
     "TargetTaxLotRequest": TargetTaxLotRequest,
     "TaxRule": TaxRule,
