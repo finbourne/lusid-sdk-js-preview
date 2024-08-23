@@ -450,6 +450,7 @@ export * from './fxVolSurfaceData';
 export * from './generalLedgerProfileMapping';
 export * from './generalLedgerProfileRequest';
 export * from './generalLedgerProfileResponse';
+export * from './generatedEventDiagnostics';
 export * from './getCdsFlowConventionsResponse';
 export * from './getComplexMarketDataResponse';
 export * from './getCounterpartyAgreementResponse';
@@ -1037,6 +1038,7 @@ export * from './transactionConfigurationMovementData';
 export * from './transactionConfigurationMovementDataRequest';
 export * from './transactionConfigurationTypeAlias';
 export * from './transactionCurrencyAndAmount';
+export * from './transactionDiagnostics';
 export * from './transactionFieldMap';
 export * from './transactionPrice';
 export * from './transactionPriceAndType';
@@ -1653,6 +1655,7 @@ import { FxVolSurfaceData } from './fxVolSurfaceData';
 import { GeneralLedgerProfileMapping } from './generalLedgerProfileMapping';
 import { GeneralLedgerProfileRequest } from './generalLedgerProfileRequest';
 import { GeneralLedgerProfileResponse } from './generalLedgerProfileResponse';
+import { GeneratedEventDiagnostics } from './generatedEventDiagnostics';
 import { GetCdsFlowConventionsResponse } from './getCdsFlowConventionsResponse';
 import { GetComplexMarketDataResponse } from './getComplexMarketDataResponse';
 import { GetCounterpartyAgreementResponse } from './getCounterpartyAgreementResponse';
@@ -2240,6 +2243,7 @@ import { TransactionConfigurationMovementData } from './transactionConfiguration
 import { TransactionConfigurationMovementDataRequest } from './transactionConfigurationMovementDataRequest';
 import { TransactionConfigurationTypeAlias } from './transactionConfigurationTypeAlias';
 import { TransactionCurrencyAndAmount } from './transactionCurrencyAndAmount';
+import { TransactionDiagnostics } from './transactionDiagnostics';
 import { TransactionFieldMap } from './transactionFieldMap';
 import { TransactionPrice } from './transactionPrice';
 import { TransactionPriceAndType } from './transactionPriceAndType';
@@ -3314,6 +3318,7 @@ let typeMap: {[index: string]: any} = {
     "GeneralLedgerProfileMapping": GeneralLedgerProfileMapping,
     "GeneralLedgerProfileRequest": GeneralLedgerProfileRequest,
     "GeneralLedgerProfileResponse": GeneralLedgerProfileResponse,
+    "GeneratedEventDiagnostics": GeneratedEventDiagnostics,
     "GetCdsFlowConventionsResponse": GetCdsFlowConventionsResponse,
     "GetComplexMarketDataResponse": GetComplexMarketDataResponse,
     "GetCounterpartyAgreementResponse": GetCounterpartyAgreementResponse,
@@ -3869,6 +3874,7 @@ let typeMap: {[index: string]: any} = {
     "TransactionConfigurationMovementDataRequest": TransactionConfigurationMovementDataRequest,
     "TransactionConfigurationTypeAlias": TransactionConfigurationTypeAlias,
     "TransactionCurrencyAndAmount": TransactionCurrencyAndAmount,
+    "TransactionDiagnostics": TransactionDiagnostics,
     "TransactionFieldMap": TransactionFieldMap,
     "TransactionPrice": TransactionPrice,
     "TransactionPriceAndType": TransactionPriceAndType,
