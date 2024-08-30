@@ -229,6 +229,7 @@ export * from './createDataTypeRequest';
 export * from './createDateRequest';
 export * from './createDerivedPropertyDefinitionRequest';
 export * from './createDerivedTransactionPortfolioRequest';
+export * from './createGroupReconciliationComparisonRulesetRequest';
 export * from './createPortfolioDetails';
 export * from './createPortfolioGroupRequest';
 export * from './createPropertyDefinitionRequest';
@@ -398,6 +399,7 @@ export * from './fundAmount';
 export * from './fundConfiguration';
 export * from './fundConfigurationProperties';
 export * from './fundConfigurationRequest';
+export * from './fundDetails';
 export * from './fundPnlBreakdown';
 export * from './fundPreviousNAV';
 export * from './fundProperties';
@@ -474,6 +476,13 @@ export * from './groupFilterStep';
 export * from './groupFilterStepAllOf';
 export * from './groupFilterStepRequest';
 export * from './groupOfMarketDataKeyRules';
+export * from './groupReconciliationAggregateAttributeRule';
+export * from './groupReconciliationAggregateComparisonRuleOperand';
+export * from './groupReconciliationComparisonRuleStringValueMap';
+export * from './groupReconciliationComparisonRuleTolerance';
+export * from './groupReconciliationComparisonRuleset';
+export * from './groupReconciliationCoreAttributeRule';
+export * from './groupReconciliationCoreComparisonRuleOperand';
 export * from './groupedResultOfAddressKey';
 export * from './holdingAdjustment';
 export * from './holdingAdjustmentWithDate';
@@ -1434,6 +1443,7 @@ import { CreateDataTypeRequest } from './createDataTypeRequest';
 import { CreateDateRequest } from './createDateRequest';
 import { CreateDerivedPropertyDefinitionRequest } from './createDerivedPropertyDefinitionRequest';
 import { CreateDerivedTransactionPortfolioRequest } from './createDerivedTransactionPortfolioRequest';
+import { CreateGroupReconciliationComparisonRulesetRequest } from './createGroupReconciliationComparisonRulesetRequest';
 import { CreatePortfolioDetails } from './createPortfolioDetails';
 import { CreatePortfolioGroupRequest } from './createPortfolioGroupRequest';
 import { CreatePropertyDefinitionRequest } from './createPropertyDefinitionRequest';
@@ -1603,6 +1613,7 @@ import { FundAmount } from './fundAmount';
 import { FundConfiguration } from './fundConfiguration';
 import { FundConfigurationProperties } from './fundConfigurationProperties';
 import { FundConfigurationRequest } from './fundConfigurationRequest';
+import { FundDetails } from './fundDetails';
 import { FundPnlBreakdown } from './fundPnlBreakdown';
 import { FundPreviousNAV } from './fundPreviousNAV';
 import { FundProperties } from './fundProperties';
@@ -1679,6 +1690,13 @@ import { GroupFilterStep } from './groupFilterStep';
 import { GroupFilterStepAllOf } from './groupFilterStepAllOf';
 import { GroupFilterStepRequest } from './groupFilterStepRequest';
 import { GroupOfMarketDataKeyRules } from './groupOfMarketDataKeyRules';
+import { GroupReconciliationAggregateAttributeRule } from './groupReconciliationAggregateAttributeRule';
+import { GroupReconciliationAggregateComparisonRuleOperand } from './groupReconciliationAggregateComparisonRuleOperand';
+import { GroupReconciliationComparisonRuleStringValueMap } from './groupReconciliationComparisonRuleStringValueMap';
+import { GroupReconciliationComparisonRuleTolerance } from './groupReconciliationComparisonRuleTolerance';
+import { GroupReconciliationComparisonRuleset } from './groupReconciliationComparisonRuleset';
+import { GroupReconciliationCoreAttributeRule } from './groupReconciliationCoreAttributeRule';
+import { GroupReconciliationCoreComparisonRuleOperand } from './groupReconciliationCoreComparisonRuleOperand';
 import { GroupedResultOfAddressKey } from './groupedResultOfAddressKey';
 import { HoldingAdjustment } from './holdingAdjustment';
 import { HoldingAdjustmentWithDate } from './holdingAdjustmentWithDate';
@@ -3104,6 +3122,7 @@ let typeMap: {[index: string]: any} = {
     "CreateDateRequest": CreateDateRequest,
     "CreateDerivedPropertyDefinitionRequest": CreateDerivedPropertyDefinitionRequest,
     "CreateDerivedTransactionPortfolioRequest": CreateDerivedTransactionPortfolioRequest,
+    "CreateGroupReconciliationComparisonRulesetRequest": CreateGroupReconciliationComparisonRulesetRequest,
     "CreatePortfolioDetails": CreatePortfolioDetails,
     "CreatePortfolioGroupRequest": CreatePortfolioGroupRequest,
     "CreatePropertyDefinitionRequest": CreatePropertyDefinitionRequest,
@@ -3266,6 +3285,7 @@ let typeMap: {[index: string]: any} = {
     "FundConfiguration": FundConfiguration,
     "FundConfigurationProperties": FundConfigurationProperties,
     "FundConfigurationRequest": FundConfigurationRequest,
+    "FundDetails": FundDetails,
     "FundPnlBreakdown": FundPnlBreakdown,
     "FundPreviousNAV": FundPreviousNAV,
     "FundProperties": FundProperties,
@@ -3342,6 +3362,13 @@ let typeMap: {[index: string]: any} = {
     "GroupFilterStepAllOf": GroupFilterStepAllOf,
     "GroupFilterStepRequest": GroupFilterStepRequest,
     "GroupOfMarketDataKeyRules": GroupOfMarketDataKeyRules,
+    "GroupReconciliationAggregateAttributeRule": GroupReconciliationAggregateAttributeRule,
+    "GroupReconciliationAggregateComparisonRuleOperand": GroupReconciliationAggregateComparisonRuleOperand,
+    "GroupReconciliationComparisonRuleStringValueMap": GroupReconciliationComparisonRuleStringValueMap,
+    "GroupReconciliationComparisonRuleTolerance": GroupReconciliationComparisonRuleTolerance,
+    "GroupReconciliationComparisonRuleset": GroupReconciliationComparisonRuleset,
+    "GroupReconciliationCoreAttributeRule": GroupReconciliationCoreAttributeRule,
+    "GroupReconciliationCoreComparisonRuleOperand": GroupReconciliationCoreComparisonRuleOperand,
     "GroupedResultOfAddressKey": GroupedResultOfAddressKey,
     "HoldingAdjustment": HoldingAdjustment,
     "HoldingAdjustmentWithDate": HoldingAdjustmentWithDate,

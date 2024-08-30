@@ -25,6 +25,7 @@ import {ExecutionsApi} from './api/executionsApi';
 import {FeeTypesApi} from './api/feeTypesApi';
 import {FundConfigurationsApi} from './api/fundConfigurationsApi';
 import {FundsApi} from './api/fundsApi';
+import {GroupReconciliationsApi} from './api/groupReconciliationsApi';
 import {InstrumentEventTypesApi} from './api/instrumentEventTypesApi';
 import {InstrumentEventsApi} from './api/instrumentEventsApi';
 import {InstrumentsApi} from './api/instrumentsApi';
@@ -94,6 +95,7 @@ export class Api {
     public feeTypes:  FeeTypesApi
     public fundConfigurations:  FundConfigurationsApi
     public funds:  FundsApi
+    public groupReconciliations:  GroupReconciliationsApi
     public instrumentEventTypes:  InstrumentEventTypesApi
     public instrumentEvents:  InstrumentEventsApi
     public instruments:  InstrumentsApi
