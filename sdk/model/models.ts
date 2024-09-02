@@ -326,6 +326,7 @@ export * from './electionSpecification';
 export * from './eligibilityCalculation';
 export * from './emptyModelOptions';
 export * from './emptyModelOptionsAllOf';
+export * from './entityChangeItem';
 export * from './entityIdentifier';
 export * from './equity';
 export * from './equityAllOf';
@@ -883,6 +884,7 @@ export * from './resourceListOfComplianceRunInfo';
 export * from './resourceListOfConstituentsAdjustmentHeader';
 export * from './resourceListOfCorporateAction';
 export * from './resourceListOfDataType';
+export * from './resourceListOfEntityChangeItem';
 export * from './resourceListOfExecution';
 export * from './resourceListOfFeeRule';
 export * from './resourceListOfGetCdsFlowConventionsResponse';
@@ -1540,6 +1542,7 @@ import { ElectionSpecification } from './electionSpecification';
 import { EligibilityCalculation } from './eligibilityCalculation';
 import { EmptyModelOptions } from './emptyModelOptions';
 import { EmptyModelOptionsAllOf } from './emptyModelOptionsAllOf';
+import { EntityChangeItem } from './entityChangeItem';
 import { EntityIdentifier } from './entityIdentifier';
 import { Equity } from './equity';
 import { EquityAllOf } from './equityAllOf';
@@ -2097,6 +2100,7 @@ import { ResourceListOfComplianceRunInfo } from './resourceListOfComplianceRunIn
 import { ResourceListOfConstituentsAdjustmentHeader } from './resourceListOfConstituentsAdjustmentHeader';
 import { ResourceListOfCorporateAction } from './resourceListOfCorporateAction';
 import { ResourceListOfDataType } from './resourceListOfDataType';
+import { ResourceListOfEntityChangeItem } from './resourceListOfEntityChangeItem';
 import { ResourceListOfExecution } from './resourceListOfExecution';
 import { ResourceListOfFeeRule } from './resourceListOfFeeRule';
 import { ResourceListOfGetCdsFlowConventionsResponse } from './resourceListOfGetCdsFlowConventionsResponse';
@@ -3212,6 +3216,7 @@ let typeMap: {[index: string]: any} = {
     "EligibilityCalculation": EligibilityCalculation,
     "EmptyModelOptions": EmptyModelOptions,
     "EmptyModelOptionsAllOf": EmptyModelOptionsAllOf,
+    "EntityChangeItem": EntityChangeItem,
     "EntityIdentifier": EntityIdentifier,
     "Equity": Equity,
     "EquityAllOf": EquityAllOf,
@@ -3744,6 +3749,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfConstituentsAdjustmentHeader": ResourceListOfConstituentsAdjustmentHeader,
     "ResourceListOfCorporateAction": ResourceListOfCorporateAction,
     "ResourceListOfDataType": ResourceListOfDataType,
+    "ResourceListOfEntityChangeItem": ResourceListOfEntityChangeItem,
     "ResourceListOfExecution": ResourceListOfExecution,
     "ResourceListOfFeeRule": ResourceListOfFeeRule,
     "ResourceListOfGetCdsFlowConventionsResponse": ResourceListOfGetCdsFlowConventionsResponse,
