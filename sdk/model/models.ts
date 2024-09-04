@@ -135,10 +135,14 @@ export * from './cashLadderRecord';
 export * from './cashOfferElection';
 export * from './cashPerpetual';
 export * from './cashPerpetualAllOf';
+export * from './cdsCreditEvent';
+export * from './cdsCreditEventAllOf';
 export * from './cdsFlowConventions';
 export * from './cdsIndex';
 export * from './cdsIndexAllOf';
 export * from './cdsProtectionDetailSpecification';
+export * from './cdxCreditEvent';
+export * from './cdxCreditEventAllOf';
 export * from './change';
 export * from './changeHistory';
 export * from './changeHistoryAction';
@@ -248,6 +252,8 @@ export * from './createTransactionPortfolioRequest';
 export * from './createUnitDefinition';
 export * from './creditDefaultSwap';
 export * from './creditDefaultSwapAllOf';
+export * from './creditPremiumCashFlowEvent';
+export * from './creditPremiumCashFlowEventAllOf';
 export * from './creditRating';
 export * from './creditSpreadCurveData';
 export * from './creditSpreadCurveDataAllOf';
@@ -1351,10 +1357,14 @@ import { CashLadderRecord } from './cashLadderRecord';
 import { CashOfferElection } from './cashOfferElection';
 import { CashPerpetual } from './cashPerpetual';
 import { CashPerpetualAllOf } from './cashPerpetualAllOf';
+import { CdsCreditEvent } from './cdsCreditEvent';
+import { CdsCreditEventAllOf } from './cdsCreditEventAllOf';
 import { CdsFlowConventions } from './cdsFlowConventions';
 import { CdsIndex } from './cdsIndex';
 import { CdsIndexAllOf } from './cdsIndexAllOf';
 import { CdsProtectionDetailSpecification } from './cdsProtectionDetailSpecification';
+import { CdxCreditEvent } from './cdxCreditEvent';
+import { CdxCreditEventAllOf } from './cdxCreditEventAllOf';
 import { Change } from './change';
 import { ChangeHistory } from './changeHistory';
 import { ChangeHistoryAction } from './changeHistoryAction';
@@ -1464,6 +1474,8 @@ import { CreateTransactionPortfolioRequest } from './createTransactionPortfolioR
 import { CreateUnitDefinition } from './createUnitDefinition';
 import { CreditDefaultSwap } from './creditDefaultSwap';
 import { CreditDefaultSwapAllOf } from './creditDefaultSwapAllOf';
+import { CreditPremiumCashFlowEvent } from './creditPremiumCashFlowEvent';
+import { CreditPremiumCashFlowEventAllOf } from './creditPremiumCashFlowEventAllOf';
 import { CreditRating } from './creditRating';
 import { CreditSpreadCurveData } from './creditSpreadCurveData';
 import { CreditSpreadCurveDataAllOf } from './creditSpreadCurveDataAllOf';
@@ -2491,8 +2503,12 @@ let enumsMap: {[index: string]: any} = {
         "CashFlowValueSetAllOf.ResultValueTypeEnum": CashFlowValueSetAllOf.ResultValueTypeEnum,
         "CashPerpetual.InstrumentTypeEnum": CashPerpetual.InstrumentTypeEnum,
         "CashPerpetualAllOf.InstrumentTypeEnum": CashPerpetualAllOf.InstrumentTypeEnum,
+        "CdsCreditEvent.InstrumentEventTypeEnum": CdsCreditEvent.InstrumentEventTypeEnum,
+        "CdsCreditEventAllOf.InstrumentEventTypeEnum": CdsCreditEventAllOf.InstrumentEventTypeEnum,
         "CdsIndex.InstrumentTypeEnum": CdsIndex.InstrumentTypeEnum,
         "CdsIndexAllOf.InstrumentTypeEnum": CdsIndexAllOf.InstrumentTypeEnum,
+        "CdxCreditEvent.InstrumentEventTypeEnum": CdxCreditEvent.InstrumentEventTypeEnum,
+        "CdxCreditEventAllOf.InstrumentEventTypeEnum": CdxCreditEventAllOf.InstrumentEventTypeEnum,
         "ChangeHistory.ActionEnum": ChangeHistory.ActionEnum,
         "ChangeHistoryAction": ChangeHistoryAction,
         "CheckStep.ComplianceStepTypeEnum": CheckStep.ComplianceStepTypeEnum,
@@ -2524,6 +2540,8 @@ let enumsMap: {[index: string]: any} = {
         "CreateTransactionPortfolioRequest.AccountingMethodEnum": CreateTransactionPortfolioRequest.AccountingMethodEnum,
         "CreditDefaultSwap.InstrumentTypeEnum": CreditDefaultSwap.InstrumentTypeEnum,
         "CreditDefaultSwapAllOf.InstrumentTypeEnum": CreditDefaultSwapAllOf.InstrumentTypeEnum,
+        "CreditPremiumCashFlowEvent.InstrumentEventTypeEnum": CreditPremiumCashFlowEvent.InstrumentEventTypeEnum,
+        "CreditPremiumCashFlowEventAllOf.InstrumentEventTypeEnum": CreditPremiumCashFlowEventAllOf.InstrumentEventTypeEnum,
         "CreditSpreadCurveData.MarketDataTypeEnum": CreditSpreadCurveData.MarketDataTypeEnum,
         "CreditSpreadCurveDataAllOf.MarketDataTypeEnum": CreditSpreadCurveDataAllOf.MarketDataTypeEnum,
         "CriterionType": CriterionType,
@@ -3036,10 +3054,14 @@ let typeMap: {[index: string]: any} = {
     "CashOfferElection": CashOfferElection,
     "CashPerpetual": CashPerpetual,
     "CashPerpetualAllOf": CashPerpetualAllOf,
+    "CdsCreditEvent": CdsCreditEvent,
+    "CdsCreditEventAllOf": CdsCreditEventAllOf,
     "CdsFlowConventions": CdsFlowConventions,
     "CdsIndex": CdsIndex,
     "CdsIndexAllOf": CdsIndexAllOf,
     "CdsProtectionDetailSpecification": CdsProtectionDetailSpecification,
+    "CdxCreditEvent": CdxCreditEvent,
+    "CdxCreditEventAllOf": CdxCreditEventAllOf,
     "Change": Change,
     "ChangeHistory": ChangeHistory,
     "ChangeItem": ChangeItem,
@@ -3145,6 +3167,8 @@ let typeMap: {[index: string]: any} = {
     "CreateUnitDefinition": CreateUnitDefinition,
     "CreditDefaultSwap": CreditDefaultSwap,
     "CreditDefaultSwapAllOf": CreditDefaultSwapAllOf,
+    "CreditPremiumCashFlowEvent": CreditPremiumCashFlowEvent,
+    "CreditPremiumCashFlowEventAllOf": CreditPremiumCashFlowEventAllOf,
     "CreditRating": CreditRating,
     "CreditSpreadCurveData": CreditSpreadCurveData,
     "CreditSpreadCurveDataAllOf": CreditSpreadCurveDataAllOf,
