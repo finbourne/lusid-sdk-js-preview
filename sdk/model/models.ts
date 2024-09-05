@@ -497,6 +497,7 @@ export * from './holdingAdjustment';
 export * from './holdingAdjustmentWithDate';
 export * from './holdingContext';
 export * from './holdingContributor';
+export * from './holdingPricingInfo';
 export * from './holdingsAdjustment';
 export * from './holdingsAdjustmentHeader';
 export * from './iUnitDefinitionDto';
@@ -1007,6 +1008,7 @@ export * from './simpleCashFlowLoanAllOf';
 export * from './simpleInstrument';
 export * from './simpleInstrumentAllOf';
 export * from './sortOrder';
+export * from './specificHoldingPricingInfo';
 export * from './spinOffEvent';
 export * from './spinOffEventAllOf';
 export * from './stagedModification';
@@ -1723,6 +1725,7 @@ import { HoldingAdjustment } from './holdingAdjustment';
 import { HoldingAdjustmentWithDate } from './holdingAdjustmentWithDate';
 import { HoldingContext } from './holdingContext';
 import { HoldingContributor } from './holdingContributor';
+import { HoldingPricingInfo } from './holdingPricingInfo';
 import { HoldingsAdjustment } from './holdingsAdjustment';
 import { HoldingsAdjustmentHeader } from './holdingsAdjustmentHeader';
 import { IUnitDefinitionDto } from './iUnitDefinitionDto';
@@ -2233,6 +2236,7 @@ import { SimpleCashFlowLoanAllOf } from './simpleCashFlowLoanAllOf';
 import { SimpleInstrument } from './simpleInstrument';
 import { SimpleInstrumentAllOf } from './simpleInstrumentAllOf';
 import { SortOrder } from './sortOrder';
+import { SpecificHoldingPricingInfo } from './specificHoldingPricingInfo';
 import { SpinOffEvent } from './spinOffEvent';
 import { SpinOffEventAllOf } from './spinOffEventAllOf';
 import { StagedModification } from './stagedModification';
@@ -3413,6 +3417,7 @@ let typeMap: {[index: string]: any} = {
     "HoldingAdjustmentWithDate": HoldingAdjustmentWithDate,
     "HoldingContext": HoldingContext,
     "HoldingContributor": HoldingContributor,
+    "HoldingPricingInfo": HoldingPricingInfo,
     "HoldingsAdjustment": HoldingsAdjustment,
     "HoldingsAdjustmentHeader": HoldingsAdjustmentHeader,
     "IUnitDefinitionDto": IUnitDefinitionDto,
@@ -3893,6 +3898,7 @@ let typeMap: {[index: string]: any} = {
     "SimpleCashFlowLoanAllOf": SimpleCashFlowLoanAllOf,
     "SimpleInstrument": SimpleInstrument,
     "SimpleInstrumentAllOf": SimpleInstrumentAllOf,
+    "SpecificHoldingPricingInfo": SpecificHoldingPricingInfo,
     "SpinOffEvent": SpinOffEvent,
     "SpinOffEventAllOf": SpinOffEventAllOf,
     "StagedModification": StagedModification,
