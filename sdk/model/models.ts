@@ -70,6 +70,8 @@ export * from './basketAllOf';
 export * from './basketIdentifier';
 export * from './batchAdjustHoldingsResponse';
 export * from './batchUpsertInstrumentPropertiesResponse';
+export * from './batchUpsertPortfolioAccessMetadataRequest';
+export * from './batchUpsertPortfolioAccessMetadataResponse';
 export * from './batchUpsertPortfolioTransactionsResponse';
 export * from './batchUpsertPropertyDefinitionPropertiesResponse';
 export * from './block';
@@ -604,6 +606,8 @@ export * from './maturityEvent';
 export * from './maturityEventAllOf';
 export * from './mergerEvent';
 export * from './mergerEventAllOf';
+export * from './metadataKeyValue';
+export * from './metadataKeyValueResponse';
 export * from './metricValue';
 export * from './modelOptions';
 export * from './modelOptionsType';
@@ -1292,6 +1296,8 @@ import { BasketAllOf } from './basketAllOf';
 import { BasketIdentifier } from './basketIdentifier';
 import { BatchAdjustHoldingsResponse } from './batchAdjustHoldingsResponse';
 import { BatchUpsertInstrumentPropertiesResponse } from './batchUpsertInstrumentPropertiesResponse';
+import { BatchUpsertPortfolioAccessMetadataRequest } from './batchUpsertPortfolioAccessMetadataRequest';
+import { BatchUpsertPortfolioAccessMetadataResponse } from './batchUpsertPortfolioAccessMetadataResponse';
 import { BatchUpsertPortfolioTransactionsResponse } from './batchUpsertPortfolioTransactionsResponse';
 import { BatchUpsertPropertyDefinitionPropertiesResponse } from './batchUpsertPropertyDefinitionPropertiesResponse';
 import { Block } from './block';
@@ -1826,6 +1832,8 @@ import { MaturityEvent } from './maturityEvent';
 import { MaturityEventAllOf } from './maturityEventAllOf';
 import { MergerEvent } from './mergerEvent';
 import { MergerEventAllOf } from './mergerEventAllOf';
+import { MetadataKeyValue } from './metadataKeyValue';
+import { MetadataKeyValueResponse } from './metadataKeyValueResponse';
 import { MetricValue } from './metricValue';
 import { ModelOptions } from './modelOptions';
 import { ModelOptionsType } from './modelOptionsType';
@@ -2989,6 +2997,8 @@ let typeMap: {[index: string]: any} = {
     "BasketIdentifier": BasketIdentifier,
     "BatchAdjustHoldingsResponse": BatchAdjustHoldingsResponse,
     "BatchUpsertInstrumentPropertiesResponse": BatchUpsertInstrumentPropertiesResponse,
+    "BatchUpsertPortfolioAccessMetadataRequest": BatchUpsertPortfolioAccessMetadataRequest,
+    "BatchUpsertPortfolioAccessMetadataResponse": BatchUpsertPortfolioAccessMetadataResponse,
     "BatchUpsertPortfolioTransactionsResponse": BatchUpsertPortfolioTransactionsResponse,
     "BatchUpsertPropertyDefinitionPropertiesResponse": BatchUpsertPropertyDefinitionPropertiesResponse,
     "Block": Block,
@@ -3506,6 +3516,8 @@ let typeMap: {[index: string]: any} = {
     "MaturityEventAllOf": MaturityEventAllOf,
     "MergerEvent": MergerEvent,
     "MergerEventAllOf": MergerEventAllOf,
+    "MetadataKeyValue": MetadataKeyValue,
+    "MetadataKeyValueResponse": MetadataKeyValueResponse,
     "MetricValue": MetricValue,
     "ModelOptions": ModelOptions,
     "ModelSelection": ModelSelection,
