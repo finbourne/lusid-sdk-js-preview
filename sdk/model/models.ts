@@ -148,6 +148,7 @@ export * from './cdxCreditEventAllOf';
 export * from './change';
 export * from './changeHistory';
 export * from './changeHistoryAction';
+export * from './changeIntervalWithOrderManagementDetail';
 export * from './changeItem';
 export * from './chartOfAccounts';
 export * from './chartOfAccountsProperties';
@@ -334,7 +335,6 @@ export * from './electionSpecification';
 export * from './eligibilityCalculation';
 export * from './emptyModelOptions';
 export * from './emptyModelOptionsAllOf';
-export * from './entityChangeItem';
 export * from './entityIdentifier';
 export * from './equity';
 export * from './equityAllOf';
@@ -888,6 +888,7 @@ export * from './resourceListOfBlockAndOrders';
 export * from './resourceListOfCalendarDate';
 export * from './resourceListOfChange';
 export * from './resourceListOfChangeHistory';
+export * from './resourceListOfChangeIntervalWithOrderManagementDetail';
 export * from './resourceListOfComplianceBreachedOrderInfo';
 export * from './resourceListOfComplianceRule';
 export * from './resourceListOfComplianceRuleResult';
@@ -895,7 +896,6 @@ export * from './resourceListOfComplianceRunInfo';
 export * from './resourceListOfConstituentsAdjustmentHeader';
 export * from './resourceListOfCorporateAction';
 export * from './resourceListOfDataType';
-export * from './resourceListOfEntityChangeItem';
 export * from './resourceListOfExecution';
 export * from './resourceListOfFeeRule';
 export * from './resourceListOfGetCdsFlowConventionsResponse';
@@ -1376,6 +1376,7 @@ import { CdxCreditEventAllOf } from './cdxCreditEventAllOf';
 import { Change } from './change';
 import { ChangeHistory } from './changeHistory';
 import { ChangeHistoryAction } from './changeHistoryAction';
+import { ChangeIntervalWithOrderManagementDetail } from './changeIntervalWithOrderManagementDetail';
 import { ChangeItem } from './changeItem';
 import { ChartOfAccounts } from './chartOfAccounts';
 import { ChartOfAccountsProperties } from './chartOfAccountsProperties';
@@ -1562,7 +1563,6 @@ import { ElectionSpecification } from './electionSpecification';
 import { EligibilityCalculation } from './eligibilityCalculation';
 import { EmptyModelOptions } from './emptyModelOptions';
 import { EmptyModelOptionsAllOf } from './emptyModelOptionsAllOf';
-import { EntityChangeItem } from './entityChangeItem';
 import { EntityIdentifier } from './entityIdentifier';
 import { Equity } from './equity';
 import { EquityAllOf } from './equityAllOf';
@@ -2116,6 +2116,7 @@ import { ResourceListOfBlockAndOrders } from './resourceListOfBlockAndOrders';
 import { ResourceListOfCalendarDate } from './resourceListOfCalendarDate';
 import { ResourceListOfChange } from './resourceListOfChange';
 import { ResourceListOfChangeHistory } from './resourceListOfChangeHistory';
+import { ResourceListOfChangeIntervalWithOrderManagementDetail } from './resourceListOfChangeIntervalWithOrderManagementDetail';
 import { ResourceListOfComplianceBreachedOrderInfo } from './resourceListOfComplianceBreachedOrderInfo';
 import { ResourceListOfComplianceRule } from './resourceListOfComplianceRule';
 import { ResourceListOfComplianceRuleResult } from './resourceListOfComplianceRuleResult';
@@ -2123,7 +2124,6 @@ import { ResourceListOfComplianceRunInfo } from './resourceListOfComplianceRunIn
 import { ResourceListOfConstituentsAdjustmentHeader } from './resourceListOfConstituentsAdjustmentHeader';
 import { ResourceListOfCorporateAction } from './resourceListOfCorporateAction';
 import { ResourceListOfDataType } from './resourceListOfDataType';
-import { ResourceListOfEntityChangeItem } from './resourceListOfEntityChangeItem';
 import { ResourceListOfExecution } from './resourceListOfExecution';
 import { ResourceListOfFeeRule } from './resourceListOfFeeRule';
 import { ResourceListOfGetCdsFlowConventionsResponse } from './resourceListOfGetCdsFlowConventionsResponse';
@@ -3078,6 +3078,7 @@ let typeMap: {[index: string]: any} = {
     "CdxCreditEventAllOf": CdxCreditEventAllOf,
     "Change": Change,
     "ChangeHistory": ChangeHistory,
+    "ChangeIntervalWithOrderManagementDetail": ChangeIntervalWithOrderManagementDetail,
     "ChangeItem": ChangeItem,
     "ChartOfAccounts": ChartOfAccounts,
     "ChartOfAccountsProperties": ChartOfAccountsProperties,
@@ -3254,7 +3255,6 @@ let typeMap: {[index: string]: any} = {
     "EligibilityCalculation": EligibilityCalculation,
     "EmptyModelOptions": EmptyModelOptions,
     "EmptyModelOptionsAllOf": EmptyModelOptionsAllOf,
-    "EntityChangeItem": EntityChangeItem,
     "EntityIdentifier": EntityIdentifier,
     "Equity": Equity,
     "EquityAllOf": EquityAllOf,
@@ -3783,6 +3783,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfCalendarDate": ResourceListOfCalendarDate,
     "ResourceListOfChange": ResourceListOfChange,
     "ResourceListOfChangeHistory": ResourceListOfChangeHistory,
+    "ResourceListOfChangeIntervalWithOrderManagementDetail": ResourceListOfChangeIntervalWithOrderManagementDetail,
     "ResourceListOfComplianceBreachedOrderInfo": ResourceListOfComplianceBreachedOrderInfo,
     "ResourceListOfComplianceRule": ResourceListOfComplianceRule,
     "ResourceListOfComplianceRuleResult": ResourceListOfComplianceRuleResult,
@@ -3790,7 +3791,6 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfConstituentsAdjustmentHeader": ResourceListOfConstituentsAdjustmentHeader,
     "ResourceListOfCorporateAction": ResourceListOfCorporateAction,
     "ResourceListOfDataType": ResourceListOfDataType,
-    "ResourceListOfEntityChangeItem": ResourceListOfEntityChangeItem,
     "ResourceListOfExecution": ResourceListOfExecution,
     "ResourceListOfFeeRule": ResourceListOfFeeRule,
     "ResourceListOfGetCdsFlowConventionsResponse": ResourceListOfGetCdsFlowConventionsResponse,
