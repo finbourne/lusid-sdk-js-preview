@@ -72,6 +72,7 @@ export * from './batchAdjustHoldingsResponse';
 export * from './batchUpsertInstrumentPropertiesResponse';
 export * from './batchUpsertPortfolioAccessMetadataRequest';
 export * from './batchUpsertPortfolioAccessMetadataResponse';
+export * from './batchUpsertPortfolioAccessMetadataResponseItem';
 export * from './batchUpsertPortfolioTransactionsResponse';
 export * from './batchUpsertPropertyDefinitionPropertiesResponse';
 export * from './block';
@@ -271,6 +272,7 @@ export * from './custodianAccountRequest';
 export * from './custodianAccountsUpsertResponse';
 export * from './customEntityDefinition';
 export * from './customEntityDefinitionRequest';
+export * from './customEntityEntity';
 export * from './customEntityField';
 export * from './customEntityFieldDefinition';
 export * from './customEntityId';
@@ -607,8 +609,6 @@ export * from './maturityEvent';
 export * from './maturityEventAllOf';
 export * from './mergerEvent';
 export * from './mergerEventAllOf';
-export * from './metadataKeyValue';
-export * from './metadataKeyValueResponse';
 export * from './metricValue';
 export * from './modelOptions';
 export * from './modelOptionsType';
@@ -1300,6 +1300,7 @@ import { BatchAdjustHoldingsResponse } from './batchAdjustHoldingsResponse';
 import { BatchUpsertInstrumentPropertiesResponse } from './batchUpsertInstrumentPropertiesResponse';
 import { BatchUpsertPortfolioAccessMetadataRequest } from './batchUpsertPortfolioAccessMetadataRequest';
 import { BatchUpsertPortfolioAccessMetadataResponse } from './batchUpsertPortfolioAccessMetadataResponse';
+import { BatchUpsertPortfolioAccessMetadataResponseItem } from './batchUpsertPortfolioAccessMetadataResponseItem';
 import { BatchUpsertPortfolioTransactionsResponse } from './batchUpsertPortfolioTransactionsResponse';
 import { BatchUpsertPropertyDefinitionPropertiesResponse } from './batchUpsertPropertyDefinitionPropertiesResponse';
 import { Block } from './block';
@@ -1499,6 +1500,7 @@ import { CustodianAccountRequest } from './custodianAccountRequest';
 import { CustodianAccountsUpsertResponse } from './custodianAccountsUpsertResponse';
 import { CustomEntityDefinition } from './customEntityDefinition';
 import { CustomEntityDefinitionRequest } from './customEntityDefinitionRequest';
+import { CustomEntityEntity } from './customEntityEntity';
 import { CustomEntityField } from './customEntityField';
 import { CustomEntityFieldDefinition } from './customEntityFieldDefinition';
 import { CustomEntityId } from './customEntityId';
@@ -1835,8 +1837,6 @@ import { MaturityEvent } from './maturityEvent';
 import { MaturityEventAllOf } from './maturityEventAllOf';
 import { MergerEvent } from './mergerEvent';
 import { MergerEventAllOf } from './mergerEventAllOf';
-import { MetadataKeyValue } from './metadataKeyValue';
-import { MetadataKeyValueResponse } from './metadataKeyValueResponse';
 import { MetricValue } from './metricValue';
 import { ModelOptions } from './modelOptions';
 import { ModelOptionsType } from './modelOptionsType';
@@ -3003,6 +3003,7 @@ let typeMap: {[index: string]: any} = {
     "BatchUpsertInstrumentPropertiesResponse": BatchUpsertInstrumentPropertiesResponse,
     "BatchUpsertPortfolioAccessMetadataRequest": BatchUpsertPortfolioAccessMetadataRequest,
     "BatchUpsertPortfolioAccessMetadataResponse": BatchUpsertPortfolioAccessMetadataResponse,
+    "BatchUpsertPortfolioAccessMetadataResponseItem": BatchUpsertPortfolioAccessMetadataResponseItem,
     "BatchUpsertPortfolioTransactionsResponse": BatchUpsertPortfolioTransactionsResponse,
     "BatchUpsertPropertyDefinitionPropertiesResponse": BatchUpsertPropertyDefinitionPropertiesResponse,
     "Block": Block,
@@ -3197,6 +3198,7 @@ let typeMap: {[index: string]: any} = {
     "CustodianAccountsUpsertResponse": CustodianAccountsUpsertResponse,
     "CustomEntityDefinition": CustomEntityDefinition,
     "CustomEntityDefinitionRequest": CustomEntityDefinitionRequest,
+    "CustomEntityEntity": CustomEntityEntity,
     "CustomEntityField": CustomEntityField,
     "CustomEntityFieldDefinition": CustomEntityFieldDefinition,
     "CustomEntityId": CustomEntityId,
@@ -3521,8 +3523,6 @@ let typeMap: {[index: string]: any} = {
     "MaturityEventAllOf": MaturityEventAllOf,
     "MergerEvent": MergerEvent,
     "MergerEventAllOf": MergerEventAllOf,
-    "MetadataKeyValue": MetadataKeyValue,
-    "MetadataKeyValueResponse": MetadataKeyValueResponse,
     "MetricValue": MetricValue,
     "ModelOptions": ModelOptions,
     "ModelSelection": ModelSelection,
