@@ -58,6 +58,7 @@ export * from './amortisationEvent';
 export * from './amortisationEventAllOf';
 export * from './amortisationRule';
 export * from './amortisationRuleSet';
+export * from './amount';
 export * from './annulQuotesResponse';
 export * from './annulSingleStructuredDataResponse';
 export * from './annulStructuredDataResponse';
@@ -103,6 +104,7 @@ export * from './branchStep';
 export * from './branchStepAllOf';
 export * from './branchStepRequest';
 export * from './branchStepRequestAllOf';
+export * from './breakCodeSource';
 export * from './bucketedCashFlowRequest';
 export * from './bucketedCashFlowResponse';
 export * from './bucketingSchedule';
@@ -202,7 +204,6 @@ export * from './complianceTemplateVariation';
 export * from './complianceTemplateVariationDto';
 export * from './complianceTemplateVariationRequest';
 export * from './componentFilter';
-export * from './componentRule';
 export * from './componentTransaction';
 export * from './compositeBreakdown';
 export * from './compositeBreakdownRequest';
@@ -238,6 +239,7 @@ export * from './createDateRequest';
 export * from './createDerivedPropertyDefinitionRequest';
 export * from './createDerivedTransactionPortfolioRequest';
 export * from './createGroupReconciliationComparisonRulesetRequest';
+export * from './createGroupReconciliationDefinitionRequest';
 export * from './createPortfolioDetails';
 export * from './createPortfolioGroupRequest';
 export * from './createPropertyDefinitionRequest';
@@ -411,6 +413,8 @@ export * from './fundConfiguration';
 export * from './fundConfigurationProperties';
 export * from './fundConfigurationRequest';
 export * from './fundDetails';
+export * from './fundIdList';
+export * from './fundIdListAllOf';
 export * from './fundPnlBreakdown';
 export * from './fundPreviousNAV';
 export * from './fundProperties';
@@ -494,6 +498,11 @@ export * from './groupReconciliationComparisonRuleTolerance';
 export * from './groupReconciliationComparisonRuleset';
 export * from './groupReconciliationCoreAttributeRule';
 export * from './groupReconciliationCoreComparisonRuleOperand';
+export * from './groupReconciliationDefinition';
+export * from './groupReconciliationDefinitionComparisonRulesetIds';
+export * from './groupReconciliationDefinitionCurrencies';
+export * from './groupReconciliationDefinitionPortfolioEntityIds';
+export * from './groupReconciliationDefinitionRecipeIds';
 export * from './groupedResultOfAddressKey';
 export * from './holdingAdjustment';
 export * from './holdingAdjustmentWithDate';
@@ -699,6 +708,8 @@ export * from './pagedResourceListOfFeeType';
 export * from './pagedResourceListOfFund';
 export * from './pagedResourceListOfFundConfiguration';
 export * from './pagedResourceListOfGeneralLedgerProfileResponse';
+export * from './pagedResourceListOfGroupReconciliationComparisonRuleset';
+export * from './pagedResourceListOfGroupReconciliationDefinition';
 export * from './pagedResourceListOfInstrument';
 export * from './pagedResourceListOfInstrumentEventHolder';
 export * from './pagedResourceListOfInstrumentEventInstruction';
@@ -758,7 +769,6 @@ export * from './portfolioEntityId';
 export * from './portfolioGroup';
 export * from './portfolioGroupIdComplianceParameter';
 export * from './portfolioGroupIdList';
-export * from './portfolioGroupIdListAllOf';
 export * from './portfolioGroupIdListComplianceParameter';
 export * from './portfolioGroupProperties';
 export * from './portfolioGroupSearchResult';
@@ -991,6 +1001,7 @@ export * from './setPersonPropertiesRequest';
 export * from './setShareClassInstrumentsRequest';
 export * from './setTransactionConfigurationAlias';
 export * from './setTransactionConfigurationSourceRequest';
+export * from './settlementCycle';
 export * from './settlementSchedule';
 export * from './shareClassAmount';
 export * from './shareClassBreakdown';
@@ -1061,6 +1072,7 @@ export * from './transactionConfigurationMovementData';
 export * from './transactionConfigurationMovementDataRequest';
 export * from './transactionConfigurationTypeAlias';
 export * from './transactionCurrencyAndAmount';
+export * from './transactionDateWindows';
 export * from './transactionDiagnostics';
 export * from './transactionFieldMap';
 export * from './transactionPrice';
@@ -1120,6 +1132,8 @@ export * from './updateCutLabelDefinitionRequest';
 export * from './updateDataTypeRequest';
 export * from './updateDerivedPropertyDefinitionRequest';
 export * from './updateFeeTypeRequest';
+export * from './updateGroupReconciliationComparisonRulesetRequest';
+export * from './updateGroupReconciliationDefinitionRequest';
 export * from './updateInstrumentIdentifierRequest';
 export * from './updateOrdersResponse';
 export * from './updatePlacementsResponse';
@@ -1164,6 +1178,8 @@ export * from './upsertQuoteRequest';
 export * from './upsertQuotesResponse';
 export * from './upsertRecipeComposerRequest';
 export * from './upsertRecipeRequest';
+export * from './upsertReferencePortfolioConstituentPropertiesRequest';
+export * from './upsertReferencePortfolioConstituentPropertiesResponse';
 export * from './upsertReferencePortfolioConstituentsRequest';
 export * from './upsertReferencePortfolioConstituentsResponse';
 export * from './upsertResultValuesDataRequest';
@@ -1286,6 +1302,7 @@ import { AmortisationEvent } from './amortisationEvent';
 import { AmortisationEventAllOf } from './amortisationEventAllOf';
 import { AmortisationRule } from './amortisationRule';
 import { AmortisationRuleSet } from './amortisationRuleSet';
+import { Amount } from './amount';
 import { AnnulQuotesResponse } from './annulQuotesResponse';
 import { AnnulSingleStructuredDataResponse } from './annulSingleStructuredDataResponse';
 import { AnnulStructuredDataResponse } from './annulStructuredDataResponse';
@@ -1331,6 +1348,7 @@ import { BranchStep } from './branchStep';
 import { BranchStepAllOf } from './branchStepAllOf';
 import { BranchStepRequest } from './branchStepRequest';
 import { BranchStepRequestAllOf } from './branchStepRequestAllOf';
+import { BreakCodeSource } from './breakCodeSource';
 import { BucketedCashFlowRequest } from './bucketedCashFlowRequest';
 import { BucketedCashFlowResponse } from './bucketedCashFlowResponse';
 import { BucketingSchedule } from './bucketingSchedule';
@@ -1430,7 +1448,6 @@ import { ComplianceTemplateVariation } from './complianceTemplateVariation';
 import { ComplianceTemplateVariationDto } from './complianceTemplateVariationDto';
 import { ComplianceTemplateVariationRequest } from './complianceTemplateVariationRequest';
 import { ComponentFilter } from './componentFilter';
-import { ComponentRule } from './componentRule';
 import { ComponentTransaction } from './componentTransaction';
 import { CompositeBreakdown } from './compositeBreakdown';
 import { CompositeBreakdownRequest } from './compositeBreakdownRequest';
@@ -1466,6 +1483,7 @@ import { CreateDateRequest } from './createDateRequest';
 import { CreateDerivedPropertyDefinitionRequest } from './createDerivedPropertyDefinitionRequest';
 import { CreateDerivedTransactionPortfolioRequest } from './createDerivedTransactionPortfolioRequest';
 import { CreateGroupReconciliationComparisonRulesetRequest } from './createGroupReconciliationComparisonRulesetRequest';
+import { CreateGroupReconciliationDefinitionRequest } from './createGroupReconciliationDefinitionRequest';
 import { CreatePortfolioDetails } from './createPortfolioDetails';
 import { CreatePortfolioGroupRequest } from './createPortfolioGroupRequest';
 import { CreatePropertyDefinitionRequest } from './createPropertyDefinitionRequest';
@@ -1639,6 +1657,8 @@ import { FundConfiguration } from './fundConfiguration';
 import { FundConfigurationProperties } from './fundConfigurationProperties';
 import { FundConfigurationRequest } from './fundConfigurationRequest';
 import { FundDetails } from './fundDetails';
+import { FundIdList } from './fundIdList';
+import { FundIdListAllOf } from './fundIdListAllOf';
 import { FundPnlBreakdown } from './fundPnlBreakdown';
 import { FundPreviousNAV } from './fundPreviousNAV';
 import { FundProperties } from './fundProperties';
@@ -1722,6 +1742,11 @@ import { GroupReconciliationComparisonRuleTolerance } from './groupReconciliatio
 import { GroupReconciliationComparisonRuleset } from './groupReconciliationComparisonRuleset';
 import { GroupReconciliationCoreAttributeRule } from './groupReconciliationCoreAttributeRule';
 import { GroupReconciliationCoreComparisonRuleOperand } from './groupReconciliationCoreComparisonRuleOperand';
+import { GroupReconciliationDefinition } from './groupReconciliationDefinition';
+import { GroupReconciliationDefinitionComparisonRulesetIds } from './groupReconciliationDefinitionComparisonRulesetIds';
+import { GroupReconciliationDefinitionCurrencies } from './groupReconciliationDefinitionCurrencies';
+import { GroupReconciliationDefinitionPortfolioEntityIds } from './groupReconciliationDefinitionPortfolioEntityIds';
+import { GroupReconciliationDefinitionRecipeIds } from './groupReconciliationDefinitionRecipeIds';
 import { GroupedResultOfAddressKey } from './groupedResultOfAddressKey';
 import { HoldingAdjustment } from './holdingAdjustment';
 import { HoldingAdjustmentWithDate } from './holdingAdjustmentWithDate';
@@ -1927,6 +1952,8 @@ import { PagedResourceListOfFeeType } from './pagedResourceListOfFeeType';
 import { PagedResourceListOfFund } from './pagedResourceListOfFund';
 import { PagedResourceListOfFundConfiguration } from './pagedResourceListOfFundConfiguration';
 import { PagedResourceListOfGeneralLedgerProfileResponse } from './pagedResourceListOfGeneralLedgerProfileResponse';
+import { PagedResourceListOfGroupReconciliationComparisonRuleset } from './pagedResourceListOfGroupReconciliationComparisonRuleset';
+import { PagedResourceListOfGroupReconciliationDefinition } from './pagedResourceListOfGroupReconciliationDefinition';
 import { PagedResourceListOfInstrument } from './pagedResourceListOfInstrument';
 import { PagedResourceListOfInstrumentEventHolder } from './pagedResourceListOfInstrumentEventHolder';
 import { PagedResourceListOfInstrumentEventInstruction } from './pagedResourceListOfInstrumentEventInstruction';
@@ -1986,7 +2013,6 @@ import { PortfolioEntityId } from './portfolioEntityId';
 import { PortfolioGroup } from './portfolioGroup';
 import { PortfolioGroupIdComplianceParameter } from './portfolioGroupIdComplianceParameter';
 import { PortfolioGroupIdList } from './portfolioGroupIdList';
-import { PortfolioGroupIdListAllOf } from './portfolioGroupIdListAllOf';
 import { PortfolioGroupIdListComplianceParameter } from './portfolioGroupIdListComplianceParameter';
 import { PortfolioGroupProperties } from './portfolioGroupProperties';
 import { PortfolioGroupSearchResult } from './portfolioGroupSearchResult';
@@ -2219,6 +2245,7 @@ import { SetPersonPropertiesRequest } from './setPersonPropertiesRequest';
 import { SetShareClassInstrumentsRequest } from './setShareClassInstrumentsRequest';
 import { SetTransactionConfigurationAlias } from './setTransactionConfigurationAlias';
 import { SetTransactionConfigurationSourceRequest } from './setTransactionConfigurationSourceRequest';
+import { SettlementCycle } from './settlementCycle';
 import { SettlementSchedule } from './settlementSchedule';
 import { ShareClassAmount } from './shareClassAmount';
 import { ShareClassBreakdown } from './shareClassBreakdown';
@@ -2289,6 +2316,7 @@ import { TransactionConfigurationMovementData } from './transactionConfiguration
 import { TransactionConfigurationMovementDataRequest } from './transactionConfigurationMovementDataRequest';
 import { TransactionConfigurationTypeAlias } from './transactionConfigurationTypeAlias';
 import { TransactionCurrencyAndAmount } from './transactionCurrencyAndAmount';
+import { TransactionDateWindows } from './transactionDateWindows';
 import { TransactionDiagnostics } from './transactionDiagnostics';
 import { TransactionFieldMap } from './transactionFieldMap';
 import { TransactionPrice } from './transactionPrice';
@@ -2348,6 +2376,8 @@ import { UpdateCutLabelDefinitionRequest } from './updateCutLabelDefinitionReque
 import { UpdateDataTypeRequest } from './updateDataTypeRequest';
 import { UpdateDerivedPropertyDefinitionRequest } from './updateDerivedPropertyDefinitionRequest';
 import { UpdateFeeTypeRequest } from './updateFeeTypeRequest';
+import { UpdateGroupReconciliationComparisonRulesetRequest } from './updateGroupReconciliationComparisonRulesetRequest';
+import { UpdateGroupReconciliationDefinitionRequest } from './updateGroupReconciliationDefinitionRequest';
 import { UpdateInstrumentIdentifierRequest } from './updateInstrumentIdentifierRequest';
 import { UpdateOrdersResponse } from './updateOrdersResponse';
 import { UpdatePlacementsResponse } from './updatePlacementsResponse';
@@ -2392,6 +2422,8 @@ import { UpsertQuoteRequest } from './upsertQuoteRequest';
 import { UpsertQuotesResponse } from './upsertQuotesResponse';
 import { UpsertRecipeComposerRequest } from './upsertRecipeComposerRequest';
 import { UpsertRecipeRequest } from './upsertRecipeRequest';
+import { UpsertReferencePortfolioConstituentPropertiesRequest } from './upsertReferencePortfolioConstituentPropertiesRequest';
+import { UpsertReferencePortfolioConstituentPropertiesResponse } from './upsertReferencePortfolioConstituentPropertiesResponse';
 import { UpsertReferencePortfolioConstituentsRequest } from './upsertReferencePortfolioConstituentsRequest';
 import { UpsertReferencePortfolioConstituentsResponse } from './upsertReferencePortfolioConstituentsResponse';
 import { UpsertResultValuesDataRequest } from './upsertResultValuesDataRequest';
@@ -2631,6 +2663,8 @@ let enumsMap: {[index: string]: any} = {
         "FloatingLegAllOf.InstrumentTypeEnum": FloatingLegAllOf.InstrumentTypeEnum,
         "ForwardRateAgreement.InstrumentTypeEnum": ForwardRateAgreement.InstrumentTypeEnum,
         "ForwardRateAgreementAllOf.InstrumentTypeEnum": ForwardRateAgreementAllOf.InstrumentTypeEnum,
+        "FundIdList.ReferenceListTypeEnum": FundIdList.ReferenceListTypeEnum,
+        "FundIdListAllOf.ReferenceListTypeEnum": FundIdListAllOf.ReferenceListTypeEnum,
         "FundShareClass.InstrumentTypeEnum": FundShareClass.InstrumentTypeEnum,
         "FundShareClassAllOf.InstrumentTypeEnum": FundShareClassAllOf.InstrumentTypeEnum,
         "FundingLeg.InstrumentTypeEnum": FundingLeg.InstrumentTypeEnum,
@@ -2775,7 +2809,6 @@ let enumsMap: {[index: string]: any} = {
         "PortfolioDetails.AccountingMethodEnum": PortfolioDetails.AccountingMethodEnum,
         "PortfolioGroupIdComplianceParameter.ComplianceParameterTypeEnum": PortfolioGroupIdComplianceParameter.ComplianceParameterTypeEnum,
         "PortfolioGroupIdList.ReferenceListTypeEnum": PortfolioGroupIdList.ReferenceListTypeEnum,
-        "PortfolioGroupIdListAllOf.ReferenceListTypeEnum": PortfolioGroupIdListAllOf.ReferenceListTypeEnum,
         "PortfolioGroupIdListComplianceParameter.ComplianceParameterTypeEnum": PortfolioGroupIdListComplianceParameter.ComplianceParameterTypeEnum,
         "PortfolioIdComplianceParameter.ComplianceParameterTypeEnum": PortfolioIdComplianceParameter.ComplianceParameterTypeEnum,
         "PortfolioIdList.ReferenceListTypeEnum": PortfolioIdList.ReferenceListTypeEnum,
@@ -2990,6 +3023,7 @@ let typeMap: {[index: string]: any} = {
     "AmortisationEventAllOf": AmortisationEventAllOf,
     "AmortisationRule": AmortisationRule,
     "AmortisationRuleSet": AmortisationRuleSet,
+    "Amount": Amount,
     "AnnulQuotesResponse": AnnulQuotesResponse,
     "AnnulSingleStructuredDataResponse": AnnulSingleStructuredDataResponse,
     "AnnulStructuredDataResponse": AnnulStructuredDataResponse,
@@ -3034,6 +3068,7 @@ let typeMap: {[index: string]: any} = {
     "BranchStepAllOf": BranchStepAllOf,
     "BranchStepRequest": BranchStepRequest,
     "BranchStepRequestAllOf": BranchStepRequestAllOf,
+    "BreakCodeSource": BreakCodeSource,
     "BucketedCashFlowRequest": BucketedCashFlowRequest,
     "BucketedCashFlowResponse": BucketedCashFlowResponse,
     "BucketingSchedule": BucketingSchedule,
@@ -3129,7 +3164,6 @@ let typeMap: {[index: string]: any} = {
     "ComplianceTemplateVariationDto": ComplianceTemplateVariationDto,
     "ComplianceTemplateVariationRequest": ComplianceTemplateVariationRequest,
     "ComponentFilter": ComponentFilter,
-    "ComponentRule": ComponentRule,
     "ComponentTransaction": ComponentTransaction,
     "CompositeBreakdown": CompositeBreakdown,
     "CompositeBreakdownRequest": CompositeBreakdownRequest,
@@ -3165,6 +3199,7 @@ let typeMap: {[index: string]: any} = {
     "CreateDerivedPropertyDefinitionRequest": CreateDerivedPropertyDefinitionRequest,
     "CreateDerivedTransactionPortfolioRequest": CreateDerivedTransactionPortfolioRequest,
     "CreateGroupReconciliationComparisonRulesetRequest": CreateGroupReconciliationComparisonRulesetRequest,
+    "CreateGroupReconciliationDefinitionRequest": CreateGroupReconciliationDefinitionRequest,
     "CreatePortfolioDetails": CreatePortfolioDetails,
     "CreatePortfolioGroupRequest": CreatePortfolioGroupRequest,
     "CreatePropertyDefinitionRequest": CreatePropertyDefinitionRequest,
@@ -3331,6 +3366,8 @@ let typeMap: {[index: string]: any} = {
     "FundConfigurationProperties": FundConfigurationProperties,
     "FundConfigurationRequest": FundConfigurationRequest,
     "FundDetails": FundDetails,
+    "FundIdList": FundIdList,
+    "FundIdListAllOf": FundIdListAllOf,
     "FundPnlBreakdown": FundPnlBreakdown,
     "FundPreviousNAV": FundPreviousNAV,
     "FundProperties": FundProperties,
@@ -3414,6 +3451,11 @@ let typeMap: {[index: string]: any} = {
     "GroupReconciliationComparisonRuleset": GroupReconciliationComparisonRuleset,
     "GroupReconciliationCoreAttributeRule": GroupReconciliationCoreAttributeRule,
     "GroupReconciliationCoreComparisonRuleOperand": GroupReconciliationCoreComparisonRuleOperand,
+    "GroupReconciliationDefinition": GroupReconciliationDefinition,
+    "GroupReconciliationDefinitionComparisonRulesetIds": GroupReconciliationDefinitionComparisonRulesetIds,
+    "GroupReconciliationDefinitionCurrencies": GroupReconciliationDefinitionCurrencies,
+    "GroupReconciliationDefinitionPortfolioEntityIds": GroupReconciliationDefinitionPortfolioEntityIds,
+    "GroupReconciliationDefinitionRecipeIds": GroupReconciliationDefinitionRecipeIds,
     "GroupedResultOfAddressKey": GroupedResultOfAddressKey,
     "HoldingAdjustment": HoldingAdjustment,
     "HoldingAdjustmentWithDate": HoldingAdjustmentWithDate,
@@ -3607,6 +3649,8 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfFund": PagedResourceListOfFund,
     "PagedResourceListOfFundConfiguration": PagedResourceListOfFundConfiguration,
     "PagedResourceListOfGeneralLedgerProfileResponse": PagedResourceListOfGeneralLedgerProfileResponse,
+    "PagedResourceListOfGroupReconciliationComparisonRuleset": PagedResourceListOfGroupReconciliationComparisonRuleset,
+    "PagedResourceListOfGroupReconciliationDefinition": PagedResourceListOfGroupReconciliationDefinition,
     "PagedResourceListOfInstrument": PagedResourceListOfInstrument,
     "PagedResourceListOfInstrumentEventHolder": PagedResourceListOfInstrumentEventHolder,
     "PagedResourceListOfInstrumentEventInstruction": PagedResourceListOfInstrumentEventInstruction,
@@ -3664,7 +3708,6 @@ let typeMap: {[index: string]: any} = {
     "PortfolioGroup": PortfolioGroup,
     "PortfolioGroupIdComplianceParameter": PortfolioGroupIdComplianceParameter,
     "PortfolioGroupIdList": PortfolioGroupIdList,
-    "PortfolioGroupIdListAllOf": PortfolioGroupIdListAllOf,
     "PortfolioGroupIdListComplianceParameter": PortfolioGroupIdListComplianceParameter,
     "PortfolioGroupProperties": PortfolioGroupProperties,
     "PortfolioGroupSearchResult": PortfolioGroupSearchResult,
@@ -3882,6 +3925,7 @@ let typeMap: {[index: string]: any} = {
     "SetShareClassInstrumentsRequest": SetShareClassInstrumentsRequest,
     "SetTransactionConfigurationAlias": SetTransactionConfigurationAlias,
     "SetTransactionConfigurationSourceRequest": SetTransactionConfigurationSourceRequest,
+    "SettlementCycle": SettlementCycle,
     "SettlementSchedule": SettlementSchedule,
     "ShareClassAmount": ShareClassAmount,
     "ShareClassBreakdown": ShareClassBreakdown,
@@ -3949,6 +3993,7 @@ let typeMap: {[index: string]: any} = {
     "TransactionConfigurationMovementDataRequest": TransactionConfigurationMovementDataRequest,
     "TransactionConfigurationTypeAlias": TransactionConfigurationTypeAlias,
     "TransactionCurrencyAndAmount": TransactionCurrencyAndAmount,
+    "TransactionDateWindows": TransactionDateWindows,
     "TransactionDiagnostics": TransactionDiagnostics,
     "TransactionFieldMap": TransactionFieldMap,
     "TransactionPrice": TransactionPrice,
@@ -4002,6 +4047,8 @@ let typeMap: {[index: string]: any} = {
     "UpdateDataTypeRequest": UpdateDataTypeRequest,
     "UpdateDerivedPropertyDefinitionRequest": UpdateDerivedPropertyDefinitionRequest,
     "UpdateFeeTypeRequest": UpdateFeeTypeRequest,
+    "UpdateGroupReconciliationComparisonRulesetRequest": UpdateGroupReconciliationComparisonRulesetRequest,
+    "UpdateGroupReconciliationDefinitionRequest": UpdateGroupReconciliationDefinitionRequest,
     "UpdateInstrumentIdentifierRequest": UpdateInstrumentIdentifierRequest,
     "UpdateOrdersResponse": UpdateOrdersResponse,
     "UpdatePlacementsResponse": UpdatePlacementsResponse,
@@ -4046,6 +4093,8 @@ let typeMap: {[index: string]: any} = {
     "UpsertQuotesResponse": UpsertQuotesResponse,
     "UpsertRecipeComposerRequest": UpsertRecipeComposerRequest,
     "UpsertRecipeRequest": UpsertRecipeRequest,
+    "UpsertReferencePortfolioConstituentPropertiesRequest": UpsertReferencePortfolioConstituentPropertiesRequest,
+    "UpsertReferencePortfolioConstituentPropertiesResponse": UpsertReferencePortfolioConstituentPropertiesResponse,
     "UpsertReferencePortfolioConstituentsRequest": UpsertReferencePortfolioConstituentsRequest,
     "UpsertReferencePortfolioConstituentsResponse": UpsertReferencePortfolioConstituentsResponse,
     "UpsertResultValuesDataRequest": UpsertResultValuesDataRequest,
