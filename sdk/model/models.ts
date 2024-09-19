@@ -616,6 +616,10 @@ export * from './marketQuote';
 export * from './matchCriterion';
 export * from './maturityEvent';
 export * from './maturityEventAllOf';
+export * from './mbsCouponEvent';
+export * from './mbsCouponEventAllOf';
+export * from './mbsPrincipalEvent';
+export * from './mbsPrincipalEventAllOf';
 export * from './mergerEvent';
 export * from './mergerEventAllOf';
 export * from './metricValue';
@@ -1860,6 +1864,10 @@ import { MarketQuote } from './marketQuote';
 import { MatchCriterion } from './matchCriterion';
 import { MaturityEvent } from './maturityEvent';
 import { MaturityEventAllOf } from './maturityEventAllOf';
+import { MbsCouponEvent } from './mbsCouponEvent';
+import { MbsCouponEventAllOf } from './mbsCouponEventAllOf';
+import { MbsPrincipalEvent } from './mbsPrincipalEvent';
+import { MbsPrincipalEventAllOf } from './mbsPrincipalEventAllOf';
 import { MergerEvent } from './mergerEvent';
 import { MergerEventAllOf } from './mergerEventAllOf';
 import { MetricValue } from './metricValue';
@@ -2777,6 +2785,10 @@ let enumsMap: {[index: string]: any} = {
         "MatchCriterion.CriterionTypeEnum": MatchCriterion.CriterionTypeEnum,
         "MaturityEvent.InstrumentEventTypeEnum": MaturityEvent.InstrumentEventTypeEnum,
         "MaturityEventAllOf.InstrumentEventTypeEnum": MaturityEventAllOf.InstrumentEventTypeEnum,
+        "MbsCouponEvent.InstrumentEventTypeEnum": MbsCouponEvent.InstrumentEventTypeEnum,
+        "MbsCouponEventAllOf.InstrumentEventTypeEnum": MbsCouponEventAllOf.InstrumentEventTypeEnum,
+        "MbsPrincipalEvent.InstrumentEventTypeEnum": MbsPrincipalEvent.InstrumentEventTypeEnum,
+        "MbsPrincipalEventAllOf.InstrumentEventTypeEnum": MbsPrincipalEventAllOf.InstrumentEventTypeEnum,
         "MergerEvent.InstrumentEventTypeEnum": MergerEvent.InstrumentEventTypeEnum,
         "MergerEventAllOf.InstrumentEventTypeEnum": MergerEventAllOf.InstrumentEventTypeEnum,
         "ModelOptions.ModelOptionsTypeEnum": ModelOptions.ModelOptionsTypeEnum,
@@ -3563,6 +3575,10 @@ let typeMap: {[index: string]: any} = {
     "MatchCriterion": MatchCriterion,
     "MaturityEvent": MaturityEvent,
     "MaturityEventAllOf": MaturityEventAllOf,
+    "MbsCouponEvent": MbsCouponEvent,
+    "MbsCouponEventAllOf": MbsCouponEventAllOf,
+    "MbsPrincipalEvent": MbsPrincipalEvent,
+    "MbsPrincipalEventAllOf": MbsPrincipalEventAllOf,
     "MergerEvent": MergerEvent,
     "MergerEventAllOf": MergerEventAllOf,
     "MetricValue": MetricValue,
