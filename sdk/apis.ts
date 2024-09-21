@@ -23,7 +23,7 @@ import {DerivedTransactionPortfoliosApi} from './api/derivedTransactionPortfolio
 import {EntitiesApi} from './api/entitiesApi';
 import {ExecutionsApi} from './api/executionsApi';
 import {FeeTypesApi} from './api/feeTypesApi';
-import {FundConfigurationEntitiesApi} from './api/fundConfigurationEntitiesApi';
+import {FundConfigurationApi} from './api/fundConfigurationApi';
 import {FundsApi} from './api/fundsApi';
 import {GroupReconciliationsApi} from './api/groupReconciliationsApi';
 import {InstrumentEventTypesApi} from './api/instrumentEventTypesApi';
@@ -93,7 +93,7 @@ export class Api {
     public entities:  EntitiesApi
     public executions:  ExecutionsApi
     public feeTypes:  FeeTypesApi
-    public fundConfigurationEntities:  FundConfigurationEntitiesApi
+    public fundConfiguration:  FundConfigurationApi
     public funds:  FundsApi
     public groupReconciliations:  GroupReconciliationsApi
     public instrumentEventTypes:  InstrumentEventTypesApi

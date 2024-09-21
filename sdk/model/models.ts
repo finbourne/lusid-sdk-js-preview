@@ -70,6 +70,7 @@ export * from './basket';
 export * from './basketAllOf';
 export * from './basketIdentifier';
 export * from './batchAdjustHoldingsResponse';
+export * from './batchUpsertDatesForCalendarResponse';
 export * from './batchUpsertInstrumentPropertiesResponse';
 export * from './batchUpsertPortfolioAccessMetadataRequest';
 export * from './batchUpsertPortfolioAccessMetadataResponse';
@@ -1145,6 +1146,7 @@ export * from './updatePortfolioGroupRequest';
 export * from './updatePortfolioRequest';
 export * from './updatePropertyDefinitionRequest';
 export * from './updateReconciliationRequest';
+export * from './updateReferenceDataRequest';
 export * from './updateRelationshipDefinitionRequest';
 export * from './updateStagingRuleSetRequest';
 export * from './updateTaxRuleSetRequest';
@@ -1318,6 +1320,7 @@ import { Basket } from './basket';
 import { BasketAllOf } from './basketAllOf';
 import { BasketIdentifier } from './basketIdentifier';
 import { BatchAdjustHoldingsResponse } from './batchAdjustHoldingsResponse';
+import { BatchUpsertDatesForCalendarResponse } from './batchUpsertDatesForCalendarResponse';
 import { BatchUpsertInstrumentPropertiesResponse } from './batchUpsertInstrumentPropertiesResponse';
 import { BatchUpsertPortfolioAccessMetadataRequest } from './batchUpsertPortfolioAccessMetadataRequest';
 import { BatchUpsertPortfolioAccessMetadataResponse } from './batchUpsertPortfolioAccessMetadataResponse';
@@ -2393,6 +2396,7 @@ import { UpdatePortfolioGroupRequest } from './updatePortfolioGroupRequest';
 import { UpdatePortfolioRequest } from './updatePortfolioRequest';
 import { UpdatePropertyDefinitionRequest } from './updatePropertyDefinitionRequest';
 import { UpdateReconciliationRequest } from './updateReconciliationRequest';
+import { UpdateReferenceDataRequest } from './updateReferenceDataRequest';
 import { UpdateRelationshipDefinitionRequest } from './updateRelationshipDefinitionRequest';
 import { UpdateStagingRuleSetRequest } from './updateStagingRuleSetRequest';
 import { UpdateTaxRuleSetRequest } from './updateTaxRuleSetRequest';
@@ -3046,6 +3050,7 @@ let typeMap: {[index: string]: any} = {
     "BasketAllOf": BasketAllOf,
     "BasketIdentifier": BasketIdentifier,
     "BatchAdjustHoldingsResponse": BatchAdjustHoldingsResponse,
+    "BatchUpsertDatesForCalendarResponse": BatchUpsertDatesForCalendarResponse,
     "BatchUpsertInstrumentPropertiesResponse": BatchUpsertInstrumentPropertiesResponse,
     "BatchUpsertPortfolioAccessMetadataRequest": BatchUpsertPortfolioAccessMetadataRequest,
     "BatchUpsertPortfolioAccessMetadataResponse": BatchUpsertPortfolioAccessMetadataResponse,
@@ -4072,6 +4077,7 @@ let typeMap: {[index: string]: any} = {
     "UpdatePortfolioRequest": UpdatePortfolioRequest,
     "UpdatePropertyDefinitionRequest": UpdatePropertyDefinitionRequest,
     "UpdateReconciliationRequest": UpdateReconciliationRequest,
+    "UpdateReferenceDataRequest": UpdateReferenceDataRequest,
     "UpdateRelationshipDefinitionRequest": UpdateRelationshipDefinitionRequest,
     "UpdateStagingRuleSetRequest": UpdateStagingRuleSetRequest,
     "UpdateTaxRuleSetRequest": UpdateTaxRuleSetRequest,
