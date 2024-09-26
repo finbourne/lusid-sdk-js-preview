@@ -96,6 +96,8 @@ export * from './bondDefaultEvent';
 export * from './bondDefaultEventAllOf';
 export * from './bondPrincipalEvent';
 export * from './bondPrincipalEventAllOf';
+export * from './bonusIssueEvent';
+export * from './bonusIssueEventAllOf';
 export * from './bookTransactionsRequest';
 export * from './bookTransactionsResponse';
 export * from './boolComplianceParameter';
@@ -152,6 +154,7 @@ export * from './cdxCreditEventAllOf';
 export * from './change';
 export * from './changeHistory';
 export * from './changeHistoryAction';
+export * from './changeInterval';
 export * from './changeIntervalWithOrderManagementDetail';
 export * from './changeItem';
 export * from './chartOfAccounts';
@@ -336,6 +339,7 @@ export * from './economicDependency';
 export * from './economicDependencyType';
 export * from './economicDependencyWithComplexMarketData';
 export * from './economicDependencyWithQuote';
+export * from './effectiveRange';
 export * from './electionSpecification';
 export * from './eligibilityCalculation';
 export * from './emptyModelOptions';
@@ -582,6 +586,7 @@ export * from './isBusinessDayResponse';
 export * from './journalEntryLine';
 export * from './journalEntryLinesQueryParameters';
 export * from './labelValueSet';
+export * from './lapseElection';
 export * from './legDefinition';
 export * from './legalEntity';
 export * from './levelStep';
@@ -614,6 +619,8 @@ export * from './marketDataType';
 export * from './marketObservableType';
 export * from './marketOptions';
 export * from './marketQuote';
+export * from './masteredInstrument';
+export * from './masteredInstrumentAllOf';
 export * from './matchCriterion';
 export * from './maturityEvent';
 export * from './maturityEventAllOf';
@@ -903,6 +910,7 @@ export * from './resourceListOfBlockAndOrders';
 export * from './resourceListOfCalendarDate';
 export * from './resourceListOfChange';
 export * from './resourceListOfChangeHistory';
+export * from './resourceListOfChangeInterval';
 export * from './resourceListOfChangeIntervalWithOrderManagementDetail';
 export * from './resourceListOfComplianceBreachedOrderInfo';
 export * from './resourceListOfComplianceRule';
@@ -1346,6 +1354,8 @@ import { BondDefaultEvent } from './bondDefaultEvent';
 import { BondDefaultEventAllOf } from './bondDefaultEventAllOf';
 import { BondPrincipalEvent } from './bondPrincipalEvent';
 import { BondPrincipalEventAllOf } from './bondPrincipalEventAllOf';
+import { BonusIssueEvent } from './bonusIssueEvent';
+import { BonusIssueEventAllOf } from './bonusIssueEventAllOf';
 import { BookTransactionsRequest } from './bookTransactionsRequest';
 import { BookTransactionsResponse } from './bookTransactionsResponse';
 import { BoolComplianceParameter } from './boolComplianceParameter';
@@ -1402,6 +1412,7 @@ import { CdxCreditEventAllOf } from './cdxCreditEventAllOf';
 import { Change } from './change';
 import { ChangeHistory } from './changeHistory';
 import { ChangeHistoryAction } from './changeHistoryAction';
+import { ChangeInterval } from './changeInterval';
 import { ChangeIntervalWithOrderManagementDetail } from './changeIntervalWithOrderManagementDetail';
 import { ChangeItem } from './changeItem';
 import { ChartOfAccounts } from './chartOfAccounts';
@@ -1586,6 +1597,7 @@ import { EconomicDependency } from './economicDependency';
 import { EconomicDependencyType } from './economicDependencyType';
 import { EconomicDependencyWithComplexMarketData } from './economicDependencyWithComplexMarketData';
 import { EconomicDependencyWithQuote } from './economicDependencyWithQuote';
+import { EffectiveRange } from './effectiveRange';
 import { ElectionSpecification } from './electionSpecification';
 import { EligibilityCalculation } from './eligibilityCalculation';
 import { EmptyModelOptions } from './emptyModelOptions';
@@ -1832,6 +1844,7 @@ import { IsBusinessDayResponse } from './isBusinessDayResponse';
 import { JournalEntryLine } from './journalEntryLine';
 import { JournalEntryLinesQueryParameters } from './journalEntryLinesQueryParameters';
 import { LabelValueSet } from './labelValueSet';
+import { LapseElection } from './lapseElection';
 import { LegDefinition } from './legDefinition';
 import { LegalEntity } from './legalEntity';
 import { LevelStep } from './levelStep';
@@ -1864,6 +1877,8 @@ import { MarketDataType } from './marketDataType';
 import { MarketObservableType } from './marketObservableType';
 import { MarketOptions } from './marketOptions';
 import { MarketQuote } from './marketQuote';
+import { MasteredInstrument } from './masteredInstrument';
+import { MasteredInstrumentAllOf } from './masteredInstrumentAllOf';
 import { MatchCriterion } from './matchCriterion';
 import { MaturityEvent } from './maturityEvent';
 import { MaturityEventAllOf } from './maturityEventAllOf';
@@ -2153,6 +2168,7 @@ import { ResourceListOfBlockAndOrders } from './resourceListOfBlockAndOrders';
 import { ResourceListOfCalendarDate } from './resourceListOfCalendarDate';
 import { ResourceListOfChange } from './resourceListOfChange';
 import { ResourceListOfChangeHistory } from './resourceListOfChangeHistory';
+import { ResourceListOfChangeInterval } from './resourceListOfChangeInterval';
 import { ResourceListOfChangeIntervalWithOrderManagementDetail } from './resourceListOfChangeIntervalWithOrderManagementDetail';
 import { ResourceListOfComplianceBreachedOrderInfo } from './resourceListOfComplianceBreachedOrderInfo';
 import { ResourceListOfComplianceRule } from './resourceListOfComplianceRule';
@@ -2532,6 +2548,8 @@ let enumsMap: {[index: string]: any} = {
         "BondDefaultEventAllOf.InstrumentEventTypeEnum": BondDefaultEventAllOf.InstrumentEventTypeEnum,
         "BondPrincipalEvent.InstrumentEventTypeEnum": BondPrincipalEvent.InstrumentEventTypeEnum,
         "BondPrincipalEventAllOf.InstrumentEventTypeEnum": BondPrincipalEventAllOf.InstrumentEventTypeEnum,
+        "BonusIssueEvent.InstrumentEventTypeEnum": BonusIssueEvent.InstrumentEventTypeEnum,
+        "BonusIssueEventAllOf.InstrumentEventTypeEnum": BonusIssueEventAllOf.InstrumentEventTypeEnum,
         "BoolComplianceParameter.ComplianceParameterTypeEnum": BoolComplianceParameter.ComplianceParameterTypeEnum,
         "BoolComplianceParameterAllOf.ComplianceParameterTypeEnum": BoolComplianceParameterAllOf.ComplianceParameterTypeEnum,
         "BoolListComplianceParameter.ComplianceParameterTypeEnum": BoolListComplianceParameter.ComplianceParameterTypeEnum,
@@ -2786,6 +2804,8 @@ let enumsMap: {[index: string]: any} = {
         "MarketDataType": MarketDataType,
         "MarketObservableType": MarketObservableType,
         "MarketQuote.QuoteTypeEnum": MarketQuote.QuoteTypeEnum,
+        "MasteredInstrument.InstrumentTypeEnum": MasteredInstrument.InstrumentTypeEnum,
+        "MasteredInstrumentAllOf.InstrumentTypeEnum": MasteredInstrumentAllOf.InstrumentTypeEnum,
         "MatchCriterion.CriterionTypeEnum": MatchCriterion.CriterionTypeEnum,
         "MaturityEvent.InstrumentEventTypeEnum": MaturityEvent.InstrumentEventTypeEnum,
         "MaturityEventAllOf.InstrumentEventTypeEnum": MaturityEventAllOf.InstrumentEventTypeEnum,
@@ -3076,6 +3096,8 @@ let typeMap: {[index: string]: any} = {
     "BondDefaultEventAllOf": BondDefaultEventAllOf,
     "BondPrincipalEvent": BondPrincipalEvent,
     "BondPrincipalEventAllOf": BondPrincipalEventAllOf,
+    "BonusIssueEvent": BonusIssueEvent,
+    "BonusIssueEventAllOf": BonusIssueEventAllOf,
     "BookTransactionsRequest": BookTransactionsRequest,
     "BookTransactionsResponse": BookTransactionsResponse,
     "BoolComplianceParameter": BoolComplianceParameter,
@@ -3131,6 +3153,7 @@ let typeMap: {[index: string]: any} = {
     "CdxCreditEventAllOf": CdxCreditEventAllOf,
     "Change": Change,
     "ChangeHistory": ChangeHistory,
+    "ChangeInterval": ChangeInterval,
     "ChangeIntervalWithOrderManagementDetail": ChangeIntervalWithOrderManagementDetail,
     "ChangeItem": ChangeItem,
     "ChartOfAccounts": ChartOfAccounts,
@@ -3305,6 +3328,7 @@ let typeMap: {[index: string]: any} = {
     "EconomicDependency": EconomicDependency,
     "EconomicDependencyWithComplexMarketData": EconomicDependencyWithComplexMarketData,
     "EconomicDependencyWithQuote": EconomicDependencyWithQuote,
+    "EffectiveRange": EffectiveRange,
     "ElectionSpecification": ElectionSpecification,
     "EligibilityCalculation": EligibilityCalculation,
     "EmptyModelOptions": EmptyModelOptions,
@@ -3548,6 +3572,7 @@ let typeMap: {[index: string]: any} = {
     "JournalEntryLine": JournalEntryLine,
     "JournalEntryLinesQueryParameters": JournalEntryLinesQueryParameters,
     "LabelValueSet": LabelValueSet,
+    "LapseElection": LapseElection,
     "LegDefinition": LegDefinition,
     "LegalEntity": LegalEntity,
     "LevelStep": LevelStep,
@@ -3577,6 +3602,8 @@ let typeMap: {[index: string]: any} = {
     "MarketDataSpecificRule": MarketDataSpecificRule,
     "MarketOptions": MarketOptions,
     "MarketQuote": MarketQuote,
+    "MasteredInstrument": MasteredInstrument,
+    "MasteredInstrumentAllOf": MasteredInstrumentAllOf,
     "MatchCriterion": MatchCriterion,
     "MaturityEvent": MaturityEvent,
     "MaturityEventAllOf": MaturityEventAllOf,
@@ -3847,6 +3874,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfCalendarDate": ResourceListOfCalendarDate,
     "ResourceListOfChange": ResourceListOfChange,
     "ResourceListOfChangeHistory": ResourceListOfChangeHistory,
+    "ResourceListOfChangeInterval": ResourceListOfChangeInterval,
     "ResourceListOfChangeIntervalWithOrderManagementDetail": ResourceListOfChangeIntervalWithOrderManagementDetail,
     "ResourceListOfComplianceBreachedOrderInfo": ResourceListOfComplianceBreachedOrderInfo,
     "ResourceListOfComplianceRule": ResourceListOfComplianceRule,
