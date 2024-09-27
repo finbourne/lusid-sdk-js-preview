@@ -626,8 +626,12 @@ export * from './maturityEvent';
 export * from './maturityEventAllOf';
 export * from './mbsCouponEvent';
 export * from './mbsCouponEventAllOf';
+export * from './mbsInterestDeferralEvent';
+export * from './mbsInterestDeferralEventAllOf';
 export * from './mbsPrincipalEvent';
 export * from './mbsPrincipalEventAllOf';
+export * from './mbsPrincipalWriteOffEvent';
+export * from './mbsPrincipalWriteOffEventAllOf';
 export * from './mergerEvent';
 export * from './mergerEventAllOf';
 export * from './metricValue';
@@ -1031,6 +1035,7 @@ export * from './simpleCashFlowLoan';
 export * from './simpleCashFlowLoanAllOf';
 export * from './simpleInstrument';
 export * from './simpleInstrumentAllOf';
+export * from './simpleRoundingConvention';
 export * from './sortOrder';
 export * from './specificHoldingPricingInfo';
 export * from './spinOffEvent';
@@ -1884,8 +1889,12 @@ import { MaturityEvent } from './maturityEvent';
 import { MaturityEventAllOf } from './maturityEventAllOf';
 import { MbsCouponEvent } from './mbsCouponEvent';
 import { MbsCouponEventAllOf } from './mbsCouponEventAllOf';
+import { MbsInterestDeferralEvent } from './mbsInterestDeferralEvent';
+import { MbsInterestDeferralEventAllOf } from './mbsInterestDeferralEventAllOf';
 import { MbsPrincipalEvent } from './mbsPrincipalEvent';
 import { MbsPrincipalEventAllOf } from './mbsPrincipalEventAllOf';
+import { MbsPrincipalWriteOffEvent } from './mbsPrincipalWriteOffEvent';
+import { MbsPrincipalWriteOffEventAllOf } from './mbsPrincipalWriteOffEventAllOf';
 import { MergerEvent } from './mergerEvent';
 import { MergerEventAllOf } from './mergerEventAllOf';
 import { MetricValue } from './metricValue';
@@ -2289,6 +2298,7 @@ import { SimpleCashFlowLoan } from './simpleCashFlowLoan';
 import { SimpleCashFlowLoanAllOf } from './simpleCashFlowLoanAllOf';
 import { SimpleInstrument } from './simpleInstrument';
 import { SimpleInstrumentAllOf } from './simpleInstrumentAllOf';
+import { SimpleRoundingConvention } from './simpleRoundingConvention';
 import { SortOrder } from './sortOrder';
 import { SpecificHoldingPricingInfo } from './specificHoldingPricingInfo';
 import { SpinOffEvent } from './spinOffEvent';
@@ -2811,8 +2821,12 @@ let enumsMap: {[index: string]: any} = {
         "MaturityEventAllOf.InstrumentEventTypeEnum": MaturityEventAllOf.InstrumentEventTypeEnum,
         "MbsCouponEvent.InstrumentEventTypeEnum": MbsCouponEvent.InstrumentEventTypeEnum,
         "MbsCouponEventAllOf.InstrumentEventTypeEnum": MbsCouponEventAllOf.InstrumentEventTypeEnum,
+        "MbsInterestDeferralEvent.InstrumentEventTypeEnum": MbsInterestDeferralEvent.InstrumentEventTypeEnum,
+        "MbsInterestDeferralEventAllOf.InstrumentEventTypeEnum": MbsInterestDeferralEventAllOf.InstrumentEventTypeEnum,
         "MbsPrincipalEvent.InstrumentEventTypeEnum": MbsPrincipalEvent.InstrumentEventTypeEnum,
         "MbsPrincipalEventAllOf.InstrumentEventTypeEnum": MbsPrincipalEventAllOf.InstrumentEventTypeEnum,
+        "MbsPrincipalWriteOffEvent.InstrumentEventTypeEnum": MbsPrincipalWriteOffEvent.InstrumentEventTypeEnum,
+        "MbsPrincipalWriteOffEventAllOf.InstrumentEventTypeEnum": MbsPrincipalWriteOffEventAllOf.InstrumentEventTypeEnum,
         "MergerEvent.InstrumentEventTypeEnum": MergerEvent.InstrumentEventTypeEnum,
         "MergerEventAllOf.InstrumentEventTypeEnum": MergerEventAllOf.InstrumentEventTypeEnum,
         "ModelOptions.ModelOptionsTypeEnum": ModelOptions.ModelOptionsTypeEnum,
@@ -3609,8 +3623,12 @@ let typeMap: {[index: string]: any} = {
     "MaturityEventAllOf": MaturityEventAllOf,
     "MbsCouponEvent": MbsCouponEvent,
     "MbsCouponEventAllOf": MbsCouponEventAllOf,
+    "MbsInterestDeferralEvent": MbsInterestDeferralEvent,
+    "MbsInterestDeferralEventAllOf": MbsInterestDeferralEventAllOf,
     "MbsPrincipalEvent": MbsPrincipalEvent,
     "MbsPrincipalEventAllOf": MbsPrincipalEventAllOf,
+    "MbsPrincipalWriteOffEvent": MbsPrincipalWriteOffEvent,
+    "MbsPrincipalWriteOffEventAllOf": MbsPrincipalWriteOffEventAllOf,
     "MergerEvent": MergerEvent,
     "MergerEventAllOf": MergerEventAllOf,
     "MetricValue": MetricValue,
@@ -3991,6 +4009,7 @@ let typeMap: {[index: string]: any} = {
     "SimpleCashFlowLoanAllOf": SimpleCashFlowLoanAllOf,
     "SimpleInstrument": SimpleInstrument,
     "SimpleInstrumentAllOf": SimpleInstrumentAllOf,
+    "SimpleRoundingConvention": SimpleRoundingConvention,
     "SpecificHoldingPricingInfo": SpecificHoldingPricingInfo,
     "SpinOffEvent": SpinOffEvent,
     "SpinOffEventAllOf": SpinOffEventAllOf,
