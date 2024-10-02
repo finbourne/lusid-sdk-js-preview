@@ -516,6 +516,7 @@ export * from './holdingAdjustment';
 export * from './holdingAdjustmentWithDate';
 export * from './holdingContext';
 export * from './holdingContributor';
+export * from './holdingIdsRequest';
 export * from './holdingPricingInfo';
 export * from './holdingsAdjustment';
 export * from './holdingsAdjustmentHeader';
@@ -601,6 +602,8 @@ export * from './link';
 export * from './listAggregationReconciliation';
 export * from './listAggregationResponse';
 export * from './listComplexMarketDataWithMetaDataResponse';
+export * from './loanFacility';
+export * from './loanFacilityAllOf';
 export * from './loanPeriod';
 export * from './lockPeriodDiaryEntryRequest';
 export * from './lusidInstrument';
@@ -1782,6 +1785,7 @@ import { HoldingAdjustment } from './holdingAdjustment';
 import { HoldingAdjustmentWithDate } from './holdingAdjustmentWithDate';
 import { HoldingContext } from './holdingContext';
 import { HoldingContributor } from './holdingContributor';
+import { HoldingIdsRequest } from './holdingIdsRequest';
 import { HoldingPricingInfo } from './holdingPricingInfo';
 import { HoldingsAdjustment } from './holdingsAdjustment';
 import { HoldingsAdjustmentHeader } from './holdingsAdjustmentHeader';
@@ -1867,6 +1871,8 @@ import { Link } from './link';
 import { ListAggregationReconciliation } from './listAggregationReconciliation';
 import { ListAggregationResponse } from './listAggregationResponse';
 import { ListComplexMarketDataWithMetaDataResponse } from './listComplexMarketDataWithMetaDataResponse';
+import { LoanFacility } from './loanFacility';
+import { LoanFacilityAllOf } from './loanFacilityAllOf';
 import { LoanPeriod } from './loanPeriod';
 import { LockPeriodDiaryEntryRequest } from './lockPeriodDiaryEntryRequest';
 import { LusidInstrument } from './lusidInstrument';
@@ -2811,6 +2817,8 @@ let enumsMap: {[index: string]: any} = {
         "IrVolDependencyAllOf.DependencyTypeEnum": IrVolDependencyAllOf.DependencyTypeEnum,
         "LifeCycleEventValue.ResultValueTypeEnum": LifeCycleEventValue.ResultValueTypeEnum,
         "LifeCycleEventValueAllOf.ResultValueTypeEnum": LifeCycleEventValueAllOf.ResultValueTypeEnum,
+        "LoanFacility.InstrumentTypeEnum": LoanFacility.InstrumentTypeEnum,
+        "LoanFacilityAllOf.InstrumentTypeEnum": LoanFacilityAllOf.InstrumentTypeEnum,
         "LusidInstrument.InstrumentTypeEnum": LusidInstrument.InstrumentTypeEnum,
         "LusidTradeTicket.TradeTicketTypeEnum": LusidTradeTicket.TradeTicketTypeEnum,
         "MarketDataKeyRule.QuoteTypeEnum": MarketDataKeyRule.QuoteTypeEnum,
@@ -3525,6 +3533,7 @@ let typeMap: {[index: string]: any} = {
     "HoldingAdjustmentWithDate": HoldingAdjustmentWithDate,
     "HoldingContext": HoldingContext,
     "HoldingContributor": HoldingContributor,
+    "HoldingIdsRequest": HoldingIdsRequest,
     "HoldingPricingInfo": HoldingPricingInfo,
     "HoldingsAdjustment": HoldingsAdjustment,
     "HoldingsAdjustmentHeader": HoldingsAdjustmentHeader,
@@ -3607,6 +3616,8 @@ let typeMap: {[index: string]: any} = {
     "ListAggregationReconciliation": ListAggregationReconciliation,
     "ListAggregationResponse": ListAggregationResponse,
     "ListComplexMarketDataWithMetaDataResponse": ListComplexMarketDataWithMetaDataResponse,
+    "LoanFacility": LoanFacility,
+    "LoanFacilityAllOf": LoanFacilityAllOf,
     "LoanPeriod": LoanPeriod,
     "LockPeriodDiaryEntryRequest": LockPeriodDiaryEntryRequest,
     "LusidInstrument": LusidInstrument,
