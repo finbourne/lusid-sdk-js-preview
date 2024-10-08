@@ -116,6 +116,8 @@ export * from './calendar';
 export * from './calendarDate';
 export * from './calendarDependency';
 export * from './calendarDependencyAllOf';
+export * from './callOnIntermediateSecuritiesEvent';
+export * from './callOnIntermediateSecuritiesEventAllOf';
 export * from './cancelOrderAndMoveRemainingResult';
 export * from './cancelOrdersAndMoveRemainingRequest';
 export * from './cancelOrdersAndMoveRemainingResponse';
@@ -175,6 +177,7 @@ export * from './client';
 export * from './closeEvent';
 export * from './closeEventAllOf';
 export * from './closePeriodDiaryEntryRequest';
+export * from './comparisonAttributeValuePair';
 export * from './completePortfolio';
 export * from './completeRelation';
 export * from './completeRelationship';
@@ -500,17 +503,27 @@ export * from './groupFilterStepAllOf';
 export * from './groupFilterStepRequest';
 export * from './groupOfMarketDataKeyRules';
 export * from './groupReconciliationAggregateAttributeRule';
+export * from './groupReconciliationAggregateAttributeValues';
 export * from './groupReconciliationAggregateComparisonRuleOperand';
+export * from './groupReconciliationComparisonResult';
 export * from './groupReconciliationComparisonRuleStringValueMap';
 export * from './groupReconciliationComparisonRuleTolerance';
 export * from './groupReconciliationComparisonRuleset';
 export * from './groupReconciliationCoreAttributeRule';
+export * from './groupReconciliationCoreAttributeValues';
 export * from './groupReconciliationCoreComparisonRuleOperand';
+export * from './groupReconciliationDatePair';
+export * from './groupReconciliationDates';
 export * from './groupReconciliationDefinition';
 export * from './groupReconciliationDefinitionComparisonRulesetIds';
 export * from './groupReconciliationDefinitionCurrencies';
 export * from './groupReconciliationDefinitionPortfolioEntityIds';
 export * from './groupReconciliationDefinitionRecipeIds';
+export * from './groupReconciliationInstanceId';
+export * from './groupReconciliationUserReview';
+export * from './groupReconciliationUserReviewBreakCode';
+export * from './groupReconciliationUserReviewComment';
+export * from './groupReconciliationUserReviewMatchKey';
 export * from './groupedResultOfAddressKey';
 export * from './holdingAdjustment';
 export * from './holdingAdjustmentWithDate';
@@ -666,6 +679,7 @@ export * from './operation';
 export * from './operationType';
 export * from './operator';
 export * from './optionEntry';
+export * from './optionExerciseElection';
 export * from './optionalitySchedule';
 export * from './optionalityScheduleAllOf';
 export * from './order';
@@ -732,6 +746,7 @@ export * from './pagedResourceListOfFeeType';
 export * from './pagedResourceListOfFund';
 export * from './pagedResourceListOfFundConfiguration';
 export * from './pagedResourceListOfGeneralLedgerProfileResponse';
+export * from './pagedResourceListOfGroupReconciliationComparisonResult';
 export * from './pagedResourceListOfGroupReconciliationComparisonRuleset';
 export * from './pagedResourceListOfGroupReconciliationDefinition';
 export * from './pagedResourceListOfInstrument';
@@ -1389,6 +1404,8 @@ import { Calendar } from './calendar';
 import { CalendarDate } from './calendarDate';
 import { CalendarDependency } from './calendarDependency';
 import { CalendarDependencyAllOf } from './calendarDependencyAllOf';
+import { CallOnIntermediateSecuritiesEvent } from './callOnIntermediateSecuritiesEvent';
+import { CallOnIntermediateSecuritiesEventAllOf } from './callOnIntermediateSecuritiesEventAllOf';
 import { CancelOrderAndMoveRemainingResult } from './cancelOrderAndMoveRemainingResult';
 import { CancelOrdersAndMoveRemainingRequest } from './cancelOrdersAndMoveRemainingRequest';
 import { CancelOrdersAndMoveRemainingResponse } from './cancelOrdersAndMoveRemainingResponse';
@@ -1448,6 +1465,7 @@ import { Client } from './client';
 import { CloseEvent } from './closeEvent';
 import { CloseEventAllOf } from './closeEventAllOf';
 import { ClosePeriodDiaryEntryRequest } from './closePeriodDiaryEntryRequest';
+import { ComparisonAttributeValuePair } from './comparisonAttributeValuePair';
 import { CompletePortfolio } from './completePortfolio';
 import { CompleteRelation } from './completeRelation';
 import { CompleteRelationship } from './completeRelationship';
@@ -1773,17 +1791,27 @@ import { GroupFilterStepAllOf } from './groupFilterStepAllOf';
 import { GroupFilterStepRequest } from './groupFilterStepRequest';
 import { GroupOfMarketDataKeyRules } from './groupOfMarketDataKeyRules';
 import { GroupReconciliationAggregateAttributeRule } from './groupReconciliationAggregateAttributeRule';
+import { GroupReconciliationAggregateAttributeValues } from './groupReconciliationAggregateAttributeValues';
 import { GroupReconciliationAggregateComparisonRuleOperand } from './groupReconciliationAggregateComparisonRuleOperand';
+import { GroupReconciliationComparisonResult } from './groupReconciliationComparisonResult';
 import { GroupReconciliationComparisonRuleStringValueMap } from './groupReconciliationComparisonRuleStringValueMap';
 import { GroupReconciliationComparisonRuleTolerance } from './groupReconciliationComparisonRuleTolerance';
 import { GroupReconciliationComparisonRuleset } from './groupReconciliationComparisonRuleset';
 import { GroupReconciliationCoreAttributeRule } from './groupReconciliationCoreAttributeRule';
+import { GroupReconciliationCoreAttributeValues } from './groupReconciliationCoreAttributeValues';
 import { GroupReconciliationCoreComparisonRuleOperand } from './groupReconciliationCoreComparisonRuleOperand';
+import { GroupReconciliationDatePair } from './groupReconciliationDatePair';
+import { GroupReconciliationDates } from './groupReconciliationDates';
 import { GroupReconciliationDefinition } from './groupReconciliationDefinition';
 import { GroupReconciliationDefinitionComparisonRulesetIds } from './groupReconciliationDefinitionComparisonRulesetIds';
 import { GroupReconciliationDefinitionCurrencies } from './groupReconciliationDefinitionCurrencies';
 import { GroupReconciliationDefinitionPortfolioEntityIds } from './groupReconciliationDefinitionPortfolioEntityIds';
 import { GroupReconciliationDefinitionRecipeIds } from './groupReconciliationDefinitionRecipeIds';
+import { GroupReconciliationInstanceId } from './groupReconciliationInstanceId';
+import { GroupReconciliationUserReview } from './groupReconciliationUserReview';
+import { GroupReconciliationUserReviewBreakCode } from './groupReconciliationUserReviewBreakCode';
+import { GroupReconciliationUserReviewComment } from './groupReconciliationUserReviewComment';
+import { GroupReconciliationUserReviewMatchKey } from './groupReconciliationUserReviewMatchKey';
 import { GroupedResultOfAddressKey } from './groupedResultOfAddressKey';
 import { HoldingAdjustment } from './holdingAdjustment';
 import { HoldingAdjustmentWithDate } from './holdingAdjustmentWithDate';
@@ -1939,6 +1967,7 @@ import { Operation } from './operation';
 import { OperationType } from './operationType';
 import { Operator } from './operator';
 import { OptionEntry } from './optionEntry';
+import { OptionExerciseElection } from './optionExerciseElection';
 import { OptionalitySchedule } from './optionalitySchedule';
 import { OptionalityScheduleAllOf } from './optionalityScheduleAllOf';
 import { Order } from './order';
@@ -2005,6 +2034,7 @@ import { PagedResourceListOfFeeType } from './pagedResourceListOfFeeType';
 import { PagedResourceListOfFund } from './pagedResourceListOfFund';
 import { PagedResourceListOfFundConfiguration } from './pagedResourceListOfFundConfiguration';
 import { PagedResourceListOfGeneralLedgerProfileResponse } from './pagedResourceListOfGeneralLedgerProfileResponse';
+import { PagedResourceListOfGroupReconciliationComparisonResult } from './pagedResourceListOfGroupReconciliationComparisonResult';
 import { PagedResourceListOfGroupReconciliationComparisonRuleset } from './pagedResourceListOfGroupReconciliationComparisonRuleset';
 import { PagedResourceListOfGroupReconciliationDefinition } from './pagedResourceListOfGroupReconciliationDefinition';
 import { PagedResourceListOfInstrument } from './pagedResourceListOfInstrument';
@@ -2589,6 +2619,8 @@ let enumsMap: {[index: string]: any} = {
         "BranchStepRequestAllOf.ComplianceStepTypeRequestEnum": BranchStepRequestAllOf.ComplianceStepTypeRequestEnum,
         "CalendarDependency.DependencyTypeEnum": CalendarDependency.DependencyTypeEnum,
         "CalendarDependencyAllOf.DependencyTypeEnum": CalendarDependencyAllOf.DependencyTypeEnum,
+        "CallOnIntermediateSecuritiesEvent.InstrumentEventTypeEnum": CallOnIntermediateSecuritiesEvent.InstrumentEventTypeEnum,
+        "CallOnIntermediateSecuritiesEventAllOf.InstrumentEventTypeEnum": CallOnIntermediateSecuritiesEventAllOf.InstrumentEventTypeEnum,
         "CapFloor.InstrumentTypeEnum": CapFloor.InstrumentTypeEnum,
         "CapFloorAllOf.InstrumentTypeEnum": CapFloorAllOf.InstrumentTypeEnum,
         "CapitalDistributionEvent.InstrumentEventTypeEnum": CapitalDistributionEvent.InstrumentEventTypeEnum,
@@ -3156,6 +3188,8 @@ let typeMap: {[index: string]: any} = {
     "CalendarDate": CalendarDate,
     "CalendarDependency": CalendarDependency,
     "CalendarDependencyAllOf": CalendarDependencyAllOf,
+    "CallOnIntermediateSecuritiesEvent": CallOnIntermediateSecuritiesEvent,
+    "CallOnIntermediateSecuritiesEventAllOf": CallOnIntermediateSecuritiesEventAllOf,
     "CancelOrderAndMoveRemainingResult": CancelOrderAndMoveRemainingResult,
     "CancelOrdersAndMoveRemainingRequest": CancelOrdersAndMoveRemainingRequest,
     "CancelOrdersAndMoveRemainingResponse": CancelOrdersAndMoveRemainingResponse,
@@ -3214,6 +3248,7 @@ let typeMap: {[index: string]: any} = {
     "CloseEvent": CloseEvent,
     "CloseEventAllOf": CloseEventAllOf,
     "ClosePeriodDiaryEntryRequest": ClosePeriodDiaryEntryRequest,
+    "ComparisonAttributeValuePair": ComparisonAttributeValuePair,
     "CompletePortfolio": CompletePortfolio,
     "CompleteRelation": CompleteRelation,
     "CompleteRelationship": CompleteRelationship,
@@ -3529,17 +3564,27 @@ let typeMap: {[index: string]: any} = {
     "GroupFilterStepRequest": GroupFilterStepRequest,
     "GroupOfMarketDataKeyRules": GroupOfMarketDataKeyRules,
     "GroupReconciliationAggregateAttributeRule": GroupReconciliationAggregateAttributeRule,
+    "GroupReconciliationAggregateAttributeValues": GroupReconciliationAggregateAttributeValues,
     "GroupReconciliationAggregateComparisonRuleOperand": GroupReconciliationAggregateComparisonRuleOperand,
+    "GroupReconciliationComparisonResult": GroupReconciliationComparisonResult,
     "GroupReconciliationComparisonRuleStringValueMap": GroupReconciliationComparisonRuleStringValueMap,
     "GroupReconciliationComparisonRuleTolerance": GroupReconciliationComparisonRuleTolerance,
     "GroupReconciliationComparisonRuleset": GroupReconciliationComparisonRuleset,
     "GroupReconciliationCoreAttributeRule": GroupReconciliationCoreAttributeRule,
+    "GroupReconciliationCoreAttributeValues": GroupReconciliationCoreAttributeValues,
     "GroupReconciliationCoreComparisonRuleOperand": GroupReconciliationCoreComparisonRuleOperand,
+    "GroupReconciliationDatePair": GroupReconciliationDatePair,
+    "GroupReconciliationDates": GroupReconciliationDates,
     "GroupReconciliationDefinition": GroupReconciliationDefinition,
     "GroupReconciliationDefinitionComparisonRulesetIds": GroupReconciliationDefinitionComparisonRulesetIds,
     "GroupReconciliationDefinitionCurrencies": GroupReconciliationDefinitionCurrencies,
     "GroupReconciliationDefinitionPortfolioEntityIds": GroupReconciliationDefinitionPortfolioEntityIds,
     "GroupReconciliationDefinitionRecipeIds": GroupReconciliationDefinitionRecipeIds,
+    "GroupReconciliationInstanceId": GroupReconciliationInstanceId,
+    "GroupReconciliationUserReview": GroupReconciliationUserReview,
+    "GroupReconciliationUserReviewBreakCode": GroupReconciliationUserReviewBreakCode,
+    "GroupReconciliationUserReviewComment": GroupReconciliationUserReviewComment,
+    "GroupReconciliationUserReviewMatchKey": GroupReconciliationUserReviewMatchKey,
     "GroupedResultOfAddressKey": GroupedResultOfAddressKey,
     "HoldingAdjustment": HoldingAdjustment,
     "HoldingAdjustmentWithDate": HoldingAdjustmentWithDate,
@@ -3683,6 +3728,7 @@ let typeMap: {[index: string]: any} = {
     "OpenEventAllOf": OpenEventAllOf,
     "Operation": Operation,
     "OptionEntry": OptionEntry,
+    "OptionExerciseElection": OptionExerciseElection,
     "OptionalitySchedule": OptionalitySchedule,
     "OptionalityScheduleAllOf": OptionalityScheduleAllOf,
     "Order": Order,
@@ -3749,6 +3795,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfFund": PagedResourceListOfFund,
     "PagedResourceListOfFundConfiguration": PagedResourceListOfFundConfiguration,
     "PagedResourceListOfGeneralLedgerProfileResponse": PagedResourceListOfGeneralLedgerProfileResponse,
+    "PagedResourceListOfGroupReconciliationComparisonResult": PagedResourceListOfGroupReconciliationComparisonResult,
     "PagedResourceListOfGroupReconciliationComparisonRuleset": PagedResourceListOfGroupReconciliationComparisonRuleset,
     "PagedResourceListOfGroupReconciliationDefinition": PagedResourceListOfGroupReconciliationDefinition,
     "PagedResourceListOfInstrument": PagedResourceListOfInstrument,
