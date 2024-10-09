@@ -966,6 +966,7 @@ export * from './resourceListOfMapping';
 export * from './resourceListOfMovedOrderToDifferentBlockResponse';
 export * from './resourceListOfOrder';
 export * from './resourceListOfOrderInstruction';
+export * from './resourceListOfOutputTransaction';
 export * from './resourceListOfPackage';
 export * from './resourceListOfParticipation';
 export * from './resourceListOfPerformanceReturn';
@@ -2254,6 +2255,7 @@ import { ResourceListOfMapping } from './resourceListOfMapping';
 import { ResourceListOfMovedOrderToDifferentBlockResponse } from './resourceListOfMovedOrderToDifferentBlockResponse';
 import { ResourceListOfOrder } from './resourceListOfOrder';
 import { ResourceListOfOrderInstruction } from './resourceListOfOrderInstruction';
+import { ResourceListOfOutputTransaction } from './resourceListOfOutputTransaction';
 import { ResourceListOfPackage } from './resourceListOfPackage';
 import { ResourceListOfParticipation } from './resourceListOfParticipation';
 import { ResourceListOfPerformanceReturn } from './resourceListOfPerformanceReturn';
@@ -4002,6 +4004,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfMovedOrderToDifferentBlockResponse": ResourceListOfMovedOrderToDifferentBlockResponse,
     "ResourceListOfOrder": ResourceListOfOrder,
     "ResourceListOfOrderInstruction": ResourceListOfOrderInstruction,
+    "ResourceListOfOutputTransaction": ResourceListOfOutputTransaction,
     "ResourceListOfPackage": ResourceListOfPackage,
     "ResourceListOfParticipation": ResourceListOfParticipation,
     "ResourceListOfPerformanceReturn": ResourceListOfPerformanceReturn,
