@@ -595,6 +595,8 @@ export * from './interestRateSwaptionAllOf';
 export * from './intermediateComplianceStep';
 export * from './intermediateComplianceStepAllOf';
 export * from './intermediateComplianceStepRequest';
+export * from './intermediateSecuritiesDistributionEvent';
+export * from './intermediateSecuritiesDistributionEventAllOf';
 export * from './irVolCubeData';
 export * from './irVolCubeDataAllOf';
 export * from './irVolDependency';
@@ -1063,7 +1065,6 @@ export * from './simpleRoundingConvention';
 export * from './sortOrder';
 export * from './specificHoldingPricingInfo';
 export * from './spinOffEvent';
-export * from './spinOffEventAllOf';
 export * from './stagedModification';
 export * from './stagedModificationDecision';
 export * from './stagedModificationDecisionRequest';
@@ -1884,6 +1885,8 @@ import { InterestRateSwaptionAllOf } from './interestRateSwaptionAllOf';
 import { IntermediateComplianceStep } from './intermediateComplianceStep';
 import { IntermediateComplianceStepAllOf } from './intermediateComplianceStepAllOf';
 import { IntermediateComplianceStepRequest } from './intermediateComplianceStepRequest';
+import { IntermediateSecuritiesDistributionEvent } from './intermediateSecuritiesDistributionEvent';
+import { IntermediateSecuritiesDistributionEventAllOf } from './intermediateSecuritiesDistributionEventAllOf';
 import { IrVolCubeData } from './irVolCubeData';
 import { IrVolCubeDataAllOf } from './irVolCubeDataAllOf';
 import { IrVolDependency } from './irVolDependency';
@@ -2352,7 +2355,6 @@ import { SimpleRoundingConvention } from './simpleRoundingConvention';
 import { SortOrder } from './sortOrder';
 import { SpecificHoldingPricingInfo } from './specificHoldingPricingInfo';
 import { SpinOffEvent } from './spinOffEvent';
-import { SpinOffEventAllOf } from './spinOffEventAllOf';
 import { StagedModification } from './stagedModification';
 import { StagedModificationDecision } from './stagedModificationDecision';
 import { StagedModificationDecisionRequest } from './stagedModificationDecisionRequest';
@@ -2853,6 +2855,8 @@ let enumsMap: {[index: string]: any} = {
         "IntermediateComplianceStep.ComplianceStepTypeEnum": IntermediateComplianceStep.ComplianceStepTypeEnum,
         "IntermediateComplianceStepAllOf.ComplianceStepTypeEnum": IntermediateComplianceStepAllOf.ComplianceStepTypeEnum,
         "IntermediateComplianceStepRequest.ComplianceStepTypeRequestEnum": IntermediateComplianceStepRequest.ComplianceStepTypeRequestEnum,
+        "IntermediateSecuritiesDistributionEvent.InstrumentEventTypeEnum": IntermediateSecuritiesDistributionEvent.InstrumentEventTypeEnum,
+        "IntermediateSecuritiesDistributionEventAllOf.InstrumentEventTypeEnum": IntermediateSecuritiesDistributionEventAllOf.InstrumentEventTypeEnum,
         "IrVolCubeData.MarketDataTypeEnum": IrVolCubeData.MarketDataTypeEnum,
         "IrVolCubeDataAllOf.MarketDataTypeEnum": IrVolCubeDataAllOf.MarketDataTypeEnum,
         "IrVolDependency.DependencyTypeEnum": IrVolDependency.DependencyTypeEnum,
@@ -3025,7 +3029,6 @@ let enumsMap: {[index: string]: any} = {
         "SimpleInstrumentAllOf.InstrumentTypeEnum": SimpleInstrumentAllOf.InstrumentTypeEnum,
         "SortOrder": SortOrder,
         "SpinOffEvent.InstrumentEventTypeEnum": SpinOffEvent.InstrumentEventTypeEnum,
-        "SpinOffEventAllOf.InstrumentEventTypeEnum": SpinOffEventAllOf.InstrumentEventTypeEnum,
         "StepSchedule.ScheduleTypeEnum": StepSchedule.ScheduleTypeEnum,
         "StepScheduleAllOf.ScheduleTypeEnum": StepScheduleAllOf.ScheduleTypeEnum,
         "StockDividendEvent.InstrumentEventTypeEnum": StockDividendEvent.InstrumentEventTypeEnum,
@@ -3655,6 +3658,8 @@ let typeMap: {[index: string]: any} = {
     "IntermediateComplianceStep": IntermediateComplianceStep,
     "IntermediateComplianceStepAllOf": IntermediateComplianceStepAllOf,
     "IntermediateComplianceStepRequest": IntermediateComplianceStepRequest,
+    "IntermediateSecuritiesDistributionEvent": IntermediateSecuritiesDistributionEvent,
+    "IntermediateSecuritiesDistributionEventAllOf": IntermediateSecuritiesDistributionEventAllOf,
     "IrVolCubeData": IrVolCubeData,
     "IrVolCubeDataAllOf": IrVolCubeDataAllOf,
     "IrVolDependency": IrVolDependency,
@@ -4096,7 +4101,6 @@ let typeMap: {[index: string]: any} = {
     "SimpleRoundingConvention": SimpleRoundingConvention,
     "SpecificHoldingPricingInfo": SpecificHoldingPricingInfo,
     "SpinOffEvent": SpinOffEvent,
-    "SpinOffEventAllOf": SpinOffEventAllOf,
     "StagedModification": StagedModification,
     "StagedModificationDecision": StagedModificationDecision,
     "StagedModificationDecisionRequest": StagedModificationDecisionRequest,
