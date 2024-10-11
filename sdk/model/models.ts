@@ -520,6 +520,13 @@ export * from './groupReconciliationDefinitionCurrencies';
 export * from './groupReconciliationDefinitionPortfolioEntityIds';
 export * from './groupReconciliationDefinitionRecipeIds';
 export * from './groupReconciliationInstanceId';
+export * from './groupReconciliationResultStatuses';
+export * from './groupReconciliationResultTypes';
+export * from './groupReconciliationReviewStatuses';
+export * from './groupReconciliationRunDetails';
+export * from './groupReconciliationRunRequest';
+export * from './groupReconciliationRunResponse';
+export * from './groupReconciliationSummary';
 export * from './groupReconciliationUserReview';
 export * from './groupReconciliationUserReviewBreakCode';
 export * from './groupReconciliationUserReviewComment';
@@ -1810,6 +1817,13 @@ import { GroupReconciliationDefinitionCurrencies } from './groupReconciliationDe
 import { GroupReconciliationDefinitionPortfolioEntityIds } from './groupReconciliationDefinitionPortfolioEntityIds';
 import { GroupReconciliationDefinitionRecipeIds } from './groupReconciliationDefinitionRecipeIds';
 import { GroupReconciliationInstanceId } from './groupReconciliationInstanceId';
+import { GroupReconciliationResultStatuses } from './groupReconciliationResultStatuses';
+import { GroupReconciliationResultTypes } from './groupReconciliationResultTypes';
+import { GroupReconciliationReviewStatuses } from './groupReconciliationReviewStatuses';
+import { GroupReconciliationRunDetails } from './groupReconciliationRunDetails';
+import { GroupReconciliationRunRequest } from './groupReconciliationRunRequest';
+import { GroupReconciliationRunResponse } from './groupReconciliationRunResponse';
+import { GroupReconciliationSummary } from './groupReconciliationSummary';
 import { GroupReconciliationUserReview } from './groupReconciliationUserReview';
 import { GroupReconciliationUserReviewBreakCode } from './groupReconciliationUserReviewBreakCode';
 import { GroupReconciliationUserReviewComment } from './groupReconciliationUserReviewComment';
@@ -3586,6 +3600,13 @@ let typeMap: {[index: string]: any} = {
     "GroupReconciliationDefinitionPortfolioEntityIds": GroupReconciliationDefinitionPortfolioEntityIds,
     "GroupReconciliationDefinitionRecipeIds": GroupReconciliationDefinitionRecipeIds,
     "GroupReconciliationInstanceId": GroupReconciliationInstanceId,
+    "GroupReconciliationResultStatuses": GroupReconciliationResultStatuses,
+    "GroupReconciliationResultTypes": GroupReconciliationResultTypes,
+    "GroupReconciliationReviewStatuses": GroupReconciliationReviewStatuses,
+    "GroupReconciliationRunDetails": GroupReconciliationRunDetails,
+    "GroupReconciliationRunRequest": GroupReconciliationRunRequest,
+    "GroupReconciliationRunResponse": GroupReconciliationRunResponse,
+    "GroupReconciliationSummary": GroupReconciliationSummary,
     "GroupReconciliationUserReview": GroupReconciliationUserReview,
     "GroupReconciliationUserReviewBreakCode": GroupReconciliationUserReviewBreakCode,
     "GroupReconciliationUserReviewComment": GroupReconciliationUserReviewComment,
