@@ -689,6 +689,8 @@ export * from './operationType';
 export * from './operator';
 export * from './optionEntry';
 export * from './optionExerciseElection';
+export * from './optionExercisePhysicalEvent';
+export * from './optionExercisePhysicalEventAllOf';
 export * from './optionalitySchedule';
 export * from './optionalityScheduleAllOf';
 export * from './order';
@@ -870,6 +872,7 @@ export * from './propertyValueEquals';
 export * from './propertyValueEqualsAllOf';
 export * from './propertyValueIn';
 export * from './propertyValueInAllOf';
+export * from './protectionPayoutCashFlowEvent';
 export * from './queryApplicableInstrumentEventsRequest';
 export * from './queryBucketedCashFlowsRequest';
 export * from './queryCashFlowsRequest';
@@ -1986,6 +1989,8 @@ import { OperationType } from './operationType';
 import { Operator } from './operator';
 import { OptionEntry } from './optionEntry';
 import { OptionExerciseElection } from './optionExerciseElection';
+import { OptionExercisePhysicalEvent } from './optionExercisePhysicalEvent';
+import { OptionExercisePhysicalEventAllOf } from './optionExercisePhysicalEventAllOf';
 import { OptionalitySchedule } from './optionalitySchedule';
 import { OptionalityScheduleAllOf } from './optionalityScheduleAllOf';
 import { Order } from './order';
@@ -2167,6 +2172,7 @@ import { PropertyValueEquals } from './propertyValueEquals';
 import { PropertyValueEqualsAllOf } from './propertyValueEqualsAllOf';
 import { PropertyValueIn } from './propertyValueIn';
 import { PropertyValueInAllOf } from './propertyValueInAllOf';
+import { ProtectionPayoutCashFlowEvent } from './protectionPayoutCashFlowEvent';
 import { QueryApplicableInstrumentEventsRequest } from './queryApplicableInstrumentEventsRequest';
 import { QueryBucketedCashFlowsRequest } from './queryBucketedCashFlowsRequest';
 import { QueryCashFlowsRequest } from './queryCashFlowsRequest';
@@ -2922,6 +2928,8 @@ let enumsMap: {[index: string]: any} = {
         "OperandType": OperandType,
         "OperationType": OperationType,
         "Operator": Operator,
+        "OptionExercisePhysicalEvent.InstrumentEventTypeEnum": OptionExercisePhysicalEvent.InstrumentEventTypeEnum,
+        "OptionExercisePhysicalEventAllOf.InstrumentEventTypeEnum": OptionExercisePhysicalEventAllOf.InstrumentEventTypeEnum,
         "OptionalitySchedule.ScheduleTypeEnum": OptionalitySchedule.ScheduleTypeEnum,
         "OptionalityScheduleAllOf.ScheduleTypeEnum": OptionalityScheduleAllOf.ScheduleTypeEnum,
         "OrderBySpec.SortOrderEnum": OrderBySpec.SortOrderEnum,
@@ -2974,6 +2982,7 @@ let enumsMap: {[index: string]: any} = {
         "PropertyValueEqualsAllOf.CriterionTypeEnum": PropertyValueEqualsAllOf.CriterionTypeEnum,
         "PropertyValueIn.CriterionTypeEnum": PropertyValueIn.CriterionTypeEnum,
         "PropertyValueInAllOf.CriterionTypeEnum": PropertyValueInAllOf.CriterionTypeEnum,
+        "ProtectionPayoutCashFlowEvent.InstrumentEventTypeEnum": ProtectionPayoutCashFlowEvent.InstrumentEventTypeEnum,
         "QuoteDependency.DependencyTypeEnum": QuoteDependency.DependencyTypeEnum,
         "QuoteDependencyAllOf.DependencyTypeEnum": QuoteDependencyAllOf.DependencyTypeEnum,
         "QuoteInstrumentIdType": QuoteInstrumentIdType,
@@ -3757,6 +3766,8 @@ let typeMap: {[index: string]: any} = {
     "Operation": Operation,
     "OptionEntry": OptionEntry,
     "OptionExerciseElection": OptionExerciseElection,
+    "OptionExercisePhysicalEvent": OptionExercisePhysicalEvent,
+    "OptionExercisePhysicalEventAllOf": OptionExercisePhysicalEventAllOf,
     "OptionalitySchedule": OptionalitySchedule,
     "OptionalityScheduleAllOf": OptionalityScheduleAllOf,
     "Order": Order,
@@ -3930,6 +3941,7 @@ let typeMap: {[index: string]: any} = {
     "PropertyValueEqualsAllOf": PropertyValueEqualsAllOf,
     "PropertyValueIn": PropertyValueIn,
     "PropertyValueInAllOf": PropertyValueInAllOf,
+    "ProtectionPayoutCashFlowEvent": ProtectionPayoutCashFlowEvent,
     "QueryApplicableInstrumentEventsRequest": QueryApplicableInstrumentEventsRequest,
     "QueryBucketedCashFlowsRequest": QueryBucketedCashFlowsRequest,
     "QueryCashFlowsRequest": QueryCashFlowsRequest,
