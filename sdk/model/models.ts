@@ -70,6 +70,8 @@ export * from './basket';
 export * from './basketAllOf';
 export * from './basketIdentifier';
 export * from './batchAdjustHoldingsResponse';
+export * from './batchUpdateUserReviewForComparisonResultRequest';
+export * from './batchUpdateUserReviewForComparisonResultResponse';
 export * from './batchUpsertDatesForCalendarResponse';
 export * from './batchUpsertInstrumentPropertiesResponse';
 export * from './batchUpsertPortfolioAccessMetadataRequest';
@@ -528,9 +530,11 @@ export * from './groupReconciliationRunRequest';
 export * from './groupReconciliationRunResponse';
 export * from './groupReconciliationSummary';
 export * from './groupReconciliationUserReview';
+export * from './groupReconciliationUserReviewAdd';
 export * from './groupReconciliationUserReviewBreakCode';
 export * from './groupReconciliationUserReviewComment';
 export * from './groupReconciliationUserReviewMatchKey';
+export * from './groupReconciliationUserReviewRemove';
 export * from './groupedResultOfAddressKey';
 export * from './holdingAdjustment';
 export * from './holdingAdjustmentWithDate';
@@ -1370,6 +1374,8 @@ import { Basket } from './basket';
 import { BasketAllOf } from './basketAllOf';
 import { BasketIdentifier } from './basketIdentifier';
 import { BatchAdjustHoldingsResponse } from './batchAdjustHoldingsResponse';
+import { BatchUpdateUserReviewForComparisonResultRequest } from './batchUpdateUserReviewForComparisonResultRequest';
+import { BatchUpdateUserReviewForComparisonResultResponse } from './batchUpdateUserReviewForComparisonResultResponse';
 import { BatchUpsertDatesForCalendarResponse } from './batchUpsertDatesForCalendarResponse';
 import { BatchUpsertInstrumentPropertiesResponse } from './batchUpsertInstrumentPropertiesResponse';
 import { BatchUpsertPortfolioAccessMetadataRequest } from './batchUpsertPortfolioAccessMetadataRequest';
@@ -1828,9 +1834,11 @@ import { GroupReconciliationRunRequest } from './groupReconciliationRunRequest';
 import { GroupReconciliationRunResponse } from './groupReconciliationRunResponse';
 import { GroupReconciliationSummary } from './groupReconciliationSummary';
 import { GroupReconciliationUserReview } from './groupReconciliationUserReview';
+import { GroupReconciliationUserReviewAdd } from './groupReconciliationUserReviewAdd';
 import { GroupReconciliationUserReviewBreakCode } from './groupReconciliationUserReviewBreakCode';
 import { GroupReconciliationUserReviewComment } from './groupReconciliationUserReviewComment';
 import { GroupReconciliationUserReviewMatchKey } from './groupReconciliationUserReviewMatchKey';
+import { GroupReconciliationUserReviewRemove } from './groupReconciliationUserReviewRemove';
 import { GroupedResultOfAddressKey } from './groupedResultOfAddressKey';
 import { HoldingAdjustment } from './holdingAdjustment';
 import { HoldingAdjustmentWithDate } from './holdingAdjustmentWithDate';
@@ -3170,6 +3178,8 @@ let typeMap: {[index: string]: any} = {
     "BasketAllOf": BasketAllOf,
     "BasketIdentifier": BasketIdentifier,
     "BatchAdjustHoldingsResponse": BatchAdjustHoldingsResponse,
+    "BatchUpdateUserReviewForComparisonResultRequest": BatchUpdateUserReviewForComparisonResultRequest,
+    "BatchUpdateUserReviewForComparisonResultResponse": BatchUpdateUserReviewForComparisonResultResponse,
     "BatchUpsertDatesForCalendarResponse": BatchUpsertDatesForCalendarResponse,
     "BatchUpsertInstrumentPropertiesResponse": BatchUpsertInstrumentPropertiesResponse,
     "BatchUpsertPortfolioAccessMetadataRequest": BatchUpsertPortfolioAccessMetadataRequest,
@@ -3617,9 +3627,11 @@ let typeMap: {[index: string]: any} = {
     "GroupReconciliationRunResponse": GroupReconciliationRunResponse,
     "GroupReconciliationSummary": GroupReconciliationSummary,
     "GroupReconciliationUserReview": GroupReconciliationUserReview,
+    "GroupReconciliationUserReviewAdd": GroupReconciliationUserReviewAdd,
     "GroupReconciliationUserReviewBreakCode": GroupReconciliationUserReviewBreakCode,
     "GroupReconciliationUserReviewComment": GroupReconciliationUserReviewComment,
     "GroupReconciliationUserReviewMatchKey": GroupReconciliationUserReviewMatchKey,
+    "GroupReconciliationUserReviewRemove": GroupReconciliationUserReviewRemove,
     "GroupedResultOfAddressKey": GroupedResultOfAddressKey,
     "HoldingAdjustment": HoldingAdjustment,
     "HoldingAdjustmentWithDate": HoldingAdjustmentWithDate,
