@@ -342,7 +342,6 @@ export * from './discountingMethod';
 export * from './dividendOptionEvent';
 export * from './dividendOptionEventAllOf';
 export * from './dividendReinvestmentEvent';
-export * from './dividendReinvestmentEventAllOf';
 export * from './economicDependency';
 export * from './economicDependencyType';
 export * from './economicDependencyWithComplexMarketData';
@@ -692,6 +691,8 @@ export * from './operation';
 export * from './operationType';
 export * from './operator';
 export * from './optionEntry';
+export * from './optionExerciseCashEvent';
+export * from './optionExerciseCashEventAllOf';
 export * from './optionExerciseElection';
 export * from './optionExercisePhysicalEvent';
 export * from './optionExercisePhysicalEventAllOf';
@@ -1646,7 +1647,6 @@ import { DiscountingMethod } from './discountingMethod';
 import { DividendOptionEvent } from './dividendOptionEvent';
 import { DividendOptionEventAllOf } from './dividendOptionEventAllOf';
 import { DividendReinvestmentEvent } from './dividendReinvestmentEvent';
-import { DividendReinvestmentEventAllOf } from './dividendReinvestmentEventAllOf';
 import { EconomicDependency } from './economicDependency';
 import { EconomicDependencyType } from './economicDependencyType';
 import { EconomicDependencyWithComplexMarketData } from './economicDependencyWithComplexMarketData';
@@ -1996,6 +1996,8 @@ import { Operation } from './operation';
 import { OperationType } from './operationType';
 import { Operator } from './operator';
 import { OptionEntry } from './optionEntry';
+import { OptionExerciseCashEvent } from './optionExerciseCashEvent';
+import { OptionExerciseCashEventAllOf } from './optionExerciseCashEventAllOf';
 import { OptionExerciseElection } from './optionExerciseElection';
 import { OptionExercisePhysicalEvent } from './optionExercisePhysicalEvent';
 import { OptionExercisePhysicalEventAllOf } from './optionExercisePhysicalEventAllOf';
@@ -2741,7 +2743,6 @@ let enumsMap: {[index: string]: any} = {
         "DividendOptionEvent.InstrumentEventTypeEnum": DividendOptionEvent.InstrumentEventTypeEnum,
         "DividendOptionEventAllOf.InstrumentEventTypeEnum": DividendOptionEventAllOf.InstrumentEventTypeEnum,
         "DividendReinvestmentEvent.InstrumentEventTypeEnum": DividendReinvestmentEvent.InstrumentEventTypeEnum,
-        "DividendReinvestmentEventAllOf.InstrumentEventTypeEnum": DividendReinvestmentEventAllOf.InstrumentEventTypeEnum,
         "EconomicDependency.DependencyTypeEnum": EconomicDependency.DependencyTypeEnum,
         "EconomicDependencyType": EconomicDependencyType,
         "EmptyModelOptions.ModelOptionsTypeEnum": EmptyModelOptions.ModelOptionsTypeEnum,
@@ -2936,6 +2937,8 @@ let enumsMap: {[index: string]: any} = {
         "OperandType": OperandType,
         "OperationType": OperationType,
         "Operator": Operator,
+        "OptionExerciseCashEvent.InstrumentEventTypeEnum": OptionExerciseCashEvent.InstrumentEventTypeEnum,
+        "OptionExerciseCashEventAllOf.InstrumentEventTypeEnum": OptionExerciseCashEventAllOf.InstrumentEventTypeEnum,
         "OptionExercisePhysicalEvent.InstrumentEventTypeEnum": OptionExercisePhysicalEvent.InstrumentEventTypeEnum,
         "OptionExercisePhysicalEventAllOf.InstrumentEventTypeEnum": OptionExercisePhysicalEventAllOf.InstrumentEventTypeEnum,
         "OptionalitySchedule.ScheduleTypeEnum": OptionalitySchedule.ScheduleTypeEnum,
@@ -3440,7 +3443,6 @@ let typeMap: {[index: string]: any} = {
     "DividendOptionEvent": DividendOptionEvent,
     "DividendOptionEventAllOf": DividendOptionEventAllOf,
     "DividendReinvestmentEvent": DividendReinvestmentEvent,
-    "DividendReinvestmentEventAllOf": DividendReinvestmentEventAllOf,
     "EconomicDependency": EconomicDependency,
     "EconomicDependencyWithComplexMarketData": EconomicDependencyWithComplexMarketData,
     "EconomicDependencyWithQuote": EconomicDependencyWithQuote,
@@ -3777,6 +3779,8 @@ let typeMap: {[index: string]: any} = {
     "OpenEventAllOf": OpenEventAllOf,
     "Operation": Operation,
     "OptionEntry": OptionEntry,
+    "OptionExerciseCashEvent": OptionExerciseCashEvent,
+    "OptionExerciseCashEventAllOf": OptionExerciseCashEventAllOf,
     "OptionExerciseElection": OptionExerciseElection,
     "OptionExercisePhysicalEvent": OptionExercisePhysicalEvent,
     "OptionExercisePhysicalEventAllOf": OptionExercisePhysicalEventAllOf,
