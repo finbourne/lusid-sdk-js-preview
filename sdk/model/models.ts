@@ -1034,6 +1034,7 @@ export * from './resultValueIntAllOf';
 export * from './resultValueString';
 export * from './resultValueStringAllOf';
 export * from './resultValueType';
+export * from './returnZeroPvOptions';
 export * from './reverseStockSplitEvent';
 export * from './reverseStockSplitEventAllOf';
 export * from './roundingConfiguration';
@@ -2339,6 +2340,7 @@ import { ResultValueIntAllOf } from './resultValueIntAllOf';
 import { ResultValueString } from './resultValueString';
 import { ResultValueStringAllOf } from './resultValueStringAllOf';
 import { ResultValueType } from './resultValueType';
+import { ReturnZeroPvOptions } from './returnZeroPvOptions';
 import { ReverseStockSplitEvent } from './reverseStockSplitEvent';
 import { ReverseStockSplitEventAllOf } from './reverseStockSplitEventAllOf';
 import { RoundingConfiguration } from './roundingConfiguration';
@@ -4107,6 +4109,7 @@ let typeMap: {[index: string]: any} = {
     "ResultValueIntAllOf": ResultValueIntAllOf,
     "ResultValueString": ResultValueString,
     "ResultValueStringAllOf": ResultValueStringAllOf,
+    "ReturnZeroPvOptions": ReturnZeroPvOptions,
     "ReverseStockSplitEvent": ReverseStockSplitEvent,
     "ReverseStockSplitEventAllOf": ReverseStockSplitEventAllOf,
     "RoundingConfiguration": RoundingConfiguration,
