@@ -1121,6 +1121,10 @@ export * from './tenderEvent';
 export * from './tenderEventAllOf';
 export * from './termDeposit';
 export * from './termDepositAllOf';
+export * from './termDepositInterestEvent';
+export * from './termDepositInterestEventAllOf';
+export * from './termDepositPrincipalEvent';
+export * from './termDepositPrincipalEventAllOf';
 export * from './totalReturnSwap';
 export * from './totalReturnSwapAllOf';
 export * from './touch';
@@ -2427,6 +2431,10 @@ import { TenderEvent } from './tenderEvent';
 import { TenderEventAllOf } from './tenderEventAllOf';
 import { TermDeposit } from './termDeposit';
 import { TermDepositAllOf } from './termDepositAllOf';
+import { TermDepositInterestEvent } from './termDepositInterestEvent';
+import { TermDepositInterestEventAllOf } from './termDepositInterestEventAllOf';
+import { TermDepositPrincipalEvent } from './termDepositPrincipalEvent';
+import { TermDepositPrincipalEventAllOf } from './termDepositPrincipalEventAllOf';
 import { TotalReturnSwap } from './totalReturnSwap';
 import { TotalReturnSwapAllOf } from './totalReturnSwapAllOf';
 import { Touch } from './touch';
@@ -3085,6 +3093,10 @@ let enumsMap: {[index: string]: any} = {
         "TenderEventAllOf.InstrumentEventTypeEnum": TenderEventAllOf.InstrumentEventTypeEnum,
         "TermDeposit.InstrumentTypeEnum": TermDeposit.InstrumentTypeEnum,
         "TermDepositAllOf.InstrumentTypeEnum": TermDepositAllOf.InstrumentTypeEnum,
+        "TermDepositInterestEvent.InstrumentEventTypeEnum": TermDepositInterestEvent.InstrumentEventTypeEnum,
+        "TermDepositInterestEventAllOf.InstrumentEventTypeEnum": TermDepositInterestEventAllOf.InstrumentEventTypeEnum,
+        "TermDepositPrincipalEvent.InstrumentEventTypeEnum": TermDepositPrincipalEvent.InstrumentEventTypeEnum,
+        "TermDepositPrincipalEventAllOf.InstrumentEventTypeEnum": TermDepositPrincipalEventAllOf.InstrumentEventTypeEnum,
         "TotalReturnSwap.InstrumentTypeEnum": TotalReturnSwap.InstrumentTypeEnum,
         "TotalReturnSwapAllOf.InstrumentTypeEnum": TotalReturnSwapAllOf.InstrumentTypeEnum,
         "TradeTicket.TradeTicketTypeEnum": TradeTicket.TradeTicketTypeEnum,
@@ -4192,6 +4204,10 @@ let typeMap: {[index: string]: any} = {
     "TenderEventAllOf": TenderEventAllOf,
     "TermDeposit": TermDeposit,
     "TermDepositAllOf": TermDepositAllOf,
+    "TermDepositInterestEvent": TermDepositInterestEvent,
+    "TermDepositInterestEventAllOf": TermDepositInterestEventAllOf,
+    "TermDepositPrincipalEvent": TermDepositPrincipalEvent,
+    "TermDepositPrincipalEventAllOf": TermDepositPrincipalEventAllOf,
     "TotalReturnSwap": TotalReturnSwap,
     "TotalReturnSwapAllOf": TotalReturnSwapAllOf,
     "Touch": Touch,
