@@ -385,6 +385,7 @@ export * from './exoticInstrumentAllOf';
 export * from './expandedGroup';
 export * from './expiryEvent';
 export * from './expiryEventAllOf';
+export * from './externalFeeComponentFilter';
 export * from './fee';
 export * from './feeAccrual';
 export * from './feeProperties';
@@ -1099,6 +1100,7 @@ export * from './stockDividendEvent';
 export * from './stockDividendEventAllOf';
 export * from './stockSplitEvent';
 export * from './stockSplitEventAllOf';
+export * from './strategy';
 export * from './stream';
 export * from './stringComparisonType';
 export * from './stringComplianceParameter';
@@ -1695,6 +1697,7 @@ import { ExoticInstrumentAllOf } from './exoticInstrumentAllOf';
 import { ExpandedGroup } from './expandedGroup';
 import { ExpiryEvent } from './expiryEvent';
 import { ExpiryEventAllOf } from './expiryEventAllOf';
+import { ExternalFeeComponentFilter } from './externalFeeComponentFilter';
 import { Fee } from './fee';
 import { FeeAccrual } from './feeAccrual';
 import { FeeProperties } from './feeProperties';
@@ -2409,6 +2412,7 @@ import { StockDividendEvent } from './stockDividendEvent';
 import { StockDividendEventAllOf } from './stockDividendEventAllOf';
 import { StockSplitEvent } from './stockSplitEvent';
 import { StockSplitEventAllOf } from './stockSplitEventAllOf';
+import { Strategy } from './strategy';
 import { Stream } from './stream';
 import { StringComparisonType } from './stringComparisonType';
 import { StringComplianceParameter } from './stringComplianceParameter';
@@ -3499,6 +3503,7 @@ let typeMap: {[index: string]: any} = {
     "ExpandedGroup": ExpandedGroup,
     "ExpiryEvent": ExpiryEvent,
     "ExpiryEventAllOf": ExpiryEventAllOf,
+    "ExternalFeeComponentFilter": ExternalFeeComponentFilter,
     "Fee": Fee,
     "FeeAccrual": FeeAccrual,
     "FeeProperties": FeeProperties,
@@ -4183,6 +4188,7 @@ let typeMap: {[index: string]: any} = {
     "StockDividendEventAllOf": StockDividendEventAllOf,
     "StockSplitEvent": StockSplitEvent,
     "StockSplitEventAllOf": StockSplitEventAllOf,
+    "Strategy": Strategy,
     "Stream": Stream,
     "StringComplianceParameter": StringComplianceParameter,
     "StringList": StringList,
