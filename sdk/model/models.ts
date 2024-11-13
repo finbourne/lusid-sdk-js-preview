@@ -229,6 +229,7 @@ export * from './constantVolatilitySurfaceAllOf';
 export * from './constituentsAdjustmentHeader';
 export * from './contractForDifference';
 export * from './contractForDifferenceAllOf';
+export * from './contributionToNonPassingRuleDetail';
 export * from './corporateAction';
 export * from './corporateActionSource';
 export * from './corporateActionTransition';
@@ -1542,6 +1543,7 @@ import { ConstantVolatilitySurfaceAllOf } from './constantVolatilitySurfaceAllOf
 import { ConstituentsAdjustmentHeader } from './constituentsAdjustmentHeader';
 import { ContractForDifference } from './contractForDifference';
 import { ContractForDifferenceAllOf } from './contractForDifferenceAllOf';
+import { ContributionToNonPassingRuleDetail } from './contributionToNonPassingRuleDetail';
 import { CorporateAction } from './corporateAction';
 import { CorporateActionSource } from './corporateActionSource';
 import { CorporateActionTransition } from './corporateActionTransition';
@@ -3356,6 +3358,7 @@ let typeMap: {[index: string]: any} = {
     "ConstituentsAdjustmentHeader": ConstituentsAdjustmentHeader,
     "ContractForDifference": ContractForDifference,
     "ContractForDifferenceAllOf": ContractForDifferenceAllOf,
+    "ContributionToNonPassingRuleDetail": ContributionToNonPassingRuleDetail,
     "CorporateAction": CorporateAction,
     "CorporateActionSource": CorporateActionSource,
     "CorporateActionTransition": CorporateActionTransition,
