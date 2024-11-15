@@ -1269,6 +1269,7 @@ export * from './valuationPointDataRequest';
 export * from './valuationPointDataResponse';
 export * from './valuationPointOverview';
 export * from './valuationPointResourceListOfJournalEntryLine';
+export * from './valuationPointResourceListOfTrialBalance';
 export * from './valuationRequest';
 export * from './valuationSchedule';
 export * from './valuationsReconciliationRequest';
@@ -2587,6 +2588,7 @@ import { ValuationPointDataRequest } from './valuationPointDataRequest';
 import { ValuationPointDataResponse } from './valuationPointDataResponse';
 import { ValuationPointOverview } from './valuationPointOverview';
 import { ValuationPointResourceListOfJournalEntryLine } from './valuationPointResourceListOfJournalEntryLine';
+import { ValuationPointResourceListOfTrialBalance } from './valuationPointResourceListOfTrialBalance';
 import { ValuationRequest } from './valuationRequest';
 import { ValuationSchedule } from './valuationSchedule';
 import { ValuationsReconciliationRequest } from './valuationsReconciliationRequest';
@@ -4363,6 +4365,7 @@ let typeMap: {[index: string]: any} = {
     "ValuationPointDataResponse": ValuationPointDataResponse,
     "ValuationPointOverview": ValuationPointOverview,
     "ValuationPointResourceListOfJournalEntryLine": ValuationPointResourceListOfJournalEntryLine,
+    "ValuationPointResourceListOfTrialBalance": ValuationPointResourceListOfTrialBalance,
     "ValuationRequest": ValuationRequest,
     "ValuationSchedule": ValuationSchedule,
     "ValuationsReconciliationRequest": ValuationsReconciliationRequest,
