@@ -343,6 +343,9 @@ export * from './discountingMethod';
 export * from './dividendOptionEvent';
 export * from './dividendOptionEventAllOf';
 export * from './dividendReinvestmentEvent';
+export * from './earlyRedemptionElection';
+export * from './earlyRedemptionEvent';
+export * from './earlyRedemptionEventAllOf';
 export * from './economicDependency';
 export * from './economicDependencyType';
 export * from './economicDependencyWithComplexMarketData';
@@ -1265,6 +1268,7 @@ export * from './valuationPointDataQueryParameters';
 export * from './valuationPointDataRequest';
 export * from './valuationPointDataResponse';
 export * from './valuationPointOverview';
+export * from './valuationPointResourceListOfJournalEntryLine';
 export * from './valuationRequest';
 export * from './valuationSchedule';
 export * from './valuationsReconciliationRequest';
@@ -1657,6 +1661,9 @@ import { DiscountingMethod } from './discountingMethod';
 import { DividendOptionEvent } from './dividendOptionEvent';
 import { DividendOptionEventAllOf } from './dividendOptionEventAllOf';
 import { DividendReinvestmentEvent } from './dividendReinvestmentEvent';
+import { EarlyRedemptionElection } from './earlyRedemptionElection';
+import { EarlyRedemptionEvent } from './earlyRedemptionEvent';
+import { EarlyRedemptionEventAllOf } from './earlyRedemptionEventAllOf';
 import { EconomicDependency } from './economicDependency';
 import { EconomicDependencyType } from './economicDependencyType';
 import { EconomicDependencyWithComplexMarketData } from './economicDependencyWithComplexMarketData';
@@ -2579,6 +2586,7 @@ import { ValuationPointDataQueryParameters } from './valuationPointDataQueryPara
 import { ValuationPointDataRequest } from './valuationPointDataRequest';
 import { ValuationPointDataResponse } from './valuationPointDataResponse';
 import { ValuationPointOverview } from './valuationPointOverview';
+import { ValuationPointResourceListOfJournalEntryLine } from './valuationPointResourceListOfJournalEntryLine';
 import { ValuationRequest } from './valuationRequest';
 import { ValuationSchedule } from './valuationSchedule';
 import { ValuationsReconciliationRequest } from './valuationsReconciliationRequest';
@@ -2761,6 +2769,8 @@ let enumsMap: {[index: string]: any} = {
         "DividendOptionEvent.InstrumentEventTypeEnum": DividendOptionEvent.InstrumentEventTypeEnum,
         "DividendOptionEventAllOf.InstrumentEventTypeEnum": DividendOptionEventAllOf.InstrumentEventTypeEnum,
         "DividendReinvestmentEvent.InstrumentEventTypeEnum": DividendReinvestmentEvent.InstrumentEventTypeEnum,
+        "EarlyRedemptionEvent.InstrumentEventTypeEnum": EarlyRedemptionEvent.InstrumentEventTypeEnum,
+        "EarlyRedemptionEventAllOf.InstrumentEventTypeEnum": EarlyRedemptionEventAllOf.InstrumentEventTypeEnum,
         "EconomicDependency.DependencyTypeEnum": EconomicDependency.DependencyTypeEnum,
         "EconomicDependencyType": EconomicDependencyType,
         "EmptyModelOptions.ModelOptionsTypeEnum": EmptyModelOptions.ModelOptionsTypeEnum,
@@ -3466,6 +3476,9 @@ let typeMap: {[index: string]: any} = {
     "DividendOptionEvent": DividendOptionEvent,
     "DividendOptionEventAllOf": DividendOptionEventAllOf,
     "DividendReinvestmentEvent": DividendReinvestmentEvent,
+    "EarlyRedemptionElection": EarlyRedemptionElection,
+    "EarlyRedemptionEvent": EarlyRedemptionEvent,
+    "EarlyRedemptionEventAllOf": EarlyRedemptionEventAllOf,
     "EconomicDependency": EconomicDependency,
     "EconomicDependencyWithComplexMarketData": EconomicDependencyWithComplexMarketData,
     "EconomicDependencyWithQuote": EconomicDependencyWithQuote,
@@ -4349,6 +4362,7 @@ let typeMap: {[index: string]: any} = {
     "ValuationPointDataRequest": ValuationPointDataRequest,
     "ValuationPointDataResponse": ValuationPointDataResponse,
     "ValuationPointOverview": ValuationPointOverview,
+    "ValuationPointResourceListOfJournalEntryLine": ValuationPointResourceListOfJournalEntryLine,
     "ValuationRequest": ValuationRequest,
     "ValuationSchedule": ValuationSchedule,
     "ValuationsReconciliationRequest": ValuationsReconciliationRequest,
