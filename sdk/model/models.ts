@@ -266,6 +266,7 @@ export * from './createRelationshipRequest';
 export * from './createSequenceRequest';
 export * from './createStagingRuleSetRequest';
 export * from './createTaxRuleSetRequest';
+export * from './createTimelineRequest';
 export * from './createTradeTicketsResponse';
 export * from './createTransactionPortfolioRequest';
 export * from './createUnitDefinition';
@@ -1131,6 +1132,7 @@ export * from './termDepositInterestEvent';
 export * from './termDepositInterestEventAllOf';
 export * from './termDepositPrincipalEvent';
 export * from './termDepositPrincipalEventAllOf';
+export * from './timeline';
 export * from './totalReturnSwap';
 export * from './totalReturnSwapAllOf';
 export * from './touch';
@@ -1217,6 +1219,7 @@ export * from './updateReferenceDataRequest';
 export * from './updateRelationshipDefinitionRequest';
 export * from './updateStagingRuleSetRequest';
 export * from './updateTaxRuleSetRequest';
+export * from './updateTimelineRequest';
 export * from './updateUnitRequest';
 export * from './upsertCdsFlowConventionsRequest';
 export * from './upsertComplexMarketDataRequest';
@@ -1585,6 +1588,7 @@ import { CreateRelationshipRequest } from './createRelationshipRequest';
 import { CreateSequenceRequest } from './createSequenceRequest';
 import { CreateStagingRuleSetRequest } from './createStagingRuleSetRequest';
 import { CreateTaxRuleSetRequest } from './createTaxRuleSetRequest';
+import { CreateTimelineRequest } from './createTimelineRequest';
 import { CreateTradeTicketsResponse } from './createTradeTicketsResponse';
 import { CreateTransactionPortfolioRequest } from './createTransactionPortfolioRequest';
 import { CreateUnitDefinition } from './createUnitDefinition';
@@ -2450,6 +2454,7 @@ import { TermDepositInterestEvent } from './termDepositInterestEvent';
 import { TermDepositInterestEventAllOf } from './termDepositInterestEventAllOf';
 import { TermDepositPrincipalEvent } from './termDepositPrincipalEvent';
 import { TermDepositPrincipalEventAllOf } from './termDepositPrincipalEventAllOf';
+import { Timeline } from './timeline';
 import { TotalReturnSwap } from './totalReturnSwap';
 import { TotalReturnSwapAllOf } from './totalReturnSwapAllOf';
 import { Touch } from './touch';
@@ -2536,6 +2541,7 @@ import { UpdateReferenceDataRequest } from './updateReferenceDataRequest';
 import { UpdateRelationshipDefinitionRequest } from './updateRelationshipDefinitionRequest';
 import { UpdateStagingRuleSetRequest } from './updateStagingRuleSetRequest';
 import { UpdateTaxRuleSetRequest } from './updateTaxRuleSetRequest';
+import { UpdateTimelineRequest } from './updateTimelineRequest';
 import { UpdateUnitRequest } from './updateUnitRequest';
 import { UpsertCdsFlowConventionsRequest } from './upsertCdsFlowConventionsRequest';
 import { UpsertComplexMarketDataRequest } from './upsertComplexMarketDataRequest';
@@ -3407,6 +3413,7 @@ let typeMap: {[index: string]: any} = {
     "CreateSequenceRequest": CreateSequenceRequest,
     "CreateStagingRuleSetRequest": CreateStagingRuleSetRequest,
     "CreateTaxRuleSetRequest": CreateTaxRuleSetRequest,
+    "CreateTimelineRequest": CreateTimelineRequest,
     "CreateTradeTicketsResponse": CreateTradeTicketsResponse,
     "CreateTransactionPortfolioRequest": CreateTransactionPortfolioRequest,
     "CreateUnitDefinition": CreateUnitDefinition,
@@ -4234,6 +4241,7 @@ let typeMap: {[index: string]: any} = {
     "TermDepositInterestEventAllOf": TermDepositInterestEventAllOf,
     "TermDepositPrincipalEvent": TermDepositPrincipalEvent,
     "TermDepositPrincipalEventAllOf": TermDepositPrincipalEventAllOf,
+    "Timeline": Timeline,
     "TotalReturnSwap": TotalReturnSwap,
     "TotalReturnSwapAllOf": TotalReturnSwapAllOf,
     "Touch": Touch,
@@ -4313,6 +4321,7 @@ let typeMap: {[index: string]: any} = {
     "UpdateRelationshipDefinitionRequest": UpdateRelationshipDefinitionRequest,
     "UpdateStagingRuleSetRequest": UpdateStagingRuleSetRequest,
     "UpdateTaxRuleSetRequest": UpdateTaxRuleSetRequest,
+    "UpdateTimelineRequest": UpdateTimelineRequest,
     "UpdateUnitRequest": UpdateUnitRequest,
     "UpsertCdsFlowConventionsRequest": UpsertCdsFlowConventionsRequest,
     "UpsertComplexMarketDataRequest": UpsertComplexMarketDataRequest,
