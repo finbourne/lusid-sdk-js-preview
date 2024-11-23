@@ -35,6 +35,8 @@ export * from './addressKeyListAllOf';
 export * from './addressKeyListComplianceParameter';
 export * from './addressKeyListComplianceParameterAllOf';
 export * from './addressKeyOptionDefinition';
+export * from './adjustGlobalCommitmentEvent';
+export * from './adjustGlobalCommitmentEventAllOf';
 export * from './adjustHolding';
 export * from './adjustHoldingForDateRequest';
 export * from './adjustHoldingRequest';
@@ -227,8 +229,11 @@ export * from './configurationRecipe';
 export * from './constantVolatilitySurface';
 export * from './constantVolatilitySurfaceAllOf';
 export * from './constituentsAdjustmentHeader';
+export * from './contractDetails';
 export * from './contractForDifference';
 export * from './contractForDifferenceAllOf';
+export * from './contractInitialisationEvent';
+export * from './contractInitialisationEventAllOf';
 export * from './contributionToNonPassingRuleDetail';
 export * from './corporateAction';
 export * from './corporateActionSource';
@@ -344,6 +349,8 @@ export * from './discountingMethod';
 export * from './dividendOptionEvent';
 export * from './dividendOptionEventAllOf';
 export * from './dividendReinvestmentEvent';
+export * from './drawdownEvent';
+export * from './drawdownEventAllOf';
 export * from './earlyRedemptionElection';
 export * from './earlyRedemptionEvent';
 export * from './earlyRedemptionEventAllOf';
@@ -450,6 +457,8 @@ export * from './future';
 export * from './futureAllOf';
 export * from './futureExpiryEvent';
 export * from './futureExpiryEventAllOf';
+export * from './futureMarkToMarketEvent';
+export * from './futureMarkToMarketEventAllOf';
 export * from './futuresContractDetails';
 export * from './fxConventions';
 export * from './fxDependency';
@@ -1359,6 +1368,8 @@ import { AddressKeyListAllOf } from './addressKeyListAllOf';
 import { AddressKeyListComplianceParameter } from './addressKeyListComplianceParameter';
 import { AddressKeyListComplianceParameterAllOf } from './addressKeyListComplianceParameterAllOf';
 import { AddressKeyOptionDefinition } from './addressKeyOptionDefinition';
+import { AdjustGlobalCommitmentEvent } from './adjustGlobalCommitmentEvent';
+import { AdjustGlobalCommitmentEventAllOf } from './adjustGlobalCommitmentEventAllOf';
 import { AdjustHolding } from './adjustHolding';
 import { AdjustHoldingForDateRequest } from './adjustHoldingForDateRequest';
 import { AdjustHoldingRequest } from './adjustHoldingRequest';
@@ -1551,8 +1562,11 @@ import { ConfigurationRecipe } from './configurationRecipe';
 import { ConstantVolatilitySurface } from './constantVolatilitySurface';
 import { ConstantVolatilitySurfaceAllOf } from './constantVolatilitySurfaceAllOf';
 import { ConstituentsAdjustmentHeader } from './constituentsAdjustmentHeader';
+import { ContractDetails } from './contractDetails';
 import { ContractForDifference } from './contractForDifference';
 import { ContractForDifferenceAllOf } from './contractForDifferenceAllOf';
+import { ContractInitialisationEvent } from './contractInitialisationEvent';
+import { ContractInitialisationEventAllOf } from './contractInitialisationEventAllOf';
 import { ContributionToNonPassingRuleDetail } from './contributionToNonPassingRuleDetail';
 import { CorporateAction } from './corporateAction';
 import { CorporateActionSource } from './corporateActionSource';
@@ -1668,6 +1682,8 @@ import { DiscountingMethod } from './discountingMethod';
 import { DividendOptionEvent } from './dividendOptionEvent';
 import { DividendOptionEventAllOf } from './dividendOptionEventAllOf';
 import { DividendReinvestmentEvent } from './dividendReinvestmentEvent';
+import { DrawdownEvent } from './drawdownEvent';
+import { DrawdownEventAllOf } from './drawdownEventAllOf';
 import { EarlyRedemptionElection } from './earlyRedemptionElection';
 import { EarlyRedemptionEvent } from './earlyRedemptionEvent';
 import { EarlyRedemptionEventAllOf } from './earlyRedemptionEventAllOf';
@@ -1774,6 +1790,8 @@ import { Future } from './future';
 import { FutureAllOf } from './futureAllOf';
 import { FutureExpiryEvent } from './futureExpiryEvent';
 import { FutureExpiryEventAllOf } from './futureExpiryEventAllOf';
+import { FutureMarkToMarketEvent } from './futureMarkToMarketEvent';
+import { FutureMarkToMarketEventAllOf } from './futureMarkToMarketEventAllOf';
 import { FuturesContractDetails } from './futuresContractDetails';
 import { FxConventions } from './fxConventions';
 import { FxDependency } from './fxDependency';
@@ -2660,6 +2678,8 @@ let enumsMap: {[index: string]: any} = {
         "AddressKeyListAllOf.ReferenceListTypeEnum": AddressKeyListAllOf.ReferenceListTypeEnum,
         "AddressKeyListComplianceParameter.ComplianceParameterTypeEnum": AddressKeyListComplianceParameter.ComplianceParameterTypeEnum,
         "AddressKeyListComplianceParameterAllOf.ComplianceParameterTypeEnum": AddressKeyListComplianceParameterAllOf.ComplianceParameterTypeEnum,
+        "AdjustGlobalCommitmentEvent.InstrumentEventTypeEnum": AdjustGlobalCommitmentEvent.InstrumentEventTypeEnum,
+        "AdjustGlobalCommitmentEventAllOf.InstrumentEventTypeEnum": AdjustGlobalCommitmentEventAllOf.InstrumentEventTypeEnum,
         "AggregateSpec.OpEnum": AggregateSpec.OpEnum,
         "AggregationOp": AggregationOp,
         "AggregationQuery.TypeEnum": AggregationQuery.TypeEnum,
@@ -2738,6 +2758,8 @@ let enumsMap: {[index: string]: any} = {
         "ConstantVolatilitySurfaceAllOf.MarketDataTypeEnum": ConstantVolatilitySurfaceAllOf.MarketDataTypeEnum,
         "ContractForDifference.InstrumentTypeEnum": ContractForDifference.InstrumentTypeEnum,
         "ContractForDifferenceAllOf.InstrumentTypeEnum": ContractForDifferenceAllOf.InstrumentTypeEnum,
+        "ContractInitialisationEvent.InstrumentEventTypeEnum": ContractInitialisationEvent.InstrumentEventTypeEnum,
+        "ContractInitialisationEventAllOf.InstrumentEventTypeEnum": ContractInitialisationEventAllOf.InstrumentEventTypeEnum,
         "CreateDataTypeRequest.TypeValueRangeEnum": CreateDataTypeRequest.TypeValueRangeEnum,
         "CreateDataTypeRequest.ValueTypeEnum": CreateDataTypeRequest.ValueTypeEnum,
         "CreateDataTypeRequest.UnitSchemaEnum": CreateDataTypeRequest.UnitSchemaEnum,
@@ -2781,6 +2803,8 @@ let enumsMap: {[index: string]: any} = {
         "DividendOptionEvent.InstrumentEventTypeEnum": DividendOptionEvent.InstrumentEventTypeEnum,
         "DividendOptionEventAllOf.InstrumentEventTypeEnum": DividendOptionEventAllOf.InstrumentEventTypeEnum,
         "DividendReinvestmentEvent.InstrumentEventTypeEnum": DividendReinvestmentEvent.InstrumentEventTypeEnum,
+        "DrawdownEvent.InstrumentEventTypeEnum": DrawdownEvent.InstrumentEventTypeEnum,
+        "DrawdownEventAllOf.InstrumentEventTypeEnum": DrawdownEventAllOf.InstrumentEventTypeEnum,
         "EarlyRedemptionEvent.InstrumentEventTypeEnum": EarlyRedemptionEvent.InstrumentEventTypeEnum,
         "EarlyRedemptionEventAllOf.InstrumentEventTypeEnum": EarlyRedemptionEventAllOf.InstrumentEventTypeEnum,
         "EconomicDependency.DependencyTypeEnum": EconomicDependency.DependencyTypeEnum,
@@ -2842,6 +2866,8 @@ let enumsMap: {[index: string]: any} = {
         "FutureAllOf.InstrumentTypeEnum": FutureAllOf.InstrumentTypeEnum,
         "FutureExpiryEvent.InstrumentEventTypeEnum": FutureExpiryEvent.InstrumentEventTypeEnum,
         "FutureExpiryEventAllOf.InstrumentEventTypeEnum": FutureExpiryEventAllOf.InstrumentEventTypeEnum,
+        "FutureMarkToMarketEvent.InstrumentEventTypeEnum": FutureMarkToMarketEvent.InstrumentEventTypeEnum,
+        "FutureMarkToMarketEventAllOf.InstrumentEventTypeEnum": FutureMarkToMarketEventAllOf.InstrumentEventTypeEnum,
         "FxDependency.DependencyTypeEnum": FxDependency.DependencyTypeEnum,
         "FxDependencyAllOf.DependencyTypeEnum": FxDependencyAllOf.DependencyTypeEnum,
         "FxForward.InstrumentTypeEnum": FxForward.InstrumentTypeEnum,
@@ -3195,6 +3221,8 @@ let typeMap: {[index: string]: any} = {
     "AddressKeyListComplianceParameter": AddressKeyListComplianceParameter,
     "AddressKeyListComplianceParameterAllOf": AddressKeyListComplianceParameterAllOf,
     "AddressKeyOptionDefinition": AddressKeyOptionDefinition,
+    "AdjustGlobalCommitmentEvent": AdjustGlobalCommitmentEvent,
+    "AdjustGlobalCommitmentEventAllOf": AdjustGlobalCommitmentEventAllOf,
     "AdjustHolding": AdjustHolding,
     "AdjustHoldingForDateRequest": AdjustHoldingForDateRequest,
     "AdjustHoldingRequest": AdjustHoldingRequest,
@@ -3380,8 +3408,11 @@ let typeMap: {[index: string]: any} = {
     "ConstantVolatilitySurface": ConstantVolatilitySurface,
     "ConstantVolatilitySurfaceAllOf": ConstantVolatilitySurfaceAllOf,
     "ConstituentsAdjustmentHeader": ConstituentsAdjustmentHeader,
+    "ContractDetails": ContractDetails,
     "ContractForDifference": ContractForDifference,
     "ContractForDifferenceAllOf": ContractForDifferenceAllOf,
+    "ContractInitialisationEvent": ContractInitialisationEvent,
+    "ContractInitialisationEventAllOf": ContractInitialisationEventAllOf,
     "ContributionToNonPassingRuleDetail": ContributionToNonPassingRuleDetail,
     "CorporateAction": CorporateAction,
     "CorporateActionSource": CorporateActionSource,
@@ -3491,6 +3522,8 @@ let typeMap: {[index: string]: any} = {
     "DividendOptionEvent": DividendOptionEvent,
     "DividendOptionEventAllOf": DividendOptionEventAllOf,
     "DividendReinvestmentEvent": DividendReinvestmentEvent,
+    "DrawdownEvent": DrawdownEvent,
+    "DrawdownEventAllOf": DrawdownEventAllOf,
     "EarlyRedemptionElection": EarlyRedemptionElection,
     "EarlyRedemptionEvent": EarlyRedemptionEvent,
     "EarlyRedemptionEventAllOf": EarlyRedemptionEventAllOf,
@@ -3596,6 +3629,8 @@ let typeMap: {[index: string]: any} = {
     "FutureAllOf": FutureAllOf,
     "FutureExpiryEvent": FutureExpiryEvent,
     "FutureExpiryEventAllOf": FutureExpiryEventAllOf,
+    "FutureMarkToMarketEvent": FutureMarkToMarketEvent,
+    "FutureMarkToMarketEventAllOf": FutureMarkToMarketEventAllOf,
     "FuturesContractDetails": FuturesContractDetails,
     "FxConventions": FxConventions,
     "FxDependency": FxDependency,
