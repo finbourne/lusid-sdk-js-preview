@@ -51,6 +51,7 @@ import {RelationDefinitionsApi} from './api/relationDefinitionsApi';
 import {RelationsApi} from './api/relationsApi';
 import {RelationshipDefinitionsApi} from './api/relationshipDefinitionsApi';
 import {RelationshipsApi} from './api/relationshipsApi';
+import {RiskModelFactorSetsApi} from './api/riskModelFactorSetsApi';
 import {SchemasApi} from './api/schemasApi';
 import {ScopesApi} from './api/scopesApi';
 import {ScriptedTranslationApi} from './api/scriptedTranslationApi';
@@ -122,6 +123,7 @@ export class Api {
     public relations:  RelationsApi
     public relationshipDefinitions:  RelationshipDefinitionsApi
     public relationships:  RelationshipsApi
+    public riskModelFactorSets:  RiskModelFactorSetsApi
     public schemas:  SchemasApi
     public scopes:  ScopesApi
     public scriptedTranslation:  ScriptedTranslationApi

@@ -268,6 +268,7 @@ export * from './createRelationDefinitionRequest';
 export * from './createRelationRequest';
 export * from './createRelationshipDefinitionRequest';
 export * from './createRelationshipRequest';
+export * from './createRiskModelFactorSetRequest';
 export * from './createSequenceRequest';
 export * from './createStagingRuleSetRequest';
 export * from './createTaxRuleSetRequest';
@@ -656,6 +657,7 @@ export * from './lusidValidationProblemDetails';
 export * from './mappedString';
 export * from './mapping';
 export * from './mappingRule';
+export * from './markToMarketConventions';
 export * from './marketContext';
 export * from './marketContextSuppliers';
 export * from './marketDataKeyRule';
@@ -804,6 +806,7 @@ export * from './pagedResourceListOfPropertyDefinitionSearchResult';
 export * from './pagedResourceListOfReconciliation';
 export * from './pagedResourceListOfReferenceListResponse';
 export * from './pagedResourceListOfRelationshipDefinition';
+export * from './pagedResourceListOfRiskModelFactorSet';
 export * from './pagedResourceListOfSequenceDefinition';
 export * from './pagedResourceListOfStagedModification';
 export * from './pagedResourceListOfStagedModificationsRequestedChangeInterval';
@@ -1054,6 +1057,7 @@ export * from './resultValueType';
 export * from './returnZeroPvOptions';
 export * from './reverseStockSplitEvent';
 export * from './reverseStockSplitEventAllOf';
+export * from './riskModelFactorSet';
 export * from './roundingConfiguration';
 export * from './roundingConfigurationComponent';
 export * from './roundingConvention';
@@ -1149,6 +1153,7 @@ export * from './totalReturnSwapAllOf';
 export * from './touch';
 export * from './tradeTicket';
 export * from './tradeTicketType';
+export * from './tradingConventions';
 export * from './transaction';
 export * from './transactionConfigurationData';
 export * from './transactionConfigurationDataRequest';
@@ -1228,6 +1233,7 @@ export * from './updatePropertyDefinitionRequest';
 export * from './updateReconciliationRequest';
 export * from './updateReferenceDataRequest';
 export * from './updateRelationshipDefinitionRequest';
+export * from './updateRiskModelFactorSetRequest';
 export * from './updateStagingRuleSetRequest';
 export * from './updateTaxRuleSetRequest';
 export * from './updateTimelineRequest';
@@ -1601,6 +1607,7 @@ import { CreateRelationDefinitionRequest } from './createRelationDefinitionReque
 import { CreateRelationRequest } from './createRelationRequest';
 import { CreateRelationshipDefinitionRequest } from './createRelationshipDefinitionRequest';
 import { CreateRelationshipRequest } from './createRelationshipRequest';
+import { CreateRiskModelFactorSetRequest } from './createRiskModelFactorSetRequest';
 import { CreateSequenceRequest } from './createSequenceRequest';
 import { CreateStagingRuleSetRequest } from './createStagingRuleSetRequest';
 import { CreateTaxRuleSetRequest } from './createTaxRuleSetRequest';
@@ -1989,6 +1996,7 @@ import { LusidValidationProblemDetails } from './lusidValidationProblemDetails';
 import { MappedString } from './mappedString';
 import { Mapping } from './mapping';
 import { MappingRule } from './mappingRule';
+import { MarkToMarketConventions } from './markToMarketConventions';
 import { MarketContext } from './marketContext';
 import { MarketContextSuppliers } from './marketContextSuppliers';
 import { MarketDataKeyRule } from './marketDataKeyRule';
@@ -2137,6 +2145,7 @@ import { PagedResourceListOfPropertyDefinitionSearchResult } from './pagedResour
 import { PagedResourceListOfReconciliation } from './pagedResourceListOfReconciliation';
 import { PagedResourceListOfReferenceListResponse } from './pagedResourceListOfReferenceListResponse';
 import { PagedResourceListOfRelationshipDefinition } from './pagedResourceListOfRelationshipDefinition';
+import { PagedResourceListOfRiskModelFactorSet } from './pagedResourceListOfRiskModelFactorSet';
 import { PagedResourceListOfSequenceDefinition } from './pagedResourceListOfSequenceDefinition';
 import { PagedResourceListOfStagedModification } from './pagedResourceListOfStagedModification';
 import { PagedResourceListOfStagedModificationsRequestedChangeInterval } from './pagedResourceListOfStagedModificationsRequestedChangeInterval';
@@ -2387,6 +2396,7 @@ import { ResultValueType } from './resultValueType';
 import { ReturnZeroPvOptions } from './returnZeroPvOptions';
 import { ReverseStockSplitEvent } from './reverseStockSplitEvent';
 import { ReverseStockSplitEventAllOf } from './reverseStockSplitEventAllOf';
+import { RiskModelFactorSet } from './riskModelFactorSet';
 import { RoundingConfiguration } from './roundingConfiguration';
 import { RoundingConfigurationComponent } from './roundingConfigurationComponent';
 import { RoundingConvention } from './roundingConvention';
@@ -2482,6 +2492,7 @@ import { TotalReturnSwapAllOf } from './totalReturnSwapAllOf';
 import { Touch } from './touch';
 import { TradeTicket } from './tradeTicket';
 import { TradeTicketType } from './tradeTicketType';
+import { TradingConventions } from './tradingConventions';
 import { Transaction } from './transaction';
 import { TransactionConfigurationData } from './transactionConfigurationData';
 import { TransactionConfigurationDataRequest } from './transactionConfigurationDataRequest';
@@ -2561,6 +2572,7 @@ import { UpdatePropertyDefinitionRequest } from './updatePropertyDefinitionReque
 import { UpdateReconciliationRequest } from './updateReconciliationRequest';
 import { UpdateReferenceDataRequest } from './updateReferenceDataRequest';
 import { UpdateRelationshipDefinitionRequest } from './updateRelationshipDefinitionRequest';
+import { UpdateRiskModelFactorSetRequest } from './updateRiskModelFactorSetRequest';
 import { UpdateStagingRuleSetRequest } from './updateStagingRuleSetRequest';
 import { UpdateTaxRuleSetRequest } from './updateTaxRuleSetRequest';
 import { UpdateTimelineRequest } from './updateTimelineRequest';
@@ -3447,6 +3459,7 @@ let typeMap: {[index: string]: any} = {
     "CreateRelationRequest": CreateRelationRequest,
     "CreateRelationshipDefinitionRequest": CreateRelationshipDefinitionRequest,
     "CreateRelationshipRequest": CreateRelationshipRequest,
+    "CreateRiskModelFactorSetRequest": CreateRiskModelFactorSetRequest,
     "CreateSequenceRequest": CreateSequenceRequest,
     "CreateStagingRuleSetRequest": CreateStagingRuleSetRequest,
     "CreateTaxRuleSetRequest": CreateTaxRuleSetRequest,
@@ -3825,6 +3838,7 @@ let typeMap: {[index: string]: any} = {
     "MappedString": MappedString,
     "Mapping": Mapping,
     "MappingRule": MappingRule,
+    "MarkToMarketConventions": MarkToMarketConventions,
     "MarketContext": MarketContext,
     "MarketContextSuppliers": MarketContextSuppliers,
     "MarketDataKeyRule": MarketDataKeyRule,
@@ -3964,6 +3978,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfReconciliation": PagedResourceListOfReconciliation,
     "PagedResourceListOfReferenceListResponse": PagedResourceListOfReferenceListResponse,
     "PagedResourceListOfRelationshipDefinition": PagedResourceListOfRelationshipDefinition,
+    "PagedResourceListOfRiskModelFactorSet": PagedResourceListOfRiskModelFactorSet,
     "PagedResourceListOfSequenceDefinition": PagedResourceListOfSequenceDefinition,
     "PagedResourceListOfStagedModification": PagedResourceListOfStagedModification,
     "PagedResourceListOfStagedModificationsRequestedChangeInterval": PagedResourceListOfStagedModificationsRequestedChangeInterval,
@@ -4199,6 +4214,7 @@ let typeMap: {[index: string]: any} = {
     "ReturnZeroPvOptions": ReturnZeroPvOptions,
     "ReverseStockSplitEvent": ReverseStockSplitEvent,
     "ReverseStockSplitEventAllOf": ReverseStockSplitEventAllOf,
+    "RiskModelFactorSet": RiskModelFactorSet,
     "RoundingConfiguration": RoundingConfiguration,
     "RoundingConfigurationComponent": RoundingConfigurationComponent,
     "RoundingConvention": RoundingConvention,
@@ -4289,6 +4305,7 @@ let typeMap: {[index: string]: any} = {
     "TotalReturnSwapAllOf": TotalReturnSwapAllOf,
     "Touch": Touch,
     "TradeTicket": TradeTicket,
+    "TradingConventions": TradingConventions,
     "Transaction": Transaction,
     "TransactionConfigurationData": TransactionConfigurationData,
     "TransactionConfigurationDataRequest": TransactionConfigurationDataRequest,
@@ -4362,6 +4379,7 @@ let typeMap: {[index: string]: any} = {
     "UpdateReconciliationRequest": UpdateReconciliationRequest,
     "UpdateReferenceDataRequest": UpdateReferenceDataRequest,
     "UpdateRelationshipDefinitionRequest": UpdateRelationshipDefinitionRequest,
+    "UpdateRiskModelFactorSetRequest": UpdateRiskModelFactorSetRequest,
     "UpdateStagingRuleSetRequest": UpdateStagingRuleSetRequest,
     "UpdateTaxRuleSetRequest": UpdateTaxRuleSetRequest,
     "UpdateTimelineRequest": UpdateTimelineRequest,
