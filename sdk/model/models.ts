@@ -836,6 +836,7 @@ export * from './placement';
 export * from './placementRequest';
 export * from './placementSetRequest';
 export * from './placementUpdateRequest';
+export * from './pnlJournalEntryLine';
 export * from './portfolio';
 export * from './portfolioCashFlow';
 export * from './portfolioCashLadder';
@@ -1290,6 +1291,7 @@ export * from './valuationPointDataRequest';
 export * from './valuationPointDataResponse';
 export * from './valuationPointOverview';
 export * from './valuationPointResourceListOfJournalEntryLine';
+export * from './valuationPointResourceListOfPnlJournalEntryLine';
 export * from './valuationPointResourceListOfTrialBalance';
 export * from './valuationRequest';
 export * from './valuationSchedule';
@@ -2176,6 +2178,7 @@ import { Placement } from './placement';
 import { PlacementRequest } from './placementRequest';
 import { PlacementSetRequest } from './placementSetRequest';
 import { PlacementUpdateRequest } from './placementUpdateRequest';
+import { PnlJournalEntryLine } from './pnlJournalEntryLine';
 import { Portfolio } from './portfolio';
 import { PortfolioCashFlow } from './portfolioCashFlow';
 import { PortfolioCashLadder } from './portfolioCashLadder';
@@ -2630,6 +2633,7 @@ import { ValuationPointDataRequest } from './valuationPointDataRequest';
 import { ValuationPointDataResponse } from './valuationPointDataResponse';
 import { ValuationPointOverview } from './valuationPointOverview';
 import { ValuationPointResourceListOfJournalEntryLine } from './valuationPointResourceListOfJournalEntryLine';
+import { ValuationPointResourceListOfPnlJournalEntryLine } from './valuationPointResourceListOfPnlJournalEntryLine';
 import { ValuationPointResourceListOfTrialBalance } from './valuationPointResourceListOfTrialBalance';
 import { ValuationRequest } from './valuationRequest';
 import { ValuationSchedule } from './valuationSchedule';
@@ -4008,6 +4012,7 @@ let typeMap: {[index: string]: any} = {
     "PlacementRequest": PlacementRequest,
     "PlacementSetRequest": PlacementSetRequest,
     "PlacementUpdateRequest": PlacementUpdateRequest,
+    "PnlJournalEntryLine": PnlJournalEntryLine,
     "Portfolio": Portfolio,
     "PortfolioCashFlow": PortfolioCashFlow,
     "PortfolioCashLadder": PortfolioCashLadder,
@@ -4438,6 +4443,7 @@ let typeMap: {[index: string]: any} = {
     "ValuationPointDataResponse": ValuationPointDataResponse,
     "ValuationPointOverview": ValuationPointOverview,
     "ValuationPointResourceListOfJournalEntryLine": ValuationPointResourceListOfJournalEntryLine,
+    "ValuationPointResourceListOfPnlJournalEntryLine": ValuationPointResourceListOfPnlJournalEntryLine,
     "ValuationPointResourceListOfTrialBalance": ValuationPointResourceListOfTrialBalance,
     "ValuationRequest": ValuationRequest,
     "ValuationSchedule": ValuationSchedule,
