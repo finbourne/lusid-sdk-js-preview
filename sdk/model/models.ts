@@ -17,6 +17,7 @@ export * from './accessMetadataOperation';
 export * from './accessMetadataValue';
 export * from './account';
 export * from './accountProperties';
+export * from './accountedTransaction';
 export * from './accountingMethod';
 export * from './accountsUpsertResponse';
 export * from './accumulationEvent';
@@ -850,6 +851,7 @@ export * from './portfolioGroupIdListComplianceParameter';
 export * from './portfolioGroupProperties';
 export * from './portfolioGroupSearchResult';
 export * from './portfolioHolding';
+export * from './portfolioId';
 export * from './portfolioIdComplianceParameter';
 export * from './portfolioIdList';
 export * from './portfolioIdListComplianceParameter';
@@ -1290,6 +1292,7 @@ export * from './valuationPointDataQueryParameters';
 export * from './valuationPointDataRequest';
 export * from './valuationPointDataResponse';
 export * from './valuationPointOverview';
+export * from './valuationPointResourceListOfAccountedTransaction';
 export * from './valuationPointResourceListOfJournalEntryLine';
 export * from './valuationPointResourceListOfPnlJournalEntryLine';
 export * from './valuationPointResourceListOfTrialBalance';
@@ -1359,6 +1362,7 @@ import { AccessMetadataOperation } from './accessMetadataOperation';
 import { AccessMetadataValue } from './accessMetadataValue';
 import { Account } from './account';
 import { AccountProperties } from './accountProperties';
+import { AccountedTransaction } from './accountedTransaction';
 import { AccountingMethod } from './accountingMethod';
 import { AccountsUpsertResponse } from './accountsUpsertResponse';
 import { AccumulationEvent } from './accumulationEvent';
@@ -2192,6 +2196,7 @@ import { PortfolioGroupIdListComplianceParameter } from './portfolioGroupIdListC
 import { PortfolioGroupProperties } from './portfolioGroupProperties';
 import { PortfolioGroupSearchResult } from './portfolioGroupSearchResult';
 import { PortfolioHolding } from './portfolioHolding';
+import { PortfolioId } from './portfolioId';
 import { PortfolioIdComplianceParameter } from './portfolioIdComplianceParameter';
 import { PortfolioIdList } from './portfolioIdList';
 import { PortfolioIdListComplianceParameter } from './portfolioIdListComplianceParameter';
@@ -2632,6 +2637,7 @@ import { ValuationPointDataQueryParameters } from './valuationPointDataQueryPara
 import { ValuationPointDataRequest } from './valuationPointDataRequest';
 import { ValuationPointDataResponse } from './valuationPointDataResponse';
 import { ValuationPointOverview } from './valuationPointOverview';
+import { ValuationPointResourceListOfAccountedTransaction } from './valuationPointResourceListOfAccountedTransaction';
 import { ValuationPointResourceListOfJournalEntryLine } from './valuationPointResourceListOfJournalEntryLine';
 import { ValuationPointResourceListOfPnlJournalEntryLine } from './valuationPointResourceListOfPnlJournalEntryLine';
 import { ValuationPointResourceListOfTrialBalance } from './valuationPointResourceListOfTrialBalance';
@@ -3222,6 +3228,7 @@ let typeMap: {[index: string]: any} = {
     "AccessMetadataValue": AccessMetadataValue,
     "Account": Account,
     "AccountProperties": AccountProperties,
+    "AccountedTransaction": AccountedTransaction,
     "AccountsUpsertResponse": AccountsUpsertResponse,
     "AccumulationEvent": AccumulationEvent,
     "AccumulationEventAllOf": AccumulationEventAllOf,
@@ -4026,6 +4033,7 @@ let typeMap: {[index: string]: any} = {
     "PortfolioGroupProperties": PortfolioGroupProperties,
     "PortfolioGroupSearchResult": PortfolioGroupSearchResult,
     "PortfolioHolding": PortfolioHolding,
+    "PortfolioId": PortfolioId,
     "PortfolioIdComplianceParameter": PortfolioIdComplianceParameter,
     "PortfolioIdList": PortfolioIdList,
     "PortfolioIdListComplianceParameter": PortfolioIdListComplianceParameter,
@@ -4442,6 +4450,7 @@ let typeMap: {[index: string]: any} = {
     "ValuationPointDataRequest": ValuationPointDataRequest,
     "ValuationPointDataResponse": ValuationPointDataResponse,
     "ValuationPointOverview": ValuationPointOverview,
+    "ValuationPointResourceListOfAccountedTransaction": ValuationPointResourceListOfAccountedTransaction,
     "ValuationPointResourceListOfJournalEntryLine": ValuationPointResourceListOfJournalEntryLine,
     "ValuationPointResourceListOfPnlJournalEntryLine": ValuationPointResourceListOfPnlJournalEntryLine,
     "ValuationPointResourceListOfTrialBalance": ValuationPointResourceListOfTrialBalance,
