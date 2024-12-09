@@ -649,6 +649,8 @@ export * from './listAggregationResponse';
 export * from './listComplexMarketDataWithMetaDataResponse';
 export * from './loanFacility';
 export * from './loanFacilityAllOf';
+export * from './loanInterestRepaymentEvent';
+export * from './loanInterestRepaymentEventAllOf';
 export * from './loanPeriod';
 export * from './lockPeriodDiaryEntryRequest';
 export * from './lusidInstrument';
@@ -1994,6 +1996,8 @@ import { ListAggregationResponse } from './listAggregationResponse';
 import { ListComplexMarketDataWithMetaDataResponse } from './listComplexMarketDataWithMetaDataResponse';
 import { LoanFacility } from './loanFacility';
 import { LoanFacilityAllOf } from './loanFacilityAllOf';
+import { LoanInterestRepaymentEvent } from './loanInterestRepaymentEvent';
+import { LoanInterestRepaymentEventAllOf } from './loanInterestRepaymentEventAllOf';
 import { LoanPeriod } from './loanPeriod';
 import { LockPeriodDiaryEntryRequest } from './lockPeriodDiaryEntryRequest';
 import { LusidInstrument } from './lusidInstrument';
@@ -2986,6 +2990,8 @@ let enumsMap: {[index: string]: any} = {
         "LifeCycleEventValueAllOf.ResultValueTypeEnum": LifeCycleEventValueAllOf.ResultValueTypeEnum,
         "LoanFacility.InstrumentTypeEnum": LoanFacility.InstrumentTypeEnum,
         "LoanFacilityAllOf.InstrumentTypeEnum": LoanFacilityAllOf.InstrumentTypeEnum,
+        "LoanInterestRepaymentEvent.InstrumentEventTypeEnum": LoanInterestRepaymentEvent.InstrumentEventTypeEnum,
+        "LoanInterestRepaymentEventAllOf.InstrumentEventTypeEnum": LoanInterestRepaymentEventAllOf.InstrumentEventTypeEnum,
         "LusidInstrument.InstrumentTypeEnum": LusidInstrument.InstrumentTypeEnum,
         "LusidTradeTicket.TradeTicketTypeEnum": LusidTradeTicket.TradeTicketTypeEnum,
         "MarketDataKeyRule.QuoteTypeEnum": MarketDataKeyRule.QuoteTypeEnum,
@@ -3842,6 +3848,8 @@ let typeMap: {[index: string]: any} = {
     "ListComplexMarketDataWithMetaDataResponse": ListComplexMarketDataWithMetaDataResponse,
     "LoanFacility": LoanFacility,
     "LoanFacilityAllOf": LoanFacilityAllOf,
+    "LoanInterestRepaymentEvent": LoanInterestRepaymentEvent,
+    "LoanInterestRepaymentEventAllOf": LoanInterestRepaymentEventAllOf,
     "LoanPeriod": LoanPeriod,
     "LockPeriodDiaryEntryRequest": LockPeriodDiaryEntryRequest,
     "LusidInstrument": LusidInstrument,
