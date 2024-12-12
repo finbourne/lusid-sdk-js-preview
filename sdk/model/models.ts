@@ -183,6 +183,7 @@ export * from './client';
 export * from './closeEvent';
 export * from './closeEventAllOf';
 export * from './closePeriodDiaryEntryRequest';
+export * from './closedPeriod';
 export * from './comparisonAttributeValuePair';
 export * from './completePortfolio';
 export * from './completeRelation';
@@ -249,6 +250,7 @@ export * from './counterpartySignatory';
 export * from './createAddressKeyDefinitionRequest';
 export * from './createAmortisationRuleSetRequest';
 export * from './createCalendarRequest';
+export * from './createClosedPeriodRequest';
 export * from './createComplianceTemplateRequest';
 export * from './createCorporateActionSourceRequest';
 export * from './createCustomEntityTypeRequest';
@@ -270,7 +272,6 @@ export * from './createRelationDefinitionRequest';
 export * from './createRelationRequest';
 export * from './createRelationshipDefinitionRequest';
 export * from './createRelationshipRequest';
-export * from './createRiskModelFactorSetRequest';
 export * from './createSequenceRequest';
 export * from './createStagingRuleSetRequest';
 export * from './createTaxRuleSetRequest';
@@ -810,7 +811,6 @@ export * from './pagedResourceListOfPropertyDefinitionSearchResult';
 export * from './pagedResourceListOfReconciliation';
 export * from './pagedResourceListOfReferenceListResponse';
 export * from './pagedResourceListOfRelationshipDefinition';
-export * from './pagedResourceListOfRiskModelFactorSet';
 export * from './pagedResourceListOfSequenceDefinition';
 export * from './pagedResourceListOfStagedModification';
 export * from './pagedResourceListOfStagedModificationsRequestedChangeInterval';
@@ -1063,7 +1063,6 @@ export * from './resultValueType';
 export * from './returnZeroPvOptions';
 export * from './reverseStockSplitEvent';
 export * from './reverseStockSplitEventAllOf';
-export * from './riskModelFactorSet';
 export * from './roundingConfiguration';
 export * from './roundingConfigurationComponent';
 export * from './roundingConvention';
@@ -1239,7 +1238,6 @@ export * from './updatePropertyDefinitionRequest';
 export * from './updateReconciliationRequest';
 export * from './updateReferenceDataRequest';
 export * from './updateRelationshipDefinitionRequest';
-export * from './updateRiskModelFactorSetRequest';
 export * from './updateStagingRuleSetRequest';
 export * from './updateTaxRuleSetRequest';
 export * from './updateTimelineRequest';
@@ -1530,6 +1528,7 @@ import { Client } from './client';
 import { CloseEvent } from './closeEvent';
 import { CloseEventAllOf } from './closeEventAllOf';
 import { ClosePeriodDiaryEntryRequest } from './closePeriodDiaryEntryRequest';
+import { ClosedPeriod } from './closedPeriod';
 import { ComparisonAttributeValuePair } from './comparisonAttributeValuePair';
 import { CompletePortfolio } from './completePortfolio';
 import { CompleteRelation } from './completeRelation';
@@ -1596,6 +1595,7 @@ import { CounterpartySignatory } from './counterpartySignatory';
 import { CreateAddressKeyDefinitionRequest } from './createAddressKeyDefinitionRequest';
 import { CreateAmortisationRuleSetRequest } from './createAmortisationRuleSetRequest';
 import { CreateCalendarRequest } from './createCalendarRequest';
+import { CreateClosedPeriodRequest } from './createClosedPeriodRequest';
 import { CreateComplianceTemplateRequest } from './createComplianceTemplateRequest';
 import { CreateCorporateActionSourceRequest } from './createCorporateActionSourceRequest';
 import { CreateCustomEntityTypeRequest } from './createCustomEntityTypeRequest';
@@ -1617,7 +1617,6 @@ import { CreateRelationDefinitionRequest } from './createRelationDefinitionReque
 import { CreateRelationRequest } from './createRelationRequest';
 import { CreateRelationshipDefinitionRequest } from './createRelationshipDefinitionRequest';
 import { CreateRelationshipRequest } from './createRelationshipRequest';
-import { CreateRiskModelFactorSetRequest } from './createRiskModelFactorSetRequest';
 import { CreateSequenceRequest } from './createSequenceRequest';
 import { CreateStagingRuleSetRequest } from './createStagingRuleSetRequest';
 import { CreateTaxRuleSetRequest } from './createTaxRuleSetRequest';
@@ -2157,7 +2156,6 @@ import { PagedResourceListOfPropertyDefinitionSearchResult } from './pagedResour
 import { PagedResourceListOfReconciliation } from './pagedResourceListOfReconciliation';
 import { PagedResourceListOfReferenceListResponse } from './pagedResourceListOfReferenceListResponse';
 import { PagedResourceListOfRelationshipDefinition } from './pagedResourceListOfRelationshipDefinition';
-import { PagedResourceListOfRiskModelFactorSet } from './pagedResourceListOfRiskModelFactorSet';
 import { PagedResourceListOfSequenceDefinition } from './pagedResourceListOfSequenceDefinition';
 import { PagedResourceListOfStagedModification } from './pagedResourceListOfStagedModification';
 import { PagedResourceListOfStagedModificationsRequestedChangeInterval } from './pagedResourceListOfStagedModificationsRequestedChangeInterval';
@@ -2410,7 +2408,6 @@ import { ResultValueType } from './resultValueType';
 import { ReturnZeroPvOptions } from './returnZeroPvOptions';
 import { ReverseStockSplitEvent } from './reverseStockSplitEvent';
 import { ReverseStockSplitEventAllOf } from './reverseStockSplitEventAllOf';
-import { RiskModelFactorSet } from './riskModelFactorSet';
 import { RoundingConfiguration } from './roundingConfiguration';
 import { RoundingConfigurationComponent } from './roundingConfigurationComponent';
 import { RoundingConvention } from './roundingConvention';
@@ -2586,7 +2583,6 @@ import { UpdatePropertyDefinitionRequest } from './updatePropertyDefinitionReque
 import { UpdateReconciliationRequest } from './updateReconciliationRequest';
 import { UpdateReferenceDataRequest } from './updateReferenceDataRequest';
 import { UpdateRelationshipDefinitionRequest } from './updateRelationshipDefinitionRequest';
-import { UpdateRiskModelFactorSetRequest } from './updateRiskModelFactorSetRequest';
 import { UpdateStagingRuleSetRequest } from './updateStagingRuleSetRequest';
 import { UpdateTaxRuleSetRequest } from './updateTaxRuleSetRequest';
 import { UpdateTimelineRequest } from './updateTimelineRequest';
@@ -3395,6 +3391,7 @@ let typeMap: {[index: string]: any} = {
     "CloseEvent": CloseEvent,
     "CloseEventAllOf": CloseEventAllOf,
     "ClosePeriodDiaryEntryRequest": ClosePeriodDiaryEntryRequest,
+    "ClosedPeriod": ClosedPeriod,
     "ComparisonAttributeValuePair": ComparisonAttributeValuePair,
     "CompletePortfolio": CompletePortfolio,
     "CompleteRelation": CompleteRelation,
@@ -3458,6 +3455,7 @@ let typeMap: {[index: string]: any} = {
     "CreateAddressKeyDefinitionRequest": CreateAddressKeyDefinitionRequest,
     "CreateAmortisationRuleSetRequest": CreateAmortisationRuleSetRequest,
     "CreateCalendarRequest": CreateCalendarRequest,
+    "CreateClosedPeriodRequest": CreateClosedPeriodRequest,
     "CreateComplianceTemplateRequest": CreateComplianceTemplateRequest,
     "CreateCorporateActionSourceRequest": CreateCorporateActionSourceRequest,
     "CreateCustomEntityTypeRequest": CreateCustomEntityTypeRequest,
@@ -3479,7 +3477,6 @@ let typeMap: {[index: string]: any} = {
     "CreateRelationRequest": CreateRelationRequest,
     "CreateRelationshipDefinitionRequest": CreateRelationshipDefinitionRequest,
     "CreateRelationshipRequest": CreateRelationshipRequest,
-    "CreateRiskModelFactorSetRequest": CreateRiskModelFactorSetRequest,
     "CreateSequenceRequest": CreateSequenceRequest,
     "CreateStagingRuleSetRequest": CreateStagingRuleSetRequest,
     "CreateTaxRuleSetRequest": CreateTaxRuleSetRequest,
@@ -4000,7 +3997,6 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfReconciliation": PagedResourceListOfReconciliation,
     "PagedResourceListOfReferenceListResponse": PagedResourceListOfReferenceListResponse,
     "PagedResourceListOfRelationshipDefinition": PagedResourceListOfRelationshipDefinition,
-    "PagedResourceListOfRiskModelFactorSet": PagedResourceListOfRiskModelFactorSet,
     "PagedResourceListOfSequenceDefinition": PagedResourceListOfSequenceDefinition,
     "PagedResourceListOfStagedModification": PagedResourceListOfStagedModification,
     "PagedResourceListOfStagedModificationsRequestedChangeInterval": PagedResourceListOfStagedModificationsRequestedChangeInterval,
@@ -4238,7 +4234,6 @@ let typeMap: {[index: string]: any} = {
     "ReturnZeroPvOptions": ReturnZeroPvOptions,
     "ReverseStockSplitEvent": ReverseStockSplitEvent,
     "ReverseStockSplitEventAllOf": ReverseStockSplitEventAllOf,
-    "RiskModelFactorSet": RiskModelFactorSet,
     "RoundingConfiguration": RoundingConfiguration,
     "RoundingConfigurationComponent": RoundingConfigurationComponent,
     "RoundingConvention": RoundingConvention,
@@ -4403,7 +4398,6 @@ let typeMap: {[index: string]: any} = {
     "UpdateReconciliationRequest": UpdateReconciliationRequest,
     "UpdateReferenceDataRequest": UpdateReferenceDataRequest,
     "UpdateRelationshipDefinitionRequest": UpdateRelationshipDefinitionRequest,
-    "UpdateRiskModelFactorSetRequest": UpdateRiskModelFactorSetRequest,
     "UpdateStagingRuleSetRequest": UpdateStagingRuleSetRequest,
     "UpdateTaxRuleSetRequest": UpdateTaxRuleSetRequest,
     "UpdateTimelineRequest": UpdateTimelineRequest,
