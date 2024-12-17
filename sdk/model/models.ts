@@ -768,6 +768,7 @@ export * from './pagedResourceListOfCalendar';
 export * from './pagedResourceListOfChartOfAccounts';
 export * from './pagedResourceListOfCleardownModuleResponse';
 export * from './pagedResourceListOfCleardownModuleRule';
+export * from './pagedResourceListOfClosedPeriod';
 export * from './pagedResourceListOfComplianceRuleResponse';
 export * from './pagedResourceListOfComplianceRunInfoV2';
 export * from './pagedResourceListOfComplianceTemplate';
@@ -2113,6 +2114,7 @@ import { PagedResourceListOfCalendar } from './pagedResourceListOfCalendar';
 import { PagedResourceListOfChartOfAccounts } from './pagedResourceListOfChartOfAccounts';
 import { PagedResourceListOfCleardownModuleResponse } from './pagedResourceListOfCleardownModuleResponse';
 import { PagedResourceListOfCleardownModuleRule } from './pagedResourceListOfCleardownModuleRule';
+import { PagedResourceListOfClosedPeriod } from './pagedResourceListOfClosedPeriod';
 import { PagedResourceListOfComplianceRuleResponse } from './pagedResourceListOfComplianceRuleResponse';
 import { PagedResourceListOfComplianceRunInfoV2 } from './pagedResourceListOfComplianceRunInfoV2';
 import { PagedResourceListOfComplianceTemplate } from './pagedResourceListOfComplianceTemplate';
@@ -3954,6 +3956,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfChartOfAccounts": PagedResourceListOfChartOfAccounts,
     "PagedResourceListOfCleardownModuleResponse": PagedResourceListOfCleardownModuleResponse,
     "PagedResourceListOfCleardownModuleRule": PagedResourceListOfCleardownModuleRule,
+    "PagedResourceListOfClosedPeriod": PagedResourceListOfClosedPeriod,
     "PagedResourceListOfComplianceRuleResponse": PagedResourceListOfComplianceRuleResponse,
     "PagedResourceListOfComplianceRunInfoV2": PagedResourceListOfComplianceRunInfoV2,
     "PagedResourceListOfComplianceTemplate": PagedResourceListOfComplianceTemplate,
