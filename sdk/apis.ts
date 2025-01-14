@@ -14,6 +14,7 @@ import {ConfigurationRecipeApi} from './api/configurationRecipeApi';
 import {ConventionsApi} from './api/conventionsApi';
 import {CorporateActionSourcesApi} from './api/corporateActionSourcesApi';
 import {CounterpartiesApi} from './api/counterpartiesApi';
+import {CustomDataModelsApi} from './api/customDataModelsApi';
 import {CustomEntitiesApi} from './api/customEntitiesApi';
 import {CustomEntityDefinitionsApi} from './api/customEntityDefinitionsApi';
 import {CustomEntityTypesApi} from './api/customEntityTypesApi';
@@ -56,6 +57,7 @@ import {ScopesApi} from './api/scopesApi';
 import {ScriptedTranslationApi} from './api/scriptedTranslationApi';
 import {SearchApi} from './api/searchApi';
 import {SequencesApi} from './api/sequencesApi';
+import {SimplePositionPortfoliosApi} from './api/simplePositionPortfoliosApi';
 import {StagedModificationsApi} from './api/stagedModificationsApi';
 import {StagingRuleSetApi} from './api/stagingRuleSetApi';
 import {StructuredResultDataApi} from './api/structuredResultDataApi';
@@ -85,6 +87,7 @@ export class Api {
     public conventions:  ConventionsApi
     public corporateActionSources:  CorporateActionSourcesApi
     public counterparties:  CounterpartiesApi
+    public customDataModels:  CustomDataModelsApi
     public customEntities:  CustomEntitiesApi
     public customEntityDefinitions:  CustomEntityDefinitionsApi
     public customEntityTypes:  CustomEntityTypesApi
@@ -127,6 +130,7 @@ export class Api {
     public scriptedTranslation:  ScriptedTranslationApi
     public search:  SearchApi
     public sequences:  SequencesApi
+    public simplePositionPortfolios:  SimplePositionPortfoliosApi
     public stagedModifications:  StagedModificationsApi
     public stagingRuleSet:  StagingRuleSetApi
     public structuredResultData:  StructuredResultDataApi

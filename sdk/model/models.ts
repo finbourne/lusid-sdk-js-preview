@@ -53,6 +53,7 @@ export * from './aggregationOp';
 export * from './aggregationOptions';
 export * from './aggregationQuery';
 export * from './aggregationType';
+export * from './alias';
 export * from './allocation';
 export * from './allocationRequest';
 export * from './allocationServiceRunResponse';
@@ -273,6 +274,7 @@ export * from './createRelationRequest';
 export * from './createRelationshipDefinitionRequest';
 export * from './createRelationshipRequest';
 export * from './createSequenceRequest';
+export * from './createSimplePositionPortfolioRequest';
 export * from './createStagingRuleSetRequest';
 export * from './createTaxRuleSetRequest';
 export * from './createTimelineRequest';
@@ -295,6 +297,12 @@ export * from './custodianAccount';
 export * from './custodianAccountProperties';
 export * from './custodianAccountRequest';
 export * from './custodianAccountsUpsertResponse';
+export * from './customDataModel';
+export * from './customDataModelCriteria';
+export * from './customDataModelIdentifierTypeSpecification';
+export * from './customDataModelIdentifierTypeSpecificationWithDisplayName';
+export * from './customDataModelPropertySpecification';
+export * from './customDataModelPropertySpecificationWithDisplayName';
 export * from './customEntityDefinition';
 export * from './customEntityDefinitionRequest';
 export * from './customEntityEntity';
@@ -309,6 +317,7 @@ export * from './cutLocalTime';
 export * from './dataDefinition';
 export * from './dataMapKey';
 export * from './dataMapping';
+export * from './dataModelSummary';
 export * from './dataScope';
 export * from './dataType';
 export * from './dataTypeEntity';
@@ -928,6 +937,7 @@ export * from './recipeBlock';
 export * from './recipeComposer';
 export * from './recipeValue';
 export * from './recombineStep';
+export * from './recommendedSortBy';
 export * from './reconcileDateTimeRule';
 export * from './reconcileDateTimeRuleAllOf';
 export * from './reconcileNumericRule';
@@ -989,6 +999,7 @@ export * from './resourceListOfComplianceRuleResult';
 export * from './resourceListOfComplianceRunInfo';
 export * from './resourceListOfConstituentsAdjustmentHeader';
 export * from './resourceListOfCorporateAction';
+export * from './resourceListOfDataModelSummary';
 export * from './resourceListOfDataType';
 export * from './resourceListOfExecution';
 export * from './resourceListOfFeeRule';
@@ -1252,6 +1263,7 @@ export * from './upsertCorporateActionRequest';
 export * from './upsertCorporateActionsResponse';
 export * from './upsertCounterpartyAgreementRequest';
 export * from './upsertCreditSupportAnnexRequest';
+export * from './upsertCustomDataModelRequest';
 export * from './upsertCustomEntitiesResponse';
 export * from './upsertCustomEntityAccessMetadataRequest';
 export * from './upsertDialectRequest';
@@ -1399,6 +1411,7 @@ import { AggregationOp } from './aggregationOp';
 import { AggregationOptions } from './aggregationOptions';
 import { AggregationQuery } from './aggregationQuery';
 import { AggregationType } from './aggregationType';
+import { Alias } from './alias';
 import { Allocation } from './allocation';
 import { AllocationRequest } from './allocationRequest';
 import { AllocationServiceRunResponse } from './allocationServiceRunResponse';
@@ -1619,6 +1632,7 @@ import { CreateRelationRequest } from './createRelationRequest';
 import { CreateRelationshipDefinitionRequest } from './createRelationshipDefinitionRequest';
 import { CreateRelationshipRequest } from './createRelationshipRequest';
 import { CreateSequenceRequest } from './createSequenceRequest';
+import { CreateSimplePositionPortfolioRequest } from './createSimplePositionPortfolioRequest';
 import { CreateStagingRuleSetRequest } from './createStagingRuleSetRequest';
 import { CreateTaxRuleSetRequest } from './createTaxRuleSetRequest';
 import { CreateTimelineRequest } from './createTimelineRequest';
@@ -1641,6 +1655,12 @@ import { CustodianAccount } from './custodianAccount';
 import { CustodianAccountProperties } from './custodianAccountProperties';
 import { CustodianAccountRequest } from './custodianAccountRequest';
 import { CustodianAccountsUpsertResponse } from './custodianAccountsUpsertResponse';
+import { CustomDataModel } from './customDataModel';
+import { CustomDataModelCriteria } from './customDataModelCriteria';
+import { CustomDataModelIdentifierTypeSpecification } from './customDataModelIdentifierTypeSpecification';
+import { CustomDataModelIdentifierTypeSpecificationWithDisplayName } from './customDataModelIdentifierTypeSpecificationWithDisplayName';
+import { CustomDataModelPropertySpecification } from './customDataModelPropertySpecification';
+import { CustomDataModelPropertySpecificationWithDisplayName } from './customDataModelPropertySpecificationWithDisplayName';
 import { CustomEntityDefinition } from './customEntityDefinition';
 import { CustomEntityDefinitionRequest } from './customEntityDefinitionRequest';
 import { CustomEntityEntity } from './customEntityEntity';
@@ -1655,6 +1675,7 @@ import { CutLocalTime } from './cutLocalTime';
 import { DataDefinition } from './dataDefinition';
 import { DataMapKey } from './dataMapKey';
 import { DataMapping } from './dataMapping';
+import { DataModelSummary } from './dataModelSummary';
 import { DataScope } from './dataScope';
 import { DataType } from './dataType';
 import { DataTypeEntity } from './dataTypeEntity';
@@ -2274,6 +2295,7 @@ import { RecipeBlock } from './recipeBlock';
 import { RecipeComposer } from './recipeComposer';
 import { RecipeValue } from './recipeValue';
 import { RecombineStep } from './recombineStep';
+import { RecommendedSortBy } from './recommendedSortBy';
 import { ReconcileDateTimeRule } from './reconcileDateTimeRule';
 import { ReconcileDateTimeRuleAllOf } from './reconcileDateTimeRuleAllOf';
 import { ReconcileNumericRule } from './reconcileNumericRule';
@@ -2335,6 +2357,7 @@ import { ResourceListOfComplianceRuleResult } from './resourceListOfComplianceRu
 import { ResourceListOfComplianceRunInfo } from './resourceListOfComplianceRunInfo';
 import { ResourceListOfConstituentsAdjustmentHeader } from './resourceListOfConstituentsAdjustmentHeader';
 import { ResourceListOfCorporateAction } from './resourceListOfCorporateAction';
+import { ResourceListOfDataModelSummary } from './resourceListOfDataModelSummary';
 import { ResourceListOfDataType } from './resourceListOfDataType';
 import { ResourceListOfExecution } from './resourceListOfExecution';
 import { ResourceListOfFeeRule } from './resourceListOfFeeRule';
@@ -2598,6 +2621,7 @@ import { UpsertCorporateActionRequest } from './upsertCorporateActionRequest';
 import { UpsertCorporateActionsResponse } from './upsertCorporateActionsResponse';
 import { UpsertCounterpartyAgreementRequest } from './upsertCounterpartyAgreementRequest';
 import { UpsertCreditSupportAnnexRequest } from './upsertCreditSupportAnnexRequest';
+import { UpsertCustomDataModelRequest } from './upsertCustomDataModelRequest';
 import { UpsertCustomEntitiesResponse } from './upsertCustomEntitiesResponse';
 import { UpsertCustomEntityAccessMetadataRequest } from './upsertCustomEntityAccessMetadataRequest';
 import { UpsertDialectRequest } from './upsertDialectRequest';
@@ -2793,6 +2817,7 @@ let enumsMap: {[index: string]: any} = {
         "CreateDerivedTransactionPortfolioRequest.AccountingMethodEnum": CreateDerivedTransactionPortfolioRequest.AccountingMethodEnum,
         "CreatePropertyDefinitionRequest.DomainEnum": CreatePropertyDefinitionRequest.DomainEnum,
         "CreatePropertyDefinitionRequest.LifeTimeEnum": CreatePropertyDefinitionRequest.LifeTimeEnum,
+        "CreateSimplePositionPortfolioRequest.AccountingMethodEnum": CreateSimplePositionPortfolioRequest.AccountingMethodEnum,
         "CreateTransactionPortfolioRequest.AccountingMethodEnum": CreateTransactionPortfolioRequest.AccountingMethodEnum,
         "CreditDefaultSwap.InstrumentTypeEnum": CreditDefaultSwap.InstrumentTypeEnum,
         "CreditDefaultSwapAllOf.InstrumentTypeEnum": CreditDefaultSwapAllOf.InstrumentTypeEnum,
@@ -3265,6 +3290,7 @@ let typeMap: {[index: string]: any} = {
     "AggregationMeasureFailureDetail": AggregationMeasureFailureDetail,
     "AggregationOptions": AggregationOptions,
     "AggregationQuery": AggregationQuery,
+    "Alias": Alias,
     "Allocation": Allocation,
     "AllocationRequest": AllocationRequest,
     "AllocationServiceRunResponse": AllocationServiceRunResponse,
@@ -3480,6 +3506,7 @@ let typeMap: {[index: string]: any} = {
     "CreateRelationshipDefinitionRequest": CreateRelationshipDefinitionRequest,
     "CreateRelationshipRequest": CreateRelationshipRequest,
     "CreateSequenceRequest": CreateSequenceRequest,
+    "CreateSimplePositionPortfolioRequest": CreateSimplePositionPortfolioRequest,
     "CreateStagingRuleSetRequest": CreateStagingRuleSetRequest,
     "CreateTaxRuleSetRequest": CreateTaxRuleSetRequest,
     "CreateTimelineRequest": CreateTimelineRequest,
@@ -3501,6 +3528,12 @@ let typeMap: {[index: string]: any} = {
     "CustodianAccountProperties": CustodianAccountProperties,
     "CustodianAccountRequest": CustodianAccountRequest,
     "CustodianAccountsUpsertResponse": CustodianAccountsUpsertResponse,
+    "CustomDataModel": CustomDataModel,
+    "CustomDataModelCriteria": CustomDataModelCriteria,
+    "CustomDataModelIdentifierTypeSpecification": CustomDataModelIdentifierTypeSpecification,
+    "CustomDataModelIdentifierTypeSpecificationWithDisplayName": CustomDataModelIdentifierTypeSpecificationWithDisplayName,
+    "CustomDataModelPropertySpecification": CustomDataModelPropertySpecification,
+    "CustomDataModelPropertySpecificationWithDisplayName": CustomDataModelPropertySpecificationWithDisplayName,
     "CustomEntityDefinition": CustomEntityDefinition,
     "CustomEntityDefinitionRequest": CustomEntityDefinitionRequest,
     "CustomEntityEntity": CustomEntityEntity,
@@ -3515,6 +3548,7 @@ let typeMap: {[index: string]: any} = {
     "DataDefinition": DataDefinition,
     "DataMapKey": DataMapKey,
     "DataMapping": DataMapping,
+    "DataModelSummary": DataModelSummary,
     "DataScope": DataScope,
     "DataType": DataType,
     "DataTypeEntity": DataTypeEntity,
@@ -4106,6 +4140,7 @@ let typeMap: {[index: string]: any} = {
     "RecipeComposer": RecipeComposer,
     "RecipeValue": RecipeValue,
     "RecombineStep": RecombineStep,
+    "RecommendedSortBy": RecommendedSortBy,
     "ReconcileDateTimeRule": ReconcileDateTimeRule,
     "ReconcileDateTimeRuleAllOf": ReconcileDateTimeRuleAllOf,
     "ReconcileNumericRule": ReconcileNumericRule,
@@ -4164,6 +4199,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfComplianceRunInfo": ResourceListOfComplianceRunInfo,
     "ResourceListOfConstituentsAdjustmentHeader": ResourceListOfConstituentsAdjustmentHeader,
     "ResourceListOfCorporateAction": ResourceListOfCorporateAction,
+    "ResourceListOfDataModelSummary": ResourceListOfDataModelSummary,
     "ResourceListOfDataType": ResourceListOfDataType,
     "ResourceListOfExecution": ResourceListOfExecution,
     "ResourceListOfFeeRule": ResourceListOfFeeRule,
@@ -4414,6 +4450,7 @@ let typeMap: {[index: string]: any} = {
     "UpsertCorporateActionsResponse": UpsertCorporateActionsResponse,
     "UpsertCounterpartyAgreementRequest": UpsertCounterpartyAgreementRequest,
     "UpsertCreditSupportAnnexRequest": UpsertCreditSupportAnnexRequest,
+    "UpsertCustomDataModelRequest": UpsertCustomDataModelRequest,
     "UpsertCustomEntitiesResponse": UpsertCustomEntitiesResponse,
     "UpsertCustomEntityAccessMetadataRequest": UpsertCustomEntityAccessMetadataRequest,
     "UpsertDialectRequest": UpsertDialectRequest,
