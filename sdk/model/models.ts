@@ -263,6 +263,7 @@ export * from './createDerivedPropertyDefinitionRequest';
 export * from './createDerivedTransactionPortfolioRequest';
 export * from './createGroupReconciliationComparisonRulesetRequest';
 export * from './createGroupReconciliationDefinitionRequest';
+export * from './createIdentifierDefinitionRequest';
 export * from './createPortfolioDetails';
 export * from './createPortfolioGroupRequest';
 export * from './createPropertyDefinitionRequest';
@@ -575,6 +576,7 @@ export * from './holdingsAdjustment';
 export * from './holdingsAdjustmentHeader';
 export * from './iUnitDefinitionDto';
 export * from './idSelectorDefinition';
+export * from './identifierDefinition';
 export * from './identifierPartSchema';
 export * from './indexConvention';
 export * from './indexModelOptions';
@@ -799,6 +801,7 @@ export * from './pagedResourceListOfGeneralLedgerProfileResponse';
 export * from './pagedResourceListOfGroupReconciliationComparisonResult';
 export * from './pagedResourceListOfGroupReconciliationComparisonRuleset';
 export * from './pagedResourceListOfGroupReconciliationDefinition';
+export * from './pagedResourceListOfIdentifierDefinition';
 export * from './pagedResourceListOfInstrument';
 export * from './pagedResourceListOfInstrumentEventHolder';
 export * from './pagedResourceListOfInstrumentEventInstruction';
@@ -1241,6 +1244,7 @@ export * from './updateDerivedPropertyDefinitionRequest';
 export * from './updateFeeTypeRequest';
 export * from './updateGroupReconciliationComparisonRulesetRequest';
 export * from './updateGroupReconciliationDefinitionRequest';
+export * from './updateIdentifierDefinitionRequest';
 export * from './updateInstrumentIdentifierRequest';
 export * from './updateOrdersResponse';
 export * from './updatePlacementsResponse';
@@ -1621,6 +1625,7 @@ import { CreateDerivedPropertyDefinitionRequest } from './createDerivedPropertyD
 import { CreateDerivedTransactionPortfolioRequest } from './createDerivedTransactionPortfolioRequest';
 import { CreateGroupReconciliationComparisonRulesetRequest } from './createGroupReconciliationComparisonRulesetRequest';
 import { CreateGroupReconciliationDefinitionRequest } from './createGroupReconciliationDefinitionRequest';
+import { CreateIdentifierDefinitionRequest } from './createIdentifierDefinitionRequest';
 import { CreatePortfolioDetails } from './createPortfolioDetails';
 import { CreatePortfolioGroupRequest } from './createPortfolioGroupRequest';
 import { CreatePropertyDefinitionRequest } from './createPropertyDefinitionRequest';
@@ -1933,6 +1938,7 @@ import { HoldingsAdjustment } from './holdingsAdjustment';
 import { HoldingsAdjustmentHeader } from './holdingsAdjustmentHeader';
 import { IUnitDefinitionDto } from './iUnitDefinitionDto';
 import { IdSelectorDefinition } from './idSelectorDefinition';
+import { IdentifierDefinition } from './identifierDefinition';
 import { IdentifierPartSchema } from './identifierPartSchema';
 import { IndexConvention } from './indexConvention';
 import { IndexModelOptions } from './indexModelOptions';
@@ -2157,6 +2163,7 @@ import { PagedResourceListOfGeneralLedgerProfileResponse } from './pagedResource
 import { PagedResourceListOfGroupReconciliationComparisonResult } from './pagedResourceListOfGroupReconciliationComparisonResult';
 import { PagedResourceListOfGroupReconciliationComparisonRuleset } from './pagedResourceListOfGroupReconciliationComparisonRuleset';
 import { PagedResourceListOfGroupReconciliationDefinition } from './pagedResourceListOfGroupReconciliationDefinition';
+import { PagedResourceListOfIdentifierDefinition } from './pagedResourceListOfIdentifierDefinition';
 import { PagedResourceListOfInstrument } from './pagedResourceListOfInstrument';
 import { PagedResourceListOfInstrumentEventHolder } from './pagedResourceListOfInstrumentEventHolder';
 import { PagedResourceListOfInstrumentEventInstruction } from './pagedResourceListOfInstrumentEventInstruction';
@@ -2599,6 +2606,7 @@ import { UpdateDerivedPropertyDefinitionRequest } from './updateDerivedPropertyD
 import { UpdateFeeTypeRequest } from './updateFeeTypeRequest';
 import { UpdateGroupReconciliationComparisonRulesetRequest } from './updateGroupReconciliationComparisonRulesetRequest';
 import { UpdateGroupReconciliationDefinitionRequest } from './updateGroupReconciliationDefinitionRequest';
+import { UpdateIdentifierDefinitionRequest } from './updateIdentifierDefinitionRequest';
 import { UpdateInstrumentIdentifierRequest } from './updateInstrumentIdentifierRequest';
 import { UpdateOrdersResponse } from './updateOrdersResponse';
 import { UpdatePlacementsResponse } from './updatePlacementsResponse';
@@ -2815,6 +2823,8 @@ let enumsMap: {[index: string]: any} = {
         "CreateDataTypeRequest.UnitSchemaEnum": CreateDataTypeRequest.UnitSchemaEnum,
         "CreateDerivedPropertyDefinitionRequest.DomainEnum": CreateDerivedPropertyDefinitionRequest.DomainEnum,
         "CreateDerivedTransactionPortfolioRequest.AccountingMethodEnum": CreateDerivedTransactionPortfolioRequest.AccountingMethodEnum,
+        "CreateIdentifierDefinitionRequest.DomainEnum": CreateIdentifierDefinitionRequest.DomainEnum,
+        "CreateIdentifierDefinitionRequest.LifeTimeEnum": CreateIdentifierDefinitionRequest.LifeTimeEnum,
         "CreatePropertyDefinitionRequest.DomainEnum": CreatePropertyDefinitionRequest.DomainEnum,
         "CreatePropertyDefinitionRequest.LifeTimeEnum": CreatePropertyDefinitionRequest.LifeTimeEnum,
         "CreateSimplePositionPortfolioRequest.AccountingMethodEnum": CreateSimplePositionPortfolioRequest.AccountingMethodEnum,
@@ -2967,6 +2977,8 @@ let enumsMap: {[index: string]: any} = {
         "HoldingsAdjustment.UnmatchedHoldingMethodEnum": HoldingsAdjustment.UnmatchedHoldingMethodEnum,
         "HoldingsAdjustmentHeader.UnmatchedHoldingMethodEnum": HoldingsAdjustmentHeader.UnmatchedHoldingMethodEnum,
         "IUnitDefinitionDto.SchemaEnum": IUnitDefinitionDto.SchemaEnum,
+        "IdentifierDefinition.DomainEnum": IdentifierDefinition.DomainEnum,
+        "IdentifierDefinition.LifeTimeEnum": IdentifierDefinition.LifeTimeEnum,
         "IndexModelOptions.PortfolioScalingEnum": IndexModelOptions.PortfolioScalingEnum,
         "IndexModelOptions.ModelOptionsTypeEnum": IndexModelOptions.ModelOptionsTypeEnum,
         "IndexModelOptionsAllOf.PortfolioScalingEnum": IndexModelOptionsAllOf.PortfolioScalingEnum,
@@ -3495,6 +3507,7 @@ let typeMap: {[index: string]: any} = {
     "CreateDerivedTransactionPortfolioRequest": CreateDerivedTransactionPortfolioRequest,
     "CreateGroupReconciliationComparisonRulesetRequest": CreateGroupReconciliationComparisonRulesetRequest,
     "CreateGroupReconciliationDefinitionRequest": CreateGroupReconciliationDefinitionRequest,
+    "CreateIdentifierDefinitionRequest": CreateIdentifierDefinitionRequest,
     "CreatePortfolioDetails": CreatePortfolioDetails,
     "CreatePortfolioGroupRequest": CreatePortfolioGroupRequest,
     "CreatePropertyDefinitionRequest": CreatePropertyDefinitionRequest,
@@ -3800,6 +3813,7 @@ let typeMap: {[index: string]: any} = {
     "HoldingsAdjustmentHeader": HoldingsAdjustmentHeader,
     "IUnitDefinitionDto": IUnitDefinitionDto,
     "IdSelectorDefinition": IdSelectorDefinition,
+    "IdentifierDefinition": IdentifierDefinition,
     "IdentifierPartSchema": IdentifierPartSchema,
     "IndexConvention": IndexConvention,
     "IndexModelOptions": IndexModelOptions,
@@ -4012,6 +4026,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfGroupReconciliationComparisonResult": PagedResourceListOfGroupReconciliationComparisonResult,
     "PagedResourceListOfGroupReconciliationComparisonRuleset": PagedResourceListOfGroupReconciliationComparisonRuleset,
     "PagedResourceListOfGroupReconciliationDefinition": PagedResourceListOfGroupReconciliationDefinition,
+    "PagedResourceListOfIdentifierDefinition": PagedResourceListOfIdentifierDefinition,
     "PagedResourceListOfInstrument": PagedResourceListOfInstrument,
     "PagedResourceListOfInstrumentEventHolder": PagedResourceListOfInstrumentEventHolder,
     "PagedResourceListOfInstrumentEventInstruction": PagedResourceListOfInstrumentEventInstruction,
@@ -4428,6 +4443,7 @@ let typeMap: {[index: string]: any} = {
     "UpdateFeeTypeRequest": UpdateFeeTypeRequest,
     "UpdateGroupReconciliationComparisonRulesetRequest": UpdateGroupReconciliationComparisonRulesetRequest,
     "UpdateGroupReconciliationDefinitionRequest": UpdateGroupReconciliationDefinitionRequest,
+    "UpdateIdentifierDefinitionRequest": UpdateIdentifierDefinitionRequest,
     "UpdateInstrumentIdentifierRequest": UpdateInstrumentIdentifierRequest,
     "UpdateOrdersResponse": UpdateOrdersResponse,
     "UpdatePlacementsResponse": UpdatePlacementsResponse,
