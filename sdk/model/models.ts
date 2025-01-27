@@ -917,6 +917,7 @@ export * from './propertyValueEqualsAllOf';
 export * from './propertyValueIn';
 export * from './propertyValueInAllOf';
 export * from './protectionPayoutCashFlowEvent';
+export * from './quantityInstructed';
 export * from './queryApplicableInstrumentEventsRequest';
 export * from './queryBucketedCashFlowsRequest';
 export * from './queryCashFlowsRequest';
@@ -1240,6 +1241,8 @@ export * from './updateCustomEntityDefinitionRequest';
 export * from './updateCustomEntityTypeRequest';
 export * from './updateCutLabelDefinitionRequest';
 export * from './updateDataTypeRequest';
+export * from './updateDepositAmountEvent';
+export * from './updateDepositAmountEventAllOf';
 export * from './updateDerivedPropertyDefinitionRequest';
 export * from './updateFeeTypeRequest';
 export * from './updateGroupReconciliationComparisonRulesetRequest';
@@ -2279,6 +2282,7 @@ import { PropertyValueEqualsAllOf } from './propertyValueEqualsAllOf';
 import { PropertyValueIn } from './propertyValueIn';
 import { PropertyValueInAllOf } from './propertyValueInAllOf';
 import { ProtectionPayoutCashFlowEvent } from './protectionPayoutCashFlowEvent';
+import { QuantityInstructed } from './quantityInstructed';
 import { QueryApplicableInstrumentEventsRequest } from './queryApplicableInstrumentEventsRequest';
 import { QueryBucketedCashFlowsRequest } from './queryBucketedCashFlowsRequest';
 import { QueryCashFlowsRequest } from './queryCashFlowsRequest';
@@ -2602,6 +2606,8 @@ import { UpdateCustomEntityDefinitionRequest } from './updateCustomEntityDefinit
 import { UpdateCustomEntityTypeRequest } from './updateCustomEntityTypeRequest';
 import { UpdateCutLabelDefinitionRequest } from './updateCutLabelDefinitionRequest';
 import { UpdateDataTypeRequest } from './updateDataTypeRequest';
+import { UpdateDepositAmountEvent } from './updateDepositAmountEvent';
+import { UpdateDepositAmountEventAllOf } from './updateDepositAmountEventAllOf';
 import { UpdateDerivedPropertyDefinitionRequest } from './updateDerivedPropertyDefinitionRequest';
 import { UpdateFeeTypeRequest } from './updateFeeTypeRequest';
 import { UpdateGroupReconciliationComparisonRulesetRequest } from './updateGroupReconciliationComparisonRulesetRequest';
@@ -3240,6 +3246,8 @@ let enumsMap: {[index: string]: any} = {
         "TriggerEventAllOf.InstrumentEventTypeEnum": TriggerEventAllOf.InstrumentEventTypeEnum,
         "UnitSchema": UnitSchema,
         "UnmatchedHoldingMethod": UnmatchedHoldingMethod,
+        "UpdateDepositAmountEvent.InstrumentEventTypeEnum": UpdateDepositAmountEvent.InstrumentEventTypeEnum,
+        "UpdateDepositAmountEventAllOf.InstrumentEventTypeEnum": UpdateDepositAmountEventAllOf.InstrumentEventTypeEnum,
         "UpsertReferencePortfolioConstituentsRequest.WeightTypeEnum": UpsertReferencePortfolioConstituentsRequest.WeightTypeEnum,
         "UpsertReferencePortfolioConstituentsRequest.PeriodTypeEnum": UpsertReferencePortfolioConstituentsRequest.PeriodTypeEnum,
         "ValueType": ValueType,
@@ -4134,6 +4142,7 @@ let typeMap: {[index: string]: any} = {
     "PropertyValueIn": PropertyValueIn,
     "PropertyValueInAllOf": PropertyValueInAllOf,
     "ProtectionPayoutCashFlowEvent": ProtectionPayoutCashFlowEvent,
+    "QuantityInstructed": QuantityInstructed,
     "QueryApplicableInstrumentEventsRequest": QueryApplicableInstrumentEventsRequest,
     "QueryBucketedCashFlowsRequest": QueryBucketedCashFlowsRequest,
     "QueryCashFlowsRequest": QueryCashFlowsRequest,
@@ -4439,6 +4448,8 @@ let typeMap: {[index: string]: any} = {
     "UpdateCustomEntityTypeRequest": UpdateCustomEntityTypeRequest,
     "UpdateCutLabelDefinitionRequest": UpdateCutLabelDefinitionRequest,
     "UpdateDataTypeRequest": UpdateDataTypeRequest,
+    "UpdateDepositAmountEvent": UpdateDepositAmountEvent,
+    "UpdateDepositAmountEventAllOf": UpdateDepositAmountEventAllOf,
     "UpdateDerivedPropertyDefinitionRequest": UpdateDerivedPropertyDefinitionRequest,
     "UpdateFeeTypeRequest": UpdateFeeTypeRequest,
     "UpdateGroupReconciliationComparisonRulesetRequest": UpdateGroupReconciliationComparisonRulesetRequest,
