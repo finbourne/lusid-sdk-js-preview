@@ -1142,7 +1142,6 @@ export * from './stockDividendEventAllOf';
 export * from './stockSplitEvent';
 export * from './stockSplitEventAllOf';
 export * from './strategy';
-export * from './stream';
 export * from './stringComparisonType';
 export * from './stringComplianceParameter';
 export * from './stringList';
@@ -2507,7 +2506,6 @@ import { StockDividendEventAllOf } from './stockDividendEventAllOf';
 import { StockSplitEvent } from './stockSplitEvent';
 import { StockSplitEventAllOf } from './stockSplitEventAllOf';
 import { Strategy } from './strategy';
-import { Stream } from './stream';
 import { StringComparisonType } from './stringComparisonType';
 import { StringComplianceParameter } from './stringComplianceParameter';
 import { StringList } from './stringList';
@@ -4357,7 +4355,6 @@ let typeMap: {[index: string]: any} = {
     "StockSplitEvent": StockSplitEvent,
     "StockSplitEventAllOf": StockSplitEventAllOf,
     "Strategy": Strategy,
-    "Stream": Stream,
     "StringComplianceParameter": StringComplianceParameter,
     "StringList": StringList,
     "StringListComplianceParameter": StringListComplianceParameter,
