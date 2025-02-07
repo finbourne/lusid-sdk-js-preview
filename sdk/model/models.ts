@@ -457,6 +457,7 @@ export * from './fundConfigurationRequest';
 export * from './fundDetails';
 export * from './fundIdList';
 export * from './fundIdListAllOf';
+export * from './fundJournalEntryLine';
 export * from './fundPnlBreakdown';
 export * from './fundPreviousNAV';
 export * from './fundProperties';
@@ -646,6 +647,7 @@ export * from './irVolDependency';
 export * from './irVolDependencyAllOf';
 export * from './isBusinessDayResponse';
 export * from './journalEntryLine';
+export * from './journalEntryLineShareClassBreakdown';
 export * from './journalEntryLinesQueryParameters';
 export * from './labelValueSet';
 export * from './lapseElection';
@@ -665,6 +667,8 @@ export * from './loanFacilityAllOf';
 export * from './loanInterestRepaymentEvent';
 export * from './loanInterestRepaymentEventAllOf';
 export * from './loanPeriod';
+export * from './loanPrincipalRepaymentEvent';
+export * from './loanPrincipalRepaymentEventAllOf';
 export * from './lockPeriodDiaryEntryRequest';
 export * from './lusidInstrument';
 export * from './lusidProblemDetails';
@@ -1315,7 +1319,7 @@ export * from './valuationPointDataRequest';
 export * from './valuationPointDataResponse';
 export * from './valuationPointOverview';
 export * from './valuationPointResourceListOfAccountedTransaction';
-export * from './valuationPointResourceListOfJournalEntryLine';
+export * from './valuationPointResourceListOfFundJournalEntryLine';
 export * from './valuationPointResourceListOfPnlJournalEntryLine';
 export * from './valuationPointResourceListOfTrialBalance';
 export * from './valuationRequest';
@@ -1824,6 +1828,7 @@ import { FundConfigurationRequest } from './fundConfigurationRequest';
 import { FundDetails } from './fundDetails';
 import { FundIdList } from './fundIdList';
 import { FundIdListAllOf } from './fundIdListAllOf';
+import { FundJournalEntryLine } from './fundJournalEntryLine';
 import { FundPnlBreakdown } from './fundPnlBreakdown';
 import { FundPreviousNAV } from './fundPreviousNAV';
 import { FundProperties } from './fundProperties';
@@ -2013,6 +2018,7 @@ import { IrVolDependency } from './irVolDependency';
 import { IrVolDependencyAllOf } from './irVolDependencyAllOf';
 import { IsBusinessDayResponse } from './isBusinessDayResponse';
 import { JournalEntryLine } from './journalEntryLine';
+import { JournalEntryLineShareClassBreakdown } from './journalEntryLineShareClassBreakdown';
 import { JournalEntryLinesQueryParameters } from './journalEntryLinesQueryParameters';
 import { LabelValueSet } from './labelValueSet';
 import { LapseElection } from './lapseElection';
@@ -2032,6 +2038,8 @@ import { LoanFacilityAllOf } from './loanFacilityAllOf';
 import { LoanInterestRepaymentEvent } from './loanInterestRepaymentEvent';
 import { LoanInterestRepaymentEventAllOf } from './loanInterestRepaymentEventAllOf';
 import { LoanPeriod } from './loanPeriod';
+import { LoanPrincipalRepaymentEvent } from './loanPrincipalRepaymentEvent';
+import { LoanPrincipalRepaymentEventAllOf } from './loanPrincipalRepaymentEventAllOf';
 import { LockPeriodDiaryEntryRequest } from './lockPeriodDiaryEntryRequest';
 import { LusidInstrument } from './lusidInstrument';
 import { LusidProblemDetails } from './lusidProblemDetails';
@@ -2682,7 +2690,7 @@ import { ValuationPointDataRequest } from './valuationPointDataRequest';
 import { ValuationPointDataResponse } from './valuationPointDataResponse';
 import { ValuationPointOverview } from './valuationPointOverview';
 import { ValuationPointResourceListOfAccountedTransaction } from './valuationPointResourceListOfAccountedTransaction';
-import { ValuationPointResourceListOfJournalEntryLine } from './valuationPointResourceListOfJournalEntryLine';
+import { ValuationPointResourceListOfFundJournalEntryLine } from './valuationPointResourceListOfFundJournalEntryLine';
 import { ValuationPointResourceListOfPnlJournalEntryLine } from './valuationPointResourceListOfPnlJournalEntryLine';
 import { ValuationPointResourceListOfTrialBalance } from './valuationPointResourceListOfTrialBalance';
 import { ValuationRequest } from './valuationRequest';
@@ -3037,6 +3045,8 @@ let enumsMap: {[index: string]: any} = {
         "LoanFacilityAllOf.InstrumentTypeEnum": LoanFacilityAllOf.InstrumentTypeEnum,
         "LoanInterestRepaymentEvent.InstrumentEventTypeEnum": LoanInterestRepaymentEvent.InstrumentEventTypeEnum,
         "LoanInterestRepaymentEventAllOf.InstrumentEventTypeEnum": LoanInterestRepaymentEventAllOf.InstrumentEventTypeEnum,
+        "LoanPrincipalRepaymentEvent.InstrumentEventTypeEnum": LoanPrincipalRepaymentEvent.InstrumentEventTypeEnum,
+        "LoanPrincipalRepaymentEventAllOf.InstrumentEventTypeEnum": LoanPrincipalRepaymentEventAllOf.InstrumentEventTypeEnum,
         "LusidInstrument.InstrumentTypeEnum": LusidInstrument.InstrumentTypeEnum,
         "LusidTradeTicket.TradeTicketTypeEnum": LusidTradeTicket.TradeTicketTypeEnum,
         "MarketDataKeyRule.QuoteTypeEnum": MarketDataKeyRule.QuoteTypeEnum,
@@ -3706,6 +3716,7 @@ let typeMap: {[index: string]: any} = {
     "FundDetails": FundDetails,
     "FundIdList": FundIdList,
     "FundIdListAllOf": FundIdListAllOf,
+    "FundJournalEntryLine": FundJournalEntryLine,
     "FundPnlBreakdown": FundPnlBreakdown,
     "FundPreviousNAV": FundPreviousNAV,
     "FundProperties": FundProperties,
@@ -3892,6 +3903,7 @@ let typeMap: {[index: string]: any} = {
     "IrVolDependencyAllOf": IrVolDependencyAllOf,
     "IsBusinessDayResponse": IsBusinessDayResponse,
     "JournalEntryLine": JournalEntryLine,
+    "JournalEntryLineShareClassBreakdown": JournalEntryLineShareClassBreakdown,
     "JournalEntryLinesQueryParameters": JournalEntryLinesQueryParameters,
     "LabelValueSet": LabelValueSet,
     "LapseElection": LapseElection,
@@ -3911,6 +3923,8 @@ let typeMap: {[index: string]: any} = {
     "LoanInterestRepaymentEvent": LoanInterestRepaymentEvent,
     "LoanInterestRepaymentEventAllOf": LoanInterestRepaymentEventAllOf,
     "LoanPeriod": LoanPeriod,
+    "LoanPrincipalRepaymentEvent": LoanPrincipalRepaymentEvent,
+    "LoanPrincipalRepaymentEventAllOf": LoanPrincipalRepaymentEventAllOf,
     "LockPeriodDiaryEntryRequest": LockPeriodDiaryEntryRequest,
     "LusidInstrument": LusidInstrument,
     "LusidProblemDetails": LusidProblemDetails,
@@ -4526,7 +4540,7 @@ let typeMap: {[index: string]: any} = {
     "ValuationPointDataResponse": ValuationPointDataResponse,
     "ValuationPointOverview": ValuationPointOverview,
     "ValuationPointResourceListOfAccountedTransaction": ValuationPointResourceListOfAccountedTransaction,
-    "ValuationPointResourceListOfJournalEntryLine": ValuationPointResourceListOfJournalEntryLine,
+    "ValuationPointResourceListOfFundJournalEntryLine": ValuationPointResourceListOfFundJournalEntryLine,
     "ValuationPointResourceListOfPnlJournalEntryLine": ValuationPointResourceListOfPnlJournalEntryLine,
     "ValuationPointResourceListOfTrialBalance": ValuationPointResourceListOfTrialBalance,
     "ValuationRequest": ValuationRequest,
