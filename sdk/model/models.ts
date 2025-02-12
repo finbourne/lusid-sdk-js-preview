@@ -254,6 +254,7 @@ export * from './createCalendarRequest';
 export * from './createClosedPeriodRequest';
 export * from './createComplianceTemplateRequest';
 export * from './createCorporateActionSourceRequest';
+export * from './createCustomDataModelRequest';
 export * from './createCustomEntityTypeRequest';
 export * from './createCutLabelDefinitionRequest';
 export * from './createDataMapRequest';
@@ -1245,6 +1246,7 @@ export * from './unmatchedHoldingMethod';
 export * from './updateAmortisationRuleSetDetailsRequest';
 export * from './updateCalendarRequest';
 export * from './updateComplianceTemplateRequest';
+export * from './updateCustomDataModelRequest';
 export * from './updateCustomEntityDefinitionRequest';
 export * from './updateCustomEntityTypeRequest';
 export * from './updateCutLabelDefinitionRequest';
@@ -1278,7 +1280,6 @@ export * from './upsertCorporateActionRequest';
 export * from './upsertCorporateActionsResponse';
 export * from './upsertCounterpartyAgreementRequest';
 export * from './upsertCreditSupportAnnexRequest';
-export * from './upsertCustomDataModelRequest';
 export * from './upsertCustomEntitiesResponse';
 export * from './upsertCustomEntityAccessMetadataRequest';
 export * from './upsertDialectRequest';
@@ -1627,6 +1628,7 @@ import { CreateCalendarRequest } from './createCalendarRequest';
 import { CreateClosedPeriodRequest } from './createClosedPeriodRequest';
 import { CreateComplianceTemplateRequest } from './createComplianceTemplateRequest';
 import { CreateCorporateActionSourceRequest } from './createCorporateActionSourceRequest';
+import { CreateCustomDataModelRequest } from './createCustomDataModelRequest';
 import { CreateCustomEntityTypeRequest } from './createCustomEntityTypeRequest';
 import { CreateCutLabelDefinitionRequest } from './createCutLabelDefinitionRequest';
 import { CreateDataMapRequest } from './createDataMapRequest';
@@ -2618,6 +2620,7 @@ import { UnmatchedHoldingMethod } from './unmatchedHoldingMethod';
 import { UpdateAmortisationRuleSetDetailsRequest } from './updateAmortisationRuleSetDetailsRequest';
 import { UpdateCalendarRequest } from './updateCalendarRequest';
 import { UpdateComplianceTemplateRequest } from './updateComplianceTemplateRequest';
+import { UpdateCustomDataModelRequest } from './updateCustomDataModelRequest';
 import { UpdateCustomEntityDefinitionRequest } from './updateCustomEntityDefinitionRequest';
 import { UpdateCustomEntityTypeRequest } from './updateCustomEntityTypeRequest';
 import { UpdateCutLabelDefinitionRequest } from './updateCutLabelDefinitionRequest';
@@ -2651,7 +2654,6 @@ import { UpsertCorporateActionRequest } from './upsertCorporateActionRequest';
 import { UpsertCorporateActionsResponse } from './upsertCorporateActionsResponse';
 import { UpsertCounterpartyAgreementRequest } from './upsertCounterpartyAgreementRequest';
 import { UpsertCreditSupportAnnexRequest } from './upsertCreditSupportAnnexRequest';
-import { UpsertCustomDataModelRequest } from './upsertCustomDataModelRequest';
 import { UpsertCustomEntitiesResponse } from './upsertCustomEntitiesResponse';
 import { UpsertCustomEntityAccessMetadataRequest } from './upsertCustomEntityAccessMetadataRequest';
 import { UpsertDialectRequest } from './upsertDialectRequest';
@@ -3526,6 +3528,7 @@ let typeMap: {[index: string]: any} = {
     "CreateClosedPeriodRequest": CreateClosedPeriodRequest,
     "CreateComplianceTemplateRequest": CreateComplianceTemplateRequest,
     "CreateCorporateActionSourceRequest": CreateCorporateActionSourceRequest,
+    "CreateCustomDataModelRequest": CreateCustomDataModelRequest,
     "CreateCustomEntityTypeRequest": CreateCustomEntityTypeRequest,
     "CreateCutLabelDefinitionRequest": CreateCutLabelDefinitionRequest,
     "CreateDataMapRequest": CreateDataMapRequest,
@@ -4472,6 +4475,7 @@ let typeMap: {[index: string]: any} = {
     "UpdateAmortisationRuleSetDetailsRequest": UpdateAmortisationRuleSetDetailsRequest,
     "UpdateCalendarRequest": UpdateCalendarRequest,
     "UpdateComplianceTemplateRequest": UpdateComplianceTemplateRequest,
+    "UpdateCustomDataModelRequest": UpdateCustomDataModelRequest,
     "UpdateCustomEntityDefinitionRequest": UpdateCustomEntityDefinitionRequest,
     "UpdateCustomEntityTypeRequest": UpdateCustomEntityTypeRequest,
     "UpdateCutLabelDefinitionRequest": UpdateCutLabelDefinitionRequest,
@@ -4505,7 +4509,6 @@ let typeMap: {[index: string]: any} = {
     "UpsertCorporateActionsResponse": UpsertCorporateActionsResponse,
     "UpsertCounterpartyAgreementRequest": UpsertCounterpartyAgreementRequest,
     "UpsertCreditSupportAnnexRequest": UpsertCreditSupportAnnexRequest,
-    "UpsertCustomDataModelRequest": UpsertCustomDataModelRequest,
     "UpsertCustomEntitiesResponse": UpsertCustomEntitiesResponse,
     "UpsertCustomEntityAccessMetadataRequest": UpsertCustomEntityAccessMetadataRequest,
     "UpsertDialectRequest": UpsertDialectRequest,
