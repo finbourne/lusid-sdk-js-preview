@@ -351,6 +351,8 @@ export * from './deleteRelationRequest';
 export * from './deleteRelationshipRequest';
 export * from './deletedEntityResponse';
 export * from './dependencySourceFilter';
+export * from './depositCloseEvent';
+export * from './depositCloseEventAllOf';
 export * from './depositInterestPaymentEvent';
 export * from './depositInterestPaymentEventAllOf';
 export * from './describedAddressKey';
@@ -1725,6 +1727,8 @@ import { DeleteRelationRequest } from './deleteRelationRequest';
 import { DeleteRelationshipRequest } from './deleteRelationshipRequest';
 import { DeletedEntityResponse } from './deletedEntityResponse';
 import { DependencySourceFilter } from './dependencySourceFilter';
+import { DepositCloseEvent } from './depositCloseEvent';
+import { DepositCloseEventAllOf } from './depositCloseEventAllOf';
 import { DepositInterestPaymentEvent } from './depositInterestPaymentEvent';
 import { DepositInterestPaymentEventAllOf } from './depositInterestPaymentEventAllOf';
 import { DescribedAddressKey } from './describedAddressKey';
@@ -2880,6 +2884,8 @@ let enumsMap: {[index: string]: any} = {
         "DecimalListAllOf.ReferenceListTypeEnum": DecimalListAllOf.ReferenceListTypeEnum,
         "DecimalListComplianceParameter.ComplianceParameterTypeEnum": DecimalListComplianceParameter.ComplianceParameterTypeEnum,
         "DeleteModes": DeleteModes,
+        "DepositCloseEvent.InstrumentEventTypeEnum": DepositCloseEvent.InstrumentEventTypeEnum,
+        "DepositCloseEventAllOf.InstrumentEventTypeEnum": DepositCloseEventAllOf.InstrumentEventTypeEnum,
         "DepositInterestPaymentEvent.InstrumentEventTypeEnum": DepositInterestPaymentEvent.InstrumentEventTypeEnum,
         "DepositInterestPaymentEventAllOf.InstrumentEventTypeEnum": DepositInterestPaymentEventAllOf.InstrumentEventTypeEnum,
         "DiscountFactorCurveData.MarketDataTypeEnum": DiscountFactorCurveData.MarketDataTypeEnum,
@@ -3620,6 +3626,8 @@ let typeMap: {[index: string]: any} = {
     "DeleteRelationshipRequest": DeleteRelationshipRequest,
     "DeletedEntityResponse": DeletedEntityResponse,
     "DependencySourceFilter": DependencySourceFilter,
+    "DepositCloseEvent": DepositCloseEvent,
+    "DepositCloseEventAllOf": DepositCloseEventAllOf,
     "DepositInterestPaymentEvent": DepositInterestPaymentEvent,
     "DepositInterestPaymentEventAllOf": DepositInterestPaymentEventAllOf,
     "DescribedAddressKey": DescribedAddressKey,
