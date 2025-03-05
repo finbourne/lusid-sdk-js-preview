@@ -840,6 +840,7 @@ export * from './pagedResourceListOfSequenceDefinition';
 export * from './pagedResourceListOfStagedModification';
 export * from './pagedResourceListOfStagedModificationsRequestedChangeInterval';
 export * from './pagedResourceListOfStagingRuleSet';
+export * from './pagedResourceListOfTimeline';
 export * from './pagedResourceListOfTransactionTemplate';
 export * from './pagedResourceListOfTransactionTemplateSpecification';
 export * from './pagedResourceListOfTranslationScriptId';
@@ -2216,6 +2217,7 @@ import { PagedResourceListOfSequenceDefinition } from './pagedResourceListOfSequ
 import { PagedResourceListOfStagedModification } from './pagedResourceListOfStagedModification';
 import { PagedResourceListOfStagedModificationsRequestedChangeInterval } from './pagedResourceListOfStagedModificationsRequestedChangeInterval';
 import { PagedResourceListOfStagingRuleSet } from './pagedResourceListOfStagingRuleSet';
+import { PagedResourceListOfTimeline } from './pagedResourceListOfTimeline';
 import { PagedResourceListOfTransactionTemplate } from './pagedResourceListOfTransactionTemplate';
 import { PagedResourceListOfTransactionTemplateSpecification } from './pagedResourceListOfTransactionTemplateSpecification';
 import { PagedResourceListOfTranslationScriptId } from './pagedResourceListOfTranslationScriptId';
@@ -4101,6 +4103,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfStagedModification": PagedResourceListOfStagedModification,
     "PagedResourceListOfStagedModificationsRequestedChangeInterval": PagedResourceListOfStagedModificationsRequestedChangeInterval,
     "PagedResourceListOfStagingRuleSet": PagedResourceListOfStagingRuleSet,
+    "PagedResourceListOfTimeline": PagedResourceListOfTimeline,
     "PagedResourceListOfTransactionTemplate": PagedResourceListOfTransactionTemplate,
     "PagedResourceListOfTransactionTemplateSpecification": PagedResourceListOfTransactionTemplateSpecification,
     "PagedResourceListOfTranslationScriptId": PagedResourceListOfTranslationScriptId,
