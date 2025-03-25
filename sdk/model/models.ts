@@ -935,6 +935,7 @@ export * from './propertyLifeTime';
 export * from './propertyList';
 export * from './propertyListAllOf';
 export * from './propertyListComplianceParameter';
+export * from './propertyReferenceDataValue';
 export * from './propertySchema';
 export * from './propertyType';
 export * from './propertyValue';
@@ -2326,6 +2327,7 @@ import { PropertyLifeTime } from './propertyLifeTime';
 import { PropertyList } from './propertyList';
 import { PropertyListAllOf } from './propertyListAllOf';
 import { PropertyListComplianceParameter } from './propertyListComplianceParameter';
+import { PropertyReferenceDataValue } from './propertyReferenceDataValue';
 import { PropertySchema } from './propertySchema';
 import { PropertyType } from './propertyType';
 import { PropertyValue } from './propertyValue';
@@ -4230,6 +4232,7 @@ let typeMap: {[index: string]: any} = {
     "PropertyList": PropertyList,
     "PropertyListAllOf": PropertyListAllOf,
     "PropertyListComplianceParameter": PropertyListComplianceParameter,
+    "PropertyReferenceDataValue": PropertyReferenceDataValue,
     "PropertySchema": PropertySchema,
     "PropertyValue": PropertyValue,
     "PropertyValueEquals": PropertyValueEquals,
