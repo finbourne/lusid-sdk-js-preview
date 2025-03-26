@@ -682,6 +682,8 @@ export * from './listAggregationResponse';
 export * from './listComplexMarketDataWithMetaDataResponse';
 export * from './loanFacility';
 export * from './loanFacilityAllOf';
+export * from './loanFacilityContractRolloverEvent';
+export * from './loanFacilityContractRolloverEventAllOf';
 export * from './loanInterestRepaymentEvent';
 export * from './loanInterestRepaymentEventAllOf';
 export * from './loanPeriod';
@@ -1106,6 +1108,7 @@ export * from './resultValueType';
 export * from './returnZeroPvOptions';
 export * from './reverseStockSplitEvent';
 export * from './reverseStockSplitEventAllOf';
+export * from './rolloverConstituent';
 export * from './roundingConfiguration';
 export * from './roundingConfigurationComponent';
 export * from './roundingConvention';
@@ -1376,6 +1379,7 @@ export * from './workspaceItem';
 export * from './workspaceItemCreationRequest';
 export * from './workspaceItemUpdateRequest';
 export * from './workspaceUpdateRequest';
+export * from './workspaceVisibility';
 export * from './yieldCurveData';
 export * from './yieldCurveDataAllOf';
 
@@ -2074,6 +2078,8 @@ import { ListAggregationResponse } from './listAggregationResponse';
 import { ListComplexMarketDataWithMetaDataResponse } from './listComplexMarketDataWithMetaDataResponse';
 import { LoanFacility } from './loanFacility';
 import { LoanFacilityAllOf } from './loanFacilityAllOf';
+import { LoanFacilityContractRolloverEvent } from './loanFacilityContractRolloverEvent';
+import { LoanFacilityContractRolloverEventAllOf } from './loanFacilityContractRolloverEventAllOf';
 import { LoanInterestRepaymentEvent } from './loanInterestRepaymentEvent';
 import { LoanInterestRepaymentEventAllOf } from './loanInterestRepaymentEventAllOf';
 import { LoanPeriod } from './loanPeriod';
@@ -2498,6 +2504,7 @@ import { ResultValueType } from './resultValueType';
 import { ReturnZeroPvOptions } from './returnZeroPvOptions';
 import { ReverseStockSplitEvent } from './reverseStockSplitEvent';
 import { ReverseStockSplitEventAllOf } from './reverseStockSplitEventAllOf';
+import { RolloverConstituent } from './rolloverConstituent';
 import { RoundingConfiguration } from './roundingConfiguration';
 import { RoundingConfigurationComponent } from './roundingConfigurationComponent';
 import { RoundingConvention } from './roundingConvention';
@@ -2768,6 +2775,7 @@ import { WorkspaceItem } from './workspaceItem';
 import { WorkspaceItemCreationRequest } from './workspaceItemCreationRequest';
 import { WorkspaceItemUpdateRequest } from './workspaceItemUpdateRequest';
 import { WorkspaceUpdateRequest } from './workspaceUpdateRequest';
+import { WorkspaceVisibility } from './workspaceVisibility';
 import { YieldCurveData } from './yieldCurveData';
 import { YieldCurveDataAllOf } from './yieldCurveDataAllOf';
 
@@ -3101,6 +3109,8 @@ let enumsMap: {[index: string]: any} = {
         "LifeCycleEventValueAllOf.ResultValueTypeEnum": LifeCycleEventValueAllOf.ResultValueTypeEnum,
         "LoanFacility.InstrumentTypeEnum": LoanFacility.InstrumentTypeEnum,
         "LoanFacilityAllOf.InstrumentTypeEnum": LoanFacilityAllOf.InstrumentTypeEnum,
+        "LoanFacilityContractRolloverEvent.InstrumentEventTypeEnum": LoanFacilityContractRolloverEvent.InstrumentEventTypeEnum,
+        "LoanFacilityContractRolloverEventAllOf.InstrumentEventTypeEnum": LoanFacilityContractRolloverEventAllOf.InstrumentEventTypeEnum,
         "LoanInterestRepaymentEvent.InstrumentEventTypeEnum": LoanInterestRepaymentEvent.InstrumentEventTypeEnum,
         "LoanInterestRepaymentEventAllOf.InstrumentEventTypeEnum": LoanInterestRepaymentEventAllOf.InstrumentEventTypeEnum,
         "LoanPrincipalRepaymentEvent.InstrumentEventTypeEnum": LoanPrincipalRepaymentEvent.InstrumentEventTypeEnum,
@@ -3327,6 +3337,7 @@ let enumsMap: {[index: string]: any} = {
         "VendorDependencyAllOf.DependencyTypeEnum": VendorDependencyAllOf.DependencyTypeEnum,
         "VendorLibrary": VendorLibrary,
         "VendorModelRule.SupplierEnum": VendorModelRule.SupplierEnum,
+        "WorkspaceVisibility": WorkspaceVisibility,
         "YieldCurveData.MarketDataTypeEnum": YieldCurveData.MarketDataTypeEnum,
         "YieldCurveDataAllOf.MarketDataTypeEnum": YieldCurveDataAllOf.MarketDataTypeEnum,
 }
@@ -3995,6 +4006,8 @@ let typeMap: {[index: string]: any} = {
     "ListComplexMarketDataWithMetaDataResponse": ListComplexMarketDataWithMetaDataResponse,
     "LoanFacility": LoanFacility,
     "LoanFacilityAllOf": LoanFacilityAllOf,
+    "LoanFacilityContractRolloverEvent": LoanFacilityContractRolloverEvent,
+    "LoanFacilityContractRolloverEventAllOf": LoanFacilityContractRolloverEventAllOf,
     "LoanInterestRepaymentEvent": LoanInterestRepaymentEvent,
     "LoanInterestRepaymentEventAllOf": LoanInterestRepaymentEventAllOf,
     "LoanPeriod": LoanPeriod,
@@ -4395,6 +4408,7 @@ let typeMap: {[index: string]: any} = {
     "ReturnZeroPvOptions": ReturnZeroPvOptions,
     "ReverseStockSplitEvent": ReverseStockSplitEvent,
     "ReverseStockSplitEventAllOf": ReverseStockSplitEventAllOf,
+    "RolloverConstituent": RolloverConstituent,
     "RoundingConfiguration": RoundingConfiguration,
     "RoundingConfigurationComponent": RoundingConfigurationComponent,
     "RoundingConvention": RoundingConvention,
