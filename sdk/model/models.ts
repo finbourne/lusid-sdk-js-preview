@@ -1380,6 +1380,7 @@ export * from './workspaceItemCreationRequest';
 export * from './workspaceItemUpdateRequest';
 export * from './workspaceUpdateRequest';
 export * from './workspaceVisibility';
+export * from './yearMonthDay';
 export * from './yieldCurveData';
 export * from './yieldCurveDataAllOf';
 
@@ -2776,6 +2777,7 @@ import { WorkspaceItemCreationRequest } from './workspaceItemCreationRequest';
 import { WorkspaceItemUpdateRequest } from './workspaceItemUpdateRequest';
 import { WorkspaceUpdateRequest } from './workspaceUpdateRequest';
 import { WorkspaceVisibility } from './workspaceVisibility';
+import { YearMonthDay } from './yearMonthDay';
 import { YieldCurveData } from './yieldCurveData';
 import { YieldCurveDataAllOf } from './yieldCurveDataAllOf';
 
@@ -4666,6 +4668,7 @@ let typeMap: {[index: string]: any} = {
     "WorkspaceItemCreationRequest": WorkspaceItemCreationRequest,
     "WorkspaceItemUpdateRequest": WorkspaceItemUpdateRequest,
     "WorkspaceUpdateRequest": WorkspaceUpdateRequest,
+    "YearMonthDay": YearMonthDay,
     "YieldCurveData": YieldCurveData,
     "YieldCurveDataAllOf": YieldCurveDataAllOf,
 }
