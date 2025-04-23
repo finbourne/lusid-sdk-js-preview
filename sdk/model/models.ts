@@ -1008,6 +1008,8 @@ export * from './relationshipDefinition';
 export * from './relativeDateOffset';
 export * from './repo';
 export * from './repoAllOf';
+export * from './repurchaseOfferEvent';
+export * from './repurchaseOfferEventAllOf';
 export * from './requestedChanges';
 export * from './resetEvent';
 export * from './resetEventAllOf';
@@ -1191,6 +1193,7 @@ export * from './taxRuleSet';
 export * from './templateField';
 export * from './tenderEvent';
 export * from './tenderEventAllOf';
+export * from './tenderOfferElection';
 export * from './termDeposit';
 export * from './termDepositAllOf';
 export * from './termDepositInterestEvent';
@@ -2405,6 +2408,8 @@ import { RelationshipDefinition } from './relationshipDefinition';
 import { RelativeDateOffset } from './relativeDateOffset';
 import { Repo } from './repo';
 import { RepoAllOf } from './repoAllOf';
+import { RepurchaseOfferEvent } from './repurchaseOfferEvent';
+import { RepurchaseOfferEventAllOf } from './repurchaseOfferEventAllOf';
 import { RequestedChanges } from './requestedChanges';
 import { ResetEvent } from './resetEvent';
 import { ResetEventAllOf } from './resetEventAllOf';
@@ -2588,6 +2593,7 @@ import { TaxRuleSet } from './taxRuleSet';
 import { TemplateField } from './templateField';
 import { TenderEvent } from './tenderEvent';
 import { TenderEventAllOf } from './tenderEventAllOf';
+import { TenderOfferElection } from './tenderOfferElection';
 import { TermDeposit } from './termDeposit';
 import { TermDepositAllOf } from './termDepositAllOf';
 import { TermDepositInterestEvent } from './termDepositInterestEvent';
@@ -3247,6 +3253,8 @@ let enumsMap: {[index: string]: any} = {
         "ReferencePortfolioWeightType": ReferencePortfolioWeightType,
         "Repo.InstrumentTypeEnum": Repo.InstrumentTypeEnum,
         "RepoAllOf.InstrumentTypeEnum": RepoAllOf.InstrumentTypeEnum,
+        "RepurchaseOfferEvent.InstrumentEventTypeEnum": RepurchaseOfferEvent.InstrumentEventTypeEnum,
+        "RepurchaseOfferEventAllOf.InstrumentEventTypeEnum": RepurchaseOfferEventAllOf.InstrumentEventTypeEnum,
         "ResetEvent.InstrumentEventTypeEnum": ResetEvent.InstrumentEventTypeEnum,
         "ResetEventAllOf.InstrumentEventTypeEnum": ResetEventAllOf.InstrumentEventTypeEnum,
         "ResultDataKeyRule.ResultKeyRuleTypeEnum": ResultDataKeyRule.ResultKeyRuleTypeEnum,
@@ -4312,6 +4320,8 @@ let typeMap: {[index: string]: any} = {
     "RelativeDateOffset": RelativeDateOffset,
     "Repo": Repo,
     "RepoAllOf": RepoAllOf,
+    "RepurchaseOfferEvent": RepurchaseOfferEvent,
+    "RepurchaseOfferEventAllOf": RepurchaseOfferEventAllOf,
     "RequestedChanges": RequestedChanges,
     "ResetEvent": ResetEvent,
     "ResetEventAllOf": ResetEventAllOf,
@@ -4489,6 +4499,7 @@ let typeMap: {[index: string]: any} = {
     "TemplateField": TemplateField,
     "TenderEvent": TenderEvent,
     "TenderEventAllOf": TenderEventAllOf,
+    "TenderOfferElection": TenderOfferElection,
     "TermDeposit": TermDeposit,
     "TermDepositAllOf": TermDepositAllOf,
     "TermDepositInterestEvent": TermDepositInterestEvent,
