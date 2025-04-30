@@ -31,6 +31,7 @@ import {IdentifierDefinitionsApi} from './api/identifierDefinitionsApi';
 import {InstrumentEventTypesApi} from './api/instrumentEventTypesApi';
 import {InstrumentEventsApi} from './api/instrumentEventsApi';
 import {InstrumentsApi} from './api/instrumentsApi';
+import {InvestorRecordsApi} from './api/investorRecordsApi';
 import {LegacyComplianceApi} from './api/legacyComplianceApi';
 import {LegalEntitiesApi} from './api/legalEntitiesApi';
 import {OrderGraphApi} from './api/orderGraphApi';
@@ -105,6 +106,7 @@ export class Api {
     public instrumentEventTypes:  InstrumentEventTypesApi
     public instrumentEvents:  InstrumentEventsApi
     public instruments:  InstrumentsApi
+    public investorRecords:  InvestorRecordsApi
     public legacyCompliance:  LegacyComplianceApi
     public legalEntities:  LegalEntitiesApi
     public orderGraph:  OrderGraphApi
