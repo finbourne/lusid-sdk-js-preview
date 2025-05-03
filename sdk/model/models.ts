@@ -382,6 +382,7 @@ export * from './discountingMethod';
 export * from './dividendOptionEvent';
 export * from './dividendOptionEventAllOf';
 export * from './dividendReinvestmentEvent';
+export * from './dividendReinvestmentEventAllOf';
 export * from './drawdownEvent';
 export * from './drawdownEventAllOf';
 export * from './earlyRedemptionElection';
@@ -1787,6 +1788,7 @@ import { DiscountingMethod } from './discountingMethod';
 import { DividendOptionEvent } from './dividendOptionEvent';
 import { DividendOptionEventAllOf } from './dividendOptionEventAllOf';
 import { DividendReinvestmentEvent } from './dividendReinvestmentEvent';
+import { DividendReinvestmentEventAllOf } from './dividendReinvestmentEventAllOf';
 import { DrawdownEvent } from './drawdownEvent';
 import { DrawdownEventAllOf } from './drawdownEventAllOf';
 import { EarlyRedemptionElection } from './earlyRedemptionElection';
@@ -2966,6 +2968,7 @@ let enumsMap: {[index: string]: any} = {
         "DividendOptionEvent.InstrumentEventTypeEnum": DividendOptionEvent.InstrumentEventTypeEnum,
         "DividendOptionEventAllOf.InstrumentEventTypeEnum": DividendOptionEventAllOf.InstrumentEventTypeEnum,
         "DividendReinvestmentEvent.InstrumentEventTypeEnum": DividendReinvestmentEvent.InstrumentEventTypeEnum,
+        "DividendReinvestmentEventAllOf.InstrumentEventTypeEnum": DividendReinvestmentEventAllOf.InstrumentEventTypeEnum,
         "DrawdownEvent.InstrumentEventTypeEnum": DrawdownEvent.InstrumentEventTypeEnum,
         "DrawdownEventAllOf.InstrumentEventTypeEnum": DrawdownEventAllOf.InstrumentEventTypeEnum,
         "EarlyRedemptionEvent.InstrumentEventTypeEnum": EarlyRedemptionEvent.InstrumentEventTypeEnum,
@@ -3730,6 +3733,7 @@ let typeMap: {[index: string]: any} = {
     "DividendOptionEvent": DividendOptionEvent,
     "DividendOptionEventAllOf": DividendOptionEventAllOf,
     "DividendReinvestmentEvent": DividendReinvestmentEvent,
+    "DividendReinvestmentEventAllOf": DividendReinvestmentEventAllOf,
     "DrawdownEvent": DrawdownEvent,
     "DrawdownEventAllOf": DrawdownEventAllOf,
     "EarlyRedemptionElection": EarlyRedemptionElection,
