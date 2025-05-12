@@ -667,6 +667,7 @@ export * from './irVolCubeDataAllOf';
 export * from './irVolDependency';
 export * from './irVolDependencyAllOf';
 export * from './isBusinessDayResponse';
+export * from './itemAndWorkspace';
 export * from './journalEntryLine';
 export * from './journalEntryLineShareClassBreakdown';
 export * from './journalEntryLinesQueryParameters';
@@ -835,6 +836,7 @@ export * from './pagedResourceListOfIdentifierDefinition';
 export * from './pagedResourceListOfInstrument';
 export * from './pagedResourceListOfInstrumentEventHolder';
 export * from './pagedResourceListOfInstrumentEventInstruction';
+export * from './pagedResourceListOfItemAndWorkspace';
 export * from './pagedResourceListOfLegalEntity';
 export * from './pagedResourceListOfOrder';
 export * from './pagedResourceListOfOrderGraphBlock';
@@ -2077,6 +2079,7 @@ import { IrVolCubeDataAllOf } from './irVolCubeDataAllOf';
 import { IrVolDependency } from './irVolDependency';
 import { IrVolDependencyAllOf } from './irVolDependencyAllOf';
 import { IsBusinessDayResponse } from './isBusinessDayResponse';
+import { ItemAndWorkspace } from './itemAndWorkspace';
 import { JournalEntryLine } from './journalEntryLine';
 import { JournalEntryLineShareClassBreakdown } from './journalEntryLineShareClassBreakdown';
 import { JournalEntryLinesQueryParameters } from './journalEntryLinesQueryParameters';
@@ -2245,6 +2248,7 @@ import { PagedResourceListOfIdentifierDefinition } from './pagedResourceListOfId
 import { PagedResourceListOfInstrument } from './pagedResourceListOfInstrument';
 import { PagedResourceListOfInstrumentEventHolder } from './pagedResourceListOfInstrumentEventHolder';
 import { PagedResourceListOfInstrumentEventInstruction } from './pagedResourceListOfInstrumentEventInstruction';
+import { PagedResourceListOfItemAndWorkspace } from './pagedResourceListOfItemAndWorkspace';
 import { PagedResourceListOfLegalEntity } from './pagedResourceListOfLegalEntity';
 import { PagedResourceListOfOrder } from './pagedResourceListOfOrder';
 import { PagedResourceListOfOrderGraphBlock } from './pagedResourceListOfOrderGraphBlock';
@@ -4022,6 +4026,7 @@ let typeMap: {[index: string]: any} = {
     "IrVolDependency": IrVolDependency,
     "IrVolDependencyAllOf": IrVolDependencyAllOf,
     "IsBusinessDayResponse": IsBusinessDayResponse,
+    "ItemAndWorkspace": ItemAndWorkspace,
     "JournalEntryLine": JournalEntryLine,
     "JournalEntryLineShareClassBreakdown": JournalEntryLineShareClassBreakdown,
     "JournalEntryLinesQueryParameters": JournalEntryLinesQueryParameters,
@@ -4181,6 +4186,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfInstrument": PagedResourceListOfInstrument,
     "PagedResourceListOfInstrumentEventHolder": PagedResourceListOfInstrumentEventHolder,
     "PagedResourceListOfInstrumentEventInstruction": PagedResourceListOfInstrumentEventInstruction,
+    "PagedResourceListOfItemAndWorkspace": PagedResourceListOfItemAndWorkspace,
     "PagedResourceListOfLegalEntity": PagedResourceListOfLegalEntity,
     "PagedResourceListOfOrder": PagedResourceListOfOrder,
     "PagedResourceListOfOrderGraphBlock": PagedResourceListOfOrderGraphBlock,
