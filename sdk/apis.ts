@@ -1,6 +1,7 @@
 import {AborApi} from './api/aborApi';
 import {AborConfigurationApi} from './api/aborConfigurationApi';
 import {AddressKeyDefinitionApi} from './api/addressKeyDefinitionApi';
+import {AggregatedReturnsApi} from './api/aggregatedReturnsApi';
 import {AggregationApi} from './api/aggregationApi';
 import {AllocationsApi} from './api/allocationsApi';
 import {AmortisationRuleSetsApi} from './api/amortisationRuleSetsApi';
@@ -76,6 +77,7 @@ export class Api {
     public abor:  AborApi
     public aborConfiguration:  AborConfigurationApi
     public addressKeyDefinition:  AddressKeyDefinitionApi
+    public aggregatedReturns:  AggregatedReturnsApi
     public aggregation:  AggregationApi
     public allocations:  AllocationsApi
     public amortisationRuleSets:  AmortisationRuleSetsApi

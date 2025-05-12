@@ -1079,6 +1079,7 @@ export * from './resourceListOfQuoteAccessMetadataRule';
 export * from './resourceListOfReconciliationBreak';
 export * from './resourceListOfRelation';
 export * from './resourceListOfRelationship';
+export * from './resourceListOfReturnsEntity';
 export * from './resourceListOfScopeDefinition';
 export * from './resourceListOfSideDefinition';
 export * from './resourceListOfString';
@@ -1111,6 +1112,7 @@ export * from './resultValueString';
 export * from './resultValueStringAllOf';
 export * from './resultValueType';
 export * from './returnZeroPvOptions';
+export * from './returnsEntity';
 export * from './reverseStockSplitEvent';
 export * from './reverseStockSplitEventAllOf';
 export * from './rolloverConstituent';
@@ -1189,6 +1191,8 @@ export * from './swapCashFlowEvent';
 export * from './swapCashFlowEventAllOf';
 export * from './swapPrincipalEvent';
 export * from './swapPrincipalEventAllOf';
+export * from './sweepBlocksRequest';
+export * from './sweepBlocksResponse';
 export * from './targetTaxLot';
 export * from './targetTaxLotRequest';
 export * from './taxRule';
@@ -2485,6 +2489,7 @@ import { ResourceListOfQuoteAccessMetadataRule } from './resourceListOfQuoteAcce
 import { ResourceListOfReconciliationBreak } from './resourceListOfReconciliationBreak';
 import { ResourceListOfRelation } from './resourceListOfRelation';
 import { ResourceListOfRelationship } from './resourceListOfRelationship';
+import { ResourceListOfReturnsEntity } from './resourceListOfReturnsEntity';
 import { ResourceListOfScopeDefinition } from './resourceListOfScopeDefinition';
 import { ResourceListOfSideDefinition } from './resourceListOfSideDefinition';
 import { ResourceListOfString } from './resourceListOfString';
@@ -2517,6 +2522,7 @@ import { ResultValueString } from './resultValueString';
 import { ResultValueStringAllOf } from './resultValueStringAllOf';
 import { ResultValueType } from './resultValueType';
 import { ReturnZeroPvOptions } from './returnZeroPvOptions';
+import { ReturnsEntity } from './returnsEntity';
 import { ReverseStockSplitEvent } from './reverseStockSplitEvent';
 import { ReverseStockSplitEventAllOf } from './reverseStockSplitEventAllOf';
 import { RolloverConstituent } from './rolloverConstituent';
@@ -2595,6 +2601,8 @@ import { SwapCashFlowEvent } from './swapCashFlowEvent';
 import { SwapCashFlowEventAllOf } from './swapCashFlowEventAllOf';
 import { SwapPrincipalEvent } from './swapPrincipalEvent';
 import { SwapPrincipalEventAllOf } from './swapPrincipalEventAllOf';
+import { SweepBlocksRequest } from './sweepBlocksRequest';
+import { SweepBlocksResponse } from './sweepBlocksResponse';
 import { TargetTaxLot } from './targetTaxLot';
 import { TargetTaxLotRequest } from './targetTaxLotRequest';
 import { TaxRule } from './taxRule';
@@ -4404,6 +4412,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfReconciliationBreak": ResourceListOfReconciliationBreak,
     "ResourceListOfRelation": ResourceListOfRelation,
     "ResourceListOfRelationship": ResourceListOfRelationship,
+    "ResourceListOfReturnsEntity": ResourceListOfReturnsEntity,
     "ResourceListOfScopeDefinition": ResourceListOfScopeDefinition,
     "ResourceListOfSideDefinition": ResourceListOfSideDefinition,
     "ResourceListOfString": ResourceListOfString,
@@ -4434,6 +4443,7 @@ let typeMap: {[index: string]: any} = {
     "ResultValueString": ResultValueString,
     "ResultValueStringAllOf": ResultValueStringAllOf,
     "ReturnZeroPvOptions": ReturnZeroPvOptions,
+    "ReturnsEntity": ReturnsEntity,
     "ReverseStockSplitEvent": ReverseStockSplitEvent,
     "ReverseStockSplitEventAllOf": ReverseStockSplitEventAllOf,
     "RolloverConstituent": RolloverConstituent,
@@ -4508,6 +4518,8 @@ let typeMap: {[index: string]: any} = {
     "SwapCashFlowEventAllOf": SwapCashFlowEventAllOf,
     "SwapPrincipalEvent": SwapPrincipalEvent,
     "SwapPrincipalEventAllOf": SwapPrincipalEventAllOf,
+    "SweepBlocksRequest": SweepBlocksRequest,
+    "SweepBlocksResponse": SweepBlocksResponse,
     "TargetTaxLot": TargetTaxLot,
     "TargetTaxLotRequest": TargetTaxLotRequest,
     "TaxRule": TaxRule,
