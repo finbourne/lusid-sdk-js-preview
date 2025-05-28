@@ -131,6 +131,8 @@ export * from './bucket';
 export * from './bucketedCashFlowRequest';
 export * from './bucketedCashFlowResponse';
 export * from './bucketingSchedule';
+export * from './calculateOrderDatesRequest';
+export * from './calculateOrderDatesResponse';
 export * from './calculationInfo';
 export * from './calendar';
 export * from './calendarDate';
@@ -1256,6 +1258,7 @@ export * from './transactionTypeMovement';
 export * from './transactionTypePropertyMapping';
 export * from './transactionTypeRequest';
 export * from './transactionsReconciliationsResponse';
+export * from './transferAgencyDates';
 export * from './transitionEvent';
 export * from './transitionEventAllOf';
 export * from './translateEntitiesInlinedRequest';
@@ -1546,6 +1549,8 @@ import { Bucket } from './bucket';
 import { BucketedCashFlowRequest } from './bucketedCashFlowRequest';
 import { BucketedCashFlowResponse } from './bucketedCashFlowResponse';
 import { BucketingSchedule } from './bucketingSchedule';
+import { CalculateOrderDatesRequest } from './calculateOrderDatesRequest';
+import { CalculateOrderDatesResponse } from './calculateOrderDatesResponse';
 import { CalculationInfo } from './calculationInfo';
 import { Calendar } from './calendar';
 import { CalendarDate } from './calendarDate';
@@ -2671,6 +2676,7 @@ import { TransactionTypeMovement } from './transactionTypeMovement';
 import { TransactionTypePropertyMapping } from './transactionTypePropertyMapping';
 import { TransactionTypeRequest } from './transactionTypeRequest';
 import { TransactionsReconciliationsResponse } from './transactionsReconciliationsResponse';
+import { TransferAgencyDates } from './transferAgencyDates';
 import { TransitionEvent } from './transitionEvent';
 import { TransitionEventAllOf } from './transitionEventAllOf';
 import { TranslateEntitiesInlinedRequest } from './translateEntitiesInlinedRequest';
@@ -3510,6 +3516,8 @@ let typeMap: {[index: string]: any} = {
     "BucketedCashFlowRequest": BucketedCashFlowRequest,
     "BucketedCashFlowResponse": BucketedCashFlowResponse,
     "BucketingSchedule": BucketingSchedule,
+    "CalculateOrderDatesRequest": CalculateOrderDatesRequest,
+    "CalculateOrderDatesResponse": CalculateOrderDatesResponse,
     "CalculationInfo": CalculationInfo,
     "Calendar": Calendar,
     "CalendarDate": CalendarDate,
@@ -4588,6 +4596,7 @@ let typeMap: {[index: string]: any} = {
     "TransactionTypePropertyMapping": TransactionTypePropertyMapping,
     "TransactionTypeRequest": TransactionTypeRequest,
     "TransactionsReconciliationsResponse": TransactionsReconciliationsResponse,
+    "TransferAgencyDates": TransferAgencyDates,
     "TransitionEvent": TransitionEvent,
     "TransitionEventAllOf": TransitionEventAllOf,
     "TranslateEntitiesInlinedRequest": TranslateEntitiesInlinedRequest,

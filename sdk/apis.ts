@@ -70,6 +70,7 @@ import {TimelinesApi} from './api/timelinesApi';
 import {TransactionConfigurationApi} from './api/transactionConfigurationApi';
 import {TransactionFeesApi} from './api/transactionFeesApi';
 import {TransactionPortfoliosApi} from './api/transactionPortfoliosApi';
+import {TransferAgencyApi} from './api/transferAgencyApi';
 import {TranslationApi} from './api/translationApi';
 import {WorkspaceApi} from './api/workspaceApi';
 
@@ -146,6 +147,7 @@ export class Api {
     public transactionConfiguration:  TransactionConfigurationApi
     public transactionFees:  TransactionFeesApi
     public transactionPortfolios:  TransactionPortfoliosApi
+    public transferAgency:  TransferAgencyApi
     public translation:  TranslationApi
     public workspace:  WorkspaceApi
 }
