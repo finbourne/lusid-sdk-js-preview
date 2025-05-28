@@ -127,6 +127,7 @@ export * from './branchStepAllOf';
 export * from './branchStepRequest';
 export * from './branchStepRequestAllOf';
 export * from './breakCodeSource';
+export * from './bucket';
 export * from './bucketedCashFlowRequest';
 export * from './bucketedCashFlowResponse';
 export * from './bucketingSchedule';
@@ -392,6 +393,7 @@ export * from './economicDependency';
 export * from './economicDependencyType';
 export * from './economicDependencyWithComplexMarketData';
 export * from './economicDependencyWithQuote';
+export * from './economics';
 export * from './effectiveRange';
 export * from './electionSpecification';
 export * from './eligibilityCalculation';
@@ -1055,6 +1057,7 @@ export * from './resourceListOfIUnitDefinitionDto';
 export * from './resourceListOfInstrumentCashFlow';
 export * from './resourceListOfInstrumentEventHolder';
 export * from './resourceListOfInstrumentIdTypeDescriptor';
+export * from './resourceListOfInvestorRecord';
 export * from './resourceListOfLegalEntity';
 export * from './resourceListOfListComplexMarketDataWithMetaDataResponse';
 export * from './resourceListOfMapping';
@@ -1539,6 +1542,7 @@ import { BranchStepAllOf } from './branchStepAllOf';
 import { BranchStepRequest } from './branchStepRequest';
 import { BranchStepRequestAllOf } from './branchStepRequestAllOf';
 import { BreakCodeSource } from './breakCodeSource';
+import { Bucket } from './bucket';
 import { BucketedCashFlowRequest } from './bucketedCashFlowRequest';
 import { BucketedCashFlowResponse } from './bucketedCashFlowResponse';
 import { BucketingSchedule } from './bucketingSchedule';
@@ -1804,6 +1808,7 @@ import { EconomicDependency } from './economicDependency';
 import { EconomicDependencyType } from './economicDependencyType';
 import { EconomicDependencyWithComplexMarketData } from './economicDependencyWithComplexMarketData';
 import { EconomicDependencyWithQuote } from './economicDependencyWithQuote';
+import { Economics } from './economics';
 import { EffectiveRange } from './effectiveRange';
 import { ElectionSpecification } from './electionSpecification';
 import { EligibilityCalculation } from './eligibilityCalculation';
@@ -2467,6 +2472,7 @@ import { ResourceListOfIUnitDefinitionDto } from './resourceListOfIUnitDefinitio
 import { ResourceListOfInstrumentCashFlow } from './resourceListOfInstrumentCashFlow';
 import { ResourceListOfInstrumentEventHolder } from './resourceListOfInstrumentEventHolder';
 import { ResourceListOfInstrumentIdTypeDescriptor } from './resourceListOfInstrumentIdTypeDescriptor';
+import { ResourceListOfInvestorRecord } from './resourceListOfInvestorRecord';
 import { ResourceListOfLegalEntity } from './resourceListOfLegalEntity';
 import { ResourceListOfListComplexMarketDataWithMetaDataResponse } from './resourceListOfListComplexMarketDataWithMetaDataResponse';
 import { ResourceListOfMapping } from './resourceListOfMapping';
@@ -3500,6 +3506,7 @@ let typeMap: {[index: string]: any} = {
     "BranchStepRequest": BranchStepRequest,
     "BranchStepRequestAllOf": BranchStepRequestAllOf,
     "BreakCodeSource": BreakCodeSource,
+    "Bucket": Bucket,
     "BucketedCashFlowRequest": BucketedCashFlowRequest,
     "BucketedCashFlowResponse": BucketedCashFlowResponse,
     "BucketingSchedule": BucketingSchedule,
@@ -3754,6 +3761,7 @@ let typeMap: {[index: string]: any} = {
     "EconomicDependency": EconomicDependency,
     "EconomicDependencyWithComplexMarketData": EconomicDependencyWithComplexMarketData,
     "EconomicDependencyWithQuote": EconomicDependencyWithQuote,
+    "Economics": Economics,
     "EffectiveRange": EffectiveRange,
     "ElectionSpecification": ElectionSpecification,
     "EligibilityCalculation": EligibilityCalculation,
@@ -4392,6 +4400,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfInstrumentCashFlow": ResourceListOfInstrumentCashFlow,
     "ResourceListOfInstrumentEventHolder": ResourceListOfInstrumentEventHolder,
     "ResourceListOfInstrumentIdTypeDescriptor": ResourceListOfInstrumentIdTypeDescriptor,
+    "ResourceListOfInvestorRecord": ResourceListOfInvestorRecord,
     "ResourceListOfLegalEntity": ResourceListOfLegalEntity,
     "ResourceListOfListComplexMarketDataWithMetaDataResponse": ResourceListOfListComplexMarketDataWithMetaDataResponse,
     "ResourceListOfMapping": ResourceListOfMapping,
