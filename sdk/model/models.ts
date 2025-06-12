@@ -1018,6 +1018,10 @@ export * from './relationshipDefinition';
 export * from './relativeDateOffset';
 export * from './repo';
 export * from './repoAllOf';
+export * from './repoCashFlowEvent';
+export * from './repoCashFlowEventAllOf';
+export * from './repoPartialClosureEvent';
+export * from './repoPartialClosureEventAllOf';
 export * from './repurchaseOfferEvent';
 export * from './repurchaseOfferEventAllOf';
 export * from './requestedChanges';
@@ -2437,6 +2441,10 @@ import { RelationshipDefinition } from './relationshipDefinition';
 import { RelativeDateOffset } from './relativeDateOffset';
 import { Repo } from './repo';
 import { RepoAllOf } from './repoAllOf';
+import { RepoCashFlowEvent } from './repoCashFlowEvent';
+import { RepoCashFlowEventAllOf } from './repoCashFlowEventAllOf';
+import { RepoPartialClosureEvent } from './repoPartialClosureEvent';
+import { RepoPartialClosureEventAllOf } from './repoPartialClosureEventAllOf';
 import { RepurchaseOfferEvent } from './repurchaseOfferEvent';
 import { RepurchaseOfferEventAllOf } from './repurchaseOfferEventAllOf';
 import { RequestedChanges } from './requestedChanges';
@@ -3293,6 +3301,10 @@ let enumsMap: {[index: string]: any} = {
         "ReferencePortfolioWeightType": ReferencePortfolioWeightType,
         "Repo.InstrumentTypeEnum": Repo.InstrumentTypeEnum,
         "RepoAllOf.InstrumentTypeEnum": RepoAllOf.InstrumentTypeEnum,
+        "RepoCashFlowEvent.InstrumentEventTypeEnum": RepoCashFlowEvent.InstrumentEventTypeEnum,
+        "RepoCashFlowEventAllOf.InstrumentEventTypeEnum": RepoCashFlowEventAllOf.InstrumentEventTypeEnum,
+        "RepoPartialClosureEvent.InstrumentEventTypeEnum": RepoPartialClosureEvent.InstrumentEventTypeEnum,
+        "RepoPartialClosureEventAllOf.InstrumentEventTypeEnum": RepoPartialClosureEventAllOf.InstrumentEventTypeEnum,
         "RepurchaseOfferEvent.InstrumentEventTypeEnum": RepurchaseOfferEvent.InstrumentEventTypeEnum,
         "RepurchaseOfferEventAllOf.InstrumentEventTypeEnum": RepurchaseOfferEventAllOf.InstrumentEventTypeEnum,
         "ResetEvent.InstrumentEventTypeEnum": ResetEvent.InstrumentEventTypeEnum,
@@ -4370,6 +4382,10 @@ let typeMap: {[index: string]: any} = {
     "RelativeDateOffset": RelativeDateOffset,
     "Repo": Repo,
     "RepoAllOf": RepoAllOf,
+    "RepoCashFlowEvent": RepoCashFlowEvent,
+    "RepoCashFlowEventAllOf": RepoCashFlowEventAllOf,
+    "RepoPartialClosureEvent": RepoPartialClosureEvent,
+    "RepoPartialClosureEventAllOf": RepoPartialClosureEventAllOf,
     "RepurchaseOfferEvent": RepurchaseOfferEvent,
     "RepurchaseOfferEventAllOf": RepurchaseOfferEventAllOf,
     "RequestedChanges": RequestedChanges,
