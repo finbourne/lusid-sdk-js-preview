@@ -770,6 +770,7 @@ export * from './optionExercisePhysicalEventAllOf';
 export * from './optionalitySchedule';
 export * from './optionalityScheduleAllOf';
 export * from './order';
+export * from './orderBreachHistory';
 export * from './orderBySpec';
 export * from './orderFlowConfiguration';
 export * from './orderGraphBlock';
@@ -796,6 +797,7 @@ export * from './orderInstruction';
 export * from './orderInstructionRequest';
 export * from './orderInstructionSetRequest';
 export * from './orderRequest';
+export * from './orderRuleBreach';
 export * from './orderSetRequest';
 export * from './orderUpdateRequest';
 export * from './otcConfirmation';
@@ -844,6 +846,7 @@ export * from './pagedResourceListOfInstrumentEventInstruction';
 export * from './pagedResourceListOfItemAndWorkspace';
 export * from './pagedResourceListOfLegalEntity';
 export * from './pagedResourceListOfOrder';
+export * from './pagedResourceListOfOrderBreachHistory';
 export * from './pagedResourceListOfOrderGraphBlock';
 export * from './pagedResourceListOfOrderGraphPlacement';
 export * from './pagedResourceListOfOrderInstruction';
@@ -2193,6 +2196,7 @@ import { OptionExercisePhysicalEventAllOf } from './optionExercisePhysicalEventA
 import { OptionalitySchedule } from './optionalitySchedule';
 import { OptionalityScheduleAllOf } from './optionalityScheduleAllOf';
 import { Order } from './order';
+import { OrderBreachHistory } from './orderBreachHistory';
 import { OrderBySpec } from './orderBySpec';
 import { OrderFlowConfiguration } from './orderFlowConfiguration';
 import { OrderGraphBlock } from './orderGraphBlock';
@@ -2219,6 +2223,7 @@ import { OrderInstruction } from './orderInstruction';
 import { OrderInstructionRequest } from './orderInstructionRequest';
 import { OrderInstructionSetRequest } from './orderInstructionSetRequest';
 import { OrderRequest } from './orderRequest';
+import { OrderRuleBreach } from './orderRuleBreach';
 import { OrderSetRequest } from './orderSetRequest';
 import { OrderUpdateRequest } from './orderUpdateRequest';
 import { OtcConfirmation } from './otcConfirmation';
@@ -2267,6 +2272,7 @@ import { PagedResourceListOfInstrumentEventInstruction } from './pagedResourceLi
 import { PagedResourceListOfItemAndWorkspace } from './pagedResourceListOfItemAndWorkspace';
 import { PagedResourceListOfLegalEntity } from './pagedResourceListOfLegalEntity';
 import { PagedResourceListOfOrder } from './pagedResourceListOfOrder';
+import { PagedResourceListOfOrderBreachHistory } from './pagedResourceListOfOrderBreachHistory';
 import { PagedResourceListOfOrderGraphBlock } from './pagedResourceListOfOrderGraphBlock';
 import { PagedResourceListOfOrderGraphPlacement } from './pagedResourceListOfOrderGraphPlacement';
 import { PagedResourceListOfOrderInstruction } from './pagedResourceListOfOrderInstruction';
@@ -4147,6 +4153,7 @@ let typeMap: {[index: string]: any} = {
     "OptionalitySchedule": OptionalitySchedule,
     "OptionalityScheduleAllOf": OptionalityScheduleAllOf,
     "Order": Order,
+    "OrderBreachHistory": OrderBreachHistory,
     "OrderBySpec": OrderBySpec,
     "OrderFlowConfiguration": OrderFlowConfiguration,
     "OrderGraphBlock": OrderGraphBlock,
@@ -4173,6 +4180,7 @@ let typeMap: {[index: string]: any} = {
     "OrderInstructionRequest": OrderInstructionRequest,
     "OrderInstructionSetRequest": OrderInstructionSetRequest,
     "OrderRequest": OrderRequest,
+    "OrderRuleBreach": OrderRuleBreach,
     "OrderSetRequest": OrderSetRequest,
     "OrderUpdateRequest": OrderUpdateRequest,
     "OtcConfirmation": OtcConfirmation,
@@ -4221,6 +4229,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfItemAndWorkspace": PagedResourceListOfItemAndWorkspace,
     "PagedResourceListOfLegalEntity": PagedResourceListOfLegalEntity,
     "PagedResourceListOfOrder": PagedResourceListOfOrder,
+    "PagedResourceListOfOrderBreachHistory": PagedResourceListOfOrderBreachHistory,
     "PagedResourceListOfOrderGraphBlock": PagedResourceListOfOrderGraphBlock,
     "PagedResourceListOfOrderGraphPlacement": PagedResourceListOfOrderGraphPlacement,
     "PagedResourceListOfOrderInstruction": PagedResourceListOfOrderInstruction,
