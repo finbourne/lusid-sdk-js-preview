@@ -921,6 +921,8 @@ export * from './portfolioTradeTicket';
 export * from './portfolioType';
 export * from './portfolioWithoutHref';
 export * from './portfoliosReconciliationRequest';
+export * from './postCloseActivitiesRequest';
+export * from './postCloseActivity';
 export * from './postingModuleDetails';
 export * from './postingModuleRequest';
 export * from './postingModuleResponse';
@@ -2347,6 +2349,8 @@ import { PortfolioTradeTicket } from './portfolioTradeTicket';
 import { PortfolioType } from './portfolioType';
 import { PortfolioWithoutHref } from './portfolioWithoutHref';
 import { PortfoliosReconciliationRequest } from './portfoliosReconciliationRequest';
+import { PostCloseActivitiesRequest } from './postCloseActivitiesRequest';
+import { PostCloseActivity } from './postCloseActivity';
 import { PostingModuleDetails } from './postingModuleDetails';
 import { PostingModuleRequest } from './postingModuleRequest';
 import { PostingModuleResponse } from './postingModuleResponse';
@@ -4301,6 +4305,8 @@ let typeMap: {[index: string]: any} = {
     "PortfolioTradeTicket": PortfolioTradeTicket,
     "PortfolioWithoutHref": PortfolioWithoutHref,
     "PortfoliosReconciliationRequest": PortfoliosReconciliationRequest,
+    "PostCloseActivitiesRequest": PostCloseActivitiesRequest,
+    "PostCloseActivity": PostCloseActivity,
     "PostingModuleDetails": PostingModuleDetails,
     "PostingModuleRequest": PostingModuleRequest,
     "PostingModuleResponse": PostingModuleResponse,
