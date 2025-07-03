@@ -478,6 +478,7 @@ export * from './fundAmount';
 export * from './fundConfiguration';
 export * from './fundConfigurationProperties';
 export * from './fundConfigurationRequest';
+export * from './fundDefinitionRequest';
 export * from './fundDetails';
 export * from './fundIdList';
 export * from './fundIdListAllOf';
@@ -747,6 +748,7 @@ export * from './moveOrdersToDifferentBlocksRequest';
 export * from './movedOrderToDifferentBlockResponse';
 export * from './movementType';
 export * from './multiCurrencyAmounts';
+export * from './navTypeDefinition';
 export * from './newInstrument';
 export * from './nextValueInSequenceResponse';
 export * from './numericComparisonType';
@@ -901,6 +903,7 @@ export * from './portfolioCashLadder';
 export * from './portfolioDetails';
 export * from './portfolioEntity';
 export * from './portfolioEntityId';
+export * from './portfolioEntityIdWithDetails';
 export * from './portfolioGroup';
 export * from './portfolioGroupIdComplianceParameter';
 export * from './portfolioGroupIdList';
@@ -1906,6 +1909,7 @@ import { FundAmount } from './fundAmount';
 import { FundConfiguration } from './fundConfiguration';
 import { FundConfigurationProperties } from './fundConfigurationProperties';
 import { FundConfigurationRequest } from './fundConfigurationRequest';
+import { FundDefinitionRequest } from './fundDefinitionRequest';
 import { FundDetails } from './fundDetails';
 import { FundIdList } from './fundIdList';
 import { FundIdListAllOf } from './fundIdListAllOf';
@@ -2175,6 +2179,7 @@ import { MoveOrdersToDifferentBlocksRequest } from './moveOrdersToDifferentBlock
 import { MovedOrderToDifferentBlockResponse } from './movedOrderToDifferentBlockResponse';
 import { MovementType } from './movementType';
 import { MultiCurrencyAmounts } from './multiCurrencyAmounts';
+import { NavTypeDefinition } from './navTypeDefinition';
 import { NewInstrument } from './newInstrument';
 import { NextValueInSequenceResponse } from './nextValueInSequenceResponse';
 import { NumericComparisonType } from './numericComparisonType';
@@ -2329,6 +2334,7 @@ import { PortfolioCashLadder } from './portfolioCashLadder';
 import { PortfolioDetails } from './portfolioDetails';
 import { PortfolioEntity } from './portfolioEntity';
 import { PortfolioEntityId } from './portfolioEntityId';
+import { PortfolioEntityIdWithDetails } from './portfolioEntityIdWithDetails';
 import { PortfolioGroup } from './portfolioGroup';
 import { PortfolioGroupIdComplianceParameter } from './portfolioGroupIdComplianceParameter';
 import { PortfolioGroupIdList } from './portfolioGroupIdList';
@@ -3877,6 +3883,7 @@ let typeMap: {[index: string]: any} = {
     "FundConfiguration": FundConfiguration,
     "FundConfigurationProperties": FundConfigurationProperties,
     "FundConfigurationRequest": FundConfigurationRequest,
+    "FundDefinitionRequest": FundDefinitionRequest,
     "FundDetails": FundDetails,
     "FundIdList": FundIdList,
     "FundIdListAllOf": FundIdListAllOf,
@@ -4138,6 +4145,7 @@ let typeMap: {[index: string]: any} = {
     "MoveOrdersToDifferentBlocksRequest": MoveOrdersToDifferentBlocksRequest,
     "MovedOrderToDifferentBlockResponse": MovedOrderToDifferentBlockResponse,
     "MultiCurrencyAmounts": MultiCurrencyAmounts,
+    "NavTypeDefinition": NavTypeDefinition,
     "NewInstrument": NewInstrument,
     "NextValueInSequenceResponse": NextValueInSequenceResponse,
     "OpaqueDependency": OpaqueDependency,
@@ -4286,6 +4294,7 @@ let typeMap: {[index: string]: any} = {
     "PortfolioDetails": PortfolioDetails,
     "PortfolioEntity": PortfolioEntity,
     "PortfolioEntityId": PortfolioEntityId,
+    "PortfolioEntityIdWithDetails": PortfolioEntityIdWithDetails,
     "PortfolioGroup": PortfolioGroup,
     "PortfolioGroupIdComplianceParameter": PortfolioGroupIdComplianceParameter,
     "PortfolioGroupIdList": PortfolioGroupIdList,
