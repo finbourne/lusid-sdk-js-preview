@@ -464,6 +464,8 @@ export * from './flexibleDeposit';
 export * from './flexibleDepositAllOf';
 export * from './flexibleLoan';
 export * from './flexibleLoanAllOf';
+export * from './flexibleRepoInterestPaymentEvent';
+export * from './flexibleRepoInterestPaymentEventAllOf';
 export * from './floatSchedule';
 export * from './floatScheduleAllOf';
 export * from './floatingLeg';
@@ -1895,6 +1897,8 @@ import { FlexibleDeposit } from './flexibleDeposit';
 import { FlexibleDepositAllOf } from './flexibleDepositAllOf';
 import { FlexibleLoan } from './flexibleLoan';
 import { FlexibleLoanAllOf } from './flexibleLoanAllOf';
+import { FlexibleRepoInterestPaymentEvent } from './flexibleRepoInterestPaymentEvent';
+import { FlexibleRepoInterestPaymentEventAllOf } from './flexibleRepoInterestPaymentEventAllOf';
 import { FloatSchedule } from './floatSchedule';
 import { FloatScheduleAllOf } from './floatScheduleAllOf';
 import { FloatingLeg } from './floatingLeg';
@@ -3065,6 +3069,8 @@ let enumsMap: {[index: string]: any} = {
         "FlexibleDepositAllOf.InstrumentTypeEnum": FlexibleDepositAllOf.InstrumentTypeEnum,
         "FlexibleLoan.InstrumentTypeEnum": FlexibleLoan.InstrumentTypeEnum,
         "FlexibleLoanAllOf.InstrumentTypeEnum": FlexibleLoanAllOf.InstrumentTypeEnum,
+        "FlexibleRepoInterestPaymentEvent.InstrumentEventTypeEnum": FlexibleRepoInterestPaymentEvent.InstrumentEventTypeEnum,
+        "FlexibleRepoInterestPaymentEventAllOf.InstrumentEventTypeEnum": FlexibleRepoInterestPaymentEventAllOf.InstrumentEventTypeEnum,
         "FloatSchedule.ScheduleTypeEnum": FloatSchedule.ScheduleTypeEnum,
         "FloatScheduleAllOf.ScheduleTypeEnum": FloatScheduleAllOf.ScheduleTypeEnum,
         "FloatingLeg.InstrumentTypeEnum": FloatingLeg.InstrumentTypeEnum,
@@ -3869,6 +3875,8 @@ let typeMap: {[index: string]: any} = {
     "FlexibleDepositAllOf": FlexibleDepositAllOf,
     "FlexibleLoan": FlexibleLoan,
     "FlexibleLoanAllOf": FlexibleLoanAllOf,
+    "FlexibleRepoInterestPaymentEvent": FlexibleRepoInterestPaymentEvent,
+    "FlexibleRepoInterestPaymentEventAllOf": FlexibleRepoInterestPaymentEventAllOf,
     "FloatSchedule": FloatSchedule,
     "FloatScheduleAllOf": FloatScheduleAllOf,
     "FloatingLeg": FloatingLeg,
