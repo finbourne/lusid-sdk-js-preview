@@ -16,6 +16,8 @@ export * from './accessControlledResource';
 export * from './accessMetadataOperation';
 export * from './accessMetadataValue';
 export * from './account';
+export * from './accountHolder';
+export * from './accountHolderIdentifier';
 export * from './accountProperties';
 export * from './accountedTransaction';
 export * from './accountingMethod';
@@ -670,6 +672,9 @@ export * from './intermediateComplianceStepAllOf';
 export * from './intermediateComplianceStepRequest';
 export * from './intermediateSecuritiesDistributionEvent';
 export * from './intermediateSecuritiesDistributionEventAllOf';
+export * from './investmentAccount';
+export * from './investmentPortfolio';
+export * from './investmentPortfolioIdentifier';
 export * from './investor';
 export * from './investorIdentifier';
 export * from './investorRecord';
@@ -1347,6 +1352,8 @@ export * from './upsertInstrumentEventsResponse';
 export * from './upsertInstrumentPropertiesResponse';
 export * from './upsertInstrumentPropertyRequest';
 export * from './upsertInstrumentsResponse';
+export * from './upsertInvestmentAccountRequest';
+export * from './upsertInvestmentAccountsResponse';
 export * from './upsertInvestorRecordRequest';
 export * from './upsertInvestorRecordsResponse';
 export * from './upsertLegalEntitiesResponse';
@@ -1451,6 +1458,8 @@ import { AccessControlledResource } from './accessControlledResource';
 import { AccessMetadataOperation } from './accessMetadataOperation';
 import { AccessMetadataValue } from './accessMetadataValue';
 import { Account } from './account';
+import { AccountHolder } from './accountHolder';
+import { AccountHolderIdentifier } from './accountHolderIdentifier';
 import { AccountProperties } from './accountProperties';
 import { AccountedTransaction } from './accountedTransaction';
 import { AccountingMethod } from './accountingMethod';
@@ -2105,6 +2114,9 @@ import { IntermediateComplianceStepAllOf } from './intermediateComplianceStepAll
 import { IntermediateComplianceStepRequest } from './intermediateComplianceStepRequest';
 import { IntermediateSecuritiesDistributionEvent } from './intermediateSecuritiesDistributionEvent';
 import { IntermediateSecuritiesDistributionEventAllOf } from './intermediateSecuritiesDistributionEventAllOf';
+import { InvestmentAccount } from './investmentAccount';
+import { InvestmentPortfolio } from './investmentPortfolio';
+import { InvestmentPortfolioIdentifier } from './investmentPortfolioIdentifier';
 import { Investor } from './investor';
 import { InvestorIdentifier } from './investorIdentifier';
 import { InvestorRecord } from './investorRecord';
@@ -2782,6 +2794,8 @@ import { UpsertInstrumentEventsResponse } from './upsertInstrumentEventsResponse
 import { UpsertInstrumentPropertiesResponse } from './upsertInstrumentPropertiesResponse';
 import { UpsertInstrumentPropertyRequest } from './upsertInstrumentPropertyRequest';
 import { UpsertInstrumentsResponse } from './upsertInstrumentsResponse';
+import { UpsertInvestmentAccountRequest } from './upsertInvestmentAccountRequest';
+import { UpsertInvestmentAccountsResponse } from './upsertInvestmentAccountsResponse';
 import { UpsertInvestorRecordRequest } from './upsertInvestorRecordRequest';
 import { UpsertInvestorRecordsResponse } from './upsertInvestorRecordsResponse';
 import { UpsertLegalEntitiesResponse } from './upsertLegalEntitiesResponse';
@@ -3449,6 +3463,8 @@ let typeMap: {[index: string]: any} = {
     "AccessMetadataOperation": AccessMetadataOperation,
     "AccessMetadataValue": AccessMetadataValue,
     "Account": Account,
+    "AccountHolder": AccountHolder,
+    "AccountHolderIdentifier": AccountHolderIdentifier,
     "AccountProperties": AccountProperties,
     "AccountedTransaction": AccountedTransaction,
     "AccountsUpsertResponse": AccountsUpsertResponse,
@@ -4084,6 +4100,9 @@ let typeMap: {[index: string]: any} = {
     "IntermediateComplianceStepRequest": IntermediateComplianceStepRequest,
     "IntermediateSecuritiesDistributionEvent": IntermediateSecuritiesDistributionEvent,
     "IntermediateSecuritiesDistributionEventAllOf": IntermediateSecuritiesDistributionEventAllOf,
+    "InvestmentAccount": InvestmentAccount,
+    "InvestmentPortfolio": InvestmentPortfolio,
+    "InvestmentPortfolioIdentifier": InvestmentPortfolioIdentifier,
     "Investor": Investor,
     "InvestorIdentifier": InvestorIdentifier,
     "InvestorRecord": InvestorRecord,
@@ -4726,6 +4745,8 @@ let typeMap: {[index: string]: any} = {
     "UpsertInstrumentPropertiesResponse": UpsertInstrumentPropertiesResponse,
     "UpsertInstrumentPropertyRequest": UpsertInstrumentPropertyRequest,
     "UpsertInstrumentsResponse": UpsertInstrumentsResponse,
+    "UpsertInvestmentAccountRequest": UpsertInvestmentAccountRequest,
+    "UpsertInvestmentAccountsResponse": UpsertInvestmentAccountsResponse,
     "UpsertInvestorRecordRequest": UpsertInvestorRecordRequest,
     "UpsertInvestorRecordsResponse": UpsertInvestorRecordsResponse,
     "UpsertLegalEntitiesResponse": UpsertLegalEntitiesResponse,
