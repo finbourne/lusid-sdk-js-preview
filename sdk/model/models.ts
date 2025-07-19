@@ -205,6 +205,8 @@ export * from './closeEvent';
 export * from './closeEventAllOf';
 export * from './closePeriodDiaryEntryRequest';
 export * from './closedPeriod';
+export * from './collateral';
+export * from './collateralInstrument';
 export * from './comparisonAttributeValuePair';
 export * from './completePortfolio';
 export * from './completeRelation';
@@ -466,6 +468,8 @@ export * from './flexibleDeposit';
 export * from './flexibleDepositAllOf';
 export * from './flexibleLoan';
 export * from './flexibleLoanAllOf';
+export * from './flexibleRepo';
+export * from './flexibleRepoAllOf';
 export * from './flexibleRepoCashFlowEvent';
 export * from './flexibleRepoCashFlowEventAllOf';
 export * from './flexibleRepoCollateralEvent';
@@ -483,6 +487,8 @@ export * from './forwardRateAgreementAllOf';
 export * from './fromRecipe';
 export * from './fund';
 export * from './fundAmount';
+export * from './fundCalendarEntry';
+export * from './fundCalendarEntryType';
 export * from './fundConfiguration';
 export * from './fundConfigurationProperties';
 export * from './fundConfigurationRequest';
@@ -848,6 +854,7 @@ export * from './pagedResourceListOfExecution';
 export * from './pagedResourceListOfFee';
 export * from './pagedResourceListOfFeeType';
 export * from './pagedResourceListOfFund';
+export * from './pagedResourceListOfFundCalendarEntry';
 export * from './pagedResourceListOfFundConfiguration';
 export * from './pagedResourceListOfGeneralLedgerProfileResponse';
 export * from './pagedResourceListOfGroupReconciliationComparisonResult';
@@ -1649,6 +1656,8 @@ import { CloseEvent } from './closeEvent';
 import { CloseEventAllOf } from './closeEventAllOf';
 import { ClosePeriodDiaryEntryRequest } from './closePeriodDiaryEntryRequest';
 import { ClosedPeriod } from './closedPeriod';
+import { Collateral } from './collateral';
+import { CollateralInstrument } from './collateralInstrument';
 import { ComparisonAttributeValuePair } from './comparisonAttributeValuePair';
 import { CompletePortfolio } from './completePortfolio';
 import { CompleteRelation } from './completeRelation';
@@ -1910,6 +1919,8 @@ import { FlexibleDeposit } from './flexibleDeposit';
 import { FlexibleDepositAllOf } from './flexibleDepositAllOf';
 import { FlexibleLoan } from './flexibleLoan';
 import { FlexibleLoanAllOf } from './flexibleLoanAllOf';
+import { FlexibleRepo } from './flexibleRepo';
+import { FlexibleRepoAllOf } from './flexibleRepoAllOf';
 import { FlexibleRepoCashFlowEvent } from './flexibleRepoCashFlowEvent';
 import { FlexibleRepoCashFlowEventAllOf } from './flexibleRepoCashFlowEventAllOf';
 import { FlexibleRepoCollateralEvent } from './flexibleRepoCollateralEvent';
@@ -1927,6 +1938,8 @@ import { ForwardRateAgreementAllOf } from './forwardRateAgreementAllOf';
 import { FromRecipe } from './fromRecipe';
 import { Fund } from './fund';
 import { FundAmount } from './fundAmount';
+import { FundCalendarEntry } from './fundCalendarEntry';
+import { FundCalendarEntryType } from './fundCalendarEntryType';
 import { FundConfiguration } from './fundConfiguration';
 import { FundConfigurationProperties } from './fundConfigurationProperties';
 import { FundConfigurationRequest } from './fundConfigurationRequest';
@@ -2292,6 +2305,7 @@ import { PagedResourceListOfExecution } from './pagedResourceListOfExecution';
 import { PagedResourceListOfFee } from './pagedResourceListOfFee';
 import { PagedResourceListOfFeeType } from './pagedResourceListOfFeeType';
 import { PagedResourceListOfFund } from './pagedResourceListOfFund';
+import { PagedResourceListOfFundCalendarEntry } from './pagedResourceListOfFundCalendarEntry';
 import { PagedResourceListOfFundConfiguration } from './pagedResourceListOfFundConfiguration';
 import { PagedResourceListOfGeneralLedgerProfileResponse } from './pagedResourceListOfGeneralLedgerProfileResponse';
 import { PagedResourceListOfGroupReconciliationComparisonResult } from './pagedResourceListOfGroupReconciliationComparisonResult';
@@ -3091,6 +3105,8 @@ let enumsMap: {[index: string]: any} = {
         "FlexibleDepositAllOf.InstrumentTypeEnum": FlexibleDepositAllOf.InstrumentTypeEnum,
         "FlexibleLoan.InstrumentTypeEnum": FlexibleLoan.InstrumentTypeEnum,
         "FlexibleLoanAllOf.InstrumentTypeEnum": FlexibleLoanAllOf.InstrumentTypeEnum,
+        "FlexibleRepo.InstrumentTypeEnum": FlexibleRepo.InstrumentTypeEnum,
+        "FlexibleRepoAllOf.InstrumentTypeEnum": FlexibleRepoAllOf.InstrumentTypeEnum,
         "FlexibleRepoCashFlowEvent.InstrumentEventTypeEnum": FlexibleRepoCashFlowEvent.InstrumentEventTypeEnum,
         "FlexibleRepoCashFlowEventAllOf.InstrumentEventTypeEnum": FlexibleRepoCashFlowEventAllOf.InstrumentEventTypeEnum,
         "FlexibleRepoCollateralEvent.InstrumentEventTypeEnum": FlexibleRepoCollateralEvent.InstrumentEventTypeEnum,
@@ -3103,6 +3119,8 @@ let enumsMap: {[index: string]: any} = {
         "FloatingLegAllOf.InstrumentTypeEnum": FloatingLegAllOf.InstrumentTypeEnum,
         "ForwardRateAgreement.InstrumentTypeEnum": ForwardRateAgreement.InstrumentTypeEnum,
         "ForwardRateAgreementAllOf.InstrumentTypeEnum": ForwardRateAgreementAllOf.InstrumentTypeEnum,
+        "FundCalendarEntry.EntryTypeEnum": FundCalendarEntry.EntryTypeEnum,
+        "FundCalendarEntryType": FundCalendarEntryType,
         "FundIdList.ReferenceListTypeEnum": FundIdList.ReferenceListTypeEnum,
         "FundIdListAllOf.ReferenceListTypeEnum": FundIdListAllOf.ReferenceListTypeEnum,
         "FundShareClass.InstrumentTypeEnum": FundShareClass.InstrumentTypeEnum,
@@ -3652,6 +3670,8 @@ let typeMap: {[index: string]: any} = {
     "CloseEventAllOf": CloseEventAllOf,
     "ClosePeriodDiaryEntryRequest": ClosePeriodDiaryEntryRequest,
     "ClosedPeriod": ClosedPeriod,
+    "Collateral": Collateral,
+    "CollateralInstrument": CollateralInstrument,
     "ComparisonAttributeValuePair": ComparisonAttributeValuePair,
     "CompletePortfolio": CompletePortfolio,
     "CompleteRelation": CompleteRelation,
@@ -3903,6 +3923,8 @@ let typeMap: {[index: string]: any} = {
     "FlexibleDepositAllOf": FlexibleDepositAllOf,
     "FlexibleLoan": FlexibleLoan,
     "FlexibleLoanAllOf": FlexibleLoanAllOf,
+    "FlexibleRepo": FlexibleRepo,
+    "FlexibleRepoAllOf": FlexibleRepoAllOf,
     "FlexibleRepoCashFlowEvent": FlexibleRepoCashFlowEvent,
     "FlexibleRepoCashFlowEventAllOf": FlexibleRepoCashFlowEventAllOf,
     "FlexibleRepoCollateralEvent": FlexibleRepoCollateralEvent,
@@ -3920,6 +3942,7 @@ let typeMap: {[index: string]: any} = {
     "FromRecipe": FromRecipe,
     "Fund": Fund,
     "FundAmount": FundAmount,
+    "FundCalendarEntry": FundCalendarEntry,
     "FundConfiguration": FundConfiguration,
     "FundConfigurationProperties": FundConfigurationProperties,
     "FundConfigurationRequest": FundConfigurationRequest,
@@ -4273,6 +4296,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfFee": PagedResourceListOfFee,
     "PagedResourceListOfFeeType": PagedResourceListOfFeeType,
     "PagedResourceListOfFund": PagedResourceListOfFund,
+    "PagedResourceListOfFundCalendarEntry": PagedResourceListOfFundCalendarEntry,
     "PagedResourceListOfFundConfiguration": PagedResourceListOfFundConfiguration,
     "PagedResourceListOfGeneralLedgerProfileResponse": PagedResourceListOfGeneralLedgerProfileResponse,
     "PagedResourceListOfGroupReconciliationComparisonResult": PagedResourceListOfGroupReconciliationComparisonResult,
