@@ -261,6 +261,8 @@ export * from './contractForDifferenceAllOf';
 export * from './contractInitialisationEvent';
 export * from './contractInitialisationEventAllOf';
 export * from './contributionToNonPassingRuleDetail';
+export * from './conversionEvent';
+export * from './conversionEventAllOf';
 export * from './corporateAction';
 export * from './corporateActionSource';
 export * from './corporateActionTransition';
@@ -1712,6 +1714,8 @@ import { ContractForDifferenceAllOf } from './contractForDifferenceAllOf';
 import { ContractInitialisationEvent } from './contractInitialisationEvent';
 import { ContractInitialisationEventAllOf } from './contractInitialisationEventAllOf';
 import { ContributionToNonPassingRuleDetail } from './contributionToNonPassingRuleDetail';
+import { ConversionEvent } from './conversionEvent';
+import { ConversionEventAllOf } from './conversionEventAllOf';
 import { CorporateAction } from './corporateAction';
 import { CorporateActionSource } from './corporateActionSource';
 import { CorporateActionTransition } from './corporateActionTransition';
@@ -3010,6 +3014,8 @@ let enumsMap: {[index: string]: any} = {
         "ContractForDifferenceAllOf.InstrumentTypeEnum": ContractForDifferenceAllOf.InstrumentTypeEnum,
         "ContractInitialisationEvent.InstrumentEventTypeEnum": ContractInitialisationEvent.InstrumentEventTypeEnum,
         "ContractInitialisationEventAllOf.InstrumentEventTypeEnum": ContractInitialisationEventAllOf.InstrumentEventTypeEnum,
+        "ConversionEvent.InstrumentEventTypeEnum": ConversionEvent.InstrumentEventTypeEnum,
+        "ConversionEventAllOf.InstrumentEventTypeEnum": ConversionEventAllOf.InstrumentEventTypeEnum,
         "CreateDataTypeRequest.TypeValueRangeEnum": CreateDataTypeRequest.TypeValueRangeEnum,
         "CreateDataTypeRequest.ValueTypeEnum": CreateDataTypeRequest.ValueTypeEnum,
         "CreateDataTypeRequest.UnitSchemaEnum": CreateDataTypeRequest.UnitSchemaEnum,
@@ -3723,6 +3729,8 @@ let typeMap: {[index: string]: any} = {
     "ContractInitialisationEvent": ContractInitialisationEvent,
     "ContractInitialisationEventAllOf": ContractInitialisationEventAllOf,
     "ContributionToNonPassingRuleDetail": ContributionToNonPassingRuleDetail,
+    "ConversionEvent": ConversionEvent,
+    "ConversionEventAllOf": ConversionEventAllOf,
     "CorporateAction": CorporateAction,
     "CorporateActionSource": CorporateActionSource,
     "CorporateActionTransition": CorporateActionTransition,
