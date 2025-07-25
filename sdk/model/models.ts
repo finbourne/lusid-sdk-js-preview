@@ -89,6 +89,7 @@ export * from './basket';
 export * from './basketAllOf';
 export * from './basketIdentifier';
 export * from './batchAdjustHoldingsResponse';
+export * from './batchAmendCustomDataModelMembershipResponse';
 export * from './batchUpdateUserReviewForComparisonResultRequest';
 export * from './batchUpdateUserReviewForComparisonResultResponse';
 export * from './batchUpsertDatesForCalendarResponse';
@@ -757,6 +758,8 @@ export * from './mbsPrincipalEventAllOf';
 export * from './mbsPrincipalWriteOffEvent';
 export * from './mbsPrincipalWriteOffEventAllOf';
 export * from './membership';
+export * from './membershipAmendmentRequest';
+export * from './membershipAmendmentResponse';
 export * from './membershipAndStatus';
 export * from './mergerEvent';
 export * from './mergerEventAllOf';
@@ -1547,6 +1550,7 @@ import { Basket } from './basket';
 import { BasketAllOf } from './basketAllOf';
 import { BasketIdentifier } from './basketIdentifier';
 import { BatchAdjustHoldingsResponse } from './batchAdjustHoldingsResponse';
+import { BatchAmendCustomDataModelMembershipResponse } from './batchAmendCustomDataModelMembershipResponse';
 import { BatchUpdateUserReviewForComparisonResultRequest } from './batchUpdateUserReviewForComparisonResultRequest';
 import { BatchUpdateUserReviewForComparisonResultResponse } from './batchUpdateUserReviewForComparisonResultResponse';
 import { BatchUpsertDatesForCalendarResponse } from './batchUpsertDatesForCalendarResponse';
@@ -2215,6 +2219,8 @@ import { MbsPrincipalEventAllOf } from './mbsPrincipalEventAllOf';
 import { MbsPrincipalWriteOffEvent } from './mbsPrincipalWriteOffEvent';
 import { MbsPrincipalWriteOffEventAllOf } from './mbsPrincipalWriteOffEventAllOf';
 import { Membership } from './membership';
+import { MembershipAmendmentRequest } from './membershipAmendmentRequest';
+import { MembershipAmendmentResponse } from './membershipAmendmentResponse';
 import { MembershipAndStatus } from './membershipAndStatus';
 import { MergerEvent } from './mergerEvent';
 import { MergerEventAllOf } from './mergerEventAllOf';
@@ -3571,6 +3577,7 @@ let typeMap: {[index: string]: any} = {
     "BasketAllOf": BasketAllOf,
     "BasketIdentifier": BasketIdentifier,
     "BatchAdjustHoldingsResponse": BatchAdjustHoldingsResponse,
+    "BatchAmendCustomDataModelMembershipResponse": BatchAmendCustomDataModelMembershipResponse,
     "BatchUpdateUserReviewForComparisonResultRequest": BatchUpdateUserReviewForComparisonResultRequest,
     "BatchUpdateUserReviewForComparisonResultResponse": BatchUpdateUserReviewForComparisonResultResponse,
     "BatchUpsertDatesForCalendarResponse": BatchUpsertDatesForCalendarResponse,
@@ -4221,6 +4228,8 @@ let typeMap: {[index: string]: any} = {
     "MbsPrincipalWriteOffEvent": MbsPrincipalWriteOffEvent,
     "MbsPrincipalWriteOffEventAllOf": MbsPrincipalWriteOffEventAllOf,
     "Membership": Membership,
+    "MembershipAmendmentRequest": MembershipAmendmentRequest,
+    "MembershipAmendmentResponse": MembershipAmendmentResponse,
     "MembershipAndStatus": MembershipAndStatus,
     "MergerEvent": MergerEvent,
     "MergerEventAllOf": MergerEventAllOf,
