@@ -480,6 +480,8 @@ export * from './flexibleRepoCollateralEvent';
 export * from './flexibleRepoCollateralEventAllOf';
 export * from './flexibleRepoInterestPaymentEvent';
 export * from './flexibleRepoInterestPaymentEventAllOf';
+export * from './flexibleRepoPartialClosureEvent';
+export * from './flexibleRepoPartialClosureEventAllOf';
 export * from './floatSchedule';
 export * from './floatScheduleAllOf';
 export * from './floatingLeg';
@@ -904,6 +906,7 @@ export * from './pagedResourceListOfValuationPointOverview';
 export * from './pagedResourceListOfVirtualRow';
 export * from './pagedResourceListOfWorkspace';
 export * from './pagedResourceListOfWorkspaceItem';
+export * from './partialClosureConstituent';
 export * from './participation';
 export * from './participationRequest';
 export * from './participationSetRequest';
@@ -1100,6 +1103,7 @@ export * from './resourceListOfIUnitDefinitionDto';
 export * from './resourceListOfInstrumentCashFlow';
 export * from './resourceListOfInstrumentEventHolder';
 export * from './resourceListOfInstrumentIdTypeDescriptor';
+export * from './resourceListOfInvestmentAccount';
 export * from './resourceListOfInvestorRecord';
 export * from './resourceListOfLegalEntity';
 export * from './resourceListOfListComplexMarketDataWithMetaDataResponse';
@@ -1941,6 +1945,8 @@ import { FlexibleRepoCollateralEvent } from './flexibleRepoCollateralEvent';
 import { FlexibleRepoCollateralEventAllOf } from './flexibleRepoCollateralEventAllOf';
 import { FlexibleRepoInterestPaymentEvent } from './flexibleRepoInterestPaymentEvent';
 import { FlexibleRepoInterestPaymentEventAllOf } from './flexibleRepoInterestPaymentEventAllOf';
+import { FlexibleRepoPartialClosureEvent } from './flexibleRepoPartialClosureEvent';
+import { FlexibleRepoPartialClosureEventAllOf } from './flexibleRepoPartialClosureEventAllOf';
 import { FloatSchedule } from './floatSchedule';
 import { FloatScheduleAllOf } from './floatScheduleAllOf';
 import { FloatingLeg } from './floatingLeg';
@@ -2365,6 +2371,7 @@ import { PagedResourceListOfValuationPointOverview } from './pagedResourceListOf
 import { PagedResourceListOfVirtualRow } from './pagedResourceListOfVirtualRow';
 import { PagedResourceListOfWorkspace } from './pagedResourceListOfWorkspace';
 import { PagedResourceListOfWorkspaceItem } from './pagedResourceListOfWorkspaceItem';
+import { PartialClosureConstituent } from './partialClosureConstituent';
 import { Participation } from './participation';
 import { ParticipationRequest } from './participationRequest';
 import { ParticipationSetRequest } from './participationSetRequest';
@@ -2561,6 +2568,7 @@ import { ResourceListOfIUnitDefinitionDto } from './resourceListOfIUnitDefinitio
 import { ResourceListOfInstrumentCashFlow } from './resourceListOfInstrumentCashFlow';
 import { ResourceListOfInstrumentEventHolder } from './resourceListOfInstrumentEventHolder';
 import { ResourceListOfInstrumentIdTypeDescriptor } from './resourceListOfInstrumentIdTypeDescriptor';
+import { ResourceListOfInvestmentAccount } from './resourceListOfInvestmentAccount';
 import { ResourceListOfInvestorRecord } from './resourceListOfInvestorRecord';
 import { ResourceListOfLegalEntity } from './resourceListOfLegalEntity';
 import { ResourceListOfListComplexMarketDataWithMetaDataResponse } from './resourceListOfListComplexMarketDataWithMetaDataResponse';
@@ -3135,6 +3143,8 @@ let enumsMap: {[index: string]: any} = {
         "FlexibleRepoCollateralEventAllOf.InstrumentEventTypeEnum": FlexibleRepoCollateralEventAllOf.InstrumentEventTypeEnum,
         "FlexibleRepoInterestPaymentEvent.InstrumentEventTypeEnum": FlexibleRepoInterestPaymentEvent.InstrumentEventTypeEnum,
         "FlexibleRepoInterestPaymentEventAllOf.InstrumentEventTypeEnum": FlexibleRepoInterestPaymentEventAllOf.InstrumentEventTypeEnum,
+        "FlexibleRepoPartialClosureEvent.InstrumentEventTypeEnum": FlexibleRepoPartialClosureEvent.InstrumentEventTypeEnum,
+        "FlexibleRepoPartialClosureEventAllOf.InstrumentEventTypeEnum": FlexibleRepoPartialClosureEventAllOf.InstrumentEventTypeEnum,
         "FloatSchedule.ScheduleTypeEnum": FloatSchedule.ScheduleTypeEnum,
         "FloatScheduleAllOf.ScheduleTypeEnum": FloatScheduleAllOf.ScheduleTypeEnum,
         "FloatingLeg.InstrumentTypeEnum": FloatingLeg.InstrumentTypeEnum,
@@ -3957,6 +3967,8 @@ let typeMap: {[index: string]: any} = {
     "FlexibleRepoCollateralEventAllOf": FlexibleRepoCollateralEventAllOf,
     "FlexibleRepoInterestPaymentEvent": FlexibleRepoInterestPaymentEvent,
     "FlexibleRepoInterestPaymentEventAllOf": FlexibleRepoInterestPaymentEventAllOf,
+    "FlexibleRepoPartialClosureEvent": FlexibleRepoPartialClosureEvent,
+    "FlexibleRepoPartialClosureEventAllOf": FlexibleRepoPartialClosureEventAllOf,
     "FloatSchedule": FloatSchedule,
     "FloatScheduleAllOf": FloatScheduleAllOf,
     "FloatingLeg": FloatingLeg,
@@ -4368,6 +4380,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfVirtualRow": PagedResourceListOfVirtualRow,
     "PagedResourceListOfWorkspace": PagedResourceListOfWorkspace,
     "PagedResourceListOfWorkspaceItem": PagedResourceListOfWorkspaceItem,
+    "PartialClosureConstituent": PartialClosureConstituent,
     "Participation": Participation,
     "ParticipationRequest": ParticipationRequest,
     "ParticipationSetRequest": ParticipationSetRequest,
@@ -4551,6 +4564,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfInstrumentCashFlow": ResourceListOfInstrumentCashFlow,
     "ResourceListOfInstrumentEventHolder": ResourceListOfInstrumentEventHolder,
     "ResourceListOfInstrumentIdTypeDescriptor": ResourceListOfInstrumentIdTypeDescriptor,
+    "ResourceListOfInvestmentAccount": ResourceListOfInvestmentAccount,
     "ResourceListOfInvestorRecord": ResourceListOfInvestorRecord,
     "ResourceListOfLegalEntity": ResourceListOfLegalEntity,
     "ResourceListOfListComplexMarketDataWithMetaDataResponse": ResourceListOfListComplexMarketDataWithMetaDataResponse,
