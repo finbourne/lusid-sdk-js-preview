@@ -193,6 +193,10 @@ export * from './changeItem';
 export * from './chartOfAccounts';
 export * from './chartOfAccountsProperties';
 export * from './chartOfAccountsRequest';
+export * from './checkDefinition';
+export * from './checkDefinitionDatasetSchema';
+export * from './checkDefinitionRule';
+export * from './checkDefinitionRuleSet';
 export * from './checkStep';
 export * from './checkStepAllOf';
 export * from './checkStepRequest';
@@ -276,6 +280,7 @@ export * from './counterpartySignatory';
 export * from './createAddressKeyDefinitionRequest';
 export * from './createAmortisationRuleSetRequest';
 export * from './createCalendarRequest';
+export * from './createCheckDefinitionRequest';
 export * from './createClosedPeriodRequest';
 export * from './createComplianceTemplateRequest';
 export * from './createCorporateActionSourceRequest';
@@ -843,6 +848,7 @@ export * from './pagedResourceListOfAmortisationRuleSet';
 export * from './pagedResourceListOfBlock';
 export * from './pagedResourceListOfCalendar';
 export * from './pagedResourceListOfChartOfAccounts';
+export * from './pagedResourceListOfCheckDefinition';
 export * from './pagedResourceListOfCleardownModuleResponse';
 export * from './pagedResourceListOfCleardownModuleRule';
 export * from './pagedResourceListOfClosedPeriod';
@@ -1329,6 +1335,7 @@ export * from './unitsRatio';
 export * from './unmatchedHoldingMethod';
 export * from './updateAmortisationRuleSetDetailsRequest';
 export * from './updateCalendarRequest';
+export * from './updateCheckDefinitionRequest';
 export * from './updateComplianceTemplateRequest';
 export * from './updateCustomDataModelRequest';
 export * from './updateCustomEntityDefinitionRequest';
@@ -1658,6 +1665,10 @@ import { ChangeItem } from './changeItem';
 import { ChartOfAccounts } from './chartOfAccounts';
 import { ChartOfAccountsProperties } from './chartOfAccountsProperties';
 import { ChartOfAccountsRequest } from './chartOfAccountsRequest';
+import { CheckDefinition } from './checkDefinition';
+import { CheckDefinitionDatasetSchema } from './checkDefinitionDatasetSchema';
+import { CheckDefinitionRule } from './checkDefinitionRule';
+import { CheckDefinitionRuleSet } from './checkDefinitionRuleSet';
 import { CheckStep } from './checkStep';
 import { CheckStepAllOf } from './checkStepAllOf';
 import { CheckStepRequest } from './checkStepRequest';
@@ -1741,6 +1752,7 @@ import { CounterpartySignatory } from './counterpartySignatory';
 import { CreateAddressKeyDefinitionRequest } from './createAddressKeyDefinitionRequest';
 import { CreateAmortisationRuleSetRequest } from './createAmortisationRuleSetRequest';
 import { CreateCalendarRequest } from './createCalendarRequest';
+import { CreateCheckDefinitionRequest } from './createCheckDefinitionRequest';
 import { CreateClosedPeriodRequest } from './createClosedPeriodRequest';
 import { CreateComplianceTemplateRequest } from './createComplianceTemplateRequest';
 import { CreateCorporateActionSourceRequest } from './createCorporateActionSourceRequest';
@@ -2308,6 +2320,7 @@ import { PagedResourceListOfAmortisationRuleSet } from './pagedResourceListOfAmo
 import { PagedResourceListOfBlock } from './pagedResourceListOfBlock';
 import { PagedResourceListOfCalendar } from './pagedResourceListOfCalendar';
 import { PagedResourceListOfChartOfAccounts } from './pagedResourceListOfChartOfAccounts';
+import { PagedResourceListOfCheckDefinition } from './pagedResourceListOfCheckDefinition';
 import { PagedResourceListOfCleardownModuleResponse } from './pagedResourceListOfCleardownModuleResponse';
 import { PagedResourceListOfCleardownModuleRule } from './pagedResourceListOfCleardownModuleRule';
 import { PagedResourceListOfClosedPeriod } from './pagedResourceListOfClosedPeriod';
@@ -2794,6 +2807,7 @@ import { UnitsRatio } from './unitsRatio';
 import { UnmatchedHoldingMethod } from './unmatchedHoldingMethod';
 import { UpdateAmortisationRuleSetDetailsRequest } from './updateAmortisationRuleSetDetailsRequest';
 import { UpdateCalendarRequest } from './updateCalendarRequest';
+import { UpdateCheckDefinitionRequest } from './updateCheckDefinitionRequest';
 import { UpdateComplianceTemplateRequest } from './updateComplianceTemplateRequest';
 import { UpdateCustomDataModelRequest } from './updateCustomDataModelRequest';
 import { UpdateCustomEntityDefinitionRequest } from './updateCustomEntityDefinitionRequest';
@@ -3690,6 +3704,10 @@ let typeMap: {[index: string]: any} = {
     "ChartOfAccounts": ChartOfAccounts,
     "ChartOfAccountsProperties": ChartOfAccountsProperties,
     "ChartOfAccountsRequest": ChartOfAccountsRequest,
+    "CheckDefinition": CheckDefinition,
+    "CheckDefinitionDatasetSchema": CheckDefinitionDatasetSchema,
+    "CheckDefinitionRule": CheckDefinitionRule,
+    "CheckDefinitionRuleSet": CheckDefinitionRuleSet,
     "CheckStep": CheckStep,
     "CheckStepAllOf": CheckStepAllOf,
     "CheckStepRequest": CheckStepRequest,
@@ -3770,6 +3788,7 @@ let typeMap: {[index: string]: any} = {
     "CreateAddressKeyDefinitionRequest": CreateAddressKeyDefinitionRequest,
     "CreateAmortisationRuleSetRequest": CreateAmortisationRuleSetRequest,
     "CreateCalendarRequest": CreateCalendarRequest,
+    "CreateCheckDefinitionRequest": CreateCheckDefinitionRequest,
     "CreateClosedPeriodRequest": CreateClosedPeriodRequest,
     "CreateComplianceTemplateRequest": CreateComplianceTemplateRequest,
     "CreateCorporateActionSourceRequest": CreateCorporateActionSourceRequest,
@@ -4317,6 +4336,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfBlock": PagedResourceListOfBlock,
     "PagedResourceListOfCalendar": PagedResourceListOfCalendar,
     "PagedResourceListOfChartOfAccounts": PagedResourceListOfChartOfAccounts,
+    "PagedResourceListOfCheckDefinition": PagedResourceListOfCheckDefinition,
     "PagedResourceListOfCleardownModuleResponse": PagedResourceListOfCleardownModuleResponse,
     "PagedResourceListOfCleardownModuleRule": PagedResourceListOfCleardownModuleRule,
     "PagedResourceListOfClosedPeriod": PagedResourceListOfClosedPeriod,
@@ -4777,6 +4797,7 @@ let typeMap: {[index: string]: any} = {
     "UnitsRatio": UnitsRatio,
     "UpdateAmortisationRuleSetDetailsRequest": UpdateAmortisationRuleSetDetailsRequest,
     "UpdateCalendarRequest": UpdateCalendarRequest,
+    "UpdateCheckDefinitionRequest": UpdateCheckDefinitionRequest,
     "UpdateComplianceTemplateRequest": UpdateComplianceTemplateRequest,
     "UpdateCustomDataModelRequest": UpdateCustomDataModelRequest,
     "UpdateCustomEntityDefinitionRequest": UpdateCustomEntityDefinitionRequest,
