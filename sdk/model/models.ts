@@ -1143,6 +1143,7 @@ export * from './resourceListOfSideDefinition';
 export * from './resourceListOfString';
 export * from './resourceListOfTaxRuleSet';
 export * from './resourceListOfTransaction';
+export * from './resourceListOfTransactionSettlementInstruction';
 export * from './resourceListOfTransactionType';
 export * from './resourceListOfValueType';
 export * from './responseMetaData';
@@ -1198,6 +1199,7 @@ export * from './setShareClassInstrumentsRequest';
 export * from './setTransactionConfigurationAlias';
 export * from './setTransactionConfigurationSourceRequest';
 export * from './settlementCycle';
+export * from './settlementInstructionRequest';
 export * from './settlementSchedule';
 export * from './shareClassAmount';
 export * from './shareClassBreakdown';
@@ -1215,6 +1217,7 @@ export * from './simpleCashFlowLoanAllOf';
 export * from './simpleInstrument';
 export * from './simpleInstrumentAllOf';
 export * from './simpleRoundingConvention';
+export * from './singleValuationPointQueryParameters';
 export * from './sortOrder';
 export * from './specificHoldingPricingInfo';
 export * from './spinOffEvent';
@@ -1297,6 +1300,7 @@ export * from './transactionRequest';
 export * from './transactionRoles';
 export * from './transactionSetConfigurationData';
 export * from './transactionSetConfigurationDataRequest';
+export * from './transactionSettlementInstruction';
 export * from './transactionStatus';
 export * from './transactionTemplate';
 export * from './transactionTemplateRequest';
@@ -2615,6 +2619,7 @@ import { ResourceListOfSideDefinition } from './resourceListOfSideDefinition';
 import { ResourceListOfString } from './resourceListOfString';
 import { ResourceListOfTaxRuleSet } from './resourceListOfTaxRuleSet';
 import { ResourceListOfTransaction } from './resourceListOfTransaction';
+import { ResourceListOfTransactionSettlementInstruction } from './resourceListOfTransactionSettlementInstruction';
 import { ResourceListOfTransactionType } from './resourceListOfTransactionType';
 import { ResourceListOfValueType } from './resourceListOfValueType';
 import { ResponseMetaData } from './responseMetaData';
@@ -2670,6 +2675,7 @@ import { SetShareClassInstrumentsRequest } from './setShareClassInstrumentsReque
 import { SetTransactionConfigurationAlias } from './setTransactionConfigurationAlias';
 import { SetTransactionConfigurationSourceRequest } from './setTransactionConfigurationSourceRequest';
 import { SettlementCycle } from './settlementCycle';
+import { SettlementInstructionRequest } from './settlementInstructionRequest';
 import { SettlementSchedule } from './settlementSchedule';
 import { ShareClassAmount } from './shareClassAmount';
 import { ShareClassBreakdown } from './shareClassBreakdown';
@@ -2687,6 +2693,7 @@ import { SimpleCashFlowLoanAllOf } from './simpleCashFlowLoanAllOf';
 import { SimpleInstrument } from './simpleInstrument';
 import { SimpleInstrumentAllOf } from './simpleInstrumentAllOf';
 import { SimpleRoundingConvention } from './simpleRoundingConvention';
+import { SingleValuationPointQueryParameters } from './singleValuationPointQueryParameters';
 import { SortOrder } from './sortOrder';
 import { SpecificHoldingPricingInfo } from './specificHoldingPricingInfo';
 import { SpinOffEvent } from './spinOffEvent';
@@ -2769,6 +2776,7 @@ import { TransactionRequest } from './transactionRequest';
 import { TransactionRoles } from './transactionRoles';
 import { TransactionSetConfigurationData } from './transactionSetConfigurationData';
 import { TransactionSetConfigurationDataRequest } from './transactionSetConfigurationDataRequest';
+import { TransactionSettlementInstruction } from './transactionSettlementInstruction';
 import { TransactionStatus } from './transactionStatus';
 import { TransactionTemplate } from './transactionTemplate';
 import { TransactionTemplateRequest } from './transactionTemplateRequest';
@@ -4618,6 +4626,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfString": ResourceListOfString,
     "ResourceListOfTaxRuleSet": ResourceListOfTaxRuleSet,
     "ResourceListOfTransaction": ResourceListOfTransaction,
+    "ResourceListOfTransactionSettlementInstruction": ResourceListOfTransactionSettlementInstruction,
     "ResourceListOfTransactionType": ResourceListOfTransactionType,
     "ResourceListOfValueType": ResourceListOfValueType,
     "ResponseMetaData": ResponseMetaData,
@@ -4669,6 +4678,7 @@ let typeMap: {[index: string]: any} = {
     "SetTransactionConfigurationAlias": SetTransactionConfigurationAlias,
     "SetTransactionConfigurationSourceRequest": SetTransactionConfigurationSourceRequest,
     "SettlementCycle": SettlementCycle,
+    "SettlementInstructionRequest": SettlementInstructionRequest,
     "SettlementSchedule": SettlementSchedule,
     "ShareClassAmount": ShareClassAmount,
     "ShareClassBreakdown": ShareClassBreakdown,
@@ -4686,6 +4696,7 @@ let typeMap: {[index: string]: any} = {
     "SimpleInstrument": SimpleInstrument,
     "SimpleInstrumentAllOf": SimpleInstrumentAllOf,
     "SimpleRoundingConvention": SimpleRoundingConvention,
+    "SingleValuationPointQueryParameters": SingleValuationPointQueryParameters,
     "SpecificHoldingPricingInfo": SpecificHoldingPricingInfo,
     "SpinOffEvent": SpinOffEvent,
     "StagedModification": StagedModification,
@@ -4762,6 +4773,7 @@ let typeMap: {[index: string]: any} = {
     "TransactionRequest": TransactionRequest,
     "TransactionSetConfigurationData": TransactionSetConfigurationData,
     "TransactionSetConfigurationDataRequest": TransactionSetConfigurationDataRequest,
+    "TransactionSettlementInstruction": TransactionSettlementInstruction,
     "TransactionTemplate": TransactionTemplate,
     "TransactionTemplateRequest": TransactionTemplateRequest,
     "TransactionTemplateSpecification": TransactionTemplateSpecification,
