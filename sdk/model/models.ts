@@ -483,6 +483,8 @@ export * from './flexibleRepoCashFlowEvent';
 export * from './flexibleRepoCashFlowEventAllOf';
 export * from './flexibleRepoCollateralEvent';
 export * from './flexibleRepoCollateralEventAllOf';
+export * from './flexibleRepoFullClosureEvent';
+export * from './flexibleRepoFullClosureEventAllOf';
 export * from './flexibleRepoInterestPaymentEvent';
 export * from './flexibleRepoInterestPaymentEventAllOf';
 export * from './flexibleRepoPartialClosureEvent';
@@ -955,6 +957,7 @@ export * from './portfolioResultDataKeyRule';
 export * from './portfolioResultDataKeyRuleAllOf';
 export * from './portfolioReturnBreakdown';
 export * from './portfolioSearchResult';
+export * from './portfolioSettlementConfiguration';
 export * from './portfolioTradeTicket';
 export * from './portfolioType';
 export * from './portfolioWithoutHref';
@@ -1198,6 +1201,7 @@ export * from './setPersonPropertiesRequest';
 export * from './setShareClassInstrumentsRequest';
 export * from './setTransactionConfigurationAlias';
 export * from './setTransactionConfigurationSourceRequest';
+export * from './settlementConfigurationCategory';
 export * from './settlementCycle';
 export * from './settlementInstructionRequest';
 export * from './settlementSchedule';
@@ -1959,6 +1963,8 @@ import { FlexibleRepoCashFlowEvent } from './flexibleRepoCashFlowEvent';
 import { FlexibleRepoCashFlowEventAllOf } from './flexibleRepoCashFlowEventAllOf';
 import { FlexibleRepoCollateralEvent } from './flexibleRepoCollateralEvent';
 import { FlexibleRepoCollateralEventAllOf } from './flexibleRepoCollateralEventAllOf';
+import { FlexibleRepoFullClosureEvent } from './flexibleRepoFullClosureEvent';
+import { FlexibleRepoFullClosureEventAllOf } from './flexibleRepoFullClosureEventAllOf';
 import { FlexibleRepoInterestPaymentEvent } from './flexibleRepoInterestPaymentEvent';
 import { FlexibleRepoInterestPaymentEventAllOf } from './flexibleRepoInterestPaymentEventAllOf';
 import { FlexibleRepoPartialClosureEvent } from './flexibleRepoPartialClosureEvent';
@@ -2431,6 +2437,7 @@ import { PortfolioResultDataKeyRule } from './portfolioResultDataKeyRule';
 import { PortfolioResultDataKeyRuleAllOf } from './portfolioResultDataKeyRuleAllOf';
 import { PortfolioReturnBreakdown } from './portfolioReturnBreakdown';
 import { PortfolioSearchResult } from './portfolioSearchResult';
+import { PortfolioSettlementConfiguration } from './portfolioSettlementConfiguration';
 import { PortfolioTradeTicket } from './portfolioTradeTicket';
 import { PortfolioType } from './portfolioType';
 import { PortfolioWithoutHref } from './portfolioWithoutHref';
@@ -2674,6 +2681,7 @@ import { SetPersonPropertiesRequest } from './setPersonPropertiesRequest';
 import { SetShareClassInstrumentsRequest } from './setShareClassInstrumentsRequest';
 import { SetTransactionConfigurationAlias } from './setTransactionConfigurationAlias';
 import { SetTransactionConfigurationSourceRequest } from './setTransactionConfigurationSourceRequest';
+import { SettlementConfigurationCategory } from './settlementConfigurationCategory';
 import { SettlementCycle } from './settlementCycle';
 import { SettlementInstructionRequest } from './settlementInstructionRequest';
 import { SettlementSchedule } from './settlementSchedule';
@@ -3163,6 +3171,8 @@ let enumsMap: {[index: string]: any} = {
         "FlexibleRepoCashFlowEventAllOf.InstrumentEventTypeEnum": FlexibleRepoCashFlowEventAllOf.InstrumentEventTypeEnum,
         "FlexibleRepoCollateralEvent.InstrumentEventTypeEnum": FlexibleRepoCollateralEvent.InstrumentEventTypeEnum,
         "FlexibleRepoCollateralEventAllOf.InstrumentEventTypeEnum": FlexibleRepoCollateralEventAllOf.InstrumentEventTypeEnum,
+        "FlexibleRepoFullClosureEvent.InstrumentEventTypeEnum": FlexibleRepoFullClosureEvent.InstrumentEventTypeEnum,
+        "FlexibleRepoFullClosureEventAllOf.InstrumentEventTypeEnum": FlexibleRepoFullClosureEventAllOf.InstrumentEventTypeEnum,
         "FlexibleRepoInterestPaymentEvent.InstrumentEventTypeEnum": FlexibleRepoInterestPaymentEvent.InstrumentEventTypeEnum,
         "FlexibleRepoInterestPaymentEventAllOf.InstrumentEventTypeEnum": FlexibleRepoInterestPaymentEventAllOf.InstrumentEventTypeEnum,
         "FlexibleRepoPartialClosureEvent.InstrumentEventTypeEnum": FlexibleRepoPartialClosureEvent.InstrumentEventTypeEnum,
@@ -3992,6 +4002,8 @@ let typeMap: {[index: string]: any} = {
     "FlexibleRepoCashFlowEventAllOf": FlexibleRepoCashFlowEventAllOf,
     "FlexibleRepoCollateralEvent": FlexibleRepoCollateralEvent,
     "FlexibleRepoCollateralEventAllOf": FlexibleRepoCollateralEventAllOf,
+    "FlexibleRepoFullClosureEvent": FlexibleRepoFullClosureEvent,
+    "FlexibleRepoFullClosureEventAllOf": FlexibleRepoFullClosureEventAllOf,
     "FlexibleRepoInterestPaymentEvent": FlexibleRepoInterestPaymentEvent,
     "FlexibleRepoInterestPaymentEventAllOf": FlexibleRepoInterestPaymentEventAllOf,
     "FlexibleRepoPartialClosureEvent": FlexibleRepoPartialClosureEvent,
@@ -4449,6 +4461,7 @@ let typeMap: {[index: string]: any} = {
     "PortfolioResultDataKeyRuleAllOf": PortfolioResultDataKeyRuleAllOf,
     "PortfolioReturnBreakdown": PortfolioReturnBreakdown,
     "PortfolioSearchResult": PortfolioSearchResult,
+    "PortfolioSettlementConfiguration": PortfolioSettlementConfiguration,
     "PortfolioTradeTicket": PortfolioTradeTicket,
     "PortfolioWithoutHref": PortfolioWithoutHref,
     "PortfoliosReconciliationRequest": PortfoliosReconciliationRequest,
@@ -4677,6 +4690,7 @@ let typeMap: {[index: string]: any} = {
     "SetShareClassInstrumentsRequest": SetShareClassInstrumentsRequest,
     "SetTransactionConfigurationAlias": SetTransactionConfigurationAlias,
     "SetTransactionConfigurationSourceRequest": SetTransactionConfigurationSourceRequest,
+    "SettlementConfigurationCategory": SettlementConfigurationCategory,
     "SettlementCycle": SettlementCycle,
     "SettlementInstructionRequest": SettlementInstructionRequest,
     "SettlementSchedule": SettlementSchedule,
