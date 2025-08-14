@@ -517,6 +517,8 @@ export * from './fundRequest';
 export * from './fundShareClass';
 export * from './fundShareClassAllOf';
 export * from './fundValuationPointData';
+export * from './fundValuationRequest';
+export * from './fundValuationSchedule';
 export * from './fundingLeg';
 export * from './fundingLegAllOf';
 export * from './fundingLegOptions';
@@ -1424,6 +1426,8 @@ export * from './user';
 export * from './valuationPointDataQueryParameters';
 export * from './valuationPointDataRequest';
 export * from './valuationPointDataResponse';
+export * from './valuationPointFundCalendarEntry';
+export * from './valuationPointFundCalendarEntryAllOf';
 export * from './valuationPointOverview';
 export * from './valuationPointResourceListOfAccountedTransaction';
 export * from './valuationPointResourceListOfFundJournalEntryLine';
@@ -1997,6 +2001,8 @@ import { FundRequest } from './fundRequest';
 import { FundShareClass } from './fundShareClass';
 import { FundShareClassAllOf } from './fundShareClassAllOf';
 import { FundValuationPointData } from './fundValuationPointData';
+import { FundValuationRequest } from './fundValuationRequest';
+import { FundValuationSchedule } from './fundValuationSchedule';
 import { FundingLeg } from './fundingLeg';
 import { FundingLegAllOf } from './fundingLegAllOf';
 import { FundingLegOptions } from './fundingLegOptions';
@@ -2904,6 +2910,8 @@ import { User } from './user';
 import { ValuationPointDataQueryParameters } from './valuationPointDataQueryParameters';
 import { ValuationPointDataRequest } from './valuationPointDataRequest';
 import { ValuationPointDataResponse } from './valuationPointDataResponse';
+import { ValuationPointFundCalendarEntry } from './valuationPointFundCalendarEntry';
+import { ValuationPointFundCalendarEntryAllOf } from './valuationPointFundCalendarEntryAllOf';
 import { ValuationPointOverview } from './valuationPointOverview';
 import { ValuationPointResourceListOfAccountedTransaction } from './valuationPointResourceListOfAccountedTransaction';
 import { ValuationPointResourceListOfFundJournalEntryLine } from './valuationPointResourceListOfFundJournalEntryLine';
@@ -3524,6 +3532,8 @@ let enumsMap: {[index: string]: any} = {
         "UpdateDepositAmountEventAllOf.InstrumentEventTypeEnum": UpdateDepositAmountEventAllOf.InstrumentEventTypeEnum,
         "UpsertReferencePortfolioConstituentsRequest.WeightTypeEnum": UpsertReferencePortfolioConstituentsRequest.WeightTypeEnum,
         "UpsertReferencePortfolioConstituentsRequest.PeriodTypeEnum": UpsertReferencePortfolioConstituentsRequest.PeriodTypeEnum,
+        "ValuationPointFundCalendarEntry.EntryTypeEnum": ValuationPointFundCalendarEntry.EntryTypeEnum,
+        "ValuationPointFundCalendarEntryAllOf.EntryTypeEnum": ValuationPointFundCalendarEntryAllOf.EntryTypeEnum,
         "ValueType": ValueType,
         "VendorDependency.DependencyTypeEnum": VendorDependency.DependencyTypeEnum,
         "VendorDependencyAllOf.DependencyTypeEnum": VendorDependencyAllOf.DependencyTypeEnum,
@@ -4035,6 +4045,8 @@ let typeMap: {[index: string]: any} = {
     "FundShareClass": FundShareClass,
     "FundShareClassAllOf": FundShareClassAllOf,
     "FundValuationPointData": FundValuationPointData,
+    "FundValuationRequest": FundValuationRequest,
+    "FundValuationSchedule": FundValuationSchedule,
     "FundingLeg": FundingLeg,
     "FundingLegAllOf": FundingLegAllOf,
     "FundingLegOptions": FundingLegOptions,
@@ -4904,6 +4916,8 @@ let typeMap: {[index: string]: any} = {
     "ValuationPointDataQueryParameters": ValuationPointDataQueryParameters,
     "ValuationPointDataRequest": ValuationPointDataRequest,
     "ValuationPointDataResponse": ValuationPointDataResponse,
+    "ValuationPointFundCalendarEntry": ValuationPointFundCalendarEntry,
+    "ValuationPointFundCalendarEntryAllOf": ValuationPointFundCalendarEntryAllOf,
     "ValuationPointOverview": ValuationPointOverview,
     "ValuationPointResourceListOfAccountedTransaction": ValuationPointResourceListOfAccountedTransaction,
     "ValuationPointResourceListOfFundJournalEntryLine": ValuationPointResourceListOfFundJournalEntryLine,
