@@ -1426,8 +1426,6 @@ export * from './user';
 export * from './valuationPointDataQueryParameters';
 export * from './valuationPointDataRequest';
 export * from './valuationPointDataResponse';
-export * from './valuationPointFundCalendarEntry';
-export * from './valuationPointFundCalendarEntryAllOf';
 export * from './valuationPointOverview';
 export * from './valuationPointResourceListOfAccountedTransaction';
 export * from './valuationPointResourceListOfFundJournalEntryLine';
@@ -2910,8 +2908,6 @@ import { User } from './user';
 import { ValuationPointDataQueryParameters } from './valuationPointDataQueryParameters';
 import { ValuationPointDataRequest } from './valuationPointDataRequest';
 import { ValuationPointDataResponse } from './valuationPointDataResponse';
-import { ValuationPointFundCalendarEntry } from './valuationPointFundCalendarEntry';
-import { ValuationPointFundCalendarEntryAllOf } from './valuationPointFundCalendarEntryAllOf';
 import { ValuationPointOverview } from './valuationPointOverview';
 import { ValuationPointResourceListOfAccountedTransaction } from './valuationPointResourceListOfAccountedTransaction';
 import { ValuationPointResourceListOfFundJournalEntryLine } from './valuationPointResourceListOfFundJournalEntryLine';
@@ -3532,8 +3528,6 @@ let enumsMap: {[index: string]: any} = {
         "UpdateDepositAmountEventAllOf.InstrumentEventTypeEnum": UpdateDepositAmountEventAllOf.InstrumentEventTypeEnum,
         "UpsertReferencePortfolioConstituentsRequest.WeightTypeEnum": UpsertReferencePortfolioConstituentsRequest.WeightTypeEnum,
         "UpsertReferencePortfolioConstituentsRequest.PeriodTypeEnum": UpsertReferencePortfolioConstituentsRequest.PeriodTypeEnum,
-        "ValuationPointFundCalendarEntry.EntryTypeEnum": ValuationPointFundCalendarEntry.EntryTypeEnum,
-        "ValuationPointFundCalendarEntryAllOf.EntryTypeEnum": ValuationPointFundCalendarEntryAllOf.EntryTypeEnum,
         "ValueType": ValueType,
         "VendorDependency.DependencyTypeEnum": VendorDependency.DependencyTypeEnum,
         "VendorDependencyAllOf.DependencyTypeEnum": VendorDependencyAllOf.DependencyTypeEnum,
@@ -4916,8 +4910,6 @@ let typeMap: {[index: string]: any} = {
     "ValuationPointDataQueryParameters": ValuationPointDataQueryParameters,
     "ValuationPointDataRequest": ValuationPointDataRequest,
     "ValuationPointDataResponse": ValuationPointDataResponse,
-    "ValuationPointFundCalendarEntry": ValuationPointFundCalendarEntry,
-    "ValuationPointFundCalendarEntryAllOf": ValuationPointFundCalendarEntryAllOf,
     "ValuationPointOverview": ValuationPointOverview,
     "ValuationPointResourceListOfAccountedTransaction": ValuationPointResourceListOfAccountedTransaction,
     "ValuationPointResourceListOfFundJournalEntryLine": ValuationPointResourceListOfFundJournalEntryLine,
