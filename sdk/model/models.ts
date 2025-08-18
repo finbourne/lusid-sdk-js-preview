@@ -780,6 +780,7 @@ export * from './modelOptionsType';
 export * from './modelSelection';
 export * from './moveOrdersToDifferentBlocksRequest';
 export * from './movedOrderToDifferentBlockResponse';
+export * from './movementSettlementSummary';
 export * from './movementType';
 export * from './multiCurrencyAmounts';
 export * from './navTypeDefinition';
@@ -1386,6 +1387,7 @@ export * from './upsertCustomEntitiesResponse';
 export * from './upsertCustomEntityAccessMetadataRequest';
 export * from './upsertDialectRequest';
 export * from './upsertFlowConventionsRequest';
+export * from './upsertFundBookmarkRequest';
 export * from './upsertIndexConventionRequest';
 export * from './upsertInstrumentEventRequest';
 export * from './upsertInstrumentEventsResponse';
@@ -2262,6 +2264,7 @@ import { ModelOptionsType } from './modelOptionsType';
 import { ModelSelection } from './modelSelection';
 import { MoveOrdersToDifferentBlocksRequest } from './moveOrdersToDifferentBlocksRequest';
 import { MovedOrderToDifferentBlockResponse } from './movedOrderToDifferentBlockResponse';
+import { MovementSettlementSummary } from './movementSettlementSummary';
 import { MovementType } from './movementType';
 import { MultiCurrencyAmounts } from './multiCurrencyAmounts';
 import { NavTypeDefinition } from './navTypeDefinition';
@@ -2868,6 +2871,7 @@ import { UpsertCustomEntitiesResponse } from './upsertCustomEntitiesResponse';
 import { UpsertCustomEntityAccessMetadataRequest } from './upsertCustomEntityAccessMetadataRequest';
 import { UpsertDialectRequest } from './upsertDialectRequest';
 import { UpsertFlowConventionsRequest } from './upsertFlowConventionsRequest';
+import { UpsertFundBookmarkRequest } from './upsertFundBookmarkRequest';
 import { UpsertIndexConventionRequest } from './upsertIndexConventionRequest';
 import { UpsertInstrumentEventRequest } from './upsertInstrumentEventRequest';
 import { UpsertInstrumentEventsResponse } from './upsertInstrumentEventsResponse';
@@ -4295,6 +4299,7 @@ let typeMap: {[index: string]: any} = {
     "ModelSelection": ModelSelection,
     "MoveOrdersToDifferentBlocksRequest": MoveOrdersToDifferentBlocksRequest,
     "MovedOrderToDifferentBlockResponse": MovedOrderToDifferentBlockResponse,
+    "MovementSettlementSummary": MovementSettlementSummary,
     "MultiCurrencyAmounts": MultiCurrencyAmounts,
     "NavTypeDefinition": NavTypeDefinition,
     "NewInstrument": NewInstrument,
@@ -4870,6 +4875,7 @@ let typeMap: {[index: string]: any} = {
     "UpsertCustomEntityAccessMetadataRequest": UpsertCustomEntityAccessMetadataRequest,
     "UpsertDialectRequest": UpsertDialectRequest,
     "UpsertFlowConventionsRequest": UpsertFlowConventionsRequest,
+    "UpsertFundBookmarkRequest": UpsertFundBookmarkRequest,
     "UpsertIndexConventionRequest": UpsertIndexConventionRequest,
     "UpsertInstrumentEventRequest": UpsertInstrumentEventRequest,
     "UpsertInstrumentEventsResponse": UpsertInstrumentEventsResponse,
