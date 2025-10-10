@@ -99,6 +99,7 @@ export * from './batchUpsertPortfolioAccessMetadataResponse';
 export * from './batchUpsertPortfolioAccessMetadataResponseItem';
 export * from './batchUpsertPortfolioTransactionsResponse';
 export * from './batchUpsertPropertyDefinitionPropertiesResponse';
+export * from './batchUpsertTransactionSettlementInstructionResponse';
 export * from './block';
 export * from './blockAndOrderIdRequest';
 export * from './blockAndOrders';
@@ -155,6 +156,8 @@ export * from './capFloor';
 export * from './capFloorAllOf';
 export * from './capitalDistributionEvent';
 export * from './capitalDistributionEventAllOf';
+export * from './capletFloorletCashFlowEvent';
+export * from './capletFloorletCashFlowEventAllOf';
 export * from './cash';
 export * from './cashAllOf';
 export * from './cashAndSecurityOfferElection';
@@ -342,6 +345,7 @@ export * from './customEntityEntity';
 export * from './customEntityField';
 export * from './customEntityFieldDefinition';
 export * from './customEntityId';
+export * from './customEntityProperties';
 export * from './customEntityRequest';
 export * from './customEntityResponse';
 export * from './customEntityType';
@@ -780,6 +784,7 @@ export * from './modelOptionsType';
 export * from './modelSelection';
 export * from './moveOrdersToDifferentBlocksRequest';
 export * from './movedOrderToDifferentBlockResponse';
+export * from './movementSettlementSummary';
 export * from './movementType';
 export * from './multiCurrencyAmounts';
 export * from './navTypeDefinition';
@@ -973,12 +978,14 @@ export * from './postingModuleRule';
 export * from './postingModuleRulesUpdatedResponse';
 export * from './preTradeConfiguration';
 export * from './premium';
+export * from './previousFundCalendarEntry';
 export * from './previousFundValuationPointData';
 export * from './previousNAV';
 export * from './previousShareClassBreakdown';
 export * from './pricingContext';
 export * from './pricingModel';
 export * from './pricingOptions';
+export * from './primarySchedule';
 export * from './processedCommand';
 export * from './property';
 export * from './propertyDefinition';
@@ -1205,7 +1212,10 @@ export * from './setTransactionConfigurationAlias';
 export * from './setTransactionConfigurationSourceRequest';
 export * from './settlementConfigurationCategory';
 export * from './settlementCycle';
+export * from './settlementInLieu';
+export * from './settlementInstructionQuery';
 export * from './settlementInstructionRequest';
+export * from './settlementInstructionWithTransaction';
 export * from './settlementSchedule';
 export * from './shareClassAmount';
 export * from './shareClassBreakdown';
@@ -1292,6 +1302,7 @@ export * from './transactionCurrencyAndAmount';
 export * from './transactionDateWindows';
 export * from './transactionDiagnostics';
 export * from './transactionFieldMap';
+export * from './transactionMatchingAlternativeId';
 export * from './transactionPrice';
 export * from './transactionPriceAndType';
 export * from './transactionPriceType';
@@ -1306,7 +1317,10 @@ export * from './transactionRequest';
 export * from './transactionRoles';
 export * from './transactionSetConfigurationData';
 export * from './transactionSetConfigurationDataRequest';
+export * from './transactionSettlementBucket';
 export * from './transactionSettlementInstruction';
+export * from './transactionSettlementMovement';
+export * from './transactionSettlementStatus';
 export * from './transactionStatus';
 export * from './transactionTemplate';
 export * from './transactionTemplateRequest';
@@ -1386,6 +1400,7 @@ export * from './upsertCustomEntitiesResponse';
 export * from './upsertCustomEntityAccessMetadataRequest';
 export * from './upsertDialectRequest';
 export * from './upsertFlowConventionsRequest';
+export * from './upsertFundBookmarkRequest';
 export * from './upsertIndexConventionRequest';
 export * from './upsertInstrumentEventRequest';
 export * from './upsertInstrumentEventsResponse';
@@ -1449,6 +1464,7 @@ export * from './versionedResourceListOfOutputTransaction';
 export * from './versionedResourceListOfPortfolioHolding';
 export * from './versionedResourceListOfTransaction';
 export * from './versionedResourceListOfTrialBalance';
+export * from './versionedResourceListWithPostBodiesOfSettlementInstructionWithTransactionToSettlementInstructionQuery';
 export * from './versionedResourceListWithWarningsOfPortfolioHolding';
 export * from './virtualDocument';
 export * from './virtualDocumentRow';
@@ -1581,6 +1597,7 @@ import { BatchUpsertPortfolioAccessMetadataResponse } from './batchUpsertPortfol
 import { BatchUpsertPortfolioAccessMetadataResponseItem } from './batchUpsertPortfolioAccessMetadataResponseItem';
 import { BatchUpsertPortfolioTransactionsResponse } from './batchUpsertPortfolioTransactionsResponse';
 import { BatchUpsertPropertyDefinitionPropertiesResponse } from './batchUpsertPropertyDefinitionPropertiesResponse';
+import { BatchUpsertTransactionSettlementInstructionResponse } from './batchUpsertTransactionSettlementInstructionResponse';
 import { Block } from './block';
 import { BlockAndOrderIdRequest } from './blockAndOrderIdRequest';
 import { BlockAndOrders } from './blockAndOrders';
@@ -1637,6 +1654,8 @@ import { CapFloor } from './capFloor';
 import { CapFloorAllOf } from './capFloorAllOf';
 import { CapitalDistributionEvent } from './capitalDistributionEvent';
 import { CapitalDistributionEventAllOf } from './capitalDistributionEventAllOf';
+import { CapletFloorletCashFlowEvent } from './capletFloorletCashFlowEvent';
+import { CapletFloorletCashFlowEventAllOf } from './capletFloorletCashFlowEventAllOf';
 import { Cash } from './cash';
 import { CashAllOf } from './cashAllOf';
 import { CashAndSecurityOfferElection } from './cashAndSecurityOfferElection';
@@ -1824,6 +1843,7 @@ import { CustomEntityEntity } from './customEntityEntity';
 import { CustomEntityField } from './customEntityField';
 import { CustomEntityFieldDefinition } from './customEntityFieldDefinition';
 import { CustomEntityId } from './customEntityId';
+import { CustomEntityProperties } from './customEntityProperties';
 import { CustomEntityRequest } from './customEntityRequest';
 import { CustomEntityResponse } from './customEntityResponse';
 import { CustomEntityType } from './customEntityType';
@@ -2262,6 +2282,7 @@ import { ModelOptionsType } from './modelOptionsType';
 import { ModelSelection } from './modelSelection';
 import { MoveOrdersToDifferentBlocksRequest } from './moveOrdersToDifferentBlocksRequest';
 import { MovedOrderToDifferentBlockResponse } from './movedOrderToDifferentBlockResponse';
+import { MovementSettlementSummary } from './movementSettlementSummary';
 import { MovementType } from './movementType';
 import { MultiCurrencyAmounts } from './multiCurrencyAmounts';
 import { NavTypeDefinition } from './navTypeDefinition';
@@ -2455,12 +2476,14 @@ import { PostingModuleRule } from './postingModuleRule';
 import { PostingModuleRulesUpdatedResponse } from './postingModuleRulesUpdatedResponse';
 import { PreTradeConfiguration } from './preTradeConfiguration';
 import { Premium } from './premium';
+import { PreviousFundCalendarEntry } from './previousFundCalendarEntry';
 import { PreviousFundValuationPointData } from './previousFundValuationPointData';
 import { PreviousNAV } from './previousNAV';
 import { PreviousShareClassBreakdown } from './previousShareClassBreakdown';
 import { PricingContext } from './pricingContext';
 import { PricingModel } from './pricingModel';
 import { PricingOptions } from './pricingOptions';
+import { PrimarySchedule } from './primarySchedule';
 import { ProcessedCommand } from './processedCommand';
 import { Property } from './property';
 import { PropertyDefinition } from './propertyDefinition';
@@ -2687,7 +2710,10 @@ import { SetTransactionConfigurationAlias } from './setTransactionConfigurationA
 import { SetTransactionConfigurationSourceRequest } from './setTransactionConfigurationSourceRequest';
 import { SettlementConfigurationCategory } from './settlementConfigurationCategory';
 import { SettlementCycle } from './settlementCycle';
+import { SettlementInLieu } from './settlementInLieu';
+import { SettlementInstructionQuery } from './settlementInstructionQuery';
 import { SettlementInstructionRequest } from './settlementInstructionRequest';
+import { SettlementInstructionWithTransaction } from './settlementInstructionWithTransaction';
 import { SettlementSchedule } from './settlementSchedule';
 import { ShareClassAmount } from './shareClassAmount';
 import { ShareClassBreakdown } from './shareClassBreakdown';
@@ -2774,6 +2800,7 @@ import { TransactionCurrencyAndAmount } from './transactionCurrencyAndAmount';
 import { TransactionDateWindows } from './transactionDateWindows';
 import { TransactionDiagnostics } from './transactionDiagnostics';
 import { TransactionFieldMap } from './transactionFieldMap';
+import { TransactionMatchingAlternativeId } from './transactionMatchingAlternativeId';
 import { TransactionPrice } from './transactionPrice';
 import { TransactionPriceAndType } from './transactionPriceAndType';
 import { TransactionPriceType } from './transactionPriceType';
@@ -2788,7 +2815,10 @@ import { TransactionRequest } from './transactionRequest';
 import { TransactionRoles } from './transactionRoles';
 import { TransactionSetConfigurationData } from './transactionSetConfigurationData';
 import { TransactionSetConfigurationDataRequest } from './transactionSetConfigurationDataRequest';
+import { TransactionSettlementBucket } from './transactionSettlementBucket';
 import { TransactionSettlementInstruction } from './transactionSettlementInstruction';
+import { TransactionSettlementMovement } from './transactionSettlementMovement';
+import { TransactionSettlementStatus } from './transactionSettlementStatus';
 import { TransactionStatus } from './transactionStatus';
 import { TransactionTemplate } from './transactionTemplate';
 import { TransactionTemplateRequest } from './transactionTemplateRequest';
@@ -2868,6 +2898,7 @@ import { UpsertCustomEntitiesResponse } from './upsertCustomEntitiesResponse';
 import { UpsertCustomEntityAccessMetadataRequest } from './upsertCustomEntityAccessMetadataRequest';
 import { UpsertDialectRequest } from './upsertDialectRequest';
 import { UpsertFlowConventionsRequest } from './upsertFlowConventionsRequest';
+import { UpsertFundBookmarkRequest } from './upsertFundBookmarkRequest';
 import { UpsertIndexConventionRequest } from './upsertIndexConventionRequest';
 import { UpsertInstrumentEventRequest } from './upsertInstrumentEventRequest';
 import { UpsertInstrumentEventsResponse } from './upsertInstrumentEventsResponse';
@@ -2931,6 +2962,7 @@ import { VersionedResourceListOfOutputTransaction } from './versionedResourceLis
 import { VersionedResourceListOfPortfolioHolding } from './versionedResourceListOfPortfolioHolding';
 import { VersionedResourceListOfTransaction } from './versionedResourceListOfTransaction';
 import { VersionedResourceListOfTrialBalance } from './versionedResourceListOfTrialBalance';
+import { VersionedResourceListWithPostBodiesOfSettlementInstructionWithTransactionToSettlementInstructionQuery } from './versionedResourceListWithPostBodiesOfSettlementInstructionWithTransactionToSettlementInstructionQuery';
 import { VersionedResourceListWithWarningsOfPortfolioHolding } from './versionedResourceListWithWarningsOfPortfolioHolding';
 import { VirtualDocument } from './virtualDocument';
 import { VirtualDocumentRow } from './virtualDocumentRow';
@@ -3027,6 +3059,8 @@ let enumsMap: {[index: string]: any} = {
         "CapFloorAllOf.InstrumentTypeEnum": CapFloorAllOf.InstrumentTypeEnum,
         "CapitalDistributionEvent.InstrumentEventTypeEnum": CapitalDistributionEvent.InstrumentEventTypeEnum,
         "CapitalDistributionEventAllOf.InstrumentEventTypeEnum": CapitalDistributionEventAllOf.InstrumentEventTypeEnum,
+        "CapletFloorletCashFlowEvent.InstrumentEventTypeEnum": CapletFloorletCashFlowEvent.InstrumentEventTypeEnum,
+        "CapletFloorletCashFlowEventAllOf.InstrumentEventTypeEnum": CapletFloorletCashFlowEventAllOf.InstrumentEventTypeEnum,
         "Cash.InstrumentTypeEnum": Cash.InstrumentTypeEnum,
         "CashAllOf.InstrumentTypeEnum": CashAllOf.InstrumentTypeEnum,
         "CashDependency.DependencyTypeEnum": CashDependency.DependencyTypeEnum,
@@ -3633,6 +3667,7 @@ let typeMap: {[index: string]: any} = {
     "BatchUpsertPortfolioAccessMetadataResponseItem": BatchUpsertPortfolioAccessMetadataResponseItem,
     "BatchUpsertPortfolioTransactionsResponse": BatchUpsertPortfolioTransactionsResponse,
     "BatchUpsertPropertyDefinitionPropertiesResponse": BatchUpsertPropertyDefinitionPropertiesResponse,
+    "BatchUpsertTransactionSettlementInstructionResponse": BatchUpsertTransactionSettlementInstructionResponse,
     "Block": Block,
     "BlockAndOrderIdRequest": BlockAndOrderIdRequest,
     "BlockAndOrders": BlockAndOrders,
@@ -3689,6 +3724,8 @@ let typeMap: {[index: string]: any} = {
     "CapFloorAllOf": CapFloorAllOf,
     "CapitalDistributionEvent": CapitalDistributionEvent,
     "CapitalDistributionEventAllOf": CapitalDistributionEventAllOf,
+    "CapletFloorletCashFlowEvent": CapletFloorletCashFlowEvent,
+    "CapletFloorletCashFlowEventAllOf": CapletFloorletCashFlowEventAllOf,
     "Cash": Cash,
     "CashAllOf": CashAllOf,
     "CashAndSecurityOfferElection": CashAndSecurityOfferElection,
@@ -3871,6 +3908,7 @@ let typeMap: {[index: string]: any} = {
     "CustomEntityField": CustomEntityField,
     "CustomEntityFieldDefinition": CustomEntityFieldDefinition,
     "CustomEntityId": CustomEntityId,
+    "CustomEntityProperties": CustomEntityProperties,
     "CustomEntityRequest": CustomEntityRequest,
     "CustomEntityResponse": CustomEntityResponse,
     "CustomEntityType": CustomEntityType,
@@ -4295,6 +4333,7 @@ let typeMap: {[index: string]: any} = {
     "ModelSelection": ModelSelection,
     "MoveOrdersToDifferentBlocksRequest": MoveOrdersToDifferentBlocksRequest,
     "MovedOrderToDifferentBlockResponse": MovedOrderToDifferentBlockResponse,
+    "MovementSettlementSummary": MovementSettlementSummary,
     "MultiCurrencyAmounts": MultiCurrencyAmounts,
     "NavTypeDefinition": NavTypeDefinition,
     "NewInstrument": NewInstrument,
@@ -4480,11 +4519,13 @@ let typeMap: {[index: string]: any} = {
     "PostingModuleRulesUpdatedResponse": PostingModuleRulesUpdatedResponse,
     "PreTradeConfiguration": PreTradeConfiguration,
     "Premium": Premium,
+    "PreviousFundCalendarEntry": PreviousFundCalendarEntry,
     "PreviousFundValuationPointData": PreviousFundValuationPointData,
     "PreviousNAV": PreviousNAV,
     "PreviousShareClassBreakdown": PreviousShareClassBreakdown,
     "PricingContext": PricingContext,
     "PricingOptions": PricingOptions,
+    "PrimarySchedule": PrimarySchedule,
     "ProcessedCommand": ProcessedCommand,
     "Property": Property,
     "PropertyDefinition": PropertyDefinition,
@@ -4698,7 +4739,10 @@ let typeMap: {[index: string]: any} = {
     "SetTransactionConfigurationSourceRequest": SetTransactionConfigurationSourceRequest,
     "SettlementConfigurationCategory": SettlementConfigurationCategory,
     "SettlementCycle": SettlementCycle,
+    "SettlementInLieu": SettlementInLieu,
+    "SettlementInstructionQuery": SettlementInstructionQuery,
     "SettlementInstructionRequest": SettlementInstructionRequest,
+    "SettlementInstructionWithTransaction": SettlementInstructionWithTransaction,
     "SettlementSchedule": SettlementSchedule,
     "ShareClassAmount": ShareClassAmount,
     "ShareClassBreakdown": ShareClassBreakdown,
@@ -4782,6 +4826,7 @@ let typeMap: {[index: string]: any} = {
     "TransactionDateWindows": TransactionDateWindows,
     "TransactionDiagnostics": TransactionDiagnostics,
     "TransactionFieldMap": TransactionFieldMap,
+    "TransactionMatchingAlternativeId": TransactionMatchingAlternativeId,
     "TransactionPrice": TransactionPrice,
     "TransactionPriceAndType": TransactionPriceAndType,
     "TransactionPropertyMap": TransactionPropertyMap,
@@ -4793,7 +4838,10 @@ let typeMap: {[index: string]: any} = {
     "TransactionRequest": TransactionRequest,
     "TransactionSetConfigurationData": TransactionSetConfigurationData,
     "TransactionSetConfigurationDataRequest": TransactionSetConfigurationDataRequest,
+    "TransactionSettlementBucket": TransactionSettlementBucket,
     "TransactionSettlementInstruction": TransactionSettlementInstruction,
+    "TransactionSettlementMovement": TransactionSettlementMovement,
+    "TransactionSettlementStatus": TransactionSettlementStatus,
     "TransactionTemplate": TransactionTemplate,
     "TransactionTemplateRequest": TransactionTemplateRequest,
     "TransactionTemplateSpecification": TransactionTemplateSpecification,
@@ -4870,6 +4918,7 @@ let typeMap: {[index: string]: any} = {
     "UpsertCustomEntityAccessMetadataRequest": UpsertCustomEntityAccessMetadataRequest,
     "UpsertDialectRequest": UpsertDialectRequest,
     "UpsertFlowConventionsRequest": UpsertFlowConventionsRequest,
+    "UpsertFundBookmarkRequest": UpsertFundBookmarkRequest,
     "UpsertIndexConventionRequest": UpsertIndexConventionRequest,
     "UpsertInstrumentEventRequest": UpsertInstrumentEventRequest,
     "UpsertInstrumentEventsResponse": UpsertInstrumentEventsResponse,
@@ -4931,6 +4980,7 @@ let typeMap: {[index: string]: any} = {
     "VersionedResourceListOfPortfolioHolding": VersionedResourceListOfPortfolioHolding,
     "VersionedResourceListOfTransaction": VersionedResourceListOfTransaction,
     "VersionedResourceListOfTrialBalance": VersionedResourceListOfTrialBalance,
+    "VersionedResourceListWithPostBodiesOfSettlementInstructionWithTransactionToSettlementInstructionQuery": VersionedResourceListWithPostBodiesOfSettlementInstructionWithTransactionToSettlementInstructionQuery,
     "VersionedResourceListWithWarningsOfPortfolioHolding": VersionedResourceListWithWarningsOfPortfolioHolding,
     "VirtualDocument": VirtualDocument,
     "VirtualDocumentRow": VirtualDocumentRow,

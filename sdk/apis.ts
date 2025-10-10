@@ -30,8 +30,8 @@ import {FundConfigurationApi} from './api/fundConfigurationApi';
 import {FundsApi} from './api/fundsApi';
 import {GroupReconciliationsApi} from './api/groupReconciliationsApi';
 import {IdentifierDefinitionsApi} from './api/identifierDefinitionsApi';
-import {InstrumentEventTypesApi} from './api/instrumentEventTypesApi';
 import {InstrumentEventsApi} from './api/instrumentEventsApi';
+import {InstrumentEventTypesApi} from './api/instrumentEventTypesApi';
 import {InstrumentsApi} from './api/instrumentsApi';
 import {InvestmentAccountsApi} from './api/investmentAccountsApi';
 import {InvestorRecordsApi} from './api/investorRecordsApi';
@@ -53,8 +53,8 @@ import {QuotesApi} from './api/quotesApi';
 import {ReconciliationsApi} from './api/reconciliationsApi';
 import {ReferenceListsApi} from './api/referenceListsApi';
 import {ReferencePortfolioApi} from './api/referencePortfolioApi';
-import {RelationDefinitionsApi} from './api/relationDefinitionsApi';
 import {RelationalDatasetDefinitionApi} from './api/relationalDatasetDefinitionApi';
+import {RelationDefinitionsApi} from './api/relationDefinitionsApi';
 import {RelationsApi} from './api/relationsApi';
 import {RelationshipDefinitionsApi} from './api/relationshipDefinitionsApi';
 import {RelationshipsApi} from './api/relationshipsApi';
@@ -110,8 +110,8 @@ export class Api {
     public funds:  FundsApi
     public groupReconciliations:  GroupReconciliationsApi
     public identifierDefinitions:  IdentifierDefinitionsApi
-    public instrumentEventTypes:  InstrumentEventTypesApi
     public instrumentEvents:  InstrumentEventsApi
+    public instrumentEventTypes:  InstrumentEventTypesApi
     public instruments:  InstrumentsApi
     public investmentAccounts:  InvestmentAccountsApi
     public investorRecords:  InvestorRecordsApi
@@ -133,8 +133,8 @@ export class Api {
     public reconciliations:  ReconciliationsApi
     public referenceLists:  ReferenceListsApi
     public referencePortfolio:  ReferencePortfolioApi
-    public relationDefinitions:  RelationDefinitionsApi
     public relationalDatasetDefinition:  RelationalDatasetDefinitionApi
+    public relationDefinitions:  RelationDefinitionsApi
     public relations:  RelationsApi
     public relationshipDefinitions:  RelationshipDefinitionsApi
     public relationships:  RelationshipsApi
