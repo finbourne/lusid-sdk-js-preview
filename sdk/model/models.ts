@@ -356,6 +356,7 @@ export * from './dataMapKey';
 export * from './dataMapping';
 export * from './dataModelMembership';
 export * from './dataModelSummary';
+export * from './dataQualityCheckResult';
 export * from './dataScope';
 export * from './dataType';
 export * from './dataTypeEntity';
@@ -739,6 +740,8 @@ export * from './loanPeriod';
 export * from './loanPrincipalRepaymentEvent';
 export * from './loanPrincipalRepaymentEventAllOf';
 export * from './lockPeriodDiaryEntryRequest';
+export * from './lusidEntityDataset';
+export * from './lusidEntityResult';
 export * from './lusidInstrument';
 export * from './lusidProblemDetails';
 export * from './lusidTradeTicket';
@@ -1193,6 +1196,8 @@ export * from './roundingConfiguration';
 export * from './roundingConfigurationComponent';
 export * from './roundingConvention';
 export * from './rulesInterval';
+export * from './runCheckRequest';
+export * from './runCheckResponse';
 export * from './scalingMethodology';
 export * from './schedule';
 export * from './scheduleType';
@@ -1856,6 +1861,7 @@ import { DataMapKey } from './dataMapKey';
 import { DataMapping } from './dataMapping';
 import { DataModelMembership } from './dataModelMembership';
 import { DataModelSummary } from './dataModelSummary';
+import { DataQualityCheckResult } from './dataQualityCheckResult';
 import { DataScope } from './dataScope';
 import { DataType } from './dataType';
 import { DataTypeEntity } from './dataTypeEntity';
@@ -2239,6 +2245,8 @@ import { LoanPeriod } from './loanPeriod';
 import { LoanPrincipalRepaymentEvent } from './loanPrincipalRepaymentEvent';
 import { LoanPrincipalRepaymentEventAllOf } from './loanPrincipalRepaymentEventAllOf';
 import { LockPeriodDiaryEntryRequest } from './lockPeriodDiaryEntryRequest';
+import { LusidEntityDataset } from './lusidEntityDataset';
+import { LusidEntityResult } from './lusidEntityResult';
 import { LusidInstrument } from './lusidInstrument';
 import { LusidProblemDetails } from './lusidProblemDetails';
 import { LusidTradeTicket } from './lusidTradeTicket';
@@ -2693,6 +2701,8 @@ import { RoundingConfiguration } from './roundingConfiguration';
 import { RoundingConfigurationComponent } from './roundingConfigurationComponent';
 import { RoundingConvention } from './roundingConvention';
 import { RulesInterval } from './rulesInterval';
+import { RunCheckRequest } from './runCheckRequest';
+import { RunCheckResponse } from './runCheckResponse';
 import { ScalingMethodology } from './scalingMethodology';
 import { Schedule } from './schedule';
 import { ScheduleType } from './scheduleType';
@@ -3923,6 +3933,7 @@ let typeMap: {[index: string]: any} = {
     "DataMapping": DataMapping,
     "DataModelMembership": DataModelMembership,
     "DataModelSummary": DataModelSummary,
+    "DataQualityCheckResult": DataQualityCheckResult,
     "DataScope": DataScope,
     "DataType": DataType,
     "DataTypeEntity": DataTypeEntity,
@@ -4296,6 +4307,8 @@ let typeMap: {[index: string]: any} = {
     "LoanPrincipalRepaymentEvent": LoanPrincipalRepaymentEvent,
     "LoanPrincipalRepaymentEventAllOf": LoanPrincipalRepaymentEventAllOf,
     "LockPeriodDiaryEntryRequest": LockPeriodDiaryEntryRequest,
+    "LusidEntityDataset": LusidEntityDataset,
+    "LusidEntityResult": LusidEntityResult,
     "LusidInstrument": LusidInstrument,
     "LusidProblemDetails": LusidProblemDetails,
     "LusidTradeTicket": LusidTradeTicket,
@@ -4726,6 +4739,8 @@ let typeMap: {[index: string]: any} = {
     "RoundingConfigurationComponent": RoundingConfigurationComponent,
     "RoundingConvention": RoundingConvention,
     "RulesInterval": RulesInterval,
+    "RunCheckRequest": RunCheckRequest,
+    "RunCheckResponse": RunCheckResponse,
     "Schedule": Schedule,
     "Schema": Schema,
     "ScopeDefinition": ScopeDefinition,
