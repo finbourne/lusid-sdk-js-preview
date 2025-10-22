@@ -379,6 +379,7 @@ export * from './decimalListComplianceParameter';
 export * from './decoratedComplianceRunSummary';
 export * from './deleteAccountsResponse';
 export * from './deleteCustodianAccountsResponse';
+export * from './deleteDataQualityRule';
 export * from './deleteInstrumentPropertiesResponse';
 export * from './deleteInstrumentResponse';
 export * from './deleteInstrumentsResponse';
@@ -1405,6 +1406,7 @@ export * from './upsertCounterpartyAgreementRequest';
 export * from './upsertCreditSupportAnnexRequest';
 export * from './upsertCustomEntitiesResponse';
 export * from './upsertCustomEntityAccessMetadataRequest';
+export * from './upsertDataQualityRule';
 export * from './upsertDialectRequest';
 export * from './upsertFlowConventionsRequest';
 export * from './upsertFundBookmarkRequest';
@@ -1884,6 +1886,7 @@ import { DecimalListComplianceParameter } from './decimalListComplianceParameter
 import { DecoratedComplianceRunSummary } from './decoratedComplianceRunSummary';
 import { DeleteAccountsResponse } from './deleteAccountsResponse';
 import { DeleteCustodianAccountsResponse } from './deleteCustodianAccountsResponse';
+import { DeleteDataQualityRule } from './deleteDataQualityRule';
 import { DeleteInstrumentPropertiesResponse } from './deleteInstrumentPropertiesResponse';
 import { DeleteInstrumentResponse } from './deleteInstrumentResponse';
 import { DeleteInstrumentsResponse } from './deleteInstrumentsResponse';
@@ -2910,6 +2913,7 @@ import { UpsertCounterpartyAgreementRequest } from './upsertCounterpartyAgreemen
 import { UpsertCreditSupportAnnexRequest } from './upsertCreditSupportAnnexRequest';
 import { UpsertCustomEntitiesResponse } from './upsertCustomEntitiesResponse';
 import { UpsertCustomEntityAccessMetadataRequest } from './upsertCustomEntityAccessMetadataRequest';
+import { UpsertDataQualityRule } from './upsertDataQualityRule';
 import { UpsertDialectRequest } from './upsertDialectRequest';
 import { UpsertFlowConventionsRequest } from './upsertFlowConventionsRequest';
 import { UpsertFundBookmarkRequest } from './upsertFundBookmarkRequest';
@@ -3953,6 +3957,7 @@ let typeMap: {[index: string]: any} = {
     "DecoratedComplianceRunSummary": DecoratedComplianceRunSummary,
     "DeleteAccountsResponse": DeleteAccountsResponse,
     "DeleteCustodianAccountsResponse": DeleteCustodianAccountsResponse,
+    "DeleteDataQualityRule": DeleteDataQualityRule,
     "DeleteInstrumentPropertiesResponse": DeleteInstrumentPropertiesResponse,
     "DeleteInstrumentResponse": DeleteInstrumentResponse,
     "DeleteInstrumentsResponse": DeleteInstrumentsResponse,
@@ -4937,6 +4942,7 @@ let typeMap: {[index: string]: any} = {
     "UpsertCreditSupportAnnexRequest": UpsertCreditSupportAnnexRequest,
     "UpsertCustomEntitiesResponse": UpsertCustomEntitiesResponse,
     "UpsertCustomEntityAccessMetadataRequest": UpsertCustomEntityAccessMetadataRequest,
+    "UpsertDataQualityRule": UpsertDataQualityRule,
     "UpsertDialectRequest": UpsertDialectRequest,
     "UpsertFlowConventionsRequest": UpsertFlowConventionsRequest,
     "UpsertFundBookmarkRequest": UpsertFundBookmarkRequest,
