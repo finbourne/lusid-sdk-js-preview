@@ -81,6 +81,7 @@ export * from './appendFxForwardTenorPipsCurveData';
 export * from './appendFxForwardTenorPipsCurveDataAllOf';
 export * from './appendMarketData';
 export * from './appendMarketDataType';
+export * from './applicableEntity';
 export * from './applicableInstrumentEvent';
 export * from './assetClass';
 export * from './assetLeg';
@@ -99,6 +100,7 @@ export * from './batchUpsertPortfolioAccessMetadataResponse';
 export * from './batchUpsertPortfolioAccessMetadataResponseItem';
 export * from './batchUpsertPortfolioTransactionsResponse';
 export * from './batchUpsertPropertyDefinitionPropertiesResponse';
+export * from './batchUpsertRelationalDatasetsResponse';
 export * from './batchUpsertTransactionSettlementInstructionResponse';
 export * from './block';
 export * from './blockAndOrderIdRequest';
@@ -913,6 +915,7 @@ export * from './pagedResourceListOfPropertyDefinition';
 export * from './pagedResourceListOfPropertyDefinitionSearchResult';
 export * from './pagedResourceListOfReconciliation';
 export * from './pagedResourceListOfReferenceListResponse';
+export * from './pagedResourceListOfRelationalDataPointResponse';
 export * from './pagedResourceListOfRelationalDatasetDefinition';
 export * from './pagedResourceListOfRelationshipDefinition';
 export * from './pagedResourceListOfSequenceDefinition';
@@ -1022,6 +1025,7 @@ export * from './queryApplicableInstrumentEventsRequest';
 export * from './queryBucketedCashFlowsRequest';
 export * from './queryCashFlowsRequest';
 export * from './queryInstrumentEventsRequest';
+export * from './queryRelationalDatasetRequest';
 export * from './queryTradeTicketsRequest';
 export * from './queryableKey';
 export * from './quote';
@@ -1074,6 +1078,9 @@ export * from './referencePortfolioWeightType';
 export * from './relatedEntity';
 export * from './relation';
 export * from './relationDefinition';
+export * from './relationalDataPointFieldValueResponse';
+export * from './relationalDataPointResponse';
+export * from './relationalDataSeriesResponse';
 export * from './relationalDatasetDefinition';
 export * from './relationalDatasetFieldDefinition';
 export * from './relationship';
@@ -1438,6 +1445,8 @@ export * from './upsertReferencePortfolioConstituentPropertiesRequest';
 export * from './upsertReferencePortfolioConstituentPropertiesResponse';
 export * from './upsertReferencePortfolioConstituentsRequest';
 export * from './upsertReferencePortfolioConstituentsResponse';
+export * from './upsertRelationalDataPointDataSeries';
+export * from './upsertRelationalDataPointRequest';
 export * from './upsertResultValuesDataRequest';
 export * from './upsertReturnsResponse';
 export * from './upsertSingleStructuredDataResponse';
@@ -1588,6 +1597,7 @@ import { AppendFxForwardTenorPipsCurveData } from './appendFxForwardTenorPipsCur
 import { AppendFxForwardTenorPipsCurveDataAllOf } from './appendFxForwardTenorPipsCurveDataAllOf';
 import { AppendMarketData } from './appendMarketData';
 import { AppendMarketDataType } from './appendMarketDataType';
+import { ApplicableEntity } from './applicableEntity';
 import { ApplicableInstrumentEvent } from './applicableInstrumentEvent';
 import { AssetClass } from './assetClass';
 import { AssetLeg } from './assetLeg';
@@ -1606,6 +1616,7 @@ import { BatchUpsertPortfolioAccessMetadataResponse } from './batchUpsertPortfol
 import { BatchUpsertPortfolioAccessMetadataResponseItem } from './batchUpsertPortfolioAccessMetadataResponseItem';
 import { BatchUpsertPortfolioTransactionsResponse } from './batchUpsertPortfolioTransactionsResponse';
 import { BatchUpsertPropertyDefinitionPropertiesResponse } from './batchUpsertPropertyDefinitionPropertiesResponse';
+import { BatchUpsertRelationalDatasetsResponse } from './batchUpsertRelationalDatasetsResponse';
 import { BatchUpsertTransactionSettlementInstructionResponse } from './batchUpsertTransactionSettlementInstructionResponse';
 import { Block } from './block';
 import { BlockAndOrderIdRequest } from './blockAndOrderIdRequest';
@@ -2420,6 +2431,7 @@ import { PagedResourceListOfPropertyDefinition } from './pagedResourceListOfProp
 import { PagedResourceListOfPropertyDefinitionSearchResult } from './pagedResourceListOfPropertyDefinitionSearchResult';
 import { PagedResourceListOfReconciliation } from './pagedResourceListOfReconciliation';
 import { PagedResourceListOfReferenceListResponse } from './pagedResourceListOfReferenceListResponse';
+import { PagedResourceListOfRelationalDataPointResponse } from './pagedResourceListOfRelationalDataPointResponse';
 import { PagedResourceListOfRelationalDatasetDefinition } from './pagedResourceListOfRelationalDatasetDefinition';
 import { PagedResourceListOfRelationshipDefinition } from './pagedResourceListOfRelationshipDefinition';
 import { PagedResourceListOfSequenceDefinition } from './pagedResourceListOfSequenceDefinition';
@@ -2529,6 +2541,7 @@ import { QueryApplicableInstrumentEventsRequest } from './queryApplicableInstrum
 import { QueryBucketedCashFlowsRequest } from './queryBucketedCashFlowsRequest';
 import { QueryCashFlowsRequest } from './queryCashFlowsRequest';
 import { QueryInstrumentEventsRequest } from './queryInstrumentEventsRequest';
+import { QueryRelationalDatasetRequest } from './queryRelationalDatasetRequest';
 import { QueryTradeTicketsRequest } from './queryTradeTicketsRequest';
 import { QueryableKey } from './queryableKey';
 import { Quote } from './quote';
@@ -2581,6 +2594,9 @@ import { ReferencePortfolioWeightType } from './referencePortfolioWeightType';
 import { RelatedEntity } from './relatedEntity';
 import { Relation } from './relation';
 import { RelationDefinition } from './relationDefinition';
+import { RelationalDataPointFieldValueResponse } from './relationalDataPointFieldValueResponse';
+import { RelationalDataPointResponse } from './relationalDataPointResponse';
+import { RelationalDataSeriesResponse } from './relationalDataSeriesResponse';
 import { RelationalDatasetDefinition } from './relationalDatasetDefinition';
 import { RelationalDatasetFieldDefinition } from './relationalDatasetFieldDefinition';
 import { Relationship } from './relationship';
@@ -2945,6 +2961,8 @@ import { UpsertReferencePortfolioConstituentPropertiesRequest } from './upsertRe
 import { UpsertReferencePortfolioConstituentPropertiesResponse } from './upsertReferencePortfolioConstituentPropertiesResponse';
 import { UpsertReferencePortfolioConstituentsRequest } from './upsertReferencePortfolioConstituentsRequest';
 import { UpsertReferencePortfolioConstituentsResponse } from './upsertReferencePortfolioConstituentsResponse';
+import { UpsertRelationalDataPointDataSeries } from './upsertRelationalDataPointDataSeries';
+import { UpsertRelationalDataPointRequest } from './upsertRelationalDataPointRequest';
 import { UpsertResultValuesDataRequest } from './upsertResultValuesDataRequest';
 import { UpsertReturnsResponse } from './upsertReturnsResponse';
 import { UpsertSingleStructuredDataResponse } from './upsertSingleStructuredDataResponse';
@@ -3668,6 +3686,7 @@ let typeMap: {[index: string]: any} = {
     "AppendFxForwardTenorPipsCurveData": AppendFxForwardTenorPipsCurveData,
     "AppendFxForwardTenorPipsCurveDataAllOf": AppendFxForwardTenorPipsCurveDataAllOf,
     "AppendMarketData": AppendMarketData,
+    "ApplicableEntity": ApplicableEntity,
     "ApplicableInstrumentEvent": ApplicableInstrumentEvent,
     "AssetLeg": AssetLeg,
     "Barrier": Barrier,
@@ -3685,6 +3704,7 @@ let typeMap: {[index: string]: any} = {
     "BatchUpsertPortfolioAccessMetadataResponseItem": BatchUpsertPortfolioAccessMetadataResponseItem,
     "BatchUpsertPortfolioTransactionsResponse": BatchUpsertPortfolioTransactionsResponse,
     "BatchUpsertPropertyDefinitionPropertiesResponse": BatchUpsertPropertyDefinitionPropertiesResponse,
+    "BatchUpsertRelationalDatasetsResponse": BatchUpsertRelationalDatasetsResponse,
     "BatchUpsertTransactionSettlementInstructionResponse": BatchUpsertTransactionSettlementInstructionResponse,
     "Block": Block,
     "BlockAndOrderIdRequest": BlockAndOrderIdRequest,
@@ -4475,6 +4495,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfPropertyDefinitionSearchResult": PagedResourceListOfPropertyDefinitionSearchResult,
     "PagedResourceListOfReconciliation": PagedResourceListOfReconciliation,
     "PagedResourceListOfReferenceListResponse": PagedResourceListOfReferenceListResponse,
+    "PagedResourceListOfRelationalDataPointResponse": PagedResourceListOfRelationalDataPointResponse,
     "PagedResourceListOfRelationalDatasetDefinition": PagedResourceListOfRelationalDatasetDefinition,
     "PagedResourceListOfRelationshipDefinition": PagedResourceListOfRelationshipDefinition,
     "PagedResourceListOfSequenceDefinition": PagedResourceListOfSequenceDefinition,
@@ -4576,6 +4597,7 @@ let typeMap: {[index: string]: any} = {
     "QueryBucketedCashFlowsRequest": QueryBucketedCashFlowsRequest,
     "QueryCashFlowsRequest": QueryCashFlowsRequest,
     "QueryInstrumentEventsRequest": QueryInstrumentEventsRequest,
+    "QueryRelationalDatasetRequest": QueryRelationalDatasetRequest,
     "QueryTradeTicketsRequest": QueryTradeTicketsRequest,
     "QueryableKey": QueryableKey,
     "Quote": Quote,
@@ -4623,6 +4645,9 @@ let typeMap: {[index: string]: any} = {
     "RelatedEntity": RelatedEntity,
     "Relation": Relation,
     "RelationDefinition": RelationDefinition,
+    "RelationalDataPointFieldValueResponse": RelationalDataPointFieldValueResponse,
+    "RelationalDataPointResponse": RelationalDataPointResponse,
+    "RelationalDataSeriesResponse": RelationalDataSeriesResponse,
     "RelationalDatasetDefinition": RelationalDatasetDefinition,
     "RelationalDatasetFieldDefinition": RelationalDatasetFieldDefinition,
     "Relationship": Relationship,
@@ -4974,6 +4999,8 @@ let typeMap: {[index: string]: any} = {
     "UpsertReferencePortfolioConstituentPropertiesResponse": UpsertReferencePortfolioConstituentPropertiesResponse,
     "UpsertReferencePortfolioConstituentsRequest": UpsertReferencePortfolioConstituentsRequest,
     "UpsertReferencePortfolioConstituentsResponse": UpsertReferencePortfolioConstituentsResponse,
+    "UpsertRelationalDataPointDataSeries": UpsertRelationalDataPointDataSeries,
+    "UpsertRelationalDataPointRequest": UpsertRelationalDataPointRequest,
     "UpsertResultValuesDataRequest": UpsertResultValuesDataRequest,
     "UpsertReturnsResponse": UpsertReturnsResponse,
     "UpsertSingleStructuredDataResponse": UpsertSingleStructuredDataResponse,
