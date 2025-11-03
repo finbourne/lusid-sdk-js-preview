@@ -82,6 +82,7 @@ export * from './appendFxForwardTenorPipsCurveDataAllOf';
 export * from './appendMarketData';
 export * from './appendMarketDataType';
 export * from './applicableEntity';
+export * from './applicableEntityTypes';
 export * from './applicableInstrumentEvent';
 export * from './assetClass';
 export * from './assetLeg';
@@ -313,6 +314,7 @@ export * from './createRelationalDatasetDefinitionRequest';
 export * from './createRelationshipDefinitionRequest';
 export * from './createRelationshipRequest';
 export * from './createSequenceRequest';
+export * from './createSeriesIdentifierField';
 export * from './createSimplePositionPortfolioRequest';
 export * from './createStagingRuleSetRequest';
 export * from './createTaxRuleSetRequest';
@@ -413,6 +415,8 @@ export * from './dividendOptionEventAllOf';
 export * from './dividendReinvestmentEvent';
 export * from './drawdownEvent';
 export * from './drawdownEventAllOf';
+export * from './earlyCloseOutEvent';
+export * from './earlyCloseOutEventAllOf';
 export * from './earlyRedemptionElection';
 export * from './earlyRedemptionEvent';
 export * from './earlyRedemptionEventAllOf';
@@ -1084,6 +1088,8 @@ export * from './relationalDataPointResponse';
 export * from './relationalDataSeriesResponse';
 export * from './relationalDatasetDefinition';
 export * from './relationalDatasetFieldDefinition';
+export * from './relationalDatasetFieldsToAdd';
+export * from './relationalDatasetFieldsToUpdate';
 export * from './relationship';
 export * from './relationshipDefinition';
 export * from './relativeDateOffset';
@@ -1400,7 +1406,10 @@ export * from './updatePropertyDefinitionRequest';
 export * from './updateReconciliationRequest';
 export * from './updateReferenceDataRequest';
 export * from './updateRelationalDatasetDefinitionRequest';
+export * from './updateRelationalDatasetDetails';
+export * from './updateRelationalDatasetFieldSchema';
 export * from './updateRelationshipDefinitionRequest';
+export * from './updateSeriesIdentifierField';
 export * from './updateStagingRuleSetRequest';
 export * from './updateTaxRuleSetRequest';
 export * from './updateTimelineRequest';
@@ -1601,6 +1610,7 @@ import { AppendFxForwardTenorPipsCurveDataAllOf } from './appendFxForwardTenorPi
 import { AppendMarketData } from './appendMarketData';
 import { AppendMarketDataType } from './appendMarketDataType';
 import { ApplicableEntity } from './applicableEntity';
+import { ApplicableEntityTypes } from './applicableEntityTypes';
 import { ApplicableInstrumentEvent } from './applicableInstrumentEvent';
 import { AssetClass } from './assetClass';
 import { AssetLeg } from './assetLeg';
@@ -1832,6 +1842,7 @@ import { CreateRelationalDatasetDefinitionRequest } from './createRelationalData
 import { CreateRelationshipDefinitionRequest } from './createRelationshipDefinitionRequest';
 import { CreateRelationshipRequest } from './createRelationshipRequest';
 import { CreateSequenceRequest } from './createSequenceRequest';
+import { CreateSeriesIdentifierField } from './createSeriesIdentifierField';
 import { CreateSimplePositionPortfolioRequest } from './createSimplePositionPortfolioRequest';
 import { CreateStagingRuleSetRequest } from './createStagingRuleSetRequest';
 import { CreateTaxRuleSetRequest } from './createTaxRuleSetRequest';
@@ -1932,6 +1943,8 @@ import { DividendOptionEventAllOf } from './dividendOptionEventAllOf';
 import { DividendReinvestmentEvent } from './dividendReinvestmentEvent';
 import { DrawdownEvent } from './drawdownEvent';
 import { DrawdownEventAllOf } from './drawdownEventAllOf';
+import { EarlyCloseOutEvent } from './earlyCloseOutEvent';
+import { EarlyCloseOutEventAllOf } from './earlyCloseOutEventAllOf';
 import { EarlyRedemptionElection } from './earlyRedemptionElection';
 import { EarlyRedemptionEvent } from './earlyRedemptionEvent';
 import { EarlyRedemptionEventAllOf } from './earlyRedemptionEventAllOf';
@@ -2603,6 +2616,8 @@ import { RelationalDataPointResponse } from './relationalDataPointResponse';
 import { RelationalDataSeriesResponse } from './relationalDataSeriesResponse';
 import { RelationalDatasetDefinition } from './relationalDatasetDefinition';
 import { RelationalDatasetFieldDefinition } from './relationalDatasetFieldDefinition';
+import { RelationalDatasetFieldsToAdd } from './relationalDatasetFieldsToAdd';
+import { RelationalDatasetFieldsToUpdate } from './relationalDatasetFieldsToUpdate';
 import { Relationship } from './relationship';
 import { RelationshipDefinition } from './relationshipDefinition';
 import { RelativeDateOffset } from './relativeDateOffset';
@@ -2919,7 +2934,10 @@ import { UpdatePropertyDefinitionRequest } from './updatePropertyDefinitionReque
 import { UpdateReconciliationRequest } from './updateReconciliationRequest';
 import { UpdateReferenceDataRequest } from './updateReferenceDataRequest';
 import { UpdateRelationalDatasetDefinitionRequest } from './updateRelationalDatasetDefinitionRequest';
+import { UpdateRelationalDatasetDetails } from './updateRelationalDatasetDetails';
+import { UpdateRelationalDatasetFieldSchema } from './updateRelationalDatasetFieldSchema';
 import { UpdateRelationshipDefinitionRequest } from './updateRelationshipDefinitionRequest';
+import { UpdateSeriesIdentifierField } from './updateSeriesIdentifierField';
 import { UpdateStagingRuleSetRequest } from './updateStagingRuleSetRequest';
 import { UpdateTaxRuleSetRequest } from './updateTaxRuleSetRequest';
 import { UpdateTimelineRequest } from './updateTimelineRequest';
@@ -3202,6 +3220,8 @@ let enumsMap: {[index: string]: any} = {
         "DividendReinvestmentEvent.InstrumentEventTypeEnum": DividendReinvestmentEvent.InstrumentEventTypeEnum,
         "DrawdownEvent.InstrumentEventTypeEnum": DrawdownEvent.InstrumentEventTypeEnum,
         "DrawdownEventAllOf.InstrumentEventTypeEnum": DrawdownEventAllOf.InstrumentEventTypeEnum,
+        "EarlyCloseOutEvent.InstrumentEventTypeEnum": EarlyCloseOutEvent.InstrumentEventTypeEnum,
+        "EarlyCloseOutEventAllOf.InstrumentEventTypeEnum": EarlyCloseOutEventAllOf.InstrumentEventTypeEnum,
         "EarlyRedemptionEvent.InstrumentEventTypeEnum": EarlyRedemptionEvent.InstrumentEventTypeEnum,
         "EarlyRedemptionEventAllOf.InstrumentEventTypeEnum": EarlyRedemptionEventAllOf.InstrumentEventTypeEnum,
         "EconomicDependency.DependencyTypeEnum": EconomicDependency.DependencyTypeEnum,
@@ -3693,6 +3713,7 @@ let typeMap: {[index: string]: any} = {
     "AppendFxForwardTenorPipsCurveDataAllOf": AppendFxForwardTenorPipsCurveDataAllOf,
     "AppendMarketData": AppendMarketData,
     "ApplicableEntity": ApplicableEntity,
+    "ApplicableEntityTypes": ApplicableEntityTypes,
     "ApplicableInstrumentEvent": ApplicableInstrumentEvent,
     "AssetLeg": AssetLeg,
     "Barrier": Barrier,
@@ -3919,6 +3940,7 @@ let typeMap: {[index: string]: any} = {
     "CreateRelationshipDefinitionRequest": CreateRelationshipDefinitionRequest,
     "CreateRelationshipRequest": CreateRelationshipRequest,
     "CreateSequenceRequest": CreateSequenceRequest,
+    "CreateSeriesIdentifierField": CreateSeriesIdentifierField,
     "CreateSimplePositionPortfolioRequest": CreateSimplePositionPortfolioRequest,
     "CreateStagingRuleSetRequest": CreateStagingRuleSetRequest,
     "CreateTaxRuleSetRequest": CreateTaxRuleSetRequest,
@@ -4013,6 +4035,8 @@ let typeMap: {[index: string]: any} = {
     "DividendReinvestmentEvent": DividendReinvestmentEvent,
     "DrawdownEvent": DrawdownEvent,
     "DrawdownEventAllOf": DrawdownEventAllOf,
+    "EarlyCloseOutEvent": EarlyCloseOutEvent,
+    "EarlyCloseOutEventAllOf": EarlyCloseOutEventAllOf,
     "EarlyRedemptionElection": EarlyRedemptionElection,
     "EarlyRedemptionEvent": EarlyRedemptionEvent,
     "EarlyRedemptionEventAllOf": EarlyRedemptionEventAllOf,
@@ -4657,6 +4681,8 @@ let typeMap: {[index: string]: any} = {
     "RelationalDataSeriesResponse": RelationalDataSeriesResponse,
     "RelationalDatasetDefinition": RelationalDatasetDefinition,
     "RelationalDatasetFieldDefinition": RelationalDatasetFieldDefinition,
+    "RelationalDatasetFieldsToAdd": RelationalDatasetFieldsToAdd,
+    "RelationalDatasetFieldsToUpdate": RelationalDatasetFieldsToUpdate,
     "Relationship": Relationship,
     "RelationshipDefinition": RelationshipDefinition,
     "RelativeDateOffset": RelativeDateOffset,
@@ -4960,7 +4986,10 @@ let typeMap: {[index: string]: any} = {
     "UpdateReconciliationRequest": UpdateReconciliationRequest,
     "UpdateReferenceDataRequest": UpdateReferenceDataRequest,
     "UpdateRelationalDatasetDefinitionRequest": UpdateRelationalDatasetDefinitionRequest,
+    "UpdateRelationalDatasetDetails": UpdateRelationalDatasetDetails,
+    "UpdateRelationalDatasetFieldSchema": UpdateRelationalDatasetFieldSchema,
     "UpdateRelationshipDefinitionRequest": UpdateRelationshipDefinitionRequest,
+    "UpdateSeriesIdentifierField": UpdateSeriesIdentifierField,
     "UpdateStagingRuleSetRequest": UpdateStagingRuleSetRequest,
     "UpdateTaxRuleSetRequest": UpdateTaxRuleSetRequest,
     "UpdateTimelineRequest": UpdateTimelineRequest,
