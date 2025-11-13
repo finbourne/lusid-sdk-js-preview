@@ -361,6 +361,7 @@ export * from './dataMapKey';
 export * from './dataMapping';
 export * from './dataModelMembership';
 export * from './dataModelSummary';
+export * from './dataPointVersion';
 export * from './dataQualityCheckResult';
 export * from './dataScope';
 export * from './dataType';
@@ -397,6 +398,8 @@ export * from './depositCloseEvent';
 export * from './depositCloseEventAllOf';
 export * from './depositInterestPaymentEvent';
 export * from './depositInterestPaymentEventAllOf';
+export * from './depositRollEvent';
+export * from './depositRollEventAllOf';
 export * from './derivationFormulaExplainRequest';
 export * from './derivedPropertyComponent';
 export * from './describedAddressKey';
@@ -1207,6 +1210,8 @@ export * from './returnZeroPvOptions';
 export * from './returnsEntity';
 export * from './reverseStockSplitEvent';
 export * from './reverseStockSplitEventAllOf';
+export * from './rollInterestUpdates';
+export * from './rollPrincipalUpdates';
 export * from './rolloverConstituent';
 export * from './roundingConfiguration';
 export * from './roundingConfigurationComponent';
@@ -1890,6 +1895,7 @@ import { DataMapKey } from './dataMapKey';
 import { DataMapping } from './dataMapping';
 import { DataModelMembership } from './dataModelMembership';
 import { DataModelSummary } from './dataModelSummary';
+import { DataPointVersion } from './dataPointVersion';
 import { DataQualityCheckResult } from './dataQualityCheckResult';
 import { DataScope } from './dataScope';
 import { DataType } from './dataType';
@@ -1926,6 +1932,8 @@ import { DepositCloseEvent } from './depositCloseEvent';
 import { DepositCloseEventAllOf } from './depositCloseEventAllOf';
 import { DepositInterestPaymentEvent } from './depositInterestPaymentEvent';
 import { DepositInterestPaymentEventAllOf } from './depositInterestPaymentEventAllOf';
+import { DepositRollEvent } from './depositRollEvent';
+import { DepositRollEventAllOf } from './depositRollEventAllOf';
 import { DerivationFormulaExplainRequest } from './derivationFormulaExplainRequest';
 import { DerivedPropertyComponent } from './derivedPropertyComponent';
 import { DescribedAddressKey } from './describedAddressKey';
@@ -2736,6 +2744,8 @@ import { ReturnZeroPvOptions } from './returnZeroPvOptions';
 import { ReturnsEntity } from './returnsEntity';
 import { ReverseStockSplitEvent } from './reverseStockSplitEvent';
 import { ReverseStockSplitEventAllOf } from './reverseStockSplitEventAllOf';
+import { RollInterestUpdates } from './rollInterestUpdates';
+import { RollPrincipalUpdates } from './rollPrincipalUpdates';
 import { RolloverConstituent } from './rolloverConstituent';
 import { RoundingConfiguration } from './roundingConfiguration';
 import { RoundingConfigurationComponent } from './roundingConfigurationComponent';
@@ -3212,6 +3222,8 @@ let enumsMap: {[index: string]: any} = {
         "DepositCloseEventAllOf.InstrumentEventTypeEnum": DepositCloseEventAllOf.InstrumentEventTypeEnum,
         "DepositInterestPaymentEvent.InstrumentEventTypeEnum": DepositInterestPaymentEvent.InstrumentEventTypeEnum,
         "DepositInterestPaymentEventAllOf.InstrumentEventTypeEnum": DepositInterestPaymentEventAllOf.InstrumentEventTypeEnum,
+        "DepositRollEvent.InstrumentEventTypeEnum": DepositRollEvent.InstrumentEventTypeEnum,
+        "DepositRollEventAllOf.InstrumentEventTypeEnum": DepositRollEventAllOf.InstrumentEventTypeEnum,
         "DiscountFactorCurveData.MarketDataTypeEnum": DiscountFactorCurveData.MarketDataTypeEnum,
         "DiscountFactorCurveDataAllOf.MarketDataTypeEnum": DiscountFactorCurveDataAllOf.MarketDataTypeEnum,
         "DiscountingDependency.DependencyTypeEnum": DiscountingDependency.DependencyTypeEnum,
@@ -3988,6 +4000,7 @@ let typeMap: {[index: string]: any} = {
     "DataMapping": DataMapping,
     "DataModelMembership": DataModelMembership,
     "DataModelSummary": DataModelSummary,
+    "DataPointVersion": DataPointVersion,
     "DataQualityCheckResult": DataQualityCheckResult,
     "DataScope": DataScope,
     "DataType": DataType,
@@ -4020,6 +4033,8 @@ let typeMap: {[index: string]: any} = {
     "DepositCloseEventAllOf": DepositCloseEventAllOf,
     "DepositInterestPaymentEvent": DepositInterestPaymentEvent,
     "DepositInterestPaymentEventAllOf": DepositInterestPaymentEventAllOf,
+    "DepositRollEvent": DepositRollEvent,
+    "DepositRollEventAllOf": DepositRollEventAllOf,
     "DerivationFormulaExplainRequest": DerivationFormulaExplainRequest,
     "DerivedPropertyComponent": DerivedPropertyComponent,
     "DescribedAddressKey": DescribedAddressKey,
@@ -4800,6 +4815,8 @@ let typeMap: {[index: string]: any} = {
     "ReturnsEntity": ReturnsEntity,
     "ReverseStockSplitEvent": ReverseStockSplitEvent,
     "ReverseStockSplitEventAllOf": ReverseStockSplitEventAllOf,
+    "RollInterestUpdates": RollInterestUpdates,
+    "RollPrincipalUpdates": RollPrincipalUpdates,
     "RolloverConstituent": RolloverConstituent,
     "RoundingConfiguration": RoundingConfiguration,
     "RoundingConfigurationComponent": RoundingConfigurationComponent,
