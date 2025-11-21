@@ -803,6 +803,8 @@ export * from './movedOrderToDifferentBlockResponse';
 export * from './movementSettlementSummary';
 export * from './movementType';
 export * from './multiCurrencyAmounts';
+export * from './navActivityAdjustment';
+export * from './navActivityAdjustmentType';
 export * from './navTypeDefinition';
 export * from './newInstrument';
 export * from './nextValueInSequenceResponse';
@@ -983,6 +985,8 @@ export * from './portfolioReturnBreakdown';
 export * from './portfolioSearchResult';
 export * from './portfolioSettlementConfiguration';
 export * from './portfolioTradeTicket';
+export * from './portfolioTransaction';
+export * from './portfolioTransactionAllOf';
 export * from './portfolioType';
 export * from './portfolioWithoutHref';
 export * from './portfoliosReconciliationRequest';
@@ -1151,6 +1155,7 @@ export * from './resourceListOfLegalEntity';
 export * from './resourceListOfListComplexMarketDataWithMetaDataResponse';
 export * from './resourceListOfMapping';
 export * from './resourceListOfMovedOrderToDifferentBlockResponse';
+export * from './resourceListOfNavActivityAdjustment';
 export * from './resourceListOfOrder';
 export * from './resourceListOfOrderInstruction';
 export * from './resourceListOfOutputTransaction';
@@ -2337,6 +2342,8 @@ import { MovedOrderToDifferentBlockResponse } from './movedOrderToDifferentBlock
 import { MovementSettlementSummary } from './movementSettlementSummary';
 import { MovementType } from './movementType';
 import { MultiCurrencyAmounts } from './multiCurrencyAmounts';
+import { NavActivityAdjustment } from './navActivityAdjustment';
+import { NavActivityAdjustmentType } from './navActivityAdjustmentType';
 import { NavTypeDefinition } from './navTypeDefinition';
 import { NewInstrument } from './newInstrument';
 import { NextValueInSequenceResponse } from './nextValueInSequenceResponse';
@@ -2517,6 +2524,8 @@ import { PortfolioReturnBreakdown } from './portfolioReturnBreakdown';
 import { PortfolioSearchResult } from './portfolioSearchResult';
 import { PortfolioSettlementConfiguration } from './portfolioSettlementConfiguration';
 import { PortfolioTradeTicket } from './portfolioTradeTicket';
+import { PortfolioTransaction } from './portfolioTransaction';
+import { PortfolioTransactionAllOf } from './portfolioTransactionAllOf';
 import { PortfolioType } from './portfolioType';
 import { PortfolioWithoutHref } from './portfolioWithoutHref';
 import { PortfoliosReconciliationRequest } from './portfoliosReconciliationRequest';
@@ -2685,6 +2694,7 @@ import { ResourceListOfLegalEntity } from './resourceListOfLegalEntity';
 import { ResourceListOfListComplexMarketDataWithMetaDataResponse } from './resourceListOfListComplexMarketDataWithMetaDataResponse';
 import { ResourceListOfMapping } from './resourceListOfMapping';
 import { ResourceListOfMovedOrderToDifferentBlockResponse } from './resourceListOfMovedOrderToDifferentBlockResponse';
+import { ResourceListOfNavActivityAdjustment } from './resourceListOfNavActivityAdjustment';
 import { ResourceListOfOrder } from './resourceListOfOrder';
 import { ResourceListOfOrderInstruction } from './resourceListOfOrderInstruction';
 import { ResourceListOfOutputTransaction } from './resourceListOfOutputTransaction';
@@ -3446,6 +3456,8 @@ let enumsMap: {[index: string]: any} = {
         "ModelSelection.LibraryEnum": ModelSelection.LibraryEnum,
         "ModelSelection.ModelEnum": ModelSelection.ModelEnum,
         "MovementType": MovementType,
+        "NavActivityAdjustment.NavActivityAdjustmentTypeEnum": NavActivityAdjustment.NavActivityAdjustmentTypeEnum,
+        "NavActivityAdjustmentType": NavActivityAdjustmentType,
         "NumericComparisonType": NumericComparisonType,
         "OpaqueDependency.DependencyTypeEnum": OpaqueDependency.DependencyTypeEnum,
         "OpaqueDependencyAllOf.DependencyTypeEnum": OpaqueDependencyAllOf.DependencyTypeEnum,
@@ -3482,6 +3494,8 @@ let enumsMap: {[index: string]: any} = {
         "PortfolioResultDataKeyRule.ResultKeyRuleTypeEnum": PortfolioResultDataKeyRule.ResultKeyRuleTypeEnum,
         "PortfolioResultDataKeyRuleAllOf.ResultKeyRuleTypeEnum": PortfolioResultDataKeyRuleAllOf.ResultKeyRuleTypeEnum,
         "PortfolioSearchResult.TypeEnum": PortfolioSearchResult.TypeEnum,
+        "PortfolioTransaction.NavActivityAdjustmentTypeEnum": PortfolioTransaction.NavActivityAdjustmentTypeEnum,
+        "PortfolioTransactionAllOf.NavActivityAdjustmentTypeEnum": PortfolioTransactionAllOf.NavActivityAdjustmentTypeEnum,
         "PortfolioType": PortfolioType,
         "PortfolioWithoutHref.TypeEnum": PortfolioWithoutHref.TypeEnum,
         "PortfolioWithoutHref.AccountingMethodEnum": PortfolioWithoutHref.AccountingMethodEnum,
@@ -4427,6 +4441,7 @@ let typeMap: {[index: string]: any} = {
     "MovedOrderToDifferentBlockResponse": MovedOrderToDifferentBlockResponse,
     "MovementSettlementSummary": MovementSettlementSummary,
     "MultiCurrencyAmounts": MultiCurrencyAmounts,
+    "NavActivityAdjustment": NavActivityAdjustment,
     "NavTypeDefinition": NavTypeDefinition,
     "NewInstrument": NewInstrument,
     "NextValueInSequenceResponse": NextValueInSequenceResponse,
@@ -4601,6 +4616,8 @@ let typeMap: {[index: string]: any} = {
     "PortfolioSearchResult": PortfolioSearchResult,
     "PortfolioSettlementConfiguration": PortfolioSettlementConfiguration,
     "PortfolioTradeTicket": PortfolioTradeTicket,
+    "PortfolioTransaction": PortfolioTransaction,
+    "PortfolioTransactionAllOf": PortfolioTransactionAllOf,
     "PortfolioWithoutHref": PortfolioWithoutHref,
     "PortfoliosReconciliationRequest": PortfoliosReconciliationRequest,
     "PostCloseActivitiesRequest": PostCloseActivitiesRequest,
@@ -4758,6 +4775,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfListComplexMarketDataWithMetaDataResponse": ResourceListOfListComplexMarketDataWithMetaDataResponse,
     "ResourceListOfMapping": ResourceListOfMapping,
     "ResourceListOfMovedOrderToDifferentBlockResponse": ResourceListOfMovedOrderToDifferentBlockResponse,
+    "ResourceListOfNavActivityAdjustment": ResourceListOfNavActivityAdjustment,
     "ResourceListOfOrder": ResourceListOfOrder,
     "ResourceListOfOrderInstruction": ResourceListOfOrderInstruction,
     "ResourceListOfOutputTransaction": ResourceListOfOutputTransaction,
