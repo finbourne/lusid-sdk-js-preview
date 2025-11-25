@@ -364,6 +364,7 @@ export * from './dataModelSummary';
 export * from './dataPointVersion';
 export * from './dataQualityCheckResult';
 export * from './dataScope';
+export * from './dataSeries';
 export * from './dataType';
 export * from './dataTypeEntity';
 export * from './dataTypeSummary';
@@ -1468,7 +1469,6 @@ export * from './upsertReferencePortfolioConstituentPropertiesRequest';
 export * from './upsertReferencePortfolioConstituentPropertiesResponse';
 export * from './upsertReferencePortfolioConstituentsRequest';
 export * from './upsertReferencePortfolioConstituentsResponse';
-export * from './upsertRelationalDataPointDataSeries';
 export * from './upsertRelationalDataPointRequest';
 export * from './upsertResultValuesDataRequest';
 export * from './upsertReturnsResponse';
@@ -1903,6 +1903,7 @@ import { DataModelSummary } from './dataModelSummary';
 import { DataPointVersion } from './dataPointVersion';
 import { DataQualityCheckResult } from './dataQualityCheckResult';
 import { DataScope } from './dataScope';
+import { DataSeries } from './dataSeries';
 import { DataType } from './dataType';
 import { DataTypeEntity } from './dataTypeEntity';
 import { DataTypeSummary } from './dataTypeSummary';
@@ -3007,7 +3008,6 @@ import { UpsertReferencePortfolioConstituentPropertiesRequest } from './upsertRe
 import { UpsertReferencePortfolioConstituentPropertiesResponse } from './upsertReferencePortfolioConstituentPropertiesResponse';
 import { UpsertReferencePortfolioConstituentsRequest } from './upsertReferencePortfolioConstituentsRequest';
 import { UpsertReferencePortfolioConstituentsResponse } from './upsertReferencePortfolioConstituentsResponse';
-import { UpsertRelationalDataPointDataSeries } from './upsertRelationalDataPointDataSeries';
 import { UpsertRelationalDataPointRequest } from './upsertRelationalDataPointRequest';
 import { UpsertResultValuesDataRequest } from './upsertResultValuesDataRequest';
 import { UpsertReturnsResponse } from './upsertReturnsResponse';
@@ -4017,6 +4017,7 @@ let typeMap: {[index: string]: any} = {
     "DataPointVersion": DataPointVersion,
     "DataQualityCheckResult": DataQualityCheckResult,
     "DataScope": DataScope,
+    "DataSeries": DataSeries,
     "DataType": DataType,
     "DataTypeEntity": DataTypeEntity,
     "DataTypeSummary": DataTypeSummary,
@@ -5075,7 +5076,6 @@ let typeMap: {[index: string]: any} = {
     "UpsertReferencePortfolioConstituentPropertiesResponse": UpsertReferencePortfolioConstituentPropertiesResponse,
     "UpsertReferencePortfolioConstituentsRequest": UpsertReferencePortfolioConstituentsRequest,
     "UpsertReferencePortfolioConstituentsResponse": UpsertReferencePortfolioConstituentsResponse,
-    "UpsertRelationalDataPointDataSeries": UpsertRelationalDataPointDataSeries,
     "UpsertRelationalDataPointRequest": UpsertRelationalDataPointRequest,
     "UpsertResultValuesDataRequest": UpsertResultValuesDataRequest,
     "UpsertReturnsResponse": UpsertReturnsResponse,
