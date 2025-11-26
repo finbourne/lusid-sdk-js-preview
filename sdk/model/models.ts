@@ -1396,6 +1396,7 @@ export * from './unmatchedHoldingMethod';
 export * from './updateAmortisationRuleSetDetailsRequest';
 export * from './updateCalendarRequest';
 export * from './updateCheckDefinitionRequest';
+export * from './updateCheckDefinitionRuleSet';
 export * from './updateComplianceTemplateRequest';
 export * from './updateCustomDataModelRequest';
 export * from './updateCustomEntityDefinitionRequest';
@@ -2935,6 +2936,7 @@ import { UnmatchedHoldingMethod } from './unmatchedHoldingMethod';
 import { UpdateAmortisationRuleSetDetailsRequest } from './updateAmortisationRuleSetDetailsRequest';
 import { UpdateCalendarRequest } from './updateCalendarRequest';
 import { UpdateCheckDefinitionRequest } from './updateCheckDefinitionRequest';
+import { UpdateCheckDefinitionRuleSet } from './updateCheckDefinitionRuleSet';
 import { UpdateComplianceTemplateRequest } from './updateComplianceTemplateRequest';
 import { UpdateCustomDataModelRequest } from './updateCustomDataModelRequest';
 import { UpdateCustomEntityDefinitionRequest } from './updateCustomEntityDefinitionRequest';
@@ -5003,6 +5005,7 @@ let typeMap: {[index: string]: any} = {
     "UpdateAmortisationRuleSetDetailsRequest": UpdateAmortisationRuleSetDetailsRequest,
     "UpdateCalendarRequest": UpdateCalendarRequest,
     "UpdateCheckDefinitionRequest": UpdateCheckDefinitionRequest,
+    "UpdateCheckDefinitionRuleSet": UpdateCheckDefinitionRuleSet,
     "UpdateComplianceTemplateRequest": UpdateComplianceTemplateRequest,
     "UpdateCustomDataModelRequest": UpdateCustomDataModelRequest,
     "UpdateCustomEntityDefinitionRequest": UpdateCustomEntityDefinitionRequest,
