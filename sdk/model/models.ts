@@ -92,6 +92,7 @@ export * from './basketAllOf';
 export * from './basketIdentifier';
 export * from './batchAdjustHoldingsResponse';
 export * from './batchAmendCustomDataModelMembershipResponse';
+export * from './batchDeleteRelationalDataResponse';
 export * from './batchUpdateUserReviewForComparisonResultRequest';
 export * from './batchUpdateUserReviewForComparisonResultResponse';
 export * from './batchUpsertDatesForCalendarResponse';
@@ -392,6 +393,7 @@ export * from './deleteInstrumentResponse';
 export * from './deleteInstrumentsResponse';
 export * from './deleteModes';
 export * from './deleteRelationRequest';
+export * from './deleteRelationalDataPointRequest';
 export * from './deleteRelationshipRequest';
 export * from './deletedEntityResponse';
 export * from './dependencySourceFilter';
@@ -1632,6 +1634,7 @@ import { BasketAllOf } from './basketAllOf';
 import { BasketIdentifier } from './basketIdentifier';
 import { BatchAdjustHoldingsResponse } from './batchAdjustHoldingsResponse';
 import { BatchAmendCustomDataModelMembershipResponse } from './batchAmendCustomDataModelMembershipResponse';
+import { BatchDeleteRelationalDataResponse } from './batchDeleteRelationalDataResponse';
 import { BatchUpdateUserReviewForComparisonResultRequest } from './batchUpdateUserReviewForComparisonResultRequest';
 import { BatchUpdateUserReviewForComparisonResultResponse } from './batchUpdateUserReviewForComparisonResultResponse';
 import { BatchUpsertDatesForCalendarResponse } from './batchUpsertDatesForCalendarResponse';
@@ -1932,6 +1935,7 @@ import { DeleteInstrumentResponse } from './deleteInstrumentResponse';
 import { DeleteInstrumentsResponse } from './deleteInstrumentsResponse';
 import { DeleteModes } from './deleteModes';
 import { DeleteRelationRequest } from './deleteRelationRequest';
+import { DeleteRelationalDataPointRequest } from './deleteRelationalDataPointRequest';
 import { DeleteRelationshipRequest } from './deleteRelationshipRequest';
 import { DeletedEntityResponse } from './deletedEntityResponse';
 import { DependencySourceFilter } from './dependencySourceFilter';
@@ -3752,6 +3756,7 @@ let typeMap: {[index: string]: any} = {
     "BasketIdentifier": BasketIdentifier,
     "BatchAdjustHoldingsResponse": BatchAdjustHoldingsResponse,
     "BatchAmendCustomDataModelMembershipResponse": BatchAmendCustomDataModelMembershipResponse,
+    "BatchDeleteRelationalDataResponse": BatchDeleteRelationalDataResponse,
     "BatchUpdateUserReviewForComparisonResultRequest": BatchUpdateUserReviewForComparisonResultRequest,
     "BatchUpdateUserReviewForComparisonResultResponse": BatchUpdateUserReviewForComparisonResultResponse,
     "BatchUpsertDatesForCalendarResponse": BatchUpsertDatesForCalendarResponse,
@@ -4043,6 +4048,7 @@ let typeMap: {[index: string]: any} = {
     "DeleteInstrumentResponse": DeleteInstrumentResponse,
     "DeleteInstrumentsResponse": DeleteInstrumentsResponse,
     "DeleteRelationRequest": DeleteRelationRequest,
+    "DeleteRelationalDataPointRequest": DeleteRelationalDataPointRequest,
     "DeleteRelationshipRequest": DeleteRelationshipRequest,
     "DeletedEntityResponse": DeletedEntityResponse,
     "DependencySourceFilter": DependencySourceFilter,
