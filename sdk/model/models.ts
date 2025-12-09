@@ -355,6 +355,7 @@ export * from './customEntityProperties';
 export * from './customEntityRequest';
 export * from './customEntityResponse';
 export * from './customEntityType';
+export * from './customSortBy';
 export * from './cutLabelDefinition';
 export * from './cutLocalTime';
 export * from './dataDefinition';
@@ -1898,6 +1899,7 @@ import { CustomEntityProperties } from './customEntityProperties';
 import { CustomEntityRequest } from './customEntityRequest';
 import { CustomEntityResponse } from './customEntityResponse';
 import { CustomEntityType } from './customEntityType';
+import { CustomSortBy } from './customSortBy';
 import { CutLabelDefinition } from './cutLabelDefinition';
 import { CutLocalTime } from './cutLocalTime';
 import { DataDefinition } from './dataDefinition';
@@ -4016,6 +4018,7 @@ let typeMap: {[index: string]: any} = {
     "CustomEntityRequest": CustomEntityRequest,
     "CustomEntityResponse": CustomEntityResponse,
     "CustomEntityType": CustomEntityType,
+    "CustomSortBy": CustomSortBy,
     "CutLabelDefinition": CutLabelDefinition,
     "CutLocalTime": CutLocalTime,
     "DataDefinition": DataDefinition,
