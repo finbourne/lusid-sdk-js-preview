@@ -1219,6 +1219,7 @@ export * from './returnZeroPvOptions';
 export * from './returnsEntity';
 export * from './reverseStockSplitEvent';
 export * from './reverseStockSplitEventAllOf';
+export * from './revertValuationPointDataRequest';
 export * from './rollInterestUpdates';
 export * from './rollPrincipalUpdates';
 export * from './rolloverConstituent';
@@ -2763,6 +2764,7 @@ import { ReturnZeroPvOptions } from './returnZeroPvOptions';
 import { ReturnsEntity } from './returnsEntity';
 import { ReverseStockSplitEvent } from './reverseStockSplitEvent';
 import { ReverseStockSplitEventAllOf } from './reverseStockSplitEventAllOf';
+import { RevertValuationPointDataRequest } from './revertValuationPointDataRequest';
 import { RollInterestUpdates } from './rollInterestUpdates';
 import { RollPrincipalUpdates } from './rollPrincipalUpdates';
 import { RolloverConstituent } from './rolloverConstituent';
@@ -4847,6 +4849,7 @@ let typeMap: {[index: string]: any} = {
     "ReturnsEntity": ReturnsEntity,
     "ReverseStockSplitEvent": ReverseStockSplitEvent,
     "ReverseStockSplitEventAllOf": ReverseStockSplitEventAllOf,
+    "RevertValuationPointDataRequest": RevertValuationPointDataRequest,
     "RollInterestUpdates": RollInterestUpdates,
     "RollPrincipalUpdates": RollPrincipalUpdates,
     "RolloverConstituent": RolloverConstituent,
