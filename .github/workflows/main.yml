@@ -1,0 +1,58 @@
+# This job runs the projects tests
+
+name: lusid-sdk-js-preview-tests
+
+# Triggers the workflow on push or pull request to master or develop
+on:
+  push:
+    branches: [ master, develop ]
+  pull_request:
+    branches: [ master, develop ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+              
+      - name: Set env variables for MASTER
+        if: ${{ github.base_ref == 'master' }}
+        run: | 
+          echo "Setting env variables for MASTER..."
+        env: 
+          FBN_TOKEN_URL: ${{ secrets.MASTER_FBN_TOKEN_URL }}
+          FBN_USERNAME: ${{ secrets.MASTER_FBN_USERNAME }}
+          FBN_PASSWORD: ${{ secrets.MASTER_FBN_PASSWORD }}
+          FBN_CLIENT_ID: ${{ secrets.MASTER_FBN_CLIENT_ID }}
+          FBN_CLIENT_SECRET: ${{ secrets.MASTER_FBN_CLIENT_SECRET }}
+          FBN_LUSID_API_URL: ${{ secrets.MASTER_FBN_LUSID_API_URL }}
+    
+      - name: Set env variables for DEVELOP
+        if: ${{ github.base_ref == 'develop' }}
+        run: | 
+          echo "Setting env variables for DEVELOP..."
+        env: 
+          FBN_TOKEN_URL: ${{ secrets.DEVELOP_FBN_TOKEN_URL }}
+          FBN_USERNAME: ${{ secrets.DEVELOP_FBN_USERNAME }}
+          FBN_PASSWORD: ${{ secrets.DEVELOP_FBN_PASSWORD_BAD }}
+          FBN_CLIENT_ID: ${{ secrets.DEVELOP_FBN_CLIENT_ID }}
+          FBN_CLIENT_SECRET: ${{ secrets.DEVELOP_FBN_CLIENT_SECRET }}
+          FBN_LUSID_API_URL: ${{ secrets.DEVELOP_FBN_LUSID_API_URL }}
+                
+      # Runs a single command using the runners shell
+      - name: Build docker image using the Dockerfile
+        run: |
+          echo "Changing directory into sdk directory"
+          cd sdk
+          echo "Buiding docker image"
+          docker build -t js-tests . 
+
+      # Runs a set of commands using the runners shell
+      - name: Run the tests
+        run: docker run --rm js-tests -v /usr/src/node_modules -v $(pwd):/usr/src finbourne/lusid-sdk-nodejs-test
