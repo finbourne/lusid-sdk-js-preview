@@ -92,6 +92,7 @@ export * from './basketAllOf';
 export * from './basketIdentifier';
 export * from './batchAdjustHoldingsResponse';
 export * from './batchAmendCustomDataModelMembershipResponse';
+export * from './batchAmendTransactionSettlementInstructionResponse';
 export * from './batchDeleteRelationalDataResponse';
 export * from './batchUpdateUserReviewForComparisonResultRequest';
 export * from './batchUpdateUserReviewForComparisonResultResponse';
@@ -1251,6 +1252,7 @@ export * from './setTransactionConfigurationSourceRequest';
 export * from './settlementConfigurationCategory';
 export * from './settlementCycle';
 export * from './settlementInLieu';
+export * from './settlementInstructionAmendRequest';
 export * from './settlementInstructionQuery';
 export * from './settlementInstructionRequest';
 export * from './settlementInstructionWithTransaction';
@@ -1637,6 +1639,7 @@ import { BasketAllOf } from './basketAllOf';
 import { BasketIdentifier } from './basketIdentifier';
 import { BatchAdjustHoldingsResponse } from './batchAdjustHoldingsResponse';
 import { BatchAmendCustomDataModelMembershipResponse } from './batchAmendCustomDataModelMembershipResponse';
+import { BatchAmendTransactionSettlementInstructionResponse } from './batchAmendTransactionSettlementInstructionResponse';
 import { BatchDeleteRelationalDataResponse } from './batchDeleteRelationalDataResponse';
 import { BatchUpdateUserReviewForComparisonResultRequest } from './batchUpdateUserReviewForComparisonResultRequest';
 import { BatchUpdateUserReviewForComparisonResultResponse } from './batchUpdateUserReviewForComparisonResultResponse';
@@ -2796,6 +2799,7 @@ import { SetTransactionConfigurationSourceRequest } from './setTransactionConfig
 import { SettlementConfigurationCategory } from './settlementConfigurationCategory';
 import { SettlementCycle } from './settlementCycle';
 import { SettlementInLieu } from './settlementInLieu';
+import { SettlementInstructionAmendRequest } from './settlementInstructionAmendRequest';
 import { SettlementInstructionQuery } from './settlementInstructionQuery';
 import { SettlementInstructionRequest } from './settlementInstructionRequest';
 import { SettlementInstructionWithTransaction } from './settlementInstructionWithTransaction';
@@ -3762,6 +3766,7 @@ let typeMap: {[index: string]: any} = {
     "BasketIdentifier": BasketIdentifier,
     "BatchAdjustHoldingsResponse": BatchAdjustHoldingsResponse,
     "BatchAmendCustomDataModelMembershipResponse": BatchAmendCustomDataModelMembershipResponse,
+    "BatchAmendTransactionSettlementInstructionResponse": BatchAmendTransactionSettlementInstructionResponse,
     "BatchDeleteRelationalDataResponse": BatchDeleteRelationalDataResponse,
     "BatchUpdateUserReviewForComparisonResultRequest": BatchUpdateUserReviewForComparisonResultRequest,
     "BatchUpdateUserReviewForComparisonResultResponse": BatchUpdateUserReviewForComparisonResultResponse,
@@ -4879,6 +4884,7 @@ let typeMap: {[index: string]: any} = {
     "SettlementConfigurationCategory": SettlementConfigurationCategory,
     "SettlementCycle": SettlementCycle,
     "SettlementInLieu": SettlementInLieu,
+    "SettlementInstructionAmendRequest": SettlementInstructionAmendRequest,
     "SettlementInstructionQuery": SettlementInstructionQuery,
     "SettlementInstructionRequest": SettlementInstructionRequest,
     "SettlementInstructionWithTransaction": SettlementInstructionWithTransaction,
