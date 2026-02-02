@@ -680,6 +680,8 @@ export * from './inlineValuationRequest';
 export * from './inlineValuationsReconciliationRequest';
 export * from './inputTransition';
 export * from './instrument';
+export * from './instrumentActivity';
+export * from './instrumentActivityAllOf';
 export * from './instrumentCapabilities';
 export * from './instrumentCashFlow';
 export * from './instrumentDefinition';
@@ -989,6 +991,8 @@ export * from './portfolioResultDataKeyRuleAllOf';
 export * from './portfolioReturnBreakdown';
 export * from './portfolioSearchResult';
 export * from './portfolioSettlementConfiguration';
+export * from './portfolioSettlementInstruction';
+export * from './portfolioSettlementInstructionAllOf';
 export * from './portfolioTradeTicket';
 export * from './portfolioTransaction';
 export * from './portfolioTransactionAllOf';
@@ -2227,6 +2231,8 @@ import { InlineValuationRequest } from './inlineValuationRequest';
 import { InlineValuationsReconciliationRequest } from './inlineValuationsReconciliationRequest';
 import { InputTransition } from './inputTransition';
 import { Instrument } from './instrument';
+import { InstrumentActivity } from './instrumentActivity';
+import { InstrumentActivityAllOf } from './instrumentActivityAllOf';
 import { InstrumentCapabilities } from './instrumentCapabilities';
 import { InstrumentCashFlow } from './instrumentCashFlow';
 import { InstrumentDefinition } from './instrumentDefinition';
@@ -2536,6 +2542,8 @@ import { PortfolioResultDataKeyRuleAllOf } from './portfolioResultDataKeyRuleAll
 import { PortfolioReturnBreakdown } from './portfolioReturnBreakdown';
 import { PortfolioSearchResult } from './portfolioSearchResult';
 import { PortfolioSettlementConfiguration } from './portfolioSettlementConfiguration';
+import { PortfolioSettlementInstruction } from './portfolioSettlementInstruction';
+import { PortfolioSettlementInstructionAllOf } from './portfolioSettlementInstructionAllOf';
 import { PortfolioTradeTicket } from './portfolioTradeTicket';
 import { PortfolioTransaction } from './portfolioTransaction';
 import { PortfolioTransactionAllOf } from './portfolioTransactionAllOf';
@@ -3409,6 +3417,8 @@ let enumsMap: {[index: string]: any} = {
         "InformationalEventAllOf.InstrumentEventTypeEnum": InformationalEventAllOf.InstrumentEventTypeEnum,
         "Instrument.StateEnum": Instrument.StateEnum,
         "Instrument.AssetClassEnum": Instrument.AssetClassEnum,
+        "InstrumentActivity.NavActivityAdjustmentTypeEnum": InstrumentActivity.NavActivityAdjustmentTypeEnum,
+        "InstrumentActivityAllOf.NavActivityAdjustmentTypeEnum": InstrumentActivityAllOf.NavActivityAdjustmentTypeEnum,
         "InstrumentDeleteModes": InstrumentDeleteModes,
         "InstrumentEvent.InstrumentEventTypeEnum": InstrumentEvent.InstrumentEventTypeEnum,
         "InstrumentEventType": InstrumentEventType,
@@ -3510,6 +3520,8 @@ let enumsMap: {[index: string]: any} = {
         "PortfolioResultDataKeyRule.ResultKeyRuleTypeEnum": PortfolioResultDataKeyRule.ResultKeyRuleTypeEnum,
         "PortfolioResultDataKeyRuleAllOf.ResultKeyRuleTypeEnum": PortfolioResultDataKeyRuleAllOf.ResultKeyRuleTypeEnum,
         "PortfolioSearchResult.TypeEnum": PortfolioSearchResult.TypeEnum,
+        "PortfolioSettlementInstruction.NavActivityAdjustmentTypeEnum": PortfolioSettlementInstruction.NavActivityAdjustmentTypeEnum,
+        "PortfolioSettlementInstructionAllOf.NavActivityAdjustmentTypeEnum": PortfolioSettlementInstructionAllOf.NavActivityAdjustmentTypeEnum,
         "PortfolioTransaction.NavActivityAdjustmentTypeEnum": PortfolioTransaction.NavActivityAdjustmentTypeEnum,
         "PortfolioTransactionAllOf.NavActivityAdjustmentTypeEnum": PortfolioTransactionAllOf.NavActivityAdjustmentTypeEnum,
         "PortfolioType": PortfolioType,
@@ -4342,6 +4354,8 @@ let typeMap: {[index: string]: any} = {
     "InlineValuationsReconciliationRequest": InlineValuationsReconciliationRequest,
     "InputTransition": InputTransition,
     "Instrument": Instrument,
+    "InstrumentActivity": InstrumentActivity,
+    "InstrumentActivityAllOf": InstrumentActivityAllOf,
     "InstrumentCapabilities": InstrumentCapabilities,
     "InstrumentCashFlow": InstrumentCashFlow,
     "InstrumentDefinition": InstrumentDefinition,
@@ -4636,6 +4650,8 @@ let typeMap: {[index: string]: any} = {
     "PortfolioReturnBreakdown": PortfolioReturnBreakdown,
     "PortfolioSearchResult": PortfolioSearchResult,
     "PortfolioSettlementConfiguration": PortfolioSettlementConfiguration,
+    "PortfolioSettlementInstruction": PortfolioSettlementInstruction,
+    "PortfolioSettlementInstructionAllOf": PortfolioSettlementInstructionAllOf,
     "PortfolioTradeTicket": PortfolioTradeTicket,
     "PortfolioTransaction": PortfolioTransaction,
     "PortfolioTransactionAllOf": PortfolioTransactionAllOf,
