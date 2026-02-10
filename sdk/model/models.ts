@@ -1254,6 +1254,7 @@ export * from './setShareClassInstrumentsRequest';
 export * from './setTransactionConfigurationAlias';
 export * from './setTransactionConfigurationSourceRequest';
 export * from './settlementConfigurationCategory';
+export * from './settlementConfigurationMethodOverride';
 export * from './settlementCycle';
 export * from './settlementInLieu';
 export * from './settlementInstructionAmendRequest';
@@ -2805,6 +2806,7 @@ import { SetShareClassInstrumentsRequest } from './setShareClassInstrumentsReque
 import { SetTransactionConfigurationAlias } from './setTransactionConfigurationAlias';
 import { SetTransactionConfigurationSourceRequest } from './setTransactionConfigurationSourceRequest';
 import { SettlementConfigurationCategory } from './settlementConfigurationCategory';
+import { SettlementConfigurationMethodOverride } from './settlementConfigurationMethodOverride';
 import { SettlementCycle } from './settlementCycle';
 import { SettlementInLieu } from './settlementInLieu';
 import { SettlementInstructionAmendRequest } from './settlementInstructionAmendRequest';
@@ -4898,6 +4900,7 @@ let typeMap: {[index: string]: any} = {
     "SetTransactionConfigurationAlias": SetTransactionConfigurationAlias,
     "SetTransactionConfigurationSourceRequest": SetTransactionConfigurationSourceRequest,
     "SettlementConfigurationCategory": SettlementConfigurationCategory,
+    "SettlementConfigurationMethodOverride": SettlementConfigurationMethodOverride,
     "SettlementCycle": SettlementCycle,
     "SettlementInLieu": SettlementInLieu,
     "SettlementInstructionAmendRequest": SettlementInstructionAmendRequest,
