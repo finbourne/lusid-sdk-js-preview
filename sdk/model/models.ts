@@ -322,6 +322,7 @@ export * from './createStagingRuleSetRequest';
 export * from './createTaxRuleSetRequest';
 export * from './createTimelineRequest';
 export * from './createTradeTicketsResponse';
+export * from './createTransactionFeeRequest';
 export * from './createTransactionPortfolioRequest';
 export * from './createUnitDefinition';
 export * from './creditDefaultSwap';
@@ -475,6 +476,7 @@ export * from './expiryEventAllOf';
 export * from './externalFeeComponentFilter';
 export * from './fee';
 export * from './feeAccrual';
+export * from './feeCalculationRequest';
 export * from './feeProperties';
 export * from './feeRequest';
 export * from './feeRule';
@@ -1193,6 +1195,7 @@ export * from './resourceListOfSideDefinition';
 export * from './resourceListOfString';
 export * from './resourceListOfTaxRuleSet';
 export * from './resourceListOfTransaction';
+export * from './resourceListOfTransactionFee';
 export * from './resourceListOfTransactionSettlementInstruction';
 export * from './resourceListOfTransactionType';
 export * from './resourceListOfValueType';
@@ -1347,6 +1350,7 @@ export * from './transactionConfigurationTypeAlias';
 export * from './transactionCurrencyAndAmount';
 export * from './transactionDateWindows';
 export * from './transactionDiagnostics';
+export * from './transactionFee';
 export * from './transactionFieldMap';
 export * from './transactionMatchingAlternativeId';
 export * from './transactionPrice';
@@ -1437,6 +1441,7 @@ export * from './updateSeriesIdentifierField';
 export * from './updateStagingRuleSetRequest';
 export * from './updateTaxRuleSetRequest';
 export * from './updateTimelineRequest';
+export * from './updateTransactionFeeRequest';
 export * from './updateUnitRequest';
 export * from './upsertCdsFlowConventionsRequest';
 export * from './upsertComplexMarketDataRequest';
@@ -1874,6 +1879,7 @@ import { CreateStagingRuleSetRequest } from './createStagingRuleSetRequest';
 import { CreateTaxRuleSetRequest } from './createTaxRuleSetRequest';
 import { CreateTimelineRequest } from './createTimelineRequest';
 import { CreateTradeTicketsResponse } from './createTradeTicketsResponse';
+import { CreateTransactionFeeRequest } from './createTransactionFeeRequest';
 import { CreateTransactionPortfolioRequest } from './createTransactionPortfolioRequest';
 import { CreateUnitDefinition } from './createUnitDefinition';
 import { CreditDefaultSwap } from './creditDefaultSwap';
@@ -2027,6 +2033,7 @@ import { ExpiryEventAllOf } from './expiryEventAllOf';
 import { ExternalFeeComponentFilter } from './externalFeeComponentFilter';
 import { Fee } from './fee';
 import { FeeAccrual } from './feeAccrual';
+import { FeeCalculationRequest } from './feeCalculationRequest';
 import { FeeProperties } from './feeProperties';
 import { FeeRequest } from './feeRequest';
 import { FeeRule } from './feeRule';
@@ -2745,6 +2752,7 @@ import { ResourceListOfSideDefinition } from './resourceListOfSideDefinition';
 import { ResourceListOfString } from './resourceListOfString';
 import { ResourceListOfTaxRuleSet } from './resourceListOfTaxRuleSet';
 import { ResourceListOfTransaction } from './resourceListOfTransaction';
+import { ResourceListOfTransactionFee } from './resourceListOfTransactionFee';
 import { ResourceListOfTransactionSettlementInstruction } from './resourceListOfTransactionSettlementInstruction';
 import { ResourceListOfTransactionType } from './resourceListOfTransactionType';
 import { ResourceListOfValueType } from './resourceListOfValueType';
@@ -2899,6 +2907,7 @@ import { TransactionConfigurationTypeAlias } from './transactionConfigurationTyp
 import { TransactionCurrencyAndAmount } from './transactionCurrencyAndAmount';
 import { TransactionDateWindows } from './transactionDateWindows';
 import { TransactionDiagnostics } from './transactionDiagnostics';
+import { TransactionFee } from './transactionFee';
 import { TransactionFieldMap } from './transactionFieldMap';
 import { TransactionMatchingAlternativeId } from './transactionMatchingAlternativeId';
 import { TransactionPrice } from './transactionPrice';
@@ -2989,6 +2998,7 @@ import { UpdateSeriesIdentifierField } from './updateSeriesIdentifierField';
 import { UpdateStagingRuleSetRequest } from './updateStagingRuleSetRequest';
 import { UpdateTaxRuleSetRequest } from './updateTaxRuleSetRequest';
 import { UpdateTimelineRequest } from './updateTimelineRequest';
+import { UpdateTransactionFeeRequest } from './updateTransactionFeeRequest';
 import { UpdateUnitRequest } from './updateUnitRequest';
 import { UpsertCdsFlowConventionsRequest } from './upsertCdsFlowConventionsRequest';
 import { UpsertComplexMarketDataRequest } from './upsertComplexMarketDataRequest';
@@ -4006,6 +4016,7 @@ let typeMap: {[index: string]: any} = {
     "CreateTaxRuleSetRequest": CreateTaxRuleSetRequest,
     "CreateTimelineRequest": CreateTimelineRequest,
     "CreateTradeTicketsResponse": CreateTradeTicketsResponse,
+    "CreateTransactionFeeRequest": CreateTransactionFeeRequest,
     "CreateTransactionPortfolioRequest": CreateTransactionPortfolioRequest,
     "CreateUnitDefinition": CreateUnitDefinition,
     "CreditDefaultSwap": CreditDefaultSwap,
@@ -4152,6 +4163,7 @@ let typeMap: {[index: string]: any} = {
     "ExternalFeeComponentFilter": ExternalFeeComponentFilter,
     "Fee": Fee,
     "FeeAccrual": FeeAccrual,
+    "FeeCalculationRequest": FeeCalculationRequest,
     "FeeProperties": FeeProperties,
     "FeeRequest": FeeRequest,
     "FeeRule": FeeRule,
@@ -4843,6 +4855,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfString": ResourceListOfString,
     "ResourceListOfTaxRuleSet": ResourceListOfTaxRuleSet,
     "ResourceListOfTransaction": ResourceListOfTransaction,
+    "ResourceListOfTransactionFee": ResourceListOfTransactionFee,
     "ResourceListOfTransactionSettlementInstruction": ResourceListOfTransactionSettlementInstruction,
     "ResourceListOfTransactionType": ResourceListOfTransactionType,
     "ResourceListOfValueType": ResourceListOfValueType,
@@ -4990,6 +5003,7 @@ let typeMap: {[index: string]: any} = {
     "TransactionCurrencyAndAmount": TransactionCurrencyAndAmount,
     "TransactionDateWindows": TransactionDateWindows,
     "TransactionDiagnostics": TransactionDiagnostics,
+    "TransactionFee": TransactionFee,
     "TransactionFieldMap": TransactionFieldMap,
     "TransactionMatchingAlternativeId": TransactionMatchingAlternativeId,
     "TransactionPrice": TransactionPrice,
@@ -5074,6 +5088,7 @@ let typeMap: {[index: string]: any} = {
     "UpdateStagingRuleSetRequest": UpdateStagingRuleSetRequest,
     "UpdateTaxRuleSetRequest": UpdateTaxRuleSetRequest,
     "UpdateTimelineRequest": UpdateTimelineRequest,
+    "UpdateTransactionFeeRequest": UpdateTransactionFeeRequest,
     "UpdateUnitRequest": UpdateUnitRequest,
     "UpsertCdsFlowConventionsRequest": UpsertCdsFlowConventionsRequest,
     "UpsertComplexMarketDataRequest": UpsertComplexMarketDataRequest,
