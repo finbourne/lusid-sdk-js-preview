@@ -458,6 +458,7 @@ export * from './equityVolDependencyAllOf';
 export * from './equityVolSurfaceData';
 export * from './equityVolSurfaceDataAllOf';
 export * from './errorDetail';
+export * from './estimateVariant';
 export * from './eventDateRange';
 export * from './exDividendConfiguration';
 export * from './exchangeTradedOption';
@@ -493,6 +494,8 @@ export * from './filterPredicateComplianceParameter';
 export * from './filterPredicateComplianceParameterAllOf';
 export * from './filterStep';
 export * from './filterStepRequest';
+export * from './finalisedValuationPoint';
+export * from './finalisedValuationPointAllOf';
 export * from './fixedLeg';
 export * from './fixedLegAllOf';
 export * from './fixedLegAllOfOverrides';
@@ -525,6 +528,10 @@ export * from './forwardRateAgreementAllOf';
 export * from './fromRecipe';
 export * from './fund';
 export * from './fundAmount';
+export * from './fundBookmark';
+export * from './fundBookmarkAllOf';
+export * from './fundCalendarEntries';
+export * from './fundCalendarEntriesType';
 export * from './fundCalendarEntry';
 export * from './fundCalendarEntryType';
 export * from './fundConfiguration';
@@ -532,6 +539,8 @@ export * from './fundConfigurationProperties';
 export * from './fundConfigurationRequest';
 export * from './fundDefinitionRequest';
 export * from './fundDetails';
+export * from './fundEstimateValuationPoint';
+export * from './fundEstimateValuationPointAllOf';
 export * from './fundIdList';
 export * from './fundIdListAllOf';
 export * from './fundJournalEntryLine';
@@ -904,6 +913,7 @@ export * from './pagedResourceListOfExecution';
 export * from './pagedResourceListOfFee';
 export * from './pagedResourceListOfFeeType';
 export * from './pagedResourceListOfFund';
+export * from './pagedResourceListOfFundCalendarEntries';
 export * from './pagedResourceListOfFundCalendarEntry';
 export * from './pagedResourceListOfFundConfiguration';
 export * from './pagedResourceListOfGeneralLedgerProfileResponse';
@@ -1054,6 +1064,8 @@ export * from './queryableKey';
 export * from './quote';
 export * from './quoteAccessMetadataRule';
 export * from './quoteAccessMetadataRuleId';
+export * from './quoteActivity';
+export * from './quoteActivityAllOf';
 export * from './quoteDependency';
 export * from './quoteDependencyAllOf';
 export * from './quoteId';
@@ -2015,6 +2027,7 @@ import { EquityVolDependencyAllOf } from './equityVolDependencyAllOf';
 import { EquityVolSurfaceData } from './equityVolSurfaceData';
 import { EquityVolSurfaceDataAllOf } from './equityVolSurfaceDataAllOf';
 import { ErrorDetail } from './errorDetail';
+import { EstimateVariant } from './estimateVariant';
 import { EventDateRange } from './eventDateRange';
 import { ExDividendConfiguration } from './exDividendConfiguration';
 import { ExchangeTradedOption } from './exchangeTradedOption';
@@ -2050,6 +2063,8 @@ import { FilterPredicateComplianceParameter } from './filterPredicateComplianceP
 import { FilterPredicateComplianceParameterAllOf } from './filterPredicateComplianceParameterAllOf';
 import { FilterStep } from './filterStep';
 import { FilterStepRequest } from './filterStepRequest';
+import { FinalisedValuationPoint } from './finalisedValuationPoint';
+import { FinalisedValuationPointAllOf } from './finalisedValuationPointAllOf';
 import { FixedLeg } from './fixedLeg';
 import { FixedLegAllOf } from './fixedLegAllOf';
 import { FixedLegAllOfOverrides } from './fixedLegAllOfOverrides';
@@ -2082,6 +2097,10 @@ import { ForwardRateAgreementAllOf } from './forwardRateAgreementAllOf';
 import { FromRecipe } from './fromRecipe';
 import { Fund } from './fund';
 import { FundAmount } from './fundAmount';
+import { FundBookmark } from './fundBookmark';
+import { FundBookmarkAllOf } from './fundBookmarkAllOf';
+import { FundCalendarEntries } from './fundCalendarEntries';
+import { FundCalendarEntriesType } from './fundCalendarEntriesType';
 import { FundCalendarEntry } from './fundCalendarEntry';
 import { FundCalendarEntryType } from './fundCalendarEntryType';
 import { FundConfiguration } from './fundConfiguration';
@@ -2089,6 +2108,8 @@ import { FundConfigurationProperties } from './fundConfigurationProperties';
 import { FundConfigurationRequest } from './fundConfigurationRequest';
 import { FundDefinitionRequest } from './fundDefinitionRequest';
 import { FundDetails } from './fundDetails';
+import { FundEstimateValuationPoint } from './fundEstimateValuationPoint';
+import { FundEstimateValuationPointAllOf } from './fundEstimateValuationPointAllOf';
 import { FundIdList } from './fundIdList';
 import { FundIdListAllOf } from './fundIdListAllOf';
 import { FundJournalEntryLine } from './fundJournalEntryLine';
@@ -2461,6 +2482,7 @@ import { PagedResourceListOfExecution } from './pagedResourceListOfExecution';
 import { PagedResourceListOfFee } from './pagedResourceListOfFee';
 import { PagedResourceListOfFeeType } from './pagedResourceListOfFeeType';
 import { PagedResourceListOfFund } from './pagedResourceListOfFund';
+import { PagedResourceListOfFundCalendarEntries } from './pagedResourceListOfFundCalendarEntries';
 import { PagedResourceListOfFundCalendarEntry } from './pagedResourceListOfFundCalendarEntry';
 import { PagedResourceListOfFundConfiguration } from './pagedResourceListOfFundConfiguration';
 import { PagedResourceListOfGeneralLedgerProfileResponse } from './pagedResourceListOfGeneralLedgerProfileResponse';
@@ -2611,6 +2633,8 @@ import { QueryableKey } from './queryableKey';
 import { Quote } from './quote';
 import { QuoteAccessMetadataRule } from './quoteAccessMetadataRule';
 import { QuoteAccessMetadataRuleId } from './quoteAccessMetadataRuleId';
+import { QuoteActivity } from './quoteActivity';
+import { QuoteActivityAllOf } from './quoteActivityAllOf';
 import { QuoteDependency } from './quoteDependency';
 import { QuoteDependencyAllOf } from './quoteDependencyAllOf';
 import { QuoteId } from './quoteId';
@@ -3317,6 +3341,10 @@ let enumsMap: {[index: string]: any} = {
         "FilterPredicateComplianceParameterAllOf.ComplianceParameterTypeEnum": FilterPredicateComplianceParameterAllOf.ComplianceParameterTypeEnum,
         "FilterStep.ComplianceStepTypeEnum": FilterStep.ComplianceStepTypeEnum,
         "FilterStepRequest.ComplianceStepTypeRequestEnum": FilterStepRequest.ComplianceStepTypeRequestEnum,
+        "FinalisedValuationPoint.EntryTypeEnum": FinalisedValuationPoint.EntryTypeEnum,
+        "FinalisedValuationPoint.FundCalendarEntriesTypeEnum": FinalisedValuationPoint.FundCalendarEntriesTypeEnum,
+        "FinalisedValuationPointAllOf.EntryTypeEnum": FinalisedValuationPointAllOf.EntryTypeEnum,
+        "FinalisedValuationPointAllOf.FundCalendarEntriesTypeEnum": FinalisedValuationPointAllOf.FundCalendarEntriesTypeEnum,
         "FixedLeg.InstrumentTypeEnum": FixedLeg.InstrumentTypeEnum,
         "FixedLegAllOf.InstrumentTypeEnum": FixedLegAllOf.InstrumentTypeEnum,
         "FixedSchedule.ScheduleTypeEnum": FixedSchedule.ScheduleTypeEnum,
@@ -3343,8 +3371,18 @@ let enumsMap: {[index: string]: any} = {
         "FloatingLegAllOf.InstrumentTypeEnum": FloatingLegAllOf.InstrumentTypeEnum,
         "ForwardRateAgreement.InstrumentTypeEnum": ForwardRateAgreement.InstrumentTypeEnum,
         "ForwardRateAgreementAllOf.InstrumentTypeEnum": ForwardRateAgreementAllOf.InstrumentTypeEnum,
+        "FundBookmark.EntryTypeEnum": FundBookmark.EntryTypeEnum,
+        "FundBookmark.FundCalendarEntriesTypeEnum": FundBookmark.FundCalendarEntriesTypeEnum,
+        "FundBookmarkAllOf.EntryTypeEnum": FundBookmarkAllOf.EntryTypeEnum,
+        "FundBookmarkAllOf.FundCalendarEntriesTypeEnum": FundBookmarkAllOf.FundCalendarEntriesTypeEnum,
+        "FundCalendarEntries.FundCalendarEntriesTypeEnum": FundCalendarEntries.FundCalendarEntriesTypeEnum,
+        "FundCalendarEntriesType": FundCalendarEntriesType,
         "FundCalendarEntry.EntryTypeEnum": FundCalendarEntry.EntryTypeEnum,
         "FundCalendarEntryType": FundCalendarEntryType,
+        "FundEstimateValuationPoint.EntryTypeEnum": FundEstimateValuationPoint.EntryTypeEnum,
+        "FundEstimateValuationPoint.FundCalendarEntriesTypeEnum": FundEstimateValuationPoint.FundCalendarEntriesTypeEnum,
+        "FundEstimateValuationPointAllOf.EntryTypeEnum": FundEstimateValuationPointAllOf.EntryTypeEnum,
+        "FundEstimateValuationPointAllOf.FundCalendarEntriesTypeEnum": FundEstimateValuationPointAllOf.FundCalendarEntriesTypeEnum,
         "FundIdList.ReferenceListTypeEnum": FundIdList.ReferenceListTypeEnum,
         "FundIdListAllOf.ReferenceListTypeEnum": FundIdListAllOf.ReferenceListTypeEnum,
         "FundShareClass.InstrumentTypeEnum": FundShareClass.InstrumentTypeEnum,
@@ -3569,6 +3607,8 @@ let enumsMap: {[index: string]: any} = {
         "PropertyValueIn.CriterionTypeEnum": PropertyValueIn.CriterionTypeEnum,
         "PropertyValueInAllOf.CriterionTypeEnum": PropertyValueInAllOf.CriterionTypeEnum,
         "ProtectionPayoutCashFlowEvent.InstrumentEventTypeEnum": ProtectionPayoutCashFlowEvent.InstrumentEventTypeEnum,
+        "QuoteActivity.NavActivityAdjustmentTypeEnum": QuoteActivity.NavActivityAdjustmentTypeEnum,
+        "QuoteActivityAllOf.NavActivityAdjustmentTypeEnum": QuoteActivityAllOf.NavActivityAdjustmentTypeEnum,
         "QuoteDependency.DependencyTypeEnum": QuoteDependency.DependencyTypeEnum,
         "QuoteDependencyAllOf.DependencyTypeEnum": QuoteDependencyAllOf.DependencyTypeEnum,
         "QuoteInstrumentIdType": QuoteInstrumentIdType,
@@ -4145,6 +4185,7 @@ let typeMap: {[index: string]: any} = {
     "EquityVolSurfaceData": EquityVolSurfaceData,
     "EquityVolSurfaceDataAllOf": EquityVolSurfaceDataAllOf,
     "ErrorDetail": ErrorDetail,
+    "EstimateVariant": EstimateVariant,
     "EventDateRange": EventDateRange,
     "ExDividendConfiguration": ExDividendConfiguration,
     "ExchangeTradedOption": ExchangeTradedOption,
@@ -4180,6 +4221,8 @@ let typeMap: {[index: string]: any} = {
     "FilterPredicateComplianceParameterAllOf": FilterPredicateComplianceParameterAllOf,
     "FilterStep": FilterStep,
     "FilterStepRequest": FilterStepRequest,
+    "FinalisedValuationPoint": FinalisedValuationPoint,
+    "FinalisedValuationPointAllOf": FinalisedValuationPointAllOf,
     "FixedLeg": FixedLeg,
     "FixedLegAllOf": FixedLegAllOf,
     "FixedLegAllOfOverrides": FixedLegAllOfOverrides,
@@ -4212,12 +4255,17 @@ let typeMap: {[index: string]: any} = {
     "FromRecipe": FromRecipe,
     "Fund": Fund,
     "FundAmount": FundAmount,
+    "FundBookmark": FundBookmark,
+    "FundBookmarkAllOf": FundBookmarkAllOf,
+    "FundCalendarEntries": FundCalendarEntries,
     "FundCalendarEntry": FundCalendarEntry,
     "FundConfiguration": FundConfiguration,
     "FundConfigurationProperties": FundConfigurationProperties,
     "FundConfigurationRequest": FundConfigurationRequest,
     "FundDefinitionRequest": FundDefinitionRequest,
     "FundDetails": FundDetails,
+    "FundEstimateValuationPoint": FundEstimateValuationPoint,
+    "FundEstimateValuationPointAllOf": FundEstimateValuationPointAllOf,
     "FundIdList": FundIdList,
     "FundIdListAllOf": FundIdListAllOf,
     "FundJournalEntryLine": FundJournalEntryLine,
@@ -4577,6 +4625,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfFee": PagedResourceListOfFee,
     "PagedResourceListOfFeeType": PagedResourceListOfFeeType,
     "PagedResourceListOfFund": PagedResourceListOfFund,
+    "PagedResourceListOfFundCalendarEntries": PagedResourceListOfFundCalendarEntries,
     "PagedResourceListOfFundCalendarEntry": PagedResourceListOfFundCalendarEntry,
     "PagedResourceListOfFundConfiguration": PagedResourceListOfFundConfiguration,
     "PagedResourceListOfGeneralLedgerProfileResponse": PagedResourceListOfGeneralLedgerProfileResponse,
@@ -4719,6 +4768,8 @@ let typeMap: {[index: string]: any} = {
     "Quote": Quote,
     "QuoteAccessMetadataRule": QuoteAccessMetadataRule,
     "QuoteAccessMetadataRuleId": QuoteAccessMetadataRuleId,
+    "QuoteActivity": QuoteActivity,
+    "QuoteActivityAllOf": QuoteActivityAllOf,
     "QuoteDependency": QuoteDependency,
     "QuoteDependencyAllOf": QuoteDependencyAllOf,
     "QuoteId": QuoteId,
