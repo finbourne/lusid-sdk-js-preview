@@ -823,6 +823,7 @@ export * from './movementType';
 export * from './multiCurrencyAmounts';
 export * from './navActivityAdjustment';
 export * from './navActivityAdjustmentType';
+export * from './navType';
 export * from './navTypeDefinition';
 export * from './newInstrument';
 export * from './nextValueInSequenceResponse';
@@ -2392,6 +2393,7 @@ import { MovementType } from './movementType';
 import { MultiCurrencyAmounts } from './multiCurrencyAmounts';
 import { NavActivityAdjustment } from './navActivityAdjustment';
 import { NavActivityAdjustmentType } from './navActivityAdjustmentType';
+import { NavType } from './navType';
 import { NavTypeDefinition } from './navTypeDefinition';
 import { NewInstrument } from './newInstrument';
 import { NextValueInSequenceResponse } from './nextValueInSequenceResponse';
@@ -4539,6 +4541,7 @@ let typeMap: {[index: string]: any} = {
     "MovementSettlementSummary": MovementSettlementSummary,
     "MultiCurrencyAmounts": MultiCurrencyAmounts,
     "NavActivityAdjustment": NavActivityAdjustment,
+    "NavType": NavType,
     "NavTypeDefinition": NavTypeDefinition,
     "NewInstrument": NewInstrument,
     "NextValueInSequenceResponse": NextValueInSequenceResponse,
