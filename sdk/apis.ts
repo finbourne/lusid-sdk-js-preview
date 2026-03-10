@@ -59,6 +59,7 @@ import {RelationDefinitionsApi} from './api/relationDefinitionsApi';
 import {RelationsApi} from './api/relationsApi';
 import {RelationshipDefinitionsApi} from './api/relationshipDefinitionsApi';
 import {RelationshipsApi} from './api/relationshipsApi';
+import {ResourceRecordApi} from './api/resourceRecordApi';
 import {SchemasApi} from './api/schemasApi';
 import {ScopesApi} from './api/scopesApi';
 import {ScriptedTranslationApi} from './api/scriptedTranslationApi';
@@ -141,6 +142,7 @@ export class Api {
     public relations:  RelationsApi
     public relationshipDefinitions:  RelationshipDefinitionsApi
     public relationships:  RelationshipsApi
+    public resourceRecord:  ResourceRecordApi
     public schemas:  SchemasApi
     public scopes:  ScopesApi
     public scriptedTranslation:  ScriptedTranslationApi
