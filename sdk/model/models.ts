@@ -641,6 +641,7 @@ export * from './groupReconciliationDefinitionComparisonRulesetIds';
 export * from './groupReconciliationDefinitionCurrencies';
 export * from './groupReconciliationDefinitionPortfolioEntityIds';
 export * from './groupReconciliationDefinitionRecipeIds';
+export * from './groupReconciliationFilters';
 export * from './groupReconciliationInstanceId';
 export * from './groupReconciliationResultStatuses';
 export * from './groupReconciliationResultTypes';
@@ -2214,6 +2215,7 @@ import { GroupReconciliationDefinitionComparisonRulesetIds } from './groupReconc
 import { GroupReconciliationDefinitionCurrencies } from './groupReconciliationDefinitionCurrencies';
 import { GroupReconciliationDefinitionPortfolioEntityIds } from './groupReconciliationDefinitionPortfolioEntityIds';
 import { GroupReconciliationDefinitionRecipeIds } from './groupReconciliationDefinitionRecipeIds';
+import { GroupReconciliationFilters } from './groupReconciliationFilters';
 import { GroupReconciliationInstanceId } from './groupReconciliationInstanceId';
 import { GroupReconciliationResultStatuses } from './groupReconciliationResultStatuses';
 import { GroupReconciliationResultTypes } from './groupReconciliationResultTypes';
@@ -4374,6 +4376,7 @@ let typeMap: {[index: string]: any} = {
     "GroupReconciliationDefinitionCurrencies": GroupReconciliationDefinitionCurrencies,
     "GroupReconciliationDefinitionPortfolioEntityIds": GroupReconciliationDefinitionPortfolioEntityIds,
     "GroupReconciliationDefinitionRecipeIds": GroupReconciliationDefinitionRecipeIds,
+    "GroupReconciliationFilters": GroupReconciliationFilters,
     "GroupReconciliationInstanceId": GroupReconciliationInstanceId,
     "GroupReconciliationResultStatuses": GroupReconciliationResultStatuses,
     "GroupReconciliationResultTypes": GroupReconciliationResultTypes,
