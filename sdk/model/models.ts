@@ -57,6 +57,11 @@ export * from './aggregationQuery';
 export * from './aggregationType';
 export * from './alias';
 export * from './allocation';
+export * from './allocationGroup';
+export * from './allocationGroupClass';
+export * from './allocationGroupClassDefinition';
+export * from './allocationGroupDefinition';
+export * from './allocationMethodProperty';
 export * from './allocationRequest';
 export * from './allocationServiceRunResponse';
 export * from './allocationSetRequest';
@@ -1282,10 +1287,12 @@ export * from './settlementInstructionRequest';
 export * from './settlementInstructionWithTransaction';
 export * from './settlementProblem';
 export * from './settlementSchedule';
+export * from './shareClass';
 export * from './shareClassAmount';
 export * from './shareClassBreakdown';
 export * from './shareClassData';
 export * from './shareClassDealingBreakdown';
+export * from './shareClassDefinition';
 export * from './shareClassDetails';
 export * from './shareClassPnlBreakdown';
 export * from './sideConfigurationData';
@@ -1631,6 +1638,11 @@ import { AggregationQuery } from './aggregationQuery';
 import { AggregationType } from './aggregationType';
 import { Alias } from './alias';
 import { Allocation } from './allocation';
+import { AllocationGroup } from './allocationGroup';
+import { AllocationGroupClass } from './allocationGroupClass';
+import { AllocationGroupClassDefinition } from './allocationGroupClassDefinition';
+import { AllocationGroupDefinition } from './allocationGroupDefinition';
+import { AllocationMethodProperty } from './allocationMethodProperty';
 import { AllocationRequest } from './allocationRequest';
 import { AllocationServiceRunResponse } from './allocationServiceRunResponse';
 import { AllocationSetRequest } from './allocationSetRequest';
@@ -2856,10 +2868,12 @@ import { SettlementInstructionRequest } from './settlementInstructionRequest';
 import { SettlementInstructionWithTransaction } from './settlementInstructionWithTransaction';
 import { SettlementProblem } from './settlementProblem';
 import { SettlementSchedule } from './settlementSchedule';
+import { ShareClass } from './shareClass';
 import { ShareClassAmount } from './shareClassAmount';
 import { ShareClassBreakdown } from './shareClassBreakdown';
 import { ShareClassData } from './shareClassData';
 import { ShareClassDealingBreakdown } from './shareClassDealingBreakdown';
+import { ShareClassDefinition } from './shareClassDefinition';
 import { ShareClassDetails } from './shareClassDetails';
 import { ShareClassPnlBreakdown } from './shareClassPnlBreakdown';
 import { SideConfigurationData } from './sideConfigurationData';
@@ -3807,6 +3821,11 @@ let typeMap: {[index: string]: any} = {
     "AggregationQuery": AggregationQuery,
     "Alias": Alias,
     "Allocation": Allocation,
+    "AllocationGroup": AllocationGroup,
+    "AllocationGroupClass": AllocationGroupClass,
+    "AllocationGroupClassDefinition": AllocationGroupClassDefinition,
+    "AllocationGroupDefinition": AllocationGroupDefinition,
+    "AllocationMethodProperty": AllocationMethodProperty,
     "AllocationRequest": AllocationRequest,
     "AllocationServiceRunResponse": AllocationServiceRunResponse,
     "AllocationSetRequest": AllocationSetRequest,
@@ -4987,10 +5006,12 @@ let typeMap: {[index: string]: any} = {
     "SettlementInstructionWithTransaction": SettlementInstructionWithTransaction,
     "SettlementProblem": SettlementProblem,
     "SettlementSchedule": SettlementSchedule,
+    "ShareClass": ShareClass,
     "ShareClassAmount": ShareClassAmount,
     "ShareClassBreakdown": ShareClassBreakdown,
     "ShareClassData": ShareClassData,
     "ShareClassDealingBreakdown": ShareClassDealingBreakdown,
+    "ShareClassDefinition": ShareClassDefinition,
     "ShareClassDetails": ShareClassDetails,
     "ShareClassPnlBreakdown": ShareClassPnlBreakdown,
     "SideConfigurationData": SideConfigurationData,
