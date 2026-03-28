@@ -61,7 +61,6 @@ export * from './allocationGroup';
 export * from './allocationGroupClass';
 export * from './allocationGroupClassDefinition';
 export * from './allocationGroupDefinition';
-export * from './allocationMethodProperty';
 export * from './allocationRequest';
 export * from './allocationServiceRunResponse';
 export * from './allocationSetRequest';
@@ -89,6 +88,7 @@ export * from './appendMarketDataType';
 export * from './applicableEntity';
 export * from './applicableEntityTypes';
 export * from './applicableInstrumentEvent';
+export * from './apportionmentMethodProperty';
 export * from './assetClass';
 export * from './assetLeg';
 export * from './barrier';
@@ -1562,6 +1562,7 @@ export * from './workspaceCreationRequest';
 export * from './workspaceItem';
 export * from './workspaceItemCreationRequest';
 export * from './workspaceItemUpdateRequest';
+export * from './workspacePermittedItemActions';
 export * from './workspaceUpdateRequest';
 export * from './workspaceVisibility';
 export * from './yearMonthDay';
@@ -1642,7 +1643,6 @@ import { AllocationGroup } from './allocationGroup';
 import { AllocationGroupClass } from './allocationGroupClass';
 import { AllocationGroupClassDefinition } from './allocationGroupClassDefinition';
 import { AllocationGroupDefinition } from './allocationGroupDefinition';
-import { AllocationMethodProperty } from './allocationMethodProperty';
 import { AllocationRequest } from './allocationRequest';
 import { AllocationServiceRunResponse } from './allocationServiceRunResponse';
 import { AllocationSetRequest } from './allocationSetRequest';
@@ -1670,6 +1670,7 @@ import { AppendMarketDataType } from './appendMarketDataType';
 import { ApplicableEntity } from './applicableEntity';
 import { ApplicableEntityTypes } from './applicableEntityTypes';
 import { ApplicableInstrumentEvent } from './applicableInstrumentEvent';
+import { ApportionmentMethodProperty } from './apportionmentMethodProperty';
 import { AssetClass } from './assetClass';
 import { AssetLeg } from './assetLeg';
 import { Barrier } from './barrier';
@@ -3143,6 +3144,7 @@ import { WorkspaceCreationRequest } from './workspaceCreationRequest';
 import { WorkspaceItem } from './workspaceItem';
 import { WorkspaceItemCreationRequest } from './workspaceItemCreationRequest';
 import { WorkspaceItemUpdateRequest } from './workspaceItemUpdateRequest';
+import { WorkspacePermittedItemActions } from './workspacePermittedItemActions';
 import { WorkspaceUpdateRequest } from './workspaceUpdateRequest';
 import { WorkspaceVisibility } from './workspaceVisibility';
 import { YearMonthDay } from './yearMonthDay';
@@ -3825,7 +3827,6 @@ let typeMap: {[index: string]: any} = {
     "AllocationGroupClass": AllocationGroupClass,
     "AllocationGroupClassDefinition": AllocationGroupClassDefinition,
     "AllocationGroupDefinition": AllocationGroupDefinition,
-    "AllocationMethodProperty": AllocationMethodProperty,
     "AllocationRequest": AllocationRequest,
     "AllocationServiceRunResponse": AllocationServiceRunResponse,
     "AllocationSetRequest": AllocationSetRequest,
@@ -3852,6 +3853,7 @@ let typeMap: {[index: string]: any} = {
     "ApplicableEntity": ApplicableEntity,
     "ApplicableEntityTypes": ApplicableEntityTypes,
     "ApplicableInstrumentEvent": ApplicableInstrumentEvent,
+    "ApportionmentMethodProperty": ApportionmentMethodProperty,
     "AssetLeg": AssetLeg,
     "Barrier": Barrier,
     "Basket": Basket,
@@ -5270,6 +5272,7 @@ let typeMap: {[index: string]: any} = {
     "WorkspaceItem": WorkspaceItem,
     "WorkspaceItemCreationRequest": WorkspaceItemCreationRequest,
     "WorkspaceItemUpdateRequest": WorkspaceItemUpdateRequest,
+    "WorkspacePermittedItemActions": WorkspacePermittedItemActions,
     "WorkspaceUpdateRequest": WorkspaceUpdateRequest,
     "YearMonthDay": YearMonthDay,
     "YieldCurveData": YieldCurveData,
