@@ -888,6 +888,7 @@ export * from './orderUpdateRequest';
 export * from './otcConfirmation';
 export * from './outputTransaction';
 export * from './outputTransition';
+export * from './overrideVirtualTransactionsResponse';
 export * from './package';
 export * from './packageRequest';
 export * from './packageSetRequest';
@@ -1269,6 +1270,9 @@ export * from './scriptMapReference';
 export * from './securityElection';
 export * from './securityOfferElection';
 export * from './sequenceDefinition';
+export * from './series';
+export * from './seriesDefinition';
+export * from './seriesDefinitionRequest';
 export * from './setAmortisationRulesRequest';
 export * from './setLegalEntityIdentifiersRequest';
 export * from './setLegalEntityPropertiesRequest';
@@ -2470,6 +2474,7 @@ import { OrderUpdateRequest } from './orderUpdateRequest';
 import { OtcConfirmation } from './otcConfirmation';
 import { OutputTransaction } from './outputTransaction';
 import { OutputTransition } from './outputTransition';
+import { OverrideVirtualTransactionsResponse } from './overrideVirtualTransactionsResponse';
 import { Package } from './package';
 import { PackageRequest } from './packageRequest';
 import { PackageSetRequest } from './packageSetRequest';
@@ -2851,6 +2856,9 @@ import { ScriptMapReference } from './scriptMapReference';
 import { SecurityElection } from './securityElection';
 import { SecurityOfferElection } from './securityOfferElection';
 import { SequenceDefinition } from './sequenceDefinition';
+import { Series } from './series';
+import { SeriesDefinition } from './seriesDefinition';
+import { SeriesDefinitionRequest } from './seriesDefinitionRequest';
 import { SetAmortisationRulesRequest } from './setAmortisationRulesRequest';
 import { SetLegalEntityIdentifiersRequest } from './setLegalEntityIdentifiersRequest';
 import { SetLegalEntityPropertiesRequest } from './setLegalEntityPropertiesRequest';
@@ -4626,6 +4634,7 @@ let typeMap: {[index: string]: any} = {
     "OtcConfirmation": OtcConfirmation,
     "OutputTransaction": OutputTransaction,
     "OutputTransition": OutputTransition,
+    "OverrideVirtualTransactionsResponse": OverrideVirtualTransactionsResponse,
     "Package": Package,
     "PackageRequest": PackageRequest,
     "PackageSetRequest": PackageSetRequest,
@@ -4990,6 +4999,9 @@ let typeMap: {[index: string]: any} = {
     "SecurityElection": SecurityElection,
     "SecurityOfferElection": SecurityOfferElection,
     "SequenceDefinition": SequenceDefinition,
+    "Series": Series,
+    "SeriesDefinition": SeriesDefinition,
+    "SeriesDefinitionRequest": SeriesDefinitionRequest,
     "SetAmortisationRulesRequest": SetAmortisationRulesRequest,
     "SetLegalEntityIdentifiersRequest": SetLegalEntityIdentifiersRequest,
     "SetLegalEntityPropertiesRequest": SetLegalEntityPropertiesRequest,
