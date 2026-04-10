@@ -1018,6 +1018,7 @@ export * from './portfolioTradeTicket';
 export * from './portfolioTransaction';
 export * from './portfolioTransactionAllOf';
 export * from './portfolioType';
+export * from './portfolioWeight';
 export * from './portfolioWithoutHref';
 export * from './portfoliosReconciliationRequest';
 export * from './postCloseActivitiesRequest';
@@ -1558,6 +1559,7 @@ export * from './virtualDocumentRow';
 export * from './virtualRow';
 export * from './warning';
 export * from './weekendMask';
+export * from './weightedAllocationServiceRunRequest';
 export * from './weightedInstrument';
 export * from './weightedInstrumentInLineLookupIdentifiers';
 export * from './weightedInstruments';
@@ -2604,6 +2606,7 @@ import { PortfolioTradeTicket } from './portfolioTradeTicket';
 import { PortfolioTransaction } from './portfolioTransaction';
 import { PortfolioTransactionAllOf } from './portfolioTransactionAllOf';
 import { PortfolioType } from './portfolioType';
+import { PortfolioWeight } from './portfolioWeight';
 import { PortfolioWithoutHref } from './portfolioWithoutHref';
 import { PortfoliosReconciliationRequest } from './portfoliosReconciliationRequest';
 import { PostCloseActivitiesRequest } from './postCloseActivitiesRequest';
@@ -3144,6 +3147,7 @@ import { VirtualDocumentRow } from './virtualDocumentRow';
 import { VirtualRow } from './virtualRow';
 import { Warning } from './warning';
 import { WeekendMask } from './weekendMask';
+import { WeightedAllocationServiceRunRequest } from './weightedAllocationServiceRunRequest';
 import { WeightedInstrument } from './weightedInstrument';
 import { WeightedInstrumentInLineLookupIdentifiers } from './weightedInstrumentInLineLookupIdentifiers';
 import { WeightedInstruments } from './weightedInstruments';
@@ -4761,6 +4765,7 @@ let typeMap: {[index: string]: any} = {
     "PortfolioTradeTicket": PortfolioTradeTicket,
     "PortfolioTransaction": PortfolioTransaction,
     "PortfolioTransactionAllOf": PortfolioTransactionAllOf,
+    "PortfolioWeight": PortfolioWeight,
     "PortfolioWithoutHref": PortfolioWithoutHref,
     "PortfoliosReconciliationRequest": PortfoliosReconciliationRequest,
     "PostCloseActivitiesRequest": PostCloseActivitiesRequest,
@@ -5276,6 +5281,7 @@ let typeMap: {[index: string]: any} = {
     "VirtualRow": VirtualRow,
     "Warning": Warning,
     "WeekendMask": WeekendMask,
+    "WeightedAllocationServiceRunRequest": WeightedAllocationServiceRunRequest,
     "WeightedInstrument": WeightedInstrument,
     "WeightedInstrumentInLineLookupIdentifiers": WeightedInstrumentInLineLookupIdentifiers,
     "WeightedInstruments": WeightedInstruments,
