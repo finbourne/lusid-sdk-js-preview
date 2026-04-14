@@ -1318,6 +1318,7 @@ export * from './stagedModification';
 export * from './stagedModificationDecision';
 export * from './stagedModificationDecisionRequest';
 export * from './stagedModificationEffectiveRange';
+export * from './stagedModificationSourceEntity';
 export * from './stagedModificationStagingRule';
 export * from './stagedModificationsEntityHrefs';
 export * from './stagedModificationsInfo';
@@ -1379,6 +1380,7 @@ export * from './transactionCurrencyAndAmount';
 export * from './transactionDateWindows';
 export * from './transactionDiagnostics';
 export * from './transactionFee';
+export * from './transactionFeeCapitalisation';
 export * from './transactionFieldMap';
 export * from './transactionMatchingAlternativeId';
 export * from './transactionPrice';
@@ -2906,6 +2908,7 @@ import { StagedModification } from './stagedModification';
 import { StagedModificationDecision } from './stagedModificationDecision';
 import { StagedModificationDecisionRequest } from './stagedModificationDecisionRequest';
 import { StagedModificationEffectiveRange } from './stagedModificationEffectiveRange';
+import { StagedModificationSourceEntity } from './stagedModificationSourceEntity';
 import { StagedModificationStagingRule } from './stagedModificationStagingRule';
 import { StagedModificationsEntityHrefs } from './stagedModificationsEntityHrefs';
 import { StagedModificationsInfo } from './stagedModificationsInfo';
@@ -2967,6 +2970,7 @@ import { TransactionCurrencyAndAmount } from './transactionCurrencyAndAmount';
 import { TransactionDateWindows } from './transactionDateWindows';
 import { TransactionDiagnostics } from './transactionDiagnostics';
 import { TransactionFee } from './transactionFee';
+import { TransactionFeeCapitalisation } from './transactionFeeCapitalisation';
 import { TransactionFieldMap } from './transactionFieldMap';
 import { TransactionMatchingAlternativeId } from './transactionMatchingAlternativeId';
 import { TransactionPrice } from './transactionPrice';
@@ -5050,6 +5054,7 @@ let typeMap: {[index: string]: any} = {
     "StagedModificationDecision": StagedModificationDecision,
     "StagedModificationDecisionRequest": StagedModificationDecisionRequest,
     "StagedModificationEffectiveRange": StagedModificationEffectiveRange,
+    "StagedModificationSourceEntity": StagedModificationSourceEntity,
     "StagedModificationStagingRule": StagedModificationStagingRule,
     "StagedModificationsEntityHrefs": StagedModificationsEntityHrefs,
     "StagedModificationsInfo": StagedModificationsInfo,
@@ -5109,6 +5114,7 @@ let typeMap: {[index: string]: any} = {
     "TransactionDateWindows": TransactionDateWindows,
     "TransactionDiagnostics": TransactionDiagnostics,
     "TransactionFee": TransactionFee,
+    "TransactionFeeCapitalisation": TransactionFeeCapitalisation,
     "TransactionFieldMap": TransactionFieldMap,
     "TransactionMatchingAlternativeId": TransactionMatchingAlternativeId,
     "TransactionPrice": TransactionPrice,
