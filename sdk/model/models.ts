@@ -499,6 +499,8 @@ export * from './filterPredicateComplianceParameter';
 export * from './filterPredicateComplianceParameterAllOf';
 export * from './filterStep';
 export * from './filterStepRequest';
+export * from './filteredFundIdList';
+export * from './filteredFundIdListAllOf';
 export * from './finalisedValuationPoint';
 export * from './finalisedValuationPointAllOf';
 export * from './fixedLeg';
@@ -2089,6 +2091,8 @@ import { FilterPredicateComplianceParameter } from './filterPredicateComplianceP
 import { FilterPredicateComplianceParameterAllOf } from './filterPredicateComplianceParameterAllOf';
 import { FilterStep } from './filterStep';
 import { FilterStepRequest } from './filterStepRequest';
+import { FilteredFundIdList } from './filteredFundIdList';
+import { FilteredFundIdListAllOf } from './filteredFundIdListAllOf';
 import { FinalisedValuationPoint } from './finalisedValuationPoint';
 import { FinalisedValuationPointAllOf } from './finalisedValuationPointAllOf';
 import { FixedLeg } from './fixedLeg';
@@ -3383,6 +3387,8 @@ let enumsMap: {[index: string]: any} = {
         "FilterPredicateComplianceParameterAllOf.ComplianceParameterTypeEnum": FilterPredicateComplianceParameterAllOf.ComplianceParameterTypeEnum,
         "FilterStep.ComplianceStepTypeEnum": FilterStep.ComplianceStepTypeEnum,
         "FilterStepRequest.ComplianceStepTypeRequestEnum": FilterStepRequest.ComplianceStepTypeRequestEnum,
+        "FilteredFundIdList.ReferenceListTypeEnum": FilteredFundIdList.ReferenceListTypeEnum,
+        "FilteredFundIdListAllOf.ReferenceListTypeEnum": FilteredFundIdListAllOf.ReferenceListTypeEnum,
         "FinalisedValuationPoint.EntryTypeEnum": FinalisedValuationPoint.EntryTypeEnum,
         "FinalisedValuationPoint.FundCalendarEntriesTypeEnum": FinalisedValuationPoint.FundCalendarEntriesTypeEnum,
         "FinalisedValuationPointAllOf.EntryTypeEnum": FinalisedValuationPointAllOf.EntryTypeEnum,
@@ -4268,6 +4274,8 @@ let typeMap: {[index: string]: any} = {
     "FilterPredicateComplianceParameterAllOf": FilterPredicateComplianceParameterAllOf,
     "FilterStep": FilterStep,
     "FilterStepRequest": FilterStepRequest,
+    "FilteredFundIdList": FilteredFundIdList,
+    "FilteredFundIdListAllOf": FilteredFundIdListAllOf,
     "FinalisedValuationPoint": FinalisedValuationPoint,
     "FinalisedValuationPointAllOf": FinalisedValuationPointAllOf,
     "FixedLeg": FixedLeg,
