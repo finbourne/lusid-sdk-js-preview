@@ -9,7 +9,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "2.0.1519",
+    "version": "2.0.1520",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -211901,7 +211901,7 @@
             "items": {
               "$ref": "#/components/schemas/PortfolioEntityIdWithDetails"
             },
-            "description": "A list of the portfolios on the fund, which are part of the Fund. Note: These must all have the same base currency, which must also much the Fund Base Currency.",
+            "description": "A list of the portfolios on the fund, which are part of the Fund. Note: These must all have the same base currency, which must also match the Fund Base Currency.",
             "nullable": true
           },
           "fundConfigurationId": {
@@ -212492,7 +212492,7 @@
             "items": {
               "$ref": "#/components/schemas/PortfolioEntityId"
             },
-            "description": "A list of the Portfolio IDs associated with the fund, which are part of the Fund. Note: These must all have the same base currency, which must also much the Fund Base Currency."
+            "description": "A list of the Portfolio IDs associated with the fund, which are part of the Fund. Note: These must all have the same base currency, which must also match the Fund Base Currency."
           },
           "fundConfigurationId": {
             "$ref": "#/components/schemas/ResourceId"
@@ -213312,7 +213312,7 @@
             "additionalProperties": {
               "$ref": "#/components/schemas/FundAmount"
             },
-            "description": "Bucket of detail for any 'Dealing' that has occured inside the queried period."
+            "description": "Bucket of detail for any 'Dealing' that has occurred inside the queried period."
           },
           "pnL": {
             "$ref": "#/components/schemas/FundPnlBreakdown"
@@ -234113,7 +234113,7 @@
           },
           "derivationFormula": {
             "type": "string",
-            "description": "Derivation formula for when the for when the query key represents a DerivedValuation property.",
+            "description": "Derivation formula for when the query key represents a DerivedValuation property.",
             "nullable": true
           }
         },
@@ -239901,7 +239901,7 @@
           },
           "description": {
             "type": "string",
-            "description": "The description of what occured for this specific piece of meta data",
+            "description": "The description of what occurred for this specific piece of meta data",
             "nullable": true
           },
           "identifierType": {
@@ -242074,14 +242074,14 @@
             "additionalProperties": {
               "$ref": "#/components/schemas/ShareClassAmount"
             },
-            "description": "Bucket of detail for any 'Dealing' specific to the share class that has occured inside the queried period."
+            "description": "Bucket of detail for any 'Dealing' specific to the share class that has occurred inside the queried period."
           },
           "classDealingUnits": {
             "type": "object",
             "additionalProperties": {
               "$ref": "#/components/schemas/Amount"
             },
-            "description": "Bucket of detail for any 'Dealing' units specific to the share class that has occured inside the queried period."
+            "description": "Bucket of detail for any 'Dealing' units specific to the share class that has occurred inside the queried period."
           }
         },
         "additionalProperties": false,
