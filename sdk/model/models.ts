@@ -271,6 +271,8 @@ export * from './compositeDispersion';
 export * from './compositeDispersionResponse';
 export * from './compounding';
 export * from './configurationRecipe';
+export * from './consentEvent';
+export * from './consentEventAllOf';
 export * from './constantVolatilitySurface';
 export * from './constantVolatilitySurfaceAllOf';
 export * from './constituentsAdjustmentHeader';
@@ -541,6 +543,7 @@ export * from './fundCalendarEntries';
 export * from './fundCalendarEntriesType';
 export * from './fundCalendarEntry';
 export * from './fundCalendarEntryType';
+export * from './fundCashStatementRow';
 export * from './fundConfiguration';
 export * from './fundConfigurationProperties';
 export * from './fundConfigurationRequest';
@@ -1069,6 +1072,7 @@ export * from './quantityInstructed';
 export * from './queryApplicableInstrumentEventsRequest';
 export * from './queryBucketedCashFlowsRequest';
 export * from './queryCashFlowsRequest';
+export * from './queryFundCashStatementParameters';
 export * from './queryInstrumentEventsRequest';
 export * from './queryRelationalDatasetRequest';
 export * from './queryTradeTicketsRequest';
@@ -1534,6 +1538,7 @@ export * from './valuationPointDataRequest';
 export * from './valuationPointDataResponse';
 export * from './valuationPointOverview';
 export * from './valuationPointResourceListOfAccountedTransaction';
+export * from './valuationPointResourceListOfFundCashStatementRow';
 export * from './valuationPointResourceListOfFundJournalEntryLine';
 export * from './valuationPointResourceListOfPnlJournalEntryLine';
 export * from './valuationPointResourceListOfTrialBalance';
@@ -1863,6 +1868,8 @@ import { CompositeDispersion } from './compositeDispersion';
 import { CompositeDispersionResponse } from './compositeDispersionResponse';
 import { Compounding } from './compounding';
 import { ConfigurationRecipe } from './configurationRecipe';
+import { ConsentEvent } from './consentEvent';
+import { ConsentEventAllOf } from './consentEventAllOf';
 import { ConstantVolatilitySurface } from './constantVolatilitySurface';
 import { ConstantVolatilitySurfaceAllOf } from './constantVolatilitySurfaceAllOf';
 import { ConstituentsAdjustmentHeader } from './constituentsAdjustmentHeader';
@@ -2133,6 +2140,7 @@ import { FundCalendarEntries } from './fundCalendarEntries';
 import { FundCalendarEntriesType } from './fundCalendarEntriesType';
 import { FundCalendarEntry } from './fundCalendarEntry';
 import { FundCalendarEntryType } from './fundCalendarEntryType';
+import { FundCashStatementRow } from './fundCashStatementRow';
 import { FundConfiguration } from './fundConfiguration';
 import { FundConfigurationProperties } from './fundConfigurationProperties';
 import { FundConfigurationRequest } from './fundConfigurationRequest';
@@ -2661,6 +2669,7 @@ import { QuantityInstructed } from './quantityInstructed';
 import { QueryApplicableInstrumentEventsRequest } from './queryApplicableInstrumentEventsRequest';
 import { QueryBucketedCashFlowsRequest } from './queryBucketedCashFlowsRequest';
 import { QueryCashFlowsRequest } from './queryCashFlowsRequest';
+import { QueryFundCashStatementParameters } from './queryFundCashStatementParameters';
 import { QueryInstrumentEventsRequest } from './queryInstrumentEventsRequest';
 import { QueryRelationalDatasetRequest } from './queryRelationalDatasetRequest';
 import { QueryTradeTicketsRequest } from './queryTradeTicketsRequest';
@@ -3126,6 +3135,7 @@ import { ValuationPointDataRequest } from './valuationPointDataRequest';
 import { ValuationPointDataResponse } from './valuationPointDataResponse';
 import { ValuationPointOverview } from './valuationPointOverview';
 import { ValuationPointResourceListOfAccountedTransaction } from './valuationPointResourceListOfAccountedTransaction';
+import { ValuationPointResourceListOfFundCashStatementRow } from './valuationPointResourceListOfFundCashStatementRow';
 import { ValuationPointResourceListOfFundJournalEntryLine } from './valuationPointResourceListOfFundJournalEntryLine';
 import { ValuationPointResourceListOfPnlJournalEntryLine } from './valuationPointResourceListOfPnlJournalEntryLine';
 import { ValuationPointResourceListOfTrialBalance } from './valuationPointResourceListOfTrialBalance';
@@ -3288,6 +3298,8 @@ let enumsMap: {[index: string]: any} = {
         "ComplianceStepRequest.ComplianceStepTypeRequestEnum": ComplianceStepRequest.ComplianceStepTypeRequestEnum,
         "ComplianceStepType": ComplianceStepType,
         "ComplianceStepTypeRequest": ComplianceStepTypeRequest,
+        "ConsentEvent.InstrumentEventTypeEnum": ConsentEvent.InstrumentEventTypeEnum,
+        "ConsentEventAllOf.InstrumentEventTypeEnum": ConsentEventAllOf.InstrumentEventTypeEnum,
         "ConstantVolatilitySurface.MarketDataTypeEnum": ConstantVolatilitySurface.MarketDataTypeEnum,
         "ConstantVolatilitySurfaceAllOf.MarketDataTypeEnum": ConstantVolatilitySurfaceAllOf.MarketDataTypeEnum,
         "ContractForDifference.InstrumentTypeEnum": ContractForDifference.InstrumentTypeEnum,
@@ -4053,6 +4065,8 @@ let typeMap: {[index: string]: any} = {
     "CompositeDispersionResponse": CompositeDispersionResponse,
     "Compounding": Compounding,
     "ConfigurationRecipe": ConfigurationRecipe,
+    "ConsentEvent": ConsentEvent,
+    "ConsentEventAllOf": ConsentEventAllOf,
     "ConstantVolatilitySurface": ConstantVolatilitySurface,
     "ConstantVolatilitySurfaceAllOf": ConstantVolatilitySurfaceAllOf,
     "ConstituentsAdjustmentHeader": ConstituentsAdjustmentHeader,
@@ -4314,6 +4328,7 @@ let typeMap: {[index: string]: any} = {
     "FundBookmarkAllOf": FundBookmarkAllOf,
     "FundCalendarEntries": FundCalendarEntries,
     "FundCalendarEntry": FundCalendarEntry,
+    "FundCashStatementRow": FundCashStatementRow,
     "FundConfiguration": FundConfiguration,
     "FundConfigurationProperties": FundConfigurationProperties,
     "FundConfigurationRequest": FundConfigurationRequest,
@@ -4821,6 +4836,7 @@ let typeMap: {[index: string]: any} = {
     "QueryApplicableInstrumentEventsRequest": QueryApplicableInstrumentEventsRequest,
     "QueryBucketedCashFlowsRequest": QueryBucketedCashFlowsRequest,
     "QueryCashFlowsRequest": QueryCashFlowsRequest,
+    "QueryFundCashStatementParameters": QueryFundCashStatementParameters,
     "QueryInstrumentEventsRequest": QueryInstrumentEventsRequest,
     "QueryRelationalDatasetRequest": QueryRelationalDatasetRequest,
     "QueryTradeTicketsRequest": QueryTradeTicketsRequest,
@@ -5268,6 +5284,7 @@ let typeMap: {[index: string]: any} = {
     "ValuationPointDataResponse": ValuationPointDataResponse,
     "ValuationPointOverview": ValuationPointOverview,
     "ValuationPointResourceListOfAccountedTransaction": ValuationPointResourceListOfAccountedTransaction,
+    "ValuationPointResourceListOfFundCashStatementRow": ValuationPointResourceListOfFundCashStatementRow,
     "ValuationPointResourceListOfFundJournalEntryLine": ValuationPointResourceListOfFundJournalEntryLine,
     "ValuationPointResourceListOfPnlJournalEntryLine": ValuationPointResourceListOfPnlJournalEntryLine,
     "ValuationPointResourceListOfTrialBalance": ValuationPointResourceListOfTrialBalance,
