@@ -9,7 +9,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "2.0.1523",
+    "version": "2.0.1524",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -49980,7 +49980,7 @@
           {
             "name": "propertyKeys",
             "in": "query",
-            "description": "A list of property keys from the \"Instrument\", \"Holding\" or \"Portfolio\" domain to decorate onto\r\n            the holdings. These take the format {domain}/{scope}/{code} e.g. \"Instrument/system/Name\" or \"Holding/system/Cost\".",
+            "description": "A list of property keys from the \"Instrument\", \"Holding\" or \"Portfolio\",\"CustodianAccount\" or \"LegalEntity\" domain to decorate onto domain to decorate onto\r\n            the holdings. These take the format {domain}/{scope}/{code} e.g. \"Instrument/system/Name\" or \"Holding/system/Cost\".",
             "schema": {
               "type": "array",
               "items": {
@@ -62380,7 +62380,7 @@
           {
             "name": "domain",
             "in": "path",
-            "description": "The type of entity to which the identifier relates. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, IdentifierDefinition, SettlementInstruction, TransactionFee.",
+            "description": "The type of entity to which the identifier relates. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, IdentifierDefinition, SettlementInstruction, TransactionFeeType.",
             "required": true,
             "schema": {
               "enum": [
@@ -62467,7 +62467,7 @@
                 "StagingRuleSet",
                 "IdentifierDefinition",
                 "SettlementInstruction",
-                "TransactionFee"
+                "TransactionFeeType"
               ],
               "type": "string"
             }
@@ -62677,7 +62677,7 @@
           {
             "name": "domain",
             "in": "path",
-            "description": "The type of entity to which the identifier relates. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, IdentifierDefinition, SettlementInstruction, TransactionFee.",
+            "description": "The type of entity to which the identifier relates. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, IdentifierDefinition, SettlementInstruction, TransactionFeeType.",
             "required": true,
             "schema": {
               "enum": [
@@ -62764,7 +62764,7 @@
                 "StagingRuleSet",
                 "IdentifierDefinition",
                 "SettlementInstruction",
-                "TransactionFee"
+                "TransactionFeeType"
               ],
               "type": "string"
             }
@@ -62873,7 +62873,7 @@
           {
             "name": "domain",
             "in": "path",
-            "description": "The type of entity to which the identifier relates. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, IdentifierDefinition, SettlementInstruction, TransactionFee.",
+            "description": "The type of entity to which the identifier relates. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, IdentifierDefinition, SettlementInstruction, TransactionFeeType.",
             "required": true,
             "schema": {
               "enum": [
@@ -62960,7 +62960,7 @@
                 "StagingRuleSet",
                 "IdentifierDefinition",
                 "SettlementInstruction",
-                "TransactionFee"
+                "TransactionFeeType"
               ],
               "type": "string"
             }
@@ -121979,7 +121979,7 @@
           {
             "name": "domain",
             "in": "path",
-            "description": "Domain of the property definition. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, IdentifierDefinition, SettlementInstruction, TransactionFee.",
+            "description": "Domain of the property definition. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, IdentifierDefinition, SettlementInstruction, TransactionFeeType.",
             "required": true,
             "schema": {
               "enum": [
@@ -122066,7 +122066,7 @@
                 "StagingRuleSet",
                 "IdentifierDefinition",
                 "SettlementInstruction",
-                "TransactionFee"
+                "TransactionFeeType"
               ],
               "type": "string"
             }
@@ -122346,7 +122346,7 @@
           {
             "name": "domain",
             "in": "path",
-            "description": "The domain of the property being updated. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, IdentifierDefinition, SettlementInstruction, TransactionFee.",
+            "description": "The domain of the property being updated. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, IdentifierDefinition, SettlementInstruction, TransactionFeeType.",
             "required": true,
             "schema": {
               "enum": [
@@ -122433,7 +122433,7 @@
                 "StagingRuleSet",
                 "IdentifierDefinition",
                 "SettlementInstruction",
-                "TransactionFee"
+                "TransactionFeeType"
               ],
               "type": "string"
             }
@@ -122683,7 +122683,7 @@
           {
             "name": "domain",
             "in": "path",
-            "description": "The domain of the property to be deleted. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, IdentifierDefinition, SettlementInstruction, TransactionFee.",
+            "description": "The domain of the property to be deleted. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, IdentifierDefinition, SettlementInstruction, TransactionFeeType.",
             "required": true,
             "schema": {
               "enum": [
@@ -122770,7 +122770,7 @@
                 "StagingRuleSet",
                 "IdentifierDefinition",
                 "SettlementInstruction",
-                "TransactionFee"
+                "TransactionFeeType"
               ],
               "type": "string"
             }
@@ -122879,7 +122879,7 @@
           {
             "name": "domain",
             "in": "path",
-            "description": "The domain of the specified property. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, IdentifierDefinition, SettlementInstruction, TransactionFee.",
+            "description": "The domain of the specified property. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, IdentifierDefinition, SettlementInstruction, TransactionFeeType.",
             "required": true,
             "schema": {
               "enum": [
@@ -122966,7 +122966,7 @@
                 "StagingRuleSet",
                 "IdentifierDefinition",
                 "SettlementInstruction",
-                "TransactionFee"
+                "TransactionFeeType"
               ],
               "type": "string"
             }
@@ -123195,7 +123195,7 @@
           {
             "name": "domain",
             "in": "path",
-            "description": "The domain of the specified property. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, IdentifierDefinition, SettlementInstruction, TransactionFee.",
+            "description": "The domain of the specified property. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, IdentifierDefinition, SettlementInstruction, TransactionFeeType.",
             "required": true,
             "schema": {
               "enum": [
@@ -123282,7 +123282,7 @@
                 "StagingRuleSet",
                 "IdentifierDefinition",
                 "SettlementInstruction",
-                "TransactionFee"
+                "TransactionFeeType"
               ],
               "type": "string"
             }
@@ -123565,7 +123565,7 @@
           {
             "name": "domain",
             "in": "path",
-            "description": "The domain of the property definition to delete properties from. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, IdentifierDefinition, SettlementInstruction, TransactionFee.",
+            "description": "The domain of the property definition to delete properties from. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, IdentifierDefinition, SettlementInstruction, TransactionFeeType.",
             "required": true,
             "schema": {
               "enum": [
@@ -123652,7 +123652,7 @@
                 "StagingRuleSet",
                 "IdentifierDefinition",
                 "SettlementInstruction",
-                "TransactionFee"
+                "TransactionFeeType"
               ],
               "type": "string"
             }
@@ -123830,7 +123830,7 @@
           {
             "name": "domain",
             "in": "path",
-            "description": "The domain of the property definition to which the property is attached. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, IdentifierDefinition, SettlementInstruction, TransactionFee.",
+            "description": "The domain of the property definition to which the property is attached. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, IdentifierDefinition, SettlementInstruction, TransactionFeeType.",
             "required": true,
             "schema": {
               "enum": [
@@ -123917,7 +123917,7 @@
                 "StagingRuleSet",
                 "IdentifierDefinition",
                 "SettlementInstruction",
-                "TransactionFee"
+                "TransactionFeeType"
               ],
               "type": "string"
             }
@@ -164078,6 +164078,24 @@
                       "currency": "USD",
                       "effectiveDate": "2020-10-31T00:00:00.0000000+00:00",
                       "units": 100,
+                      "runningUnits": 100,
+                      "runningBalance": {
+                        "holdingCurrency": {
+                          "total": 4800,
+                          "currency": "USD",
+                          "components": {
+                            "Cost": 4800
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 3470.4,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 3470.4
+                          }
+                        }
+                      },
+                      "runningCost": 4800,
                       "start": {
                         "holdingCurrency": {
                           "total": 4696,
@@ -164135,6 +164153,24 @@
                       "movementName": "Side1",
                       "effectiveDate": "2020-11-16T00:00:00.0000000+00:00",
                       "units": 100,
+                      "runningUnits": 200,
+                      "runningBalance": {
+                        "holdingCurrency": {
+                          "total": 4800,
+                          "currency": "USD",
+                          "components": {
+                            "Cost": 4800
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 3470.4,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 3470.4
+                          }
+                        }
+                      },
+                      "runningCost": 4800,
                       "flows": {
                         "holdingCurrency": {
                           "total": -25,
@@ -164203,6 +164239,24 @@
                       "currency": "USD",
                       "effectiveDate": "2020-11-30T00:00:00.0000000+00:00",
                       "units": 100,
+                      "runningUnits": 200,
+                      "runningBalance": {
+                        "holdingCurrency": {
+                          "total": 4800,
+                          "currency": "USD",
+                          "components": {
+                            "Cost": 4800
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 3470.4,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 3470.4
+                          }
+                        }
+                      },
+                      "runningCost": 4800,
                       "gains": {
                         "holdingCurrency": {
                           "total": -21,
@@ -164289,6 +164343,24 @@
                       "currency": "USD",
                       "effectiveDate": "2020-10-31T00:00:00.0000000+00:00",
                       "units": 100,
+                      "runningUnits": 100,
+                      "runningBalance": {
+                        "holdingCurrency": {
+                          "total": 4800,
+                          "currency": "USD",
+                          "components": {
+                            "Cost": 4800
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 3470.4,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 3470.4
+                          }
+                        }
+                      },
+                      "runningCost": 4800,
                       "start": {
                         "holdingCurrency": {
                           "total": 4696,
@@ -164346,6 +164418,24 @@
                       "movementName": "Side1",
                       "effectiveDate": "2020-11-16T00:00:00.0000000+00:00",
                       "units": 100,
+                      "runningUnits": 200,
+                      "runningBalance": {
+                        "holdingCurrency": {
+                          "total": 4800,
+                          "currency": "USD",
+                          "components": {
+                            "Cost": 4800
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 3470.4,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 3470.4
+                          }
+                        }
+                      },
+                      "runningCost": 4800,
                       "flows": {
                         "holdingCurrency": {
                           "total": -25,
@@ -164414,6 +164504,24 @@
                       "currency": "USD",
                       "effectiveDate": "2020-11-30T00:00:00.0000000+00:00",
                       "units": 100,
+                      "runningUnits": 200,
+                      "runningBalance": {
+                        "holdingCurrency": {
+                          "total": 4800,
+                          "currency": "USD",
+                          "components": {
+                            "Cost": 4800
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 3470.4,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 3470.4
+                          }
+                        }
+                      },
+                      "runningCost": 4800,
                       "gains": {
                         "holdingCurrency": {
                           "total": -21,
@@ -164500,6 +164608,24 @@
                       "currency": "USD",
                       "effectiveDate": "2020-10-31T00:00:00.0000000+00:00",
                       "units": 100,
+                      "runningUnits": 100,
+                      "runningBalance": {
+                        "holdingCurrency": {
+                          "total": 4800,
+                          "currency": "USD",
+                          "components": {
+                            "Cost": 4800
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 3470.4,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 3470.4
+                          }
+                        }
+                      },
+                      "runningCost": 4800,
                       "start": {
                         "holdingCurrency": {
                           "total": 4696,
@@ -164557,6 +164683,24 @@
                       "movementName": "Side1",
                       "effectiveDate": "2020-11-16T00:00:00.0000000+00:00",
                       "units": 100,
+                      "runningUnits": 200,
+                      "runningBalance": {
+                        "holdingCurrency": {
+                          "total": 4800,
+                          "currency": "USD",
+                          "components": {
+                            "Cost": 4800
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 3470.4,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 3470.4
+                          }
+                        }
+                      },
+                      "runningCost": 4800,
                       "flows": {
                         "holdingCurrency": {
                           "total": -25,
@@ -164625,6 +164769,24 @@
                       "currency": "USD",
                       "effectiveDate": "2020-11-30T00:00:00.0000000+00:00",
                       "units": 100,
+                      "runningUnits": 200,
+                      "runningBalance": {
+                        "holdingCurrency": {
+                          "total": 4800,
+                          "currency": "USD",
+                          "components": {
+                            "Cost": 4800
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 3470.4,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 3470.4
+                          }
+                        }
+                      },
+                      "runningCost": 4800,
                       "gains": {
                         "holdingCurrency": {
                           "total": -21,
@@ -164825,6 +164987,39 @@
               "pattern": "^[\\s\\S]*$",
               "type": "string"
             }
+          },
+          {
+            "name": "timelineScope",
+            "in": "query",
+            "description": "The scope of the timeline to use for loading data per closed period.",
+            "schema": {
+              "maxLength": 512,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "timelineCode",
+            "in": "query",
+            "description": "The code of the timeline to use for loading data per closed period.",
+            "schema": {
+              "maxLength": 1025,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+(:[a-zA-Z0-9\\-_]+)?$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "closedPeriodId",
+            "in": "query",
+            "description": "The closed period ID. If specified, both timelineScope and timelineCode must also be specified.\r\n            When provided, the timeline A2B is filtered to only the matching closed period. The fromEffectiveAt and toEffectiveAt\r\n            parameters still define the overall query window; the closedPeriodId restricts which closed period's data is returned within that window.",
+            "schema": {
+              "maxLength": 512,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -164860,6 +165055,24 @@
                       "currency": "USD",
                       "effectiveDate": "2020-10-31T00:00:00.0000000+00:00",
                       "units": 100,
+                      "runningUnits": 100,
+                      "runningBalance": {
+                        "holdingCurrency": {
+                          "total": 4800,
+                          "currency": "USD",
+                          "components": {
+                            "Cost": 4800
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 3470.4,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 3470.4
+                          }
+                        }
+                      },
+                      "runningCost": 4800,
                       "start": {
                         "holdingCurrency": {
                           "total": 4696,
@@ -164917,6 +165130,24 @@
                       "movementName": "Side1",
                       "effectiveDate": "2020-11-16T00:00:00.0000000+00:00",
                       "units": 100,
+                      "runningUnits": 200,
+                      "runningBalance": {
+                        "holdingCurrency": {
+                          "total": 4800,
+                          "currency": "USD",
+                          "components": {
+                            "Cost": 4800
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 3470.4,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 3470.4
+                          }
+                        }
+                      },
+                      "runningCost": 4800,
                       "flows": {
                         "holdingCurrency": {
                           "total": -25,
@@ -164985,6 +165216,24 @@
                       "currency": "USD",
                       "effectiveDate": "2020-11-30T00:00:00.0000000+00:00",
                       "units": 100,
+                      "runningUnits": 200,
+                      "runningBalance": {
+                        "holdingCurrency": {
+                          "total": 4800,
+                          "currency": "USD",
+                          "components": {
+                            "Cost": 4800
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 3470.4,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 3470.4
+                          }
+                        }
+                      },
+                      "runningCost": 4800,
                       "gains": {
                         "holdingCurrency": {
                           "total": -21,
@@ -165071,6 +165320,24 @@
                       "currency": "USD",
                       "effectiveDate": "2020-10-31T00:00:00.0000000+00:00",
                       "units": 100,
+                      "runningUnits": 100,
+                      "runningBalance": {
+                        "holdingCurrency": {
+                          "total": 4800,
+                          "currency": "USD",
+                          "components": {
+                            "Cost": 4800
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 3470.4,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 3470.4
+                          }
+                        }
+                      },
+                      "runningCost": 4800,
                       "start": {
                         "holdingCurrency": {
                           "total": 4696,
@@ -165128,6 +165395,24 @@
                       "movementName": "Side1",
                       "effectiveDate": "2020-11-16T00:00:00.0000000+00:00",
                       "units": 100,
+                      "runningUnits": 200,
+                      "runningBalance": {
+                        "holdingCurrency": {
+                          "total": 4800,
+                          "currency": "USD",
+                          "components": {
+                            "Cost": 4800
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 3470.4,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 3470.4
+                          }
+                        }
+                      },
+                      "runningCost": 4800,
                       "flows": {
                         "holdingCurrency": {
                           "total": -25,
@@ -165196,6 +165481,24 @@
                       "currency": "USD",
                       "effectiveDate": "2020-11-30T00:00:00.0000000+00:00",
                       "units": 100,
+                      "runningUnits": 200,
+                      "runningBalance": {
+                        "holdingCurrency": {
+                          "total": 4800,
+                          "currency": "USD",
+                          "components": {
+                            "Cost": 4800
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 3470.4,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 3470.4
+                          }
+                        }
+                      },
+                      "runningCost": 4800,
                       "gains": {
                         "holdingCurrency": {
                           "total": -21,
@@ -165282,6 +165585,24 @@
                       "currency": "USD",
                       "effectiveDate": "2020-10-31T00:00:00.0000000+00:00",
                       "units": 100,
+                      "runningUnits": 100,
+                      "runningBalance": {
+                        "holdingCurrency": {
+                          "total": 4800,
+                          "currency": "USD",
+                          "components": {
+                            "Cost": 4800
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 3470.4,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 3470.4
+                          }
+                        }
+                      },
+                      "runningCost": 4800,
                       "start": {
                         "holdingCurrency": {
                           "total": 4696,
@@ -165339,6 +165660,24 @@
                       "movementName": "Side1",
                       "effectiveDate": "2020-11-16T00:00:00.0000000+00:00",
                       "units": 100,
+                      "runningUnits": 200,
+                      "runningBalance": {
+                        "holdingCurrency": {
+                          "total": 4800,
+                          "currency": "USD",
+                          "components": {
+                            "Cost": 4800
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 3470.4,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 3470.4
+                          }
+                        }
+                      },
+                      "runningCost": 4800,
                       "flows": {
                         "holdingCurrency": {
                           "total": -25,
@@ -165407,6 +165746,24 @@
                       "currency": "USD",
                       "effectiveDate": "2020-11-30T00:00:00.0000000+00:00",
                       "units": 100,
+                      "runningUnits": 200,
+                      "runningBalance": {
+                        "holdingCurrency": {
+                          "total": 4800,
+                          "currency": "USD",
+                          "components": {
+                            "Cost": 4800
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 3470.4,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 3470.4
+                          }
+                        }
+                      },
+                      "runningCost": 4800,
                       "gains": {
                         "holdingCurrency": {
                           "total": -21,
@@ -183701,19 +184058,19 @@
         "x-fbn-apistatus": "Stable"
       }
     },
-    "/api/transactions/transactionfees": {
+    "/api/transactions/transactionfeetypes": {
       "get": {
         "tags": [
-          "Transaction Transaction Fees"
+          "Transaction Fee Types"
         ],
-        "summary": "[EXPERIMENTAL] ListTransactionFees: List TransactionFees",
-        "description": "List TransactionFees that match the specified criteria.",
-        "operationId": "ListTransactionFees",
+        "summary": "[EXPERIMENTAL] ListTransactionFeeTypes: List transaction fee types",
+        "description": "List transaction fee types that match the specified criteria.",
+        "operationId": "ListTransactionFeeTypes",
         "parameters": [
           {
             "name": "effectiveAt",
             "in": "query",
-            "description": "The effective datetime at which to retrieve TransactionFee properties.\r\n            Defaults to the current LUSID system datetime if not specified.",
+            "description": "The effective datetime at which to retrieve transaction fee type properties.\r\n            Defaults to the current LUSID system datetime if not specified.",
             "schema": {
               "type": "string",
               "format": "dateorcutlabel"
@@ -183722,7 +184079,7 @@
           {
             "name": "asAt",
             "in": "query",
-            "description": "The asAt datetime at which to retrieve the TransactionFees.\r\n            Defaults to latest if not specified.",
+            "description": "The asAt datetime at which to retrieve the transaction fee types.\r\n            Defaults to latest if not specified.",
             "schema": {
               "type": "string",
               "format": "date-time"
@@ -183732,7 +184089,7 @@
           {
             "name": "page",
             "in": "query",
-            "description": "The pagination token to use to continue listing TransactionFees from a previous call to list TransactionFees.\r\nThis value is returned from the previous call. If a pagination token is provided the filter,\r\nsortBy, effectiveAt and asAt field must not have changed since the original request.",
+            "description": "The pagination token to use to continue listing transaction fee types from a previous call to list transaction fee types.\r\nThis value is returned from the previous call. If a pagination token is provided the filter,\r\nsortBy, effectiveAt and asAt field must not have changed since the original request.",
             "schema": {
               "maxLength": 500,
               "minLength": 1,
@@ -183789,11 +184146,11 @@
         ],
         "responses": {
           "200": {
-            "description": "A collection of TransactionFees matching the specified criteria.",
+            "description": "A collection of transaction fee types matching the specified criteria.",
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/ResourceListOfTransactionFee"
+                  "$ref": "#/components/schemas/ResourceListOfTransactionFeeType"
                 },
                 "example": {
                   "values": [
@@ -183802,7 +184159,7 @@
                         "scope": "test-scope",
                         "code": "test-code1"
                       },
-                      "name": "Transaction Fee 1",
+                      "displayName": "Transaction Fee 1",
                       "description": "Broker commission fee",
                       "calculation": {
                         "formula": "totalConsideration * 0.002"
@@ -183817,7 +184174,7 @@
                         "scope": "test-scope",
                         "code": "test-code2"
                       },
-                      "name": "Transaction Fee 2",
+                      "displayName": "Transaction Fee 2",
                       "description": "Broker commission fee",
                       "calculation": {
                         "formula": "totalConsideration * 0.004"
@@ -183833,7 +184190,7 @@
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ResourceListOfTransactionFee"
+                  "$ref": "#/components/schemas/ResourceListOfTransactionFeeType"
                 },
                 "example": {
                   "values": [
@@ -183842,7 +184199,7 @@
                         "scope": "test-scope",
                         "code": "test-code1"
                       },
-                      "name": "Transaction Fee 1",
+                      "displayName": "Transaction Fee 1",
                       "description": "Broker commission fee",
                       "calculation": {
                         "formula": "totalConsideration * 0.002"
@@ -183857,7 +184214,7 @@
                         "scope": "test-scope",
                         "code": "test-code2"
                       },
-                      "name": "Transaction Fee 2",
+                      "displayName": "Transaction Fee 2",
                       "description": "Broker commission fee",
                       "calculation": {
                         "formula": "totalConsideration * 0.004"
@@ -183873,7 +184230,7 @@
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ResourceListOfTransactionFee"
+                  "$ref": "#/components/schemas/ResourceListOfTransactionFeeType"
                 },
                 "example": {
                   "values": [
@@ -183882,7 +184239,7 @@
                         "scope": "test-scope",
                         "code": "test-code1"
                       },
-                      "name": "Transaction Fee 1",
+                      "displayName": "Transaction Fee 1",
                       "description": "Broker commission fee",
                       "calculation": {
                         "formula": "totalConsideration * 0.002"
@@ -183897,7 +184254,7 @@
                         "scope": "test-scope",
                         "code": "test-code2"
                       },
-                      "name": "Transaction Fee 2",
+                      "displayName": "Transaction Fee 2",
                       "description": "Broker commission fee",
                       "calculation": {
                         "formula": "totalConsideration * 0.004"
@@ -183952,19 +184309,19 @@
         "x-fbn-apistatus": "Experimental"
       }
     },
-    "/api/transactions/transactionfees/{scope}/{code}": {
+    "/api/transactions/transactionfeetypes/{scope}/{code}": {
       "post": {
         "tags": [
-          "Transaction Transaction Fees"
+          "Transaction Fee Types"
         ],
-        "summary": "[EXPERIMENTAL] CreateTransactionFee: Create a TransactionFee",
-        "description": "Create a TransactionFee for the specified scope and code.",
-        "operationId": "CreateTransactionFee",
+        "summary": "[EXPERIMENTAL] CreateTransactionFeeType: Create a transaction fee type",
+        "description": "Create a transaction fee type for the specified scope and code.",
+        "operationId": "CreateTransactionFeeType",
         "parameters": [
           {
             "name": "scope",
             "in": "path",
-            "description": "The scope of the TransactionFee.",
+            "description": "The scope of the transaction fee type.",
             "required": true,
             "schema": {
               "maxLength": 64,
@@ -183976,7 +184333,7 @@
           {
             "name": "code",
             "in": "path",
-            "description": "The code of the TransactionFee.\r\n            Together with the scope this uniquely identifies the TransactionFee.",
+            "description": "The code of the transaction fee type.\r\n            Together with the scope this uniquely identifies the transaction fee type.",
             "required": true,
             "schema": {
               "maxLength": 64,
@@ -183987,14 +184344,14 @@
           }
         ],
         "requestBody": {
-          "description": "The contents of the TransactionFee.",
+          "description": "The contents of the transaction fee type.",
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateTransactionFeeRequest"
+                "$ref": "#/components/schemas/CreateTransactionFeeTypeRequest"
               },
               "example": {
-                "name": "Transaction Fee",
+                "displayName": "Transaction Fee",
                 "description": "Broker commission fee",
                 "calculation": {
                   "formula": "totalConsideration * 0.002"
@@ -184007,10 +184364,10 @@
             },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateTransactionFeeRequest"
+                "$ref": "#/components/schemas/CreateTransactionFeeTypeRequest"
               },
               "example": {
-                "name": "Transaction Fee",
+                "displayName": "Transaction Fee",
                 "description": "Broker commission fee",
                 "calculation": {
                   "formula": "totalConsideration * 0.002"
@@ -184023,10 +184380,10 @@
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateTransactionFeeRequest"
+                "$ref": "#/components/schemas/CreateTransactionFeeTypeRequest"
               },
               "example": {
-                "name": "Transaction Fee",
+                "displayName": "Transaction Fee",
                 "description": "Broker commission fee",
                 "calculation": {
                   "formula": "totalConsideration * 0.002"
@@ -184039,10 +184396,10 @@
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateTransactionFeeRequest"
+                "$ref": "#/components/schemas/CreateTransactionFeeTypeRequest"
               },
               "example": {
-                "name": "Transaction Fee",
+                "displayName": "Transaction Fee",
                 "description": "Broker commission fee",
                 "calculation": {
                   "formula": "totalConsideration * 0.002"
@@ -184058,18 +184415,18 @@
         },
         "responses": {
           "201": {
-            "description": "The newly created TransactionFee.",
+            "description": "The newly created transaction fee type.",
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/TransactionFee"
+                  "$ref": "#/components/schemas/TransactionFeeType"
                 },
                 "example": {
                   "id": {
                     "scope": "test-scope",
                     "code": "test-code"
                   },
-                  "name": "New fee",
+                  "displayName": "New fee",
                   "description": "Broker commission fee",
                   "calculation": {
                     "formula": "totalConsideration * 0.002"
@@ -184082,14 +184439,14 @@
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/TransactionFee"
+                  "$ref": "#/components/schemas/TransactionFeeType"
                 },
                 "example": {
                   "id": {
                     "scope": "test-scope",
                     "code": "test-code"
                   },
-                  "name": "New fee",
+                  "displayName": "New fee",
                   "description": "Broker commission fee",
                   "calculation": {
                     "formula": "totalConsideration * 0.002"
@@ -184102,14 +184459,14 @@
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/TransactionFee"
+                  "$ref": "#/components/schemas/TransactionFeeType"
                 },
                 "example": {
                   "id": {
                     "scope": "test-scope",
                     "code": "test-code"
                   },
-                  "name": "New fee",
+                  "displayName": "New fee",
                   "description": "Broker commission fee",
                   "calculation": {
                     "formula": "totalConsideration * 0.002"
@@ -184162,16 +184519,16 @@
       },
       "get": {
         "tags": [
-          "Transaction Transaction Fees"
+          "Transaction Fee Types"
         ],
-        "summary": "[EXPERIMENTAL] GetTransactionFee: Get a TransactionFee",
-        "description": "Get the TransactionFee for the specified scope and code.",
-        "operationId": "GetTransactionFee",
+        "summary": "[EXPERIMENTAL] GetTransactionFeeType: Get a transaction fee type",
+        "description": "Get the transaction fee type for the specified scope and code.",
+        "operationId": "GetTransactionFeeType",
         "parameters": [
           {
             "name": "scope",
             "in": "path",
-            "description": "The scope of the TransactionFee.",
+            "description": "The scope of the transaction fee type.",
             "required": true,
             "schema": {
               "maxLength": 64,
@@ -184183,7 +184540,7 @@
           {
             "name": "code",
             "in": "path",
-            "description": "The code of the TransactionFee.\r\n            Together with the scope this uniquely identifies the TransactionFee.",
+            "description": "The code of the transaction fee type.\r\n            Together with the scope this uniquely identifies the transaction fee type.",
             "required": true,
             "schema": {
               "maxLength": 64,
@@ -184195,7 +184552,7 @@
           {
             "name": "effectiveAt",
             "in": "query",
-            "description": "The effective datetime at which to retrieve the TransactionFee properties.\r\n            Defaults to the current LUSID system datetime if not specified.",
+            "description": "The effective datetime at which to retrieve the transaction fee type properties.\r\n            Defaults to the current LUSID system datetime if not specified.",
             "schema": {
               "type": "string",
               "format": "dateorcutlabel"
@@ -184204,7 +184561,7 @@
           {
             "name": "asAt",
             "in": "query",
-            "description": "The asAt datetime at which to retrieve the TransactionFees.\r\n            Defaults to latest if not specified.",
+            "description": "The asAt datetime at which to retrieve the transaction fee types.\r\n            Defaults to latest if not specified.",
             "schema": {
               "type": "string",
               "format": "date-time"
@@ -184214,7 +184571,7 @@
           {
             "name": "propertyKeys",
             "in": "query",
-            "description": "The collection of `PropertyKey`s that we want to decorate on identifies the TransactionFee.",
+            "description": "The collection of `PropertyKey`s that we want to decorate on the transaction fee type.",
             "schema": {
               "type": "array",
               "items": {
@@ -184227,18 +184584,18 @@
         ],
         "responses": {
           "200": {
-            "description": "The TransactionFee matching the specified scope and code.",
+            "description": "The transaction fee type matching the specified scope and code.",
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/TransactionFee"
+                  "$ref": "#/components/schemas/TransactionFeeType"
                 },
                 "example": {
                   "id": {
                     "scope": "test-scope",
                     "code": "test-code"
                   },
-                  "name": "New fee",
+                  "displayName": "New fee",
                   "description": "Broker commission fee",
                   "calculation": {
                     "formula": "totalConsideration * 0.002"
@@ -184251,14 +184608,14 @@
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/TransactionFee"
+                  "$ref": "#/components/schemas/TransactionFeeType"
                 },
                 "example": {
                   "id": {
                     "scope": "test-scope",
                     "code": "test-code"
                   },
-                  "name": "New fee",
+                  "displayName": "New fee",
                   "description": "Broker commission fee",
                   "calculation": {
                     "formula": "totalConsideration * 0.002"
@@ -184271,14 +184628,14 @@
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/TransactionFee"
+                  "$ref": "#/components/schemas/TransactionFeeType"
                 },
                 "example": {
                   "id": {
                     "scope": "test-scope",
                     "code": "test-code"
                   },
-                  "name": "New fee",
+                  "displayName": "New fee",
                   "description": "Broker commission fee",
                   "calculation": {
                     "formula": "totalConsideration * 0.002"
@@ -184331,16 +184688,16 @@
       },
       "delete": {
         "tags": [
-          "Transaction Transaction Fees"
+          "Transaction Fee Types"
         ],
-        "summary": "[EXPERIMENTAL] DeleteTransactionFee: Delete a TransactionFee",
-        "description": "Delete a TransactionFee for the specified scope and code. To note, this will be a monotemporal delete, meaning that\r\nthe TransactionFee will be deleted for all effective time (including past and future versions of the TransactionFee).",
-        "operationId": "DeleteTransactionFee",
+        "summary": "[EXPERIMENTAL] DeleteTransactionFeeType: Delete a transaction fee type",
+        "description": "Delete a transaction fee type for the specified scope and code. To note, this will be a monotemporal delete, meaning that\r\nthe transaction fee type will be deleted for all effective time (including past and future versions of the transaction fee type).",
+        "operationId": "DeleteTransactionFeeType",
         "parameters": [
           {
             "name": "scope",
             "in": "path",
-            "description": "The scope of the TransactionFee.",
+            "description": "The scope of the transaction fee type.",
             "required": true,
             "schema": {
               "maxLength": 64,
@@ -184352,7 +184709,7 @@
           {
             "name": "code",
             "in": "path",
-            "description": "The code of the specified TransactionFee.\r\n            Together with the scope this uniquely identifies the TransactionFee.",
+            "description": "The code of the specified transaction fee type.\r\n            Together with the scope this uniquely identifies the transaction fee type.",
             "required": true,
             "schema": {
               "maxLength": 64,
@@ -184364,7 +184721,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Delete a TransactionFee.",
+            "description": "Delete a transaction fee type.",
             "content": {
               "text/plain": {
                 "schema": {
@@ -184432,16 +184789,16 @@
       },
       "put": {
         "tags": [
-          "Transaction Transaction Fees"
+          "Transaction Fee Types"
         ],
-        "summary": "[EXPERIMENTAL] UpdateTransactionFee: Update a TransactionFee",
-        "description": "Update a TransactionFee by providing the new contents of the TransactionFee.\r\nThe name field and the capitalisation field can not be updated.",
-        "operationId": "UpdateTransactionFee",
+        "summary": "[EXPERIMENTAL] UpdateTransactionFeeType: Update a transaction fee type",
+        "description": "Update a transaction fee type by providing the new contents of the transaction fee type.\r\nThe displayName field cannot be updated.",
+        "operationId": "UpdateTransactionFeeType",
         "parameters": [
           {
             "name": "scope",
             "in": "path",
-            "description": "The scope of the TransactionFee.",
+            "description": "The scope of the transaction fee type.",
             "required": true,
             "schema": {
               "maxLength": 64,
@@ -184453,7 +184810,7 @@
           {
             "name": "code",
             "in": "path",
-            "description": "The code of the specified TransactionFee.\r\n            Together with the scope this uniquely identifies the TransactionFee.",
+            "description": "The code of the specified transaction fee type.\r\n            Together with the scope this uniquely identifies the transaction fee type.",
             "required": true,
             "schema": {
               "maxLength": 64,
@@ -184464,11 +184821,11 @@
           }
         ],
         "requestBody": {
-          "description": "The updated contents of the TransactionFee.",
+          "description": "The updated contents of the transaction fee type.",
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateTransactionFeeRequest"
+                "$ref": "#/components/schemas/UpdateTransactionFeeTypeRequest"
               },
               "example": {
                 "description": "Broker commission fee",
@@ -184482,7 +184839,7 @@
             },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateTransactionFeeRequest"
+                "$ref": "#/components/schemas/UpdateTransactionFeeTypeRequest"
               },
               "example": {
                 "description": "Broker commission fee",
@@ -184496,7 +184853,7 @@
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateTransactionFeeRequest"
+                "$ref": "#/components/schemas/UpdateTransactionFeeTypeRequest"
               },
               "example": {
                 "description": "Broker commission fee",
@@ -184510,7 +184867,7 @@
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateTransactionFeeRequest"
+                "$ref": "#/components/schemas/UpdateTransactionFeeTypeRequest"
               },
               "example": {
                 "description": "Broker commission fee",
@@ -184527,18 +184884,18 @@
         },
         "responses": {
           "200": {
-            "description": "The updated TransactionFee.",
+            "description": "The updated transaction fee type.",
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/TransactionFee"
+                  "$ref": "#/components/schemas/TransactionFeeType"
                 },
                 "example": {
                   "id": {
                     "scope": "test-scope",
                     "code": "test-code"
                   },
-                  "name": "New fee",
+                  "displayName": "New fee",
                   "description": "Broker commission fee",
                   "calculation": {
                     "formula": "totalConsideration * 0.002"
@@ -184551,14 +184908,14 @@
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/TransactionFee"
+                  "$ref": "#/components/schemas/TransactionFeeType"
                 },
                 "example": {
                   "id": {
                     "scope": "test-scope",
                     "code": "test-code"
                   },
-                  "name": "New fee",
+                  "displayName": "New fee",
                   "description": "Broker commission fee",
                   "calculation": {
                     "formula": "totalConsideration * 0.002"
@@ -184571,14 +184928,14 @@
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/TransactionFee"
+                  "$ref": "#/components/schemas/TransactionFeeType"
                 },
                 "example": {
                   "id": {
                     "scope": "test-scope",
                     "code": "test-code"
                   },
-                  "name": "New fee",
+                  "displayName": "New fee",
                   "description": "Broker commission fee",
                   "calculation": {
                     "formula": "totalConsideration * 0.002"
@@ -189356,6 +189713,21 @@
             "type": "number",
             "description": "The number of units of the instrument that are affected by the movement.",
             "format": "double"
+          },
+          "runningUnits": {
+            "type": "number",
+            "description": "The cumulative number of units for this sub-holding, as at this movement.",
+            "format": "double",
+            "nullable": true
+          },
+          "runningBalance": {
+            "$ref": "#/components/schemas/A2BCategory"
+          },
+          "runningCost": {
+            "type": "number",
+            "description": "The running cost in portfolio currency for this sub-holding, as at this movement.",
+            "format": "double",
+            "nullable": true
           },
           "start": {
             "$ref": "#/components/schemas/A2BCategory"
@@ -201801,10 +202173,10 @@
               "StagingRuleSet",
               "IdentifierDefinition",
               "SettlementInstruction",
-              "TransactionFee"
+              "TransactionFeeType"
             ],
             "type": "string",
-            "description": "The domain that the property exists in. Not all available values are currently supported, please check the documentation: https://support.lusid.com/knowledgebase/article/KA-01719/. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, IdentifierDefinition, SettlementInstruction, TransactionFee."
+            "description": "The domain that the property exists in. Not all available values are currently supported, please check the documentation: https://support.lusid.com/knowledgebase/article/KA-01719/. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, IdentifierDefinition, SettlementInstruction, TransactionFeeType."
           },
           "scope": {
             "type": "string",
@@ -202153,10 +202525,10 @@
               "StagingRuleSet",
               "IdentifierDefinition",
               "SettlementInstruction",
-              "TransactionFee"
+              "TransactionFeeType"
             ],
             "type": "string",
-            "description": "The type of entity to which the identifier can be attached. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, IdentifierDefinition, SettlementInstruction, TransactionFee."
+            "description": "The type of entity to which the identifier can be attached. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, IdentifierDefinition, SettlementInstruction, TransactionFeeType."
           },
           "identifierScope": {
             "maxLength": 64,
@@ -202378,10 +202750,10 @@
               "StagingRuleSet",
               "IdentifierDefinition",
               "SettlementInstruction",
-              "TransactionFee"
+              "TransactionFeeType"
             ],
             "type": "string",
-            "description": "The domain that the property exists in. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, IdentifierDefinition, SettlementInstruction, TransactionFee."
+            "description": "The domain that the property exists in. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, IdentifierDefinition, SettlementInstruction, TransactionFeeType."
           },
           "scope": {
             "type": "string",
@@ -203164,28 +203536,28 @@
         "additionalProperties": false,
         "description": "Batch trade ticket creation response"
       },
-      "CreateTransactionFeeRequest": {
+      "CreateTransactionFeeTypeRequest": {
         "required": [
           "calculation",
           "condition",
           "description",
-          "name",
+          "displayName",
           "txnPropertyKey"
         ],
         "type": "object",
         "properties": {
-          "name": {
+          "displayName": {
             "maxLength": 256,
             "minLength": 1,
             "type": "string",
-            "description": "The display name of the transaction fee."
+            "description": "The display name of the transaction fee type."
           },
           "description": {
             "maxLength": 1024,
             "minLength": 0,
             "pattern": "^[\\s\\S]*$",
             "type": "string",
-            "description": "A description of the transaction fee."
+            "description": "A description of the transaction fee type."
           },
           "calculation": {
             "$ref": "#/components/schemas/FeeCalculationRequest"
@@ -203207,12 +203579,12 @@
             "additionalProperties": {
               "$ref": "#/components/schemas/Property"
             },
-            "description": "A set of properties for the transaction fee.",
+            "description": "A set of properties for the transaction fee type.",
             "nullable": true
           },
           "isActive": {
             "type": "boolean",
-            "description": "Indicates whether the transaction fee is currently active and should be applied to transactions. Optional when creating a transaction fee, defaults to true, if a value is not provided."
+            "description": "Indicates whether the transaction fee type is currently active and should be applied to transactions. Optional when creating a transaction fee type, defaults to true, if a value is not provided."
           }
         },
         "additionalProperties": false
@@ -218153,10 +218525,10 @@
               "StagingRuleSet",
               "IdentifierDefinition",
               "SettlementInstruction",
-              "TransactionFee"
+              "TransactionFeeType"
             ],
             "type": "string",
-            "description": "The type of entity to which the identifier can be attached. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, IdentifierDefinition, SettlementInstruction, TransactionFee."
+            "description": "The type of entity to which the identifier can be attached. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, IdentifierDefinition, SettlementInstruction, TransactionFeeType."
           },
           "identifierScope": {
             "maxLength": 64,
@@ -233536,10 +233908,10 @@
               "StagingRuleSet",
               "IdentifierDefinition",
               "SettlementInstruction",
-              "TransactionFee"
+              "TransactionFeeType"
             ],
             "type": "string",
-            "description": "The domain that the property exists in. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, IdentifierDefinition, SettlementInstruction, TransactionFee."
+            "description": "The domain that the property exists in. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, IdentifierDefinition, SettlementInstruction, TransactionFeeType."
           },
           "scope": {
             "type": "string",
@@ -233862,10 +234234,10 @@
               "StagingRuleSet",
               "IdentifierDefinition",
               "SettlementInstruction",
-              "TransactionFee"
+              "TransactionFeeType"
             ],
             "type": "string",
-            "description": "The domain that the property exists in. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, IdentifierDefinition, SettlementInstruction, TransactionFee."
+            "description": "The domain that the property exists in. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, IdentifierDefinition, SettlementInstruction, TransactionFeeType."
           },
           "scope": {
             "type": "string",
@@ -234021,7 +234393,7 @@
           "StagingRuleSet",
           "IdentifierDefinition",
           "SettlementInstruction",
-          "TransactionFee"
+          "TransactionFeeType"
         ],
         "type": "string",
         "description": "See https://wiki.finbourne.com/information/domain-model-properties\r\n            \r\nEach domain refers to a logical set of properties which reside within it."
@@ -240235,7 +240607,7 @@
         },
         "additionalProperties": false
       },
-      "ResourceListOfTransactionFee": {
+      "ResourceListOfTransactionFeeType": {
         "required": [
           "values"
         ],
@@ -240244,7 +240616,7 @@
           "values": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/TransactionFee"
+              "$ref": "#/components/schemas/TransactionFeeType"
             }
           },
           "href": {
@@ -246348,20 +246720,38 @@
         "additionalProperties": false,
         "description": "Represents a set of diagnostics per transaction, where applicable."
       },
-      "TransactionFee": {
+      "TransactionFeeCapitalisation": {
+        "type": "object",
+        "properties": {
+          "capitalisation": {
+            "type": "string",
+            "description": "Whether the transaction fee should be capitalised, not capitalised, or conditionally capitalised. Available values: Capitalised, NonCapitalised, Conditional.",
+            "nullable": true
+          },
+          "capitalisedCondition": {
+            "maxLength": 16384,
+            "minLength": 0,
+            "type": "string",
+            "description": "The condition that determines whether the fee is capitalised when applied to the transaction. Required only when Capitalisation is 'Conditional'.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TransactionFeeType": {
         "type": "object",
         "properties": {
           "id": {
             "$ref": "#/components/schemas/ResourceId"
           },
-          "name": {
+          "displayName": {
             "type": "string",
-            "description": "The display name of the transaction fee.",
+            "description": "The display name of the transaction fee type.",
             "nullable": true
           },
           "description": {
             "type": "string",
-            "description": "A description of the transaction fee.",
+            "description": "A description of the transaction fee type.",
             "nullable": true
           },
           "calculation": {
@@ -246382,7 +246772,7 @@
             "additionalProperties": {
               "$ref": "#/components/schemas/Property"
             },
-            "description": "A set of properties for the transaction fee.",
+            "description": "A set of properties for the transaction fee type.",
             "nullable": true
           },
           "version": {
@@ -246396,31 +246786,13 @@
           },
           "isActive": {
             "type": "boolean",
-            "description": "Indicates whether the transaction fee is currently active and should be applied to transactions. Optional when creating a transaction fee, defaults to true, if a value is not provided."
+            "description": "Indicates whether the transaction fee type is currently active and should be applied to transactions. Optional when creating a transaction fee type, defaults to true, if a value is not provided."
           },
           "links": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/Link"
             },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "TransactionFeeCapitalisation": {
-        "type": "object",
-        "properties": {
-          "capitalisation": {
-            "type": "string",
-            "description": "Whether the transaction fee should be capitalised, not capitalised, or conditionally capitalised. Available values: Capitalised, NonCapitalised, Conditional.",
-            "nullable": true
-          },
-          "capitalisedCondition": {
-            "maxLength": 16384,
-            "minLength": 0,
-            "type": "string",
-            "description": "The condition that determines whether the fee is capitalised when applied to the transaction. Required only when Capitalisation is 'Conditional'.",
             "nullable": true
           }
         },
@@ -249667,7 +250039,7 @@
         },
         "additionalProperties": false
       },
-      "UpdateTransactionFeeRequest": {
+      "UpdateTransactionFeeTypeRequest": {
         "type": "object",
         "properties": {
           "description": {
@@ -249675,7 +250047,7 @@
             "minLength": 0,
             "pattern": "^[\\s\\S]*$",
             "type": "string",
-            "description": "A description of the transaction fee.",
+            "description": "A description of the transaction fee type.",
             "nullable": true
           },
           "calculation": {
@@ -249700,12 +250072,12 @@
             "additionalProperties": {
               "$ref": "#/components/schemas/Property"
             },
-            "description": "A set of properties for the transaction fee.",
+            "description": "A set of properties for the transaction fee type.",
             "nullable": true
           },
           "isActive": {
             "type": "boolean",
-            "description": "Indicates whether the transaction fee is currently active and should be applied to transactions. Optional when creating a transaction fee, defaults to true, if a value is not provided.",
+            "description": "Indicates whether the transaction fee type is currently active and should be applied to transactions. Optional when creating a transaction fee type, defaults to true, if a value is not provided.",
             "nullable": true
           }
         },
@@ -253615,16 +253987,16 @@
       "description": "LUSID is a transaction-based system. Every transaction in a particular instrument should belong to a transaction type in order that it might contribute to measuring your holding (position) in that instrument. Transaction types are a fundamental building block of LUSID, and care should be exercised when changing them. For more information, see https://support.lusid.com/knowledgebase/article/KA-01872/."
     },
     {
+      "name": "Transaction Fee Types",
+      "description": "Methods to retrieve and manage transaction fee types."
+    },
+    {
       "name": "Transaction Fees",
       "description": "Methods to retrieve applicable fees for a transaction, and manage the rules that defined them"
     },
     {
       "name": "Transaction Portfolios",
       "description": "A transaction portfolio stores transactions and calculates instrument holdings and cash balances, enabling valuation, analytic, profit & loss, risk assessment and other operations to be performed. Note that a transaction portfolio is a type of portfolio, so endpoints in the Portfolios API can also be called. For more information, see https://support.lusid.com/knowledgebase/article/KA-01851."
-    },
-    {
-      "name": "Transaction Transaction Fees",
-      "description": "Methods to retrieve and manage transaction fee entities."
     },
     {
       "name": "TransferAgency",
@@ -253717,9 +254089,9 @@
       "Tax Rule Sets",
       "Timelines",
       "Transaction Configuration",
+      "Transaction Fee Types",
       "Transaction Fees",
       "Transaction Portfolios",
-      "Transaction Transaction Fees",
       "TransferAgency",
       "Translation",
       "Workspace"

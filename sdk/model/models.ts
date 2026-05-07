@@ -329,7 +329,7 @@ export * from './createStagingRuleSetRequest';
 export * from './createTaxRuleSetRequest';
 export * from './createTimelineRequest';
 export * from './createTradeTicketsResponse';
-export * from './createTransactionFeeRequest';
+export * from './createTransactionFeeTypeRequest';
 export * from './createTransactionPortfolioRequest';
 export * from './createUnitDefinition';
 export * from './creditDefaultSwap';
@@ -1223,7 +1223,7 @@ export * from './resourceListOfSideDefinition';
 export * from './resourceListOfString';
 export * from './resourceListOfTaxRuleSet';
 export * from './resourceListOfTransaction';
-export * from './resourceListOfTransactionFee';
+export * from './resourceListOfTransactionFeeType';
 export * from './resourceListOfTransactionSettlementInstruction';
 export * from './resourceListOfTransactionType';
 export * from './resourceListOfValueType';
@@ -1385,8 +1385,8 @@ export * from './transactionConfigurationTypeAlias';
 export * from './transactionCurrencyAndAmount';
 export * from './transactionDateWindows';
 export * from './transactionDiagnostics';
-export * from './transactionFee';
 export * from './transactionFeeCapitalisation';
+export * from './transactionFeeType';
 export * from './transactionFieldMap';
 export * from './transactionMatchingAlternativeId';
 export * from './transactionPrice';
@@ -1477,7 +1477,7 @@ export * from './updateSeriesIdentifierField';
 export * from './updateStagingRuleSetRequest';
 export * from './updateTaxRuleSetRequest';
 export * from './updateTimelineRequest';
-export * from './updateTransactionFeeRequest';
+export * from './updateTransactionFeeTypeRequest';
 export * from './updateUnitRequest';
 export * from './upsertCdsFlowConventionsRequest';
 export * from './upsertComplexMarketDataRequest';
@@ -1926,7 +1926,7 @@ import { CreateStagingRuleSetRequest } from './createStagingRuleSetRequest';
 import { CreateTaxRuleSetRequest } from './createTaxRuleSetRequest';
 import { CreateTimelineRequest } from './createTimelineRequest';
 import { CreateTradeTicketsResponse } from './createTradeTicketsResponse';
-import { CreateTransactionFeeRequest } from './createTransactionFeeRequest';
+import { CreateTransactionFeeTypeRequest } from './createTransactionFeeTypeRequest';
 import { CreateTransactionPortfolioRequest } from './createTransactionPortfolioRequest';
 import { CreateUnitDefinition } from './createUnitDefinition';
 import { CreditDefaultSwap } from './creditDefaultSwap';
@@ -2820,7 +2820,7 @@ import { ResourceListOfSideDefinition } from './resourceListOfSideDefinition';
 import { ResourceListOfString } from './resourceListOfString';
 import { ResourceListOfTaxRuleSet } from './resourceListOfTaxRuleSet';
 import { ResourceListOfTransaction } from './resourceListOfTransaction';
-import { ResourceListOfTransactionFee } from './resourceListOfTransactionFee';
+import { ResourceListOfTransactionFeeType } from './resourceListOfTransactionFeeType';
 import { ResourceListOfTransactionSettlementInstruction } from './resourceListOfTransactionSettlementInstruction';
 import { ResourceListOfTransactionType } from './resourceListOfTransactionType';
 import { ResourceListOfValueType } from './resourceListOfValueType';
@@ -2982,8 +2982,8 @@ import { TransactionConfigurationTypeAlias } from './transactionConfigurationTyp
 import { TransactionCurrencyAndAmount } from './transactionCurrencyAndAmount';
 import { TransactionDateWindows } from './transactionDateWindows';
 import { TransactionDiagnostics } from './transactionDiagnostics';
-import { TransactionFee } from './transactionFee';
 import { TransactionFeeCapitalisation } from './transactionFeeCapitalisation';
+import { TransactionFeeType } from './transactionFeeType';
 import { TransactionFieldMap } from './transactionFieldMap';
 import { TransactionMatchingAlternativeId } from './transactionMatchingAlternativeId';
 import { TransactionPrice } from './transactionPrice';
@@ -3074,7 +3074,7 @@ import { UpdateSeriesIdentifierField } from './updateSeriesIdentifierField';
 import { UpdateStagingRuleSetRequest } from './updateStagingRuleSetRequest';
 import { UpdateTaxRuleSetRequest } from './updateTaxRuleSetRequest';
 import { UpdateTimelineRequest } from './updateTimelineRequest';
-import { UpdateTransactionFeeRequest } from './updateTransactionFeeRequest';
+import { UpdateTransactionFeeTypeRequest } from './updateTransactionFeeTypeRequest';
 import { UpdateUnitRequest } from './updateUnitRequest';
 import { UpsertCdsFlowConventionsRequest } from './upsertCdsFlowConventionsRequest';
 import { UpsertComplexMarketDataRequest } from './upsertComplexMarketDataRequest';
@@ -4123,7 +4123,7 @@ let typeMap: {[index: string]: any} = {
     "CreateTaxRuleSetRequest": CreateTaxRuleSetRequest,
     "CreateTimelineRequest": CreateTimelineRequest,
     "CreateTradeTicketsResponse": CreateTradeTicketsResponse,
-    "CreateTransactionFeeRequest": CreateTransactionFeeRequest,
+    "CreateTransactionFeeTypeRequest": CreateTransactionFeeTypeRequest,
     "CreateTransactionPortfolioRequest": CreateTransactionPortfolioRequest,
     "CreateUnitDefinition": CreateUnitDefinition,
     "CreditDefaultSwap": CreditDefaultSwap,
@@ -4982,7 +4982,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfString": ResourceListOfString,
     "ResourceListOfTaxRuleSet": ResourceListOfTaxRuleSet,
     "ResourceListOfTransaction": ResourceListOfTransaction,
-    "ResourceListOfTransactionFee": ResourceListOfTransactionFee,
+    "ResourceListOfTransactionFeeType": ResourceListOfTransactionFeeType,
     "ResourceListOfTransactionSettlementInstruction": ResourceListOfTransactionSettlementInstruction,
     "ResourceListOfTransactionType": ResourceListOfTransactionType,
     "ResourceListOfValueType": ResourceListOfValueType,
@@ -5137,8 +5137,8 @@ let typeMap: {[index: string]: any} = {
     "TransactionCurrencyAndAmount": TransactionCurrencyAndAmount,
     "TransactionDateWindows": TransactionDateWindows,
     "TransactionDiagnostics": TransactionDiagnostics,
-    "TransactionFee": TransactionFee,
     "TransactionFeeCapitalisation": TransactionFeeCapitalisation,
+    "TransactionFeeType": TransactionFeeType,
     "TransactionFieldMap": TransactionFieldMap,
     "TransactionMatchingAlternativeId": TransactionMatchingAlternativeId,
     "TransactionPrice": TransactionPrice,
@@ -5223,7 +5223,7 @@ let typeMap: {[index: string]: any} = {
     "UpdateStagingRuleSetRequest": UpdateStagingRuleSetRequest,
     "UpdateTaxRuleSetRequest": UpdateTaxRuleSetRequest,
     "UpdateTimelineRequest": UpdateTimelineRequest,
-    "UpdateTransactionFeeRequest": UpdateTransactionFeeRequest,
+    "UpdateTransactionFeeTypeRequest": UpdateTransactionFeeTypeRequest,
     "UpdateUnitRequest": UpdateUnitRequest,
     "UpsertCdsFlowConventionsRequest": UpsertCdsFlowConventionsRequest,
     "UpsertComplexMarketDataRequest": UpsertComplexMarketDataRequest,

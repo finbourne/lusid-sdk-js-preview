@@ -148,12 +148,12 @@ export * from './timelinesApi';
 import { TimelinesApi } from './timelinesApi';
 export * from './transactionConfigurationApi';
 import { TransactionConfigurationApi } from './transactionConfigurationApi';
+export * from './transactionFeeTypesApi';
+import { TransactionFeeTypesApi } from './transactionFeeTypesApi';
 export * from './transactionFeesApi';
 import { TransactionFeesApi } from './transactionFeesApi';
 export * from './transactionPortfoliosApi';
 import { TransactionPortfoliosApi } from './transactionPortfoliosApi';
-export * from './transactionTransactionFeesApi';
-import { TransactionTransactionFeesApi } from './transactionTransactionFeesApi';
 export * from './transferAgencyApi';
 import { TransferAgencyApi } from './transferAgencyApi';
 export * from './translationApi';
@@ -163,4 +163,4 @@ import { WorkspaceApi } from './workspaceApi';
 
 export { RequestFile } from '../model/models';
 
-export const APIS = [AborApi, AborConfigurationApi, AddressKeyDefinitionApi, AggregatedReturnsApi, AggregationApi, AllocationsApi, AmortisationRuleSetsApi, ApplicationMetadataApi, BlocksApi, CalendarsApi, ChartOfAccountsApi, CheckDefinitionsApi, ComplexMarketDataApi, ComplianceApi, ConfigurationRecipeApi, ConventionsApi, CorporateActionSourcesApi, CounterpartiesApi, CustomDataModelsApi, CustomEntitiesApi, CustomEntityDefinitionsApi, CustomEntityTypesApi, CutLabelDefinitionsApi, DataTypesApi, DerivedTransactionPortfoliosApi, EntitiesApi, ExecutionsApi, FeeTypesApi, FundConfigurationApi, FundsApi, GroupReconciliationsApi, IdentifierDefinitionsApi, InstrumentEventTypesApi, InstrumentEventsApi, InstrumentsApi, InvestmentAccountsApi, InvestorRecordsApi, LegacyComplianceApi, LegalEntitiesApi, OrderGraphApi, OrderInstructionsApi, OrderManagementApi, OrdersApi, PackagesApi, ParticipationsApi, PersonsApi, PlacementsApi, PortfolioGroupsApi, PortfoliosApi, PropertyDefinitionsApi, QueryableKeysApi, QuotesApi, ReconciliationsApi, ReferenceListsApi, ReferencePortfolioApi, RelationDefinitionsApi, RelationalDatasetDefinitionApi, RelationalDatasetsApi, RelationsApi, RelationshipDefinitionsApi, RelationshipsApi, ResourceRecordApi, SchemasApi, ScopesApi, ScriptedTranslationApi, SearchApi, SequencesApi, SimplePositionPortfoliosApi, StagedModificationsApi, StagingRuleSetApi, StructuredResultDataApi, SystemConfigurationApi, TaxRuleSetsApi, TimelinesApi, TransactionConfigurationApi, TransactionFeesApi, TransactionPortfoliosApi, TransactionTransactionFeesApi, TransferAgencyApi, TranslationApi, WorkspaceApi];
+export const APIS = [AborApi, AborConfigurationApi, AddressKeyDefinitionApi, AggregatedReturnsApi, AggregationApi, AllocationsApi, AmortisationRuleSetsApi, ApplicationMetadataApi, BlocksApi, CalendarsApi, ChartOfAccountsApi, CheckDefinitionsApi, ComplexMarketDataApi, ComplianceApi, ConfigurationRecipeApi, ConventionsApi, CorporateActionSourcesApi, CounterpartiesApi, CustomDataModelsApi, CustomEntitiesApi, CustomEntityDefinitionsApi, CustomEntityTypesApi, CutLabelDefinitionsApi, DataTypesApi, DerivedTransactionPortfoliosApi, EntitiesApi, ExecutionsApi, FeeTypesApi, FundConfigurationApi, FundsApi, GroupReconciliationsApi, IdentifierDefinitionsApi, InstrumentEventTypesApi, InstrumentEventsApi, InstrumentsApi, InvestmentAccountsApi, InvestorRecordsApi, LegacyComplianceApi, LegalEntitiesApi, OrderGraphApi, OrderInstructionsApi, OrderManagementApi, OrdersApi, PackagesApi, ParticipationsApi, PersonsApi, PlacementsApi, PortfolioGroupsApi, PortfoliosApi, PropertyDefinitionsApi, QueryableKeysApi, QuotesApi, ReconciliationsApi, ReferenceListsApi, ReferencePortfolioApi, RelationDefinitionsApi, RelationalDatasetDefinitionApi, RelationalDatasetsApi, RelationsApi, RelationshipDefinitionsApi, RelationshipsApi, ResourceRecordApi, SchemasApi, ScopesApi, ScriptedTranslationApi, SearchApi, SequencesApi, SimplePositionPortfoliosApi, StagedModificationsApi, StagingRuleSetApi, StructuredResultDataApi, SystemConfigurationApi, TaxRuleSetsApi, TimelinesApi, TransactionConfigurationApi, TransactionFeeTypesApi, TransactionFeesApi, TransactionPortfoliosApi, TransferAgencyApi, TranslationApi, WorkspaceApi];
