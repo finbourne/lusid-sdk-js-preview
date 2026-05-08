@@ -703,6 +703,8 @@ export * from './inlineValuationsReconciliationRequest';
 export * from './inputTransition';
 export * from './instrument';
 export * from './instrumentActivity';
+export * from './instrumentActivityAdjustment';
+export * from './instrumentActivityAdjustmentAllOf';
 export * from './instrumentActivityAllOf';
 export * from './instrumentCapabilities';
 export * from './instrumentCashFlow';
@@ -833,6 +835,8 @@ export * from './movementSettlementSummary';
 export * from './movementType';
 export * from './multiCurrencyAmounts';
 export * from './navActivityAdjustment';
+export * from './navActivityAdjustmentResponse';
+export * from './navActivityAdjustmentResponseType';
 export * from './navActivityAdjustmentType';
 export * from './navType';
 export * from './navTypeDefinition';
@@ -1018,9 +1022,13 @@ export * from './portfolioReturnBreakdown';
 export * from './portfolioSearchResult';
 export * from './portfolioSettlementConfiguration';
 export * from './portfolioSettlementInstruction';
+export * from './portfolioSettlementInstructionAdjustment';
+export * from './portfolioSettlementInstructionAdjustmentAllOf';
 export * from './portfolioSettlementInstructionAllOf';
 export * from './portfolioTradeTicket';
 export * from './portfolioTransaction';
+export * from './portfolioTransactionAdjustment';
+export * from './portfolioTransactionAdjustmentAllOf';
 export * from './portfolioTransactionAllOf';
 export * from './portfolioType';
 export * from './portfolioWeight';
@@ -1081,6 +1089,8 @@ export * from './quote';
 export * from './quoteAccessMetadataRule';
 export * from './quoteAccessMetadataRuleId';
 export * from './quoteActivity';
+export * from './quoteActivityAdjustment';
+export * from './quoteActivityAdjustmentAllOf';
 export * from './quoteActivityAllOf';
 export * from './quoteDependency';
 export * from './quoteDependencyAllOf';
@@ -1194,7 +1204,7 @@ export * from './resourceListOfLegalEntity';
 export * from './resourceListOfListComplexMarketDataWithMetaDataResponse';
 export * from './resourceListOfMapping';
 export * from './resourceListOfMovedOrderToDifferentBlockResponse';
-export * from './resourceListOfNavActivityAdjustment';
+export * from './resourceListOfNavActivityAdjustmentResponse';
 export * from './resourceListOfOrder';
 export * from './resourceListOfOrderInstruction';
 export * from './resourceListOfOutputTransaction';
@@ -2300,6 +2310,8 @@ import { InlineValuationsReconciliationRequest } from './inlineValuationsReconci
 import { InputTransition } from './inputTransition';
 import { Instrument } from './instrument';
 import { InstrumentActivity } from './instrumentActivity';
+import { InstrumentActivityAdjustment } from './instrumentActivityAdjustment';
+import { InstrumentActivityAdjustmentAllOf } from './instrumentActivityAdjustmentAllOf';
 import { InstrumentActivityAllOf } from './instrumentActivityAllOf';
 import { InstrumentCapabilities } from './instrumentCapabilities';
 import { InstrumentCashFlow } from './instrumentCashFlow';
@@ -2430,6 +2442,8 @@ import { MovementSettlementSummary } from './movementSettlementSummary';
 import { MovementType } from './movementType';
 import { MultiCurrencyAmounts } from './multiCurrencyAmounts';
 import { NavActivityAdjustment } from './navActivityAdjustment';
+import { NavActivityAdjustmentResponse } from './navActivityAdjustmentResponse';
+import { NavActivityAdjustmentResponseType } from './navActivityAdjustmentResponseType';
 import { NavActivityAdjustmentType } from './navActivityAdjustmentType';
 import { NavType } from './navType';
 import { NavTypeDefinition } from './navTypeDefinition';
@@ -2615,9 +2629,13 @@ import { PortfolioReturnBreakdown } from './portfolioReturnBreakdown';
 import { PortfolioSearchResult } from './portfolioSearchResult';
 import { PortfolioSettlementConfiguration } from './portfolioSettlementConfiguration';
 import { PortfolioSettlementInstruction } from './portfolioSettlementInstruction';
+import { PortfolioSettlementInstructionAdjustment } from './portfolioSettlementInstructionAdjustment';
+import { PortfolioSettlementInstructionAdjustmentAllOf } from './portfolioSettlementInstructionAdjustmentAllOf';
 import { PortfolioSettlementInstructionAllOf } from './portfolioSettlementInstructionAllOf';
 import { PortfolioTradeTicket } from './portfolioTradeTicket';
 import { PortfolioTransaction } from './portfolioTransaction';
+import { PortfolioTransactionAdjustment } from './portfolioTransactionAdjustment';
+import { PortfolioTransactionAdjustmentAllOf } from './portfolioTransactionAdjustmentAllOf';
 import { PortfolioTransactionAllOf } from './portfolioTransactionAllOf';
 import { PortfolioType } from './portfolioType';
 import { PortfolioWeight } from './portfolioWeight';
@@ -2678,6 +2696,8 @@ import { Quote } from './quote';
 import { QuoteAccessMetadataRule } from './quoteAccessMetadataRule';
 import { QuoteAccessMetadataRuleId } from './quoteAccessMetadataRuleId';
 import { QuoteActivity } from './quoteActivity';
+import { QuoteActivityAdjustment } from './quoteActivityAdjustment';
+import { QuoteActivityAdjustmentAllOf } from './quoteActivityAdjustmentAllOf';
 import { QuoteActivityAllOf } from './quoteActivityAllOf';
 import { QuoteDependency } from './quoteDependency';
 import { QuoteDependencyAllOf } from './quoteDependencyAllOf';
@@ -2791,7 +2811,7 @@ import { ResourceListOfLegalEntity } from './resourceListOfLegalEntity';
 import { ResourceListOfListComplexMarketDataWithMetaDataResponse } from './resourceListOfListComplexMarketDataWithMetaDataResponse';
 import { ResourceListOfMapping } from './resourceListOfMapping';
 import { ResourceListOfMovedOrderToDifferentBlockResponse } from './resourceListOfMovedOrderToDifferentBlockResponse';
-import { ResourceListOfNavActivityAdjustment } from './resourceListOfNavActivityAdjustment';
+import { ResourceListOfNavActivityAdjustmentResponse } from './resourceListOfNavActivityAdjustmentResponse';
 import { ResourceListOfOrder } from './resourceListOfOrder';
 import { ResourceListOfOrderInstruction } from './resourceListOfOrderInstruction';
 import { ResourceListOfOutputTransaction } from './resourceListOfOutputTransaction';
@@ -3528,6 +3548,8 @@ let enumsMap: {[index: string]: any} = {
         "Instrument.StateEnum": Instrument.StateEnum,
         "Instrument.AssetClassEnum": Instrument.AssetClassEnum,
         "InstrumentActivity.NavActivityAdjustmentTypeEnum": InstrumentActivity.NavActivityAdjustmentTypeEnum,
+        "InstrumentActivityAdjustment.NavActivityAdjustmentTypeEnum": InstrumentActivityAdjustment.NavActivityAdjustmentTypeEnum,
+        "InstrumentActivityAdjustmentAllOf.NavActivityAdjustmentTypeEnum": InstrumentActivityAdjustmentAllOf.NavActivityAdjustmentTypeEnum,
         "InstrumentActivityAllOf.NavActivityAdjustmentTypeEnum": InstrumentActivityAllOf.NavActivityAdjustmentTypeEnum,
         "InstrumentDeleteModes": InstrumentDeleteModes,
         "InstrumentEvent.InstrumentEventTypeEnum": InstrumentEvent.InstrumentEventTypeEnum,
@@ -3593,6 +3615,8 @@ let enumsMap: {[index: string]: any} = {
         "ModelSelection.ModelEnum": ModelSelection.ModelEnum,
         "MovementType": MovementType,
         "NavActivityAdjustment.NavActivityAdjustmentTypeEnum": NavActivityAdjustment.NavActivityAdjustmentTypeEnum,
+        "NavActivityAdjustmentResponse.NavActivityAdjustmentTypeEnum": NavActivityAdjustmentResponse.NavActivityAdjustmentTypeEnum,
+        "NavActivityAdjustmentResponseType": NavActivityAdjustmentResponseType,
         "NavActivityAdjustmentType": NavActivityAdjustmentType,
         "NumericComparisonType": NumericComparisonType,
         "OpaqueDependency.DependencyTypeEnum": OpaqueDependency.DependencyTypeEnum,
@@ -3631,8 +3655,12 @@ let enumsMap: {[index: string]: any} = {
         "PortfolioResultDataKeyRuleAllOf.ResultKeyRuleTypeEnum": PortfolioResultDataKeyRuleAllOf.ResultKeyRuleTypeEnum,
         "PortfolioSearchResult.TypeEnum": PortfolioSearchResult.TypeEnum,
         "PortfolioSettlementInstruction.NavActivityAdjustmentTypeEnum": PortfolioSettlementInstruction.NavActivityAdjustmentTypeEnum,
+        "PortfolioSettlementInstructionAdjustment.NavActivityAdjustmentTypeEnum": PortfolioSettlementInstructionAdjustment.NavActivityAdjustmentTypeEnum,
+        "PortfolioSettlementInstructionAdjustmentAllOf.NavActivityAdjustmentTypeEnum": PortfolioSettlementInstructionAdjustmentAllOf.NavActivityAdjustmentTypeEnum,
         "PortfolioSettlementInstructionAllOf.NavActivityAdjustmentTypeEnum": PortfolioSettlementInstructionAllOf.NavActivityAdjustmentTypeEnum,
         "PortfolioTransaction.NavActivityAdjustmentTypeEnum": PortfolioTransaction.NavActivityAdjustmentTypeEnum,
+        "PortfolioTransactionAdjustment.NavActivityAdjustmentTypeEnum": PortfolioTransactionAdjustment.NavActivityAdjustmentTypeEnum,
+        "PortfolioTransactionAdjustmentAllOf.NavActivityAdjustmentTypeEnum": PortfolioTransactionAdjustmentAllOf.NavActivityAdjustmentTypeEnum,
         "PortfolioTransactionAllOf.NavActivityAdjustmentTypeEnum": PortfolioTransactionAllOf.NavActivityAdjustmentTypeEnum,
         "PortfolioType": PortfolioType,
         "PortfolioWithoutHref.TypeEnum": PortfolioWithoutHref.TypeEnum,
@@ -3668,6 +3696,8 @@ let enumsMap: {[index: string]: any} = {
         "PropertyValueInAllOf.CriterionTypeEnum": PropertyValueInAllOf.CriterionTypeEnum,
         "ProtectionPayoutCashFlowEvent.InstrumentEventTypeEnum": ProtectionPayoutCashFlowEvent.InstrumentEventTypeEnum,
         "QuoteActivity.NavActivityAdjustmentTypeEnum": QuoteActivity.NavActivityAdjustmentTypeEnum,
+        "QuoteActivityAdjustment.NavActivityAdjustmentTypeEnum": QuoteActivityAdjustment.NavActivityAdjustmentTypeEnum,
+        "QuoteActivityAdjustmentAllOf.NavActivityAdjustmentTypeEnum": QuoteActivityAdjustmentAllOf.NavActivityAdjustmentTypeEnum,
         "QuoteActivityAllOf.NavActivityAdjustmentTypeEnum": QuoteActivityAllOf.NavActivityAdjustmentTypeEnum,
         "QuoteDependency.DependencyTypeEnum": QuoteDependency.DependencyTypeEnum,
         "QuoteDependencyAllOf.DependencyTypeEnum": QuoteDependencyAllOf.DependencyTypeEnum,
@@ -4488,6 +4518,8 @@ let typeMap: {[index: string]: any} = {
     "InputTransition": InputTransition,
     "Instrument": Instrument,
     "InstrumentActivity": InstrumentActivity,
+    "InstrumentActivityAdjustment": InstrumentActivityAdjustment,
+    "InstrumentActivityAdjustmentAllOf": InstrumentActivityAdjustmentAllOf,
     "InstrumentActivityAllOf": InstrumentActivityAllOf,
     "InstrumentCapabilities": InstrumentCapabilities,
     "InstrumentCashFlow": InstrumentCashFlow,
@@ -4610,6 +4642,7 @@ let typeMap: {[index: string]: any} = {
     "MovementSettlementSummary": MovementSettlementSummary,
     "MultiCurrencyAmounts": MultiCurrencyAmounts,
     "NavActivityAdjustment": NavActivityAdjustment,
+    "NavActivityAdjustmentResponse": NavActivityAdjustmentResponse,
     "NavType": NavType,
     "NavTypeDefinition": NavTypeDefinition,
     "NewInstrument": NewInstrument,
@@ -4788,9 +4821,13 @@ let typeMap: {[index: string]: any} = {
     "PortfolioSearchResult": PortfolioSearchResult,
     "PortfolioSettlementConfiguration": PortfolioSettlementConfiguration,
     "PortfolioSettlementInstruction": PortfolioSettlementInstruction,
+    "PortfolioSettlementInstructionAdjustment": PortfolioSettlementInstructionAdjustment,
+    "PortfolioSettlementInstructionAdjustmentAllOf": PortfolioSettlementInstructionAdjustmentAllOf,
     "PortfolioSettlementInstructionAllOf": PortfolioSettlementInstructionAllOf,
     "PortfolioTradeTicket": PortfolioTradeTicket,
     "PortfolioTransaction": PortfolioTransaction,
+    "PortfolioTransactionAdjustment": PortfolioTransactionAdjustment,
+    "PortfolioTransactionAdjustmentAllOf": PortfolioTransactionAdjustmentAllOf,
     "PortfolioTransactionAllOf": PortfolioTransactionAllOf,
     "PortfolioWeight": PortfolioWeight,
     "PortfolioWithoutHref": PortfolioWithoutHref,
@@ -4845,6 +4882,8 @@ let typeMap: {[index: string]: any} = {
     "QuoteAccessMetadataRule": QuoteAccessMetadataRule,
     "QuoteAccessMetadataRuleId": QuoteAccessMetadataRuleId,
     "QuoteActivity": QuoteActivity,
+    "QuoteActivityAdjustment": QuoteActivityAdjustment,
+    "QuoteActivityAdjustmentAllOf": QuoteActivityAdjustmentAllOf,
     "QuoteActivityAllOf": QuoteActivityAllOf,
     "QuoteDependency": QuoteDependency,
     "QuoteDependencyAllOf": QuoteDependencyAllOf,
@@ -4953,7 +4992,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfListComplexMarketDataWithMetaDataResponse": ResourceListOfListComplexMarketDataWithMetaDataResponse,
     "ResourceListOfMapping": ResourceListOfMapping,
     "ResourceListOfMovedOrderToDifferentBlockResponse": ResourceListOfMovedOrderToDifferentBlockResponse,
-    "ResourceListOfNavActivityAdjustment": ResourceListOfNavActivityAdjustment,
+    "ResourceListOfNavActivityAdjustmentResponse": ResourceListOfNavActivityAdjustmentResponse,
     "ResourceListOfOrder": ResourceListOfOrder,
     "ResourceListOfOrderInstruction": ResourceListOfOrderInstruction,
     "ResourceListOfOutputTransaction": ResourceListOfOutputTransaction,

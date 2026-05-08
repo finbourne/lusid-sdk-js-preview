@@ -9,7 +9,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "2.0.1526",
+    "version": "2.0.1527",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -54883,17 +54883,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/ResourceListOfNavActivityAdjustment"
+                  "$ref": "#/components/schemas/ResourceListOfNavActivityAdjustmentResponse"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ResourceListOfNavActivityAdjustment"
+                  "$ref": "#/components/schemas/ResourceListOfNavActivityAdjustmentResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ResourceListOfNavActivityAdjustment"
+                  "$ref": "#/components/schemas/ResourceListOfNavActivityAdjustmentResponse"
                 }
               }
             }
@@ -55012,16 +55012,17 @@
               "schema": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/NavActivityAdjustment"
+                  "$ref": "#/components/schemas/NavActivityAdjustmentResponse"
                 }
               },
               "example": [
                 {
+                  "navActivityAdjustmentSource": "Undefined",
                   "asAt": "2024-01-01T00:00:00.0000000+00:00",
                   "portfolioScope": "portfolioScope1",
                   "portfolioCode": "portfolioCode1",
                   "transactionId": "transactionId1",
-                  "navActivityAdjustmentType": "PortfolioTransaction"
+                  "navActivityAdjustmentType": "PortfolioTransactionAdjustment"
                 }
               ]
             },
@@ -55029,16 +55030,17 @@
               "schema": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/NavActivityAdjustment"
+                  "$ref": "#/components/schemas/NavActivityAdjustmentResponse"
                 }
               },
               "example": [
                 {
+                  "navActivityAdjustmentSource": "Undefined",
                   "asAt": "2024-01-01T00:00:00.0000000+00:00",
                   "portfolioScope": "portfolioScope1",
                   "portfolioCode": "portfolioCode1",
                   "transactionId": "transactionId1",
-                  "navActivityAdjustmentType": "PortfolioTransaction"
+                  "navActivityAdjustmentType": "PortfolioTransactionAdjustment"
                 }
               ]
             },
@@ -55046,16 +55048,17 @@
               "schema": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/NavActivityAdjustment"
+                  "$ref": "#/components/schemas/NavActivityAdjustmentResponse"
                 }
               },
               "example": [
                 {
+                  "navActivityAdjustmentSource": "Undefined",
                   "asAt": "2024-01-01T00:00:00.0000000+00:00",
                   "portfolioScope": "portfolioScope1",
                   "portfolioCode": "portfolioCode1",
                   "transactionId": "transactionId1",
-                  "navActivityAdjustmentType": "PortfolioTransaction"
+                  "navActivityAdjustmentType": "PortfolioTransactionAdjustment"
                 }
               ]
             },
@@ -55063,16 +55066,17 @@
               "schema": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/NavActivityAdjustment"
+                  "$ref": "#/components/schemas/NavActivityAdjustmentResponse"
                 }
               },
               "example": [
                 {
+                  "navActivityAdjustmentSource": "Undefined",
                   "asAt": "2024-01-01T00:00:00.0000000+00:00",
                   "portfolioScope": "portfolioScope1",
                   "portfolioCode": "portfolioCode1",
                   "transactionId": "transactionId1",
-                  "navActivityAdjustmentType": "PortfolioTransaction"
+                  "navActivityAdjustmentType": "PortfolioTransactionAdjustment"
                 }
               ]
             }
@@ -219880,6 +219884,59 @@
           }
         ]
       },
+      "InstrumentActivityAdjustment": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/NavActivityAdjustmentResponse"
+          },
+          {
+            "required": [
+              "asAt",
+              "lusidInstrumentId",
+              "navActivityAdjustmentSource",
+              "navActivityAdjustmentType",
+              "scope"
+            ],
+            "type": "object",
+            "properties": {
+              "navActivityAdjustmentSource": {
+                "minLength": 1,
+                "type": "string",
+                "description": "The post closed activity source of the given entity, for example Manual. Available values: Undefined, Manual, Auto."
+              },
+              "asAt": {
+                "type": "string",
+                "description": "The asAt time for which the adjustment is being applied.",
+                "format": "date-time"
+              },
+              "scope": {
+                "maxLength": 64,
+                "minLength": 1,
+                "pattern": "^[a-zA-Z0-9\\-_]+$",
+                "type": "string",
+                "description": "The Scope of the given entity"
+              },
+              "lusidInstrumentId": {
+                "maxLength": 64,
+                "minLength": 1,
+                "pattern": "^[a-zA-Z0-9\\-_]+$",
+                "type": "string",
+                "description": "The LusidInstrumentId of the given entity"
+              },
+              "navActivityAdjustmentType": {
+                "enum": [
+                  "PortfolioTransactionAdjustment",
+                  "PortfolioSettlementInstructionAdjustment",
+                  "InstrumentActivityAdjustment",
+                  "QuoteActivityAdjustment"
+                ],
+                "type": "string",
+                "description": "The type of the entity being applied, for example a PortfolioTransaction. Available values: PortfolioTransactionAdjustment, PortfolioSettlementInstructionAdjustment, InstrumentActivityAdjustment, QuoteActivityAdjustment."
+              }
+            }
+          }
+        ]
+      },
       "InstrumentCapabilities": {
         "type": "object",
         "properties": {
@@ -225591,6 +225648,38 @@
         "discriminator": {
           "propertyName": "navActivityAdjustmentType"
         }
+      },
+      "NavActivityAdjustmentResponse": {
+        "required": [
+          "navActivityAdjustmentType"
+        ],
+        "type": "object",
+        "properties": {
+          "navActivityAdjustmentType": {
+            "enum": [
+              "PortfolioTransactionAdjustment",
+              "PortfolioSettlementInstructionAdjustment",
+              "InstrumentActivityAdjustment",
+              "QuoteActivityAdjustment"
+            ],
+            "type": "string",
+            "description": "The type of the entity being applied, for example a PortfolioTransaction. Available values: PortfolioTransactionAdjustment, PortfolioSettlementInstructionAdjustment, InstrumentActivityAdjustment, QuoteActivityAdjustment."
+          }
+        },
+        "additionalProperties": false,
+        "discriminator": {
+          "propertyName": "navActivityAdjustmentType"
+        }
+      },
+      "NavActivityAdjustmentResponseType": {
+        "enum": [
+          "PortfolioTransactionAdjustment",
+          "PortfolioSettlementInstructionAdjustment",
+          "InstrumentActivityAdjustment",
+          "QuoteActivityAdjustment"
+        ],
+        "type": "string",
+        "description": "Discriminator for NavActivityAdjustmentResponse"
       },
       "NavActivityAdjustmentType": {
         "enum": [
@@ -232885,6 +232974,67 @@
           }
         ]
       },
+      "PortfolioSettlementInstructionAdjustment": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/NavActivityAdjustmentResponse"
+          },
+          {
+            "required": [
+              "asAt",
+              "navActivityAdjustmentSource",
+              "navActivityAdjustmentType",
+              "portfolioCode",
+              "portfolioScope",
+              "settlementInstructionId"
+            ],
+            "type": "object",
+            "properties": {
+              "navActivityAdjustmentSource": {
+                "minLength": 1,
+                "type": "string",
+                "description": "The post closed activity source of the given entity, for example Manual. Available values: Undefined, Manual, Auto."
+              },
+              "asAt": {
+                "type": "string",
+                "description": "The asAt time for which the adjustment is being applied.",
+                "format": "date-time"
+              },
+              "portfolioScope": {
+                "maxLength": 64,
+                "minLength": 1,
+                "pattern": "^[a-zA-Z0-9\\-_]+$",
+                "type": "string",
+                "description": "The portfolio scope of the given entity"
+              },
+              "portfolioCode": {
+                "maxLength": 64,
+                "minLength": 1,
+                "pattern": "^[a-zA-Z0-9\\-_]+$",
+                "type": "string",
+                "description": "The portfolio code of the given entity"
+              },
+              "settlementInstructionId": {
+                "maxLength": 64,
+                "minLength": 1,
+                "pattern": "^[a-zA-Z0-9\\-_]+$",
+                "type": "string",
+                "description": "The settlement instruction Id of the SettlementInstruction being adjusted"
+              },
+              "navActivityAdjustmentType": {
+                "enum": [
+                  "PortfolioTransactionAdjustment",
+                  "PortfolioSettlementInstructionAdjustment",
+                  "InstrumentActivityAdjustment",
+                  "QuoteActivityAdjustment"
+                ],
+                "type": "string",
+                "description": "The type of the entity being applied, for example a PortfolioTransaction. Available values: PortfolioTransactionAdjustment, PortfolioSettlementInstructionAdjustment, InstrumentActivityAdjustment, QuoteActivityAdjustment."
+              }
+            }
+          }
+        ]
+      },
       "PortfoliosReconciliationRequest": {
         "required": [
           "instrumentPropertyKeys",
@@ -232973,6 +233123,67 @@
                 ],
                 "type": "string",
                 "description": "The type of the entity being applied, for example a PortfolioTransaction. Available values: PortfolioTransaction, PortfolioSettlementInstruction, InstrumentActivity, QuoteActivity."
+              }
+            }
+          }
+        ]
+      },
+      "PortfolioTransactionAdjustment": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/NavActivityAdjustmentResponse"
+          },
+          {
+            "required": [
+              "asAt",
+              "navActivityAdjustmentSource",
+              "navActivityAdjustmentType",
+              "portfolioCode",
+              "portfolioScope",
+              "transactionId"
+            ],
+            "type": "object",
+            "properties": {
+              "navActivityAdjustmentSource": {
+                "minLength": 1,
+                "type": "string",
+                "description": "The post closed activity source of the given entity, for example Manual. Available values: Undefined, Manual, Auto."
+              },
+              "asAt": {
+                "type": "string",
+                "description": "The asAt time for which the adjustment is being applied.",
+                "format": "date-time"
+              },
+              "portfolioScope": {
+                "maxLength": 64,
+                "minLength": 1,
+                "pattern": "^[a-zA-Z0-9\\-_]+$",
+                "type": "string",
+                "description": "The portfolio scope of the given entity"
+              },
+              "portfolioCode": {
+                "maxLength": 64,
+                "minLength": 1,
+                "pattern": "^[a-zA-Z0-9\\-_]+$",
+                "type": "string",
+                "description": "The portfolio code of the given entity"
+              },
+              "transactionId": {
+                "maxLength": 64,
+                "minLength": 1,
+                "pattern": "^[a-zA-Z0-9\\-_]+$",
+                "type": "string",
+                "description": "The transaction Id of the PortfolioTransaction being adjusted"
+              },
+              "navActivityAdjustmentType": {
+                "enum": [
+                  "PortfolioTransactionAdjustment",
+                  "PortfolioSettlementInstructionAdjustment",
+                  "InstrumentActivityAdjustment",
+                  "QuoteActivityAdjustment"
+                ],
+                "type": "string",
+                "description": "The type of the entity being applied, for example a PortfolioTransaction. Available values: PortfolioTransactionAdjustment, PortfolioSettlementInstructionAdjustment, InstrumentActivityAdjustment, QuoteActivityAdjustment."
               }
             }
           }
@@ -235537,6 +235748,64 @@
                 ],
                 "type": "string",
                 "description": "The type of the entity being applied, for example a PortfolioTransaction. Available values: PortfolioTransaction, PortfolioSettlementInstruction, InstrumentActivity, QuoteActivity."
+              }
+            }
+          }
+        ]
+      },
+      "QuoteActivityAdjustment": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/NavActivityAdjustmentResponse"
+          },
+          {
+            "required": [
+              "asAt",
+              "effectiveAt",
+              "entityUniqueId",
+              "instrumentId",
+              "navActivityAdjustmentSource",
+              "navActivityAdjustmentType"
+            ],
+            "type": "object",
+            "properties": {
+              "navActivityAdjustmentSource": {
+                "minLength": 1,
+                "type": "string",
+                "description": "The post closed activity source of the given entity, for example Manual. Available values: Undefined, Manual, Auto."
+              },
+              "asAt": {
+                "type": "string",
+                "description": "The asAt time for which the adjustment is being applied.",
+                "format": "date-time"
+              },
+              "effectiveAt": {
+                "maxLength": 256,
+                "minLength": 0,
+                "pattern": "^[a-zA-Z0-9\\-_\\+:\\.]+$",
+                "type": "string",
+                "description": "The EffectiveAt time of the quote event that need to be added to the closed period.",
+                "format": "dateorcutlabel"
+              },
+              "entityUniqueId": {
+                "minLength": 1,
+                "type": "string",
+                "description": "The EntityUniqueId from the quote which needs to be added as a post close activity."
+              },
+              "instrumentId": {
+                "minLength": 1,
+                "type": "string",
+                "description": "The InstrumentId from the quote which needs to be added as a post close activity."
+              },
+              "navActivityAdjustmentType": {
+                "enum": [
+                  "PortfolioTransactionAdjustment",
+                  "PortfolioSettlementInstructionAdjustment",
+                  "InstrumentActivityAdjustment",
+                  "QuoteActivityAdjustment"
+                ],
+                "type": "string",
+                "description": "The type of the entity being applied, for example a PortfolioTransaction. Available values: PortfolioTransactionAdjustment, PortfolioSettlementInstructionAdjustment, InstrumentActivityAdjustment, QuoteActivityAdjustment."
               }
             }
           }
@@ -239592,7 +239861,7 @@
         },
         "additionalProperties": false
       },
-      "ResourceListOfNavActivityAdjustment": {
+      "ResourceListOfNavActivityAdjustmentResponse": {
         "required": [
           "values"
         ],
@@ -239601,7 +239870,7 @@
           "values": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/NavActivityAdjustment"
+              "$ref": "#/components/schemas/NavActivityAdjustmentResponse"
             }
           },
           "href": {
