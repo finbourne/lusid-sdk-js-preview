@@ -9,7 +9,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "2.0.1527",
+    "version": "2.0.1529",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -58949,6 +58949,2199 @@
                   ],
                   "valuationPointCode": "FebValuationPoint",
                   "previousValuationPointCode": "JanValuationPoint"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      }
+    },
+    "/api/funds/{scope}/{code}/valuationpoints/a2b/$query": {
+      "post": {
+        "tags": [
+          "Funds"
+        ],
+        "summary": "[EXPERIMENTAL] GetA2BDataForFund: Get A2B data for a Fund.",
+        "description": "Get the A2B data for transaction portfolios in a specified Fund.",
+        "operationId": "GetA2BDataForFund",
+        "parameters": [
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope of the Fund.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "code",
+            "in": "path",
+            "description": "The code of the Fund. Together with the scope this uniquely identifies the Fund.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "navTypeCode",
+            "in": "query",
+            "description": "When provided, runs against the specified NAV Type, otherwise the Primary NAV Type will be used.",
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "asAt",
+            "in": "query",
+            "description": "The asAt datetime at which to resolve the fund and the timeline. Defaults\r\n            to return the latest version if not specified.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "x-nullable": true
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Expression to filter the result set. Read more about filtering results from LUSID here https://support.lusid.com/filtering-results-from-lusid.",
+            "schema": {
+              "maxLength": 16384,
+              "minLength": 0,
+              "pattern": "^[\\s\\S]*$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "propertyKeys",
+            "in": "query",
+            "description": "A list of property keys from the \"Instrument\" domain to decorate onto\r\n            the A2B data. These take the format {domain}/{scope}/{code} e.g. \"Instrument/system/Name\".",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "description": "The key that uniquely identifies the property. It has the format {domain}/{scope}/{code}."
+              }
+            },
+            "x-nullable": true
+          }
+        ],
+        "requestBody": {
+          "description": "The arguments to use for querying the A2B data. This includes start and end dates.",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValuationPointDataQueryParameters"
+              },
+              "example": {
+                "end": {
+                  "diaryEntry": "DiaryEntryCode"
+                },
+                "variant": "Variant"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValuationPointDataQueryParameters"
+              },
+              "example": {
+                "end": {
+                  "diaryEntry": "DiaryEntryCode"
+                },
+                "variant": "Variant"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValuationPointDataQueryParameters"
+              },
+              "example": {
+                "end": {
+                  "diaryEntry": "DiaryEntryCode"
+                },
+                "variant": "Variant"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValuationPointDataQueryParameters"
+              },
+              "example": {
+                "end": {
+                  "diaryEntry": "DiaryEntryCode"
+                },
+                "variant": "Variant"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "The A2B data for transaction portfolios in a Fund",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/VersionedResourceListOfFundA2BDataRecord"
+                },
+                "example": {
+                  "version": {
+                    "effectiveFrom": "2020-10-31T00:00:00.0000000+00:00",
+                    "asAtDate": "2021-10-31T00:00:00.0000000+00:00"
+                  },
+                  "values": [
+                    {
+                      "portfolioId": {
+                        "scope": "Example",
+                        "code": "Portfolio"
+                      },
+                      "holdingType": "B",
+                      "instrumentScope": "default",
+                      "instrumentUid": "CCY_EUR",
+                      "subHoldingKeys": {
+                        "Transaction/Algo/Name": {
+                          "key": "Transaction/Algo/Name",
+                          "value": {
+                            "labelValue": "CASH"
+                          }
+                        }
+                      },
+                      "currency": "EUR",
+                      "start": {
+                        "holdingCurrency": {
+                          "total": 20000,
+                          "currency": "EUR",
+                          "components": {
+                            "Cost": 20000
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 17400,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 16720,
+                            "CurrencyGain": 680
+                          }
+                        }
+                      },
+                      "flows": {
+                        "holdingCurrency": {
+                          "total": -10415,
+                          "currency": "EUR",
+                          "components": {
+                            "In": 192548,
+                            "Out": -202963
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": -9424.94,
+                          "currency": "GBP",
+                          "components": {
+                            "In": 163473.25,
+                            "Out": -172898.19
+                          }
+                        }
+                      },
+                      "gains": {
+                        "portfolioCurrency": {
+                          "total": -19.51,
+                          "currency": "GBP",
+                          "components": {
+                            "RealCurrencyGain": 830.88,
+                            "DeltaCurrencyGain": -850.39
+                          }
+                        }
+                      },
+                      "end": {
+                        "holdingCurrency": {
+                          "total": 9585,
+                          "currency": "EUR",
+                          "components": {
+                            "Cost": 9585
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 7955.55,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 8125.94,
+                            "CurrencyGain": -170.39
+                          }
+                        }
+                      },
+                      "properties": {
+                        "Instrument/default/Name": {
+                          "key": "Instrument/default/Name",
+                          "value": {
+                            "labelValue": "EURO"
+                          }
+                        },
+                        "Instrument/default/Currency": {
+                          "key": "Instrument/default/Currency",
+                          "value": {
+                            "labelValue": "EUR"
+                          }
+                        }
+                      },
+                      "groupId": "Grp1",
+                      "errors": []
+                    },
+                    {
+                      "portfolioId": {
+                        "scope": "Example",
+                        "code": "Portfolio"
+                      },
+                      "holdingType": "B",
+                      "instrumentScope": "default",
+                      "instrumentUid": "CCY_GBP",
+                      "subHoldingKeys": {
+                        "Transaction/Algo/Name": {
+                          "key": "Transaction/Algo/Name",
+                          "value": {
+                            "labelValue": "CASH"
+                          }
+                        }
+                      },
+                      "currency": "GBP",
+                      "start": {
+                        "holdingCurrency": {
+                          "total": 50000,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 50000
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 50000,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 50000
+                          }
+                        }
+                      },
+                      "end": {
+                        "holdingCurrency": {
+                          "total": 50000,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 50000
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 50000,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 50000
+                          }
+                        }
+                      },
+                      "properties": {
+                        "Instrument/default/Name": {
+                          "key": "Instrument/default/Name",
+                          "value": {
+                            "labelValue": "BRITISH POUND STERLING"
+                          }
+                        },
+                        "Instrument/default/Currency": {
+                          "key": "Instrument/default/Currency",
+                          "value": {
+                            "labelValue": "GBP"
+                          }
+                        }
+                      },
+                      "groupId": "Grp2",
+                      "errors": []
+                    },
+                    {
+                      "portfolioId": {
+                        "scope": "Example",
+                        "code": "Portfolio"
+                      },
+                      "holdingType": "B",
+                      "instrumentScope": "default",
+                      "instrumentUid": "CCY_USD",
+                      "subHoldingKeys": {
+                        "Transaction/Algo/Name": {
+                          "key": "Transaction/Algo/Name",
+                          "value": {
+                            "labelValue": "CASH"
+                          }
+                        }
+                      },
+                      "currency": "USD",
+                      "flows": {
+                        "holdingCurrency": {
+                          "total": 3525865,
+                          "currency": "USD",
+                          "components": {
+                            "In": 3525865
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 2525548.82,
+                          "currency": "GBP",
+                          "components": {
+                            "In": 2525548.82
+                          }
+                        }
+                      },
+                      "gains": {
+                        "portfolioCurrency": {
+                          "total": 13073.98,
+                          "currency": "GBP",
+                          "components": {
+                            "DeltaCurrencyGain": 13073.98
+                          }
+                        }
+                      },
+                      "end": {
+                        "holdingCurrency": {
+                          "total": 3525865,
+                          "currency": "USD",
+                          "components": {
+                            "Cost": 3525865
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 2538622.8,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 2525548.82,
+                            "CurrencyGain": 13073.98
+                          }
+                        }
+                      },
+                      "properties": {
+                        "Instrument/default/Name": {
+                          "key": "Instrument/default/Name",
+                          "value": {
+                            "labelValue": "UNITED STATES DOLLAR"
+                          }
+                        },
+                        "Instrument/default/Currency": {
+                          "key": "Instrument/default/Currency",
+                          "value": {
+                            "labelValue": "USD"
+                          }
+                        }
+                      },
+                      "groupId": "Grp3",
+                      "errors": []
+                    },
+                    {
+                      "portfolioId": {
+                        "scope": "AnotherExample",
+                        "code": "AnotherPortfolio"
+                      },
+                      "holdingType": "B",
+                      "instrumentScope": "default",
+                      "instrumentUid": "CCY_ZAR",
+                      "subHoldingKeys": {
+                        "Transaction/Algo/Name": {
+                          "key": "Transaction/Algo/Name",
+                          "value": {
+                            "labelValue": "CASH"
+                          }
+                        }
+                      },
+                      "currency": "ZAR",
+                      "flows": {
+                        "holdingCurrency": {
+                          "total": 454975.26,
+                          "currency": "ZAR",
+                          "components": {
+                            "Out": -1271770.65,
+                            "In": 1726745.91
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 24155.02,
+                          "currency": "GBP",
+                          "components": {
+                            "Out": -66256.57,
+                            "In": 90411.59
+                          }
+                        }
+                      },
+                      "gains": {
+                        "portfolioCurrency": {
+                          "total": -951.28,
+                          "currency": "GBP",
+                          "components": {
+                            "RealCurrencyGain": -132.33,
+                            "DeltaCurrencyGain": -818.95
+                          }
+                        }
+                      },
+                      "end": {
+                        "holdingCurrency": {
+                          "total": 454975.26,
+                          "currency": "ZAR",
+                          "components": {
+                            "Cost": 454975.26
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 23203.74,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 24022.69,
+                            "CurrencyGain": -818.95
+                          }
+                        }
+                      },
+                      "properties": {
+                        "Instrument/default/Name": {
+                          "key": "Instrument/default/Name",
+                          "value": {
+                            "labelValue": "SOUTH AFRICAN RAND"
+                          }
+                        },
+                        "Instrument/default/Currency": {
+                          "key": "Instrument/default/Currency",
+                          "value": {
+                            "labelValue": "ZAR"
+                          }
+                        }
+                      },
+                      "groupId": "Grp4",
+                      "errors": []
+                    },
+                    {
+                      "portfolioId": {
+                        "scope": "AnotherExample",
+                        "code": "AnotherPortfolio"
+                      },
+                      "holdingType": "P",
+                      "instrumentScope": "default",
+                      "instrumentUid": "LUID_DF10C5QL",
+                      "subHoldingKeys": {
+                        "Transaction/Algo/Name": {
+                          "key": "Transaction/Algo/Name",
+                          "value": {
+                            "labelValue": "Algo1"
+                          }
+                        }
+                      },
+                      "currency": "EUR",
+                      "start": {
+                        "holdingCurrency": {
+                          "total": -142482.23,
+                          "currency": "EUR",
+                          "components": {
+                            "Cost": -133842.94,
+                            "MarketGain": -8639.29
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": -123959.54,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": -111625.01,
+                            "MarketGain": -7516.18,
+                            "CurrencyGain": -4818.35
+                          }
+                        }
+                      },
+                      "flows": {
+                        "holdingCurrency": {
+                          "total": 41349.22,
+                          "currency": "EUR",
+                          "components": {
+                            "In": 41349.22
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 35436.28,
+                          "currency": "GBP",
+                          "components": {
+                            "In": 35436.28
+                          }
+                        }
+                      },
+                      "gains": {
+                        "holdingCurrency": {
+                          "total": -12655.79,
+                          "currency": "EUR",
+                          "components": {
+                            "RealMarketGain": -4846.6,
+                            "Carry": 144.22,
+                            "DeltaMarketGain": -7953.41
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": -5917.55,
+                          "currency": "GBP",
+                          "components": {
+                            "RealMarketGain": -4153.54,
+                            "RealCurrencyGain": -839.56,
+                            "Carry": 123.6,
+                            "DeltaMarketGain": -6255.76,
+                            "DeltaCurrencyGain": 5207.71
+                          }
+                        }
+                      },
+                      "carry": {
+                        "holdingCurrency": {
+                          "total": -144.22,
+                          "currency": "EUR",
+                          "components": {
+                            "CoverWithCommission": -144.22
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": -123.6,
+                          "currency": "GBP",
+                          "components": {
+                            "CoverWithCommission": -123.6
+                          }
+                        }
+                      },
+                      "end": {
+                        "holdingCurrency": {
+                          "total": -113933.02,
+                          "currency": "EUR",
+                          "components": {
+                            "Cost": -97340.32,
+                            "MarketGain": -16592.7
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": -94564.41,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": -81181.83,
+                            "MarketGain": -13771.94,
+                            "CurrencyGain": 389.36
+                          }
+                        }
+                      },
+                      "properties": {
+                        "Instrument/default/Name": {
+                          "key": "Instrument/default/Name",
+                          "value": {
+                            "labelValue": "Eur CFD #3"
+                          }
+                        },
+                        "Instrument/default/ClientInternal": {
+                          "key": "Instrument/default/ClientInternal",
+                          "value": {
+                            "labelValue": "SAMPLE03"
+                          }
+                        }
+                      },
+                      "groupId": "Grp5",
+                      "errors": []
+                    }
+                  ],
+                  "links": []
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VersionedResourceListOfFundA2BDataRecord"
+                },
+                "example": {
+                  "version": {
+                    "effectiveFrom": "2020-10-31T00:00:00.0000000+00:00",
+                    "asAtDate": "2021-10-31T00:00:00.0000000+00:00"
+                  },
+                  "values": [
+                    {
+                      "portfolioId": {
+                        "scope": "Example",
+                        "code": "Portfolio"
+                      },
+                      "holdingType": "B",
+                      "instrumentScope": "default",
+                      "instrumentUid": "CCY_EUR",
+                      "subHoldingKeys": {
+                        "Transaction/Algo/Name": {
+                          "key": "Transaction/Algo/Name",
+                          "value": {
+                            "labelValue": "CASH"
+                          }
+                        }
+                      },
+                      "currency": "EUR",
+                      "start": {
+                        "holdingCurrency": {
+                          "total": 20000,
+                          "currency": "EUR",
+                          "components": {
+                            "Cost": 20000
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 17400,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 16720,
+                            "CurrencyGain": 680
+                          }
+                        }
+                      },
+                      "flows": {
+                        "holdingCurrency": {
+                          "total": -10415,
+                          "currency": "EUR",
+                          "components": {
+                            "In": 192548,
+                            "Out": -202963
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": -9424.94,
+                          "currency": "GBP",
+                          "components": {
+                            "In": 163473.25,
+                            "Out": -172898.19
+                          }
+                        }
+                      },
+                      "gains": {
+                        "portfolioCurrency": {
+                          "total": -19.51,
+                          "currency": "GBP",
+                          "components": {
+                            "RealCurrencyGain": 830.88,
+                            "DeltaCurrencyGain": -850.39
+                          }
+                        }
+                      },
+                      "end": {
+                        "holdingCurrency": {
+                          "total": 9585,
+                          "currency": "EUR",
+                          "components": {
+                            "Cost": 9585
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 7955.55,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 8125.94,
+                            "CurrencyGain": -170.39
+                          }
+                        }
+                      },
+                      "properties": {
+                        "Instrument/default/Name": {
+                          "key": "Instrument/default/Name",
+                          "value": {
+                            "labelValue": "EURO"
+                          }
+                        },
+                        "Instrument/default/Currency": {
+                          "key": "Instrument/default/Currency",
+                          "value": {
+                            "labelValue": "EUR"
+                          }
+                        }
+                      },
+                      "groupId": "Grp1",
+                      "errors": []
+                    },
+                    {
+                      "portfolioId": {
+                        "scope": "Example",
+                        "code": "Portfolio"
+                      },
+                      "holdingType": "B",
+                      "instrumentScope": "default",
+                      "instrumentUid": "CCY_GBP",
+                      "subHoldingKeys": {
+                        "Transaction/Algo/Name": {
+                          "key": "Transaction/Algo/Name",
+                          "value": {
+                            "labelValue": "CASH"
+                          }
+                        }
+                      },
+                      "currency": "GBP",
+                      "start": {
+                        "holdingCurrency": {
+                          "total": 50000,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 50000
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 50000,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 50000
+                          }
+                        }
+                      },
+                      "end": {
+                        "holdingCurrency": {
+                          "total": 50000,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 50000
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 50000,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 50000
+                          }
+                        }
+                      },
+                      "properties": {
+                        "Instrument/default/Name": {
+                          "key": "Instrument/default/Name",
+                          "value": {
+                            "labelValue": "BRITISH POUND STERLING"
+                          }
+                        },
+                        "Instrument/default/Currency": {
+                          "key": "Instrument/default/Currency",
+                          "value": {
+                            "labelValue": "GBP"
+                          }
+                        }
+                      },
+                      "groupId": "Grp2",
+                      "errors": []
+                    },
+                    {
+                      "portfolioId": {
+                        "scope": "Example",
+                        "code": "Portfolio"
+                      },
+                      "holdingType": "B",
+                      "instrumentScope": "default",
+                      "instrumentUid": "CCY_USD",
+                      "subHoldingKeys": {
+                        "Transaction/Algo/Name": {
+                          "key": "Transaction/Algo/Name",
+                          "value": {
+                            "labelValue": "CASH"
+                          }
+                        }
+                      },
+                      "currency": "USD",
+                      "flows": {
+                        "holdingCurrency": {
+                          "total": 3525865,
+                          "currency": "USD",
+                          "components": {
+                            "In": 3525865
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 2525548.82,
+                          "currency": "GBP",
+                          "components": {
+                            "In": 2525548.82
+                          }
+                        }
+                      },
+                      "gains": {
+                        "portfolioCurrency": {
+                          "total": 13073.98,
+                          "currency": "GBP",
+                          "components": {
+                            "DeltaCurrencyGain": 13073.98
+                          }
+                        }
+                      },
+                      "end": {
+                        "holdingCurrency": {
+                          "total": 3525865,
+                          "currency": "USD",
+                          "components": {
+                            "Cost": 3525865
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 2538622.8,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 2525548.82,
+                            "CurrencyGain": 13073.98
+                          }
+                        }
+                      },
+                      "properties": {
+                        "Instrument/default/Name": {
+                          "key": "Instrument/default/Name",
+                          "value": {
+                            "labelValue": "UNITED STATES DOLLAR"
+                          }
+                        },
+                        "Instrument/default/Currency": {
+                          "key": "Instrument/default/Currency",
+                          "value": {
+                            "labelValue": "USD"
+                          }
+                        }
+                      },
+                      "groupId": "Grp3",
+                      "errors": []
+                    },
+                    {
+                      "portfolioId": {
+                        "scope": "AnotherExample",
+                        "code": "AnotherPortfolio"
+                      },
+                      "holdingType": "B",
+                      "instrumentScope": "default",
+                      "instrumentUid": "CCY_ZAR",
+                      "subHoldingKeys": {
+                        "Transaction/Algo/Name": {
+                          "key": "Transaction/Algo/Name",
+                          "value": {
+                            "labelValue": "CASH"
+                          }
+                        }
+                      },
+                      "currency": "ZAR",
+                      "flows": {
+                        "holdingCurrency": {
+                          "total": 454975.26,
+                          "currency": "ZAR",
+                          "components": {
+                            "Out": -1271770.65,
+                            "In": 1726745.91
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 24155.02,
+                          "currency": "GBP",
+                          "components": {
+                            "Out": -66256.57,
+                            "In": 90411.59
+                          }
+                        }
+                      },
+                      "gains": {
+                        "portfolioCurrency": {
+                          "total": -951.28,
+                          "currency": "GBP",
+                          "components": {
+                            "RealCurrencyGain": -132.33,
+                            "DeltaCurrencyGain": -818.95
+                          }
+                        }
+                      },
+                      "end": {
+                        "holdingCurrency": {
+                          "total": 454975.26,
+                          "currency": "ZAR",
+                          "components": {
+                            "Cost": 454975.26
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 23203.74,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 24022.69,
+                            "CurrencyGain": -818.95
+                          }
+                        }
+                      },
+                      "properties": {
+                        "Instrument/default/Name": {
+                          "key": "Instrument/default/Name",
+                          "value": {
+                            "labelValue": "SOUTH AFRICAN RAND"
+                          }
+                        },
+                        "Instrument/default/Currency": {
+                          "key": "Instrument/default/Currency",
+                          "value": {
+                            "labelValue": "ZAR"
+                          }
+                        }
+                      },
+                      "groupId": "Grp4",
+                      "errors": []
+                    },
+                    {
+                      "portfolioId": {
+                        "scope": "AnotherExample",
+                        "code": "AnotherPortfolio"
+                      },
+                      "holdingType": "P",
+                      "instrumentScope": "default",
+                      "instrumentUid": "LUID_DF10C5QL",
+                      "subHoldingKeys": {
+                        "Transaction/Algo/Name": {
+                          "key": "Transaction/Algo/Name",
+                          "value": {
+                            "labelValue": "Algo1"
+                          }
+                        }
+                      },
+                      "currency": "EUR",
+                      "start": {
+                        "holdingCurrency": {
+                          "total": -142482.23,
+                          "currency": "EUR",
+                          "components": {
+                            "Cost": -133842.94,
+                            "MarketGain": -8639.29
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": -123959.54,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": -111625.01,
+                            "MarketGain": -7516.18,
+                            "CurrencyGain": -4818.35
+                          }
+                        }
+                      },
+                      "flows": {
+                        "holdingCurrency": {
+                          "total": 41349.22,
+                          "currency": "EUR",
+                          "components": {
+                            "In": 41349.22
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 35436.28,
+                          "currency": "GBP",
+                          "components": {
+                            "In": 35436.28
+                          }
+                        }
+                      },
+                      "gains": {
+                        "holdingCurrency": {
+                          "total": -12655.79,
+                          "currency": "EUR",
+                          "components": {
+                            "RealMarketGain": -4846.6,
+                            "Carry": 144.22,
+                            "DeltaMarketGain": -7953.41
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": -5917.55,
+                          "currency": "GBP",
+                          "components": {
+                            "RealMarketGain": -4153.54,
+                            "RealCurrencyGain": -839.56,
+                            "Carry": 123.6,
+                            "DeltaMarketGain": -6255.76,
+                            "DeltaCurrencyGain": 5207.71
+                          }
+                        }
+                      },
+                      "carry": {
+                        "holdingCurrency": {
+                          "total": -144.22,
+                          "currency": "EUR",
+                          "components": {
+                            "CoverWithCommission": -144.22
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": -123.6,
+                          "currency": "GBP",
+                          "components": {
+                            "CoverWithCommission": -123.6
+                          }
+                        }
+                      },
+                      "end": {
+                        "holdingCurrency": {
+                          "total": -113933.02,
+                          "currency": "EUR",
+                          "components": {
+                            "Cost": -97340.32,
+                            "MarketGain": -16592.7
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": -94564.41,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": -81181.83,
+                            "MarketGain": -13771.94,
+                            "CurrencyGain": 389.36
+                          }
+                        }
+                      },
+                      "properties": {
+                        "Instrument/default/Name": {
+                          "key": "Instrument/default/Name",
+                          "value": {
+                            "labelValue": "Eur CFD #3"
+                          }
+                        },
+                        "Instrument/default/ClientInternal": {
+                          "key": "Instrument/default/ClientInternal",
+                          "value": {
+                            "labelValue": "SAMPLE03"
+                          }
+                        }
+                      },
+                      "groupId": "Grp5",
+                      "errors": []
+                    }
+                  ],
+                  "links": []
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VersionedResourceListOfFundA2BDataRecord"
+                },
+                "example": {
+                  "version": {
+                    "effectiveFrom": "2020-10-31T00:00:00.0000000+00:00",
+                    "asAtDate": "2021-10-31T00:00:00.0000000+00:00"
+                  },
+                  "values": [
+                    {
+                      "portfolioId": {
+                        "scope": "Example",
+                        "code": "Portfolio"
+                      },
+                      "holdingType": "B",
+                      "instrumentScope": "default",
+                      "instrumentUid": "CCY_EUR",
+                      "subHoldingKeys": {
+                        "Transaction/Algo/Name": {
+                          "key": "Transaction/Algo/Name",
+                          "value": {
+                            "labelValue": "CASH"
+                          }
+                        }
+                      },
+                      "currency": "EUR",
+                      "start": {
+                        "holdingCurrency": {
+                          "total": 20000,
+                          "currency": "EUR",
+                          "components": {
+                            "Cost": 20000
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 17400,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 16720,
+                            "CurrencyGain": 680
+                          }
+                        }
+                      },
+                      "flows": {
+                        "holdingCurrency": {
+                          "total": -10415,
+                          "currency": "EUR",
+                          "components": {
+                            "In": 192548,
+                            "Out": -202963
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": -9424.94,
+                          "currency": "GBP",
+                          "components": {
+                            "In": 163473.25,
+                            "Out": -172898.19
+                          }
+                        }
+                      },
+                      "gains": {
+                        "portfolioCurrency": {
+                          "total": -19.51,
+                          "currency": "GBP",
+                          "components": {
+                            "RealCurrencyGain": 830.88,
+                            "DeltaCurrencyGain": -850.39
+                          }
+                        }
+                      },
+                      "end": {
+                        "holdingCurrency": {
+                          "total": 9585,
+                          "currency": "EUR",
+                          "components": {
+                            "Cost": 9585
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 7955.55,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 8125.94,
+                            "CurrencyGain": -170.39
+                          }
+                        }
+                      },
+                      "properties": {
+                        "Instrument/default/Name": {
+                          "key": "Instrument/default/Name",
+                          "value": {
+                            "labelValue": "EURO"
+                          }
+                        },
+                        "Instrument/default/Currency": {
+                          "key": "Instrument/default/Currency",
+                          "value": {
+                            "labelValue": "EUR"
+                          }
+                        }
+                      },
+                      "groupId": "Grp1",
+                      "errors": []
+                    },
+                    {
+                      "portfolioId": {
+                        "scope": "Example",
+                        "code": "Portfolio"
+                      },
+                      "holdingType": "B",
+                      "instrumentScope": "default",
+                      "instrumentUid": "CCY_GBP",
+                      "subHoldingKeys": {
+                        "Transaction/Algo/Name": {
+                          "key": "Transaction/Algo/Name",
+                          "value": {
+                            "labelValue": "CASH"
+                          }
+                        }
+                      },
+                      "currency": "GBP",
+                      "start": {
+                        "holdingCurrency": {
+                          "total": 50000,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 50000
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 50000,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 50000
+                          }
+                        }
+                      },
+                      "end": {
+                        "holdingCurrency": {
+                          "total": 50000,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 50000
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 50000,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 50000
+                          }
+                        }
+                      },
+                      "properties": {
+                        "Instrument/default/Name": {
+                          "key": "Instrument/default/Name",
+                          "value": {
+                            "labelValue": "BRITISH POUND STERLING"
+                          }
+                        },
+                        "Instrument/default/Currency": {
+                          "key": "Instrument/default/Currency",
+                          "value": {
+                            "labelValue": "GBP"
+                          }
+                        }
+                      },
+                      "groupId": "Grp2",
+                      "errors": []
+                    },
+                    {
+                      "portfolioId": {
+                        "scope": "Example",
+                        "code": "Portfolio"
+                      },
+                      "holdingType": "B",
+                      "instrumentScope": "default",
+                      "instrumentUid": "CCY_USD",
+                      "subHoldingKeys": {
+                        "Transaction/Algo/Name": {
+                          "key": "Transaction/Algo/Name",
+                          "value": {
+                            "labelValue": "CASH"
+                          }
+                        }
+                      },
+                      "currency": "USD",
+                      "flows": {
+                        "holdingCurrency": {
+                          "total": 3525865,
+                          "currency": "USD",
+                          "components": {
+                            "In": 3525865
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 2525548.82,
+                          "currency": "GBP",
+                          "components": {
+                            "In": 2525548.82
+                          }
+                        }
+                      },
+                      "gains": {
+                        "portfolioCurrency": {
+                          "total": 13073.98,
+                          "currency": "GBP",
+                          "components": {
+                            "DeltaCurrencyGain": 13073.98
+                          }
+                        }
+                      },
+                      "end": {
+                        "holdingCurrency": {
+                          "total": 3525865,
+                          "currency": "USD",
+                          "components": {
+                            "Cost": 3525865
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 2538622.8,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 2525548.82,
+                            "CurrencyGain": 13073.98
+                          }
+                        }
+                      },
+                      "properties": {
+                        "Instrument/default/Name": {
+                          "key": "Instrument/default/Name",
+                          "value": {
+                            "labelValue": "UNITED STATES DOLLAR"
+                          }
+                        },
+                        "Instrument/default/Currency": {
+                          "key": "Instrument/default/Currency",
+                          "value": {
+                            "labelValue": "USD"
+                          }
+                        }
+                      },
+                      "groupId": "Grp3",
+                      "errors": []
+                    },
+                    {
+                      "portfolioId": {
+                        "scope": "AnotherExample",
+                        "code": "AnotherPortfolio"
+                      },
+                      "holdingType": "B",
+                      "instrumentScope": "default",
+                      "instrumentUid": "CCY_ZAR",
+                      "subHoldingKeys": {
+                        "Transaction/Algo/Name": {
+                          "key": "Transaction/Algo/Name",
+                          "value": {
+                            "labelValue": "CASH"
+                          }
+                        }
+                      },
+                      "currency": "ZAR",
+                      "flows": {
+                        "holdingCurrency": {
+                          "total": 454975.26,
+                          "currency": "ZAR",
+                          "components": {
+                            "Out": -1271770.65,
+                            "In": 1726745.91
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 24155.02,
+                          "currency": "GBP",
+                          "components": {
+                            "Out": -66256.57,
+                            "In": 90411.59
+                          }
+                        }
+                      },
+                      "gains": {
+                        "portfolioCurrency": {
+                          "total": -951.28,
+                          "currency": "GBP",
+                          "components": {
+                            "RealCurrencyGain": -132.33,
+                            "DeltaCurrencyGain": -818.95
+                          }
+                        }
+                      },
+                      "end": {
+                        "holdingCurrency": {
+                          "total": 454975.26,
+                          "currency": "ZAR",
+                          "components": {
+                            "Cost": 454975.26
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 23203.74,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 24022.69,
+                            "CurrencyGain": -818.95
+                          }
+                        }
+                      },
+                      "properties": {
+                        "Instrument/default/Name": {
+                          "key": "Instrument/default/Name",
+                          "value": {
+                            "labelValue": "SOUTH AFRICAN RAND"
+                          }
+                        },
+                        "Instrument/default/Currency": {
+                          "key": "Instrument/default/Currency",
+                          "value": {
+                            "labelValue": "ZAR"
+                          }
+                        }
+                      },
+                      "groupId": "Grp4",
+                      "errors": []
+                    },
+                    {
+                      "portfolioId": {
+                        "scope": "AnotherExample",
+                        "code": "AnotherPortfolio"
+                      },
+                      "holdingType": "P",
+                      "instrumentScope": "default",
+                      "instrumentUid": "LUID_DF10C5QL",
+                      "subHoldingKeys": {
+                        "Transaction/Algo/Name": {
+                          "key": "Transaction/Algo/Name",
+                          "value": {
+                            "labelValue": "Algo1"
+                          }
+                        }
+                      },
+                      "currency": "EUR",
+                      "start": {
+                        "holdingCurrency": {
+                          "total": -142482.23,
+                          "currency": "EUR",
+                          "components": {
+                            "Cost": -133842.94,
+                            "MarketGain": -8639.29
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": -123959.54,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": -111625.01,
+                            "MarketGain": -7516.18,
+                            "CurrencyGain": -4818.35
+                          }
+                        }
+                      },
+                      "flows": {
+                        "holdingCurrency": {
+                          "total": 41349.22,
+                          "currency": "EUR",
+                          "components": {
+                            "In": 41349.22
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 35436.28,
+                          "currency": "GBP",
+                          "components": {
+                            "In": 35436.28
+                          }
+                        }
+                      },
+                      "gains": {
+                        "holdingCurrency": {
+                          "total": -12655.79,
+                          "currency": "EUR",
+                          "components": {
+                            "RealMarketGain": -4846.6,
+                            "Carry": 144.22,
+                            "DeltaMarketGain": -7953.41
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": -5917.55,
+                          "currency": "GBP",
+                          "components": {
+                            "RealMarketGain": -4153.54,
+                            "RealCurrencyGain": -839.56,
+                            "Carry": 123.6,
+                            "DeltaMarketGain": -6255.76,
+                            "DeltaCurrencyGain": 5207.71
+                          }
+                        }
+                      },
+                      "carry": {
+                        "holdingCurrency": {
+                          "total": -144.22,
+                          "currency": "EUR",
+                          "components": {
+                            "CoverWithCommission": -144.22
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": -123.6,
+                          "currency": "GBP",
+                          "components": {
+                            "CoverWithCommission": -123.6
+                          }
+                        }
+                      },
+                      "end": {
+                        "holdingCurrency": {
+                          "total": -113933.02,
+                          "currency": "EUR",
+                          "components": {
+                            "Cost": -97340.32,
+                            "MarketGain": -16592.7
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": -94564.41,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": -81181.83,
+                            "MarketGain": -13771.94,
+                            "CurrencyGain": 389.36
+                          }
+                        }
+                      },
+                      "properties": {
+                        "Instrument/default/Name": {
+                          "key": "Instrument/default/Name",
+                          "value": {
+                            "labelValue": "Eur CFD #3"
+                          }
+                        },
+                        "Instrument/default/ClientInternal": {
+                          "key": "Instrument/default/ClientInternal",
+                          "value": {
+                            "labelValue": "SAMPLE03"
+                          }
+                        }
+                      },
+                      "groupId": "Grp5",
+                      "errors": []
+                    }
+                  ],
+                  "links": []
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      }
+    },
+    "/api/funds/{scope}/{code}/valuationpoints/a2bmovements/$query": {
+      "post": {
+        "tags": [
+          "Funds"
+        ],
+        "summary": "[EXPERIMENTAL] GetA2BMovementsForFund: Get A2B movements for transaction portfolios in a Fund.",
+        "description": "Get the A2B movement records of transaction portfolios in a specified Fund.",
+        "operationId": "GetA2BMovementsForFund",
+        "parameters": [
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope of the Fund.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "code",
+            "in": "path",
+            "description": "The code of the Fund. Together with the scope this uniquely identifies the Fund.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "navTypeCode",
+            "in": "query",
+            "description": "When provided, runs against the specified NAV Type, otherwise the Primary NAV Type will be used.",
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "asAt",
+            "in": "query",
+            "description": "The asAt datetime at which to resolve the fund and the timeline. Defaults\r\n            to return the latest version if not specified.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "x-nullable": true
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Expression to filter the result set. Read more about filtering results from LUSID here https://support.lusid.com/filtering-results-from-lusid.",
+            "schema": {
+              "maxLength": 16384,
+              "minLength": 0,
+              "pattern": "^[\\s\\S]*$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "propertyKeys",
+            "in": "query",
+            "description": "A list of property keys from the \"Instrument\" domain to decorate onto\r\n            the A2B movements. These take the format {domain}/{scope}/{code} e.g. \"Instrument/system/Name\".",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "description": "The key that uniquely identifies the property. It has the format {domain}/{scope}/{code}."
+              }
+            },
+            "x-nullable": true
+          }
+        ],
+        "requestBody": {
+          "description": "The arguments to use for querying the A2B movements. This includes start and end dates.",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValuationPointDataQueryParameters"
+              },
+              "example": {
+                "end": {
+                  "diaryEntry": "DiaryEntryCode"
+                },
+                "variant": "Variant"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValuationPointDataQueryParameters"
+              },
+              "example": {
+                "end": {
+                  "diaryEntry": "DiaryEntryCode"
+                },
+                "variant": "Variant"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValuationPointDataQueryParameters"
+              },
+              "example": {
+                "end": {
+                  "diaryEntry": "DiaryEntryCode"
+                },
+                "variant": "Variant"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValuationPointDataQueryParameters"
+              },
+              "example": {
+                "end": {
+                  "diaryEntry": "DiaryEntryCode"
+                },
+                "variant": "Variant"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "The A2B movement records of transaction portfolios for a Fund",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/VersionedResourceListOfFundA2BMovementRecord"
+                },
+                "example": {
+                  "version": {
+                    "effectiveFrom": "2020-10-31T00:00:00.0000000+00:00",
+                    "asAtDate": "2021-10-31T00:00:00.0000000+00:00"
+                  },
+                  "values": [
+                    {
+                      "portfolioId": {
+                        "scope": "Example",
+                        "code": "Portfolio"
+                      },
+                      "holdingType": "P",
+                      "instrumentScope": "default",
+                      "instrumentUid": "LUID_1ACMRHTC",
+                      "subHoldingKeys": {
+                        "Transaction/Algo/Name": {
+                          "key": "Transaction/Algo/Name",
+                          "value": {
+                            "labelValue": "Algo1"
+                          }
+                        }
+                      },
+                      "currency": "USD",
+                      "effectiveDate": "2020-10-31T00:00:00.0000000+00:00",
+                      "units": 100,
+                      "start": {
+                        "holdingCurrency": {
+                          "total": 4696,
+                          "currency": "USD",
+                          "components": {
+                            "Cost": 4800,
+                            "MarketGain": -104
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 3334.16,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 3470.4,
+                            "MarketGain": -73.84,
+                            "CurrencyGain": -62.4
+                          }
+                        }
+                      },
+                      "end": {
+                        "holdingCurrency": {
+                          "total": 4696,
+                          "currency": "USD",
+                          "components": {
+                            "Cost": 4800,
+                            "MarketGain": -104
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 3334.16,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 3470.4,
+                            "MarketGain": -73.84,
+                            "CurrencyGain": -62.4
+                          }
+                        }
+                      },
+                      "properties": {
+                        "Instrument/default/Name": {
+                          "key": "Instrument/default/Name",
+                          "value": {
+                            "labelValue": "Usd Equity #2"
+                          }
+                        },
+                        "Instrument/default/ClientInternal": {
+                          "key": "Instrument/default/ClientInternal",
+                          "value": {
+                            "labelValue": "SAMPLE10"
+                          }
+                        }
+                      },
+                      "groupId": "g1",
+                      "errors": []
+                    },
+                    {
+                      "portfolioId": {
+                        "scope": "Example",
+                        "code": "Portfolio"
+                      },
+                      "holdingType": "P",
+                      "instrumentScope": "default",
+                      "instrumentUid": "LUID_1ACMRHTC",
+                      "subHoldingKeys": {
+                        "Transaction/Algo/Name": {
+                          "key": "Transaction/Algo/Name",
+                          "value": {
+                            "labelValue": "Algo1"
+                          }
+                        }
+                      },
+                      "currency": "USD",
+                      "transactionId": "T24",
+                      "movementName": "Side1",
+                      "effectiveDate": "2020-11-16T00:00:00.0000000+00:00",
+                      "units": 100,
+                      "flows": {
+                        "holdingCurrency": {
+                          "total": -25,
+                          "currency": "USD",
+                          "components": {
+                            "Out": -25
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": -17.82,
+                          "currency": "GBP",
+                          "components": {
+                            "Out": -17.82
+                          }
+                        }
+                      },
+                      "carry": {
+                        "holdingCurrency": {
+                          "total": 25,
+                          "currency": "USD",
+                          "components": {
+                            "Dividend": 25
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 17.82,
+                          "currency": "GBP",
+                          "components": {
+                            "Dividend": 17.82
+                          }
+                        }
+                      },
+                      "properties": {
+                        "Instrument/default/Name": {
+                          "key": "Instrument/default/Name",
+                          "value": {
+                            "labelValue": "Usd Equity #2"
+                          }
+                        },
+                        "Instrument/default/ClientInternal": {
+                          "key": "Instrument/default/ClientInternal",
+                          "value": {
+                            "labelValue": "SAMPLE10"
+                          }
+                        }
+                      },
+                      "groupId": "g1",
+                      "errors": []
+                    }
+                  ],
+                  "links": []
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VersionedResourceListOfFundA2BMovementRecord"
+                },
+                "example": {
+                  "version": {
+                    "effectiveFrom": "2020-10-31T00:00:00.0000000+00:00",
+                    "asAtDate": "2021-10-31T00:00:00.0000000+00:00"
+                  },
+                  "values": [
+                    {
+                      "portfolioId": {
+                        "scope": "Example",
+                        "code": "Portfolio"
+                      },
+                      "holdingType": "P",
+                      "instrumentScope": "default",
+                      "instrumentUid": "LUID_1ACMRHTC",
+                      "subHoldingKeys": {
+                        "Transaction/Algo/Name": {
+                          "key": "Transaction/Algo/Name",
+                          "value": {
+                            "labelValue": "Algo1"
+                          }
+                        }
+                      },
+                      "currency": "USD",
+                      "effectiveDate": "2020-10-31T00:00:00.0000000+00:00",
+                      "units": 100,
+                      "start": {
+                        "holdingCurrency": {
+                          "total": 4696,
+                          "currency": "USD",
+                          "components": {
+                            "Cost": 4800,
+                            "MarketGain": -104
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 3334.16,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 3470.4,
+                            "MarketGain": -73.84,
+                            "CurrencyGain": -62.4
+                          }
+                        }
+                      },
+                      "end": {
+                        "holdingCurrency": {
+                          "total": 4696,
+                          "currency": "USD",
+                          "components": {
+                            "Cost": 4800,
+                            "MarketGain": -104
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 3334.16,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 3470.4,
+                            "MarketGain": -73.84,
+                            "CurrencyGain": -62.4
+                          }
+                        }
+                      },
+                      "properties": {
+                        "Instrument/default/Name": {
+                          "key": "Instrument/default/Name",
+                          "value": {
+                            "labelValue": "Usd Equity #2"
+                          }
+                        },
+                        "Instrument/default/ClientInternal": {
+                          "key": "Instrument/default/ClientInternal",
+                          "value": {
+                            "labelValue": "SAMPLE10"
+                          }
+                        }
+                      },
+                      "groupId": "g1",
+                      "errors": []
+                    },
+                    {
+                      "portfolioId": {
+                        "scope": "Example",
+                        "code": "Portfolio"
+                      },
+                      "holdingType": "P",
+                      "instrumentScope": "default",
+                      "instrumentUid": "LUID_1ACMRHTC",
+                      "subHoldingKeys": {
+                        "Transaction/Algo/Name": {
+                          "key": "Transaction/Algo/Name",
+                          "value": {
+                            "labelValue": "Algo1"
+                          }
+                        }
+                      },
+                      "currency": "USD",
+                      "transactionId": "T24",
+                      "movementName": "Side1",
+                      "effectiveDate": "2020-11-16T00:00:00.0000000+00:00",
+                      "units": 100,
+                      "flows": {
+                        "holdingCurrency": {
+                          "total": -25,
+                          "currency": "USD",
+                          "components": {
+                            "Out": -25
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": -17.82,
+                          "currency": "GBP",
+                          "components": {
+                            "Out": -17.82
+                          }
+                        }
+                      },
+                      "carry": {
+                        "holdingCurrency": {
+                          "total": 25,
+                          "currency": "USD",
+                          "components": {
+                            "Dividend": 25
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 17.82,
+                          "currency": "GBP",
+                          "components": {
+                            "Dividend": 17.82
+                          }
+                        }
+                      },
+                      "properties": {
+                        "Instrument/default/Name": {
+                          "key": "Instrument/default/Name",
+                          "value": {
+                            "labelValue": "Usd Equity #2"
+                          }
+                        },
+                        "Instrument/default/ClientInternal": {
+                          "key": "Instrument/default/ClientInternal",
+                          "value": {
+                            "labelValue": "SAMPLE10"
+                          }
+                        }
+                      },
+                      "groupId": "g1",
+                      "errors": []
+                    }
+                  ],
+                  "links": []
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VersionedResourceListOfFundA2BMovementRecord"
+                },
+                "example": {
+                  "version": {
+                    "effectiveFrom": "2020-10-31T00:00:00.0000000+00:00",
+                    "asAtDate": "2021-10-31T00:00:00.0000000+00:00"
+                  },
+                  "values": [
+                    {
+                      "portfolioId": {
+                        "scope": "Example",
+                        "code": "Portfolio"
+                      },
+                      "holdingType": "P",
+                      "instrumentScope": "default",
+                      "instrumentUid": "LUID_1ACMRHTC",
+                      "subHoldingKeys": {
+                        "Transaction/Algo/Name": {
+                          "key": "Transaction/Algo/Name",
+                          "value": {
+                            "labelValue": "Algo1"
+                          }
+                        }
+                      },
+                      "currency": "USD",
+                      "effectiveDate": "2020-10-31T00:00:00.0000000+00:00",
+                      "units": 100,
+                      "start": {
+                        "holdingCurrency": {
+                          "total": 4696,
+                          "currency": "USD",
+                          "components": {
+                            "Cost": 4800,
+                            "MarketGain": -104
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 3334.16,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 3470.4,
+                            "MarketGain": -73.84,
+                            "CurrencyGain": -62.4
+                          }
+                        }
+                      },
+                      "end": {
+                        "holdingCurrency": {
+                          "total": 4696,
+                          "currency": "USD",
+                          "components": {
+                            "Cost": 4800,
+                            "MarketGain": -104
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 3334.16,
+                          "currency": "GBP",
+                          "components": {
+                            "Cost": 3470.4,
+                            "MarketGain": -73.84,
+                            "CurrencyGain": -62.4
+                          }
+                        }
+                      },
+                      "properties": {
+                        "Instrument/default/Name": {
+                          "key": "Instrument/default/Name",
+                          "value": {
+                            "labelValue": "Usd Equity #2"
+                          }
+                        },
+                        "Instrument/default/ClientInternal": {
+                          "key": "Instrument/default/ClientInternal",
+                          "value": {
+                            "labelValue": "SAMPLE10"
+                          }
+                        }
+                      },
+                      "groupId": "g1",
+                      "errors": []
+                    },
+                    {
+                      "portfolioId": {
+                        "scope": "Example",
+                        "code": "Portfolio"
+                      },
+                      "holdingType": "P",
+                      "instrumentScope": "default",
+                      "instrumentUid": "LUID_1ACMRHTC",
+                      "subHoldingKeys": {
+                        "Transaction/Algo/Name": {
+                          "key": "Transaction/Algo/Name",
+                          "value": {
+                            "labelValue": "Algo1"
+                          }
+                        }
+                      },
+                      "currency": "USD",
+                      "transactionId": "T24",
+                      "movementName": "Side1",
+                      "effectiveDate": "2020-11-16T00:00:00.0000000+00:00",
+                      "units": 100,
+                      "flows": {
+                        "holdingCurrency": {
+                          "total": -25,
+                          "currency": "USD",
+                          "components": {
+                            "Out": -25
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": -17.82,
+                          "currency": "GBP",
+                          "components": {
+                            "Out": -17.82
+                          }
+                        }
+                      },
+                      "carry": {
+                        "holdingCurrency": {
+                          "total": 25,
+                          "currency": "USD",
+                          "components": {
+                            "Dividend": 25
+                          }
+                        },
+                        "portfolioCurrency": {
+                          "total": 17.82,
+                          "currency": "GBP",
+                          "components": {
+                            "Dividend": 17.82
+                          }
+                        }
+                      },
+                      "properties": {
+                        "Instrument/default/Name": {
+                          "key": "Instrument/default/Name",
+                          "value": {
+                            "labelValue": "Usd Equity #2"
+                          }
+                        },
+                        "Instrument/default/ClientInternal": {
+                          "key": "Instrument/default/ClientInternal",
+                          "value": {
+                            "labelValue": "SAMPLE10"
+                          }
+                        }
+                      },
+                      "groupId": "g1",
+                      "errors": []
+                    }
+                  ],
+                  "links": []
                 }
               }
             }
@@ -212763,6 +214956,194 @@
         "additionalProperties": false,
         "description": "A Fund entity."
       },
+      "FundA2BDataRecord": {
+        "type": "object",
+        "properties": {
+          "portfolioId": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "holdingType": {
+            "type": "string",
+            "description": "The code for the type of the holding e.g. P, B, C, R, F etc.",
+            "nullable": true
+          },
+          "instrumentScope": {
+            "type": "string",
+            "description": "The unique Lusid Instrument Id (LUID) of the instrument that the holding is in.",
+            "nullable": true
+          },
+          "instrumentUid": {
+            "type": "string",
+            "description": "The unique Lusid Instrument Id (LUID) of the instrument that the holding is in.",
+            "nullable": true
+          },
+          "subHoldingKeys": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/PerpetualProperty"
+            },
+            "description": "The sub-holding properties which identify the holding. Each property will be from the 'Transaction' domain. These are configured on a transaction portfolio.",
+            "nullable": true
+          },
+          "currency": {
+            "type": "string",
+            "description": "The holding currency.",
+            "nullable": true
+          },
+          "transactionId": {
+            "type": "string",
+            "description": "The unique identifier for the transaction.",
+            "nullable": true
+          },
+          "start": {
+            "$ref": "#/components/schemas/A2BCategory"
+          },
+          "flows": {
+            "$ref": "#/components/schemas/A2BCategory"
+          },
+          "gains": {
+            "$ref": "#/components/schemas/A2BCategory"
+          },
+          "carry": {
+            "$ref": "#/components/schemas/A2BCategory"
+          },
+          "end": {
+            "$ref": "#/components/schemas/A2BCategory"
+          },
+          "properties": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/Property"
+            },
+            "description": "The properties which have been requested to be decorated onto the holding. These will be from the 'Instrument' domain.",
+            "nullable": true
+          },
+          "groupId": {
+            "type": "string",
+            "description": "Arbitrary string that can be used to cross reference an entry in the A2B report with activity in the A2B-Movements. This should be used purely as a token. The content should not be relied upon.",
+            "nullable": true
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResponseMetaData"
+            },
+            "description": "Any errors with the record are reported here.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Fund A2B Data Record - shows values on, and changes between two dates: A and B"
+      },
+      "FundA2BMovementRecord": {
+        "type": "object",
+        "properties": {
+          "portfolioId": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "holdingType": {
+            "type": "string",
+            "description": "The code for the type of the holding e.g. P, B, C, R, F etc.",
+            "nullable": true
+          },
+          "instrumentScope": {
+            "type": "string",
+            "description": "The unique Lusid Instrument Id (LUID) of the instrument that the holding is in.",
+            "nullable": true
+          },
+          "instrumentUid": {
+            "type": "string",
+            "description": "The unique Lusid Instrument Id (LUID) of the instrument that the holding is in.",
+            "nullable": true
+          },
+          "subHoldingKeys": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/PerpetualProperty"
+            },
+            "description": "The sub-holding properties which identify the holding. Each property will be from the 'Transaction' domain. These are configured on a transaction portfolio.",
+            "nullable": true
+          },
+          "currency": {
+            "type": "string",
+            "description": "The holding currency.",
+            "nullable": true
+          },
+          "transactionId": {
+            "type": "string",
+            "description": "The unique identifier for the transaction.",
+            "nullable": true
+          },
+          "movementName": {
+            "type": "string",
+            "description": "The name of the movement.",
+            "nullable": true
+          },
+          "effectiveDate": {
+            "type": "string",
+            "description": "The date of the movement.",
+            "format": "date-time"
+          },
+          "units": {
+            "type": "number",
+            "description": "The number of units of the instrument that are affected by the movement.",
+            "format": "double"
+          },
+          "start": {
+            "$ref": "#/components/schemas/A2BCategory"
+          },
+          "flows": {
+            "$ref": "#/components/schemas/A2BCategory"
+          },
+          "gains": {
+            "$ref": "#/components/schemas/A2BCategory"
+          },
+          "carry": {
+            "$ref": "#/components/schemas/A2BCategory"
+          },
+          "end": {
+            "$ref": "#/components/schemas/A2BCategory"
+          },
+          "runningUnits": {
+            "type": "number",
+            "description": "The cumulative number of units for this sub-holding, as at this movement.",
+            "format": "double",
+            "nullable": true
+          },
+          "runningBalance": {
+            "$ref": "#/components/schemas/A2BCategory"
+          },
+          "runningCost": {
+            "type": "number",
+            "description": "The running cost in portfolio currency for this sub-holding, as at this movement.",
+            "format": "double",
+            "nullable": true
+          },
+          "properties": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/Property"
+            },
+            "description": "The properties which have been requested to be decorated onto the holding. These will be from the 'Instrument' domain.",
+            "nullable": true
+          },
+          "groupId": {
+            "type": "string",
+            "description": "Arbitrary string that can be used to cross reference an entry in the A2B report with activity in the A2B-Movements. This should be used purely as a token. The content should not be relied upon.",
+            "nullable": true
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResponseMetaData"
+            },
+            "description": "Any errors with the record are reported here.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Fund A2B Movement Record - shows A2B category based changes relating to a specific movement within a Fund"
+      },
       "FundAmount": {
         "type": "object",
         "properties": {
@@ -252967,6 +255348,84 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/A2BMovementRecord"
+            }
+          },
+          "href": {
+            "type": "string",
+            "format": "uri",
+            "nullable": true
+          },
+          "nextPage": {
+            "type": "string",
+            "nullable": true
+          },
+          "previousPage": {
+            "type": "string",
+            "nullable": true
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "VersionedResourceListOfFundA2BDataRecord": {
+        "required": [
+          "values",
+          "version"
+        ],
+        "type": "object",
+        "properties": {
+          "version": {
+            "$ref": "#/components/schemas/Version"
+          },
+          "values": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FundA2BDataRecord"
+            }
+          },
+          "href": {
+            "type": "string",
+            "format": "uri",
+            "nullable": true
+          },
+          "nextPage": {
+            "type": "string",
+            "nullable": true
+          },
+          "previousPage": {
+            "type": "string",
+            "nullable": true
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "VersionedResourceListOfFundA2BMovementRecord": {
+        "required": [
+          "values",
+          "version"
+        ],
+        "type": "object",
+        "properties": {
+          "version": {
+            "$ref": "#/components/schemas/Version"
+          },
+          "values": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FundA2BMovementRecord"
             }
           },
           "href": {

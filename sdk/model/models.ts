@@ -536,6 +536,8 @@ export * from './forwardRateAgreement';
 export * from './forwardRateAgreementAllOf';
 export * from './fromRecipe';
 export * from './fund';
+export * from './fundA2BDataRecord';
+export * from './fundA2BMovementRecord';
 export * from './fundAmount';
 export * from './fundBookmark';
 export * from './fundBookmarkAllOf';
@@ -1564,6 +1566,8 @@ export * from './version';
 export * from './versionSummaryDto';
 export * from './versionedResourceListOfA2BDataRecord';
 export * from './versionedResourceListOfA2BMovementRecord';
+export * from './versionedResourceListOfFundA2BDataRecord';
+export * from './versionedResourceListOfFundA2BMovementRecord';
 export * from './versionedResourceListOfHoldingContributor';
 export * from './versionedResourceListOfJournalEntryLine';
 export * from './versionedResourceListOfOutputTransaction';
@@ -2143,6 +2147,8 @@ import { ForwardRateAgreement } from './forwardRateAgreement';
 import { ForwardRateAgreementAllOf } from './forwardRateAgreementAllOf';
 import { FromRecipe } from './fromRecipe';
 import { Fund } from './fund';
+import { FundA2BDataRecord } from './fundA2BDataRecord';
+import { FundA2BMovementRecord } from './fundA2BMovementRecord';
 import { FundAmount } from './fundAmount';
 import { FundBookmark } from './fundBookmark';
 import { FundBookmarkAllOf } from './fundBookmarkAllOf';
@@ -3171,6 +3177,8 @@ import { Version } from './version';
 import { VersionSummaryDto } from './versionSummaryDto';
 import { VersionedResourceListOfA2BDataRecord } from './versionedResourceListOfA2BDataRecord';
 import { VersionedResourceListOfA2BMovementRecord } from './versionedResourceListOfA2BMovementRecord';
+import { VersionedResourceListOfFundA2BDataRecord } from './versionedResourceListOfFundA2BDataRecord';
+import { VersionedResourceListOfFundA2BMovementRecord } from './versionedResourceListOfFundA2BMovementRecord';
 import { VersionedResourceListOfHoldingContributor } from './versionedResourceListOfHoldingContributor';
 import { VersionedResourceListOfJournalEntryLine } from './versionedResourceListOfJournalEntryLine';
 import { VersionedResourceListOfOutputTransaction } from './versionedResourceListOfOutputTransaction';
@@ -4353,6 +4361,8 @@ let typeMap: {[index: string]: any} = {
     "ForwardRateAgreementAllOf": ForwardRateAgreementAllOf,
     "FromRecipe": FromRecipe,
     "Fund": Fund,
+    "FundA2BDataRecord": FundA2BDataRecord,
+    "FundA2BMovementRecord": FundA2BMovementRecord,
     "FundAmount": FundAmount,
     "FundBookmark": FundBookmark,
     "FundBookmarkAllOf": FundBookmarkAllOf,
@@ -5337,6 +5347,8 @@ let typeMap: {[index: string]: any} = {
     "VersionSummaryDto": VersionSummaryDto,
     "VersionedResourceListOfA2BDataRecord": VersionedResourceListOfA2BDataRecord,
     "VersionedResourceListOfA2BMovementRecord": VersionedResourceListOfA2BMovementRecord,
+    "VersionedResourceListOfFundA2BDataRecord": VersionedResourceListOfFundA2BDataRecord,
+    "VersionedResourceListOfFundA2BMovementRecord": VersionedResourceListOfFundA2BMovementRecord,
     "VersionedResourceListOfHoldingContributor": VersionedResourceListOfHoldingContributor,
     "VersionedResourceListOfJournalEntryLine": VersionedResourceListOfJournalEntryLine,
     "VersionedResourceListOfOutputTransaction": VersionedResourceListOfOutputTransaction,
