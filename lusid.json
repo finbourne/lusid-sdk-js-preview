@@ -9,7 +9,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "2.0.1532",
+    "version": "2.0.1533",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -61397,6 +61397,203 @@
         "x-fbn-apistatus": "Experimental"
       }
     },
+    "/api/funds/{scope}/{code}/valuationpoints/instruments/$query": {
+      "get": {
+        "tags": [
+          "Funds"
+        ],
+        "summary": "[EXPERIMENTAL] ListValuationPointInstruments: List Instruments inside a valuation point",
+        "description": "Lists the Instruments linked to Transactions within a Valuation Point for a Fund.",
+        "operationId": "ListValuationPointInstruments",
+        "parameters": [
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope of the Fund.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "code",
+            "in": "path",
+            "description": "The code of the Fund. Together with the scope is the unique identifier for the given Fund.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "valuationPointCode",
+            "in": "query",
+            "description": "Fetch all instruments for this valuation point.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "navTypeCode",
+            "in": "query",
+            "description": "When provided, runs against the specified NAV Type, otherwise the Primary NAV Type will be used.",
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "asAt",
+            "in": "query",
+            "description": "The asAt datetime at which to list the instruments. Defaults to returning the latest version of each instrument if not specified.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "x-nullable": true
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "The pagination token to use to continue listing instruments; this\r\n            value is returned from the previous call. If a pagination token is provided, the filter,\r\n            and asAt fields must not have changed since the original request.",
+            "schema": {
+              "maxLength": 500,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\+/]*={0,3}$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "When paginating, limit the results to this number. Defaults to 100 if not specified.",
+            "schema": {
+              "maximum": 5000,
+              "minimum": 1,
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-nullable": true
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Expression to filter the result set. Read more about filtering results from LUSID here https://support.lusid.com/filtering-results-from-lusid.",
+            "schema": {
+              "maxLength": 16384,
+              "minLength": 0,
+              "pattern": "^[\\s\\S]*$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "sortBy",
+            "in": "query",
+            "description": "A list of field names or properties to sort by, each suffixed by \" ASC\" or \" DESC\".",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "x-nullable": true
+          },
+          {
+            "name": "instrumentPropertyKeys",
+            "in": "query",
+            "description": "A list of property keys from the 'Instrument' domain to decorate onto\r\n            instruments, or from any domain that supports relationships to decorate onto related entities.\r\n            These must have the format {domain}/{scope}/{code}, for example 'Instrument/system/Name'.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "description": "The key that uniquely identifies the property. It has the format {domain}/{scope}/{code}."
+              }
+            },
+            "x-nullable": true
+          },
+          {
+            "name": "valuationPointCodeVariant",
+            "in": "query",
+            "description": "The variant of the valuation point used in the request. Together with the valuation point code marks the unique branch for the NavType.",
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The instruments held at the specified valuation point for the Fund.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedResourceListOfValuationPointInstrument"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedResourceListOfValuationPointInstrument"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedResourceListOfValuationPointInstrument"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      }
+    },
     "/api/funds/{scope}/{code}/valuationpoints/journalentrylines/$query": {
       "post": {
         "tags": [
@@ -63850,6 +64047,207 @@
                     }
                   ],
                   "links": []
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      }
+    },
+    "/api/funds/{scope}/{code}/valuationpoints/unsettledtransactions/$query": {
+      "post": {
+        "tags": [
+          "Funds"
+        ],
+        "summary": "[EXPERIMENTAL] GetValuationPointUnsettledTransactions: Get Unsettled Transactions for the given Fund.",
+        "description": "Gets all transactions that remain unsettled as at the specified Valuation Point for a Fund,\r\nlooking back from inception. Settlement status is point-in-time: post-cutoff settlement\r\nactivity does not alter the result.",
+        "operationId": "GetValuationPointUnsettledTransactions",
+        "parameters": [
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope of the Fund.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "code",
+            "in": "path",
+            "description": "The code of the Fund. Together with the scope this uniquely identifies the Fund.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "asAt",
+            "in": "query",
+            "description": "The asAt datetime at which to retrieve the report. Defaults to latest.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "x-nullable": true
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "When paginating, limit the number of returned results to this many. Defaults to 100 if not specified.",
+            "schema": {
+              "maximum": 5000,
+              "minimum": 1,
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-nullable": true
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "The pagination token to use to continue listing from a previous call.",
+            "schema": {
+              "maxLength": 500,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\+/]*={0,3}$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "propertyKeys",
+            "in": "query",
+            "description": "A list of property keys from the 'Instrument', 'Transaction', 'Portfolio', or 'Account'\r\n            domain to decorate onto the transactions.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "description": "The key that uniquely identifies the property. It has the format {domain}/{scope}/{code}."
+              }
+            },
+            "x-nullable": true
+          },
+          {
+            "name": "navTypeCode",
+            "in": "query",
+            "description": "When provided, runs against the specified NAV Type, otherwise the Primary NAV Type will be used.",
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The arguments to use for querying the unsettled transactions.",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValuationPointDataQueryParameters"
+              },
+              "example": {
+                "end": {
+                  "diaryEntry": "DiaryEntryCode"
+                },
+                "variant": "Variant"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValuationPointDataQueryParameters"
+              },
+              "example": {
+                "end": {
+                  "diaryEntry": "DiaryEntryCode"
+                },
+                "variant": "Variant"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValuationPointDataQueryParameters"
+              },
+              "example": {
+                "end": {
+                  "diaryEntry": "DiaryEntryCode"
+                },
+                "variant": "Variant"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValuationPointDataQueryParameters"
+              },
+              "example": {
+                "end": {
+                  "diaryEntry": "DiaryEntryCode"
+                },
+                "variant": "Variant"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "The unsettled transactions for the specified Valuation Point for a Fund.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValuationPointResourceListOfUnsettledTransaction"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValuationPointResourceListOfUnsettledTransaction"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValuationPointResourceListOfUnsettledTransaction"
                 }
               }
             }
@@ -233357,6 +233755,41 @@
         },
         "additionalProperties": false
       },
+      "PagedResourceListOfValuationPointInstrument": {
+        "required": [
+          "values"
+        ],
+        "type": "object",
+        "properties": {
+          "nextPage": {
+            "type": "string",
+            "nullable": true
+          },
+          "previousPage": {
+            "type": "string",
+            "nullable": true
+          },
+          "values": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ValuationPointInstrument"
+            }
+          },
+          "href": {
+            "type": "string",
+            "format": "uri",
+            "nullable": true
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "PagedResourceListOfValuationPointOverview": {
         "required": [
           "values"
@@ -251897,6 +252330,55 @@
         "type": "string",
         "description": "When holdings adjustments are specified for a single effective date,\r\nany holdings for the portfolio not included in the adjustments are\r\nadjusted according to this value."
       },
+      "UnsettledTransaction": {
+        "type": "object",
+        "properties": {
+          "transaction": {
+            "$ref": "#/components/schemas/OutputTransaction"
+          },
+          "portfolioId": {
+            "$ref": "#/components/schemas/PortfolioId"
+          },
+          "overallSettlementStatus": {
+            "type": "string",
+            "description": "The overall settlement status of the transaction (Unsettled, PartSettled, Settled, None).",
+            "nullable": true
+          },
+          "overallIsOverdue": {
+            "type": "boolean",
+            "description": "Whether the transaction is overdue for settlement."
+          },
+          "cashSettlementStatus": {
+            "type": "string",
+            "description": "The settlement status of the cash component.",
+            "nullable": true
+          },
+          "cashIsOverdue": {
+            "type": "boolean",
+            "description": "Whether the cash component is overdue for settlement."
+          },
+          "stockSettlementStatus": {
+            "type": "string",
+            "description": "The settlement status of the stock component.",
+            "nullable": true
+          },
+          "stockIsOverdue": {
+            "type": "boolean",
+            "description": "Whether the stock component is overdue for settlement."
+          },
+          "deferredCashSettlementStatus": {
+            "type": "string",
+            "description": "The settlement status of the deferred cash component.",
+            "nullable": true
+          },
+          "deferredCashIsOverdue": {
+            "type": "boolean",
+            "description": "Whether the deferred cash component is overdue for settlement."
+          }
+        },
+        "additionalProperties": false,
+        "description": "A transaction that remains unsettled as at the valuation point, with per-bucket settlement status."
+      },
       "UpdateAmortisationRuleSetDetailsRequest": {
         "required": [
           "displayName"
@@ -254945,6 +255427,39 @@
         "additionalProperties": false,
         "description": "The Valuation Point Data Response for the Fund and specified date."
       },
+      "ValuationPointInstrument": {
+        "type": "object",
+        "properties": {
+          "instrument": {
+            "$ref": "#/components/schemas/Instrument"
+          },
+          "valuationPointOrigin": {
+            "type": "string",
+            "description": "Designates if the instrument was originally part of the Valuation Point or if it was added as part of a Complex Close action. Available values: None, Original, Added.",
+            "nullable": true
+          },
+          "addedOriginValuationPointCode": {
+            "type": "string",
+            "description": "The Valuation Point, only for an Instrument added as part of a Complex Close action.",
+            "nullable": true
+          },
+          "addedOriginValuationPointVariantCode": {
+            "type": "string",
+            "description": "The Valuation Point variant, only for Instruments added as part of a Complex Close action.",
+            "nullable": true
+          },
+          "properties": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/Property"
+            },
+            "description": "The requested instrument properties. These will be from the 'Instrument' domain.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "An Instrument held at a Valuation Point, including its origin"
+      },
       "ValuationPointOverview": {
         "required": [
           "diaryEntryCode",
@@ -255229,6 +255744,49 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/TrialBalance"
+            }
+          },
+          "href": {
+            "type": "string",
+            "format": "uri",
+            "nullable": true
+          },
+          "nextPage": {
+            "type": "string",
+            "nullable": true
+          },
+          "previousPage": {
+            "type": "string",
+            "nullable": true
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "ResourceList with extra header fields used by the various ValuationPoint endpoints for returning additional context related to the list of results."
+      },
+      "ValuationPointResourceListOfUnsettledTransaction": {
+        "required": [
+          "values",
+          "version"
+        ],
+        "type": "object",
+        "properties": {
+          "startValuationPoint": {
+            "$ref": "#/components/schemas/DiaryEntry"
+          },
+          "version": {
+            "$ref": "#/components/schemas/Version"
+          },
+          "values": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UnsettledTransaction"
             }
           },
           "href": {

@@ -977,6 +977,7 @@ export * from './pagedResourceListOfTimeline';
 export * from './pagedResourceListOfTransactionTemplate';
 export * from './pagedResourceListOfTransactionTemplateSpecification';
 export * from './pagedResourceListOfTranslationScriptId';
+export * from './pagedResourceListOfValuationPointInstrument';
 export * from './pagedResourceListOfValuationPointOverview';
 export * from './pagedResourceListOfVirtualRow';
 export * from './pagedResourceListOfWorkspace';
@@ -1458,6 +1459,7 @@ export * from './unitSchema';
 export * from './unitisationData';
 export * from './unitsRatio';
 export * from './unmatchedHoldingMethod';
+export * from './unsettledTransaction';
 export * from './updateAmortisationRuleSetDetailsRequest';
 export * from './updateCalendarRequest';
 export * from './updateCheckDefinitionRequest';
@@ -1550,12 +1552,14 @@ export * from './user';
 export * from './valuationPointDataQueryParameters';
 export * from './valuationPointDataRequest';
 export * from './valuationPointDataResponse';
+export * from './valuationPointInstrument';
 export * from './valuationPointOverview';
 export * from './valuationPointResourceListOfAccountedTransaction';
 export * from './valuationPointResourceListOfFundCashStatementRow';
 export * from './valuationPointResourceListOfFundJournalEntryLine';
 export * from './valuationPointResourceListOfPnlJournalEntryLine';
 export * from './valuationPointResourceListOfTrialBalance';
+export * from './valuationPointResourceListOfUnsettledTransaction';
 export * from './valuationRequest';
 export * from './valuationSchedule';
 export * from './valuationsReconciliationRequest';
@@ -2590,6 +2594,7 @@ import { PagedResourceListOfTimeline } from './pagedResourceListOfTimeline';
 import { PagedResourceListOfTransactionTemplate } from './pagedResourceListOfTransactionTemplate';
 import { PagedResourceListOfTransactionTemplateSpecification } from './pagedResourceListOfTransactionTemplateSpecification';
 import { PagedResourceListOfTranslationScriptId } from './pagedResourceListOfTranslationScriptId';
+import { PagedResourceListOfValuationPointInstrument } from './pagedResourceListOfValuationPointInstrument';
 import { PagedResourceListOfValuationPointOverview } from './pagedResourceListOfValuationPointOverview';
 import { PagedResourceListOfVirtualRow } from './pagedResourceListOfVirtualRow';
 import { PagedResourceListOfWorkspace } from './pagedResourceListOfWorkspace';
@@ -3071,6 +3076,7 @@ import { UnitSchema } from './unitSchema';
 import { UnitisationData } from './unitisationData';
 import { UnitsRatio } from './unitsRatio';
 import { UnmatchedHoldingMethod } from './unmatchedHoldingMethod';
+import { UnsettledTransaction } from './unsettledTransaction';
 import { UpdateAmortisationRuleSetDetailsRequest } from './updateAmortisationRuleSetDetailsRequest';
 import { UpdateCalendarRequest } from './updateCalendarRequest';
 import { UpdateCheckDefinitionRequest } from './updateCheckDefinitionRequest';
@@ -3163,12 +3169,14 @@ import { User } from './user';
 import { ValuationPointDataQueryParameters } from './valuationPointDataQueryParameters';
 import { ValuationPointDataRequest } from './valuationPointDataRequest';
 import { ValuationPointDataResponse } from './valuationPointDataResponse';
+import { ValuationPointInstrument } from './valuationPointInstrument';
 import { ValuationPointOverview } from './valuationPointOverview';
 import { ValuationPointResourceListOfAccountedTransaction } from './valuationPointResourceListOfAccountedTransaction';
 import { ValuationPointResourceListOfFundCashStatementRow } from './valuationPointResourceListOfFundCashStatementRow';
 import { ValuationPointResourceListOfFundJournalEntryLine } from './valuationPointResourceListOfFundJournalEntryLine';
 import { ValuationPointResourceListOfPnlJournalEntryLine } from './valuationPointResourceListOfPnlJournalEntryLine';
 import { ValuationPointResourceListOfTrialBalance } from './valuationPointResourceListOfTrialBalance';
+import { ValuationPointResourceListOfUnsettledTransaction } from './valuationPointResourceListOfUnsettledTransaction';
 import { ValuationRequest } from './valuationRequest';
 import { ValuationSchedule } from './valuationSchedule';
 import { ValuationsReconciliationRequest } from './valuationsReconciliationRequest';
@@ -4792,6 +4800,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfTransactionTemplate": PagedResourceListOfTransactionTemplate,
     "PagedResourceListOfTransactionTemplateSpecification": PagedResourceListOfTransactionTemplateSpecification,
     "PagedResourceListOfTranslationScriptId": PagedResourceListOfTranslationScriptId,
+    "PagedResourceListOfValuationPointInstrument": PagedResourceListOfValuationPointInstrument,
     "PagedResourceListOfValuationPointOverview": PagedResourceListOfValuationPointOverview,
     "PagedResourceListOfVirtualRow": PagedResourceListOfVirtualRow,
     "PagedResourceListOfWorkspace": PagedResourceListOfWorkspace,
@@ -5247,6 +5256,7 @@ let typeMap: {[index: string]: any} = {
     "TypedResourceId": TypedResourceId,
     "UnitisationData": UnitisationData,
     "UnitsRatio": UnitsRatio,
+    "UnsettledTransaction": UnsettledTransaction,
     "UpdateAmortisationRuleSetDetailsRequest": UpdateAmortisationRuleSetDetailsRequest,
     "UpdateCalendarRequest": UpdateCalendarRequest,
     "UpdateCheckDefinitionRequest": UpdateCheckDefinitionRequest,
@@ -5339,12 +5349,14 @@ let typeMap: {[index: string]: any} = {
     "ValuationPointDataQueryParameters": ValuationPointDataQueryParameters,
     "ValuationPointDataRequest": ValuationPointDataRequest,
     "ValuationPointDataResponse": ValuationPointDataResponse,
+    "ValuationPointInstrument": ValuationPointInstrument,
     "ValuationPointOverview": ValuationPointOverview,
     "ValuationPointResourceListOfAccountedTransaction": ValuationPointResourceListOfAccountedTransaction,
     "ValuationPointResourceListOfFundCashStatementRow": ValuationPointResourceListOfFundCashStatementRow,
     "ValuationPointResourceListOfFundJournalEntryLine": ValuationPointResourceListOfFundJournalEntryLine,
     "ValuationPointResourceListOfPnlJournalEntryLine": ValuationPointResourceListOfPnlJournalEntryLine,
     "ValuationPointResourceListOfTrialBalance": ValuationPointResourceListOfTrialBalance,
+    "ValuationPointResourceListOfUnsettledTransaction": ValuationPointResourceListOfUnsettledTransaction,
     "ValuationRequest": ValuationRequest,
     "ValuationSchedule": ValuationSchedule,
     "ValuationsReconciliationRequest": ValuationsReconciliationRequest,
