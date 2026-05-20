@@ -1436,6 +1436,8 @@ export * from './transactionTypePropertyMapping';
 export * from './transactionTypeRequest';
 export * from './transactionsReconciliationsResponse';
 export * from './transferAgencyDates';
+export * from './transferAgencyOrderResult';
+export * from './transferAgencyOrdersResponse';
 export * from './transitionEvent';
 export * from './transitionEventAllOf';
 export * from './translateEntitiesInlinedRequest';
@@ -1495,6 +1497,7 @@ export * from './updateTaxRuleSetRequest';
 export * from './updateTimelineRequest';
 export * from './updateTransactionFeeTypeRequest';
 export * from './updateUnitRequest';
+export * from './updateValuationPointRequest';
 export * from './upsertCdsFlowConventionsRequest';
 export * from './upsertComplexMarketDataRequest';
 export * from './upsertComplianceRuleRequest';
@@ -1546,6 +1549,7 @@ export * from './upsertSingleStructuredDataResponse';
 export * from './upsertStructuredDataResponse';
 export * from './upsertStructuredResultDataRequest';
 export * from './upsertTransactionPropertiesResponse';
+export * from './upsertTransferAgencyOrderRequest';
 export * from './upsertTranslationScriptRequest';
 export * from './upsertValuationPointRequest';
 export * from './user';
@@ -3053,6 +3057,8 @@ import { TransactionTypePropertyMapping } from './transactionTypePropertyMapping
 import { TransactionTypeRequest } from './transactionTypeRequest';
 import { TransactionsReconciliationsResponse } from './transactionsReconciliationsResponse';
 import { TransferAgencyDates } from './transferAgencyDates';
+import { TransferAgencyOrderResult } from './transferAgencyOrderResult';
+import { TransferAgencyOrdersResponse } from './transferAgencyOrdersResponse';
 import { TransitionEvent } from './transitionEvent';
 import { TransitionEventAllOf } from './transitionEventAllOf';
 import { TranslateEntitiesInlinedRequest } from './translateEntitiesInlinedRequest';
@@ -3112,6 +3118,7 @@ import { UpdateTaxRuleSetRequest } from './updateTaxRuleSetRequest';
 import { UpdateTimelineRequest } from './updateTimelineRequest';
 import { UpdateTransactionFeeTypeRequest } from './updateTransactionFeeTypeRequest';
 import { UpdateUnitRequest } from './updateUnitRequest';
+import { UpdateValuationPointRequest } from './updateValuationPointRequest';
 import { UpsertCdsFlowConventionsRequest } from './upsertCdsFlowConventionsRequest';
 import { UpsertComplexMarketDataRequest } from './upsertComplexMarketDataRequest';
 import { UpsertComplianceRuleRequest } from './upsertComplianceRuleRequest';
@@ -3163,6 +3170,7 @@ import { UpsertSingleStructuredDataResponse } from './upsertSingleStructuredData
 import { UpsertStructuredDataResponse } from './upsertStructuredDataResponse';
 import { UpsertStructuredResultDataRequest } from './upsertStructuredResultDataRequest';
 import { UpsertTransactionPropertiesResponse } from './upsertTransactionPropertiesResponse';
+import { UpsertTransferAgencyOrderRequest } from './upsertTransferAgencyOrderRequest';
 import { UpsertTranslationScriptRequest } from './upsertTranslationScriptRequest';
 import { UpsertValuationPointRequest } from './upsertValuationPointRequest';
 import { User } from './user';
@@ -5235,6 +5243,8 @@ let typeMap: {[index: string]: any} = {
     "TransactionTypeRequest": TransactionTypeRequest,
     "TransactionsReconciliationsResponse": TransactionsReconciliationsResponse,
     "TransferAgencyDates": TransferAgencyDates,
+    "TransferAgencyOrderResult": TransferAgencyOrderResult,
+    "TransferAgencyOrdersResponse": TransferAgencyOrdersResponse,
     "TransitionEvent": TransitionEvent,
     "TransitionEventAllOf": TransitionEventAllOf,
     "TranslateEntitiesInlinedRequest": TranslateEntitiesInlinedRequest,
@@ -5292,6 +5302,7 @@ let typeMap: {[index: string]: any} = {
     "UpdateTimelineRequest": UpdateTimelineRequest,
     "UpdateTransactionFeeTypeRequest": UpdateTransactionFeeTypeRequest,
     "UpdateUnitRequest": UpdateUnitRequest,
+    "UpdateValuationPointRequest": UpdateValuationPointRequest,
     "UpsertCdsFlowConventionsRequest": UpsertCdsFlowConventionsRequest,
     "UpsertComplexMarketDataRequest": UpsertComplexMarketDataRequest,
     "UpsertComplianceRuleRequest": UpsertComplianceRuleRequest,
@@ -5343,6 +5354,7 @@ let typeMap: {[index: string]: any} = {
     "UpsertStructuredDataResponse": UpsertStructuredDataResponse,
     "UpsertStructuredResultDataRequest": UpsertStructuredResultDataRequest,
     "UpsertTransactionPropertiesResponse": UpsertTransactionPropertiesResponse,
+    "UpsertTransferAgencyOrderRequest": UpsertTransferAgencyOrderRequest,
     "UpsertTranslationScriptRequest": UpsertTranslationScriptRequest,
     "UpsertValuationPointRequest": UpsertValuationPointRequest,
     "User": User,
