@@ -9,7 +9,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "2.0.1535",
+    "version": "2.0.1536",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -196104,6 +196104,14 @@
           },
           "transactionDiagnostics": {
             "$ref": "#/components/schemas/TransactionDiagnostics"
+          },
+          "appliedInstrumentEventInstruction": {
+            "$ref": "#/components/schemas/InstrumentEventInstruction"
+          },
+          "eligibleBalance": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
           }
         },
         "additionalProperties": false,
@@ -204291,6 +204299,12 @@
                 "format": "date-time",
                 "nullable": true
               },
+              "effectiveDate": {
+                "type": "string",
+                "description": "Date which establishes when the conversion is recognised.",
+                "format": "date-time",
+                "nullable": true
+              },
               "periodOfAction": {
                 "$ref": "#/components/schemas/EventDateRange"
               },
@@ -204327,6 +204341,14 @@
                   "$ref": "#/components/schemas/CashOfferElection"
                 },
                 "description": "List of possible cash offers for this conversion event. There must be at most one election of this type.\r\n\r\nIf the ParticipationType is Mandatory:\r\n\r\nThis list <b> must be null or empty</b>.\r\n\r\nIf the ParticipationType is Voluntary:\r\n\r\nThis list can be empty,\r\nso long as SecurityOfferElections or CashAndSecurityOfferElections\r\nhas at least one election. None of these elections have to be chosen or default.",
+                "nullable": true
+              },
+              "lapseElections": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/LapseElection"
+                },
+                "description": "List of possible lapse elections for this conversion event. There must be at most one election of this type.\r\n\r\nIf provided, the holder is not entitled to receive anything for the conversion.",
                 "nullable": true
               },
               "instrumentEventType": {
@@ -226949,6 +226971,11 @@
             "description": "The scope of the entity",
             "nullable": true
           },
+          "code": {
+            "type": "string",
+            "description": "The code of the entity. Populated for scope+code entities (e.g. Portfolio). Null for identifier-based entities (e.g. Instrument).",
+            "nullable": true
+          },
           "identifierKey": {
             "type": "string",
             "description": "The identifier key for the entity",
@@ -229266,6 +229293,34 @@
         "type": "string",
         "description": "Discriminator for NavActivityAdjustment"
       },
+      "NavSettlementConfiguration": {
+        "type": "object",
+        "properties": {
+          "cashSettlement": {
+            "$ref": "#/components/schemas/NavSettlementConfigurationCategory"
+          },
+          "deferredCashReceipt": {
+            "$ref": "#/components/schemas/NavSettlementConfigurationCategory"
+          }
+        },
+        "additionalProperties": false
+      },
+      "NavSettlementConfigurationCategory": {
+        "type": "object",
+        "properties": {
+          "calculateInstructionToPortfolioRate": {
+            "type": "boolean",
+            "description": "An optional flag that allows for the calculation of the instruction to portfolio rate for instructions with settlement category CashSettlement or DeferredCashReceipt, if it is not provided on the settlement instruction.",
+            "nullable": true
+          },
+          "calculateTradeDateToSettlementFxPnL": {
+            "type": "boolean",
+            "description": "An optional flag that allows for the calculation of FxPnL between Trade and Settlement Date.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "NavType": {
         "required": [
           "accountingMethod",
@@ -229325,6 +229380,9 @@
             },
             "description": "The Cleardown Module Codes from which the rules to be applied are retrieved.",
             "nullable": true
+          },
+          "settlementConfiguration": {
+            "$ref": "#/components/schemas/NavSettlementConfiguration"
           },
           "valuationRecipeId": {
             "$ref": "#/components/schemas/ResourceId"
@@ -229438,6 +229496,9 @@
             },
             "description": "The Cleardown Module Codes from which the rules to be applied are retrieved.",
             "nullable": true
+          },
+          "settlementConfiguration": {
+            "$ref": "#/components/schemas/NavSettlementConfiguration"
           },
           "valuationRecipeId": {
             "$ref": "#/components/schemas/ResourceId"

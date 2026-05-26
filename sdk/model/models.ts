@@ -842,6 +842,8 @@ export * from './navActivityAdjustment';
 export * from './navActivityAdjustmentResponse';
 export * from './navActivityAdjustmentResponseType';
 export * from './navActivityAdjustmentType';
+export * from './navSettlementConfiguration';
+export * from './navSettlementConfigurationCategory';
 export * from './navType';
 export * from './navTypeDefinition';
 export * from './newInstrument';
@@ -2463,6 +2465,8 @@ import { NavActivityAdjustment } from './navActivityAdjustment';
 import { NavActivityAdjustmentResponse } from './navActivityAdjustmentResponse';
 import { NavActivityAdjustmentResponseType } from './navActivityAdjustmentResponseType';
 import { NavActivityAdjustmentType } from './navActivityAdjustmentType';
+import { NavSettlementConfiguration } from './navSettlementConfiguration';
+import { NavSettlementConfigurationCategory } from './navSettlementConfigurationCategory';
 import { NavType } from './navType';
 import { NavTypeDefinition } from './navTypeDefinition';
 import { NewInstrument } from './newInstrument';
@@ -4677,6 +4681,8 @@ let typeMap: {[index: string]: any} = {
     "MultiCurrencyAmounts": MultiCurrencyAmounts,
     "NavActivityAdjustment": NavActivityAdjustment,
     "NavActivityAdjustmentResponse": NavActivityAdjustmentResponse,
+    "NavSettlementConfiguration": NavSettlementConfiguration,
+    "NavSettlementConfigurationCategory": NavSettlementConfigurationCategory,
     "NavType": NavType,
     "NavTypeDefinition": NavTypeDefinition,
     "NewInstrument": NewInstrument,
