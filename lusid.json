@@ -9,7 +9,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "2.0.1536",
+    "version": "2.0.1537",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -65310,6 +65310,7 @@
                 "IdentifierDefinition",
                 "SettlementInstruction",
                 "TransactionFeeType",
+                "AllocationMethod",
                 "TransactionFee"
               ],
               "type": "string"
@@ -65608,6 +65609,7 @@
                 "IdentifierDefinition",
                 "SettlementInstruction",
                 "TransactionFeeType",
+                "AllocationMethod",
                 "TransactionFee"
               ],
               "type": "string"
@@ -65805,6 +65807,7 @@
                 "IdentifierDefinition",
                 "SettlementInstruction",
                 "TransactionFeeType",
+                "AllocationMethod",
                 "TransactionFee"
               ],
               "type": "string"
@@ -104497,6 +104500,19 @@
               }
             },
             "x-nullable": true
+          },
+          {
+            "name": "propertyKeys",
+            "in": "query",
+            "description": "A list of property keys from the 'PortfolioGroup' domain to decorate onto the portfolio groups. These must take the format {domain}/{scope}/{code}, e.g. 'PortfolioGroup/Manager/Id'.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "description": "The key that uniquely identifies the property. It has the format {domain}/{scope}/{code}."
+              }
+            },
+            "x-nullable": true
           }
         ],
         "responses": {
@@ -104867,6 +104883,19 @@
               "items": {
                 "type": "string",
                 "description": "Identifiers of an entity"
+              }
+            },
+            "x-nullable": true
+          },
+          {
+            "name": "propertyKeys",
+            "in": "query",
+            "description": "A list of property keys from the 'PortfolioGroup' domain to decorate onto the portfolio groups. These must take the format {domain}/{scope}/{code}, e.g. 'PortfolioGroup/Manager/Id'.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "description": "The key that uniquely identifies the property. It has the format {domain}/{scope}/{code}."
               }
             },
             "x-nullable": true
@@ -105256,6 +105285,19 @@
               "items": {
                 "type": "string",
                 "description": "Identifiers of an entity"
+              }
+            },
+            "x-nullable": true
+          },
+          {
+            "name": "propertyKeys",
+            "in": "query",
+            "description": "A list of property keys from the 'PortfolioGroup' domain to decorate onto the portfolio group. These must take the format {domain}/{scope}/{code}, e.g. 'PortfolioGroup/Manager/Id'.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "description": "The key that uniquely identifies the property. It has the format {domain}/{scope}/{code}."
               }
             },
             "x-nullable": true
@@ -125076,6 +125118,7 @@
                 "IdentifierDefinition",
                 "SettlementInstruction",
                 "TransactionFeeType",
+                "AllocationMethod",
                 "TransactionFee"
               ],
               "type": "string"
@@ -125444,6 +125487,7 @@
                 "IdentifierDefinition",
                 "SettlementInstruction",
                 "TransactionFeeType",
+                "AllocationMethod",
                 "TransactionFee"
               ],
               "type": "string"
@@ -125782,6 +125826,7 @@
                 "IdentifierDefinition",
                 "SettlementInstruction",
                 "TransactionFeeType",
+                "AllocationMethod",
                 "TransactionFee"
               ],
               "type": "string"
@@ -125979,6 +126024,7 @@
                 "IdentifierDefinition",
                 "SettlementInstruction",
                 "TransactionFeeType",
+                "AllocationMethod",
                 "TransactionFee"
               ],
               "type": "string"
@@ -126296,6 +126342,7 @@
                 "IdentifierDefinition",
                 "SettlementInstruction",
                 "TransactionFeeType",
+                "AllocationMethod",
                 "TransactionFee"
               ],
               "type": "string"
@@ -126667,6 +126714,7 @@
                 "IdentifierDefinition",
                 "SettlementInstruction",
                 "TransactionFeeType",
+                "AllocationMethod",
                 "TransactionFee"
               ],
               "type": "string"
@@ -126933,6 +126981,7 @@
                 "IdentifierDefinition",
                 "SettlementInstruction",
                 "TransactionFeeType",
+                "AllocationMethod",
                 "TransactionFee"
               ],
               "type": "string"
@@ -196838,9 +196887,7 @@
           "lusidInstrumentId",
           "orderIds",
           "quantity",
-          "side",
-          "timeInForce",
-          "type"
+          "side"
         ],
         "type": "object",
         "properties": {
@@ -196886,14 +196933,14 @@
             "description": "The client's representation of the block's side (buy, sell, short, etc)"
           },
           "type": {
-            "minLength": 1,
             "type": "string",
-            "description": "The block order's type (examples: Limit, Market, ...)"
+            "description": "The block order's type (examples: Limit, Market, ...)",
+            "nullable": true
           },
           "timeInForce": {
-            "minLength": 1,
             "type": "string",
-            "description": "The block orders' time in force (examples: Day, GoodTilCancel, ...)"
+            "description": "The block orders' time in force (examples: Day, GoodTilCancel, ...)",
+            "nullable": true
           },
           "createdDate": {
             "type": "string",
@@ -197105,9 +197152,7 @@
           "id",
           "instrumentIdentifiers",
           "quantity",
-          "side",
-          "timeInForce",
-          "type"
+          "side"
         ],
         "type": "object",
         "properties": {
@@ -197149,14 +197194,14 @@
             "description": "The client's representation of the block's side (buy, sell, short, etc)"
           },
           "type": {
-            "minLength": 1,
             "type": "string",
-            "description": "The block order's type (examples: Limit, Market, ...)"
+            "description": "The block order's type (examples: Limit, Market, ...)",
+            "nullable": true
           },
           "timeInForce": {
-            "minLength": 1,
             "type": "string",
-            "description": "The block orders' time in force (examples: Day, GoodTilCancel, ...)"
+            "description": "The block orders' time in force (examples: Day, GoodTilCancel, ...)",
+            "nullable": true
           },
           "createdDate": {
             "type": "string",
@@ -205427,6 +205472,7 @@
               "IdentifierDefinition",
               "SettlementInstruction",
               "TransactionFeeType",
+              "AllocationMethod",
               "TransactionFee"
             ],
             "type": "string",
@@ -205780,6 +205826,7 @@
               "IdentifierDefinition",
               "SettlementInstruction",
               "TransactionFeeType",
+              "AllocationMethod",
               "TransactionFee"
             ],
             "type": "string",
@@ -206006,6 +206053,7 @@
               "IdentifierDefinition",
               "SettlementInstruction",
               "TransactionFeeType",
+              "AllocationMethod",
               "TransactionFee"
             ],
             "type": "string",
@@ -214398,6 +214446,12 @@
                 "description": "The code of the Nav Type that this Nav Type will follow when set.",
                 "nullable": true
               },
+              "dateOfLastPcaScan": {
+                "type": "string",
+                "description": "The last date a PCA scan was conducted for a Valuation Point",
+                "format": "date-time",
+                "nullable": true
+              },
               "fundCalendarEntriesType": {
                 "enum": [
                   "FinalisedValuationPoint",
@@ -217094,6 +217148,12 @@
                   "$ref": "#/components/schemas/EstimateVariant"
                 },
                 "description": "The variants of the Estimate Valuation Point. ",
+                "nullable": true
+              },
+              "dateOfLastPcaScan": {
+                "type": "string",
+                "description": "The last date a PCA scan was conducted for a Valuation Point",
+                "format": "date-time",
                 "nullable": true
               },
               "fundCalendarEntriesType": {
@@ -222111,6 +222171,7 @@
               "IdentifierDefinition",
               "SettlementInstruction",
               "TransactionFeeType",
+              "AllocationMethod",
               "TransactionFee"
             ],
             "type": "string",
@@ -235780,6 +235841,14 @@
             "description": "The collection of resource identifiers for the portfolio groups contained in the portfolio group as sub groups.",
             "nullable": true
           },
+          "properties": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/Property"
+            },
+            "description": "A collection of properties from the 'PortfolioGroup' domain decorating the portfolio group. Returned only when the request specifies propertyKeys.",
+            "nullable": true
+          },
           "relationships": {
             "type": "array",
             "items": {
@@ -237794,6 +237863,7 @@
               "IdentifierDefinition",
               "SettlementInstruction",
               "TransactionFeeType",
+              "AllocationMethod",
               "TransactionFee"
             ],
             "type": "string",
@@ -238121,6 +238191,7 @@
               "IdentifierDefinition",
               "SettlementInstruction",
               "TransactionFeeType",
+              "AllocationMethod",
               "TransactionFee"
             ],
             "type": "string",
@@ -238281,6 +238352,7 @@
           "IdentifierDefinition",
           "SettlementInstruction",
           "TransactionFeeType",
+          "AllocationMethod",
           "TransactionFee"
         ],
         "type": "string",
