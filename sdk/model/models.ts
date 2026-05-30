@@ -166,6 +166,8 @@ export * from './capFloor';
 export * from './capFloorAllOf';
 export * from './capitalDistributionEvent';
 export * from './capitalDistributionEventAllOf';
+export * from './capitalGainsDistributionEvent';
+export * from './capitalGainsDistributionEventAllOf';
 export * from './capletFloorletCashFlowEvent';
 export * from './capletFloorletCashFlowEventAllOf';
 export * from './cash';
@@ -332,6 +334,7 @@ export * from './createTradeTicketsResponse';
 export * from './createTransactionFeeTypeRequest';
 export * from './createTransactionPortfolioRequest';
 export * from './createUnitDefinition';
+export * from './createValuationPointRequest';
 export * from './creditDefaultSwap';
 export * from './creditDefaultSwapAllOf';
 export * from './creditPremiumCashFlowEvent';
@@ -1054,6 +1057,7 @@ export * from './previousFundCalendarEntry';
 export * from './previousFundValuationPointData';
 export * from './previousNAV';
 export * from './previousShareClassBreakdown';
+export * from './previousValuationPoint';
 export * from './pricingContext';
 export * from './pricingModel';
 export * from './pricingOptions';
@@ -1555,6 +1559,7 @@ export * from './upsertTransferAgencyOrderRequest';
 export * from './upsertTranslationScriptRequest';
 export * from './upsertValuationPointRequest';
 export * from './user';
+export * from './valuationPoint';
 export * from './valuationPointDataQueryParameters';
 export * from './valuationPointDataRequest';
 export * from './valuationPointDataResponse';
@@ -1789,6 +1794,8 @@ import { CapFloor } from './capFloor';
 import { CapFloorAllOf } from './capFloorAllOf';
 import { CapitalDistributionEvent } from './capitalDistributionEvent';
 import { CapitalDistributionEventAllOf } from './capitalDistributionEventAllOf';
+import { CapitalGainsDistributionEvent } from './capitalGainsDistributionEvent';
+import { CapitalGainsDistributionEventAllOf } from './capitalGainsDistributionEventAllOf';
 import { CapletFloorletCashFlowEvent } from './capletFloorletCashFlowEvent';
 import { CapletFloorletCashFlowEventAllOf } from './capletFloorletCashFlowEventAllOf';
 import { Cash } from './cash';
@@ -1955,6 +1962,7 @@ import { CreateTradeTicketsResponse } from './createTradeTicketsResponse';
 import { CreateTransactionFeeTypeRequest } from './createTransactionFeeTypeRequest';
 import { CreateTransactionPortfolioRequest } from './createTransactionPortfolioRequest';
 import { CreateUnitDefinition } from './createUnitDefinition';
+import { CreateValuationPointRequest } from './createValuationPointRequest';
 import { CreditDefaultSwap } from './creditDefaultSwap';
 import { CreditDefaultSwapAllOf } from './creditDefaultSwapAllOf';
 import { CreditPremiumCashFlowEvent } from './creditPremiumCashFlowEvent';
@@ -2677,6 +2685,7 @@ import { PreviousFundCalendarEntry } from './previousFundCalendarEntry';
 import { PreviousFundValuationPointData } from './previousFundValuationPointData';
 import { PreviousNAV } from './previousNAV';
 import { PreviousShareClassBreakdown } from './previousShareClassBreakdown';
+import { PreviousValuationPoint } from './previousValuationPoint';
 import { PricingContext } from './pricingContext';
 import { PricingModel } from './pricingModel';
 import { PricingOptions } from './pricingOptions';
@@ -3178,6 +3187,7 @@ import { UpsertTransferAgencyOrderRequest } from './upsertTransferAgencyOrderReq
 import { UpsertTranslationScriptRequest } from './upsertTranslationScriptRequest';
 import { UpsertValuationPointRequest } from './upsertValuationPointRequest';
 import { User } from './user';
+import { ValuationPoint } from './valuationPoint';
 import { ValuationPointDataQueryParameters } from './valuationPointDataQueryParameters';
 import { ValuationPointDataRequest } from './valuationPointDataRequest';
 import { ValuationPointDataResponse } from './valuationPointDataResponse';
@@ -3309,6 +3319,8 @@ let enumsMap: {[index: string]: any} = {
         "CapFloorAllOf.InstrumentTypeEnum": CapFloorAllOf.InstrumentTypeEnum,
         "CapitalDistributionEvent.InstrumentEventTypeEnum": CapitalDistributionEvent.InstrumentEventTypeEnum,
         "CapitalDistributionEventAllOf.InstrumentEventTypeEnum": CapitalDistributionEventAllOf.InstrumentEventTypeEnum,
+        "CapitalGainsDistributionEvent.InstrumentEventTypeEnum": CapitalGainsDistributionEvent.InstrumentEventTypeEnum,
+        "CapitalGainsDistributionEventAllOf.InstrumentEventTypeEnum": CapitalGainsDistributionEventAllOf.InstrumentEventTypeEnum,
         "CapletFloorletCashFlowEvent.InstrumentEventTypeEnum": CapletFloorletCashFlowEvent.InstrumentEventTypeEnum,
         "CapletFloorletCashFlowEventAllOf.InstrumentEventTypeEnum": CapletFloorletCashFlowEventAllOf.InstrumentEventTypeEnum,
         "Cash.InstrumentTypeEnum": Cash.InstrumentTypeEnum,
@@ -4028,6 +4040,8 @@ let typeMap: {[index: string]: any} = {
     "CapFloorAllOf": CapFloorAllOf,
     "CapitalDistributionEvent": CapitalDistributionEvent,
     "CapitalDistributionEventAllOf": CapitalDistributionEventAllOf,
+    "CapitalGainsDistributionEvent": CapitalGainsDistributionEvent,
+    "CapitalGainsDistributionEventAllOf": CapitalGainsDistributionEventAllOf,
     "CapletFloorletCashFlowEvent": CapletFloorletCashFlowEvent,
     "CapletFloorletCashFlowEventAllOf": CapletFloorletCashFlowEventAllOf,
     "Cash": Cash,
@@ -4190,6 +4204,7 @@ let typeMap: {[index: string]: any} = {
     "CreateTransactionFeeTypeRequest": CreateTransactionFeeTypeRequest,
     "CreateTransactionPortfolioRequest": CreateTransactionPortfolioRequest,
     "CreateUnitDefinition": CreateUnitDefinition,
+    "CreateValuationPointRequest": CreateValuationPointRequest,
     "CreditDefaultSwap": CreditDefaultSwap,
     "CreditDefaultSwapAllOf": CreditDefaultSwapAllOf,
     "CreditPremiumCashFlowEvent": CreditPremiumCashFlowEvent,
@@ -4886,6 +4901,7 @@ let typeMap: {[index: string]: any} = {
     "PreviousFundValuationPointData": PreviousFundValuationPointData,
     "PreviousNAV": PreviousNAV,
     "PreviousShareClassBreakdown": PreviousShareClassBreakdown,
+    "PreviousValuationPoint": PreviousValuationPoint,
     "PricingContext": PricingContext,
     "PricingOptions": PricingOptions,
     "PrimarySchedule": PrimarySchedule,
@@ -5364,6 +5380,7 @@ let typeMap: {[index: string]: any} = {
     "UpsertTranslationScriptRequest": UpsertTranslationScriptRequest,
     "UpsertValuationPointRequest": UpsertValuationPointRequest,
     "User": User,
+    "ValuationPoint": ValuationPoint,
     "ValuationPointDataQueryParameters": ValuationPointDataQueryParameters,
     "ValuationPointDataRequest": ValuationPointDataRequest,
     "ValuationPointDataResponse": ValuationPointDataResponse,
