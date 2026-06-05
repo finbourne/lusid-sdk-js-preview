@@ -37,6 +37,7 @@ import {InvestmentAccountsApi} from './api/investmentAccountsApi';
 import {InvestorRecordsApi} from './api/investorRecordsApi';
 import {LegacyComplianceApi} from './api/legacyComplianceApi';
 import {LegalEntitiesApi} from './api/legalEntitiesApi';
+import {MarketDataFieldConfigurationApi} from './api/marketDataFieldConfigurationApi';
 import {OrderGraphApi} from './api/orderGraphApi';
 import {OrderInstructionsApi} from './api/orderInstructionsApi';
 import {OrderManagementApi} from './api/orderManagementApi';
@@ -120,6 +121,7 @@ export class Api {
     public investorRecords:  InvestorRecordsApi
     public legacyCompliance:  LegacyComplianceApi
     public legalEntities:  LegalEntitiesApi
+    public marketDataFieldConfiguration:  MarketDataFieldConfigurationApi
     public orderGraph:  OrderGraphApi
     public orderInstructions:  OrderInstructionsApi
     public orderManagement:  OrderManagementApi
