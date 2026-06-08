@@ -1624,6 +1624,8 @@ export * from './workspaceItemUpdateRequest';
 export * from './workspacePermittedItemActions';
 export * from './workspaceUpdateRequest';
 export * from './workspaceVisibility';
+export * from './worthlessEvent';
+export * from './worthlessEventAllOf';
 export * from './yearMonthDay';
 export * from './yieldCurveData';
 export * from './yieldCurveDataAllOf';
@@ -3265,6 +3267,8 @@ import { WorkspaceItemUpdateRequest } from './workspaceItemUpdateRequest';
 import { WorkspacePermittedItemActions } from './workspacePermittedItemActions';
 import { WorkspaceUpdateRequest } from './workspaceUpdateRequest';
 import { WorkspaceVisibility } from './workspaceVisibility';
+import { WorthlessEvent } from './worthlessEvent';
+import { WorthlessEventAllOf } from './worthlessEventAllOf';
 import { YearMonthDay } from './yearMonthDay';
 import { YieldCurveData } from './yieldCurveData';
 import { YieldCurveDataAllOf } from './yieldCurveDataAllOf';
@@ -3904,6 +3908,8 @@ let enumsMap: {[index: string]: any} = {
         "VendorLibrary": VendorLibrary,
         "VendorModelRule.SupplierEnum": VendorModelRule.SupplierEnum,
         "WorkspaceVisibility": WorkspaceVisibility,
+        "WorthlessEvent.InstrumentEventTypeEnum": WorthlessEvent.InstrumentEventTypeEnum,
+        "WorthlessEventAllOf.InstrumentEventTypeEnum": WorthlessEventAllOf.InstrumentEventTypeEnum,
         "YieldCurveData.MarketDataTypeEnum": YieldCurveData.MarketDataTypeEnum,
         "YieldCurveDataAllOf.MarketDataTypeEnum": YieldCurveDataAllOf.MarketDataTypeEnum,
 }
@@ -5472,6 +5478,8 @@ let typeMap: {[index: string]: any} = {
     "WorkspaceItemUpdateRequest": WorkspaceItemUpdateRequest,
     "WorkspacePermittedItemActions": WorkspacePermittedItemActions,
     "WorkspaceUpdateRequest": WorkspaceUpdateRequest,
+    "WorthlessEvent": WorthlessEvent,
+    "WorthlessEventAllOf": WorthlessEventAllOf,
     "YearMonthDay": YearMonthDay,
     "YieldCurveData": YieldCurveData,
     "YieldCurveDataAllOf": YieldCurveDataAllOf,
