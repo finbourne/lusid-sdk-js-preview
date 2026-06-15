@@ -2,6 +2,8 @@ export * from './aborApi';
 import { AborApi } from './aborApi';
 export * from './aborConfigurationApi';
 import { AborConfigurationApi } from './aborConfigurationApi';
+export * from './addressKeyAliasApi';
+import { AddressKeyAliasApi } from './addressKeyAliasApi';
 export * from './addressKeyDefinitionApi';
 import { AddressKeyDefinitionApi } from './addressKeyDefinitionApi';
 export * from './aggregatedReturnsApi';
@@ -134,6 +136,8 @@ export * from './searchApi';
 import { SearchApi } from './searchApi';
 export * from './sequencesApi';
 import { SequencesApi } from './sequencesApi';
+export * from './settlementActivityApi';
+import { SettlementActivityApi } from './settlementActivityApi';
 export * from './simplePositionPortfoliosApi';
 import { SimplePositionPortfoliosApi } from './simplePositionPortfoliosApi';
 export * from './stagedModificationsApi';
@@ -165,4 +169,4 @@ import { WorkspaceApi } from './workspaceApi';
 
 export { RequestFile } from '../model/models';
 
-export const APIS = [AborApi, AborConfigurationApi, AddressKeyDefinitionApi, AggregatedReturnsApi, AggregationApi, AllocationsApi, AmortisationRuleSetsApi, ApplicationMetadataApi, BlocksApi, CalendarsApi, ChartOfAccountsApi, CheckDefinitionsApi, ComplexMarketDataApi, ComplianceApi, ConfigurationRecipeApi, ConventionsApi, CorporateActionSourcesApi, CounterpartiesApi, CustomDataModelsApi, CustomEntitiesApi, CustomEntityDefinitionsApi, CustomEntityTypesApi, CutLabelDefinitionsApi, DataTypesApi, DerivedTransactionPortfoliosApi, EntitiesApi, ExecutionsApi, FeeTypesApi, FundConfigurationApi, FundsApi, GroupReconciliationsApi, IdentifierDefinitionsApi, InstrumentEventTypesApi, InstrumentEventsApi, InstrumentsApi, InvestmentAccountsApi, InvestorRecordsApi, LegacyComplianceApi, LegalEntitiesApi, MarketDataFieldConfigurationApi, OrderGraphApi, OrderInstructionsApi, OrderManagementApi, OrdersApi, PackagesApi, ParticipationsApi, PersonsApi, PlacementsApi, PortfolioGroupsApi, PortfoliosApi, PropertyDefinitionsApi, QueryableKeysApi, QuotesApi, ReconciliationsApi, ReferenceListsApi, ReferencePortfolioApi, RelationDefinitionsApi, RelationalDatasetDefinitionApi, RelationalDatasetsApi, RelationsApi, RelationshipDefinitionsApi, RelationshipsApi, ResourceRecordApi, SchemasApi, ScopesApi, ScriptedTranslationApi, SearchApi, SequencesApi, SimplePositionPortfoliosApi, StagedModificationsApi, StagingRuleSetApi, StructuredResultDataApi, SystemConfigurationApi, TaxRuleSetsApi, TimelinesApi, TransactionConfigurationApi, TransactionFeeTypesApi, TransactionFeesApi, TransactionPortfoliosApi, TransferAgencyApi, TranslationApi, WorkspaceApi];
+export const APIS = [AborApi, AborConfigurationApi, AddressKeyAliasApi, AddressKeyDefinitionApi, AggregatedReturnsApi, AggregationApi, AllocationsApi, AmortisationRuleSetsApi, ApplicationMetadataApi, BlocksApi, CalendarsApi, ChartOfAccountsApi, CheckDefinitionsApi, ComplexMarketDataApi, ComplianceApi, ConfigurationRecipeApi, ConventionsApi, CorporateActionSourcesApi, CounterpartiesApi, CustomDataModelsApi, CustomEntitiesApi, CustomEntityDefinitionsApi, CustomEntityTypesApi, CutLabelDefinitionsApi, DataTypesApi, DerivedTransactionPortfoliosApi, EntitiesApi, ExecutionsApi, FeeTypesApi, FundConfigurationApi, FundsApi, GroupReconciliationsApi, IdentifierDefinitionsApi, InstrumentEventTypesApi, InstrumentEventsApi, InstrumentsApi, InvestmentAccountsApi, InvestorRecordsApi, LegacyComplianceApi, LegalEntitiesApi, MarketDataFieldConfigurationApi, OrderGraphApi, OrderInstructionsApi, OrderManagementApi, OrdersApi, PackagesApi, ParticipationsApi, PersonsApi, PlacementsApi, PortfolioGroupsApi, PortfoliosApi, PropertyDefinitionsApi, QueryableKeysApi, QuotesApi, ReconciliationsApi, ReferenceListsApi, ReferencePortfolioApi, RelationDefinitionsApi, RelationalDatasetDefinitionApi, RelationalDatasetsApi, RelationsApi, RelationshipDefinitionsApi, RelationshipsApi, ResourceRecordApi, SchemasApi, ScopesApi, ScriptedTranslationApi, SearchApi, SequencesApi, SettlementActivityApi, SimplePositionPortfoliosApi, StagedModificationsApi, StagingRuleSetApi, StructuredResultDataApi, SystemConfigurationApi, TaxRuleSetsApi, TimelinesApi, TransactionConfigurationApi, TransactionFeeTypesApi, TransactionFeesApi, TransactionPortfoliosApi, TransferAgencyApi, TranslationApi, WorkspaceApi];

@@ -1,5 +1,6 @@
 import {AborApi} from './api/aborApi';
 import {AborConfigurationApi} from './api/aborConfigurationApi';
+import {AddressKeyAliasApi} from './api/addressKeyAliasApi';
 import {AddressKeyDefinitionApi} from './api/addressKeyDefinitionApi';
 import {AggregatedReturnsApi} from './api/aggregatedReturnsApi';
 import {AggregationApi} from './api/aggregationApi';
@@ -66,6 +67,7 @@ import {ScopesApi} from './api/scopesApi';
 import {ScriptedTranslationApi} from './api/scriptedTranslationApi';
 import {SearchApi} from './api/searchApi';
 import {SequencesApi} from './api/sequencesApi';
+import {SettlementActivityApi} from './api/settlementActivityApi';
 import {SimplePositionPortfoliosApi} from './api/simplePositionPortfoliosApi';
 import {StagedModificationsApi} from './api/stagedModificationsApi';
 import {StagingRuleSetApi} from './api/stagingRuleSetApi';
@@ -84,6 +86,7 @@ import {WorkspaceApi} from './api/workspaceApi';
 export class Api {
     public abor:  AborApi
     public aborConfiguration:  AborConfigurationApi
+    public addressKeyAlias:  AddressKeyAliasApi
     public addressKeyDefinition:  AddressKeyDefinitionApi
     public aggregatedReturns:  AggregatedReturnsApi
     public aggregation:  AggregationApi
@@ -150,6 +153,7 @@ export class Api {
     public scriptedTranslation:  ScriptedTranslationApi
     public search:  SearchApi
     public sequences:  SequencesApi
+    public settlementActivity:  SettlementActivityApi
     public simplePositionPortfolios:  SimplePositionPortfoliosApi
     public stagedModifications:  StagedModificationsApi
     public stagingRuleSet:  StagingRuleSetApi

@@ -29,6 +29,7 @@ export * from './addBusinessDaysToDateRequest';
 export * from './addBusinessDaysToDateResponse';
 export * from './additionalPayment';
 export * from './addressDefinition';
+export * from './addressKeyAlias';
 export * from './addressKeyComplianceParameter';
 export * from './addressKeyComplianceParameterAllOf';
 export * from './addressKeyDefinition';
@@ -623,6 +624,7 @@ export * from './generalLedgerProfileMapping';
 export * from './generalLedgerProfileRequest';
 export * from './generalLedgerProfileResponse';
 export * from './generatedEventDiagnostics';
+export * from './getAddressKeyAliasResponse';
 export * from './getCdsFlowConventionsResponse';
 export * from './getComplexMarketDataResponse';
 export * from './getCounterpartyAgreementResponse';
@@ -788,6 +790,8 @@ export * from './loanFacility';
 export * from './loanFacilityAllOf';
 export * from './loanFacilityContractRolloverEvent';
 export * from './loanFacilityContractRolloverEventAllOf';
+export * from './loanFacilityDelayedCompensationPaymentEvent';
+export * from './loanFacilityDelayedCompensationPaymentEventAllOf';
 export * from './loanInterestRepaymentEvent';
 export * from './loanInterestRepaymentEventAllOf';
 export * from './loanPeriod';
@@ -954,6 +958,7 @@ export * from './pagedResourceListOfFundCalendarEntries';
 export * from './pagedResourceListOfFundCalendarEntry';
 export * from './pagedResourceListOfFundConfiguration';
 export * from './pagedResourceListOfGeneralLedgerProfileResponse';
+export * from './pagedResourceListOfGetAddressKeyAliasResponse';
 export * from './pagedResourceListOfGroupReconciliationComparisonResult';
 export * from './pagedResourceListOfGroupReconciliationComparisonRuleset';
 export * from './pagedResourceListOfGroupReconciliationDefinition';
@@ -1098,6 +1103,8 @@ export * from './propertyValueEqualsAllOf';
 export * from './propertyValueIn';
 export * from './propertyValueInAllOf';
 export * from './protectionPayoutCashFlowEvent';
+export * from './putRedemptionEvent';
+export * from './putRedemptionEventAllOf';
 export * from './quantityInstructed';
 export * from './queryApplicableInstrumentEventsRequest';
 export * from './queryBucketedCashFlowsRequest';
@@ -1259,6 +1266,7 @@ export * from './resourceListOfTransactionFeeType';
 export * from './resourceListOfTransactionSettlementInstruction';
 export * from './resourceListOfTransactionType';
 export * from './resourceListOfValueType';
+export * from './resourceListWithPostBodiesOfSettlementActivityToSettlementActivityQuery';
 export * from './resourceRecord';
 export * from './responseMetaData';
 export * from './resultDataKeyRule';
@@ -1321,6 +1329,8 @@ export * from './setPersonPropertiesRequest';
 export * from './setShareClassInstrumentsRequest';
 export * from './setTransactionConfigurationAlias';
 export * from './setTransactionConfigurationSourceRequest';
+export * from './settlementActivity';
+export * from './settlementActivityQuery';
 export * from './settlementConfigurationCategory';
 export * from './settlementConfigurationMethodOverride';
 export * from './settlementCycle';
@@ -1517,6 +1527,7 @@ export * from './updateTimelineRequest';
 export * from './updateTransactionFeeTypeRequest';
 export * from './updateUnitRequest';
 export * from './updateValuationPointRequest';
+export * from './upsertAddressKeyAliasRequest';
 export * from './upsertCdsFlowConventionsRequest';
 export * from './upsertComplexMarketDataRequest';
 export * from './upsertComplianceRuleRequest';
@@ -1672,6 +1683,7 @@ import { AddBusinessDaysToDateRequest } from './addBusinessDaysToDateRequest';
 import { AddBusinessDaysToDateResponse } from './addBusinessDaysToDateResponse';
 import { AdditionalPayment } from './additionalPayment';
 import { AddressDefinition } from './addressDefinition';
+import { AddressKeyAlias } from './addressKeyAlias';
 import { AddressKeyComplianceParameter } from './addressKeyComplianceParameter';
 import { AddressKeyComplianceParameterAllOf } from './addressKeyComplianceParameterAllOf';
 import { AddressKeyDefinition } from './addressKeyDefinition';
@@ -2266,6 +2278,7 @@ import { GeneralLedgerProfileMapping } from './generalLedgerProfileMapping';
 import { GeneralLedgerProfileRequest } from './generalLedgerProfileRequest';
 import { GeneralLedgerProfileResponse } from './generalLedgerProfileResponse';
 import { GeneratedEventDiagnostics } from './generatedEventDiagnostics';
+import { GetAddressKeyAliasResponse } from './getAddressKeyAliasResponse';
 import { GetCdsFlowConventionsResponse } from './getCdsFlowConventionsResponse';
 import { GetComplexMarketDataResponse } from './getComplexMarketDataResponse';
 import { GetCounterpartyAgreementResponse } from './getCounterpartyAgreementResponse';
@@ -2431,6 +2444,8 @@ import { LoanFacility } from './loanFacility';
 import { LoanFacilityAllOf } from './loanFacilityAllOf';
 import { LoanFacilityContractRolloverEvent } from './loanFacilityContractRolloverEvent';
 import { LoanFacilityContractRolloverEventAllOf } from './loanFacilityContractRolloverEventAllOf';
+import { LoanFacilityDelayedCompensationPaymentEvent } from './loanFacilityDelayedCompensationPaymentEvent';
+import { LoanFacilityDelayedCompensationPaymentEventAllOf } from './loanFacilityDelayedCompensationPaymentEventAllOf';
 import { LoanInterestRepaymentEvent } from './loanInterestRepaymentEvent';
 import { LoanInterestRepaymentEventAllOf } from './loanInterestRepaymentEventAllOf';
 import { LoanPeriod } from './loanPeriod';
@@ -2597,6 +2612,7 @@ import { PagedResourceListOfFundCalendarEntries } from './pagedResourceListOfFun
 import { PagedResourceListOfFundCalendarEntry } from './pagedResourceListOfFundCalendarEntry';
 import { PagedResourceListOfFundConfiguration } from './pagedResourceListOfFundConfiguration';
 import { PagedResourceListOfGeneralLedgerProfileResponse } from './pagedResourceListOfGeneralLedgerProfileResponse';
+import { PagedResourceListOfGetAddressKeyAliasResponse } from './pagedResourceListOfGetAddressKeyAliasResponse';
 import { PagedResourceListOfGroupReconciliationComparisonResult } from './pagedResourceListOfGroupReconciliationComparisonResult';
 import { PagedResourceListOfGroupReconciliationComparisonRuleset } from './pagedResourceListOfGroupReconciliationComparisonRuleset';
 import { PagedResourceListOfGroupReconciliationDefinition } from './pagedResourceListOfGroupReconciliationDefinition';
@@ -2741,6 +2757,8 @@ import { PropertyValueEqualsAllOf } from './propertyValueEqualsAllOf';
 import { PropertyValueIn } from './propertyValueIn';
 import { PropertyValueInAllOf } from './propertyValueInAllOf';
 import { ProtectionPayoutCashFlowEvent } from './protectionPayoutCashFlowEvent';
+import { PutRedemptionEvent } from './putRedemptionEvent';
+import { PutRedemptionEventAllOf } from './putRedemptionEventAllOf';
 import { QuantityInstructed } from './quantityInstructed';
 import { QueryApplicableInstrumentEventsRequest } from './queryApplicableInstrumentEventsRequest';
 import { QueryBucketedCashFlowsRequest } from './queryBucketedCashFlowsRequest';
@@ -2902,6 +2920,7 @@ import { ResourceListOfTransactionFeeType } from './resourceListOfTransactionFee
 import { ResourceListOfTransactionSettlementInstruction } from './resourceListOfTransactionSettlementInstruction';
 import { ResourceListOfTransactionType } from './resourceListOfTransactionType';
 import { ResourceListOfValueType } from './resourceListOfValueType';
+import { ResourceListWithPostBodiesOfSettlementActivityToSettlementActivityQuery } from './resourceListWithPostBodiesOfSettlementActivityToSettlementActivityQuery';
 import { ResourceRecord } from './resourceRecord';
 import { ResponseMetaData } from './responseMetaData';
 import { ResultDataKeyRule } from './resultDataKeyRule';
@@ -2964,6 +2983,8 @@ import { SetPersonPropertiesRequest } from './setPersonPropertiesRequest';
 import { SetShareClassInstrumentsRequest } from './setShareClassInstrumentsRequest';
 import { SetTransactionConfigurationAlias } from './setTransactionConfigurationAlias';
 import { SetTransactionConfigurationSourceRequest } from './setTransactionConfigurationSourceRequest';
+import { SettlementActivity } from './settlementActivity';
+import { SettlementActivityQuery } from './settlementActivityQuery';
 import { SettlementConfigurationCategory } from './settlementConfigurationCategory';
 import { SettlementConfigurationMethodOverride } from './settlementConfigurationMethodOverride';
 import { SettlementCycle } from './settlementCycle';
@@ -3160,6 +3181,7 @@ import { UpdateTimelineRequest } from './updateTimelineRequest';
 import { UpdateTransactionFeeTypeRequest } from './updateTransactionFeeTypeRequest';
 import { UpdateUnitRequest } from './updateUnitRequest';
 import { UpdateValuationPointRequest } from './updateValuationPointRequest';
+import { UpsertAddressKeyAliasRequest } from './upsertAddressKeyAliasRequest';
 import { UpsertCdsFlowConventionsRequest } from './upsertCdsFlowConventionsRequest';
 import { UpsertComplexMarketDataRequest } from './upsertComplexMarketDataRequest';
 import { UpsertComplianceRuleRequest } from './upsertComplianceRuleRequest';
@@ -3659,6 +3681,8 @@ let enumsMap: {[index: string]: any} = {
         "LoanFacilityAllOf.InstrumentTypeEnum": LoanFacilityAllOf.InstrumentTypeEnum,
         "LoanFacilityContractRolloverEvent.InstrumentEventTypeEnum": LoanFacilityContractRolloverEvent.InstrumentEventTypeEnum,
         "LoanFacilityContractRolloverEventAllOf.InstrumentEventTypeEnum": LoanFacilityContractRolloverEventAllOf.InstrumentEventTypeEnum,
+        "LoanFacilityDelayedCompensationPaymentEvent.InstrumentEventTypeEnum": LoanFacilityDelayedCompensationPaymentEvent.InstrumentEventTypeEnum,
+        "LoanFacilityDelayedCompensationPaymentEventAllOf.InstrumentEventTypeEnum": LoanFacilityDelayedCompensationPaymentEventAllOf.InstrumentEventTypeEnum,
         "LoanInterestRepaymentEvent.InstrumentEventTypeEnum": LoanInterestRepaymentEvent.InstrumentEventTypeEnum,
         "LoanInterestRepaymentEventAllOf.InstrumentEventTypeEnum": LoanInterestRepaymentEventAllOf.InstrumentEventTypeEnum,
         "LoanPrincipalRepaymentEvent.InstrumentEventTypeEnum": LoanPrincipalRepaymentEvent.InstrumentEventTypeEnum,
@@ -3775,6 +3799,8 @@ let enumsMap: {[index: string]: any} = {
         "PropertyValueIn.CriterionTypeEnum": PropertyValueIn.CriterionTypeEnum,
         "PropertyValueInAllOf.CriterionTypeEnum": PropertyValueInAllOf.CriterionTypeEnum,
         "ProtectionPayoutCashFlowEvent.InstrumentEventTypeEnum": ProtectionPayoutCashFlowEvent.InstrumentEventTypeEnum,
+        "PutRedemptionEvent.InstrumentEventTypeEnum": PutRedemptionEvent.InstrumentEventTypeEnum,
+        "PutRedemptionEventAllOf.InstrumentEventTypeEnum": PutRedemptionEventAllOf.InstrumentEventTypeEnum,
         "QuoteActivity.NavActivityAdjustmentTypeEnum": QuoteActivity.NavActivityAdjustmentTypeEnum,
         "QuoteActivityAdjustment.NavActivityAdjustmentTypeEnum": QuoteActivityAdjustment.NavActivityAdjustmentTypeEnum,
         "QuoteActivityAdjustmentAllOf.NavActivityAdjustmentTypeEnum": QuoteActivityAdjustmentAllOf.NavActivityAdjustmentTypeEnum,
@@ -3943,6 +3969,7 @@ let typeMap: {[index: string]: any} = {
     "AddBusinessDaysToDateResponse": AddBusinessDaysToDateResponse,
     "AdditionalPayment": AdditionalPayment,
     "AddressDefinition": AddressDefinition,
+    "AddressKeyAlias": AddressKeyAlias,
     "AddressKeyComplianceParameter": AddressKeyComplianceParameter,
     "AddressKeyComplianceParameterAllOf": AddressKeyComplianceParameterAllOf,
     "AddressKeyDefinition": AddressKeyDefinition,
@@ -4520,6 +4547,7 @@ let typeMap: {[index: string]: any} = {
     "GeneralLedgerProfileRequest": GeneralLedgerProfileRequest,
     "GeneralLedgerProfileResponse": GeneralLedgerProfileResponse,
     "GeneratedEventDiagnostics": GeneratedEventDiagnostics,
+    "GetAddressKeyAliasResponse": GetAddressKeyAliasResponse,
     "GetCdsFlowConventionsResponse": GetCdsFlowConventionsResponse,
     "GetComplexMarketDataResponse": GetComplexMarketDataResponse,
     "GetCounterpartyAgreementResponse": GetCounterpartyAgreementResponse,
@@ -4682,6 +4710,8 @@ let typeMap: {[index: string]: any} = {
     "LoanFacilityAllOf": LoanFacilityAllOf,
     "LoanFacilityContractRolloverEvent": LoanFacilityContractRolloverEvent,
     "LoanFacilityContractRolloverEventAllOf": LoanFacilityContractRolloverEventAllOf,
+    "LoanFacilityDelayedCompensationPaymentEvent": LoanFacilityDelayedCompensationPaymentEvent,
+    "LoanFacilityDelayedCompensationPaymentEventAllOf": LoanFacilityDelayedCompensationPaymentEventAllOf,
     "LoanInterestRepaymentEvent": LoanInterestRepaymentEvent,
     "LoanInterestRepaymentEventAllOf": LoanInterestRepaymentEventAllOf,
     "LoanPeriod": LoanPeriod,
@@ -4837,6 +4867,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfFundCalendarEntry": PagedResourceListOfFundCalendarEntry,
     "PagedResourceListOfFundConfiguration": PagedResourceListOfFundConfiguration,
     "PagedResourceListOfGeneralLedgerProfileResponse": PagedResourceListOfGeneralLedgerProfileResponse,
+    "PagedResourceListOfGetAddressKeyAliasResponse": PagedResourceListOfGetAddressKeyAliasResponse,
     "PagedResourceListOfGroupReconciliationComparisonResult": PagedResourceListOfGroupReconciliationComparisonResult,
     "PagedResourceListOfGroupReconciliationComparisonRuleset": PagedResourceListOfGroupReconciliationComparisonRuleset,
     "PagedResourceListOfGroupReconciliationDefinition": PagedResourceListOfGroupReconciliationDefinition,
@@ -4973,6 +5004,8 @@ let typeMap: {[index: string]: any} = {
     "PropertyValueIn": PropertyValueIn,
     "PropertyValueInAllOf": PropertyValueInAllOf,
     "ProtectionPayoutCashFlowEvent": ProtectionPayoutCashFlowEvent,
+    "PutRedemptionEvent": PutRedemptionEvent,
+    "PutRedemptionEventAllOf": PutRedemptionEventAllOf,
     "QuantityInstructed": QuantityInstructed,
     "QueryApplicableInstrumentEventsRequest": QueryApplicableInstrumentEventsRequest,
     "QueryBucketedCashFlowsRequest": QueryBucketedCashFlowsRequest,
@@ -5129,6 +5162,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfTransactionSettlementInstruction": ResourceListOfTransactionSettlementInstruction,
     "ResourceListOfTransactionType": ResourceListOfTransactionType,
     "ResourceListOfValueType": ResourceListOfValueType,
+    "ResourceListWithPostBodiesOfSettlementActivityToSettlementActivityQuery": ResourceListWithPostBodiesOfSettlementActivityToSettlementActivityQuery,
     "ResourceRecord": ResourceRecord,
     "ResponseMetaData": ResponseMetaData,
     "ResultDataKeyRule": ResultDataKeyRule,
@@ -5187,6 +5221,8 @@ let typeMap: {[index: string]: any} = {
     "SetShareClassInstrumentsRequest": SetShareClassInstrumentsRequest,
     "SetTransactionConfigurationAlias": SetTransactionConfigurationAlias,
     "SetTransactionConfigurationSourceRequest": SetTransactionConfigurationSourceRequest,
+    "SettlementActivity": SettlementActivity,
+    "SettlementActivityQuery": SettlementActivityQuery,
     "SettlementConfigurationCategory": SettlementConfigurationCategory,
     "SettlementConfigurationMethodOverride": SettlementConfigurationMethodOverride,
     "SettlementCycle": SettlementCycle,
@@ -5374,6 +5410,7 @@ let typeMap: {[index: string]: any} = {
     "UpdateTransactionFeeTypeRequest": UpdateTransactionFeeTypeRequest,
     "UpdateUnitRequest": UpdateUnitRequest,
     "UpdateValuationPointRequest": UpdateValuationPointRequest,
+    "UpsertAddressKeyAliasRequest": UpsertAddressKeyAliasRequest,
     "UpsertCdsFlowConventionsRequest": UpsertCdsFlowConventionsRequest,
     "UpsertComplexMarketDataRequest": UpsertComplexMarketDataRequest,
     "UpsertComplianceRuleRequest": UpsertComplianceRuleRequest,
