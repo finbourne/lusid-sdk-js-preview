@@ -749,6 +749,8 @@ export * from './instrumentProperties';
 export * from './instrumentResolutionDetail';
 export * from './instrumentSearchProperty';
 export * from './instrumentType';
+export * from './interestPaymentEvent';
+export * from './interestPaymentEventAllOf';
 export * from './interestRateSwap';
 export * from './interestRateSwapAllOf';
 export * from './interestRateSwaption';
@@ -2403,6 +2405,8 @@ import { InstrumentProperties } from './instrumentProperties';
 import { InstrumentResolutionDetail } from './instrumentResolutionDetail';
 import { InstrumentSearchProperty } from './instrumentSearchProperty';
 import { InstrumentType } from './instrumentType';
+import { InterestPaymentEvent } from './interestPaymentEvent';
+import { InterestPaymentEventAllOf } from './interestPaymentEventAllOf';
 import { InterestRateSwap } from './interestRateSwap';
 import { InterestRateSwapAllOf } from './interestRateSwapAllOf';
 import { InterestRateSwaption } from './interestRateSwaption';
@@ -3662,6 +3666,8 @@ let enumsMap: {[index: string]: any} = {
         "InstrumentListAllOf.ReferenceListTypeEnum": InstrumentListAllOf.ReferenceListTypeEnum,
         "InstrumentListComplianceParameter.ComplianceParameterTypeEnum": InstrumentListComplianceParameter.ComplianceParameterTypeEnum,
         "InstrumentType": InstrumentType,
+        "InterestPaymentEvent.InstrumentEventTypeEnum": InterestPaymentEvent.InstrumentEventTypeEnum,
+        "InterestPaymentEventAllOf.InstrumentEventTypeEnum": InterestPaymentEventAllOf.InstrumentEventTypeEnum,
         "InterestRateSwap.InstrumentTypeEnum": InterestRateSwap.InstrumentTypeEnum,
         "InterestRateSwapAllOf.InstrumentTypeEnum": InterestRateSwapAllOf.InstrumentTypeEnum,
         "InterestRateSwaption.InstrumentTypeEnum": InterestRateSwaption.InstrumentTypeEnum,
@@ -4669,6 +4675,8 @@ let typeMap: {[index: string]: any} = {
     "InstrumentProperties": InstrumentProperties,
     "InstrumentResolutionDetail": InstrumentResolutionDetail,
     "InstrumentSearchProperty": InstrumentSearchProperty,
+    "InterestPaymentEvent": InterestPaymentEvent,
+    "InterestPaymentEventAllOf": InterestPaymentEventAllOf,
     "InterestRateSwap": InterestRateSwap,
     "InterestRateSwapAllOf": InterestRateSwapAllOf,
     "InterestRateSwaption": InterestRateSwaption,
