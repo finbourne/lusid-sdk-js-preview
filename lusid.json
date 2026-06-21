@@ -9,7 +9,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "2.0.1550",
+    "version": "2.0.1551",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -129483,8 +129483,7 @@
                   },
                   "description": "",
                   "holding": {
-                    "taxLotLevelHoldings": true,
-                    "aggregateCashCommitments": false
+                    "taxLotLevelHoldings": true
                   }
                 }
               }
@@ -129566,8 +129565,7 @@
                   },
                   "description": "",
                   "holding": {
-                    "taxLotLevelHoldings": true,
-                    "aggregateCashCommitments": false
+                    "taxLotLevelHoldings": true
                   }
                 }
               }
@@ -129649,8 +129647,7 @@
                   },
                   "description": "",
                   "holding": {
-                    "taxLotLevelHoldings": true,
-                    "aggregateCashCommitments": false
+                    "taxLotLevelHoldings": true
                   }
                 }
               }
@@ -129732,8 +129729,7 @@
                   },
                   "description": "",
                   "holding": {
-                    "taxLotLevelHoldings": true,
-                    "aggregateCashCommitments": false
+                    "taxLotLevelHoldings": true
                   }
                 }
               }
@@ -129925,8 +129921,7 @@
                         },
                         "description": "",
                         "holding": {
-                          "taxLotLevelHoldings": true,
-                          "aggregateCashCommitments": false
+                          "taxLotLevelHoldings": true
                         }
                       }
                     },
@@ -130003,8 +129998,7 @@
                         },
                         "description": "",
                         "holding": {
-                          "taxLotLevelHoldings": true,
-                          "aggregateCashCommitments": false
+                          "taxLotLevelHoldings": true
                         }
                       }
                     }
@@ -130111,8 +130105,7 @@
                         },
                         "description": "",
                         "holding": {
-                          "taxLotLevelHoldings": true,
-                          "aggregateCashCommitments": false
+                          "taxLotLevelHoldings": true
                         }
                       }
                     },
@@ -130189,8 +130182,7 @@
                         },
                         "description": "",
                         "holding": {
-                          "taxLotLevelHoldings": true,
-                          "aggregateCashCommitments": false
+                          "taxLotLevelHoldings": true
                         }
                       }
                     }
@@ -130297,8 +130289,7 @@
                         },
                         "description": "",
                         "holding": {
-                          "taxLotLevelHoldings": true,
-                          "aggregateCashCommitments": false
+                          "taxLotLevelHoldings": true
                         }
                       }
                     },
@@ -130375,8 +130366,7 @@
                         },
                         "description": "",
                         "holding": {
-                          "taxLotLevelHoldings": true,
-                          "aggregateCashCommitments": false
+                          "taxLotLevelHoldings": true
                         }
                       }
                     }
@@ -131153,8 +131143,7 @@
                     },
                     "description": "",
                     "holding": {
-                      "taxLotLevelHoldings": true,
-                      "aggregateCashCommitments": false
+                      "taxLotLevelHoldings": true
                     }
                   }
                 }
@@ -131248,8 +131237,7 @@
                     },
                     "description": "",
                     "holding": {
-                      "taxLotLevelHoldings": true,
-                      "aggregateCashCommitments": false
+                      "taxLotLevelHoldings": true
                     }
                   }
                 }
@@ -131343,8 +131331,7 @@
                     },
                     "description": "",
                     "holding": {
-                      "taxLotLevelHoldings": true,
-                      "aggregateCashCommitments": false
+                      "taxLotLevelHoldings": true
                     }
                   }
                 }
@@ -131787,8 +131774,7 @@
                         },
                         "description": "",
                         "holding": {
-                          "taxLotLevelHoldings": true,
-                          "aggregateCashCommitments": false
+                          "taxLotLevelHoldings": true
                         }
                       }
                     },
@@ -131865,8 +131851,7 @@
                         },
                         "description": "",
                         "holding": {
-                          "taxLotLevelHoldings": true,
-                          "aggregateCashCommitments": false
+                          "taxLotLevelHoldings": true
                         }
                       }
                     }
@@ -131973,8 +131958,7 @@
                         },
                         "description": "",
                         "holding": {
-                          "taxLotLevelHoldings": true,
-                          "aggregateCashCommitments": false
+                          "taxLotLevelHoldings": true
                         }
                       }
                     },
@@ -132051,8 +132035,7 @@
                         },
                         "description": "",
                         "holding": {
-                          "taxLotLevelHoldings": true,
-                          "aggregateCashCommitments": false
+                          "taxLotLevelHoldings": true
                         }
                       }
                     }
@@ -132159,8 +132142,7 @@
                         },
                         "description": "",
                         "holding": {
-                          "taxLotLevelHoldings": true,
-                          "aggregateCashCommitments": false
+                          "taxLotLevelHoldings": true
                         }
                       }
                     },
@@ -132237,8 +132219,7 @@
                         },
                         "description": "",
                         "holding": {
-                          "taxLotLevelHoldings": true,
-                          "aggregateCashCommitments": false
+                          "taxLotLevelHoldings": true
                         }
                       }
                     }
@@ -132432,8 +132413,7 @@
                     },
                     "description": "",
                     "holding": {
-                      "taxLotLevelHoldings": true,
-                      "aggregateCashCommitments": false
+                      "taxLotLevelHoldings": true
                     }
                   }
                 }
@@ -132527,8 +132507,7 @@
                     },
                     "description": "",
                     "holding": {
-                      "taxLotLevelHoldings": true,
-                      "aggregateCashCommitments": false
+                      "taxLotLevelHoldings": true
                     }
                   }
                 }
@@ -132622,8 +132601,7 @@
                     },
                     "description": "",
                     "holding": {
-                      "taxLotLevelHoldings": true,
-                      "aggregateCashCommitments": false
+                      "taxLotLevelHoldings": true
                     }
                   }
                 }
@@ -132806,8 +132784,7 @@
                     },
                     "description": "",
                     "holding": {
-                      "taxLotLevelHoldings": true,
-                      "aggregateCashCommitments": false
+                      "taxLotLevelHoldings": true
                     }
                   }
                 }
@@ -132901,8 +132878,7 @@
                     },
                     "description": "",
                     "holding": {
-                      "taxLotLevelHoldings": true,
-                      "aggregateCashCommitments": false
+                      "taxLotLevelHoldings": true
                     }
                   }
                 }
@@ -132996,8 +132972,7 @@
                     },
                     "description": "",
                     "holding": {
-                      "taxLotLevelHoldings": true,
-                      "aggregateCashCommitments": false
+                      "taxLotLevelHoldings": true
                     }
                   }
                 }
@@ -176976,6 +176951,15 @@
               "pattern": "^[a-zA-Z0-9\\-_]+$",
               "type": "string"
             }
+          },
+          {
+            "name": "aggregateCashCommitments",
+            "in": "query",
+            "description": "When true, collapses cash-commitment rows that share a sub-holding key\r\n            into a single aggregated row per portfolio with summed units/cost and the per-leg breakdown retained on the\r\n            settlement schedule. Ignored when byTaxlots is true. Defaults to False.",
+            "schema": {
+              "type": "boolean"
+            },
+            "x-nullable": true
           }
         ],
         "responses": {
@@ -180154,6 +180138,15 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            },
+            "x-nullable": true
+          },
+          {
+            "name": "aggregateCashCommitments",
+            "in": "query",
+            "description": "When true, collapses cash-commitment rows that share a sub-holding key\r\n            into a single aggregated row per portfolio with summed units/cost and the per-leg breakdown retained on the\r\n            settlement schedule. Ignored when byTaxlots is true. Defaults to False.",
+            "schema": {
+              "type": "boolean"
             },
             "x-nullable": true
           }
@@ -224557,10 +224550,6 @@
           "taxLotLevelHoldings": {
             "type": "boolean",
             "description": "Whether or not to expand the holdings to return the underlying tax-lots. Defaults to True."
-          },
-          "aggregateCashCommitments": {
-            "type": "boolean",
-            "description": "When true, cash commitment holdings sharing a SubHoldingKey are folded into a single aggregated\r\nrow per portfolio, mirroring how cash balances are already aggregated. Defaults to false to\r\npreserve existing behaviour. Ignored when TaxLotLevelHoldings is true — tax-lot granularity\r\ntakes precedence. Aggregation is per-portfolio: cross-portfolio rows in portfolio-group / fund\r\nresponses stay separate, matching the behaviour of positions and cash balances."
           }
         },
         "additionalProperties": false,
