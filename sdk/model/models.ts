@@ -218,6 +218,8 @@ export * from './checkDefinitionRuleSet';
 export * from './checkStep';
 export * from './checkStepAllOf';
 export * from './checkStepRequest';
+export * from './classActionEvent';
+export * from './classActionEventAllOf';
 export * from './cleardownModuleDetails';
 export * from './cleardownModuleRequest';
 export * from './cleardownModuleResponse';
@@ -1876,6 +1878,8 @@ import { CheckDefinitionRuleSet } from './checkDefinitionRuleSet';
 import { CheckStep } from './checkStep';
 import { CheckStepAllOf } from './checkStepAllOf';
 import { CheckStepRequest } from './checkStepRequest';
+import { ClassActionEvent } from './classActionEvent';
+import { ClassActionEventAllOf } from './classActionEventAllOf';
 import { CleardownModuleDetails } from './cleardownModuleDetails';
 import { CleardownModuleRequest } from './cleardownModuleRequest';
 import { CleardownModuleResponse } from './cleardownModuleResponse';
@@ -3410,6 +3414,8 @@ let enumsMap: {[index: string]: any} = {
         "CheckStep.ComplianceStepTypeEnum": CheckStep.ComplianceStepTypeEnum,
         "CheckStepAllOf.ComplianceStepTypeEnum": CheckStepAllOf.ComplianceStepTypeEnum,
         "CheckStepRequest.ComplianceStepTypeRequestEnum": CheckStepRequest.ComplianceStepTypeRequestEnum,
+        "ClassActionEvent.InstrumentEventTypeEnum": ClassActionEvent.InstrumentEventTypeEnum,
+        "ClassActionEventAllOf.InstrumentEventTypeEnum": ClassActionEventAllOf.InstrumentEventTypeEnum,
         "CloseEvent.InstrumentEventTypeEnum": CloseEvent.InstrumentEventTypeEnum,
         "CloseEventAllOf.InstrumentEventTypeEnum": CloseEventAllOf.InstrumentEventTypeEnum,
         "CompletePortfolio.TypeEnum": CompletePortfolio.TypeEnum,
@@ -4165,6 +4171,8 @@ let typeMap: {[index: string]: any} = {
     "CheckStep": CheckStep,
     "CheckStepAllOf": CheckStepAllOf,
     "CheckStepRequest": CheckStepRequest,
+    "ClassActionEvent": ClassActionEvent,
+    "ClassActionEventAllOf": ClassActionEventAllOf,
     "CleardownModuleDetails": CleardownModuleDetails,
     "CleardownModuleRequest": CleardownModuleRequest,
     "CleardownModuleResponse": CleardownModuleResponse,
