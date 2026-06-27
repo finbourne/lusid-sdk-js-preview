@@ -19,6 +19,7 @@ export * from './account';
 export * from './accountHolder';
 export * from './accountHolderIdentifier';
 export * from './accountProperties';
+export * from './accountedQuote';
 export * from './accountedTransaction';
 export * from './accountingMethod';
 export * from './accountsUpsertResponse';
@@ -92,6 +93,8 @@ export * from './applicableInstrumentEvent';
 export * from './apportionmentMethodProperty';
 export * from './assetClass';
 export * from './assetLeg';
+export * from './bankruptcyEvent';
+export * from './bankruptcyEventAllOf';
 export * from './barrier';
 export * from './basket';
 export * from './basketAllOf';
@@ -787,6 +790,8 @@ export * from './lifeCycleEventValue';
 export * from './lifeCycleEventValueAllOf';
 export * from './lineageMember';
 export * from './link';
+export * from './liquidationPaymentEvent';
+export * from './liquidationPaymentEventAllOf';
 export * from './listAggregationReconciliation';
 export * from './listAggregationResponse';
 export * from './listComplexMarketDataWithMetaDataResponse';
@@ -1434,6 +1439,7 @@ export * from './transactionConfigurationTypeAlias';
 export * from './transactionCurrencyAndAmount';
 export * from './transactionDateWindows';
 export * from './transactionDiagnostics';
+export * from './transactionEntity';
 export * from './transactionFeeCapitalisation';
 export * from './transactionFeeType';
 export * from './transactionFieldMap';
@@ -1595,6 +1601,7 @@ export * from './valuationPointDataRequest';
 export * from './valuationPointDataResponse';
 export * from './valuationPointInstrument';
 export * from './valuationPointOverview';
+export * from './valuationPointResourceListOfAccountedQuote';
 export * from './valuationPointResourceListOfAccountedTransaction';
 export * from './valuationPointResourceListOfFundCashStatementRow';
 export * from './valuationPointResourceListOfFundJournalEntryLine';
@@ -1679,6 +1686,7 @@ import { Account } from './account';
 import { AccountHolder } from './accountHolder';
 import { AccountHolderIdentifier } from './accountHolderIdentifier';
 import { AccountProperties } from './accountProperties';
+import { AccountedQuote } from './accountedQuote';
 import { AccountedTransaction } from './accountedTransaction';
 import { AccountingMethod } from './accountingMethod';
 import { AccountsUpsertResponse } from './accountsUpsertResponse';
@@ -1752,6 +1760,8 @@ import { ApplicableInstrumentEvent } from './applicableInstrumentEvent';
 import { ApportionmentMethodProperty } from './apportionmentMethodProperty';
 import { AssetClass } from './assetClass';
 import { AssetLeg } from './assetLeg';
+import { BankruptcyEvent } from './bankruptcyEvent';
+import { BankruptcyEventAllOf } from './bankruptcyEventAllOf';
 import { Barrier } from './barrier';
 import { Basket } from './basket';
 import { BasketAllOf } from './basketAllOf';
@@ -2447,6 +2457,8 @@ import { LifeCycleEventValue } from './lifeCycleEventValue';
 import { LifeCycleEventValueAllOf } from './lifeCycleEventValueAllOf';
 import { LineageMember } from './lineageMember';
 import { Link } from './link';
+import { LiquidationPaymentEvent } from './liquidationPaymentEvent';
+import { LiquidationPaymentEventAllOf } from './liquidationPaymentEventAllOf';
 import { ListAggregationReconciliation } from './listAggregationReconciliation';
 import { ListAggregationResponse } from './listAggregationResponse';
 import { ListComplexMarketDataWithMetaDataResponse } from './listComplexMarketDataWithMetaDataResponse';
@@ -3094,6 +3106,7 @@ import { TransactionConfigurationTypeAlias } from './transactionConfigurationTyp
 import { TransactionCurrencyAndAmount } from './transactionCurrencyAndAmount';
 import { TransactionDateWindows } from './transactionDateWindows';
 import { TransactionDiagnostics } from './transactionDiagnostics';
+import { TransactionEntity } from './transactionEntity';
 import { TransactionFeeCapitalisation } from './transactionFeeCapitalisation';
 import { TransactionFeeType } from './transactionFeeType';
 import { TransactionFieldMap } from './transactionFieldMap';
@@ -3255,6 +3268,7 @@ import { ValuationPointDataRequest } from './valuationPointDataRequest';
 import { ValuationPointDataResponse } from './valuationPointDataResponse';
 import { ValuationPointInstrument } from './valuationPointInstrument';
 import { ValuationPointOverview } from './valuationPointOverview';
+import { ValuationPointResourceListOfAccountedQuote } from './valuationPointResourceListOfAccountedQuote';
 import { ValuationPointResourceListOfAccountedTransaction } from './valuationPointResourceListOfAccountedTransaction';
 import { ValuationPointResourceListOfFundCashStatementRow } from './valuationPointResourceListOfFundCashStatementRow';
 import { ValuationPointResourceListOfFundJournalEntryLine } from './valuationPointResourceListOfFundJournalEntryLine';
@@ -3354,6 +3368,8 @@ let enumsMap: {[index: string]: any} = {
         "AppendMarketData.MarketDataTypeEnum": AppendMarketData.MarketDataTypeEnum,
         "AppendMarketDataType": AppendMarketDataType,
         "AssetClass": AssetClass,
+        "BankruptcyEvent.InstrumentEventTypeEnum": BankruptcyEvent.InstrumentEventTypeEnum,
+        "BankruptcyEventAllOf.InstrumentEventTypeEnum": BankruptcyEventAllOf.InstrumentEventTypeEnum,
         "Basket.InstrumentTypeEnum": Basket.InstrumentTypeEnum,
         "BasketAllOf.InstrumentTypeEnum": BasketAllOf.InstrumentTypeEnum,
         "Bond.InstrumentTypeEnum": Bond.InstrumentTypeEnum,
@@ -3693,6 +3709,8 @@ let enumsMap: {[index: string]: any} = {
         "IrVolDependencyAllOf.DependencyTypeEnum": IrVolDependencyAllOf.DependencyTypeEnum,
         "LifeCycleEventValue.ResultValueTypeEnum": LifeCycleEventValue.ResultValueTypeEnum,
         "LifeCycleEventValueAllOf.ResultValueTypeEnum": LifeCycleEventValueAllOf.ResultValueTypeEnum,
+        "LiquidationPaymentEvent.InstrumentEventTypeEnum": LiquidationPaymentEvent.InstrumentEventTypeEnum,
+        "LiquidationPaymentEventAllOf.InstrumentEventTypeEnum": LiquidationPaymentEventAllOf.InstrumentEventTypeEnum,
         "LoanFacility.InstrumentTypeEnum": LoanFacility.InstrumentTypeEnum,
         "LoanFacilityAllOf.InstrumentTypeEnum": LoanFacilityAllOf.InstrumentTypeEnum,
         "LoanFacilityContractRolloverEvent.InstrumentEventTypeEnum": LoanFacilityContractRolloverEvent.InstrumentEventTypeEnum,
@@ -3978,6 +3996,7 @@ let typeMap: {[index: string]: any} = {
     "AccountHolder": AccountHolder,
     "AccountHolderIdentifier": AccountHolderIdentifier,
     "AccountProperties": AccountProperties,
+    "AccountedQuote": AccountedQuote,
     "AccountedTransaction": AccountedTransaction,
     "AccountsUpsertResponse": AccountsUpsertResponse,
     "AccumulationEvent": AccumulationEvent,
@@ -4046,6 +4065,8 @@ let typeMap: {[index: string]: any} = {
     "ApplicableInstrumentEvent": ApplicableInstrumentEvent,
     "ApportionmentMethodProperty": ApportionmentMethodProperty,
     "AssetLeg": AssetLeg,
+    "BankruptcyEvent": BankruptcyEvent,
+    "BankruptcyEventAllOf": BankruptcyEventAllOf,
     "Barrier": Barrier,
     "Basket": Basket,
     "BasketAllOf": BasketAllOf,
@@ -4725,6 +4746,8 @@ let typeMap: {[index: string]: any} = {
     "LifeCycleEventValueAllOf": LifeCycleEventValueAllOf,
     "LineageMember": LineageMember,
     "Link": Link,
+    "LiquidationPaymentEvent": LiquidationPaymentEvent,
+    "LiquidationPaymentEventAllOf": LiquidationPaymentEventAllOf,
     "ListAggregationReconciliation": ListAggregationReconciliation,
     "ListAggregationResponse": ListAggregationResponse,
     "ListComplexMarketDataWithMetaDataResponse": ListComplexMarketDataWithMetaDataResponse,
@@ -5341,6 +5364,7 @@ let typeMap: {[index: string]: any} = {
     "TransactionCurrencyAndAmount": TransactionCurrencyAndAmount,
     "TransactionDateWindows": TransactionDateWindows,
     "TransactionDiagnostics": TransactionDiagnostics,
+    "TransactionEntity": TransactionEntity,
     "TransactionFeeCapitalisation": TransactionFeeCapitalisation,
     "TransactionFeeType": TransactionFeeType,
     "TransactionFieldMap": TransactionFieldMap,
@@ -5496,6 +5520,7 @@ let typeMap: {[index: string]: any} = {
     "ValuationPointDataResponse": ValuationPointDataResponse,
     "ValuationPointInstrument": ValuationPointInstrument,
     "ValuationPointOverview": ValuationPointOverview,
+    "ValuationPointResourceListOfAccountedQuote": ValuationPointResourceListOfAccountedQuote,
     "ValuationPointResourceListOfAccountedTransaction": ValuationPointResourceListOfAccountedTransaction,
     "ValuationPointResourceListOfFundCashStatementRow": ValuationPointResourceListOfFundCashStatementRow,
     "ValuationPointResourceListOfFundJournalEntryLine": ValuationPointResourceListOfFundJournalEntryLine,
