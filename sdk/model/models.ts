@@ -561,6 +561,7 @@ export * from './fundCalendarEntries';
 export * from './fundCalendarEntriesType';
 export * from './fundCalendarEntry';
 export * from './fundCalendarEntryType';
+export * from './fundCashStatementLocalCurrency';
 export * from './fundCashStatementRow';
 export * from './fundConfiguration';
 export * from './fundConfigurationProperties';
@@ -1013,6 +1014,8 @@ export * from './pagedResourceListOfVirtualRow';
 export * from './pagedResourceListOfWorkspace';
 export * from './pagedResourceListOfWorkspaceItem';
 export * from './partialClosureConstituent';
+export * from './partialDefeasanceEvent';
+export * from './partialDefeasanceEventAllOf';
 export * from './participation';
 export * from './participationRequest';
 export * from './participationSetRequest';
@@ -1201,6 +1204,8 @@ export * from './repurchaseOfferEventAllOf';
 export * from './requestedChanges';
 export * from './resetEvent';
 export * from './resetEventAllOf';
+export * from './resolveTenorsRequest';
+export * from './resolveTenorsResponse';
 export * from './resourceId';
 export * from './resourceListOfAccessControlledResource';
 export * from './resourceListOfAccessMetadataValueOf';
@@ -1603,6 +1608,7 @@ export * from './valuationPointInstrument';
 export * from './valuationPointOverview';
 export * from './valuationPointResourceListOfAccountedQuote';
 export * from './valuationPointResourceListOfAccountedTransaction';
+export * from './valuationPointResourceListOfFundCashStatementLocalCurrency';
 export * from './valuationPointResourceListOfFundCashStatementRow';
 export * from './valuationPointResourceListOfFundJournalEntryLine';
 export * from './valuationPointResourceListOfPnlJournalEntryLine';
@@ -2228,6 +2234,7 @@ import { FundCalendarEntries } from './fundCalendarEntries';
 import { FundCalendarEntriesType } from './fundCalendarEntriesType';
 import { FundCalendarEntry } from './fundCalendarEntry';
 import { FundCalendarEntryType } from './fundCalendarEntryType';
+import { FundCashStatementLocalCurrency } from './fundCashStatementLocalCurrency';
 import { FundCashStatementRow } from './fundCashStatementRow';
 import { FundConfiguration } from './fundConfiguration';
 import { FundConfigurationProperties } from './fundConfigurationProperties';
@@ -2680,6 +2687,8 @@ import { PagedResourceListOfVirtualRow } from './pagedResourceListOfVirtualRow';
 import { PagedResourceListOfWorkspace } from './pagedResourceListOfWorkspace';
 import { PagedResourceListOfWorkspaceItem } from './pagedResourceListOfWorkspaceItem';
 import { PartialClosureConstituent } from './partialClosureConstituent';
+import { PartialDefeasanceEvent } from './partialDefeasanceEvent';
+import { PartialDefeasanceEventAllOf } from './partialDefeasanceEventAllOf';
 import { Participation } from './participation';
 import { ParticipationRequest } from './participationRequest';
 import { ParticipationSetRequest } from './participationSetRequest';
@@ -2868,6 +2877,8 @@ import { RepurchaseOfferEventAllOf } from './repurchaseOfferEventAllOf';
 import { RequestedChanges } from './requestedChanges';
 import { ResetEvent } from './resetEvent';
 import { ResetEventAllOf } from './resetEventAllOf';
+import { ResolveTenorsRequest } from './resolveTenorsRequest';
+import { ResolveTenorsResponse } from './resolveTenorsResponse';
 import { ResourceId } from './resourceId';
 import { ResourceListOfAccessControlledResource } from './resourceListOfAccessControlledResource';
 import { ResourceListOfAccessMetadataValueOf } from './resourceListOfAccessMetadataValueOf';
@@ -3270,6 +3281,7 @@ import { ValuationPointInstrument } from './valuationPointInstrument';
 import { ValuationPointOverview } from './valuationPointOverview';
 import { ValuationPointResourceListOfAccountedQuote } from './valuationPointResourceListOfAccountedQuote';
 import { ValuationPointResourceListOfAccountedTransaction } from './valuationPointResourceListOfAccountedTransaction';
+import { ValuationPointResourceListOfFundCashStatementLocalCurrency } from './valuationPointResourceListOfFundCashStatementLocalCurrency';
 import { ValuationPointResourceListOfFundCashStatementRow } from './valuationPointResourceListOfFundCashStatementRow';
 import { ValuationPointResourceListOfFundJournalEntryLine } from './valuationPointResourceListOfFundJournalEntryLine';
 import { ValuationPointResourceListOfPnlJournalEntryLine } from './valuationPointResourceListOfPnlJournalEntryLine';
@@ -3776,6 +3788,8 @@ let enumsMap: {[index: string]: any} = {
         "OptionalityScheduleAllOf.ScheduleTypeEnum": OptionalityScheduleAllOf.ScheduleTypeEnum,
         "OrderBySpec.SortOrderEnum": OrderBySpec.SortOrderEnum,
         "OutputTransaction.TransactionStatusEnum": OutputTransaction.TransactionStatusEnum,
+        "PartialDefeasanceEvent.InstrumentEventTypeEnum": PartialDefeasanceEvent.InstrumentEventTypeEnum,
+        "PartialDefeasanceEventAllOf.InstrumentEventTypeEnum": PartialDefeasanceEventAllOf.InstrumentEventTypeEnum,
         "PercentCheckStep.ComplianceStepTypeEnum": PercentCheckStep.ComplianceStepTypeEnum,
         "PercentCheckStepRequest.ComplianceStepTypeRequestEnum": PercentCheckStepRequest.ComplianceStepTypeRequestEnum,
         "PeriodType": PeriodType,
@@ -4520,6 +4534,7 @@ let typeMap: {[index: string]: any} = {
     "FundBookmarkAllOf": FundBookmarkAllOf,
     "FundCalendarEntries": FundCalendarEntries,
     "FundCalendarEntry": FundCalendarEntry,
+    "FundCashStatementLocalCurrency": FundCashStatementLocalCurrency,
     "FundCashStatementRow": FundCashStatementRow,
     "FundConfiguration": FundConfiguration,
     "FundConfigurationProperties": FundConfigurationProperties,
@@ -4958,6 +4973,8 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfWorkspace": PagedResourceListOfWorkspace,
     "PagedResourceListOfWorkspaceItem": PagedResourceListOfWorkspaceItem,
     "PartialClosureConstituent": PartialClosureConstituent,
+    "PartialDefeasanceEvent": PartialDefeasanceEvent,
+    "PartialDefeasanceEventAllOf": PartialDefeasanceEventAllOf,
     "Participation": Participation,
     "ParticipationRequest": ParticipationRequest,
     "ParticipationSetRequest": ParticipationSetRequest,
@@ -5133,6 +5150,8 @@ let typeMap: {[index: string]: any} = {
     "RequestedChanges": RequestedChanges,
     "ResetEvent": ResetEvent,
     "ResetEventAllOf": ResetEventAllOf,
+    "ResolveTenorsRequest": ResolveTenorsRequest,
+    "ResolveTenorsResponse": ResolveTenorsResponse,
     "ResourceId": ResourceId,
     "ResourceListOfAccessControlledResource": ResourceListOfAccessControlledResource,
     "ResourceListOfAccessMetadataValueOf": ResourceListOfAccessMetadataValueOf,
@@ -5522,6 +5541,7 @@ let typeMap: {[index: string]: any} = {
     "ValuationPointOverview": ValuationPointOverview,
     "ValuationPointResourceListOfAccountedQuote": ValuationPointResourceListOfAccountedQuote,
     "ValuationPointResourceListOfAccountedTransaction": ValuationPointResourceListOfAccountedTransaction,
+    "ValuationPointResourceListOfFundCashStatementLocalCurrency": ValuationPointResourceListOfFundCashStatementLocalCurrency,
     "ValuationPointResourceListOfFundCashStatementRow": ValuationPointResourceListOfFundCashStatementRow,
     "ValuationPointResourceListOfFundJournalEntryLine": ValuationPointResourceListOfFundJournalEntryLine,
     "ValuationPointResourceListOfPnlJournalEntryLine": ValuationPointResourceListOfPnlJournalEntryLine,
