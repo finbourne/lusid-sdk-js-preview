@@ -358,6 +358,7 @@ export * from './custodianAccount';
 export * from './custodianAccountProperties';
 export * from './custodianAccountRequest';
 export * from './custodianAccountsUpsertResponse';
+export * from './custodianEntry';
 export * from './customDataModel';
 export * from './customDataModelCriteria';
 export * from './customDataModelIdentifierTypeSpecification';
@@ -1333,6 +1334,8 @@ export * from './scriptMapReference';
 export * from './securityElection';
 export * from './securityOfferConstituent';
 export * from './securityOfferElection';
+export * from './securityWriteOffEvent';
+export * from './securityWriteOffEventAllOf';
 export * from './sequenceDefinition';
 export * from './series';
 export * from './seriesDefinition';
@@ -1407,6 +1410,7 @@ export * from './structuredResultData';
 export * from './structuredResultDataId';
 export * from './subHoldingKeyValueEquals';
 export * from './subHoldingKeyValueEqualsAllOf';
+export * from './subscribeElection';
 export * from './swapCashFlowEvent';
 export * from './swapCashFlowEventAllOf';
 export * from './swapPrincipalEvent';
@@ -2031,6 +2035,7 @@ import { CustodianAccount } from './custodianAccount';
 import { CustodianAccountProperties } from './custodianAccountProperties';
 import { CustodianAccountRequest } from './custodianAccountRequest';
 import { CustodianAccountsUpsertResponse } from './custodianAccountsUpsertResponse';
+import { CustodianEntry } from './custodianEntry';
 import { CustomDataModel } from './customDataModel';
 import { CustomDataModelCriteria } from './customDataModelCriteria';
 import { CustomDataModelIdentifierTypeSpecification } from './customDataModelIdentifierTypeSpecification';
@@ -3006,6 +3011,8 @@ import { ScriptMapReference } from './scriptMapReference';
 import { SecurityElection } from './securityElection';
 import { SecurityOfferConstituent } from './securityOfferConstituent';
 import { SecurityOfferElection } from './securityOfferElection';
+import { SecurityWriteOffEvent } from './securityWriteOffEvent';
+import { SecurityWriteOffEventAllOf } from './securityWriteOffEventAllOf';
 import { SequenceDefinition } from './sequenceDefinition';
 import { Series } from './series';
 import { SeriesDefinition } from './seriesDefinition';
@@ -3080,6 +3087,7 @@ import { StructuredResultData } from './structuredResultData';
 import { StructuredResultDataId } from './structuredResultDataId';
 import { SubHoldingKeyValueEquals } from './subHoldingKeyValueEquals';
 import { SubHoldingKeyValueEqualsAllOf } from './subHoldingKeyValueEqualsAllOf';
+import { SubscribeElection } from './subscribeElection';
 import { SwapCashFlowEvent } from './swapCashFlowEvent';
 import { SwapCashFlowEventAllOf } from './swapCashFlowEventAllOf';
 import { SwapPrincipalEvent } from './swapPrincipalEvent';
@@ -3922,6 +3930,8 @@ let enumsMap: {[index: string]: any} = {
         "ScheduleType": ScheduleType,
         "ScripDividendEvent.InstrumentEventTypeEnum": ScripDividendEvent.InstrumentEventTypeEnum,
         "ScripDividendEventAllOf.InstrumentEventTypeEnum": ScripDividendEventAllOf.InstrumentEventTypeEnum,
+        "SecurityWriteOffEvent.InstrumentEventTypeEnum": SecurityWriteOffEvent.InstrumentEventTypeEnum,
+        "SecurityWriteOffEventAllOf.InstrumentEventTypeEnum": SecurityWriteOffEventAllOf.InstrumentEventTypeEnum,
         "SimpleCashFlowLoan.InstrumentTypeEnum": SimpleCashFlowLoan.InstrumentTypeEnum,
         "SimpleCashFlowLoanAllOf.InstrumentTypeEnum": SimpleCashFlowLoanAllOf.InstrumentTypeEnum,
         "SimpleInstrument.AssetClassEnum": SimpleInstrument.AssetClassEnum,
@@ -4339,6 +4349,7 @@ let typeMap: {[index: string]: any} = {
     "CustodianAccountProperties": CustodianAccountProperties,
     "CustodianAccountRequest": CustodianAccountRequest,
     "CustodianAccountsUpsertResponse": CustodianAccountsUpsertResponse,
+    "CustodianEntry": CustodianEntry,
     "CustomDataModel": CustomDataModel,
     "CustomDataModelCriteria": CustomDataModelCriteria,
     "CustomDataModelIdentifierTypeSpecification": CustomDataModelIdentifierTypeSpecification,
@@ -5275,6 +5286,8 @@ let typeMap: {[index: string]: any} = {
     "SecurityElection": SecurityElection,
     "SecurityOfferConstituent": SecurityOfferConstituent,
     "SecurityOfferElection": SecurityOfferElection,
+    "SecurityWriteOffEvent": SecurityWriteOffEvent,
+    "SecurityWriteOffEventAllOf": SecurityWriteOffEventAllOf,
     "SequenceDefinition": SequenceDefinition,
     "Series": Series,
     "SeriesDefinition": SeriesDefinition,
@@ -5347,6 +5360,7 @@ let typeMap: {[index: string]: any} = {
     "StructuredResultDataId": StructuredResultDataId,
     "SubHoldingKeyValueEquals": SubHoldingKeyValueEquals,
     "SubHoldingKeyValueEqualsAllOf": SubHoldingKeyValueEqualsAllOf,
+    "SubscribeElection": SubscribeElection,
     "SwapCashFlowEvent": SwapCashFlowEvent,
     "SwapCashFlowEventAllOf": SwapCashFlowEventAllOf,
     "SwapPrincipalEvent": SwapPrincipalEvent,
