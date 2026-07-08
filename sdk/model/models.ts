@@ -482,6 +482,7 @@ export * from './equityVolSurfaceDataAllOf';
 export * from './errorDetail';
 export * from './estimateVariant';
 export * from './eventDateRange';
+export * from './eventInheritance';
 export * from './exDividendConfiguration';
 export * from './exchangeOfferEvent';
 export * from './exchangeOfferEventAllOf';
@@ -1102,6 +1103,7 @@ export * from './propertyDefinitionType';
 export * from './propertyDomain';
 export * from './propertyFilter';
 export * from './propertyInterval';
+export * from './propertyIntervalTimeSeries';
 export * from './propertyKeyComplianceParameter';
 export * from './propertyKeyComplianceParameterAllOf';
 export * from './propertyKeyListComplianceParameter';
@@ -1267,6 +1269,7 @@ export * from './resourceListOfProcessedCommand';
 export * from './resourceListOfProperty';
 export * from './resourceListOfPropertyDefinition';
 export * from './resourceListOfPropertyInterval';
+export * from './resourceListOfPropertyIntervalTimeSeries';
 export * from './resourceListOfQueryableKey';
 export * from './resourceListOfQuote';
 export * from './resourceListOfQuoteAccessMetadataRule';
@@ -1645,6 +1648,8 @@ export * from './virtualDocument';
 export * from './virtualDocumentRow';
 export * from './virtualRow';
 export * from './warning';
+export * from './warrantsExerciseEvent';
+export * from './warrantsExerciseEventAllOf';
 export * from './weekendMask';
 export * from './weightedAllocationServiceRunRequest';
 export * from './weightedInstrument';
@@ -2159,6 +2164,7 @@ import { EquityVolSurfaceDataAllOf } from './equityVolSurfaceDataAllOf';
 import { ErrorDetail } from './errorDetail';
 import { EstimateVariant } from './estimateVariant';
 import { EventDateRange } from './eventDateRange';
+import { EventInheritance } from './eventInheritance';
 import { ExDividendConfiguration } from './exDividendConfiguration';
 import { ExchangeOfferEvent } from './exchangeOfferEvent';
 import { ExchangeOfferEventAllOf } from './exchangeOfferEventAllOf';
@@ -2779,6 +2785,7 @@ import { PropertyDefinitionType } from './propertyDefinitionType';
 import { PropertyDomain } from './propertyDomain';
 import { PropertyFilter } from './propertyFilter';
 import { PropertyInterval } from './propertyInterval';
+import { PropertyIntervalTimeSeries } from './propertyIntervalTimeSeries';
 import { PropertyKeyComplianceParameter } from './propertyKeyComplianceParameter';
 import { PropertyKeyComplianceParameterAllOf } from './propertyKeyComplianceParameterAllOf';
 import { PropertyKeyListComplianceParameter } from './propertyKeyListComplianceParameter';
@@ -2944,6 +2951,7 @@ import { ResourceListOfProcessedCommand } from './resourceListOfProcessedCommand
 import { ResourceListOfProperty } from './resourceListOfProperty';
 import { ResourceListOfPropertyDefinition } from './resourceListOfPropertyDefinition';
 import { ResourceListOfPropertyInterval } from './resourceListOfPropertyInterval';
+import { ResourceListOfPropertyIntervalTimeSeries } from './resourceListOfPropertyIntervalTimeSeries';
 import { ResourceListOfQueryableKey } from './resourceListOfQueryableKey';
 import { ResourceListOfQuote } from './resourceListOfQuote';
 import { ResourceListOfQuoteAccessMetadataRule } from './resourceListOfQuoteAccessMetadataRule';
@@ -3322,6 +3330,8 @@ import { VirtualDocument } from './virtualDocument';
 import { VirtualDocumentRow } from './virtualDocumentRow';
 import { VirtualRow } from './virtualRow';
 import { Warning } from './warning';
+import { WarrantsExerciseEvent } from './warrantsExerciseEvent';
+import { WarrantsExerciseEventAllOf } from './warrantsExerciseEventAllOf';
 import { WeekendMask } from './weekendMask';
 import { WeightedAllocationServiceRunRequest } from './weightedAllocationServiceRunRequest';
 import { WeightedInstrument } from './weightedInstrument';
@@ -3993,6 +4003,8 @@ let enumsMap: {[index: string]: any} = {
         "VendorDependencyAllOf.DependencyTypeEnum": VendorDependencyAllOf.DependencyTypeEnum,
         "VendorLibrary": VendorLibrary,
         "VendorModelRule.SupplierEnum": VendorModelRule.SupplierEnum,
+        "WarrantsExerciseEvent.InstrumentEventTypeEnum": WarrantsExerciseEvent.InstrumentEventTypeEnum,
+        "WarrantsExerciseEventAllOf.InstrumentEventTypeEnum": WarrantsExerciseEventAllOf.InstrumentEventTypeEnum,
         "WorkspaceVisibility": WorkspaceVisibility,
         "WorthlessEvent.InstrumentEventTypeEnum": WorthlessEvent.InstrumentEventTypeEnum,
         "WorthlessEventAllOf.InstrumentEventTypeEnum": WorthlessEventAllOf.InstrumentEventTypeEnum,
@@ -4467,6 +4479,7 @@ let typeMap: {[index: string]: any} = {
     "ErrorDetail": ErrorDetail,
     "EstimateVariant": EstimateVariant,
     "EventDateRange": EventDateRange,
+    "EventInheritance": EventInheritance,
     "ExDividendConfiguration": ExDividendConfiguration,
     "ExchangeOfferEvent": ExchangeOfferEvent,
     "ExchangeOfferEventAllOf": ExchangeOfferEventAllOf,
@@ -5065,6 +5078,7 @@ let typeMap: {[index: string]: any} = {
     "PropertyDefinitionSearchResult": PropertyDefinitionSearchResult,
     "PropertyFilter": PropertyFilter,
     "PropertyInterval": PropertyInterval,
+    "PropertyIntervalTimeSeries": PropertyIntervalTimeSeries,
     "PropertyKeyComplianceParameter": PropertyKeyComplianceParameter,
     "PropertyKeyComplianceParameterAllOf": PropertyKeyComplianceParameterAllOf,
     "PropertyKeyListComplianceParameter": PropertyKeyListComplianceParameter,
@@ -5223,6 +5237,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfProperty": ResourceListOfProperty,
     "ResourceListOfPropertyDefinition": ResourceListOfPropertyDefinition,
     "ResourceListOfPropertyInterval": ResourceListOfPropertyInterval,
+    "ResourceListOfPropertyIntervalTimeSeries": ResourceListOfPropertyIntervalTimeSeries,
     "ResourceListOfQueryableKey": ResourceListOfQueryableKey,
     "ResourceListOfQuote": ResourceListOfQuote,
     "ResourceListOfQuoteAccessMetadataRule": ResourceListOfQuoteAccessMetadataRule,
@@ -5586,6 +5601,8 @@ let typeMap: {[index: string]: any} = {
     "VirtualDocumentRow": VirtualDocumentRow,
     "VirtualRow": VirtualRow,
     "Warning": Warning,
+    "WarrantsExerciseEvent": WarrantsExerciseEvent,
+    "WarrantsExerciseEventAllOf": WarrantsExerciseEventAllOf,
     "WeekendMask": WeekendMask,
     "WeightedAllocationServiceRunRequest": WeightedAllocationServiceRunRequest,
     "WeightedInstrument": WeightedInstrument,
