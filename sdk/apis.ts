@@ -29,6 +29,7 @@ import {ExecutionsApi} from './api/executionsApi';
 import {FeeTypesApi} from './api/feeTypesApi';
 import {FundConfigurationApi} from './api/fundConfigurationApi';
 import {FundsApi} from './api/fundsApi';
+import {FundStructuresApi} from './api/fundStructuresApi';
 import {GroupReconciliationsApi} from './api/groupReconciliationsApi';
 import {IdentifierDefinitionsApi} from './api/identifierDefinitionsApi';
 import {InstrumentEventsApi} from './api/instrumentEventsApi';
@@ -62,6 +63,7 @@ import {RelationsApi} from './api/relationsApi';
 import {RelationshipDefinitionsApi} from './api/relationshipDefinitionsApi';
 import {RelationshipsApi} from './api/relationshipsApi';
 import {ResourceRecordApi} from './api/resourceRecordApi';
+import {ScenariosApi} from './api/scenariosApi';
 import {SchemasApi} from './api/schemasApi';
 import {ScopesApi} from './api/scopesApi';
 import {ScriptedTranslationApi} from './api/scriptedTranslationApi';
@@ -72,6 +74,7 @@ import {SimplePositionPortfoliosApi} from './api/simplePositionPortfoliosApi';
 import {StagedModificationsApi} from './api/stagedModificationsApi';
 import {StagingRuleSetApi} from './api/stagingRuleSetApi';
 import {StructuredResultDataApi} from './api/structuredResultDataApi';
+import {SubscriptionsApi} from './api/subscriptionsApi';
 import {SystemConfigurationApi} from './api/systemConfigurationApi';
 import {TaxRuleSetsApi} from './api/taxRuleSetsApi';
 import {TimelinesApi} from './api/timelinesApi';
@@ -115,6 +118,7 @@ export class Api {
     public feeTypes:  FeeTypesApi
     public fundConfiguration:  FundConfigurationApi
     public funds:  FundsApi
+    public fundStructures:  FundStructuresApi
     public groupReconciliations:  GroupReconciliationsApi
     public identifierDefinitions:  IdentifierDefinitionsApi
     public instrumentEvents:  InstrumentEventsApi
@@ -148,6 +152,7 @@ export class Api {
     public relationshipDefinitions:  RelationshipDefinitionsApi
     public relationships:  RelationshipsApi
     public resourceRecord:  ResourceRecordApi
+    public scenarios:  ScenariosApi
     public schemas:  SchemasApi
     public scopes:  ScopesApi
     public scriptedTranslation:  ScriptedTranslationApi
@@ -158,6 +163,7 @@ export class Api {
     public stagedModifications:  StagedModificationsApi
     public stagingRuleSet:  StagingRuleSetApi
     public structuredResultData:  StructuredResultDataApi
+    public subscriptions:  SubscriptionsApi
     public systemConfiguration:  SystemConfigurationApi
     public taxRuleSets:  TaxRuleSetsApi
     public timelines:  TimelinesApi

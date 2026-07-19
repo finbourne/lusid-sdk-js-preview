@@ -19,6 +19,7 @@ export * from './account';
 export * from './accountHolder';
 export * from './accountHolderIdentifier';
 export * from './accountProperties';
+export * from './accountedComplexMarketData';
 export * from './accountedQuote';
 export * from './accountedTransaction';
 export * from './accountingMethod';
@@ -48,6 +49,8 @@ export * from './adjustHoldingRequest';
 export * from './aggregateSpec';
 export * from './aggregatedReturn';
 export * from './aggregatedReturnsDispersionRequest';
+export * from './aggregatedReturnsEntityId';
+export * from './aggregatedReturnsEntityRequest';
 export * from './aggregatedReturnsRequest';
 export * from './aggregatedReturnsResponse';
 export * from './aggregatedTransactionsRequest';
@@ -242,6 +245,10 @@ export * from './completeRelationship';
 export * from './complexBond';
 export * from './complexBondAllOf';
 export * from './complexMarketData';
+export * from './complexMarketDataActivity';
+export * from './complexMarketDataActivityAdjustment';
+export * from './complexMarketDataActivityAdjustmentAllOf';
+export * from './complexMarketDataActivityAllOf';
 export * from './complexMarketDataId';
 export * from './complianceBreachedOrderInfo';
 export * from './complianceParameter';
@@ -581,6 +588,11 @@ export * from './fundProperties';
 export * from './fundRequest';
 export * from './fundShareClass';
 export * from './fundShareClassAllOf';
+export * from './fundStructure';
+export * from './fundStructureEdge';
+export * from './fundStructureEdgeTarget';
+export * from './fundStructureNode';
+export * from './fundStructureRequest';
 export * from './fundValuationPointData';
 export * from './fundValuationRequest';
 export * from './fundValuationSchedule';
@@ -645,7 +657,9 @@ export * from './getQuotesResponse';
 export * from './getRecipeComposerResponse';
 export * from './getRecipeResponse';
 export * from './getReferencePortfolioConstituentsResponse';
+export * from './getScenarioResponse';
 export * from './getStructuredResultDataResponse';
+export * from './getSubscriptionResponse';
 export * from './getVirtualDocumentResponse';
 export * from './groupBySelectorComplianceParameter';
 export * from './groupByStep';
@@ -969,8 +983,11 @@ export * from './pagedResourceListOfFund';
 export * from './pagedResourceListOfFundCalendarEntries';
 export * from './pagedResourceListOfFundCalendarEntry';
 export * from './pagedResourceListOfFundConfiguration';
+export * from './pagedResourceListOfFundStructure';
 export * from './pagedResourceListOfGeneralLedgerProfileResponse';
 export * from './pagedResourceListOfGetAddressKeyAliasResponse';
+export * from './pagedResourceListOfGetScenarioResponse';
+export * from './pagedResourceListOfGetSubscriptionResponse';
 export * from './pagedResourceListOfGroupReconciliationComparisonResult';
 export * from './pagedResourceListOfGroupReconciliationComparisonRuleset';
 export * from './pagedResourceListOfGroupReconciliationDefinition';
@@ -1015,6 +1032,8 @@ export * from './pagedResourceListOfValuationPointOverview';
 export * from './pagedResourceListOfVirtualRow';
 export * from './pagedResourceListOfWorkspace';
 export * from './pagedResourceListOfWorkspaceItem';
+export * from './pariPassuEvent';
+export * from './pariPassuEventAllOf';
 export * from './partialClosureConstituent';
 export * from './partialDefeasanceEvent';
 export * from './partialDefeasanceEventAllOf';
@@ -1209,6 +1228,7 @@ export * from './resetEvent';
 export * from './resetEventAllOf';
 export * from './resolveTenorsRequest';
 export * from './resolveTenorsResponse';
+export * from './resolvedCustodianAccount';
 export * from './resourceId';
 export * from './resourceListOfAccessControlledResource';
 export * from './resourceListOfAccessMetadataValueOf';
@@ -1314,6 +1334,7 @@ export * from './resultValueStringAllOf';
 export * from './resultValueType';
 export * from './returnZeroPvOptions';
 export * from './returnsEntity';
+export * from './returnsMetric';
 export * from './reverseStockSplitEvent';
 export * from './reverseStockSplitEventAllOf';
 export * from './revertValuationPointDataRequest';
@@ -1327,6 +1348,8 @@ export * from './rulesInterval';
 export * from './runCheckRequest';
 export * from './runCheckResponse';
 export * from './scalingMethodology';
+export * from './scenarioDefinition';
+export * from './scenarioShiftDefinition';
 export * from './schedule';
 export * from './scheduleType';
 export * from './schema';
@@ -1340,7 +1363,6 @@ export * from './securityOfferElection';
 export * from './securityWriteOffEvent';
 export * from './securityWriteOffEventAllOf';
 export * from './sequenceDefinition';
-export * from './series';
 export * from './seriesDefinition';
 export * from './seriesDefinitionRequest';
 export * from './setAmortisationRulesRequest';
@@ -1414,6 +1436,7 @@ export * from './structuredResultDataId';
 export * from './subHoldingKeyValueEquals';
 export * from './subHoldingKeyValueEqualsAllOf';
 export * from './subscribeElection';
+export * from './subscriptionDefinition';
 export * from './swapCashFlowEvent';
 export * from './swapCashFlowEventAllOf';
 export * from './swapPrincipalEvent';
@@ -1599,9 +1622,11 @@ export * from './upsertRelationalDataPointRequest';
 export * from './upsertResourceRecordRequest';
 export * from './upsertResultValuesDataRequest';
 export * from './upsertReturnsResponse';
+export * from './upsertScenarioRequest';
 export * from './upsertSingleStructuredDataResponse';
 export * from './upsertStructuredDataResponse';
 export * from './upsertStructuredResultDataRequest';
+export * from './upsertSubscriptionRequest';
 export * from './upsertTransactionPropertiesResponse';
 export * from './upsertTransferAgencyOrderRequest';
 export * from './upsertTranslationScriptRequest';
@@ -1613,6 +1638,7 @@ export * from './valuationPointDataRequest';
 export * from './valuationPointDataResponse';
 export * from './valuationPointInstrument';
 export * from './valuationPointOverview';
+export * from './valuationPointResourceListOfAccountedComplexMarketData';
 export * from './valuationPointResourceListOfAccountedQuote';
 export * from './valuationPointResourceListOfAccountedTransaction';
 export * from './valuationPointResourceListOfFundCashStatementLocalCurrency';
@@ -1701,6 +1727,7 @@ import { Account } from './account';
 import { AccountHolder } from './accountHolder';
 import { AccountHolderIdentifier } from './accountHolderIdentifier';
 import { AccountProperties } from './accountProperties';
+import { AccountedComplexMarketData } from './accountedComplexMarketData';
 import { AccountedQuote } from './accountedQuote';
 import { AccountedTransaction } from './accountedTransaction';
 import { AccountingMethod } from './accountingMethod';
@@ -1730,6 +1757,8 @@ import { AdjustHoldingRequest } from './adjustHoldingRequest';
 import { AggregateSpec } from './aggregateSpec';
 import { AggregatedReturn } from './aggregatedReturn';
 import { AggregatedReturnsDispersionRequest } from './aggregatedReturnsDispersionRequest';
+import { AggregatedReturnsEntityId } from './aggregatedReturnsEntityId';
+import { AggregatedReturnsEntityRequest } from './aggregatedReturnsEntityRequest';
 import { AggregatedReturnsRequest } from './aggregatedReturnsRequest';
 import { AggregatedReturnsResponse } from './aggregatedReturnsResponse';
 import { AggregatedTransactionsRequest } from './aggregatedTransactionsRequest';
@@ -1924,6 +1953,10 @@ import { CompleteRelationship } from './completeRelationship';
 import { ComplexBond } from './complexBond';
 import { ComplexBondAllOf } from './complexBondAllOf';
 import { ComplexMarketData } from './complexMarketData';
+import { ComplexMarketDataActivity } from './complexMarketDataActivity';
+import { ComplexMarketDataActivityAdjustment } from './complexMarketDataActivityAdjustment';
+import { ComplexMarketDataActivityAdjustmentAllOf } from './complexMarketDataActivityAdjustmentAllOf';
+import { ComplexMarketDataActivityAllOf } from './complexMarketDataActivityAllOf';
 import { ComplexMarketDataId } from './complexMarketDataId';
 import { ComplianceBreachedOrderInfo } from './complianceBreachedOrderInfo';
 import { ComplianceParameter } from './complianceParameter';
@@ -2263,6 +2296,11 @@ import { FundProperties } from './fundProperties';
 import { FundRequest } from './fundRequest';
 import { FundShareClass } from './fundShareClass';
 import { FundShareClassAllOf } from './fundShareClassAllOf';
+import { FundStructure } from './fundStructure';
+import { FundStructureEdge } from './fundStructureEdge';
+import { FundStructureEdgeTarget } from './fundStructureEdgeTarget';
+import { FundStructureNode } from './fundStructureNode';
+import { FundStructureRequest } from './fundStructureRequest';
 import { FundValuationPointData } from './fundValuationPointData';
 import { FundValuationRequest } from './fundValuationRequest';
 import { FundValuationSchedule } from './fundValuationSchedule';
@@ -2327,7 +2365,9 @@ import { GetQuotesResponse } from './getQuotesResponse';
 import { GetRecipeComposerResponse } from './getRecipeComposerResponse';
 import { GetRecipeResponse } from './getRecipeResponse';
 import { GetReferencePortfolioConstituentsResponse } from './getReferencePortfolioConstituentsResponse';
+import { GetScenarioResponse } from './getScenarioResponse';
 import { GetStructuredResultDataResponse } from './getStructuredResultDataResponse';
+import { GetSubscriptionResponse } from './getSubscriptionResponse';
 import { GetVirtualDocumentResponse } from './getVirtualDocumentResponse';
 import { GroupBySelectorComplianceParameter } from './groupBySelectorComplianceParameter';
 import { GroupByStep } from './groupByStep';
@@ -2651,8 +2691,11 @@ import { PagedResourceListOfFund } from './pagedResourceListOfFund';
 import { PagedResourceListOfFundCalendarEntries } from './pagedResourceListOfFundCalendarEntries';
 import { PagedResourceListOfFundCalendarEntry } from './pagedResourceListOfFundCalendarEntry';
 import { PagedResourceListOfFundConfiguration } from './pagedResourceListOfFundConfiguration';
+import { PagedResourceListOfFundStructure } from './pagedResourceListOfFundStructure';
 import { PagedResourceListOfGeneralLedgerProfileResponse } from './pagedResourceListOfGeneralLedgerProfileResponse';
 import { PagedResourceListOfGetAddressKeyAliasResponse } from './pagedResourceListOfGetAddressKeyAliasResponse';
+import { PagedResourceListOfGetScenarioResponse } from './pagedResourceListOfGetScenarioResponse';
+import { PagedResourceListOfGetSubscriptionResponse } from './pagedResourceListOfGetSubscriptionResponse';
 import { PagedResourceListOfGroupReconciliationComparisonResult } from './pagedResourceListOfGroupReconciliationComparisonResult';
 import { PagedResourceListOfGroupReconciliationComparisonRuleset } from './pagedResourceListOfGroupReconciliationComparisonRuleset';
 import { PagedResourceListOfGroupReconciliationDefinition } from './pagedResourceListOfGroupReconciliationDefinition';
@@ -2697,6 +2740,8 @@ import { PagedResourceListOfValuationPointOverview } from './pagedResourceListOf
 import { PagedResourceListOfVirtualRow } from './pagedResourceListOfVirtualRow';
 import { PagedResourceListOfWorkspace } from './pagedResourceListOfWorkspace';
 import { PagedResourceListOfWorkspaceItem } from './pagedResourceListOfWorkspaceItem';
+import { PariPassuEvent } from './pariPassuEvent';
+import { PariPassuEventAllOf } from './pariPassuEventAllOf';
 import { PartialClosureConstituent } from './partialClosureConstituent';
 import { PartialDefeasanceEvent } from './partialDefeasanceEvent';
 import { PartialDefeasanceEventAllOf } from './partialDefeasanceEventAllOf';
@@ -2891,6 +2936,7 @@ import { ResetEvent } from './resetEvent';
 import { ResetEventAllOf } from './resetEventAllOf';
 import { ResolveTenorsRequest } from './resolveTenorsRequest';
 import { ResolveTenorsResponse } from './resolveTenorsResponse';
+import { ResolvedCustodianAccount } from './resolvedCustodianAccount';
 import { ResourceId } from './resourceId';
 import { ResourceListOfAccessControlledResource } from './resourceListOfAccessControlledResource';
 import { ResourceListOfAccessMetadataValueOf } from './resourceListOfAccessMetadataValueOf';
@@ -2996,6 +3042,7 @@ import { ResultValueStringAllOf } from './resultValueStringAllOf';
 import { ResultValueType } from './resultValueType';
 import { ReturnZeroPvOptions } from './returnZeroPvOptions';
 import { ReturnsEntity } from './returnsEntity';
+import { ReturnsMetric } from './returnsMetric';
 import { ReverseStockSplitEvent } from './reverseStockSplitEvent';
 import { ReverseStockSplitEventAllOf } from './reverseStockSplitEventAllOf';
 import { RevertValuationPointDataRequest } from './revertValuationPointDataRequest';
@@ -3009,6 +3056,8 @@ import { RulesInterval } from './rulesInterval';
 import { RunCheckRequest } from './runCheckRequest';
 import { RunCheckResponse } from './runCheckResponse';
 import { ScalingMethodology } from './scalingMethodology';
+import { ScenarioDefinition } from './scenarioDefinition';
+import { ScenarioShiftDefinition } from './scenarioShiftDefinition';
 import { Schedule } from './schedule';
 import { ScheduleType } from './scheduleType';
 import { Schema } from './schema';
@@ -3022,7 +3071,6 @@ import { SecurityOfferElection } from './securityOfferElection';
 import { SecurityWriteOffEvent } from './securityWriteOffEvent';
 import { SecurityWriteOffEventAllOf } from './securityWriteOffEventAllOf';
 import { SequenceDefinition } from './sequenceDefinition';
-import { Series } from './series';
 import { SeriesDefinition } from './seriesDefinition';
 import { SeriesDefinitionRequest } from './seriesDefinitionRequest';
 import { SetAmortisationRulesRequest } from './setAmortisationRulesRequest';
@@ -3096,6 +3144,7 @@ import { StructuredResultDataId } from './structuredResultDataId';
 import { SubHoldingKeyValueEquals } from './subHoldingKeyValueEquals';
 import { SubHoldingKeyValueEqualsAllOf } from './subHoldingKeyValueEqualsAllOf';
 import { SubscribeElection } from './subscribeElection';
+import { SubscriptionDefinition } from './subscriptionDefinition';
 import { SwapCashFlowEvent } from './swapCashFlowEvent';
 import { SwapCashFlowEventAllOf } from './swapCashFlowEventAllOf';
 import { SwapPrincipalEvent } from './swapPrincipalEvent';
@@ -3281,9 +3330,11 @@ import { UpsertRelationalDataPointRequest } from './upsertRelationalDataPointReq
 import { UpsertResourceRecordRequest } from './upsertResourceRecordRequest';
 import { UpsertResultValuesDataRequest } from './upsertResultValuesDataRequest';
 import { UpsertReturnsResponse } from './upsertReturnsResponse';
+import { UpsertScenarioRequest } from './upsertScenarioRequest';
 import { UpsertSingleStructuredDataResponse } from './upsertSingleStructuredDataResponse';
 import { UpsertStructuredDataResponse } from './upsertStructuredDataResponse';
 import { UpsertStructuredResultDataRequest } from './upsertStructuredResultDataRequest';
+import { UpsertSubscriptionRequest } from './upsertSubscriptionRequest';
 import { UpsertTransactionPropertiesResponse } from './upsertTransactionPropertiesResponse';
 import { UpsertTransferAgencyOrderRequest } from './upsertTransferAgencyOrderRequest';
 import { UpsertTranslationScriptRequest } from './upsertTranslationScriptRequest';
@@ -3295,6 +3346,7 @@ import { ValuationPointDataRequest } from './valuationPointDataRequest';
 import { ValuationPointDataResponse } from './valuationPointDataResponse';
 import { ValuationPointInstrument } from './valuationPointInstrument';
 import { ValuationPointOverview } from './valuationPointOverview';
+import { ValuationPointResourceListOfAccountedComplexMarketData } from './valuationPointResourceListOfAccountedComplexMarketData';
 import { ValuationPointResourceListOfAccountedQuote } from './valuationPointResourceListOfAccountedQuote';
 import { ValuationPointResourceListOfAccountedTransaction } from './valuationPointResourceListOfAccountedTransaction';
 import { ValuationPointResourceListOfFundCashStatementLocalCurrency } from './valuationPointResourceListOfFundCashStatementLocalCurrency';
@@ -3468,6 +3520,10 @@ let enumsMap: {[index: string]: any} = {
         "ComplexBond.InstrumentTypeEnum": ComplexBond.InstrumentTypeEnum,
         "ComplexBondAllOf.InstrumentTypeEnum": ComplexBondAllOf.InstrumentTypeEnum,
         "ComplexMarketData.MarketDataTypeEnum": ComplexMarketData.MarketDataTypeEnum,
+        "ComplexMarketDataActivity.NavActivityAdjustmentTypeEnum": ComplexMarketDataActivity.NavActivityAdjustmentTypeEnum,
+        "ComplexMarketDataActivityAdjustment.NavActivityAdjustmentTypeEnum": ComplexMarketDataActivityAdjustment.NavActivityAdjustmentTypeEnum,
+        "ComplexMarketDataActivityAdjustmentAllOf.NavActivityAdjustmentTypeEnum": ComplexMarketDataActivityAdjustmentAllOf.NavActivityAdjustmentTypeEnum,
+        "ComplexMarketDataActivityAllOf.NavActivityAdjustmentTypeEnum": ComplexMarketDataActivityAllOf.NavActivityAdjustmentTypeEnum,
         "ComplianceParameter.ComplianceParameterTypeEnum": ComplianceParameter.ComplianceParameterTypeEnum,
         "ComplianceParameterType": ComplianceParameterType,
         "ComplianceStep.ComplianceStepTypeEnum": ComplianceStep.ComplianceStepTypeEnum,
@@ -3806,6 +3862,8 @@ let enumsMap: {[index: string]: any} = {
         "OptionalityScheduleAllOf.ScheduleTypeEnum": OptionalityScheduleAllOf.ScheduleTypeEnum,
         "OrderBySpec.SortOrderEnum": OrderBySpec.SortOrderEnum,
         "OutputTransaction.TransactionStatusEnum": OutputTransaction.TransactionStatusEnum,
+        "PariPassuEvent.InstrumentEventTypeEnum": PariPassuEvent.InstrumentEventTypeEnum,
+        "PariPassuEventAllOf.InstrumentEventTypeEnum": PariPassuEventAllOf.InstrumentEventTypeEnum,
         "PartialDefeasanceEvent.InstrumentEventTypeEnum": PartialDefeasanceEvent.InstrumentEventTypeEnum,
         "PartialDefeasanceEventAllOf.InstrumentEventTypeEnum": PartialDefeasanceEventAllOf.InstrumentEventTypeEnum,
         "PercentCheckStep.ComplianceStepTypeEnum": PercentCheckStep.ComplianceStepTypeEnum,
@@ -4032,6 +4090,7 @@ let typeMap: {[index: string]: any} = {
     "AccountHolder": AccountHolder,
     "AccountHolderIdentifier": AccountHolderIdentifier,
     "AccountProperties": AccountProperties,
+    "AccountedComplexMarketData": AccountedComplexMarketData,
     "AccountedQuote": AccountedQuote,
     "AccountedTransaction": AccountedTransaction,
     "AccountsUpsertResponse": AccountsUpsertResponse,
@@ -4060,6 +4119,8 @@ let typeMap: {[index: string]: any} = {
     "AggregateSpec": AggregateSpec,
     "AggregatedReturn": AggregatedReturn,
     "AggregatedReturnsDispersionRequest": AggregatedReturnsDispersionRequest,
+    "AggregatedReturnsEntityId": AggregatedReturnsEntityId,
+    "AggregatedReturnsEntityRequest": AggregatedReturnsEntityRequest,
     "AggregatedReturnsRequest": AggregatedReturnsRequest,
     "AggregatedReturnsResponse": AggregatedReturnsResponse,
     "AggregatedTransactionsRequest": AggregatedTransactionsRequest,
@@ -4249,6 +4310,10 @@ let typeMap: {[index: string]: any} = {
     "ComplexBond": ComplexBond,
     "ComplexBondAllOf": ComplexBondAllOf,
     "ComplexMarketData": ComplexMarketData,
+    "ComplexMarketDataActivity": ComplexMarketDataActivity,
+    "ComplexMarketDataActivityAdjustment": ComplexMarketDataActivityAdjustment,
+    "ComplexMarketDataActivityAdjustmentAllOf": ComplexMarketDataActivityAdjustmentAllOf,
+    "ComplexMarketDataActivityAllOf": ComplexMarketDataActivityAllOf,
     "ComplexMarketDataId": ComplexMarketDataId,
     "ComplianceBreachedOrderInfo": ComplianceBreachedOrderInfo,
     "ComplianceParameter": ComplianceParameter,
@@ -4576,6 +4641,11 @@ let typeMap: {[index: string]: any} = {
     "FundRequest": FundRequest,
     "FundShareClass": FundShareClass,
     "FundShareClassAllOf": FundShareClassAllOf,
+    "FundStructure": FundStructure,
+    "FundStructureEdge": FundStructureEdge,
+    "FundStructureEdgeTarget": FundStructureEdgeTarget,
+    "FundStructureNode": FundStructureNode,
+    "FundStructureRequest": FundStructureRequest,
     "FundValuationPointData": FundValuationPointData,
     "FundValuationRequest": FundValuationRequest,
     "FundValuationSchedule": FundValuationSchedule,
@@ -4640,7 +4710,9 @@ let typeMap: {[index: string]: any} = {
     "GetRecipeComposerResponse": GetRecipeComposerResponse,
     "GetRecipeResponse": GetRecipeResponse,
     "GetReferencePortfolioConstituentsResponse": GetReferencePortfolioConstituentsResponse,
+    "GetScenarioResponse": GetScenarioResponse,
     "GetStructuredResultDataResponse": GetStructuredResultDataResponse,
+    "GetSubscriptionResponse": GetSubscriptionResponse,
     "GetVirtualDocumentResponse": GetVirtualDocumentResponse,
     "GroupBySelectorComplianceParameter": GroupBySelectorComplianceParameter,
     "GroupByStep": GroupByStep,
@@ -4950,8 +5022,11 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfFundCalendarEntries": PagedResourceListOfFundCalendarEntries,
     "PagedResourceListOfFundCalendarEntry": PagedResourceListOfFundCalendarEntry,
     "PagedResourceListOfFundConfiguration": PagedResourceListOfFundConfiguration,
+    "PagedResourceListOfFundStructure": PagedResourceListOfFundStructure,
     "PagedResourceListOfGeneralLedgerProfileResponse": PagedResourceListOfGeneralLedgerProfileResponse,
     "PagedResourceListOfGetAddressKeyAliasResponse": PagedResourceListOfGetAddressKeyAliasResponse,
+    "PagedResourceListOfGetScenarioResponse": PagedResourceListOfGetScenarioResponse,
+    "PagedResourceListOfGetSubscriptionResponse": PagedResourceListOfGetSubscriptionResponse,
     "PagedResourceListOfGroupReconciliationComparisonResult": PagedResourceListOfGroupReconciliationComparisonResult,
     "PagedResourceListOfGroupReconciliationComparisonRuleset": PagedResourceListOfGroupReconciliationComparisonRuleset,
     "PagedResourceListOfGroupReconciliationDefinition": PagedResourceListOfGroupReconciliationDefinition,
@@ -4996,6 +5071,8 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfVirtualRow": PagedResourceListOfVirtualRow,
     "PagedResourceListOfWorkspace": PagedResourceListOfWorkspace,
     "PagedResourceListOfWorkspaceItem": PagedResourceListOfWorkspaceItem,
+    "PariPassuEvent": PariPassuEvent,
+    "PariPassuEventAllOf": PariPassuEventAllOf,
     "PartialClosureConstituent": PartialClosureConstituent,
     "PartialDefeasanceEvent": PartialDefeasanceEvent,
     "PartialDefeasanceEventAllOf": PartialDefeasanceEventAllOf,
@@ -5177,6 +5254,7 @@ let typeMap: {[index: string]: any} = {
     "ResetEventAllOf": ResetEventAllOf,
     "ResolveTenorsRequest": ResolveTenorsRequest,
     "ResolveTenorsResponse": ResolveTenorsResponse,
+    "ResolvedCustodianAccount": ResolvedCustodianAccount,
     "ResourceId": ResourceId,
     "ResourceListOfAccessControlledResource": ResourceListOfAccessControlledResource,
     "ResourceListOfAccessMetadataValueOf": ResourceListOfAccessMetadataValueOf,
@@ -5280,6 +5358,7 @@ let typeMap: {[index: string]: any} = {
     "ResultValueStringAllOf": ResultValueStringAllOf,
     "ReturnZeroPvOptions": ReturnZeroPvOptions,
     "ReturnsEntity": ReturnsEntity,
+    "ReturnsMetric": ReturnsMetric,
     "ReverseStockSplitEvent": ReverseStockSplitEvent,
     "ReverseStockSplitEventAllOf": ReverseStockSplitEventAllOf,
     "RevertValuationPointDataRequest": RevertValuationPointDataRequest,
@@ -5292,6 +5371,8 @@ let typeMap: {[index: string]: any} = {
     "RulesInterval": RulesInterval,
     "RunCheckRequest": RunCheckRequest,
     "RunCheckResponse": RunCheckResponse,
+    "ScenarioDefinition": ScenarioDefinition,
+    "ScenarioShiftDefinition": ScenarioShiftDefinition,
     "Schedule": Schedule,
     "Schema": Schema,
     "ScopeDefinition": ScopeDefinition,
@@ -5304,7 +5385,6 @@ let typeMap: {[index: string]: any} = {
     "SecurityWriteOffEvent": SecurityWriteOffEvent,
     "SecurityWriteOffEventAllOf": SecurityWriteOffEventAllOf,
     "SequenceDefinition": SequenceDefinition,
-    "Series": Series,
     "SeriesDefinition": SeriesDefinition,
     "SeriesDefinitionRequest": SeriesDefinitionRequest,
     "SetAmortisationRulesRequest": SetAmortisationRulesRequest,
@@ -5376,6 +5456,7 @@ let typeMap: {[index: string]: any} = {
     "SubHoldingKeyValueEquals": SubHoldingKeyValueEquals,
     "SubHoldingKeyValueEqualsAllOf": SubHoldingKeyValueEqualsAllOf,
     "SubscribeElection": SubscribeElection,
+    "SubscriptionDefinition": SubscriptionDefinition,
     "SwapCashFlowEvent": SwapCashFlowEvent,
     "SwapCashFlowEventAllOf": SwapCashFlowEventAllOf,
     "SwapPrincipalEvent": SwapPrincipalEvent,
@@ -5554,9 +5635,11 @@ let typeMap: {[index: string]: any} = {
     "UpsertResourceRecordRequest": UpsertResourceRecordRequest,
     "UpsertResultValuesDataRequest": UpsertResultValuesDataRequest,
     "UpsertReturnsResponse": UpsertReturnsResponse,
+    "UpsertScenarioRequest": UpsertScenarioRequest,
     "UpsertSingleStructuredDataResponse": UpsertSingleStructuredDataResponse,
     "UpsertStructuredDataResponse": UpsertStructuredDataResponse,
     "UpsertStructuredResultDataRequest": UpsertStructuredResultDataRequest,
+    "UpsertSubscriptionRequest": UpsertSubscriptionRequest,
     "UpsertTransactionPropertiesResponse": UpsertTransactionPropertiesResponse,
     "UpsertTransferAgencyOrderRequest": UpsertTransferAgencyOrderRequest,
     "UpsertTranslationScriptRequest": UpsertTranslationScriptRequest,
@@ -5568,6 +5651,7 @@ let typeMap: {[index: string]: any} = {
     "ValuationPointDataResponse": ValuationPointDataResponse,
     "ValuationPointInstrument": ValuationPointInstrument,
     "ValuationPointOverview": ValuationPointOverview,
+    "ValuationPointResourceListOfAccountedComplexMarketData": ValuationPointResourceListOfAccountedComplexMarketData,
     "ValuationPointResourceListOfAccountedQuote": ValuationPointResourceListOfAccountedQuote,
     "ValuationPointResourceListOfAccountedTransaction": ValuationPointResourceListOfAccountedTransaction,
     "ValuationPointResourceListOfFundCashStatementLocalCurrency": ValuationPointResourceListOfFundCashStatementLocalCurrency,
