@@ -93,6 +93,8 @@ export * from './appendMarketDataType';
 export * from './applicableEntity';
 export * from './applicableEntityTypes';
 export * from './applicableInstrumentEvent';
+export * from './apportionmentBreakdown';
+export * from './apportionmentMemberFactor';
 export * from './apportionmentMethodProperty';
 export * from './assetClass';
 export * from './assetLeg';
@@ -1801,6 +1803,8 @@ import { AppendMarketDataType } from './appendMarketDataType';
 import { ApplicableEntity } from './applicableEntity';
 import { ApplicableEntityTypes } from './applicableEntityTypes';
 import { ApplicableInstrumentEvent } from './applicableInstrumentEvent';
+import { ApportionmentBreakdown } from './apportionmentBreakdown';
+import { ApportionmentMemberFactor } from './apportionmentMemberFactor';
 import { ApportionmentMethodProperty } from './apportionmentMethodProperty';
 import { AssetClass } from './assetClass';
 import { AssetLeg } from './assetLeg';
@@ -4160,6 +4164,8 @@ let typeMap: {[index: string]: any} = {
     "ApplicableEntity": ApplicableEntity,
     "ApplicableEntityTypes": ApplicableEntityTypes,
     "ApplicableInstrumentEvent": ApplicableInstrumentEvent,
+    "ApportionmentBreakdown": ApportionmentBreakdown,
+    "ApportionmentMemberFactor": ApportionmentMemberFactor,
     "ApportionmentMethodProperty": ApportionmentMethodProperty,
     "AssetLeg": AssetLeg,
     "BankruptcyEvent": BankruptcyEvent,

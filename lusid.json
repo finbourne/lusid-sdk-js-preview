@@ -9,7 +9,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "2.0.1568",
+    "version": "2.0.1569",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -58292,7 +58292,22 @@
                       }
                     ],
                     "valuationPointCode": "FebValuationPoint",
-                    "previousValuationPointCode": "JanValuationPoint"
+                    "previousValuationPointCode": "JanValuationPoint",
+                    "apportionmentResults": [
+                      {
+                        "apportionmentLevel": "Fund",
+                        "apportionmentMethodPropertyKey": "AllocationMethod/default/PriorAdjustedNav",
+                        "factors": [
+                          {
+                            "memberIdentifier": "ShareClassShortCode",
+                            "fundScope": "FundScope",
+                            "fundCode": "FundCode",
+                            "baseValue": 99999.99,
+                            "apportionmentFactor": 1
+                          }
+                        ]
+                      }
+                    ]
                   },
                   "latestValuationPoint": {
                     "href": "http://finbourne.com",
@@ -58364,7 +58379,22 @@
                       }
                     ],
                     "valuationPointCode": "FebValuationPoint",
-                    "previousValuationPointCode": "JanValuationPoint"
+                    "previousValuationPointCode": "JanValuationPoint",
+                    "apportionmentResults": [
+                      {
+                        "apportionmentLevel": "Fund",
+                        "apportionmentMethodPropertyKey": "AllocationMethod/default/PriorAdjustedNav",
+                        "factors": [
+                          {
+                            "memberIdentifier": "ShareClassShortCode",
+                            "fundScope": "FundScope",
+                            "fundCode": "FundCode",
+                            "baseValue": 99999.99,
+                            "apportionmentFactor": 1
+                          }
+                        ]
+                      }
+                    ]
                   }
                 }
               },
@@ -58444,7 +58474,22 @@
                       }
                     ],
                     "valuationPointCode": "FebValuationPoint",
-                    "previousValuationPointCode": "JanValuationPoint"
+                    "previousValuationPointCode": "JanValuationPoint",
+                    "apportionmentResults": [
+                      {
+                        "apportionmentLevel": "Fund",
+                        "apportionmentMethodPropertyKey": "AllocationMethod/default/PriorAdjustedNav",
+                        "factors": [
+                          {
+                            "memberIdentifier": "ShareClassShortCode",
+                            "fundScope": "FundScope",
+                            "fundCode": "FundCode",
+                            "baseValue": 99999.99,
+                            "apportionmentFactor": 1
+                          }
+                        ]
+                      }
+                    ]
                   },
                   "latestValuationPoint": {
                     "href": "http://finbourne.com",
@@ -58516,7 +58561,22 @@
                       }
                     ],
                     "valuationPointCode": "FebValuationPoint",
-                    "previousValuationPointCode": "JanValuationPoint"
+                    "previousValuationPointCode": "JanValuationPoint",
+                    "apportionmentResults": [
+                      {
+                        "apportionmentLevel": "Fund",
+                        "apportionmentMethodPropertyKey": "AllocationMethod/default/PriorAdjustedNav",
+                        "factors": [
+                          {
+                            "memberIdentifier": "ShareClassShortCode",
+                            "fundScope": "FundScope",
+                            "fundCode": "FundCode",
+                            "baseValue": 99999.99,
+                            "apportionmentFactor": 1
+                          }
+                        ]
+                      }
+                    ]
                   }
                 }
               },
@@ -58596,7 +58656,22 @@
                       }
                     ],
                     "valuationPointCode": "FebValuationPoint",
-                    "previousValuationPointCode": "JanValuationPoint"
+                    "previousValuationPointCode": "JanValuationPoint",
+                    "apportionmentResults": [
+                      {
+                        "apportionmentLevel": "Fund",
+                        "apportionmentMethodPropertyKey": "AllocationMethod/default/PriorAdjustedNav",
+                        "factors": [
+                          {
+                            "memberIdentifier": "ShareClassShortCode",
+                            "fundScope": "FundScope",
+                            "fundCode": "FundCode",
+                            "baseValue": 99999.99,
+                            "apportionmentFactor": 1
+                          }
+                        ]
+                      }
+                    ]
                   },
                   "latestValuationPoint": {
                     "href": "http://finbourne.com",
@@ -58668,7 +58743,22 @@
                       }
                     ],
                     "valuationPointCode": "FebValuationPoint",
-                    "previousValuationPointCode": "JanValuationPoint"
+                    "previousValuationPointCode": "JanValuationPoint",
+                    "apportionmentResults": [
+                      {
+                        "apportionmentLevel": "Fund",
+                        "apportionmentMethodPropertyKey": "AllocationMethod/default/PriorAdjustedNav",
+                        "factors": [
+                          {
+                            "memberIdentifier": "ShareClassShortCode",
+                            "fundScope": "FundScope",
+                            "fundCode": "FundCode",
+                            "baseValue": 99999.99,
+                            "apportionmentFactor": 1
+                          }
+                        ]
+                      }
+                    ]
                   }
                 }
               }
@@ -59138,7 +59228,22 @@
                     }
                   ],
                   "valuationPointCode": "FebValuationPoint",
-                  "previousValuationPointCode": "JanValuationPoint"
+                  "previousValuationPointCode": "JanValuationPoint",
+                  "apportionmentResults": [
+                    {
+                      "apportionmentLevel": "Fund",
+                      "apportionmentMethodPropertyKey": "AllocationMethod/default/PriorAdjustedNav",
+                      "factors": [
+                        {
+                          "memberIdentifier": "ShareClassShortCode",
+                          "fundScope": "FundScope",
+                          "fundCode": "FundCode",
+                          "baseValue": 99999.99,
+                          "apportionmentFactor": 1
+                        }
+                      ]
+                    }
+                  ]
                 }
               },
               "application/json": {
@@ -59215,7 +59320,22 @@
                     }
                   ],
                   "valuationPointCode": "FebValuationPoint",
-                  "previousValuationPointCode": "JanValuationPoint"
+                  "previousValuationPointCode": "JanValuationPoint",
+                  "apportionmentResults": [
+                    {
+                      "apportionmentLevel": "Fund",
+                      "apportionmentMethodPropertyKey": "AllocationMethod/default/PriorAdjustedNav",
+                      "factors": [
+                        {
+                          "memberIdentifier": "ShareClassShortCode",
+                          "fundScope": "FundScope",
+                          "fundCode": "FundCode",
+                          "baseValue": 99999.99,
+                          "apportionmentFactor": 1
+                        }
+                      ]
+                    }
+                  ]
                 }
               },
               "text/json": {
@@ -59292,7 +59412,22 @@
                     }
                   ],
                   "valuationPointCode": "FebValuationPoint",
-                  "previousValuationPointCode": "JanValuationPoint"
+                  "previousValuationPointCode": "JanValuationPoint",
+                  "apportionmentResults": [
+                    {
+                      "apportionmentLevel": "Fund",
+                      "apportionmentMethodPropertyKey": "AllocationMethod/default/PriorAdjustedNav",
+                      "factors": [
+                        {
+                          "memberIdentifier": "ShareClassShortCode",
+                          "fundScope": "FundScope",
+                          "fundCode": "FundCode",
+                          "baseValue": 99999.99,
+                          "apportionmentFactor": 1
+                        }
+                      ]
+                    }
+                  ]
                 }
               }
             }
@@ -59519,7 +59654,22 @@
                     }
                   ],
                   "valuationPointCode": "FebValuationPoint",
-                  "previousValuationPointCode": "JanValuationPoint"
+                  "previousValuationPointCode": "JanValuationPoint",
+                  "apportionmentResults": [
+                    {
+                      "apportionmentLevel": "Fund",
+                      "apportionmentMethodPropertyKey": "AllocationMethod/default/PriorAdjustedNav",
+                      "factors": [
+                        {
+                          "memberIdentifier": "ShareClassShortCode",
+                          "fundScope": "FundScope",
+                          "fundCode": "FundCode",
+                          "baseValue": 99999.99,
+                          "apportionmentFactor": 1
+                        }
+                      ]
+                    }
+                  ]
                 }
               },
               "application/json": {
@@ -59596,7 +59746,22 @@
                     }
                   ],
                   "valuationPointCode": "FebValuationPoint",
-                  "previousValuationPointCode": "JanValuationPoint"
+                  "previousValuationPointCode": "JanValuationPoint",
+                  "apportionmentResults": [
+                    {
+                      "apportionmentLevel": "Fund",
+                      "apportionmentMethodPropertyKey": "AllocationMethod/default/PriorAdjustedNav",
+                      "factors": [
+                        {
+                          "memberIdentifier": "ShareClassShortCode",
+                          "fundScope": "FundScope",
+                          "fundCode": "FundCode",
+                          "baseValue": 99999.99,
+                          "apportionmentFactor": 1
+                        }
+                      ]
+                    }
+                  ]
                 }
               },
               "text/json": {
@@ -59673,7 +59838,22 @@
                     }
                   ],
                   "valuationPointCode": "FebValuationPoint",
-                  "previousValuationPointCode": "JanValuationPoint"
+                  "previousValuationPointCode": "JanValuationPoint",
+                  "apportionmentResults": [
+                    {
+                      "apportionmentLevel": "Fund",
+                      "apportionmentMethodPropertyKey": "AllocationMethod/default/PriorAdjustedNav",
+                      "factors": [
+                        {
+                          "memberIdentifier": "ShareClassShortCode",
+                          "fundScope": "FundScope",
+                          "fundCode": "FundCode",
+                          "baseValue": 99999.99,
+                          "apportionmentFactor": 1
+                        }
+                      ]
+                    }
+                  ]
                 }
               }
             }
@@ -59878,7 +60058,22 @@
                     }
                   ],
                   "valuationPointCode": "FebValuationPoint",
-                  "previousValuationPointCode": "JanValuationPoint"
+                  "previousValuationPointCode": "JanValuationPoint",
+                  "apportionmentResults": [
+                    {
+                      "apportionmentLevel": "Fund",
+                      "apportionmentMethodPropertyKey": "AllocationMethod/default/PriorAdjustedNav",
+                      "factors": [
+                        {
+                          "memberIdentifier": "ShareClassShortCode",
+                          "fundScope": "FundScope",
+                          "fundCode": "FundCode",
+                          "baseValue": 99999.99,
+                          "apportionmentFactor": 1
+                        }
+                      ]
+                    }
+                  ]
                 }
               },
               "application/json": {
@@ -59955,7 +60150,22 @@
                     }
                   ],
                   "valuationPointCode": "FebValuationPoint",
-                  "previousValuationPointCode": "JanValuationPoint"
+                  "previousValuationPointCode": "JanValuationPoint",
+                  "apportionmentResults": [
+                    {
+                      "apportionmentLevel": "Fund",
+                      "apportionmentMethodPropertyKey": "AllocationMethod/default/PriorAdjustedNav",
+                      "factors": [
+                        {
+                          "memberIdentifier": "ShareClassShortCode",
+                          "fundScope": "FundScope",
+                          "fundCode": "FundCode",
+                          "baseValue": 99999.99,
+                          "apportionmentFactor": 1
+                        }
+                      ]
+                    }
+                  ]
                 }
               },
               "text/json": {
@@ -60032,7 +60242,22 @@
                     }
                   ],
                   "valuationPointCode": "FebValuationPoint",
-                  "previousValuationPointCode": "JanValuationPoint"
+                  "previousValuationPointCode": "JanValuationPoint",
+                  "apportionmentResults": [
+                    {
+                      "apportionmentLevel": "Fund",
+                      "apportionmentMethodPropertyKey": "AllocationMethod/default/PriorAdjustedNav",
+                      "factors": [
+                        {
+                          "memberIdentifier": "ShareClassShortCode",
+                          "fundScope": "FundScope",
+                          "fundCode": "FundCode",
+                          "baseValue": 99999.99,
+                          "apportionmentFactor": 1
+                        }
+                      ]
+                    }
+                  ]
                 }
               }
             }
@@ -202926,6 +203151,77 @@
         "additionalProperties": false,
         "description": "Represents applicable instrument event."
       },
+      "ApportionmentBreakdown": {
+        "required": [
+          "apportionmentLevel",
+          "apportionmentMethodPropertyKey",
+          "factors"
+        ],
+        "type": "object",
+        "properties": {
+          "apportionmentLevel": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Whether this result is the fund-level apportionment (across all share classes) or an allocation group's (across its share classes). Available values: Fund, AllocationGroup."
+          },
+          "allocationGroupCode": {
+            "type": "string",
+            "description": "The ShareClassShortCode identifying the allocation group this result is for, or null for the fund-level result.",
+            "nullable": true
+          },
+          "apportionmentMethodPropertyKey": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The apportionment method property key that produced the factors."
+          },
+          "factors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApportionmentMemberFactor"
+            },
+            "description": "The per-member base values and apportionment factors produced by the method."
+          }
+        },
+        "additionalProperties": false,
+        "description": "The apportionment result for one level - the fund (apportioning the non-class-specific P&L across all\r\nshare classes) or a single allocation group (apportioning its tagged P&L across its members) - with the\r\nper-member base values and factors the method produced."
+      },
+      "ApportionmentMemberFactor": {
+        "required": [
+          "apportionmentFactor",
+          "memberIdentifier"
+        ],
+        "type": "object",
+        "properties": {
+          "memberIdentifier": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The member share class's short code."
+          },
+          "fundScope": {
+            "type": "string",
+            "description": "The scope of the fund the member share class belongs to.",
+            "nullable": true
+          },
+          "fundCode": {
+            "type": "string",
+            "description": "The code of the fund the member share class belongs to.",
+            "nullable": true
+          },
+          "baseValue": {
+            "type": "number",
+            "description": "The base value the method produced for the member, or null for the SetFactor method.",
+            "format": "double",
+            "nullable": true
+          },
+          "apportionmentFactor": {
+            "type": "number",
+            "description": "The member's apportionment factor: its base value over the total across the group or fund.",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false,
+        "description": "One member share class's outcome within an apportionment result: the base value the method produced for it\r\nand the resulting apportionment factor."
+      },
       "ApportionmentMethodProperty": {
         "required": [
           "code",
@@ -267972,6 +268268,14 @@
           "previousValuationPointCode": {
             "type": "string",
             "description": "The code of the previous valuation point.",
+            "nullable": true
+          },
+          "apportionmentResults": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApportionmentBreakdown"
+            },
+            "description": "The apportionment results for the valuation point: one fund-level entry plus one entry per allocation group.",
             "nullable": true
           },
           "links": {
