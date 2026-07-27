@@ -151,6 +151,9 @@ export * from './branchStepRequest';
 export * from './branchStepRequestAllOf';
 export * from './breakCodeSource';
 export * from './bucket';
+export * from './bucketSetNode';
+export * from './bucketSetResult';
+export * from './bucketSetResultBucket';
 export * from './bucketedCashFlowRequest';
 export * from './bucketedCashFlowResponse';
 export * from './bucketingSchedule';
@@ -1165,6 +1168,9 @@ export * from './quoteId';
 export * from './quoteInstrumentIdType';
 export * from './quoteSeriesId';
 export * from './quoteType';
+export * from './rateCurveShiftDefinition';
+export * from './rateCurveShiftDefinitionAllOf';
+export * from './rateCurveShiftMode';
 export * from './rawVendorEvent';
 export * from './rawVendorEventAllOf';
 export * from './reOpenPeriodDiaryEntryRequest';
@@ -1352,6 +1358,7 @@ export * from './runCheckResponse';
 export * from './scalingMethodology';
 export * from './scenarioDefinition';
 export * from './scenarioShiftDefinition';
+export * from './scenarioShiftType';
 export * from './schedule';
 export * from './scheduleType';
 export * from './schema';
@@ -1461,6 +1468,8 @@ export * from './termDepositPrincipalEvent';
 export * from './termDepositPrincipalEventAllOf';
 export * from './timeZoneConventions';
 export * from './timeline';
+export * from './toBeAnnounced';
+export * from './toBeAnnouncedAllOf';
 export * from './totalReturnSwap';
 export * from './totalReturnSwapAllOf';
 export * from './touch';
@@ -1675,6 +1684,8 @@ export * from './versionedResourceListWithWarningsOfPortfolioHolding';
 export * from './virtualDocument';
 export * from './virtualDocumentRow';
 export * from './virtualRow';
+export * from './volatilitySwap';
+export * from './volatilitySwapAllOf';
 export * from './warning';
 export * from './warrantsExerciseEvent';
 export * from './warrantsExerciseEventAllOf';
@@ -1861,6 +1872,9 @@ import { BranchStepRequest } from './branchStepRequest';
 import { BranchStepRequestAllOf } from './branchStepRequestAllOf';
 import { BreakCodeSource } from './breakCodeSource';
 import { Bucket } from './bucket';
+import { BucketSetNode } from './bucketSetNode';
+import { BucketSetResult } from './bucketSetResult';
+import { BucketSetResultBucket } from './bucketSetResultBucket';
 import { BucketedCashFlowRequest } from './bucketedCashFlowRequest';
 import { BucketedCashFlowResponse } from './bucketedCashFlowResponse';
 import { BucketingSchedule } from './bucketingSchedule';
@@ -2875,6 +2889,9 @@ import { QuoteId } from './quoteId';
 import { QuoteInstrumentIdType } from './quoteInstrumentIdType';
 import { QuoteSeriesId } from './quoteSeriesId';
 import { QuoteType } from './quoteType';
+import { RateCurveShiftDefinition } from './rateCurveShiftDefinition';
+import { RateCurveShiftDefinitionAllOf } from './rateCurveShiftDefinitionAllOf';
+import { RateCurveShiftMode } from './rateCurveShiftMode';
 import { RawVendorEvent } from './rawVendorEvent';
 import { RawVendorEventAllOf } from './rawVendorEventAllOf';
 import { ReOpenPeriodDiaryEntryRequest } from './reOpenPeriodDiaryEntryRequest';
@@ -3062,6 +3079,7 @@ import { RunCheckResponse } from './runCheckResponse';
 import { ScalingMethodology } from './scalingMethodology';
 import { ScenarioDefinition } from './scenarioDefinition';
 import { ScenarioShiftDefinition } from './scenarioShiftDefinition';
+import { ScenarioShiftType } from './scenarioShiftType';
 import { Schedule } from './schedule';
 import { ScheduleType } from './scheduleType';
 import { Schema } from './schema';
@@ -3171,6 +3189,8 @@ import { TermDepositPrincipalEvent } from './termDepositPrincipalEvent';
 import { TermDepositPrincipalEventAllOf } from './termDepositPrincipalEventAllOf';
 import { TimeZoneConventions } from './timeZoneConventions';
 import { Timeline } from './timeline';
+import { ToBeAnnounced } from './toBeAnnounced';
+import { ToBeAnnouncedAllOf } from './toBeAnnouncedAllOf';
 import { TotalReturnSwap } from './totalReturnSwap';
 import { TotalReturnSwapAllOf } from './totalReturnSwapAllOf';
 import { Touch } from './touch';
@@ -3385,6 +3405,8 @@ import { VersionedResourceListWithWarningsOfPortfolioHolding } from './versioned
 import { VirtualDocument } from './virtualDocument';
 import { VirtualDocumentRow } from './virtualDocumentRow';
 import { VirtualRow } from './virtualRow';
+import { VolatilitySwap } from './volatilitySwap';
+import { VolatilitySwapAllOf } from './volatilitySwapAllOf';
 import { Warning } from './warning';
 import { WarrantsExerciseEvent } from './warrantsExerciseEvent';
 import { WarrantsExerciseEventAllOf } from './warrantsExerciseEventAllOf';
@@ -3941,6 +3963,11 @@ let enumsMap: {[index: string]: any} = {
         "QuoteSeriesId.InstrumentIdTypeEnum": QuoteSeriesId.InstrumentIdTypeEnum,
         "QuoteSeriesId.QuoteTypeEnum": QuoteSeriesId.QuoteTypeEnum,
         "QuoteType": QuoteType,
+        "RateCurveShiftDefinition.ShiftTypeEnum": RateCurveShiftDefinition.ShiftTypeEnum,
+        "RateCurveShiftDefinition.ScenarioShiftTypeEnum": RateCurveShiftDefinition.ScenarioShiftTypeEnum,
+        "RateCurveShiftDefinitionAllOf.ShiftTypeEnum": RateCurveShiftDefinitionAllOf.ShiftTypeEnum,
+        "RateCurveShiftDefinitionAllOf.ScenarioShiftTypeEnum": RateCurveShiftDefinitionAllOf.ScenarioShiftTypeEnum,
+        "RateCurveShiftMode": RateCurveShiftMode,
         "RawVendorEvent.InstrumentEventTypeEnum": RawVendorEvent.InstrumentEventTypeEnum,
         "RawVendorEventAllOf.InstrumentEventTypeEnum": RawVendorEventAllOf.InstrumentEventTypeEnum,
         "RecombineStep.ComplianceStepTypeEnum": RecombineStep.ComplianceStepTypeEnum,
@@ -3998,6 +4025,8 @@ let enumsMap: {[index: string]: any} = {
         "ReverseStockSplitEvent.InstrumentEventTypeEnum": ReverseStockSplitEvent.InstrumentEventTypeEnum,
         "ReverseStockSplitEventAllOf.InstrumentEventTypeEnum": ReverseStockSplitEventAllOf.InstrumentEventTypeEnum,
         "ScalingMethodology": ScalingMethodology,
+        "ScenarioShiftDefinition.ScenarioShiftTypeEnum": ScenarioShiftDefinition.ScenarioShiftTypeEnum,
+        "ScenarioShiftType": ScenarioShiftType,
         "Schedule.ScheduleTypeEnum": Schedule.ScheduleTypeEnum,
         "ScheduleType": ScheduleType,
         "ScripDividendEvent.InstrumentEventTypeEnum": ScripDividendEvent.InstrumentEventTypeEnum,
@@ -4036,6 +4065,8 @@ let enumsMap: {[index: string]: any} = {
         "TermDepositInterestEventAllOf.InstrumentEventTypeEnum": TermDepositInterestEventAllOf.InstrumentEventTypeEnum,
         "TermDepositPrincipalEvent.InstrumentEventTypeEnum": TermDepositPrincipalEvent.InstrumentEventTypeEnum,
         "TermDepositPrincipalEventAllOf.InstrumentEventTypeEnum": TermDepositPrincipalEventAllOf.InstrumentEventTypeEnum,
+        "ToBeAnnounced.InstrumentTypeEnum": ToBeAnnounced.InstrumentTypeEnum,
+        "ToBeAnnouncedAllOf.InstrumentTypeEnum": ToBeAnnouncedAllOf.InstrumentTypeEnum,
         "TotalReturnSwap.InstrumentTypeEnum": TotalReturnSwap.InstrumentTypeEnum,
         "TotalReturnSwapAllOf.InstrumentTypeEnum": TotalReturnSwapAllOf.InstrumentTypeEnum,
         "TradeTicket.TradeTicketTypeEnum": TradeTicket.TradeTicketTypeEnum,
@@ -4065,6 +4096,8 @@ let enumsMap: {[index: string]: any} = {
         "VendorDependencyAllOf.DependencyTypeEnum": VendorDependencyAllOf.DependencyTypeEnum,
         "VendorLibrary": VendorLibrary,
         "VendorModelRule.SupplierEnum": VendorModelRule.SupplierEnum,
+        "VolatilitySwap.InstrumentTypeEnum": VolatilitySwap.InstrumentTypeEnum,
+        "VolatilitySwapAllOf.InstrumentTypeEnum": VolatilitySwapAllOf.InstrumentTypeEnum,
         "WarrantsExerciseEvent.InstrumentEventTypeEnum": WarrantsExerciseEvent.InstrumentEventTypeEnum,
         "WarrantsExerciseEventAllOf.InstrumentEventTypeEnum": WarrantsExerciseEventAllOf.InstrumentEventTypeEnum,
         "WorkspaceVisibility": WorkspaceVisibility,
@@ -4221,6 +4254,9 @@ let typeMap: {[index: string]: any} = {
     "BranchStepRequestAllOf": BranchStepRequestAllOf,
     "BreakCodeSource": BreakCodeSource,
     "Bucket": Bucket,
+    "BucketSetNode": BucketSetNode,
+    "BucketSetResult": BucketSetResult,
+    "BucketSetResultBucket": BucketSetResultBucket,
     "BucketedCashFlowRequest": BucketedCashFlowRequest,
     "BucketedCashFlowResponse": BucketedCashFlowResponse,
     "BucketingSchedule": BucketingSchedule,
@@ -5198,6 +5234,8 @@ let typeMap: {[index: string]: any} = {
     "QuoteDependencyAllOf": QuoteDependencyAllOf,
     "QuoteId": QuoteId,
     "QuoteSeriesId": QuoteSeriesId,
+    "RateCurveShiftDefinition": RateCurveShiftDefinition,
+    "RateCurveShiftDefinitionAllOf": RateCurveShiftDefinitionAllOf,
     "RawVendorEvent": RawVendorEvent,
     "RawVendorEventAllOf": RawVendorEventAllOf,
     "ReOpenPeriodDiaryEntryRequest": ReOpenPeriodDiaryEntryRequest,
@@ -5485,6 +5523,8 @@ let typeMap: {[index: string]: any} = {
     "TermDepositPrincipalEventAllOf": TermDepositPrincipalEventAllOf,
     "TimeZoneConventions": TimeZoneConventions,
     "Timeline": Timeline,
+    "ToBeAnnounced": ToBeAnnounced,
+    "ToBeAnnouncedAllOf": ToBeAnnouncedAllOf,
     "TotalReturnSwap": TotalReturnSwap,
     "TotalReturnSwapAllOf": TotalReturnSwapAllOf,
     "Touch": Touch,
@@ -5690,6 +5730,8 @@ let typeMap: {[index: string]: any} = {
     "VirtualDocument": VirtualDocument,
     "VirtualDocumentRow": VirtualDocumentRow,
     "VirtualRow": VirtualRow,
+    "VolatilitySwap": VolatilitySwap,
+    "VolatilitySwapAllOf": VolatilitySwapAllOf,
     "Warning": Warning,
     "WarrantsExerciseEvent": WarrantsExerciseEvent,
     "WarrantsExerciseEventAllOf": WarrantsExerciseEventAllOf,

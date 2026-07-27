@@ -9,7 +9,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "2.0.1574",
+    "version": "2.0.1575",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -58307,6 +58307,41 @@
                           }
                         ]
                       }
+                    ],
+                    "bucketSetResults": [
+                      {
+                        "isApportionment": true,
+                        "nodes": [
+                          {
+                            "nodeType": "Fund",
+                            "nav": 99999.99,
+                            "buckets": [
+                              {
+                                "bucketId": "PnL",
+                                "bucketType": "PnL",
+                                "value": 999.99,
+                                "previousCumulativeValue": 9000,
+                                "cumulativeValue": 9999.99
+                              }
+                            ]
+                          },
+                          {
+                            "nodeType": "Class",
+                            "shareClassShortCode": "ShareClassShortCode",
+                            "nav": 99999.99,
+                            "capitalRatio": 1,
+                            "buckets": [
+                              {
+                                "bucketId": "PnL",
+                                "bucketType": "PnL",
+                                "value": 999.99,
+                                "previousCumulativeValue": 9000,
+                                "cumulativeValue": 9999.99
+                              }
+                            ]
+                          }
+                        ]
+                      }
                     ]
                   },
                   "latestValuationPoint": {
@@ -58391,6 +58426,41 @@
                             "fundCode": "FundCode",
                             "baseValue": 99999.99,
                             "apportionmentFactor": 1
+                          }
+                        ]
+                      }
+                    ],
+                    "bucketSetResults": [
+                      {
+                        "isApportionment": true,
+                        "nodes": [
+                          {
+                            "nodeType": "Fund",
+                            "nav": 99999.99,
+                            "buckets": [
+                              {
+                                "bucketId": "PnL",
+                                "bucketType": "PnL",
+                                "value": 999.99,
+                                "previousCumulativeValue": 9000,
+                                "cumulativeValue": 9999.99
+                              }
+                            ]
+                          },
+                          {
+                            "nodeType": "Class",
+                            "shareClassShortCode": "ShareClassShortCode",
+                            "nav": 99999.99,
+                            "capitalRatio": 1,
+                            "buckets": [
+                              {
+                                "bucketId": "PnL",
+                                "bucketType": "PnL",
+                                "value": 999.99,
+                                "previousCumulativeValue": 9000,
+                                "cumulativeValue": 9999.99
+                              }
+                            ]
                           }
                         ]
                       }
@@ -58489,6 +58559,41 @@
                           }
                         ]
                       }
+                    ],
+                    "bucketSetResults": [
+                      {
+                        "isApportionment": true,
+                        "nodes": [
+                          {
+                            "nodeType": "Fund",
+                            "nav": 99999.99,
+                            "buckets": [
+                              {
+                                "bucketId": "PnL",
+                                "bucketType": "PnL",
+                                "value": 999.99,
+                                "previousCumulativeValue": 9000,
+                                "cumulativeValue": 9999.99
+                              }
+                            ]
+                          },
+                          {
+                            "nodeType": "Class",
+                            "shareClassShortCode": "ShareClassShortCode",
+                            "nav": 99999.99,
+                            "capitalRatio": 1,
+                            "buckets": [
+                              {
+                                "bucketId": "PnL",
+                                "bucketType": "PnL",
+                                "value": 999.99,
+                                "previousCumulativeValue": 9000,
+                                "cumulativeValue": 9999.99
+                              }
+                            ]
+                          }
+                        ]
+                      }
                     ]
                   },
                   "latestValuationPoint": {
@@ -58573,6 +58678,41 @@
                             "fundCode": "FundCode",
                             "baseValue": 99999.99,
                             "apportionmentFactor": 1
+                          }
+                        ]
+                      }
+                    ],
+                    "bucketSetResults": [
+                      {
+                        "isApportionment": true,
+                        "nodes": [
+                          {
+                            "nodeType": "Fund",
+                            "nav": 99999.99,
+                            "buckets": [
+                              {
+                                "bucketId": "PnL",
+                                "bucketType": "PnL",
+                                "value": 999.99,
+                                "previousCumulativeValue": 9000,
+                                "cumulativeValue": 9999.99
+                              }
+                            ]
+                          },
+                          {
+                            "nodeType": "Class",
+                            "shareClassShortCode": "ShareClassShortCode",
+                            "nav": 99999.99,
+                            "capitalRatio": 1,
+                            "buckets": [
+                              {
+                                "bucketId": "PnL",
+                                "bucketType": "PnL",
+                                "value": 999.99,
+                                "previousCumulativeValue": 9000,
+                                "cumulativeValue": 9999.99
+                              }
+                            ]
                           }
                         ]
                       }
@@ -58671,6 +58811,41 @@
                           }
                         ]
                       }
+                    ],
+                    "bucketSetResults": [
+                      {
+                        "isApportionment": true,
+                        "nodes": [
+                          {
+                            "nodeType": "Fund",
+                            "nav": 99999.99,
+                            "buckets": [
+                              {
+                                "bucketId": "PnL",
+                                "bucketType": "PnL",
+                                "value": 999.99,
+                                "previousCumulativeValue": 9000,
+                                "cumulativeValue": 9999.99
+                              }
+                            ]
+                          },
+                          {
+                            "nodeType": "Class",
+                            "shareClassShortCode": "ShareClassShortCode",
+                            "nav": 99999.99,
+                            "capitalRatio": 1,
+                            "buckets": [
+                              {
+                                "bucketId": "PnL",
+                                "bucketType": "PnL",
+                                "value": 999.99,
+                                "previousCumulativeValue": 9000,
+                                "cumulativeValue": 9999.99
+                              }
+                            ]
+                          }
+                        ]
+                      }
                     ]
                   },
                   "latestValuationPoint": {
@@ -58755,6 +58930,41 @@
                             "fundCode": "FundCode",
                             "baseValue": 99999.99,
                             "apportionmentFactor": 1
+                          }
+                        ]
+                      }
+                    ],
+                    "bucketSetResults": [
+                      {
+                        "isApportionment": true,
+                        "nodes": [
+                          {
+                            "nodeType": "Fund",
+                            "nav": 99999.99,
+                            "buckets": [
+                              {
+                                "bucketId": "PnL",
+                                "bucketType": "PnL",
+                                "value": 999.99,
+                                "previousCumulativeValue": 9000,
+                                "cumulativeValue": 9999.99
+                              }
+                            ]
+                          },
+                          {
+                            "nodeType": "Class",
+                            "shareClassShortCode": "ShareClassShortCode",
+                            "nav": 99999.99,
+                            "capitalRatio": 1,
+                            "buckets": [
+                              {
+                                "bucketId": "PnL",
+                                "bucketType": "PnL",
+                                "value": 999.99,
+                                "previousCumulativeValue": 9000,
+                                "cumulativeValue": 9999.99
+                              }
+                            ]
                           }
                         ]
                       }
@@ -59243,6 +59453,41 @@
                         }
                       ]
                     }
+                  ],
+                  "bucketSetResults": [
+                    {
+                      "isApportionment": true,
+                      "nodes": [
+                        {
+                          "nodeType": "Fund",
+                          "nav": 99999.99,
+                          "buckets": [
+                            {
+                              "bucketId": "PnL",
+                              "bucketType": "PnL",
+                              "value": 999.99,
+                              "previousCumulativeValue": 9000,
+                              "cumulativeValue": 9999.99
+                            }
+                          ]
+                        },
+                        {
+                          "nodeType": "Class",
+                          "shareClassShortCode": "ShareClassShortCode",
+                          "nav": 99999.99,
+                          "capitalRatio": 1,
+                          "buckets": [
+                            {
+                              "bucketId": "PnL",
+                              "bucketType": "PnL",
+                              "value": 999.99,
+                              "previousCumulativeValue": 9000,
+                              "cumulativeValue": 9999.99
+                            }
+                          ]
+                        }
+                      ]
+                    }
                   ]
                 }
               },
@@ -59335,6 +59580,41 @@
                         }
                       ]
                     }
+                  ],
+                  "bucketSetResults": [
+                    {
+                      "isApportionment": true,
+                      "nodes": [
+                        {
+                          "nodeType": "Fund",
+                          "nav": 99999.99,
+                          "buckets": [
+                            {
+                              "bucketId": "PnL",
+                              "bucketType": "PnL",
+                              "value": 999.99,
+                              "previousCumulativeValue": 9000,
+                              "cumulativeValue": 9999.99
+                            }
+                          ]
+                        },
+                        {
+                          "nodeType": "Class",
+                          "shareClassShortCode": "ShareClassShortCode",
+                          "nav": 99999.99,
+                          "capitalRatio": 1,
+                          "buckets": [
+                            {
+                              "bucketId": "PnL",
+                              "bucketType": "PnL",
+                              "value": 999.99,
+                              "previousCumulativeValue": 9000,
+                              "cumulativeValue": 9999.99
+                            }
+                          ]
+                        }
+                      ]
+                    }
                   ]
                 }
               },
@@ -59424,6 +59704,41 @@
                           "fundCode": "FundCode",
                           "baseValue": 99999.99,
                           "apportionmentFactor": 1
+                        }
+                      ]
+                    }
+                  ],
+                  "bucketSetResults": [
+                    {
+                      "isApportionment": true,
+                      "nodes": [
+                        {
+                          "nodeType": "Fund",
+                          "nav": 99999.99,
+                          "buckets": [
+                            {
+                              "bucketId": "PnL",
+                              "bucketType": "PnL",
+                              "value": 999.99,
+                              "previousCumulativeValue": 9000,
+                              "cumulativeValue": 9999.99
+                            }
+                          ]
+                        },
+                        {
+                          "nodeType": "Class",
+                          "shareClassShortCode": "ShareClassShortCode",
+                          "nav": 99999.99,
+                          "capitalRatio": 1,
+                          "buckets": [
+                            {
+                              "bucketId": "PnL",
+                              "bucketType": "PnL",
+                              "value": 999.99,
+                              "previousCumulativeValue": 9000,
+                              "cumulativeValue": 9999.99
+                            }
+                          ]
                         }
                       ]
                     }
@@ -59669,6 +59984,41 @@
                         }
                       ]
                     }
+                  ],
+                  "bucketSetResults": [
+                    {
+                      "isApportionment": true,
+                      "nodes": [
+                        {
+                          "nodeType": "Fund",
+                          "nav": 99999.99,
+                          "buckets": [
+                            {
+                              "bucketId": "PnL",
+                              "bucketType": "PnL",
+                              "value": 999.99,
+                              "previousCumulativeValue": 9000,
+                              "cumulativeValue": 9999.99
+                            }
+                          ]
+                        },
+                        {
+                          "nodeType": "Class",
+                          "shareClassShortCode": "ShareClassShortCode",
+                          "nav": 99999.99,
+                          "capitalRatio": 1,
+                          "buckets": [
+                            {
+                              "bucketId": "PnL",
+                              "bucketType": "PnL",
+                              "value": 999.99,
+                              "previousCumulativeValue": 9000,
+                              "cumulativeValue": 9999.99
+                            }
+                          ]
+                        }
+                      ]
+                    }
                   ]
                 }
               },
@@ -59761,6 +60111,41 @@
                         }
                       ]
                     }
+                  ],
+                  "bucketSetResults": [
+                    {
+                      "isApportionment": true,
+                      "nodes": [
+                        {
+                          "nodeType": "Fund",
+                          "nav": 99999.99,
+                          "buckets": [
+                            {
+                              "bucketId": "PnL",
+                              "bucketType": "PnL",
+                              "value": 999.99,
+                              "previousCumulativeValue": 9000,
+                              "cumulativeValue": 9999.99
+                            }
+                          ]
+                        },
+                        {
+                          "nodeType": "Class",
+                          "shareClassShortCode": "ShareClassShortCode",
+                          "nav": 99999.99,
+                          "capitalRatio": 1,
+                          "buckets": [
+                            {
+                              "bucketId": "PnL",
+                              "bucketType": "PnL",
+                              "value": 999.99,
+                              "previousCumulativeValue": 9000,
+                              "cumulativeValue": 9999.99
+                            }
+                          ]
+                        }
+                      ]
+                    }
                   ]
                 }
               },
@@ -59850,6 +60235,41 @@
                           "fundCode": "FundCode",
                           "baseValue": 99999.99,
                           "apportionmentFactor": 1
+                        }
+                      ]
+                    }
+                  ],
+                  "bucketSetResults": [
+                    {
+                      "isApportionment": true,
+                      "nodes": [
+                        {
+                          "nodeType": "Fund",
+                          "nav": 99999.99,
+                          "buckets": [
+                            {
+                              "bucketId": "PnL",
+                              "bucketType": "PnL",
+                              "value": 999.99,
+                              "previousCumulativeValue": 9000,
+                              "cumulativeValue": 9999.99
+                            }
+                          ]
+                        },
+                        {
+                          "nodeType": "Class",
+                          "shareClassShortCode": "ShareClassShortCode",
+                          "nav": 99999.99,
+                          "capitalRatio": 1,
+                          "buckets": [
+                            {
+                              "bucketId": "PnL",
+                              "bucketType": "PnL",
+                              "value": 999.99,
+                              "previousCumulativeValue": 9000,
+                              "cumulativeValue": 9999.99
+                            }
+                          ]
                         }
                       ]
                     }
@@ -60073,6 +60493,41 @@
                         }
                       ]
                     }
+                  ],
+                  "bucketSetResults": [
+                    {
+                      "isApportionment": true,
+                      "nodes": [
+                        {
+                          "nodeType": "Fund",
+                          "nav": 99999.99,
+                          "buckets": [
+                            {
+                              "bucketId": "PnL",
+                              "bucketType": "PnL",
+                              "value": 999.99,
+                              "previousCumulativeValue": 9000,
+                              "cumulativeValue": 9999.99
+                            }
+                          ]
+                        },
+                        {
+                          "nodeType": "Class",
+                          "shareClassShortCode": "ShareClassShortCode",
+                          "nav": 99999.99,
+                          "capitalRatio": 1,
+                          "buckets": [
+                            {
+                              "bucketId": "PnL",
+                              "bucketType": "PnL",
+                              "value": 999.99,
+                              "previousCumulativeValue": 9000,
+                              "cumulativeValue": 9999.99
+                            }
+                          ]
+                        }
+                      ]
+                    }
                   ]
                 }
               },
@@ -60165,6 +60620,41 @@
                         }
                       ]
                     }
+                  ],
+                  "bucketSetResults": [
+                    {
+                      "isApportionment": true,
+                      "nodes": [
+                        {
+                          "nodeType": "Fund",
+                          "nav": 99999.99,
+                          "buckets": [
+                            {
+                              "bucketId": "PnL",
+                              "bucketType": "PnL",
+                              "value": 999.99,
+                              "previousCumulativeValue": 9000,
+                              "cumulativeValue": 9999.99
+                            }
+                          ]
+                        },
+                        {
+                          "nodeType": "Class",
+                          "shareClassShortCode": "ShareClassShortCode",
+                          "nav": 99999.99,
+                          "capitalRatio": 1,
+                          "buckets": [
+                            {
+                              "bucketId": "PnL",
+                              "bucketType": "PnL",
+                              "value": 999.99,
+                              "previousCumulativeValue": 9000,
+                              "cumulativeValue": 9999.99
+                            }
+                          ]
+                        }
+                      ]
+                    }
                   ]
                 }
               },
@@ -60254,6 +60744,41 @@
                           "fundCode": "FundCode",
                           "baseValue": 99999.99,
                           "apportionmentFactor": 1
+                        }
+                      ]
+                    }
+                  ],
+                  "bucketSetResults": [
+                    {
+                      "isApportionment": true,
+                      "nodes": [
+                        {
+                          "nodeType": "Fund",
+                          "nav": 99999.99,
+                          "buckets": [
+                            {
+                              "bucketId": "PnL",
+                              "bucketType": "PnL",
+                              "value": 999.99,
+                              "previousCumulativeValue": 9000,
+                              "cumulativeValue": 9999.99
+                            }
+                          ]
+                        },
+                        {
+                          "nodeType": "Class",
+                          "shareClassShortCode": "ShareClassShortCode",
+                          "nav": 99999.99,
+                          "capitalRatio": 1,
+                          "buckets": [
+                            {
+                              "bucketId": "PnL",
+                              "bucketType": "PnL",
+                              "value": 999.99,
+                              "previousCumulativeValue": 9000,
+                              "cumulativeValue": 9999.99
+                            }
+                          ]
                         }
                       ]
                     }
@@ -64679,7 +65204,8 @@
                         "version": {
                           "effectiveFrom": "2018-08-04T00:00:00.0000000+00:00",
                           "asAtDate": "2018-08-08T13:20:45.0000000+00:00"
-                        }
+                        },
+                        "isExcluded": false
                       },
                       "portfolioId": {
                         "scope": {
@@ -64796,7 +65322,8 @@
                         "version": {
                           "effectiveFrom": "2018-08-04T00:00:00.0000000+00:00",
                           "asAtDate": "2018-08-08T13:20:45.0000000+00:00"
-                        }
+                        },
+                        "isExcluded": false
                       },
                       "portfolioId": {
                         "scope": {
@@ -64907,7 +65434,8 @@
                         "version": {
                           "effectiveFrom": "2018-08-04T00:00:00.0000000+00:00",
                           "asAtDate": "2018-08-08T13:20:45.0000000+00:00"
-                        }
+                        },
+                        "isExcluded": false
                       },
                       "portfolioId": {
                         "scope": {
@@ -65024,7 +65552,8 @@
                         "version": {
                           "effectiveFrom": "2018-08-04T00:00:00.0000000+00:00",
                           "asAtDate": "2018-08-08T13:20:45.0000000+00:00"
-                        }
+                        },
+                        "isExcluded": false
                       },
                       "portfolioId": {
                         "scope": {
@@ -65135,7 +65664,8 @@
                         "version": {
                           "effectiveFrom": "2018-08-04T00:00:00.0000000+00:00",
                           "asAtDate": "2018-08-08T13:20:45.0000000+00:00"
-                        }
+                        },
+                        "isExcluded": false
                       },
                       "portfolioId": {
                         "scope": {
@@ -65252,7 +65782,8 @@
                         "version": {
                           "effectiveFrom": "2018-08-04T00:00:00.0000000+00:00",
                           "asAtDate": "2018-08-08T13:20:45.0000000+00:00"
-                        }
+                        },
+                        "isExcluded": false
                       },
                       "portfolioId": {
                         "scope": {
@@ -71715,7 +72246,7 @@
           {
             "name": "instrumentType",
             "in": "path",
-            "description": "The instrument type of the transaction template. The combination of the instrument\r\n            event type, instrument type and scope uniquely identifies a transaction template. Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo.",
+            "description": "The instrument type of the transaction template. The combination of the instrument\r\n            event type, instrument type and scope uniquely identifies a transaction template. Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap.",
             "required": true,
             "schema": {
               "type": "string"
@@ -71975,7 +72506,7 @@
           {
             "name": "instrumentType",
             "in": "path",
-            "description": "The instrument type of the transaction template. The combination of the instrument\r\n            event type, instrument type and scope uniquely identifies a transaction template. Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo.",
+            "description": "The instrument type of the transaction template. The combination of the instrument\r\n            event type, instrument type and scope uniquely identifies a transaction template. Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap.",
             "required": true,
             "schema": {
               "type": "string"
@@ -72076,7 +72607,7 @@
           {
             "name": "instrumentType",
             "in": "path",
-            "description": "The instrument type of the transaction template. The combination of the instrument\r\n            event type, instrument type and scope uniquely identifies a transaction template. Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo.",
+            "description": "The instrument type of the transaction template. The combination of the instrument\r\n            event type, instrument type and scope uniquely identifies a transaction template. Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap.",
             "required": true,
             "schema": {
               "type": "string"
@@ -72336,7 +72867,7 @@
           {
             "name": "instrumentType",
             "in": "path",
-            "description": "The instrument type of the transaction template. The combination of the instrument\r\n            event type, instrument type and scope uniquely identifies a transaction template. Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo.",
+            "description": "The instrument type of the transaction template. The combination of the instrument\r\n            event type, instrument type and scope uniquely identifies a transaction template. Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap.",
             "required": true,
             "schema": {
               "type": "string"
@@ -115508,6 +116039,16 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "returnExcludedTransactions",
+            "in": "query",
+            "description": "Whether to include transactions that a portfolio's transaction exclusion filter marks as excluded. Defaults to false.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            },
+            "x-nullable": true
           }
         ],
         "requestBody": {
@@ -115654,7 +116195,8 @@
                       "version": {
                         "effectiveFrom": "2018-08-04T00:00:00.0000000+00:00",
                         "asAtDate": "2018-03-04T23:50:00.0000000+00:00"
-                      }
+                      },
+                      "isExcluded": true
                     },
                     {
                       "transactionId": "TXN-00002",
@@ -115852,7 +116394,8 @@
                       "version": {
                         "effectiveFrom": "2018-08-07T00:00:00.0000000+00:00",
                         "asAtDate": "2018-03-04T23:50:00.0000000+00:00"
-                      }
+                      },
+                      "isExcluded": false
                     },
                     {
                       "transactionId": "LUID_00003D4V_BondCouponEvent_20240906-1",
@@ -115910,7 +116453,8 @@
                       "version": {
                         "effectiveFrom": "2018-08-04T00:00:00.0000000+00:00",
                         "asAtDate": "2018-03-04T23:50:00.0000000+00:00"
-                      }
+                      },
+                      "isExcluded": false
                     }
                   ],
                   "href": "http://example.com",
@@ -115991,7 +116535,8 @@
                       "version": {
                         "effectiveFrom": "2018-08-04T00:00:00.0000000+00:00",
                         "asAtDate": "2018-03-04T23:50:00.0000000+00:00"
-                      }
+                      },
+                      "isExcluded": true
                     },
                     {
                       "transactionId": "TXN-00002",
@@ -116189,7 +116734,8 @@
                       "version": {
                         "effectiveFrom": "2018-08-07T00:00:00.0000000+00:00",
                         "asAtDate": "2018-03-04T23:50:00.0000000+00:00"
-                      }
+                      },
+                      "isExcluded": false
                     },
                     {
                       "transactionId": "LUID_00003D4V_BondCouponEvent_20240906-1",
@@ -116247,7 +116793,8 @@
                       "version": {
                         "effectiveFrom": "2018-08-04T00:00:00.0000000+00:00",
                         "asAtDate": "2018-03-04T23:50:00.0000000+00:00"
-                      }
+                      },
+                      "isExcluded": false
                     }
                   ],
                   "href": "http://example.com",
@@ -116328,7 +116875,8 @@
                       "version": {
                         "effectiveFrom": "2018-08-04T00:00:00.0000000+00:00",
                         "asAtDate": "2018-03-04T23:50:00.0000000+00:00"
-                      }
+                      },
+                      "isExcluded": true
                     },
                     {
                       "transactionId": "TXN-00002",
@@ -116526,7 +117074,8 @@
                       "version": {
                         "effectiveFrom": "2018-08-07T00:00:00.0000000+00:00",
                         "asAtDate": "2018-03-04T23:50:00.0000000+00:00"
-                      }
+                      },
+                      "isExcluded": false
                     },
                     {
                       "transactionId": "LUID_00003D4V_BondCouponEvent_20240906-1",
@@ -116584,7 +117133,8 @@
                       "version": {
                         "effectiveFrom": "2018-08-04T00:00:00.0000000+00:00",
                         "asAtDate": "2018-03-04T23:50:00.0000000+00:00"
-                      }
+                      },
+                      "isExcluded": false
                     }
                   ],
                   "href": "http://example.com",
@@ -152467,7 +153017,12 @@
                   "description": "Parallel shift of +50bps across all rate curves",
                   "shifts": [
                     {
-                      "shiftType": "RateCurveShift"
+                      "ccy": "USD",
+                      "amount": 50,
+                      "startTenor": "1m",
+                      "endTenor": "30y",
+                      "shiftType": "parallel",
+                      "scenarioShiftType": "RateCurveShiftDefinition"
                     }
                   ]
                 }
@@ -152485,7 +153040,12 @@
                   "description": "Parallel shift of +50bps across all rate curves",
                   "shifts": [
                     {
-                      "shiftType": "RateCurveShift"
+                      "ccy": "USD",
+                      "amount": 50,
+                      "startTenor": "1m",
+                      "endTenor": "30y",
+                      "shiftType": "parallel",
+                      "scenarioShiftType": "RateCurveShiftDefinition"
                     }
                   ]
                 }
@@ -152503,7 +153063,12 @@
                   "description": "Parallel shift of +50bps across all rate curves",
                   "shifts": [
                     {
-                      "shiftType": "RateCurveShift"
+                      "ccy": "USD",
+                      "amount": 50,
+                      "startTenor": "1m",
+                      "endTenor": "30y",
+                      "shiftType": "parallel",
+                      "scenarioShiftType": "RateCurveShiftDefinition"
                     }
                   ]
                 }
@@ -152521,7 +153086,12 @@
                   "description": "Parallel shift of +50bps across all rate curves",
                   "shifts": [
                     {
-                      "shiftType": "RateCurveShift"
+                      "ccy": "USD",
+                      "amount": 50,
+                      "startTenor": "1m",
+                      "endTenor": "30y",
+                      "shiftType": "parallel",
+                      "scenarioShiftType": "RateCurveShiftDefinition"
                     }
                   ]
                 }
@@ -168090,7 +168660,8 @@
                     "calculateInLieuSettlementAmount": false,
                     "calculateTradeDateToSettlementFxPnL": false
                   }
-                }
+                },
+                "transactionExclusionFilter": "Transaction/default/Source eq 'ExcludeMe'"
               }
             },
             "application/json": {
@@ -168158,7 +168729,8 @@
                     "calculateInLieuSettlementAmount": false,
                     "calculateTradeDateToSettlementFxPnL": false
                   }
-                }
+                },
+                "transactionExclusionFilter": "Transaction/default/Source eq 'ExcludeMe'"
               }
             },
             "text/json": {
@@ -168226,7 +168798,8 @@
                     "calculateInLieuSettlementAmount": false,
                     "calculateTradeDateToSettlementFxPnL": false
                   }
-                }
+                },
+                "transactionExclusionFilter": "Transaction/default/Source eq 'ExcludeMe'"
               }
             },
             "application/*+json": {
@@ -168294,7 +168867,8 @@
                     "calculateInLieuSettlementAmount": false,
                     "calculateTradeDateToSettlementFxPnL": false
                   }
-                }
+                },
+                "transactionExclusionFilter": "Transaction/default/Source eq 'ExcludeMe'"
               }
             }
           },
@@ -180396,7 +180970,8 @@
                   "subHoldingKeys": [
                     "Portfolio/Client/AccountType"
                   ],
-                  "accountingMethod": "Default"
+                  "accountingMethod": "Default",
+                  "transactionExclusionFilter": "Transaction/default/Source eq 'ExcludeMe'"
                 }
               },
               "application/json": {
@@ -180420,7 +180995,8 @@
                   "subHoldingKeys": [
                     "Portfolio/Client/AccountType"
                   ],
-                  "accountingMethod": "Default"
+                  "accountingMethod": "Default",
+                  "transactionExclusionFilter": "Transaction/default/Source eq 'ExcludeMe'"
                 }
               },
               "text/json": {
@@ -180444,7 +181020,8 @@
                   "subHoldingKeys": [
                     "Portfolio/Client/AccountType"
                   ],
-                  "accountingMethod": "Default"
+                  "accountingMethod": "Default",
+                  "transactionExclusionFilter": "Transaction/default/Source eq 'ExcludeMe'"
                 }
               }
             }
@@ -180604,7 +181181,8 @@
                   "subHoldingKeys": [
                     "Portfolio/Client/AccountType"
                   ],
-                  "accountingMethod": "Default"
+                  "accountingMethod": "Default",
+                  "transactionExclusionFilter": "Transaction/default/Source eq 'ExcludeMe'"
                 }
               },
               "application/json": {
@@ -180628,7 +181206,8 @@
                   "subHoldingKeys": [
                     "Portfolio/Client/AccountType"
                   ],
-                  "accountingMethod": "Default"
+                  "accountingMethod": "Default",
+                  "transactionExclusionFilter": "Transaction/default/Source eq 'ExcludeMe'"
                 }
               },
               "text/json": {
@@ -180652,7 +181231,8 @@
                   "subHoldingKeys": [
                     "Portfolio/Client/AccountType"
                   ],
-                  "accountingMethod": "Default"
+                  "accountingMethod": "Default",
+                  "transactionExclusionFilter": "Transaction/default/Source eq 'ExcludeMe'"
                 }
               }
             }
@@ -180700,7 +181280,7 @@
           "Transaction Portfolios"
         ],
         "summary": "PatchPortfolioDetails: Patch portfolio details",
-        "description": "Create or update certain details for a particular transaction portfolio.\r\nNote that not all elements of a transaction portfolio definition are\r\nmodifiable once it has been created due to the potential implications for data already stored.\r\nThe behaviour is defined by the JSON Patch specification.\r\n\r\nCurrently supported fields are: BaseCurrency, AccountingMethod, SubHoldingKeys, AmortisationMethod, TransactionTypeScope, CashGainLossCalculationDate, InstrumentEventConfiguration, AmortisationRuleSetId, TaxRuleSetScope, SettlementConfiguration.",
+        "description": "Create or update certain details for a particular transaction portfolio.\r\nNote that not all elements of a transaction portfolio definition are\r\nmodifiable once it has been created due to the potential implications for data already stored.\r\nThe behaviour is defined by the JSON Patch specification.\r\n\r\nCurrently supported fields are: BaseCurrency, AccountingMethod, SubHoldingKeys, AmortisationMethod, TransactionTypeScope, CashGainLossCalculationDate, InstrumentEventConfiguration, AmortisationRuleSetId, TaxRuleSetScope, SettlementConfiguration, TransactionExclusionFilter.",
         "operationId": "PatchPortfolioDetails",
         "parameters": [
           {
@@ -180956,7 +181536,8 @@
                   "subHoldingKeys": [
                     "Portfolio/Client/AccountType"
                   ],
-                  "accountingMethod": "Default"
+                  "accountingMethod": "Default",
+                  "transactionExclusionFilter": "Transaction/default/Source eq 'ExcludeMe'"
                 }
               },
               "application/json": {
@@ -180980,7 +181561,8 @@
                   "subHoldingKeys": [
                     "Portfolio/Client/AccountType"
                   ],
-                  "accountingMethod": "Default"
+                  "accountingMethod": "Default",
+                  "transactionExclusionFilter": "Transaction/default/Source eq 'ExcludeMe'"
                 }
               },
               "text/json": {
@@ -181004,7 +181586,8 @@
                   "subHoldingKeys": [
                     "Portfolio/Client/AccountType"
                   ],
-                  "accountingMethod": "Default"
+                  "accountingMethod": "Default",
+                  "transactionExclusionFilter": "Transaction/default/Source eq 'ExcludeMe'"
                 }
               }
             }
@@ -186402,7 +186985,8 @@
                       "version": {
                         "effectiveFrom": "2018-08-04T00:00:00.0000000+00:00",
                         "asAtDate": "2018-08-08T13:20:45.0000000+00:00"
-                      }
+                      },
+                      "isExcluded": false
                     },
                     {
                       "transactionId": "TXN-12345",
@@ -186505,7 +187089,8 @@
                       "version": {
                         "effectiveFrom": "2018-08-04T00:00:00.0000000+00:00",
                         "asAtDate": "2018-08-08T13:20:45.0000000+00:00"
-                      }
+                      },
+                      "isExcluded": false
                     }
                   ],
                   "links": []
@@ -186576,7 +187161,8 @@
                       "version": {
                         "effectiveFrom": "2018-08-04T00:00:00.0000000+00:00",
                         "asAtDate": "2018-08-08T13:20:45.0000000+00:00"
-                      }
+                      },
+                      "isExcluded": false
                     },
                     {
                       "transactionId": "TXN-12345",
@@ -186679,7 +187265,8 @@
                       "version": {
                         "effectiveFrom": "2018-08-04T00:00:00.0000000+00:00",
                         "asAtDate": "2018-08-08T13:20:45.0000000+00:00"
-                      }
+                      },
+                      "isExcluded": false
                     }
                   ],
                   "links": []
@@ -186750,7 +187337,8 @@
                       "version": {
                         "effectiveFrom": "2018-08-04T00:00:00.0000000+00:00",
                         "asAtDate": "2018-08-08T13:20:45.0000000+00:00"
-                      }
+                      },
+                      "isExcluded": false
                     },
                     {
                       "transactionId": "TXN-12345",
@@ -186853,7 +187441,8 @@
                       "version": {
                         "effectiveFrom": "2018-08-04T00:00:00.0000000+00:00",
                         "asAtDate": "2018-08-08T13:20:45.0000000+00:00"
-                      }
+                      },
+                      "isExcluded": false
                     }
                   ],
                   "links": []
@@ -188322,7 +188911,8 @@
                         "version": {
                           "effectiveFrom": "2018-08-04T00:00:00.0000000+00:00",
                           "asAtDate": "2018-03-04T23:50:00.0000000+00:00"
-                        }
+                        },
+                        "isExcluded": true
                       }
                     },
                     {
@@ -188479,7 +189069,8 @@
                         "version": {
                           "effectiveFrom": "2018-08-04T00:00:00.0000000+00:00",
                           "asAtDate": "2018-03-04T23:50:00.0000000+00:00"
-                        }
+                        },
+                        "isExcluded": true
                       }
                     },
                     {
@@ -188636,7 +189227,8 @@
                         "version": {
                           "effectiveFrom": "2018-08-04T00:00:00.0000000+00:00",
                           "asAtDate": "2018-03-04T23:50:00.0000000+00:00"
-                        }
+                        },
+                        "isExcluded": true
                       }
                     },
                     {
@@ -190346,6 +190938,16 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "returnExcludedTransactions",
+            "in": "query",
+            "description": "Whether to include transactions that the portfolio's transaction exclusion filter marks as excluded. Defaults to false.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            },
+            "x-nullable": true
           }
         ],
         "requestBody": {
@@ -190492,7 +191094,8 @@
                       "version": {
                         "effectiveFrom": "2018-08-04T00:00:00.0000000+00:00",
                         "asAtDate": "2018-03-04T23:50:00.0000000+00:00"
-                      }
+                      },
+                      "isExcluded": true
                     },
                     {
                       "transactionId": "TXN-00002",
@@ -190690,7 +191293,8 @@
                       "version": {
                         "effectiveFrom": "2018-08-07T00:00:00.0000000+00:00",
                         "asAtDate": "2018-03-04T23:50:00.0000000+00:00"
-                      }
+                      },
+                      "isExcluded": false
                     },
                     {
                       "transactionId": "LUID_00003D4V_BondCouponEvent_20240906-1",
@@ -190748,7 +191352,8 @@
                       "version": {
                         "effectiveFrom": "2018-08-04T00:00:00.0000000+00:00",
                         "asAtDate": "2018-03-04T23:50:00.0000000+00:00"
-                      }
+                      },
+                      "isExcluded": false
                     }
                   ],
                   "href": "http://example.com",
@@ -190829,7 +191434,8 @@
                       "version": {
                         "effectiveFrom": "2018-08-04T00:00:00.0000000+00:00",
                         "asAtDate": "2018-03-04T23:50:00.0000000+00:00"
-                      }
+                      },
+                      "isExcluded": true
                     },
                     {
                       "transactionId": "TXN-00002",
@@ -191027,7 +191633,8 @@
                       "version": {
                         "effectiveFrom": "2018-08-07T00:00:00.0000000+00:00",
                         "asAtDate": "2018-03-04T23:50:00.0000000+00:00"
-                      }
+                      },
+                      "isExcluded": false
                     },
                     {
                       "transactionId": "LUID_00003D4V_BondCouponEvent_20240906-1",
@@ -191085,7 +191692,8 @@
                       "version": {
                         "effectiveFrom": "2018-08-04T00:00:00.0000000+00:00",
                         "asAtDate": "2018-03-04T23:50:00.0000000+00:00"
-                      }
+                      },
+                      "isExcluded": false
                     }
                   ],
                   "href": "http://example.com",
@@ -191166,7 +191774,8 @@
                       "version": {
                         "effectiveFrom": "2018-08-04T00:00:00.0000000+00:00",
                         "asAtDate": "2018-03-04T23:50:00.0000000+00:00"
-                      }
+                      },
+                      "isExcluded": true
                     },
                     {
                       "transactionId": "TXN-00002",
@@ -191364,7 +191973,8 @@
                       "version": {
                         "effectiveFrom": "2018-08-07T00:00:00.0000000+00:00",
                         "asAtDate": "2018-03-04T23:50:00.0000000+00:00"
-                      }
+                      },
+                      "isExcluded": false
                     },
                     {
                       "transactionId": "LUID_00003D4V_BondCouponEvent_20240906-1",
@@ -191422,7 +192032,8 @@
                       "version": {
                         "effectiveFrom": "2018-08-04T00:00:00.0000000+00:00",
                         "asAtDate": "2018-03-04T23:50:00.0000000+00:00"
-                      }
+                      },
+                      "isExcluded": false
                     }
                   ],
                   "href": "http://example.com",
@@ -203262,7 +203873,8 @@
           "Commodities",
           "Money",
           "Unknown",
-          "RealEstate"
+          "RealEstate",
+          "Exotic"
         ],
         "type": "string"
       },
@@ -203518,10 +204130,12 @@
                   "MasteredInstrument",
                   "LoanFacility",
                   "FlexibleDeposit",
-                  "FlexibleRepo"
+                  "FlexibleRepo",
+                  "ToBeAnnounced",
+                  "VolatilitySwap"
                 ],
                 "type": "string",
-                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo."
+                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap."
               }
             }
           }
@@ -204585,10 +205199,12 @@
                   "MasteredInstrument",
                   "LoanFacility",
                   "FlexibleDeposit",
-                  "FlexibleRepo"
+                  "FlexibleRepo",
+                  "ToBeAnnounced",
+                  "VolatilitySwap"
                 ],
                 "type": "string",
-                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo."
+                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap."
               }
             }
           }
@@ -205128,6 +205744,17 @@
               "fractionalUnitsCashCurrency": {
                 "type": "string",
                 "description": "Optional. Used in calculating cash-in-lieu of fractional shares.",
+                "nullable": true
+              },
+              "fractionalUnitsRoundingConvention": {
+                "type": "string",
+                "description": "The convention used to round the fractional units entitlement. Defaults to Floor. Available values: Floor, Ceiling, RoundHalfUp, RoundHalfDown, RoundToDecimalPlaces, BuyUp, BankerRounding.",
+                "nullable": true
+              },
+              "fractionalUnitsDecimalPlaces": {
+                "type": "integer",
+                "description": "The number of decimal places to round to when FractionalUnitsRoundingConvention is RoundToDecimalPlaces.",
+                "format": "int32",
                 "nullable": true
               },
               "securityOfferElections": {
@@ -205710,6 +206337,107 @@
         },
         "additionalProperties": false,
         "description": "A schedule for dates"
+      },
+      "BucketSetNode": {
+        "required": [
+          "buckets",
+          "nodeType"
+        ],
+        "type": "object",
+        "properties": {
+          "nodeType": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The kind of node: the fund aggregate or a single share class. Available values: Fund, Class."
+          },
+          "shareClassShortCode": {
+            "type": "string",
+            "description": "The short code of the share class this node is for, or null for the fund node.",
+            "nullable": true
+          },
+          "nav": {
+            "type": "number",
+            "description": "The net asset value at this node, in the fund currency, or null where it does not apply to the node type.",
+            "format": "double",
+            "nullable": true
+          },
+          "capitalRatio": {
+            "type": "number",
+            "description": "The share class's capital ratio (its share of the fund NAV), set only on share class nodes.",
+            "format": "double",
+            "nullable": true
+          },
+          "buckets": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BucketSetResultBucket"
+            },
+            "description": "The buckets on this node, each with its period movement and cumulative values."
+          }
+        },
+        "additionalProperties": false,
+        "description": "One node within a bucket set result: the fund aggregate or a single share class. Both carry NAV and buckets; the\r\ncapital ratio is set only on share class nodes."
+      },
+      "BucketSetResult": {
+        "required": [
+          "isApportionment",
+          "nodes"
+        ],
+        "type": "object",
+        "properties": {
+          "isApportionment": {
+            "type": "boolean",
+            "description": "Whether this bucket set is the apportionment set (apportioning non-class-specific P&L across share classes)."
+          },
+          "nodes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BucketSetNode"
+            },
+            "description": "The nodes making up the bucket set: the fund aggregate and one per share class."
+          }
+        },
+        "additionalProperties": false,
+        "description": "A valuation point's results for one bucket set: whether the set is the apportionment set, and its per-node\r\n(fund and share class) buckets and NAV. Allocation-group nodes are not included here - they are surfaced via\r\nthe apportionment results."
+      },
+      "BucketSetResultBucket": {
+        "required": [
+          "bucketId",
+          "bucketType",
+          "cumulativeValue",
+          "previousCumulativeValue",
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "bucketId": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The identifier of the bucket."
+          },
+          "bucketType": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The type of the bucket (for example Dealing or PnL)."
+          },
+          "value": {
+            "type": "number",
+            "description": "The movement in the bucket over the valuation point's period.",
+            "format": "double"
+          },
+          "previousCumulativeValue": {
+            "type": "number",
+            "description": "The cumulative value of the bucket up to the start of the period.",
+            "format": "double"
+          },
+          "cumulativeValue": {
+            "type": "number",
+            "description": "The cumulative value of the bucket up to the end of the period (Value + PreviousCumulativeValue).",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false,
+        "description": "One bucket's values within a bucket set node: the movement in the period plus the cumulative values before\r\nand after it (CumulativeValue = Value + PreviousCumulativeValue)."
       },
       "CalculateOrderDatesRequest": {
         "required": [
@@ -206469,10 +207197,12 @@
                   "MasteredInstrument",
                   "LoanFacility",
                   "FlexibleDeposit",
-                  "FlexibleRepo"
+                  "FlexibleRepo",
+                  "ToBeAnnounced",
+                  "VolatilitySwap"
                 ],
                 "type": "string",
-                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo."
+                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap."
               }
             }
           }
@@ -206957,10 +207687,12 @@
                   "MasteredInstrument",
                   "LoanFacility",
                   "FlexibleDeposit",
-                  "FlexibleRepo"
+                  "FlexibleRepo",
+                  "ToBeAnnounced",
+                  "VolatilitySwap"
                 ],
                 "type": "string",
-                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo."
+                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap."
               }
             }
           }
@@ -207668,10 +208400,12 @@
                   "MasteredInstrument",
                   "LoanFacility",
                   "FlexibleDeposit",
-                  "FlexibleRepo"
+                  "FlexibleRepo",
+                  "ToBeAnnounced",
+                  "VolatilitySwap"
                 ],
                 "type": "string",
-                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo."
+                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap."
               }
             }
           }
@@ -208029,10 +208763,12 @@
                   "MasteredInstrument",
                   "LoanFacility",
                   "FlexibleDeposit",
-                  "FlexibleRepo"
+                  "FlexibleRepo",
+                  "ToBeAnnounced",
+                  "VolatilitySwap"
                 ],
                 "type": "string",
-                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo."
+                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap."
               }
             }
           }
@@ -209922,10 +210658,12 @@
                   "MasteredInstrument",
                   "LoanFacility",
                   "FlexibleDeposit",
-                  "FlexibleRepo"
+                  "FlexibleRepo",
+                  "ToBeAnnounced",
+                  "VolatilitySwap"
                 ],
                 "type": "string",
-                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo."
+                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap."
               }
             }
           }
@@ -212011,10 +212749,12 @@
                   "MasteredInstrument",
                   "LoanFacility",
                   "FlexibleDeposit",
-                  "FlexibleRepo"
+                  "FlexibleRepo",
+                  "ToBeAnnounced",
+                  "VolatilitySwap"
                 ],
                 "type": "string",
-                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo."
+                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap."
               }
             }
           }
@@ -212227,6 +212967,17 @@
               "fractionalUnitsCashCurrency": {
                 "type": "string",
                 "description": "Optional. Used in calculating cash-in-lieu of fractional shares. Not required.\r\nIf provided, must have FractionalUnitsCashPrice too.",
+                "nullable": true
+              },
+              "fractionalUnitsRoundingConvention": {
+                "type": "string",
+                "description": "The convention used to round the fractional units entitlement. Defaults to Floor.\r\nNot permitted when ConversionType is Exchange144A. Available values: Floor, Ceiling, RoundHalfUp, RoundHalfDown, RoundToDecimalPlaces, BuyUp, BankerRounding.",
+                "nullable": true
+              },
+              "fractionalUnitsDecimalPlaces": {
+                "type": "integer",
+                "description": "The number of decimal places to round to when FractionalUnitsRoundingConvention is RoundToDecimalPlaces.",
+                "format": "int32",
                 "nullable": true
               },
               "securityOfferElections": {
@@ -213460,6 +214211,12 @@
             "format": "date-time",
             "nullable": true
           },
+          "enablementDate": {
+            "type": "string",
+            "description": "The effective datetime from which transactions booked to the derived transaction portfolio begin contributing to holdings, valuations and other computed results. Transactions with an earlier effective date are still accepted and stored, but do not affect any computed results until this date. Defaults to the portfolio's creation date if not specified.",
+            "format": "date-time",
+            "nullable": true
+          },
           "corporateActionSourceId": {
             "$ref": "#/components/schemas/ResourceId"
           },
@@ -213529,6 +214286,14 @@
           },
           "settlementConfiguration": {
             "$ref": "#/components/schemas/PortfolioSettlementConfiguration"
+          },
+          "transactionExclusionFilter": {
+            "maxLength": 16384,
+            "minLength": 0,
+            "pattern": "^[\\s\\S]*$",
+            "type": "string",
+            "description": "A filter expression that identifies transactions to exclude when building the transaction portfolio's transactions and holdings. Transactions matching this filter are flagged as excluded.",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -214531,6 +215296,12 @@
             "format": "date-time",
             "nullable": true
           },
+          "enablementDate": {
+            "type": "string",
+            "description": "The effective datetime from which holdings set on the simple position portfolio begin contributing to valuations and other computed results. Holdings with an earlier effective date are still accepted and stored, but do not affect any computed results until this date. Defaults to the portfolio's creation date if not specified.",
+            "format": "date-time",
+            "nullable": true
+          },
           "baseCurrency": {
             "type": "string",
             "description": "The base currency of the simple position portfolio in ISO 4217 currency code format."
@@ -214824,6 +215595,12 @@
             "format": "date-time",
             "nullable": true
           },
+          "enablementDate": {
+            "type": "string",
+            "description": "The effective datetime from which transactions booked to the transaction portfolio begin contributing to holdings, valuations and other computed results. Transactions with an earlier effective date are still accepted and stored, but do not affect any computed results until this date. Defaults to the portfolio's creation date if not specified.",
+            "format": "date-time",
+            "nullable": true
+          },
           "baseCurrency": {
             "type": "string",
             "description": "The base currency of the transaction portfolio in ISO 4217 currency code format."
@@ -214914,6 +215691,14 @@
           },
           "settlementConfiguration": {
             "$ref": "#/components/schemas/PortfolioSettlementConfiguration"
+          },
+          "transactionExclusionFilter": {
+            "maxLength": 16384,
+            "minLength": 0,
+            "pattern": "^[\\s\\S]*$",
+            "type": "string",
+            "description": "A filter expression that identifies transactions to exclude when building the transaction portfolio's transactions and holdings. Transactions matching this filter are flagged as excluded.",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -215134,10 +215919,12 @@
                   "MasteredInstrument",
                   "LoanFacility",
                   "FlexibleDeposit",
-                  "FlexibleRepo"
+                  "FlexibleRepo",
+                  "ToBeAnnounced",
+                  "VolatilitySwap"
                 ],
                 "type": "string",
-                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo."
+                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap."
               }
             }
           }
@@ -217824,14 +218611,14 @@
             "maxLength": 32,
             "minLength": 0,
             "type": "string",
-            "description": "Specify that a rule should only apply if the market data is requested by an instrument of a given instrument type.\r\nIf null, then no filtering on instrument type is applied. Available values: Bond, CashPerpetual, CapFloor, CashSettled, CreditDefaultSwap, ForwardRateAgreement, Future, FxForward, FxOption, Index, InterestRateSwap, QuotedSecurity, Repo, ExoticInstrument, Equity, InterestRateSwaption, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, StructuredInstrument, TermDeposit, ContractForDifference, EquitySwap, CdsIndex, Basket, FundingLeg, FxSwap, SimpleInstrument, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, Cash, UnsettledCash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, Unknown.",
+            "description": "Specify that a rule should only apply if the market data is requested by an instrument of a given instrument type.\r\nIf null, then no filtering on instrument type is applied. Available values: Bond, CashPerpetual, CapFloor, CashSettled, CreditDefaultSwap, ForwardRateAgreement, Future, FxForward, FxOption, Index, InterestRateSwap, QuotedSecurity, Repo, ExoticInstrument, Equity, InterestRateSwaption, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, StructuredInstrument, TermDeposit, ContractForDifference, EquitySwap, CdsIndex, Basket, FundingLeg, FxSwap, SimpleInstrument, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, Cash, UnsettledCash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap, Unknown.",
             "nullable": true
           },
           "assetClass": {
             "maxLength": 32,
             "minLength": 0,
             "type": "string",
-            "description": "Specify that a rule should only apply if the market data is requested by an instrument of a given asset class.\r\nIf null, then no filtering on asset class is applied. Available values: InterestRates, FX, Inflation, Equities, Credit, Commodities, Money, Unknown, RealEstate.",
+            "description": "Specify that a rule should only apply if the market data is requested by an instrument of a given asset class.\r\nIf null, then no filtering on asset class is applied. Available values: InterestRates, FX, Inflation, Equities, Credit, Commodities, Money, Unknown, RealEstate, Exotic.",
             "nullable": true
           },
           "domCcy": {
@@ -220178,10 +220965,12 @@
                   "MasteredInstrument",
                   "LoanFacility",
                   "FlexibleDeposit",
-                  "FlexibleRepo"
+                  "FlexibleRepo",
+                  "ToBeAnnounced",
+                  "VolatilitySwap"
                 ],
                 "type": "string",
-                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo."
+                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap."
               }
             }
           }
@@ -220513,10 +221302,12 @@
                   "MasteredInstrument",
                   "LoanFacility",
                   "FlexibleDeposit",
-                  "FlexibleRepo"
+                  "FlexibleRepo",
+                  "ToBeAnnounced",
+                  "VolatilitySwap"
                 ],
                 "type": "string",
-                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo."
+                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap."
               }
             }
           }
@@ -220649,10 +221440,12 @@
                   "MasteredInstrument",
                   "LoanFacility",
                   "FlexibleDeposit",
-                  "FlexibleRepo"
+                  "FlexibleRepo",
+                  "ToBeAnnounced",
+                  "VolatilitySwap"
                 ],
                 "type": "string",
-                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo."
+                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap."
               }
             }
           }
@@ -220981,6 +221774,17 @@
                 "type": "string",
                 "nullable": true
               },
+              "fractionalUnitsRoundingConvention": {
+                "type": "string",
+                "description": "The convention used to round the fractional units entitlement. Defaults to Floor. Available values: Floor, Ceiling, RoundHalfUp, RoundHalfDown, RoundToDecimalPlaces, BuyUp, BankerRounding.",
+                "nullable": true
+              },
+              "fractionalUnitsDecimalPlaces": {
+                "type": "integer",
+                "description": "The number of decimal places to round to when FractionalUnitsRoundingConvention is RoundToDecimalPlaces.",
+                "format": "int32",
+                "nullable": true
+              },
               "instructionReference": {
                 "type": "string",
                 "nullable": true
@@ -221167,10 +221971,12 @@
                   "MasteredInstrument",
                   "LoanFacility",
                   "FlexibleDeposit",
-                  "FlexibleRepo"
+                  "FlexibleRepo",
+                  "ToBeAnnounced",
+                  "VolatilitySwap"
                 ],
                 "type": "string",
-                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo."
+                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap."
               }
             }
           }
@@ -221726,10 +222532,12 @@
                   "MasteredInstrument",
                   "LoanFacility",
                   "FlexibleDeposit",
-                  "FlexibleRepo"
+                  "FlexibleRepo",
+                  "ToBeAnnounced",
+                  "VolatilitySwap"
                 ],
                 "type": "string",
-                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo."
+                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap."
               }
             }
           }
@@ -223169,10 +223977,12 @@
                   "MasteredInstrument",
                   "LoanFacility",
                   "FlexibleDeposit",
-                  "FlexibleRepo"
+                  "FlexibleRepo",
+                  "ToBeAnnounced",
+                  "VolatilitySwap"
                 ],
                 "type": "string",
-                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo."
+                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap."
               }
             }
           }
@@ -223349,10 +224159,12 @@
                   "MasteredInstrument",
                   "LoanFacility",
                   "FlexibleDeposit",
-                  "FlexibleRepo"
+                  "FlexibleRepo",
+                  "ToBeAnnounced",
+                  "VolatilitySwap"
                 ],
                 "type": "string",
-                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo."
+                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap."
               }
             }
           }
@@ -223453,10 +224265,12 @@
                   "MasteredInstrument",
                   "LoanFacility",
                   "FlexibleDeposit",
-                  "FlexibleRepo"
+                  "FlexibleRepo",
+                  "ToBeAnnounced",
+                  "VolatilitySwap"
                 ],
                 "type": "string",
-                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo."
+                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap."
               }
             }
           }
@@ -223603,10 +224417,12 @@
                   "MasteredInstrument",
                   "LoanFacility",
                   "FlexibleDeposit",
-                  "FlexibleRepo"
+                  "FlexibleRepo",
+                  "ToBeAnnounced",
+                  "VolatilitySwap"
                 ],
                 "type": "string",
-                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo."
+                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap."
               }
             }
           }
@@ -224380,10 +225196,12 @@
                   "MasteredInstrument",
                   "LoanFacility",
                   "FlexibleDeposit",
-                  "FlexibleRepo"
+                  "FlexibleRepo",
+                  "ToBeAnnounced",
+                  "VolatilitySwap"
                 ],
                 "type": "string",
-                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo."
+                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap."
               }
             }
           }
@@ -224729,10 +225547,12 @@
                   "MasteredInstrument",
                   "LoanFacility",
                   "FlexibleDeposit",
-                  "FlexibleRepo"
+                  "FlexibleRepo",
+                  "ToBeAnnounced",
+                  "VolatilitySwap"
                 ],
                 "type": "string",
-                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo."
+                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap."
               }
             }
           }
@@ -226065,10 +226885,12 @@
                   "MasteredInstrument",
                   "LoanFacility",
                   "FlexibleDeposit",
-                  "FlexibleRepo"
+                  "FlexibleRepo",
+                  "ToBeAnnounced",
+                  "VolatilitySwap"
                 ],
                 "type": "string",
-                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo."
+                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap."
               }
             }
           }
@@ -226564,10 +227386,12 @@
                   "MasteredInstrument",
                   "LoanFacility",
                   "FlexibleDeposit",
-                  "FlexibleRepo"
+                  "FlexibleRepo",
+                  "ToBeAnnounced",
+                  "VolatilitySwap"
                 ],
                 "type": "string",
-                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo."
+                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap."
               }
             }
           }
@@ -227127,10 +227951,12 @@
                   "MasteredInstrument",
                   "LoanFacility",
                   "FlexibleDeposit",
-                  "FlexibleRepo"
+                  "FlexibleRepo",
+                  "ToBeAnnounced",
+                  "VolatilitySwap"
                 ],
                 "type": "string",
-                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo."
+                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap."
               }
             }
           }
@@ -227673,10 +228499,12 @@
                   "MasteredInstrument",
                   "LoanFacility",
                   "FlexibleDeposit",
-                  "FlexibleRepo"
+                  "FlexibleRepo",
+                  "ToBeAnnounced",
+                  "VolatilitySwap"
                 ],
                 "type": "string",
-                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo."
+                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap."
               }
             }
           }
@@ -228618,10 +229446,12 @@
                   "MasteredInstrument",
                   "LoanFacility",
                   "FlexibleDeposit",
-                  "FlexibleRepo"
+                  "FlexibleRepo",
+                  "ToBeAnnounced",
+                  "VolatilitySwap"
                 ],
                 "type": "string",
-                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo."
+                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap."
               }
             }
           }
@@ -228752,10 +229582,12 @@
                   "MasteredInstrument",
                   "LoanFacility",
                   "FlexibleDeposit",
-                  "FlexibleRepo"
+                  "FlexibleRepo",
+                  "ToBeAnnounced",
+                  "VolatilitySwap"
                 ],
                 "type": "string",
-                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo."
+                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap."
               }
             }
           }
@@ -231868,10 +232700,12 @@
                   "MasteredInstrument",
                   "LoanFacility",
                   "FlexibleDeposit",
-                  "FlexibleRepo"
+                  "FlexibleRepo",
+                  "ToBeAnnounced",
+                  "VolatilitySwap"
                 ],
                 "type": "string",
-                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo."
+                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap."
               }
             }
           }
@@ -232034,10 +232868,12 @@
                   "MasteredInstrument",
                   "LoanFacility",
                   "FlexibleDeposit",
-                  "FlexibleRepo"
+                  "FlexibleRepo",
+                  "ToBeAnnounced",
+                  "VolatilitySwap"
                 ],
                 "type": "string",
-                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo."
+                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap."
               }
             }
           }
@@ -232131,10 +232967,12 @@
                   "MasteredInstrument",
                   "LoanFacility",
                   "FlexibleDeposit",
-                  "FlexibleRepo"
+                  "FlexibleRepo",
+                  "ToBeAnnounced",
+                  "VolatilitySwap"
                 ],
                 "type": "string",
-                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo."
+                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap."
               }
             }
           }
@@ -232617,10 +233455,11 @@
               "Commodities",
               "Money",
               "Unknown",
-              "RealEstate"
+              "RealEstate",
+              "Exotic"
             ],
             "type": "string",
-            "description": "The nominal asset class of the instrument. Available values: InterestRates, FX, Inflation, Equities, Credit, Commodities, Money, Unknown, RealEstate."
+            "description": "The nominal asset class of the instrument. Available values: InterestRates, FX, Inflation, Equities, Credit, Commodities, Money, Unknown, RealEstate, Exotic."
           },
           "domCcy": {
             "type": "string",
@@ -233579,10 +234418,12 @@
                   "MasteredInstrument",
                   "LoanFacility",
                   "FlexibleDeposit",
-                  "FlexibleRepo"
+                  "FlexibleRepo",
+                  "ToBeAnnounced",
+                  "VolatilitySwap"
                 ],
                 "type": "string",
-                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo."
+                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap."
               }
             }
           }
@@ -234024,7 +234865,9 @@
           "MasteredInstrument",
           "LoanFacility",
           "FlexibleDeposit",
-          "FlexibleRepo"
+          "FlexibleRepo",
+          "ToBeAnnounced",
+          "VolatilitySwap"
         ],
         "type": "string"
       },
@@ -234270,10 +235113,12 @@
                   "MasteredInstrument",
                   "LoanFacility",
                   "FlexibleDeposit",
-                  "FlexibleRepo"
+                  "FlexibleRepo",
+                  "ToBeAnnounced",
+                  "VolatilitySwap"
                 ],
                 "type": "string",
-                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo."
+                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap."
               }
             }
           }
@@ -234384,10 +235229,12 @@
                   "MasteredInstrument",
                   "LoanFacility",
                   "FlexibleDeposit",
-                  "FlexibleRepo"
+                  "FlexibleRepo",
+                  "ToBeAnnounced",
+                  "VolatilitySwap"
                 ],
                 "type": "string",
-                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo."
+                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap."
               }
             }
           }
@@ -234531,6 +235378,17 @@
               "fractionalUnitsCashCurrency": {
                 "type": "string",
                 "description": "Optional. Used in calculating cash-in-lieu of fractional shares.",
+                "nullable": true
+              },
+              "fractionalUnitsRoundingConvention": {
+                "type": "string",
+                "description": "The convention used to round the fractional units entitlement. Defaults to Floor. Available values: Floor, Ceiling, RoundHalfUp, RoundHalfDown, RoundToDecimalPlaces, BuyUp, BankerRounding.",
+                "nullable": true
+              },
+              "fractionalUnitsDecimalPlaces": {
+                "type": "integer",
+                "description": "The number of decimal places to round to when FractionalUnitsRoundingConvention is RoundToDecimalPlaces.",
+                "format": "int32",
                 "nullable": true
               },
               "instrumentEventType": {
@@ -236044,10 +236902,12 @@
                   "MasteredInstrument",
                   "LoanFacility",
                   "FlexibleDeposit",
-                  "FlexibleRepo"
+                  "FlexibleRepo",
+                  "ToBeAnnounced",
+                  "VolatilitySwap"
                 ],
                 "type": "string",
-                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo."
+                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap."
               }
             }
           }
@@ -236796,10 +237656,12 @@
               "MasteredInstrument",
               "LoanFacility",
               "FlexibleDeposit",
-              "FlexibleRepo"
+              "FlexibleRepo",
+              "ToBeAnnounced",
+              "VolatilitySwap"
             ],
             "type": "string",
-            "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo."
+            "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap."
           }
         },
         "additionalProperties": false,
@@ -237766,10 +238628,12 @@
                   "MasteredInstrument",
                   "LoanFacility",
                   "FlexibleDeposit",
-                  "FlexibleRepo"
+                  "FlexibleRepo",
+                  "ToBeAnnounced",
+                  "VolatilitySwap"
                 ],
                 "type": "string",
-                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo."
+                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap."
               }
             }
           }
@@ -238765,6 +239629,17 @@
                 "type": "number",
                 "description": "Optional. Used in calculating cash-in-lieu of fractional shares.",
                 "format": "double",
+                "nullable": true
+              },
+              "fractionalUnitsRoundingConvention": {
+                "type": "string",
+                "description": "The convention used to round the fractional units entitlement. Defaults to Floor. Available values: Floor, Ceiling, RoundHalfUp, RoundHalfDown, RoundToDecimalPlaces, BuyUp, BankerRounding.",
+                "nullable": true
+              },
+              "fractionalUnitsDecimalPlaces": {
+                "type": "integer",
+                "description": "The number of decimal places to round to when FractionalUnitsRoundingConvention is RoundToDecimalPlaces.",
+                "format": "int32",
                 "nullable": true
               },
               "newInstrument": {
@@ -241630,6 +242505,10 @@
             },
             "description": "Set of Custodian Accounts resolved from each movement on the Transaction.",
             "nullable": true
+          },
+          "isExcluded": {
+            "type": "boolean",
+            "description": "Whether the transaction was excluded from the portfolio's holdings by the portfolio's transaction exclusion filter."
           }
         },
         "additionalProperties": false,
@@ -245749,6 +246628,12 @@
             "description": "The effective datetime at which the portfolio was created. No transactions or constituents can be added to the portfolio before this date.",
             "format": "date-time"
           },
+          "enablementDate": {
+            "type": "string",
+            "description": "The effective datetime from which transactions or holdings booked to the portfolio begin contributing to holdings, valuations and other computed results. Data with an earlier effective date is still accepted and stored, but does not affect any computed results until this date. Defaults to the portfolio's creation date when not explicitly set.",
+            "format": "date-time",
+            "nullable": true
+          },
           "parentPortfolioId": {
             "$ref": "#/components/schemas/ResourceId"
           },
@@ -245841,6 +246726,11 @@
           },
           "settlementConfiguration": {
             "$ref": "#/components/schemas/PortfolioSettlementConfiguration"
+          },
+          "transactionExclusionFilter": {
+            "type": "string",
+            "description": "A filter expression that identifies transactions to exclude when building the transaction portfolio's transactions and holdings. Transactions matching this filter are flagged as excluded.",
+            "nullable": true
           },
           "links": {
             "type": "array",
@@ -246083,6 +246973,14 @@
           },
           "stagedModifications": {
             "$ref": "#/components/schemas/StagedModificationsInfo"
+          },
+          "transactionExclusionFilter": {
+            "maxLength": 16384,
+            "minLength": 0,
+            "pattern": "^[\\s\\S]*$",
+            "type": "string",
+            "description": "A filter expression that identifies transactions to exclude when building the transaction portfolio's transactions and holdings. Transactions matching this filter are flagged as excluded.",
+            "nullable": true
           },
           "links": {
             "type": "array",
@@ -246662,6 +247560,9 @@
             "type": "number",
             "description": "The number of unsettled units for the holding that are beyond their contractual settlement date.",
             "format": "double"
+          },
+          "resolvedCustodianAccount": {
+            "$ref": "#/components/schemas/ResolvedCustodianAccount"
           }
         },
         "additionalProperties": false,
@@ -247453,6 +248354,12 @@
             "description": "The effective datetime at which the portfolio was created. No transactions or constituents can be added to the portfolio before this date.",
             "format": "date-time"
           },
+          "enablementDate": {
+            "type": "string",
+            "description": "The effective datetime from which transactions or holdings booked to the portfolio begin contributing to holdings, valuations and other computed results. Data with an earlier effective date is still accepted and stored, but does not affect any computed results until this date. Defaults to the portfolio's creation date when not explicitly set.",
+            "format": "date-time",
+            "nullable": true
+          },
           "parentPortfolioId": {
             "$ref": "#/components/schemas/ResourceId"
           },
@@ -247545,6 +248452,11 @@
           },
           "settlementConfiguration": {
             "$ref": "#/components/schemas/PortfolioSettlementConfiguration"
+          },
+          "transactionExclusionFilter": {
+            "type": "string",
+            "description": "A filter expression that identifies transactions to exclude when building the transaction portfolio's transactions and holdings. Transactions matching this filter are flagged as excluded.",
+            "nullable": true
           },
           "links": {
             "type": "array",
@@ -248216,6 +249128,17 @@
               "fractionalUnitsCashCurrency": {
                 "type": "string",
                 "description": "Currency of FractionalUnitsCashPrice. Required if and only if FractionalUnitsCashPrice is supplied.",
+                "nullable": true
+              },
+              "fractionalUnitsRoundingConvention": {
+                "type": "string",
+                "description": "The convention used to round the fractional units entitlement. Defaults to Floor. Available values: Floor, Ceiling, RoundHalfUp, RoundHalfDown, RoundToDecimalPlaces, BuyUp, BankerRounding.",
+                "nullable": true
+              },
+              "fractionalUnitsDecimalPlaces": {
+                "type": "integer",
+                "description": "The number of decimal places to round to when FractionalUnitsRoundingConvention is RoundToDecimalPlaces.",
+                "format": "int32",
                 "nullable": true
               },
               "securityOfferElections": {
@@ -250686,6 +251609,73 @@
         ],
         "type": "string"
       },
+      "RateCurveShiftDefinition": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ScenarioShiftDefinition"
+          },
+          {
+            "required": [
+              "amount",
+              "ccy",
+              "scenarioShiftType",
+              "shiftType"
+            ],
+            "type": "object",
+            "properties": {
+              "ccy": {
+                "maxLength": 3,
+                "minLength": 3,
+                "type": "string"
+              },
+              "amount": {
+                "type": "number",
+                "format": "double"
+              },
+              "startTenor": {
+                "maxLength": 10,
+                "minLength": 2,
+                "pattern": "^\\d+[mywdMYWD]$",
+                "type": "string",
+                "nullable": true
+              },
+              "endTenor": {
+                "maxLength": 10,
+                "minLength": 2,
+                "pattern": "^\\d+[mywdMYWD]$",
+                "type": "string",
+                "nullable": true
+              },
+              "shiftType": {
+                "enum": [
+                  "Parallel",
+                  "Steepen",
+                  "Flatten",
+                  "Twist"
+                ],
+                "type": "string",
+                "description": "Available values: Parallel, Steepen, Flatten, Twist."
+              },
+              "scenarioShiftType": {
+                "enum": [
+                  "RateCurveShiftDefinition"
+                ],
+                "type": "string",
+                "description": "Available values: RateCurveShiftDefinition."
+              }
+            }
+          }
+        ]
+      },
+      "RateCurveShiftMode": {
+        "enum": [
+          "parallel",
+          "steepen",
+          "flatten",
+          "twist"
+        ],
+        "type": "string"
+      },
       "RawVendorEvent": {
         "allOf": [
           {
@@ -251637,10 +252627,12 @@
                   "MasteredInstrument",
                   "LoanFacility",
                   "FlexibleDeposit",
-                  "FlexibleRepo"
+                  "FlexibleRepo",
+                  "ToBeAnnounced",
+                  "VolatilitySwap"
                 ],
                 "type": "string",
-                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo."
+                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap."
               }
             }
           }
@@ -252539,10 +253531,12 @@
                   "MasteredInstrument",
                   "LoanFacility",
                   "FlexibleDeposit",
-                  "FlexibleRepo"
+                  "FlexibleRepo",
+                  "ToBeAnnounced",
+                  "VolatilitySwap"
                 ],
                 "type": "string",
-                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo."
+                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap."
               }
             }
           }
@@ -256730,6 +257724,17 @@
                 "format": "double",
                 "nullable": true
               },
+              "fractionalUnitsRoundingConvention": {
+                "type": "string",
+                "description": "The convention used to round the fractional units entitlement. Defaults to Floor. Available values: Floor, Ceiling, RoundHalfUp, RoundHalfDown, RoundToDecimalPlaces, BuyUp, BankerRounding.",
+                "nullable": true
+              },
+              "fractionalUnitsDecimalPlaces": {
+                "type": "integer",
+                "description": "The number of decimal places to round to when FractionalUnitsRoundingConvention is RoundToDecimalPlaces.",
+                "format": "int32",
+                "nullable": true
+              },
               "instrumentEventType": {
                 "enum": [
                   "TransitionEvent",
@@ -257081,18 +258086,28 @@
       },
       "ScenarioShiftDefinition": {
         "required": [
-          "shiftType"
+          "scenarioShiftType"
         ],
         "type": "object",
         "properties": {
-          "shiftType": {
-            "maxLength": 64,
-            "minLength": 1,
-            "pattern": "^[a-zA-Z0-9\\-_]+$",
-            "type": "string"
+          "scenarioShiftType": {
+            "enum": [
+              "RateCurveShiftDefinition"
+            ],
+            "type": "string",
+            "description": "Available values: RateCurveShiftDefinition."
           }
         },
-        "additionalProperties": {}
+        "additionalProperties": false,
+        "discriminator": {
+          "propertyName": "scenarioShiftType"
+        }
+      },
+      "ScenarioShiftType": {
+        "enum": [
+          "RateCurveShiftDefinition"
+        ],
+        "type": "string"
       },
       "Schedule": {
         "required": [
@@ -257223,6 +258238,17 @@
               "fractionalUnitsCashCurrency": {
                 "type": "string",
                 "description": "The currency of the cash paid in lieu of fractional units.",
+                "nullable": true
+              },
+              "fractionalUnitsRoundingConvention": {
+                "type": "string",
+                "description": "The convention used to round the fractional units entitlement. Defaults to Floor. Available values: Floor, Ceiling, RoundHalfUp, RoundHalfDown, RoundToDecimalPlaces, BuyUp, BankerRounding.",
+                "nullable": true
+              },
+              "fractionalUnitsDecimalPlaces": {
+                "type": "integer",
+                "description": "The number of decimal places to round to when FractionalUnitsRoundingConvention is RoundToDecimalPlaces.",
+                "format": "int32",
                 "nullable": true
               },
               "unitsRatio": {
@@ -259191,10 +260217,12 @@
                   "MasteredInstrument",
                   "LoanFacility",
                   "FlexibleDeposit",
-                  "FlexibleRepo"
+                  "FlexibleRepo",
+                  "ToBeAnnounced",
+                  "VolatilitySwap"
                 ],
                 "type": "string",
-                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo."
+                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap."
               }
             }
           }
@@ -259234,10 +260262,11 @@
                   "Commodities",
                   "Money",
                   "Unknown",
-                  "RealEstate"
+                  "RealEstate",
+                  "Exotic"
                 ],
                 "type": "string",
-                "description": "Available values: InterestRates, FX, Inflation, Equities, Credit, Commodities, Money, Unknown, RealEstate."
+                "description": "Available values: InterestRates, FX, Inflation, Equities, Credit, Commodities, Money, Unknown, RealEstate, Exotic."
               },
               "fgnCcys": {
                 "type": "array",
@@ -259303,10 +260332,12 @@
                   "MasteredInstrument",
                   "LoanFacility",
                   "FlexibleDeposit",
-                  "FlexibleRepo"
+                  "FlexibleRepo",
+                  "ToBeAnnounced",
+                  "VolatilitySwap"
                 ],
                 "type": "string",
-                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo."
+                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap."
               }
             }
           }
@@ -259432,6 +260463,17 @@
               "fractionalUnitsCashCurrency": {
                 "type": "string",
                 "description": "Optional. Used in calculating cash-in-lieu of fractional shares.",
+                "nullable": true
+              },
+              "fractionalUnitsRoundingConvention": {
+                "type": "string",
+                "description": "The convention used to round the fractional units entitlement. Defaults to Floor. Available values: Floor, Ceiling, RoundHalfUp, RoundHalfDown, RoundToDecimalPlaces, BuyUp, BankerRounding.",
+                "nullable": true
+              },
+              "fractionalUnitsDecimalPlaces": {
+                "type": "integer",
+                "description": "The number of decimal places to round to when FractionalUnitsRoundingConvention is RoundToDecimalPlaces.",
+                "format": "int32",
                 "nullable": true
               },
               "instrumentEventType": {
@@ -260090,6 +261132,17 @@
                 "description": "The currency of the cash paid in lieu of fractionalUnits.",
                 "nullable": true
               },
+              "fractionalUnitsRoundingConvention": {
+                "type": "string",
+                "description": "The convention used to round the fractional units entitlement. Defaults to Floor. Available values: Floor, Ceiling, RoundHalfUp, RoundHalfDown, RoundToDecimalPlaces, BuyUp, BankerRounding.",
+                "nullable": true
+              },
+              "fractionalUnitsDecimalPlaces": {
+                "type": "integer",
+                "description": "The number of decimal places to round to when FractionalUnitsRoundingConvention is RoundToDecimalPlaces.",
+                "format": "int32",
+                "nullable": true
+              },
               "unitsRatio": {
                 "$ref": "#/components/schemas/UnitsRatio"
               },
@@ -260238,6 +261291,17 @@
               "fractionalUnitsCashCurrency": {
                 "type": "string",
                 "description": "The currency of the cash paid in lieu of fractional units.",
+                "nullable": true
+              },
+              "fractionalUnitsRoundingConvention": {
+                "type": "string",
+                "description": "The convention used to round the fractional units entitlement. Defaults to Floor. Available values: Floor, Ceiling, RoundHalfUp, RoundHalfDown, RoundToDecimalPlaces, BuyUp, BankerRounding.",
+                "nullable": true
+              },
+              "fractionalUnitsDecimalPlaces": {
+                "type": "integer",
+                "description": "The number of decimal places to round to when FractionalUnitsRoundingConvention is RoundToDecimalPlaces.",
+                "format": "int32",
                 "nullable": true
               },
               "instrumentEventType": {
@@ -261322,6 +262386,17 @@
                 "description": "The currency of the cash paid in lieu of fractionalUnits.",
                 "nullable": true
               },
+              "fractionalUnitsRoundingConvention": {
+                "type": "string",
+                "description": "The convention used to round the fractional units entitlement. Defaults to Floor. Available values: Floor, Ceiling, RoundHalfUp, RoundHalfDown, RoundToDecimalPlaces, BuyUp, BankerRounding.",
+                "nullable": true
+              },
+              "fractionalUnitsDecimalPlaces": {
+                "type": "integer",
+                "description": "The number of decimal places to round to when FractionalUnitsRoundingConvention is RoundToDecimalPlaces.",
+                "format": "int32",
+                "nullable": true
+              },
               "securityOfferElections": {
                 "type": "array",
                 "items": {
@@ -261621,10 +262696,12 @@
                   "MasteredInstrument",
                   "LoanFacility",
                   "FlexibleDeposit",
-                  "FlexibleRepo"
+                  "FlexibleRepo",
+                  "ToBeAnnounced",
+                  "VolatilitySwap"
                 ],
                 "type": "string",
-                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo."
+                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap."
               }
             }
           }
@@ -261958,6 +263035,113 @@
         "additionalProperties": false,
         "description": "Provides information on the primary time zone of an instrument and optional cut labels\r\nfor defining times to be used by instrument events."
       },
+      "ToBeAnnounced": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/LusidInstrument"
+          },
+          {
+            "required": [
+              "domCcy",
+              "instrumentType",
+              "maturityDate",
+              "startDate"
+            ],
+            "type": "object",
+            "properties": {
+              "startDate": {
+                "type": "string",
+                "description": "The trade inception date of the TBA.",
+                "format": "date-time"
+              },
+              "maturityDate": {
+                "type": "string",
+                "description": "The contractual settlement date of the TBA (e.g. the agency's announced settlement date for the month).",
+                "format": "date-time"
+              },
+              "domCcy": {
+                "type": "string",
+                "description": "The domestic currency of the TBA."
+              },
+              "agency": {
+                "type": "string",
+                "description": "The issuing agency of the underlying generic collateral, e.g. \"FNMA\", \"FHLMC\", \"GNMA\".\r\nNote this property does not impact valuation. From a LUSID analytics perspective, it is purely informational.",
+                "nullable": true
+              },
+              "coupon": {
+                "type": "number",
+                "description": "The stated coupon rate of the underlying generic collateral, e.g. 3.0, 4.5.\r\nNote this property does not impact valuation - there are no coupon cash flows on the TBA itself.\r\nFrom a LUSID analytics perspective, it is purely informational.",
+                "format": "double",
+                "nullable": true
+              },
+              "tenor": {
+                "type": "string",
+                "description": "The tenor of the underlying generic collateral, e.g. \"30Y\", \"15Y\".\r\nNote this property does not impact valuation. From a LUSID analytics perspective, it is purely informational.",
+                "nullable": true
+              },
+              "timeZoneConventions": {
+                "$ref": "#/components/schemas/TimeZoneConventions"
+              },
+              "tradingConventions": {
+                "$ref": "#/components/schemas/TradingConventions"
+              },
+              "instrumentType": {
+                "enum": [
+                  "QuotedSecurity",
+                  "InterestRateSwap",
+                  "FxForward",
+                  "Future",
+                  "ExoticInstrument",
+                  "FxOption",
+                  "CreditDefaultSwap",
+                  "InterestRateSwaption",
+                  "Bond",
+                  "EquityOption",
+                  "FixedLeg",
+                  "FloatingLeg",
+                  "BespokeCashFlowsLeg",
+                  "Unknown",
+                  "TermDeposit",
+                  "ContractForDifference",
+                  "EquitySwap",
+                  "CashPerpetual",
+                  "CapFloor",
+                  "CashSettled",
+                  "CdsIndex",
+                  "Basket",
+                  "FundingLeg",
+                  "FxSwap",
+                  "ForwardRateAgreement",
+                  "SimpleInstrument",
+                  "Repo",
+                  "Equity",
+                  "ExchangeTradedOption",
+                  "ReferenceInstrument",
+                  "ComplexBond",
+                  "InflationLinkedBond",
+                  "InflationSwap",
+                  "SimpleCashFlowLoan",
+                  "TotalReturnSwap",
+                  "InflationLeg",
+                  "FundShareClass",
+                  "FlexibleLoan",
+                  "UnsettledCash",
+                  "Cash",
+                  "MasteredInstrument",
+                  "LoanFacility",
+                  "FlexibleDeposit",
+                  "FlexibleRepo",
+                  "ToBeAnnounced",
+                  "VolatilitySwap"
+                ],
+                "type": "string",
+                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap."
+              }
+            }
+          }
+        ],
+        "description": "LUSID representation of a TBA (To Be Announced) forward contract for generic agency mortgage-backed securities.\r\nValued as Quantity x Price via EOD quote lookup; carries no coupon cashflows, accrual or factor."
+      },
       "TotalReturnSwap": {
         "allOf": [
           {
@@ -262045,10 +263229,12 @@
                   "MasteredInstrument",
                   "LoanFacility",
                   "FlexibleDeposit",
-                  "FlexibleRepo"
+                  "FlexibleRepo",
+                  "ToBeAnnounced",
+                  "VolatilitySwap"
                 ],
                 "type": "string",
-                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo."
+                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap."
               }
             }
           }
@@ -264880,7 +266066,7 @@
             "minLength": 1,
             "pattern": "^[a-zA-Z0-9\\-_]+$",
             "type": "string",
-            "description": "The code of identifier's (property) definition. This describes what the identifier represents.\r\nFor a Person this might be a username, nationalInsuranceNumber or similar.\r\nFor a Legal Entity, this might be a registeredCompanyNumber or LEI."
+            "description": "The code of identifier's (property) definition. This describes what the identifier represents.\r\nFor a Legal Entity, this might be a registeredCompanyNumber or LEI."
           },
           "code": {
             "maxLength": 64,
@@ -264891,7 +266077,7 @@
           }
         },
         "additionalProperties": false,
-        "description": "Represents the user-defined identifier for a Legal Entity or Person.\r\nUsers can define their own, scoped identifiers for Legal Entities and Persons using identifier properties.\r\nFor example,\r\nwhen used to identify a Person, the identifier defined by Person/myScope/username would be represented as\r\n {\r\n   \"idTypeScope\": \"myScope\",\r\n   \"idTypeCode\": \"username\",\r\n   \"code\": \"john_doe_001\"\r\n }"
+        "description": "Represents the user-defined identifier for a Legal Entity.\r\nUsers can define their own, scoped identifiers for Legal Entities using identifier properties.\r\nFor example,\r\nwhen used to identify a Legal Entity, the identifier defined by LegalEntity/myScope/1234ABC0000000000063 would be represented as\r\n {\r\n   \"idTypeScope\": \"myScope\",\r\n   \"idTypeCode\": \"1234ABC0000000000063\",\r\n   \"code\": \"ACME_CO\"\r\n }"
       },
       "UnconfirmClosedPeriodRequest": {
         "type": "object",
@@ -268291,6 +269477,14 @@
             "description": "The apportionment results for the valuation point: one fund-level entry plus one entry per allocation group.",
             "nullable": true
           },
+          "bucketSetResults": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BucketSetResult"
+            },
+            "description": "The bucket set results for the valuation point: for each bucket set, the per-node (fund and share class) buckets and NAV.",
+            "nullable": true
+          },
           "links": {
             "type": "array",
             "items": {
@@ -269861,6 +271055,117 @@
         },
         "additionalProperties": false,
         "description": "Rows identified by the composite id, based on the data maps"
+      },
+      "VolatilitySwap": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/LusidInstrument"
+          },
+          {
+            "required": [
+              "domCcy",
+              "instrumentType",
+              "maturityDate",
+              "notional",
+              "priceDenominator",
+              "startDate"
+            ],
+            "type": "object",
+            "properties": {
+              "startDate": {
+                "type": "string",
+                "description": "The start date of the instrument. This is normally synonymous with the trade-date.",
+                "format": "date-time"
+              },
+              "maturityDate": {
+                "type": "string",
+                "description": "The final maturity date of the instrument. This means the last date on which the instruments makes a payment of any amount.\r\nFor the avoidance of doubt, that is not necessarily prior to its last sensitivity date for the purposes of risk; e.g. instruments such as\r\nConstant Maturity Swaps (CMS) often have sensitivities to rates that may well be observed or set prior to the maturity date, but refer to a termination date beyond it.",
+                "format": "date-time"
+              },
+              "domCcy": {
+                "type": "string",
+                "description": "The domestic currency of the instrument, in which the looked-up price and market value are\r\ndenominated. Quotes supplied in a minor unit of this currency (e.g. GBp) are re-denominated\r\nto it by the lookup pricer."
+              },
+              "strike": {
+                "type": "number",
+                "description": "The variance or volatility strike agreed at trade date, stored for reference only.\r\nNot used in valuation or close-out.",
+                "format": "double",
+                "nullable": true
+              },
+              "notional": {
+                "type": "number",
+                "description": "The agreed notional for the swap. The sign conveys direction (a negative notional held long\r\nproduces a negative market value).",
+                "format": "double"
+              },
+              "priceDenominator": {
+                "type": "integer",
+                "description": "Scalar divisor applied in the market value calculation:\r\nMktVal = Quantity x Notional x Price / PriceDenominator.\r\n1 for volatility swaps (VOLS) and 100 for variance swaps (VARS). Must be positive.",
+                "format": "int32"
+              },
+              "timeZoneConventions": {
+                "$ref": "#/components/schemas/TimeZoneConventions"
+              },
+              "underlying": {
+                "type": "string",
+                "description": "Free-text reference label identifying the underlying index or asset (e.g. 'SPX', 'SX5E', 'KOSPI2').\r\nReference only; not used in valuation.",
+                "nullable": true
+              },
+              "instrumentType": {
+                "enum": [
+                  "QuotedSecurity",
+                  "InterestRateSwap",
+                  "FxForward",
+                  "Future",
+                  "ExoticInstrument",
+                  "FxOption",
+                  "CreditDefaultSwap",
+                  "InterestRateSwaption",
+                  "Bond",
+                  "EquityOption",
+                  "FixedLeg",
+                  "FloatingLeg",
+                  "BespokeCashFlowsLeg",
+                  "Unknown",
+                  "TermDeposit",
+                  "ContractForDifference",
+                  "EquitySwap",
+                  "CashPerpetual",
+                  "CapFloor",
+                  "CashSettled",
+                  "CdsIndex",
+                  "Basket",
+                  "FundingLeg",
+                  "FxSwap",
+                  "ForwardRateAgreement",
+                  "SimpleInstrument",
+                  "Repo",
+                  "Equity",
+                  "ExchangeTradedOption",
+                  "ReferenceInstrument",
+                  "ComplexBond",
+                  "InflationLinkedBond",
+                  "InflationSwap",
+                  "SimpleCashFlowLoan",
+                  "TotalReturnSwap",
+                  "InflationLeg",
+                  "FundShareClass",
+                  "FlexibleLoan",
+                  "UnsettledCash",
+                  "Cash",
+                  "MasteredInstrument",
+                  "LoanFacility",
+                  "FlexibleDeposit",
+                  "FlexibleRepo",
+                  "ToBeAnnounced",
+                  "VolatilitySwap"
+                ],
+                "type": "string",
+                "description": "Available values: QuotedSecurity, InterestRateSwap, FxForward, Future, ExoticInstrument, FxOption, CreditDefaultSwap, InterestRateSwaption, Bond, EquityOption, FixedLeg, FloatingLeg, BespokeCashFlowsLeg, Unknown, TermDeposit, ContractForDifference, EquitySwap, CashPerpetual, CapFloor, CashSettled, CdsIndex, Basket, FundingLeg, FxSwap, ForwardRateAgreement, SimpleInstrument, Repo, Equity, ExchangeTradedOption, ReferenceInstrument, ComplexBond, InflationLinkedBond, InflationSwap, SimpleCashFlowLoan, TotalReturnSwap, InflationLeg, FundShareClass, FlexibleLoan, UnsettledCash, Cash, MasteredInstrument, LoanFacility, FlexibleDeposit, FlexibleRepo, ToBeAnnounced, VolatilitySwap."
+              }
+            }
+          }
+        ],
+        "description": "LUSID representation of an OTC variance or volatility swap. A single-leg, bullet instrument with no\r\nschedule, no interim cashflows and no accrual. Its market value is supplied by lookup pricing as\r\nQuantity x Notional x Price / PriceDenominator, where the unit price arrives via the quote store\r\nalready netted against the strike. The variance/volatility distinction is expressed purely through the\r\nscalar (1 for volatility swaps, 100 for variance swaps) and instrument\r\nproperties; it is not a first-class field."
       },
       "Warning": {
         "required": [
