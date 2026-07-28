@@ -46,6 +46,7 @@ import {OrderManagementApi} from './api/orderManagementApi';
 import {OrdersApi} from './api/ordersApi';
 import {PackagesApi} from './api/packagesApi';
 import {ParticipationsApi} from './api/participationsApi';
+import {PaymentInstructionsApi} from './api/paymentInstructionsApi';
 import {PersonsApi} from './api/personsApi';
 import {PlacementsApi} from './api/placementsApi';
 import {PortfolioGroupsApi} from './api/portfolioGroupsApi';
@@ -135,6 +136,7 @@ export class Api {
     public orders:  OrdersApi
     public packages:  PackagesApi
     public participations:  ParticipationsApi
+    public paymentInstructions:  PaymentInstructionsApi
     public persons:  PersonsApi
     public placements:  PlacementsApi
     public portfolioGroups:  PortfolioGroupsApi
