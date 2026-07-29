@@ -1192,6 +1192,7 @@ export * from './quoteType';
 export * from './rateCurveShiftDefinition';
 export * from './rateCurveShiftDefinitionAllOf';
 export * from './rateCurveShiftMode';
+export * from './rateCurveShiftScale';
 export * from './rawVendorEvent';
 export * from './rawVendorEventAllOf';
 export * from './reOpenPeriodDiaryEntryRequest';
@@ -1378,6 +1379,7 @@ export * from './runCheckRequest';
 export * from './runCheckResponse';
 export * from './scalingMethodology';
 export * from './scenarioDefinition';
+export * from './scenarioReference';
 export * from './scenarioShiftDefinition';
 export * from './scenarioShiftType';
 export * from './schedule';
@@ -2937,6 +2939,7 @@ import { QuoteType } from './quoteType';
 import { RateCurveShiftDefinition } from './rateCurveShiftDefinition';
 import { RateCurveShiftDefinitionAllOf } from './rateCurveShiftDefinitionAllOf';
 import { RateCurveShiftMode } from './rateCurveShiftMode';
+import { RateCurveShiftScale } from './rateCurveShiftScale';
 import { RawVendorEvent } from './rawVendorEvent';
 import { RawVendorEventAllOf } from './rawVendorEventAllOf';
 import { ReOpenPeriodDiaryEntryRequest } from './reOpenPeriodDiaryEntryRequest';
@@ -3123,6 +3126,7 @@ import { RunCheckRequest } from './runCheckRequest';
 import { RunCheckResponse } from './runCheckResponse';
 import { ScalingMethodology } from './scalingMethodology';
 import { ScenarioDefinition } from './scenarioDefinition';
+import { ScenarioReference } from './scenarioReference';
 import { ScenarioShiftDefinition } from './scenarioShiftDefinition';
 import { ScenarioShiftType } from './scenarioShiftType';
 import { Schedule } from './schedule';
@@ -4026,10 +4030,13 @@ let enumsMap: {[index: string]: any} = {
         "QuoteSeriesId.QuoteTypeEnum": QuoteSeriesId.QuoteTypeEnum,
         "QuoteType": QuoteType,
         "RateCurveShiftDefinition.ShiftTypeEnum": RateCurveShiftDefinition.ShiftTypeEnum,
+        "RateCurveShiftDefinition.ScaleEnum": RateCurveShiftDefinition.ScaleEnum,
         "RateCurveShiftDefinition.ScenarioShiftTypeEnum": RateCurveShiftDefinition.ScenarioShiftTypeEnum,
         "RateCurveShiftDefinitionAllOf.ShiftTypeEnum": RateCurveShiftDefinitionAllOf.ShiftTypeEnum,
+        "RateCurveShiftDefinitionAllOf.ScaleEnum": RateCurveShiftDefinitionAllOf.ScaleEnum,
         "RateCurveShiftDefinitionAllOf.ScenarioShiftTypeEnum": RateCurveShiftDefinitionAllOf.ScenarioShiftTypeEnum,
         "RateCurveShiftMode": RateCurveShiftMode,
+        "RateCurveShiftScale": RateCurveShiftScale,
         "RawVendorEvent.InstrumentEventTypeEnum": RawVendorEvent.InstrumentEventTypeEnum,
         "RawVendorEventAllOf.InstrumentEventTypeEnum": RawVendorEventAllOf.InstrumentEventTypeEnum,
         "RecombineStep.ComplianceStepTypeEnum": RecombineStep.ComplianceStepTypeEnum,
@@ -5502,6 +5509,7 @@ let typeMap: {[index: string]: any} = {
     "RunCheckRequest": RunCheckRequest,
     "RunCheckResponse": RunCheckResponse,
     "ScenarioDefinition": ScenarioDefinition,
+    "ScenarioReference": ScenarioReference,
     "ScenarioShiftDefinition": ScenarioShiftDefinition,
     "Schedule": Schedule,
     "Schema": Schema,
