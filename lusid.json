@@ -9,7 +9,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "2.0.1578",
+    "version": "2.0.1579",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -94620,6 +94620,7 @@
                       "ordered": {
                         "quantity": 1500,
                         "quantityByState": {},
+                        "amountByState": {},
                         "details": [
                           {
                             "id": {
@@ -94792,6 +94793,7 @@
                       "ordered": {
                         "quantity": 1500,
                         "quantityByState": {},
+                        "amountByState": {},
                         "details": [
                           {
                             "id": {
@@ -94964,6 +94966,7 @@
                       "ordered": {
                         "quantity": 1500,
                         "quantityByState": {},
+                        "amountByState": {},
                         "details": [
                           {
                             "id": {
@@ -99099,7 +99102,7 @@
         "tags": [
           "Order Management"
         ],
-        "summary": "CreateOrders: Upsert a Block and associated orders",
+        "summary": "CreateOrders: Create Orders and create/update Block",
         "description": "Create orders, and blocks if they don't already exist.\r\nThis will fail if the block exists and already references orders with differing blocking fields.",
         "operationId": "CreateOrders",
         "requestBody": {
@@ -143291,6 +143294,516 @@
                     "asAtVersionNumber": 2,
                     "entityUniqueId": "67cd5403-60d3-4744-8455-c4522a3886cb"
                   }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      }
+    },
+    "/api/recs/resultsets": {
+      "get": {
+        "tags": [
+          "Rec Result Sets"
+        ],
+        "summary": "[EXPERIMENTAL] ListRecResultSets: ListRecResultSets",
+        "description": "List rec result sets.",
+        "operationId": "ListRecResultSets",
+        "parameters": [
+          {
+            "name": "asAt",
+            "in": "query",
+            "description": "The asAt datetime at which to list result sets. Defaults to latest if not specified.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "x-nullable": true
+          },
+          {
+            "name": "includePreviousRuns",
+            "in": "query",
+            "description": "When true, each item's previousRuns array is populated with prior run snapshots. Defaults to false.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            },
+            "x-nullable": true
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "The pagination token to use to continue listing result sets from a previous call. If a pagination token is provided the filter and asAt fields must not have changed since the original request.",
+            "schema": {
+              "maxLength": 500,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\+/]*={0,3}$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "When paginating, limit the number of returned results to this many. Defaults to 100 if not specified.",
+            "schema": {
+              "maximum": 5000,
+              "minimum": 1,
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-nullable": true
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Expression to filter the result set. Read more about filtering results from LUSID here https://support.lusid.com/filtering-results-from-lusid.",
+            "schema": {
+              "maxLength": 16384,
+              "minLength": 0,
+              "pattern": "^[\\s\\S]*$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "sortBy",
+            "in": "query",
+            "description": "A list of field names suffixed by \" ASC\" or \" DESC\".",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The rec result sets.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedResourceListOfRecResultSet"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedResourceListOfRecResultSet"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedResourceListOfRecResultSet"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      }
+    },
+    "/api/recs/resultsets/{entityUniqueId}": {
+      "get": {
+        "tags": [
+          "Rec Result Sets"
+        ],
+        "summary": "[EXPERIMENTAL] GetRecResultSet: GetRecResultSet",
+        "description": "Retrieve a single rec result set by its entity unique id.",
+        "operationId": "GetRecResultSet",
+        "parameters": [
+          {
+            "name": "entityUniqueId",
+            "in": "path",
+            "description": "The entity unique id of the rec result set (its version.entityUniqueId).",
+            "required": true,
+            "schema": {
+              "maxLength": 36,
+              "minLength": 36,
+              "pattern": "^[a-zA-Z0-9\\-]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "asAt",
+            "in": "query",
+            "description": "The asAt datetime at which to retrieve the result set. Defaults to latest if not specified.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "x-nullable": true
+          },
+          {
+            "name": "includePreviousRuns",
+            "in": "query",
+            "description": "When true, the previousRuns array is populated with prior run snapshots. Defaults to false.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            },
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The requested rec result set.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecResultSet"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecResultSet"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecResultSet"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      }
+    },
+    "/api/recs/resultsets/{entityUniqueId}/$decide": {
+      "post": {
+        "tags": [
+          "Rec Result Sets"
+        ],
+        "summary": "[EXPERIMENTAL] AddRecResultSetApprovalDecision: AddRecResultSetApprovalDecision",
+        "description": "Add an approver decision (approve or request revisions) to a rec result set.",
+        "operationId": "AddRecResultSetApprovalDecision",
+        "parameters": [
+          {
+            "name": "entityUniqueId",
+            "in": "path",
+            "description": "The entity unique id of the rec result set (its version.entityUniqueId).",
+            "required": true,
+            "schema": {
+              "maxLength": 36,
+              "minLength": 36,
+              "pattern": "^[a-zA-Z0-9\\-]+$",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The approval decision request.",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RecResultSetApprovalDecisionRequest"
+              },
+              "example": {
+                "approvalCode": "Desk",
+                "decision": "RequestRevisions",
+                "reason": "Please re-check the flagged holding breaks.",
+                "requestedResultRevisions": [
+                  {
+                    "recResultId": "00000000-0000-0000-0000-000000000001",
+                    "commentText": "This break needs a second look."
+                  }
+                ]
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RecResultSetApprovalDecisionRequest"
+              },
+              "example": {
+                "approvalCode": "Desk",
+                "decision": "RequestRevisions",
+                "reason": "Please re-check the flagged holding breaks.",
+                "requestedResultRevisions": [
+                  {
+                    "recResultId": "00000000-0000-0000-0000-000000000001",
+                    "commentText": "This break needs a second look."
+                  }
+                ]
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RecResultSetApprovalDecisionRequest"
+              },
+              "example": {
+                "approvalCode": "Desk",
+                "decision": "RequestRevisions",
+                "reason": "Please re-check the flagged holding breaks.",
+                "requestedResultRevisions": [
+                  {
+                    "recResultId": "00000000-0000-0000-0000-000000000001",
+                    "commentText": "This break needs a second look."
+                  }
+                ]
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RecResultSetApprovalDecisionRequest"
+              },
+              "example": {
+                "approvalCode": "Desk",
+                "decision": "RequestRevisions",
+                "reason": "Please re-check the flagged holding breaks.",
+                "requestedResultRevisions": [
+                  {
+                    "recResultId": "00000000-0000-0000-0000-000000000001",
+                    "commentText": "This break needs a second look."
+                  }
+                ]
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "The updated rec result set.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecResultSet"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecResultSet"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecResultSet"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      }
+    },
+    "/api/recs/resultsets/{entityUniqueId}/$submit": {
+      "post": {
+        "tags": [
+          "Rec Result Sets"
+        ],
+        "summary": "[EXPERIMENTAL] SubmitRecResultSetReview: Submit a rec result set review for approval, or resubmit after addressing requested revisions.",
+        "description": "Submit a rec result set review for approval, or resubmit after addressing requested revisions.",
+        "operationId": "SubmitRecResultSetReview",
+        "parameters": [
+          {
+            "name": "entityUniqueId",
+            "in": "path",
+            "description": "The entity unique id of the rec result set (its version.entityUniqueId).",
+            "required": true,
+            "schema": {
+              "maxLength": 36,
+              "minLength": 36,
+              "pattern": "^[a-zA-Z0-9\\-]+$",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The submission request.",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubmitRecResultSetReviewRequest"
+              },
+              "example": {
+                "commentText": "Reviewed all breaks; ready for approval."
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubmitRecResultSetReviewRequest"
+              },
+              "example": {
+                "commentText": "Reviewed all breaks; ready for approval."
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubmitRecResultSetReviewRequest"
+              },
+              "example": {
+                "commentText": "Reviewed all breaks; ready for approval."
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubmitRecResultSetReviewRequest"
+              },
+              "example": {
+                "commentText": "Reviewed all breaks; ready for approval."
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "The updated rec result set.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecResultSet"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecResultSet"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecResultSet"
                 }
               }
             }
@@ -205455,7 +205968,6 @@
           "isSwept",
           "lusidInstrumentId",
           "orderIds",
-          "quantity",
           "side"
         ],
         "type": "object",
@@ -205494,7 +206006,11 @@
           "quantity": {
             "type": "number",
             "description": "The total quantity of given instrument ordered.",
-            "format": "double"
+            "format": "double",
+            "nullable": true
+          },
+          "amount": {
+            "$ref": "#/components/schemas/CurrencyAndAmount"
           },
           "side": {
             "minLength": 1,
@@ -205661,8 +206177,7 @@
       },
       "BlockedOrderRequest": {
         "required": [
-          "id",
-          "quantity"
+          "id"
         ],
         "type": "object",
         "properties": {
@@ -205677,7 +206192,11 @@
           "quantity": {
             "type": "number",
             "description": "The quantity of the given instrument ordered.",
-            "format": "double"
+            "format": "double",
+            "nullable": true
+          },
+          "amount": {
+            "$ref": "#/components/schemas/CurrencyAndAmount"
           },
           "orderBookId": {
             "$ref": "#/components/schemas/ResourceId"
@@ -205720,7 +206239,6 @@
           "createdDate",
           "id",
           "instrumentIdentifiers",
-          "quantity",
           "side"
         ],
         "type": "object",
@@ -205755,7 +206273,11 @@
           "quantity": {
             "type": "number",
             "description": "The total quantity of given instrument ordered.",
-            "format": "double"
+            "format": "double",
+            "nullable": true
+          },
+          "amount": {
+            "$ref": "#/components/schemas/CurrencyAndAmount"
           },
           "side": {
             "minLength": 1,
@@ -211638,6 +212160,12 @@
                 "type": "number",
                 "description": "The price the complex bond was issued at. This is to be entered as a percentage of par, for example a value of 98.5 would represent 98.5%.",
                 "format": "double",
+                "nullable": true
+              },
+              "issueDate": {
+                "type": "string",
+                "description": "The date the bond was issued to the market. This may be after the StartDate (dated date) from which interest accrues, for example for agency mortgage-backed securities. The payment schedule is unchanged, but no coupon entitlement (ex-dividend) date can fall before this date: a buyer settling on the issue date is entitled to the first coupon, and accrued interest includes completed-but-unpaid coupons until their entitlement passes.",
+                "format": "date-time",
                 "nullable": true
               },
               "roundingConventions": {
@@ -243159,15 +243687,15 @@
       },
       "OrderGraphBlockOrderSynopsis": {
         "required": [
-          "details",
-          "quantity"
+          "details"
         ],
         "type": "object",
         "properties": {
           "quantity": {
             "type": "number",
             "description": "Total number of units ordered.",
-            "format": "double"
+            "format": "double",
+            "nullable": true
           },
           "quantityByState": {
             "type": "object",
@@ -243176,6 +243704,21 @@
               "format": "double"
             },
             "description": "Total number of units placed.",
+            "nullable": true
+          },
+          "amount": {
+            "type": "number",
+            "description": "Total monetary value ordered, in the block currency.",
+            "format": "double",
+            "nullable": true
+          },
+          "amountByState": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "number",
+              "format": "double"
+            },
+            "description": "Total monetary value ordered, broken down by order state.",
             "nullable": true
           },
           "details": {
@@ -246404,6 +246947,41 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/Reconciliation"
+            }
+          },
+          "href": {
+            "type": "string",
+            "format": "uri",
+            "nullable": true
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PagedResourceListOfRecResultSet": {
+        "required": [
+          "values"
+        ],
+        "type": "object",
+        "properties": {
+          "nextPage": {
+            "type": "string",
+            "nullable": true
+          },
+          "previousPage": {
+            "type": "string",
+            "nullable": true
+          },
+          "values": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RecResultSet"
             }
           },
           "href": {
@@ -254365,6 +254943,241 @@
         },
         "additionalProperties": false
       },
+      "RecApprovalDecision": {
+        "required": [
+          "approvalCode",
+          "asAtDecided",
+          "decision",
+          "userId"
+        ],
+        "type": "object",
+        "properties": {
+          "approvalCode": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The approval slot this decision satisfies. Must match a required approval code."
+          },
+          "decision": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The decision made. Available values: Approve, RequestRevisions."
+          },
+          "reason": {
+            "type": "string",
+            "description": "Rationale for the decision.",
+            "nullable": true
+          },
+          "userId": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The approver who made the decision."
+          },
+          "asAtDecided": {
+            "type": "string",
+            "description": "The asAt datetime at which the decision was made.",
+            "format": "date-time"
+          },
+          "asAtSuperseded": {
+            "type": "string",
+            "description": "The asAt datetime at which this entry was superseded. Null when it is the current standing entry.",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "An entry in the append-only log of approver decisions."
+      },
+      "RecClosedExceptionCounts": {
+        "required": [
+          "byClosureType",
+          "byReviewStatus",
+          "total"
+        ],
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "integer",
+            "description": "The total number of results in this category.",
+            "format": "int32"
+          },
+          "byClosureType": {
+            "$ref": "#/components/schemas/RecExceptionCountByClosureType"
+          },
+          "byReviewStatus": {
+            "$ref": "#/components/schemas/RecResultCountByReviewStatus"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Counts for results that are exceptions with a Closed status."
+      },
+      "RecDatesReconciled": {
+        "required": [
+          "leftAsAt",
+          "leftEffectiveAt",
+          "rightAsAt",
+          "rightEffectiveAt"
+        ],
+        "type": "object",
+        "properties": {
+          "leftEffectiveAt": {
+            "type": "string",
+            "description": "The effective datetime of the data reconciled on the left side.",
+            "format": "date-time"
+          },
+          "leftAsAt": {
+            "type": "string",
+            "description": "The asAt datetime of the data reconciled on the left side.",
+            "format": "date-time"
+          },
+          "rightEffectiveAt": {
+            "type": "string",
+            "description": "The effective datetime of the data reconciled on the right side.",
+            "format": "date-time"
+          },
+          "rightAsAt": {
+            "type": "string",
+            "description": "The asAt datetime of the data reconciled on the right side.",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false,
+        "description": "The left and right effective and asAt dates of the data reconciled in a run."
+      },
+      "RecExceptionCountByClosureType": {
+        "required": [
+          "accepted",
+          "cleared",
+          "forceMatched"
+        ],
+        "type": "object",
+        "properties": {
+          "cleared": {
+            "type": "integer",
+            "description": "The number of Cleared results.",
+            "format": "int32"
+          },
+          "accepted": {
+            "type": "integer",
+            "description": "The number of Accepted results.",
+            "format": "int32"
+          },
+          "forceMatched": {
+            "type": "integer",
+            "description": "The number of Force Matched results.",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Closed exception result counts broken down by closure type."
+      },
+      "RecExceptionCountByResultType": {
+        "required": [
+          "break",
+          "partialCross",
+          "partialMatch"
+        ],
+        "type": "object",
+        "properties": {
+          "break": {
+            "type": "integer",
+            "description": "The number of Break results.",
+            "format": "int32"
+          },
+          "partialMatch": {
+            "type": "integer",
+            "description": "The number of Partial Match results.",
+            "format": "int32"
+          },
+          "partialCross": {
+            "type": "integer",
+            "description": "The number of Partial Cross results.",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Exception result counts broken down by result type."
+      },
+      "RecExecution": {
+        "required": [
+          "outcome"
+        ],
+        "type": "object",
+        "properties": {
+          "outcome": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The execution outcome. Available values: Succeeded, Failed."
+          },
+          "errorDetail": {
+            "type": "string",
+            "description": "Detail of the execution failure. Populated when outcome is Failed.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "The execution outcome for a run."
+      },
+      "RecInstanceId": {
+        "required": [
+          "instanceIdType",
+          "instanceIdValue"
+        ],
+        "type": "object",
+        "properties": {
+          "instanceIdType": {
+            "minLength": 1,
+            "type": "string",
+            "description": "How the instance was created. Available values: WorkflowServiceTaskId, Manual."
+          },
+          "instanceIdValue": {
+            "maxLength": 36,
+            "minLength": 36,
+            "pattern": "^[a-zA-Z0-9\\-]+$",
+            "type": "string",
+            "description": "The instance identifier value (a GUID)."
+          }
+        },
+        "additionalProperties": false,
+        "description": "Identifies a rec instance, and how it was created."
+      },
+      "RecInstanceSummary": {
+        "required": [
+          "asAtInstantiated",
+          "id",
+          "recDefinitionId",
+          "status"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/RecInstanceId"
+          },
+          "recDefinitionId": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "asAtInstantiated": {
+            "type": "string",
+            "description": "The asAt datetime at which the instance was first created.",
+            "format": "date-time"
+          },
+          "workflowTaskInstantiated": {
+            "$ref": "#/components/schemas/RecWorkflowTask"
+          },
+          "status": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The instance-level lifecycle rollup. Available values: Running, Failures, ReviewAndApproval, AllApproved, Locked."
+          },
+          "asAtLocked": {
+            "type": "string",
+            "description": "The wall-clock time the lock action was performed. Null when the instance has not been locked.",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "A lightweight view of the rec instance, nested on each result set. It carries the instance-level\r\nstatus, which is how a result set surfaces the instance's running/locked state to the dashboard."
+      },
       "RecipeBlock": {
         "type": "object",
         "properties": {
@@ -254437,6 +255250,50 @@
         },
         "additionalProperties": false,
         "description": "Recipe value represents a data that is then used to perform an atomic operation which is then used in composition of Configuration Recipe.\r\nThis object either includes the data itself (in json form or as simple string) or is a reference where the data can be obtained from (from a Configuration Recipe say).\r\nOnly one field is to be populated."
+      },
+      "RecMatchCountByResultType": {
+        "required": [
+          "cross",
+          "match"
+        ],
+        "type": "object",
+        "properties": {
+          "match": {
+            "type": "integer",
+            "description": "The number of Match results.",
+            "format": "int32"
+          },
+          "cross": {
+            "type": "integer",
+            "description": "The number of Cross results.",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Match result counts broken down by result type."
+      },
+      "RecMatchCounts": {
+        "required": [
+          "byResultType",
+          "byReviewStatus",
+          "total"
+        ],
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "integer",
+            "description": "The total number of results in this category.",
+            "format": "int32"
+          },
+          "byResultType": {
+            "$ref": "#/components/schemas/RecMatchCountByResultType"
+          },
+          "byReviewStatus": {
+            "$ref": "#/components/schemas/RecResultCountByReviewStatus"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Counts for non-exception results (Match, Cross)."
       },
       "RecombineStep": {
         "allOf": [
@@ -255015,6 +255872,421 @@
         },
         "additionalProperties": false,
         "description": "Specification for the transactions of a scheduled reconciliation"
+      },
+      "RecOpenExceptionCounts": {
+        "required": [
+          "byResultType",
+          "byReviewStatus",
+          "total"
+        ],
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "integer",
+            "description": "The total number of results in this category.",
+            "format": "int32"
+          },
+          "byResultType": {
+            "$ref": "#/components/schemas/RecExceptionCountByResultType"
+          },
+          "byReviewStatus": {
+            "$ref": "#/components/schemas/RecResultCountByReviewStatus"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Counts for results that are exceptions with an Open status."
+      },
+      "RecRequestedResultRevision": {
+        "required": [
+          "recResultId"
+        ],
+        "type": "object",
+        "properties": {
+          "recResultId": {
+            "maxLength": 36,
+            "minLength": 36,
+            "pattern": "^[a-zA-Z0-9\\-]+$",
+            "type": "string",
+            "description": "The identifier of the result to flag for re-review."
+          },
+          "commentText": {
+            "maxLength": 6000,
+            "minLength": 0,
+            "type": "string",
+            "description": "An optional per-result comment added to the result's user comments.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "A result flagged for re-review as part of a Request Revisions decision."
+      },
+      "RecRequiredApproval": {
+        "required": [
+          "approvalCode"
+        ],
+        "type": "object",
+        "properties": {
+          "approvalCode": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Client-defined identifier for the approval slot (e.g. 'Desk', 'Risk')."
+          },
+          "description": {
+            "type": "string",
+            "description": "Human-readable label for the approval slot.",
+            "nullable": true
+          },
+          "currentUserCanDecide": {
+            "type": "boolean",
+            "description": "Whether the calling user may decide this approval slot, pre-evaluated at request time."
+          }
+        },
+        "additionalProperties": false,
+        "description": "An approval slot required for a result set, passed through from the rec definition's review configuration."
+      },
+      "RecResultCountByReviewStatus": {
+        "required": [
+          "notRequired",
+          "required",
+          "reviewed"
+        ],
+        "type": "object",
+        "properties": {
+          "required": {
+            "type": "integer",
+            "description": "The number of results with review status Required.",
+            "format": "int32"
+          },
+          "notRequired": {
+            "type": "integer",
+            "description": "The number of results with review status Not Required.",
+            "format": "int32"
+          },
+          "reviewed": {
+            "type": "integer",
+            "description": "The number of results with review status Reviewed.",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Result counts broken down by review status."
+      },
+      "RecResultCounts": {
+        "required": [
+          "closedExceptions",
+          "matches",
+          "openExceptions"
+        ],
+        "type": "object",
+        "properties": {
+          "openExceptions": {
+            "$ref": "#/components/schemas/RecOpenExceptionCounts"
+          },
+          "closedExceptions": {
+            "$ref": "#/components/schemas/RecClosedExceptionCounts"
+          },
+          "matches": {
+            "$ref": "#/components/schemas/RecMatchCounts"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Counts of results broken down by the structural categories that align with the review configuration."
+      },
+      "RecResultSet": {
+        "required": [
+          "approvalStatus",
+          "datesReconciled",
+          "decisions",
+          "execution",
+          "previousRuns",
+          "recInstance",
+          "recType",
+          "requiredApprovals",
+          "resultCounts",
+          "review",
+          "runAsAt",
+          "runNumber",
+          "submissions"
+        ],
+        "type": "object",
+        "properties": {
+          "recType": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The type of rec that this result set belongs to (e.g. Holding). Together with the rec instance, this uniquely identifies the result set. Available values: Holding, Transaction, Valuation, CashHolding."
+          },
+          "recInstance": {
+            "$ref": "#/components/schemas/RecInstanceSummary"
+          },
+          "runNumber": {
+            "type": "integer",
+            "description": "The run number within the instance. Increments with each re-run.",
+            "format": "int32"
+          },
+          "runAsAt": {
+            "type": "string",
+            "description": "The asAt datetime at which the run happened.",
+            "format": "date-time"
+          },
+          "execution": {
+            "$ref": "#/components/schemas/RecExecution"
+          },
+          "datesReconciled": {
+            "$ref": "#/components/schemas/RecDatesReconciled"
+          },
+          "resultCounts": {
+            "$ref": "#/components/schemas/RecResultCounts"
+          },
+          "review": {
+            "$ref": "#/components/schemas/RecReview"
+          },
+          "approvalStatus": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The position of this result set in the approval ceremony. Available values: UnderReview, PendingApproval, RevisionsRequested, Approved, NotApplicable."
+          },
+          "requiredApprovals": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RecRequiredApproval"
+            },
+            "description": "The approval slots required for this result set, passed through from the rec definition's review configuration. May be empty."
+          },
+          "submissions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RecSubmission"
+            },
+            "description": "An append-only log of review submissions. May be empty."
+          },
+          "decisions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RecApprovalDecision"
+            },
+            "description": "An append-only log of approver decisions. May be empty."
+          },
+          "previousRuns": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RecSupersededRun"
+            },
+            "description": "Prior run snapshots, each frozen at the point of re-run. Populated only when includePreviousRuns is true."
+          },
+          "href": {
+            "type": "string",
+            "description": "The specific Uniform Resource Identifier (URI) for this resource at the requested effective and asAt datetime.",
+            "format": "uri",
+            "nullable": true
+          },
+          "version": {
+            "$ref": "#/components/schemas/Version"
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "The collection of reconciliation results for a given rec type within a rec instance. Identified by\r\nits rec type and instance. The latest run's data is promoted to the root; prior runs are available\r\nvia previousRuns."
+      },
+      "RecResultSetApprovalDecisionRequest": {
+        "required": [
+          "approvalCode",
+          "decision"
+        ],
+        "type": "object",
+        "properties": {
+          "approvalCode": {
+            "maxLength": 512,
+            "minLength": 1,
+            "type": "string",
+            "description": "The approval slot being decided. Must match a required approval code."
+          },
+          "decision": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The decision made. Available values: Approve, RequestRevisions."
+          },
+          "reason": {
+            "maxLength": 6000,
+            "minLength": 0,
+            "type": "string",
+            "description": "Rationale for the decision.",
+            "nullable": true
+          },
+          "requestedResultRevisions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RecRequestedResultRevision"
+            },
+            "description": "The results flagged for re-review. Only applicable when the decision is Request Revisions.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "The request for an approver to approve a submitted review or request revisions. Each call satisfies\r\n(or rejects) one approval slot from the result set's required approvals."
+      },
+      "RecReview": {
+        "required": [
+          "completionRatio",
+          "countNotRequired",
+          "countRequired",
+          "countReviewed"
+        ],
+        "type": "object",
+        "properties": {
+          "countReviewed": {
+            "type": "integer",
+            "description": "The number of results with review status Reviewed.",
+            "format": "int32"
+          },
+          "countRequired": {
+            "type": "integer",
+            "description": "The number of results with review status Required.",
+            "format": "int32"
+          },
+          "countNotRequired": {
+            "type": "integer",
+            "description": "The number of results with review status Not Required.",
+            "format": "int32"
+          },
+          "completionRatio": {
+            "type": "number",
+            "description": "Reviewed / (Reviewed + Required). Is 1.0 when the denominator is zero, and null when execution failed.",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false,
+        "description": "A summary of the per-result review state across the result set."
+      },
+      "RecSubmission": {
+        "required": [
+          "asAtSubmitted",
+          "userId"
+        ],
+        "type": "object",
+        "properties": {
+          "userId": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The user who submitted the review."
+          },
+          "commentText": {
+            "type": "string",
+            "description": "An optional comment from the submitter.",
+            "nullable": true
+          },
+          "asAtSubmitted": {
+            "type": "string",
+            "description": "The asAt datetime at which the submission was made.",
+            "format": "date-time"
+          },
+          "asAtSuperseded": {
+            "type": "string",
+            "description": "The asAt datetime at which this entry was superseded. Null when it is the current standing entry.",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "An entry in the append-only log of review submissions."
+      },
+      "RecSupersededRun": {
+        "required": [
+          "approvalStatus",
+          "datesReconciled",
+          "decisions",
+          "execution",
+          "requiredApprovals",
+          "resultCounts",
+          "review",
+          "runAsAt",
+          "runNumber",
+          "submissions",
+          "supersededAsAt"
+        ],
+        "type": "object",
+        "properties": {
+          "runNumber": {
+            "type": "integer",
+            "description": "The run number within the instance. Increments with each re-run.",
+            "format": "int32"
+          },
+          "runAsAt": {
+            "type": "string",
+            "description": "The asAt datetime at which the run happened.",
+            "format": "date-time"
+          },
+          "supersededAsAt": {
+            "type": "string",
+            "description": "The asAt datetime at which this run was superseded by a subsequent run.",
+            "format": "date-time"
+          },
+          "execution": {
+            "$ref": "#/components/schemas/RecExecution"
+          },
+          "datesReconciled": {
+            "$ref": "#/components/schemas/RecDatesReconciled"
+          },
+          "resultCounts": {
+            "$ref": "#/components/schemas/RecResultCounts"
+          },
+          "review": {
+            "$ref": "#/components/schemas/RecReview"
+          },
+          "approvalStatus": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The position of this result set in the approval ceremony. Available values: UnderReview, PendingApproval, RevisionsRequested, Approved, NotApplicable."
+          },
+          "requiredApprovals": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RecRequiredApproval"
+            },
+            "description": "The approval slots required for this result set, passed through from the rec definition's review configuration. May be empty."
+          },
+          "submissions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RecSubmission"
+            },
+            "description": "An append-only log of review submissions. May be empty."
+          },
+          "decisions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RecApprovalDecision"
+            },
+            "description": "An append-only log of approver decisions. May be empty."
+          }
+        },
+        "additionalProperties": false,
+        "description": "A prior run snapshot, frozen at the point of re-run. Has the same shape as the root-level run\r\nfields on the result set, plus the asAt at which the run was superseded."
+      },
+      "RecWorkflowTask": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The identifier of the workflow service task.",
+            "nullable": true
+          },
+          "taskDefinitionId": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "state": {
+            "type": "string",
+            "description": "The current state of the workflow service task.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "The workflow service task that instantiated a rec instance.\r\nMinimal placeholder until the full workflow service task DTO is available."
       },
       "ReferenceData": {
         "required": [
@@ -264266,6 +265538,20 @@
           }
         ],
         "description": "A criterion that checks whether a SubHoldingKey Value is equal to the given string value"
+      },
+      "SubmitRecResultSetReviewRequest": {
+        "type": "object",
+        "properties": {
+          "commentText": {
+            "maxLength": 6000,
+            "minLength": 0,
+            "type": "string",
+            "description": "An optional comment recorded on the submission.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "The request to submit a result set review for approval (or resubmit after addressing revisions)."
       },
       "SubscribeElection": {
         "required": [
@@ -274915,6 +276201,10 @@
       "description": "Methods for the storage and retrieval of Quotes. Read more about Quotes in the LUSID Knowledge Base here https://support.lusid.com/what-is-a-quote."
     },
     {
+      "name": "Rec Result Sets",
+      "description": "Endpoints for retrieving and acting on advanced reconciliation result sets."
+    },
+    {
       "name": "Reconciliations",
       "description": "Endpoints for performing reconciliations"
     },
@@ -275102,6 +276392,7 @@
       "Property Definitions",
       "QueryableKeys",
       "Quotes",
+      "Rec Result Sets",
       "Reconciliations",
       "Reference Portfolio",
       "ReferenceLists",

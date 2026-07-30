@@ -1030,6 +1030,7 @@ export * from './pagedResourceListOfPostingModuleResponse';
 export * from './pagedResourceListOfPostingModuleRule';
 export * from './pagedResourceListOfPropertyDefinition';
 export * from './pagedResourceListOfPropertyDefinitionSearchResult';
+export * from './pagedResourceListOfRecResultSet';
 export * from './pagedResourceListOfReconciliation';
 export * from './pagedResourceListOfReferenceListResponse';
 export * from './pagedResourceListOfRelationalDataPointResponse';
@@ -1206,6 +1207,27 @@ export * from './rawVendorEvent';
 export * from './rawVendorEventAllOf';
 export * from './reOpenPeriodDiaryEntryRequest';
 export * from './realisedGainLoss';
+export * from './recApprovalDecision';
+export * from './recClosedExceptionCounts';
+export * from './recDatesReconciled';
+export * from './recExceptionCountByClosureType';
+export * from './recExceptionCountByResultType';
+export * from './recExecution';
+export * from './recInstanceId';
+export * from './recInstanceSummary';
+export * from './recMatchCountByResultType';
+export * from './recMatchCounts';
+export * from './recOpenExceptionCounts';
+export * from './recRequestedResultRevision';
+export * from './recRequiredApproval';
+export * from './recResultCountByReviewStatus';
+export * from './recResultCounts';
+export * from './recResultSet';
+export * from './recResultSetApprovalDecisionRequest';
+export * from './recReview';
+export * from './recSubmission';
+export * from './recSupersededRun';
+export * from './recWorkflowTask';
 export * from './recipeBlock';
 export * from './recipeComposer';
 export * from './recipeValue';
@@ -1476,6 +1498,7 @@ export * from './structuredResultData';
 export * from './structuredResultDataId';
 export * from './subHoldingKeyValueEquals';
 export * from './subHoldingKeyValueEqualsAllOf';
+export * from './submitRecResultSetReviewRequest';
 export * from './subscribeElection';
 export * from './subscriptionDefinition';
 export * from './swapCashFlowEvent';
@@ -2786,6 +2809,7 @@ import { PagedResourceListOfPostingModuleResponse } from './pagedResourceListOfP
 import { PagedResourceListOfPostingModuleRule } from './pagedResourceListOfPostingModuleRule';
 import { PagedResourceListOfPropertyDefinition } from './pagedResourceListOfPropertyDefinition';
 import { PagedResourceListOfPropertyDefinitionSearchResult } from './pagedResourceListOfPropertyDefinitionSearchResult';
+import { PagedResourceListOfRecResultSet } from './pagedResourceListOfRecResultSet';
 import { PagedResourceListOfReconciliation } from './pagedResourceListOfReconciliation';
 import { PagedResourceListOfReferenceListResponse } from './pagedResourceListOfReferenceListResponse';
 import { PagedResourceListOfRelationalDataPointResponse } from './pagedResourceListOfRelationalDataPointResponse';
@@ -2962,6 +2986,27 @@ import { RawVendorEvent } from './rawVendorEvent';
 import { RawVendorEventAllOf } from './rawVendorEventAllOf';
 import { ReOpenPeriodDiaryEntryRequest } from './reOpenPeriodDiaryEntryRequest';
 import { RealisedGainLoss } from './realisedGainLoss';
+import { RecApprovalDecision } from './recApprovalDecision';
+import { RecClosedExceptionCounts } from './recClosedExceptionCounts';
+import { RecDatesReconciled } from './recDatesReconciled';
+import { RecExceptionCountByClosureType } from './recExceptionCountByClosureType';
+import { RecExceptionCountByResultType } from './recExceptionCountByResultType';
+import { RecExecution } from './recExecution';
+import { RecInstanceId } from './recInstanceId';
+import { RecInstanceSummary } from './recInstanceSummary';
+import { RecMatchCountByResultType } from './recMatchCountByResultType';
+import { RecMatchCounts } from './recMatchCounts';
+import { RecOpenExceptionCounts } from './recOpenExceptionCounts';
+import { RecRequestedResultRevision } from './recRequestedResultRevision';
+import { RecRequiredApproval } from './recRequiredApproval';
+import { RecResultCountByReviewStatus } from './recResultCountByReviewStatus';
+import { RecResultCounts } from './recResultCounts';
+import { RecResultSet } from './recResultSet';
+import { RecResultSetApprovalDecisionRequest } from './recResultSetApprovalDecisionRequest';
+import { RecReview } from './recReview';
+import { RecSubmission } from './recSubmission';
+import { RecSupersededRun } from './recSupersededRun';
+import { RecWorkflowTask } from './recWorkflowTask';
 import { RecipeBlock } from './recipeBlock';
 import { RecipeComposer } from './recipeComposer';
 import { RecipeValue } from './recipeValue';
@@ -3232,6 +3277,7 @@ import { StructuredResultData } from './structuredResultData';
 import { StructuredResultDataId } from './structuredResultDataId';
 import { SubHoldingKeyValueEquals } from './subHoldingKeyValueEquals';
 import { SubHoldingKeyValueEqualsAllOf } from './subHoldingKeyValueEqualsAllOf';
+import { SubmitRecResultSetReviewRequest } from './submitRecResultSetReviewRequest';
 import { SubscribeElection } from './subscribeElection';
 import { SubscriptionDefinition } from './subscriptionDefinition';
 import { SwapCashFlowEvent } from './swapCashFlowEvent';
@@ -5204,6 +5250,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfPostingModuleRule": PagedResourceListOfPostingModuleRule,
     "PagedResourceListOfPropertyDefinition": PagedResourceListOfPropertyDefinition,
     "PagedResourceListOfPropertyDefinitionSearchResult": PagedResourceListOfPropertyDefinitionSearchResult,
+    "PagedResourceListOfRecResultSet": PagedResourceListOfRecResultSet,
     "PagedResourceListOfReconciliation": PagedResourceListOfReconciliation,
     "PagedResourceListOfReferenceListResponse": PagedResourceListOfReferenceListResponse,
     "PagedResourceListOfRelationalDataPointResponse": PagedResourceListOfRelationalDataPointResponse,
@@ -5368,6 +5415,27 @@ let typeMap: {[index: string]: any} = {
     "RawVendorEventAllOf": RawVendorEventAllOf,
     "ReOpenPeriodDiaryEntryRequest": ReOpenPeriodDiaryEntryRequest,
     "RealisedGainLoss": RealisedGainLoss,
+    "RecApprovalDecision": RecApprovalDecision,
+    "RecClosedExceptionCounts": RecClosedExceptionCounts,
+    "RecDatesReconciled": RecDatesReconciled,
+    "RecExceptionCountByClosureType": RecExceptionCountByClosureType,
+    "RecExceptionCountByResultType": RecExceptionCountByResultType,
+    "RecExecution": RecExecution,
+    "RecInstanceId": RecInstanceId,
+    "RecInstanceSummary": RecInstanceSummary,
+    "RecMatchCountByResultType": RecMatchCountByResultType,
+    "RecMatchCounts": RecMatchCounts,
+    "RecOpenExceptionCounts": RecOpenExceptionCounts,
+    "RecRequestedResultRevision": RecRequestedResultRevision,
+    "RecRequiredApproval": RecRequiredApproval,
+    "RecResultCountByReviewStatus": RecResultCountByReviewStatus,
+    "RecResultCounts": RecResultCounts,
+    "RecResultSet": RecResultSet,
+    "RecResultSetApprovalDecisionRequest": RecResultSetApprovalDecisionRequest,
+    "RecReview": RecReview,
+    "RecSubmission": RecSubmission,
+    "RecSupersededRun": RecSupersededRun,
+    "RecWorkflowTask": RecWorkflowTask,
     "RecipeBlock": RecipeBlock,
     "RecipeComposer": RecipeComposer,
     "RecipeValue": RecipeValue,
@@ -5628,6 +5696,7 @@ let typeMap: {[index: string]: any} = {
     "StructuredResultDataId": StructuredResultDataId,
     "SubHoldingKeyValueEquals": SubHoldingKeyValueEquals,
     "SubHoldingKeyValueEqualsAllOf": SubHoldingKeyValueEqualsAllOf,
+    "SubmitRecResultSetReviewRequest": SubmitRecResultSetReviewRequest,
     "SubscribeElection": SubscribeElection,
     "SubscriptionDefinition": SubscriptionDefinition,
     "SwapCashFlowEvent": SwapCashFlowEvent,

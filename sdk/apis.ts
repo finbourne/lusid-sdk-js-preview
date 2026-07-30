@@ -55,6 +55,7 @@ import {PropertyDefinitionsApi} from './api/propertyDefinitionsApi';
 import {QueryableKeysApi} from './api/queryableKeysApi';
 import {QuotesApi} from './api/quotesApi';
 import {ReconciliationsApi} from './api/reconciliationsApi';
+import {RecResultSetsApi} from './api/recResultSetsApi';
 import {ReferenceListsApi} from './api/referenceListsApi';
 import {ReferencePortfolioApi} from './api/referencePortfolioApi';
 import {RelationalDatasetDefinitionApi} from './api/relationalDatasetDefinitionApi';
@@ -145,6 +146,7 @@ export class Api {
     public queryableKeys:  QueryableKeysApi
     public quotes:  QuotesApi
     public reconciliations:  ReconciliationsApi
+    public recResultSets:  RecResultSetsApi
     public referenceLists:  ReferenceListsApi
     public referencePortfolio:  ReferencePortfolioApi
     public relationalDatasetDefinition:  RelationalDatasetDefinitionApi
