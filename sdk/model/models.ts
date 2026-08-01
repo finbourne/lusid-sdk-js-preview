@@ -152,6 +152,8 @@ export * from './branchStepRequest';
 export * from './branchStepRequestAllOf';
 export * from './breakCodeSource';
 export * from './bucket';
+export * from './bucketDefinition';
+export * from './bucketSetDefinition';
 export * from './bucketSetNode';
 export * from './bucketSetResult';
 export * from './bucketSetResultBucket';
@@ -814,6 +816,7 @@ export * from './itemAndWorkspace';
 export * from './journalEntryLine';
 export * from './journalEntryLineShareClassBreakdown';
 export * from './journalEntryLinesQueryParameters';
+export * from './keyedMarketDataKeyRule';
 export * from './labelValueSet';
 export * from './lapseElection';
 export * from './legDefinition';
@@ -879,6 +882,8 @@ export * from './mbsPrincipalEvent';
 export * from './mbsPrincipalEventAllOf';
 export * from './mbsPrincipalWriteOffEvent';
 export * from './mbsPrincipalWriteOffEventAllOf';
+export * from './mdkrGroupShiftDefinition';
+export * from './mdkrGroupShiftDefinitionAllOf';
 export * from './membership';
 export * from './membershipAmendmentRequest';
 export * from './membershipAmendmentResponse';
@@ -1410,6 +1415,9 @@ export * from './runCheckRequest';
 export * from './runCheckResponse';
 export * from './scalingMethodology';
 export * from './scenarioDefinition';
+export * from './scenarioPreviewAppliedShift';
+export * from './scenarioPreviewRequest';
+export * from './scenarioPreviewResponse';
 export * from './scenarioReference';
 export * from './scenarioShiftDefinition';
 export * from './scenarioShiftType';
@@ -1525,6 +1533,8 @@ export * from './timeZoneConventions';
 export * from './timeline';
 export * from './toBeAnnounced';
 export * from './toBeAnnouncedAllOf';
+export * from './toBeAnnouncedOption';
+export * from './toBeAnnouncedOptionAllOf';
 export * from './totalReturnSwap';
 export * from './totalReturnSwapAllOf';
 export * from './touch';
@@ -1702,6 +1712,7 @@ export * from './valuationPoint';
 export * from './valuationPointDataQueryParameters';
 export * from './valuationPointDataRequest';
 export * from './valuationPointDataResponse';
+export * from './valuationPointEntity';
 export * from './valuationPointInstrument';
 export * from './valuationPointOverview';
 export * from './valuationPointResourceListOfAccountedComplexMarketData';
@@ -1931,6 +1942,8 @@ import { BranchStepRequest } from './branchStepRequest';
 import { BranchStepRequestAllOf } from './branchStepRequestAllOf';
 import { BreakCodeSource } from './breakCodeSource';
 import { Bucket } from './bucket';
+import { BucketDefinition } from './bucketDefinition';
+import { BucketSetDefinition } from './bucketSetDefinition';
 import { BucketSetNode } from './bucketSetNode';
 import { BucketSetResult } from './bucketSetResult';
 import { BucketSetResultBucket } from './bucketSetResultBucket';
@@ -2593,6 +2606,7 @@ import { ItemAndWorkspace } from './itemAndWorkspace';
 import { JournalEntryLine } from './journalEntryLine';
 import { JournalEntryLineShareClassBreakdown } from './journalEntryLineShareClassBreakdown';
 import { JournalEntryLinesQueryParameters } from './journalEntryLinesQueryParameters';
+import { KeyedMarketDataKeyRule } from './keyedMarketDataKeyRule';
 import { LabelValueSet } from './labelValueSet';
 import { LapseElection } from './lapseElection';
 import { LegDefinition } from './legDefinition';
@@ -2658,6 +2672,8 @@ import { MbsPrincipalEvent } from './mbsPrincipalEvent';
 import { MbsPrincipalEventAllOf } from './mbsPrincipalEventAllOf';
 import { MbsPrincipalWriteOffEvent } from './mbsPrincipalWriteOffEvent';
 import { MbsPrincipalWriteOffEventAllOf } from './mbsPrincipalWriteOffEventAllOf';
+import { MdkrGroupShiftDefinition } from './mdkrGroupShiftDefinition';
+import { MdkrGroupShiftDefinitionAllOf } from './mdkrGroupShiftDefinitionAllOf';
 import { Membership } from './membership';
 import { MembershipAmendmentRequest } from './membershipAmendmentRequest';
 import { MembershipAmendmentResponse } from './membershipAmendmentResponse';
@@ -3189,6 +3205,9 @@ import { RunCheckRequest } from './runCheckRequest';
 import { RunCheckResponse } from './runCheckResponse';
 import { ScalingMethodology } from './scalingMethodology';
 import { ScenarioDefinition } from './scenarioDefinition';
+import { ScenarioPreviewAppliedShift } from './scenarioPreviewAppliedShift';
+import { ScenarioPreviewRequest } from './scenarioPreviewRequest';
+import { ScenarioPreviewResponse } from './scenarioPreviewResponse';
 import { ScenarioReference } from './scenarioReference';
 import { ScenarioShiftDefinition } from './scenarioShiftDefinition';
 import { ScenarioShiftType } from './scenarioShiftType';
@@ -3304,6 +3323,8 @@ import { TimeZoneConventions } from './timeZoneConventions';
 import { Timeline } from './timeline';
 import { ToBeAnnounced } from './toBeAnnounced';
 import { ToBeAnnouncedAllOf } from './toBeAnnouncedAllOf';
+import { ToBeAnnouncedOption } from './toBeAnnouncedOption';
+import { ToBeAnnouncedOptionAllOf } from './toBeAnnouncedOptionAllOf';
 import { TotalReturnSwap } from './totalReturnSwap';
 import { TotalReturnSwapAllOf } from './totalReturnSwapAllOf';
 import { Touch } from './touch';
@@ -3481,6 +3502,7 @@ import { ValuationPoint } from './valuationPoint';
 import { ValuationPointDataQueryParameters } from './valuationPointDataQueryParameters';
 import { ValuationPointDataRequest } from './valuationPointDataRequest';
 import { ValuationPointDataResponse } from './valuationPointDataResponse';
+import { ValuationPointEntity } from './valuationPointEntity';
 import { ValuationPointInstrument } from './valuationPointInstrument';
 import { ValuationPointOverview } from './valuationPointOverview';
 import { ValuationPointResourceListOfAccountedComplexMarketData } from './valuationPointResourceListOfAccountedComplexMarketData';
@@ -3987,6 +4009,8 @@ let enumsMap: {[index: string]: any} = {
         "MbsPrincipalEventAllOf.InstrumentEventTypeEnum": MbsPrincipalEventAllOf.InstrumentEventTypeEnum,
         "MbsPrincipalWriteOffEvent.InstrumentEventTypeEnum": MbsPrincipalWriteOffEvent.InstrumentEventTypeEnum,
         "MbsPrincipalWriteOffEventAllOf.InstrumentEventTypeEnum": MbsPrincipalWriteOffEventAllOf.InstrumentEventTypeEnum,
+        "MdkrGroupShiftDefinition.ScenarioShiftTypeEnum": MdkrGroupShiftDefinition.ScenarioShiftTypeEnum,
+        "MdkrGroupShiftDefinitionAllOf.ScenarioShiftTypeEnum": MdkrGroupShiftDefinitionAllOf.ScenarioShiftTypeEnum,
         "MergerEvent.InstrumentEventTypeEnum": MergerEvent.InstrumentEventTypeEnum,
         "MergerEventAllOf.InstrumentEventTypeEnum": MergerEventAllOf.InstrumentEventTypeEnum,
         "ModelOptions.ModelOptionsTypeEnum": ModelOptions.ModelOptionsTypeEnum,
@@ -4208,6 +4232,8 @@ let enumsMap: {[index: string]: any} = {
         "TermDepositPrincipalEventAllOf.InstrumentEventTypeEnum": TermDepositPrincipalEventAllOf.InstrumentEventTypeEnum,
         "ToBeAnnounced.InstrumentTypeEnum": ToBeAnnounced.InstrumentTypeEnum,
         "ToBeAnnouncedAllOf.InstrumentTypeEnum": ToBeAnnouncedAllOf.InstrumentTypeEnum,
+        "ToBeAnnouncedOption.InstrumentTypeEnum": ToBeAnnouncedOption.InstrumentTypeEnum,
+        "ToBeAnnouncedOptionAllOf.InstrumentTypeEnum": ToBeAnnouncedOptionAllOf.InstrumentTypeEnum,
         "TotalReturnSwap.InstrumentTypeEnum": TotalReturnSwap.InstrumentTypeEnum,
         "TotalReturnSwapAllOf.InstrumentTypeEnum": TotalReturnSwapAllOf.InstrumentTypeEnum,
         "TradeTicket.TradeTicketTypeEnum": TradeTicket.TradeTicketTypeEnum,
@@ -4401,6 +4427,8 @@ let typeMap: {[index: string]: any} = {
     "BranchStepRequestAllOf": BranchStepRequestAllOf,
     "BreakCodeSource": BreakCodeSource,
     "Bucket": Bucket,
+    "BucketDefinition": BucketDefinition,
+    "BucketSetDefinition": BucketSetDefinition,
     "BucketSetNode": BucketSetNode,
     "BucketSetResult": BucketSetResult,
     "BucketSetResultBucket": BucketSetResultBucket,
@@ -5045,6 +5073,7 @@ let typeMap: {[index: string]: any} = {
     "JournalEntryLine": JournalEntryLine,
     "JournalEntryLineShareClassBreakdown": JournalEntryLineShareClassBreakdown,
     "JournalEntryLinesQueryParameters": JournalEntryLinesQueryParameters,
+    "KeyedMarketDataKeyRule": KeyedMarketDataKeyRule,
     "LabelValueSet": LabelValueSet,
     "LapseElection": LapseElection,
     "LegDefinition": LegDefinition,
@@ -5107,6 +5136,8 @@ let typeMap: {[index: string]: any} = {
     "MbsPrincipalEventAllOf": MbsPrincipalEventAllOf,
     "MbsPrincipalWriteOffEvent": MbsPrincipalWriteOffEvent,
     "MbsPrincipalWriteOffEventAllOf": MbsPrincipalWriteOffEventAllOf,
+    "MdkrGroupShiftDefinition": MdkrGroupShiftDefinition,
+    "MdkrGroupShiftDefinitionAllOf": MdkrGroupShiftDefinitionAllOf,
     "Membership": Membership,
     "MembershipAmendmentRequest": MembershipAmendmentRequest,
     "MembershipAmendmentResponse": MembershipAmendmentResponse,
@@ -5612,6 +5643,9 @@ let typeMap: {[index: string]: any} = {
     "RunCheckRequest": RunCheckRequest,
     "RunCheckResponse": RunCheckResponse,
     "ScenarioDefinition": ScenarioDefinition,
+    "ScenarioPreviewAppliedShift": ScenarioPreviewAppliedShift,
+    "ScenarioPreviewRequest": ScenarioPreviewRequest,
+    "ScenarioPreviewResponse": ScenarioPreviewResponse,
     "ScenarioReference": ScenarioReference,
     "ScenarioShiftDefinition": ScenarioShiftDefinition,
     "Schedule": Schedule,
@@ -5723,6 +5757,8 @@ let typeMap: {[index: string]: any} = {
     "Timeline": Timeline,
     "ToBeAnnounced": ToBeAnnounced,
     "ToBeAnnouncedAllOf": ToBeAnnouncedAllOf,
+    "ToBeAnnouncedOption": ToBeAnnouncedOption,
+    "ToBeAnnouncedOptionAllOf": ToBeAnnouncedOptionAllOf,
     "TotalReturnSwap": TotalReturnSwap,
     "TotalReturnSwapAllOf": TotalReturnSwapAllOf,
     "Touch": Touch,
@@ -5893,6 +5929,7 @@ let typeMap: {[index: string]: any} = {
     "ValuationPointDataQueryParameters": ValuationPointDataQueryParameters,
     "ValuationPointDataRequest": ValuationPointDataRequest,
     "ValuationPointDataResponse": ValuationPointDataResponse,
+    "ValuationPointEntity": ValuationPointEntity,
     "ValuationPointInstrument": ValuationPointInstrument,
     "ValuationPointOverview": ValuationPointOverview,
     "ValuationPointResourceListOfAccountedComplexMarketData": ValuationPointResourceListOfAccountedComplexMarketData,
