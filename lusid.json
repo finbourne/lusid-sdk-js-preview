@@ -9,7 +9,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "2.0.1581",
+    "version": "2.0.1582",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -93880,6 +93880,54 @@
           }
         ],
         "x-fbn-apistatus": "Stable"
+      }
+    },
+    "/api/metadata/asat": {
+      "get": {
+        "tags": [
+          "Application Metadata"
+        ],
+        "summary": "[EXPERIMENTAL] GetLatestAsAt: Get latest AsAt",
+        "description": "Get the latest asAt datetime of the system, i.e. the asAt datetime of the most recent write.\r\nThis is the asAt datetime that a request made without an explicit asAt resolves to.",
+        "operationId": "GetLatestAsAt",
+        "responses": {
+          "200": {
+            "description": "The latest asAt datetime of the system",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LatestAsAt"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LatestAsAt"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LatestAsAt"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
       }
     },
     "/api/metadata/downloads/exceladdin": {
@@ -238692,6 +238740,23 @@
         },
         "additionalProperties": false,
         "description": "Lapse election."
+      },
+      "LatestAsAt": {
+        "type": "object",
+        "properties": {
+          "asAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
       },
       "LegalEntity": {
         "type": "object",

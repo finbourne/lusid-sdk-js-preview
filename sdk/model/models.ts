@@ -819,6 +819,7 @@ export * from './journalEntryLinesQueryParameters';
 export * from './keyedMarketDataKeyRule';
 export * from './labelValueSet';
 export * from './lapseElection';
+export * from './latestAsAt';
 export * from './legDefinition';
 export * from './legalEntity';
 export * from './levelStep';
@@ -2609,6 +2610,7 @@ import { JournalEntryLinesQueryParameters } from './journalEntryLinesQueryParame
 import { KeyedMarketDataKeyRule } from './keyedMarketDataKeyRule';
 import { LabelValueSet } from './labelValueSet';
 import { LapseElection } from './lapseElection';
+import { LatestAsAt } from './latestAsAt';
 import { LegDefinition } from './legDefinition';
 import { LegalEntity } from './legalEntity';
 import { LevelStep } from './levelStep';
@@ -5076,6 +5078,7 @@ let typeMap: {[index: string]: any} = {
     "KeyedMarketDataKeyRule": KeyedMarketDataKeyRule,
     "LabelValueSet": LabelValueSet,
     "LapseElection": LapseElection,
+    "LatestAsAt": LatestAsAt,
     "LegDefinition": LegDefinition,
     "LegalEntity": LegalEntity,
     "LevelStep": LevelStep,
