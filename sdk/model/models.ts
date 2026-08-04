@@ -758,6 +758,7 @@ export * from './informationalEventAllOf';
 export * from './inlineValuationRequest';
 export * from './inlineValuationsReconciliationRequest';
 export * from './inputTransition';
+export * from './instantiateRecRequest';
 export * from './instrument';
 export * from './instrumentActivity';
 export * from './instrumentActivityAdjustment';
@@ -1038,6 +1039,7 @@ export * from './pagedResourceListOfPostingModuleResponse';
 export * from './pagedResourceListOfPostingModuleRule';
 export * from './pagedResourceListOfPropertyDefinition';
 export * from './pagedResourceListOfPropertyDefinitionSearchResult';
+export * from './pagedResourceListOfRecInstance';
 export * from './pagedResourceListOfRecResultSet';
 export * from './pagedResourceListOfReconciliation';
 export * from './pagedResourceListOfReferenceListResponse';
@@ -1217,10 +1219,13 @@ export * from './reOpenPeriodDiaryEntryRequest';
 export * from './realisedGainLoss';
 export * from './recApprovalDecision';
 export * from './recClosedExceptionCounts';
+export * from './recClosedPeriodReference';
+export * from './recClosedPeriods';
 export * from './recDatesReconciled';
 export * from './recExceptionCountByClosureType';
 export * from './recExceptionCountByResultType';
 export * from './recExecution';
+export * from './recInstance';
 export * from './recInstanceId';
 export * from './recInstanceSummary';
 export * from './recMatchCountByResultType';
@@ -1233,6 +1238,7 @@ export * from './recResultCounts';
 export * from './recResultSet';
 export * from './recResultSetApprovalDecisionRequest';
 export * from './recReview';
+export * from './recRunLogEntry';
 export * from './recSubmission';
 export * from './recSupersededRun';
 export * from './recWorkflowTask';
@@ -1594,6 +1600,7 @@ export * from './transferAgencyOrderResult';
 export * from './transferAgencyOrdersResponse';
 export * from './transitionEvent';
 export * from './transitionEventAllOf';
+export * from './transitionRecInstanceRequest';
 export * from './translateEntitiesInlinedRequest';
 export * from './translateEntitiesRequest';
 export * from './translateEntitiesResponse';
@@ -2551,6 +2558,7 @@ import { InformationalEventAllOf } from './informationalEventAllOf';
 import { InlineValuationRequest } from './inlineValuationRequest';
 import { InlineValuationsReconciliationRequest } from './inlineValuationsReconciliationRequest';
 import { InputTransition } from './inputTransition';
+import { InstantiateRecRequest } from './instantiateRecRequest';
 import { Instrument } from './instrument';
 import { InstrumentActivity } from './instrumentActivity';
 import { InstrumentActivityAdjustment } from './instrumentActivityAdjustment';
@@ -2831,6 +2839,7 @@ import { PagedResourceListOfPostingModuleResponse } from './pagedResourceListOfP
 import { PagedResourceListOfPostingModuleRule } from './pagedResourceListOfPostingModuleRule';
 import { PagedResourceListOfPropertyDefinition } from './pagedResourceListOfPropertyDefinition';
 import { PagedResourceListOfPropertyDefinitionSearchResult } from './pagedResourceListOfPropertyDefinitionSearchResult';
+import { PagedResourceListOfRecInstance } from './pagedResourceListOfRecInstance';
 import { PagedResourceListOfRecResultSet } from './pagedResourceListOfRecResultSet';
 import { PagedResourceListOfReconciliation } from './pagedResourceListOfReconciliation';
 import { PagedResourceListOfReferenceListResponse } from './pagedResourceListOfReferenceListResponse';
@@ -3010,10 +3019,13 @@ import { ReOpenPeriodDiaryEntryRequest } from './reOpenPeriodDiaryEntryRequest';
 import { RealisedGainLoss } from './realisedGainLoss';
 import { RecApprovalDecision } from './recApprovalDecision';
 import { RecClosedExceptionCounts } from './recClosedExceptionCounts';
+import { RecClosedPeriodReference } from './recClosedPeriodReference';
+import { RecClosedPeriods } from './recClosedPeriods';
 import { RecDatesReconciled } from './recDatesReconciled';
 import { RecExceptionCountByClosureType } from './recExceptionCountByClosureType';
 import { RecExceptionCountByResultType } from './recExceptionCountByResultType';
 import { RecExecution } from './recExecution';
+import { RecInstance } from './recInstance';
 import { RecInstanceId } from './recInstanceId';
 import { RecInstanceSummary } from './recInstanceSummary';
 import { RecMatchCountByResultType } from './recMatchCountByResultType';
@@ -3026,6 +3038,7 @@ import { RecResultCounts } from './recResultCounts';
 import { RecResultSet } from './recResultSet';
 import { RecResultSetApprovalDecisionRequest } from './recResultSetApprovalDecisionRequest';
 import { RecReview } from './recReview';
+import { RecRunLogEntry } from './recRunLogEntry';
 import { RecSubmission } from './recSubmission';
 import { RecSupersededRun } from './recSupersededRun';
 import { RecWorkflowTask } from './recWorkflowTask';
@@ -3387,6 +3400,7 @@ import { TransferAgencyOrderResult } from './transferAgencyOrderResult';
 import { TransferAgencyOrdersResponse } from './transferAgencyOrdersResponse';
 import { TransitionEvent } from './transitionEvent';
 import { TransitionEventAllOf } from './transitionEventAllOf';
+import { TransitionRecInstanceRequest } from './transitionRecInstanceRequest';
 import { TranslateEntitiesInlinedRequest } from './translateEntitiesInlinedRequest';
 import { TranslateEntitiesRequest } from './translateEntitiesRequest';
 import { TranslateEntitiesResponse } from './translateEntitiesResponse';
@@ -5026,6 +5040,7 @@ let typeMap: {[index: string]: any} = {
     "InlineValuationRequest": InlineValuationRequest,
     "InlineValuationsReconciliationRequest": InlineValuationsReconciliationRequest,
     "InputTransition": InputTransition,
+    "InstantiateRecRequest": InstantiateRecRequest,
     "Instrument": Instrument,
     "InstrumentActivity": InstrumentActivity,
     "InstrumentActivityAdjustment": InstrumentActivityAdjustment,
@@ -5292,6 +5307,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfPostingModuleRule": PagedResourceListOfPostingModuleRule,
     "PagedResourceListOfPropertyDefinition": PagedResourceListOfPropertyDefinition,
     "PagedResourceListOfPropertyDefinitionSearchResult": PagedResourceListOfPropertyDefinitionSearchResult,
+    "PagedResourceListOfRecInstance": PagedResourceListOfRecInstance,
     "PagedResourceListOfRecResultSet": PagedResourceListOfRecResultSet,
     "PagedResourceListOfReconciliation": PagedResourceListOfReconciliation,
     "PagedResourceListOfReferenceListResponse": PagedResourceListOfReferenceListResponse,
@@ -5459,10 +5475,13 @@ let typeMap: {[index: string]: any} = {
     "RealisedGainLoss": RealisedGainLoss,
     "RecApprovalDecision": RecApprovalDecision,
     "RecClosedExceptionCounts": RecClosedExceptionCounts,
+    "RecClosedPeriodReference": RecClosedPeriodReference,
+    "RecClosedPeriods": RecClosedPeriods,
     "RecDatesReconciled": RecDatesReconciled,
     "RecExceptionCountByClosureType": RecExceptionCountByClosureType,
     "RecExceptionCountByResultType": RecExceptionCountByResultType,
     "RecExecution": RecExecution,
+    "RecInstance": RecInstance,
     "RecInstanceId": RecInstanceId,
     "RecInstanceSummary": RecInstanceSummary,
     "RecMatchCountByResultType": RecMatchCountByResultType,
@@ -5475,6 +5494,7 @@ let typeMap: {[index: string]: any} = {
     "RecResultSet": RecResultSet,
     "RecResultSetApprovalDecisionRequest": RecResultSetApprovalDecisionRequest,
     "RecReview": RecReview,
+    "RecRunLogEntry": RecRunLogEntry,
     "RecSubmission": RecSubmission,
     "RecSupersededRun": RecSupersededRun,
     "RecWorkflowTask": RecWorkflowTask,
@@ -5821,6 +5841,7 @@ let typeMap: {[index: string]: any} = {
     "TransferAgencyOrdersResponse": TransferAgencyOrdersResponse,
     "TransitionEvent": TransitionEvent,
     "TransitionEventAllOf": TransitionEventAllOf,
+    "TransitionRecInstanceRequest": TransitionRecInstanceRequest,
     "TranslateEntitiesInlinedRequest": TranslateEntitiesInlinedRequest,
     "TranslateEntitiesRequest": TranslateEntitiesRequest,
     "TranslateEntitiesResponse": TranslateEntitiesResponse,
