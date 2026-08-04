@@ -9,7 +9,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "2.0.1587",
+    "version": "2.0.1589",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -264918,7 +264918,6 @@
           "domCcy",
           "fundShareClassType",
           "hedging",
-          "instrumentIdentifiers",
           "name",
           "shareClassShortCode"
         ],
@@ -264930,7 +264929,8 @@
               "type": "string",
               "nullable": true
             },
-            "description": "Unique instrument identifiers"
+            "description": "Unique instrument identifiers",
+            "nullable": true
           },
           "name": {
             "maxLength": 256,
@@ -264963,12 +264963,6 @@
             "type": "string",
             "description": "The launch date set when a shareclass is added to the fund. Defaults to Fund Inception Date.",
             "format": "date-time",
-            "nullable": true
-          },
-          "apportionmentFactor": {
-            "type": "number",
-            "description": "Only used for fixed percentage method or be zero, must equal 1 or 0 across all classes in the fund.",
-            "format": "double",
             "nullable": true
           },
           "properties": {
@@ -265216,12 +265210,6 @@
             "type": "string",
             "description": "The launch date set when a shareclass is added to the fund. Defaults to Fund Inception Date.",
             "format": "date-time",
-            "nullable": true
-          },
-          "apportionmentFactor": {
-            "type": "number",
-            "description": "Only used for fixed percentage method or be zero, must equal 1 or 0 across all classes in the fund.",
-            "format": "double",
             "nullable": true
           },
           "properties": {
