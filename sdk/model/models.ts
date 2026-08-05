@@ -93,6 +93,7 @@ export * from './appendMarketDataType';
 export * from './applicableEntity';
 export * from './applicableEntityTypes';
 export * from './applicableInstrumentEvent';
+export * from './appliedScenarioShift';
 export * from './apportionmentBreakdown';
 export * from './apportionmentMemberFactor';
 export * from './apportionmentMethodProperty';
@@ -1426,6 +1427,7 @@ export * from './runCheckRequest';
 export * from './runCheckResponse';
 export * from './scalingMethodology';
 export * from './scenarioDefinition';
+export * from './scenarioDiagnostics';
 export * from './scenarioPreviewAppliedShift';
 export * from './scenarioPreviewRequest';
 export * from './scenarioPreviewResponse';
@@ -1895,6 +1897,7 @@ import { AppendMarketDataType } from './appendMarketDataType';
 import { ApplicableEntity } from './applicableEntity';
 import { ApplicableEntityTypes } from './applicableEntityTypes';
 import { ApplicableInstrumentEvent } from './applicableInstrumentEvent';
+import { AppliedScenarioShift } from './appliedScenarioShift';
 import { ApportionmentBreakdown } from './apportionmentBreakdown';
 import { ApportionmentMemberFactor } from './apportionmentMemberFactor';
 import { ApportionmentMethodProperty } from './apportionmentMethodProperty';
@@ -3228,6 +3231,7 @@ import { RunCheckRequest } from './runCheckRequest';
 import { RunCheckResponse } from './runCheckResponse';
 import { ScalingMethodology } from './scalingMethodology';
 import { ScenarioDefinition } from './scenarioDefinition';
+import { ScenarioDiagnostics } from './scenarioDiagnostics';
 import { ScenarioPreviewAppliedShift } from './scenarioPreviewAppliedShift';
 import { ScenarioPreviewRequest } from './scenarioPreviewRequest';
 import { ScenarioPreviewResponse } from './scenarioPreviewResponse';
@@ -4399,6 +4403,7 @@ let typeMap: {[index: string]: any} = {
     "ApplicableEntity": ApplicableEntity,
     "ApplicableEntityTypes": ApplicableEntityTypes,
     "ApplicableInstrumentEvent": ApplicableInstrumentEvent,
+    "AppliedScenarioShift": AppliedScenarioShift,
     "ApportionmentBreakdown": ApportionmentBreakdown,
     "ApportionmentMemberFactor": ApportionmentMemberFactor,
     "ApportionmentMethodProperty": ApportionmentMethodProperty,
@@ -5684,6 +5689,7 @@ let typeMap: {[index: string]: any} = {
     "RunCheckRequest": RunCheckRequest,
     "RunCheckResponse": RunCheckResponse,
     "ScenarioDefinition": ScenarioDefinition,
+    "ScenarioDiagnostics": ScenarioDiagnostics,
     "ScenarioPreviewAppliedShift": ScenarioPreviewAppliedShift,
     "ScenarioPreviewRequest": ScenarioPreviewRequest,
     "ScenarioPreviewResponse": ScenarioPreviewResponse,
