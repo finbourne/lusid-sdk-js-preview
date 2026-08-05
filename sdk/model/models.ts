@@ -248,6 +248,8 @@ export * from './closePeriodDiaryEntryRequest';
 export * from './closedPeriod';
 export * from './collateral';
 export * from './collateralInstrument';
+export * from './commodityForward';
+export * from './commodityForwardAllOf';
 export * from './comparisonAttributeValuePair';
 export * from './completePortfolio';
 export * from './completeRelation';
@@ -2048,6 +2050,8 @@ import { ClosePeriodDiaryEntryRequest } from './closePeriodDiaryEntryRequest';
 import { ClosedPeriod } from './closedPeriod';
 import { Collateral } from './collateral';
 import { CollateralInstrument } from './collateralInstrument';
+import { CommodityForward } from './commodityForward';
+import { CommodityForwardAllOf } from './commodityForwardAllOf';
 import { ComparisonAttributeValuePair } from './comparisonAttributeValuePair';
 import { CompletePortfolio } from './completePortfolio';
 import { CompleteRelation } from './completeRelation';
@@ -3702,6 +3706,8 @@ let enumsMap: {[index: string]: any} = {
         "ClassActionEventAllOf.InstrumentEventTypeEnum": ClassActionEventAllOf.InstrumentEventTypeEnum,
         "CloseEvent.InstrumentEventTypeEnum": CloseEvent.InstrumentEventTypeEnum,
         "CloseEventAllOf.InstrumentEventTypeEnum": CloseEventAllOf.InstrumentEventTypeEnum,
+        "CommodityForward.InstrumentTypeEnum": CommodityForward.InstrumentTypeEnum,
+        "CommodityForwardAllOf.InstrumentTypeEnum": CommodityForwardAllOf.InstrumentTypeEnum,
         "CompletePortfolio.TypeEnum": CompletePortfolio.TypeEnum,
         "ComplexBond.InstrumentTypeEnum": ComplexBond.InstrumentTypeEnum,
         "ComplexBondAllOf.InstrumentTypeEnum": ComplexBondAllOf.InstrumentTypeEnum,
@@ -4546,6 +4552,8 @@ let typeMap: {[index: string]: any} = {
     "ClosedPeriod": ClosedPeriod,
     "Collateral": Collateral,
     "CollateralInstrument": CollateralInstrument,
+    "CommodityForward": CommodityForward,
+    "CommodityForwardAllOf": CommodityForwardAllOf,
     "ComparisonAttributeValuePair": ComparisonAttributeValuePair,
     "CompletePortfolio": CompletePortfolio,
     "CompleteRelation": CompleteRelation,
