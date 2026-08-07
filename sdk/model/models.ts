@@ -1057,6 +1057,7 @@ export * from './pagedResourceListOfTransactionTemplateSpecification';
 export * from './pagedResourceListOfTranslationScriptId';
 export * from './pagedResourceListOfValuationPointInstrument';
 export * from './pagedResourceListOfValuationPointOverview';
+export * from './pagedResourceListOfVersion';
 export * from './pagedResourceListOfVirtualRow';
 export * from './pagedResourceListOfWorkspace';
 export * from './pagedResourceListOfWorkspaceItem';
@@ -1092,9 +1093,13 @@ export * from './pikBondCouponEvent';
 export * from './pikBondCouponEventAllOf';
 export * from './pikBondInterestCapitalisationEvent';
 export * from './pikBondInterestCapitalisationEventAllOf';
+export * from './pikBondInterestEvent';
+export * from './pikBondInterestEventAllOf';
 export * from './pikBondPrincipalEvent';
 export * from './pikBondPrincipalEventAllOf';
 export * from './pikElection';
+export * from './pikSchedule';
+export * from './pikScheduleAllOf';
 export * from './placeBlocksRequest';
 export * from './placement';
 export * from './placementRequest';
@@ -1212,6 +1217,7 @@ export * from './quoteId';
 export * from './quoteInstrumentIdType';
 export * from './quoteSeriesId';
 export * from './quoteType';
+export * from './rateBreakdownComponent';
 export * from './rateCurveShiftDefinition';
 export * from './rateCurveShiftDefinitionAllOf';
 export * from './rateCurveShiftMode';
@@ -2861,6 +2867,7 @@ import { PagedResourceListOfTransactionTemplateSpecification } from './pagedReso
 import { PagedResourceListOfTranslationScriptId } from './pagedResourceListOfTranslationScriptId';
 import { PagedResourceListOfValuationPointInstrument } from './pagedResourceListOfValuationPointInstrument';
 import { PagedResourceListOfValuationPointOverview } from './pagedResourceListOfValuationPointOverview';
+import { PagedResourceListOfVersion } from './pagedResourceListOfVersion';
 import { PagedResourceListOfVirtualRow } from './pagedResourceListOfVirtualRow';
 import { PagedResourceListOfWorkspace } from './pagedResourceListOfWorkspace';
 import { PagedResourceListOfWorkspaceItem } from './pagedResourceListOfWorkspaceItem';
@@ -2896,9 +2903,13 @@ import { PikBondCouponEvent } from './pikBondCouponEvent';
 import { PikBondCouponEventAllOf } from './pikBondCouponEventAllOf';
 import { PikBondInterestCapitalisationEvent } from './pikBondInterestCapitalisationEvent';
 import { PikBondInterestCapitalisationEventAllOf } from './pikBondInterestCapitalisationEventAllOf';
+import { PikBondInterestEvent } from './pikBondInterestEvent';
+import { PikBondInterestEventAllOf } from './pikBondInterestEventAllOf';
 import { PikBondPrincipalEvent } from './pikBondPrincipalEvent';
 import { PikBondPrincipalEventAllOf } from './pikBondPrincipalEventAllOf';
 import { PikElection } from './pikElection';
+import { PikSchedule } from './pikSchedule';
+import { PikScheduleAllOf } from './pikScheduleAllOf';
 import { PlaceBlocksRequest } from './placeBlocksRequest';
 import { Placement } from './placement';
 import { PlacementRequest } from './placementRequest';
@@ -3016,6 +3027,7 @@ import { QuoteId } from './quoteId';
 import { QuoteInstrumentIdType } from './quoteInstrumentIdType';
 import { QuoteSeriesId } from './quoteSeriesId';
 import { QuoteType } from './quoteType';
+import { RateBreakdownComponent } from './rateBreakdownComponent';
 import { RateCurveShiftDefinition } from './rateCurveShiftDefinition';
 import { RateCurveShiftDefinitionAllOf } from './rateCurveShiftDefinitionAllOf';
 import { RateCurveShiftMode } from './rateCurveShiftMode';
@@ -4083,8 +4095,12 @@ let enumsMap: {[index: string]: any} = {
         "PikBondCouponEventAllOf.InstrumentEventTypeEnum": PikBondCouponEventAllOf.InstrumentEventTypeEnum,
         "PikBondInterestCapitalisationEvent.InstrumentEventTypeEnum": PikBondInterestCapitalisationEvent.InstrumentEventTypeEnum,
         "PikBondInterestCapitalisationEventAllOf.InstrumentEventTypeEnum": PikBondInterestCapitalisationEventAllOf.InstrumentEventTypeEnum,
+        "PikBondInterestEvent.InstrumentEventTypeEnum": PikBondInterestEvent.InstrumentEventTypeEnum,
+        "PikBondInterestEventAllOf.InstrumentEventTypeEnum": PikBondInterestEventAllOf.InstrumentEventTypeEnum,
         "PikBondPrincipalEvent.InstrumentEventTypeEnum": PikBondPrincipalEvent.InstrumentEventTypeEnum,
         "PikBondPrincipalEventAllOf.InstrumentEventTypeEnum": PikBondPrincipalEventAllOf.InstrumentEventTypeEnum,
+        "PikSchedule.ScheduleTypeEnum": PikSchedule.ScheduleTypeEnum,
+        "PikScheduleAllOf.ScheduleTypeEnum": PikScheduleAllOf.ScheduleTypeEnum,
         "Portfolio.TypeEnum": Portfolio.TypeEnum,
         "Portfolio.AccountingMethodEnum": Portfolio.AccountingMethodEnum,
         "PortfolioDetails.AccountingMethodEnum": PortfolioDetails.AccountingMethodEnum,
@@ -5338,6 +5354,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfTranslationScriptId": PagedResourceListOfTranslationScriptId,
     "PagedResourceListOfValuationPointInstrument": PagedResourceListOfValuationPointInstrument,
     "PagedResourceListOfValuationPointOverview": PagedResourceListOfValuationPointOverview,
+    "PagedResourceListOfVersion": PagedResourceListOfVersion,
     "PagedResourceListOfVirtualRow": PagedResourceListOfVirtualRow,
     "PagedResourceListOfWorkspace": PagedResourceListOfWorkspace,
     "PagedResourceListOfWorkspaceItem": PagedResourceListOfWorkspaceItem,
@@ -5371,9 +5388,13 @@ let typeMap: {[index: string]: any} = {
     "PikBondCouponEventAllOf": PikBondCouponEventAllOf,
     "PikBondInterestCapitalisationEvent": PikBondInterestCapitalisationEvent,
     "PikBondInterestCapitalisationEventAllOf": PikBondInterestCapitalisationEventAllOf,
+    "PikBondInterestEvent": PikBondInterestEvent,
+    "PikBondInterestEventAllOf": PikBondInterestEventAllOf,
     "PikBondPrincipalEvent": PikBondPrincipalEvent,
     "PikBondPrincipalEventAllOf": PikBondPrincipalEventAllOf,
     "PikElection": PikElection,
+    "PikSchedule": PikSchedule,
+    "PikScheduleAllOf": PikScheduleAllOf,
     "PlaceBlocksRequest": PlaceBlocksRequest,
     "Placement": Placement,
     "PlacementRequest": PlacementRequest,
@@ -5482,6 +5503,7 @@ let typeMap: {[index: string]: any} = {
     "QuoteDependencyAllOf": QuoteDependencyAllOf,
     "QuoteId": QuoteId,
     "QuoteSeriesId": QuoteSeriesId,
+    "RateBreakdownComponent": RateBreakdownComponent,
     "RateCurveShiftDefinition": RateCurveShiftDefinition,
     "RateCurveShiftDefinitionAllOf": RateCurveShiftDefinitionAllOf,
     "RawVendorEvent": RawVendorEvent,
