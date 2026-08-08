@@ -153,6 +153,7 @@ export * from './branchStepRequest';
 export * from './branchStepRequestAllOf';
 export * from './breakCodeSource';
 export * from './bucket';
+export * from './bucketBorderConfiguration';
 export * from './bucketDefinition';
 export * from './bucketSetDefinition';
 export * from './bucketSetNode';
@@ -194,8 +195,11 @@ export * from './cashDependencyAllOf';
 export * from './cashDividendEvent';
 export * from './cashDividendEventAllOf';
 export * from './cashElection';
+export * from './cashFlowDetail';
 export * from './cashFlowEvent';
 export * from './cashFlowEventAllOf';
+export * from './cashFlowHaircutRule';
+export * from './cashFlowHaircutTermPoint';
 export * from './cashFlowLineage';
 export * from './cashFlowValue';
 export * from './cashFlowValueAllOf';
@@ -1197,6 +1201,7 @@ export * from './putRedemptionEvent';
 export * from './putRedemptionEventAllOf';
 export * from './quantityInstructed';
 export * from './queryApplicableInstrumentEventsRequest';
+export * from './queryBucketCashFlowDrillDownRequest';
 export * from './queryBucketedCashFlowsRequest';
 export * from './queryCashFlowsRequest';
 export * from './queryFundCashStatementParameters';
@@ -1324,6 +1329,7 @@ export * from './resourceListOfApplicableInstrumentEvent';
 export * from './resourceListOfBlock';
 export * from './resourceListOfBlockAndOrders';
 export * from './resourceListOfCalendarDate';
+export * from './resourceListOfCashFlowDetail';
 export * from './resourceListOfChange';
 export * from './resourceListOfChangeHistory';
 export * from './resourceListOfChangeInterval';
@@ -1963,6 +1969,7 @@ import { BranchStepRequest } from './branchStepRequest';
 import { BranchStepRequestAllOf } from './branchStepRequestAllOf';
 import { BreakCodeSource } from './breakCodeSource';
 import { Bucket } from './bucket';
+import { BucketBorderConfiguration } from './bucketBorderConfiguration';
 import { BucketDefinition } from './bucketDefinition';
 import { BucketSetDefinition } from './bucketSetDefinition';
 import { BucketSetNode } from './bucketSetNode';
@@ -2004,8 +2011,11 @@ import { CashDependencyAllOf } from './cashDependencyAllOf';
 import { CashDividendEvent } from './cashDividendEvent';
 import { CashDividendEventAllOf } from './cashDividendEventAllOf';
 import { CashElection } from './cashElection';
+import { CashFlowDetail } from './cashFlowDetail';
 import { CashFlowEvent } from './cashFlowEvent';
 import { CashFlowEventAllOf } from './cashFlowEventAllOf';
+import { CashFlowHaircutRule } from './cashFlowHaircutRule';
+import { CashFlowHaircutTermPoint } from './cashFlowHaircutTermPoint';
 import { CashFlowLineage } from './cashFlowLineage';
 import { CashFlowValue } from './cashFlowValue';
 import { CashFlowValueAllOf } from './cashFlowValueAllOf';
@@ -3007,6 +3017,7 @@ import { PutRedemptionEvent } from './putRedemptionEvent';
 import { PutRedemptionEventAllOf } from './putRedemptionEventAllOf';
 import { QuantityInstructed } from './quantityInstructed';
 import { QueryApplicableInstrumentEventsRequest } from './queryApplicableInstrumentEventsRequest';
+import { QueryBucketCashFlowDrillDownRequest } from './queryBucketCashFlowDrillDownRequest';
 import { QueryBucketedCashFlowsRequest } from './queryBucketedCashFlowsRequest';
 import { QueryCashFlowsRequest } from './queryCashFlowsRequest';
 import { QueryFundCashStatementParameters } from './queryFundCashStatementParameters';
@@ -3134,6 +3145,7 @@ import { ResourceListOfApplicableInstrumentEvent } from './resourceListOfApplica
 import { ResourceListOfBlock } from './resourceListOfBlock';
 import { ResourceListOfBlockAndOrders } from './resourceListOfBlockAndOrders';
 import { ResourceListOfCalendarDate } from './resourceListOfCalendarDate';
+import { ResourceListOfCashFlowDetail } from './resourceListOfCashFlowDetail';
 import { ResourceListOfChange } from './resourceListOfChange';
 import { ResourceListOfChangeHistory } from './resourceListOfChangeHistory';
 import { ResourceListOfChangeInterval } from './resourceListOfChangeInterval';
@@ -4478,6 +4490,7 @@ let typeMap: {[index: string]: any} = {
     "BranchStepRequestAllOf": BranchStepRequestAllOf,
     "BreakCodeSource": BreakCodeSource,
     "Bucket": Bucket,
+    "BucketBorderConfiguration": BucketBorderConfiguration,
     "BucketDefinition": BucketDefinition,
     "BucketSetDefinition": BucketSetDefinition,
     "BucketSetNode": BucketSetNode,
@@ -4519,8 +4532,11 @@ let typeMap: {[index: string]: any} = {
     "CashDividendEvent": CashDividendEvent,
     "CashDividendEventAllOf": CashDividendEventAllOf,
     "CashElection": CashElection,
+    "CashFlowDetail": CashFlowDetail,
     "CashFlowEvent": CashFlowEvent,
     "CashFlowEventAllOf": CashFlowEventAllOf,
+    "CashFlowHaircutRule": CashFlowHaircutRule,
+    "CashFlowHaircutTermPoint": CashFlowHaircutTermPoint,
     "CashFlowLineage": CashFlowLineage,
     "CashFlowValue": CashFlowValue,
     "CashFlowValueAllOf": CashFlowValueAllOf,
@@ -5485,6 +5501,7 @@ let typeMap: {[index: string]: any} = {
     "PutRedemptionEventAllOf": PutRedemptionEventAllOf,
     "QuantityInstructed": QuantityInstructed,
     "QueryApplicableInstrumentEventsRequest": QueryApplicableInstrumentEventsRequest,
+    "QueryBucketCashFlowDrillDownRequest": QueryBucketCashFlowDrillDownRequest,
     "QueryBucketedCashFlowsRequest": QueryBucketedCashFlowsRequest,
     "QueryCashFlowsRequest": QueryCashFlowsRequest,
     "QueryFundCashStatementParameters": QueryFundCashStatementParameters,
@@ -5605,6 +5622,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfBlock": ResourceListOfBlock,
     "ResourceListOfBlockAndOrders": ResourceListOfBlockAndOrders,
     "ResourceListOfCalendarDate": ResourceListOfCalendarDate,
+    "ResourceListOfCashFlowDetail": ResourceListOfCashFlowDetail,
     "ResourceListOfChange": ResourceListOfChange,
     "ResourceListOfChangeHistory": ResourceListOfChangeHistory,
     "ResourceListOfChangeInterval": ResourceListOfChangeInterval,
