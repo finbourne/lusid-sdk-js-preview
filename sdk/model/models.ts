@@ -46,7 +46,9 @@ export * from './adjustGlobalCommitmentEventAllOf';
 export * from './adjustHolding';
 export * from './adjustHoldingForDateRequest';
 export * from './adjustHoldingRequest';
+export * from './aggregateRuleValues';
 export * from './aggregateSpec';
+export * from './aggregateToleranceBase';
 export * from './aggregatedReturn';
 export * from './aggregatedReturnsDispersionRequest';
 export * from './aggregatedReturnsEntityId';
@@ -109,6 +111,11 @@ export * from './batchAdjustHoldingsResponse';
 export * from './batchAmendCustomDataModelMembershipResponse';
 export * from './batchAmendTransactionSettlementInstructionResponse';
 export * from './batchDeleteRelationalDataResponse';
+export * from './batchManageCommentRequest';
+export * from './batchManageCommentResponse';
+export * from './batchReviewRecResultItemResult';
+export * from './batchReviewRecResultRequest';
+export * from './batchReviewRecResultResponse';
 export * from './batchUpdateUserReviewForComparisonResultRequest';
 export * from './batchUpdateUserReviewForComparisonResultResponse';
 export * from './batchUpsertDatesForCalendarResponse';
@@ -137,6 +144,8 @@ export * from './bondCouponEvent';
 export * from './bondCouponEventAllOf';
 export * from './bondDefaultEvent';
 export * from './bondDefaultEventAllOf';
+export * from './bondOption';
+export * from './bondOptionAllOf';
 export * from './bondPrincipalEvent';
 export * from './bondPrincipalEventAllOf';
 export * from './bonusIssueEvent';
@@ -176,6 +185,8 @@ export * from './cancelOrdersAndMoveRemainingRequest';
 export * from './cancelOrdersAndMoveRemainingResponse';
 export * from './cancelOrdersResponse';
 export * from './cancelPlacementsResponse';
+export * from './cancelSchedule';
+export * from './cancelScheduleAllOf';
 export * from './cancelSingleHoldingAdjustmentRequest';
 export * from './cancelledOrderResult';
 export * from './cancelledPlacementResult';
@@ -255,6 +266,8 @@ export * from './collateral';
 export * from './collateralInstrument';
 export * from './commodityForward';
 export * from './commodityForwardAllOf';
+export * from './commodityForwardCashSettlementEvent';
+export * from './commodityForwardCashSettlementEventAllOf';
 export * from './comparisonAttributeValuePair';
 export * from './completePortfolio';
 export * from './completeRelation';
@@ -317,6 +330,8 @@ export * from './contractInitialisationEventAllOf';
 export * from './contributionToNonPassingRuleDetail';
 export * from './conversionEvent';
 export * from './conversionEventAllOf';
+export * from './coreRuleValues';
+export * from './coreToleranceBase';
 export * from './corporateAction';
 export * from './corporateActionSource';
 export * from './corporateActionTransition';
@@ -922,6 +937,7 @@ export * from './navType';
 export * from './navTypeDefinition';
 export * from './newInstrument';
 export * from './nextValueInSequenceResponse';
+export * from './noticeConvention';
 export * from './numericComparisonType';
 export * from './opaqueDependency';
 export * from './opaqueDependencyAllOf';
@@ -1044,6 +1060,7 @@ export * from './pagedResourceListOfPostingModuleRule';
 export * from './pagedResourceListOfPropertyDefinition';
 export * from './pagedResourceListOfPropertyDefinitionSearchResult';
 export * from './pagedResourceListOfRecInstance';
+export * from './pagedResourceListOfRecResult';
 export * from './pagedResourceListOfRecResultSet';
 export * from './pagedResourceListOfReconciliation';
 export * from './pagedResourceListOfReferenceListResponse';
@@ -1247,14 +1264,23 @@ export * from './recMatchCounts';
 export * from './recOpenExceptionCounts';
 export * from './recRequestedResultRevision';
 export * from './recRequiredApproval';
+export * from './recResult';
+export * from './recResultAssignmentUpdate';
 export * from './recResultCountByReviewStatus';
 export * from './recResultCounts';
+export * from './recResultDecisionGroup';
+export * from './recResultDecisionUpdate';
+export * from './recResultException';
+export * from './recResultItem';
+export * from './recResultItemDetails';
+export * from './recResultReview';
 export * from './recResultSet';
 export * from './recResultSetApprovalDecisionRequest';
 export * from './recReview';
 export * from './recRunLogEntry';
 export * from './recSubmission';
 export * from './recSupersededRun';
+export * from './recUserComment';
 export * from './recWorkflowTask';
 export * from './recipeBlock';
 export * from './recipeComposer';
@@ -1315,6 +1341,7 @@ export * from './repurchaseOfferEventAllOf';
 export * from './requestedChanges';
 export * from './resetEvent';
 export * from './resetEventAllOf';
+export * from './resetSchedule';
 export * from './resolveTenorsRequest';
 export * from './resolveTenorsResponse';
 export * from './resolvedCustodianAccount';
@@ -1534,6 +1561,7 @@ export * from './subHoldingKeyValueEqualsAllOf';
 export * from './submitRecResultSetReviewRequest';
 export * from './subscribeElection';
 export * from './subscriptionDefinition';
+export * from './supplementalAttributeValues';
 export * from './swapCashFlowEvent';
 export * from './swapCashFlowEventAllOf';
 export * from './swapPrincipalEvent';
@@ -1862,7 +1890,9 @@ import { AdjustGlobalCommitmentEventAllOf } from './adjustGlobalCommitmentEventA
 import { AdjustHolding } from './adjustHolding';
 import { AdjustHoldingForDateRequest } from './adjustHoldingForDateRequest';
 import { AdjustHoldingRequest } from './adjustHoldingRequest';
+import { AggregateRuleValues } from './aggregateRuleValues';
 import { AggregateSpec } from './aggregateSpec';
+import { AggregateToleranceBase } from './aggregateToleranceBase';
 import { AggregatedReturn } from './aggregatedReturn';
 import { AggregatedReturnsDispersionRequest } from './aggregatedReturnsDispersionRequest';
 import { AggregatedReturnsEntityId } from './aggregatedReturnsEntityId';
@@ -1925,6 +1955,11 @@ import { BatchAdjustHoldingsResponse } from './batchAdjustHoldingsResponse';
 import { BatchAmendCustomDataModelMembershipResponse } from './batchAmendCustomDataModelMembershipResponse';
 import { BatchAmendTransactionSettlementInstructionResponse } from './batchAmendTransactionSettlementInstructionResponse';
 import { BatchDeleteRelationalDataResponse } from './batchDeleteRelationalDataResponse';
+import { BatchManageCommentRequest } from './batchManageCommentRequest';
+import { BatchManageCommentResponse } from './batchManageCommentResponse';
+import { BatchReviewRecResultItemResult } from './batchReviewRecResultItemResult';
+import { BatchReviewRecResultRequest } from './batchReviewRecResultRequest';
+import { BatchReviewRecResultResponse } from './batchReviewRecResultResponse';
 import { BatchUpdateUserReviewForComparisonResultRequest } from './batchUpdateUserReviewForComparisonResultRequest';
 import { BatchUpdateUserReviewForComparisonResultResponse } from './batchUpdateUserReviewForComparisonResultResponse';
 import { BatchUpsertDatesForCalendarResponse } from './batchUpsertDatesForCalendarResponse';
@@ -1953,6 +1988,8 @@ import { BondCouponEvent } from './bondCouponEvent';
 import { BondCouponEventAllOf } from './bondCouponEventAllOf';
 import { BondDefaultEvent } from './bondDefaultEvent';
 import { BondDefaultEventAllOf } from './bondDefaultEventAllOf';
+import { BondOption } from './bondOption';
+import { BondOptionAllOf } from './bondOptionAllOf';
 import { BondPrincipalEvent } from './bondPrincipalEvent';
 import { BondPrincipalEventAllOf } from './bondPrincipalEventAllOf';
 import { BonusIssueEvent } from './bonusIssueEvent';
@@ -1992,6 +2029,8 @@ import { CancelOrdersAndMoveRemainingRequest } from './cancelOrdersAndMoveRemain
 import { CancelOrdersAndMoveRemainingResponse } from './cancelOrdersAndMoveRemainingResponse';
 import { CancelOrdersResponse } from './cancelOrdersResponse';
 import { CancelPlacementsResponse } from './cancelPlacementsResponse';
+import { CancelSchedule } from './cancelSchedule';
+import { CancelScheduleAllOf } from './cancelScheduleAllOf';
 import { CancelSingleHoldingAdjustmentRequest } from './cancelSingleHoldingAdjustmentRequest';
 import { CancelledOrderResult } from './cancelledOrderResult';
 import { CancelledPlacementResult } from './cancelledPlacementResult';
@@ -2071,6 +2110,8 @@ import { Collateral } from './collateral';
 import { CollateralInstrument } from './collateralInstrument';
 import { CommodityForward } from './commodityForward';
 import { CommodityForwardAllOf } from './commodityForwardAllOf';
+import { CommodityForwardCashSettlementEvent } from './commodityForwardCashSettlementEvent';
+import { CommodityForwardCashSettlementEventAllOf } from './commodityForwardCashSettlementEventAllOf';
 import { ComparisonAttributeValuePair } from './comparisonAttributeValuePair';
 import { CompletePortfolio } from './completePortfolio';
 import { CompleteRelation } from './completeRelation';
@@ -2133,6 +2174,8 @@ import { ContractInitialisationEventAllOf } from './contractInitialisationEventA
 import { ContributionToNonPassingRuleDetail } from './contributionToNonPassingRuleDetail';
 import { ConversionEvent } from './conversionEvent';
 import { ConversionEventAllOf } from './conversionEventAllOf';
+import { CoreRuleValues } from './coreRuleValues';
+import { CoreToleranceBase } from './coreToleranceBase';
 import { CorporateAction } from './corporateAction';
 import { CorporateActionSource } from './corporateActionSource';
 import { CorporateActionTransition } from './corporateActionTransition';
@@ -2738,6 +2781,7 @@ import { NavType } from './navType';
 import { NavTypeDefinition } from './navTypeDefinition';
 import { NewInstrument } from './newInstrument';
 import { NextValueInSequenceResponse } from './nextValueInSequenceResponse';
+import { NoticeConvention } from './noticeConvention';
 import { NumericComparisonType } from './numericComparisonType';
 import { OpaqueDependency } from './opaqueDependency';
 import { OpaqueDependencyAllOf } from './opaqueDependencyAllOf';
@@ -2860,6 +2904,7 @@ import { PagedResourceListOfPostingModuleRule } from './pagedResourceListOfPosti
 import { PagedResourceListOfPropertyDefinition } from './pagedResourceListOfPropertyDefinition';
 import { PagedResourceListOfPropertyDefinitionSearchResult } from './pagedResourceListOfPropertyDefinitionSearchResult';
 import { PagedResourceListOfRecInstance } from './pagedResourceListOfRecInstance';
+import { PagedResourceListOfRecResult } from './pagedResourceListOfRecResult';
 import { PagedResourceListOfRecResultSet } from './pagedResourceListOfRecResultSet';
 import { PagedResourceListOfReconciliation } from './pagedResourceListOfReconciliation';
 import { PagedResourceListOfReferenceListResponse } from './pagedResourceListOfReferenceListResponse';
@@ -3063,14 +3108,23 @@ import { RecMatchCounts } from './recMatchCounts';
 import { RecOpenExceptionCounts } from './recOpenExceptionCounts';
 import { RecRequestedResultRevision } from './recRequestedResultRevision';
 import { RecRequiredApproval } from './recRequiredApproval';
+import { RecResult } from './recResult';
+import { RecResultAssignmentUpdate } from './recResultAssignmentUpdate';
 import { RecResultCountByReviewStatus } from './recResultCountByReviewStatus';
 import { RecResultCounts } from './recResultCounts';
+import { RecResultDecisionGroup } from './recResultDecisionGroup';
+import { RecResultDecisionUpdate } from './recResultDecisionUpdate';
+import { RecResultException } from './recResultException';
+import { RecResultItem } from './recResultItem';
+import { RecResultItemDetails } from './recResultItemDetails';
+import { RecResultReview } from './recResultReview';
 import { RecResultSet } from './recResultSet';
 import { RecResultSetApprovalDecisionRequest } from './recResultSetApprovalDecisionRequest';
 import { RecReview } from './recReview';
 import { RecRunLogEntry } from './recRunLogEntry';
 import { RecSubmission } from './recSubmission';
 import { RecSupersededRun } from './recSupersededRun';
+import { RecUserComment } from './recUserComment';
 import { RecWorkflowTask } from './recWorkflowTask';
 import { RecipeBlock } from './recipeBlock';
 import { RecipeComposer } from './recipeComposer';
@@ -3131,6 +3185,7 @@ import { RepurchaseOfferEventAllOf } from './repurchaseOfferEventAllOf';
 import { RequestedChanges } from './requestedChanges';
 import { ResetEvent } from './resetEvent';
 import { ResetEventAllOf } from './resetEventAllOf';
+import { ResetSchedule } from './resetSchedule';
 import { ResolveTenorsRequest } from './resolveTenorsRequest';
 import { ResolveTenorsResponse } from './resolveTenorsResponse';
 import { ResolvedCustodianAccount } from './resolvedCustodianAccount';
@@ -3350,6 +3405,7 @@ import { SubHoldingKeyValueEqualsAllOf } from './subHoldingKeyValueEqualsAllOf';
 import { SubmitRecResultSetReviewRequest } from './submitRecResultSetReviewRequest';
 import { SubscribeElection } from './subscribeElection';
 import { SubscriptionDefinition } from './subscriptionDefinition';
+import { SupplementalAttributeValues } from './supplementalAttributeValues';
 import { SwapCashFlowEvent } from './swapCashFlowEvent';
 import { SwapCashFlowEventAllOf } from './swapCashFlowEventAllOf';
 import { SwapPrincipalEvent } from './swapPrincipalEvent';
@@ -3678,6 +3734,8 @@ let enumsMap: {[index: string]: any} = {
         "BondCouponEventAllOf.InstrumentEventTypeEnum": BondCouponEventAllOf.InstrumentEventTypeEnum,
         "BondDefaultEvent.InstrumentEventTypeEnum": BondDefaultEvent.InstrumentEventTypeEnum,
         "BondDefaultEventAllOf.InstrumentEventTypeEnum": BondDefaultEventAllOf.InstrumentEventTypeEnum,
+        "BondOption.InstrumentTypeEnum": BondOption.InstrumentTypeEnum,
+        "BondOptionAllOf.InstrumentTypeEnum": BondOptionAllOf.InstrumentTypeEnum,
         "BondPrincipalEvent.InstrumentEventTypeEnum": BondPrincipalEvent.InstrumentEventTypeEnum,
         "BondPrincipalEventAllOf.InstrumentEventTypeEnum": BondPrincipalEventAllOf.InstrumentEventTypeEnum,
         "BonusIssueEvent.InstrumentEventTypeEnum": BonusIssueEvent.InstrumentEventTypeEnum,
@@ -3693,6 +3751,8 @@ let enumsMap: {[index: string]: any} = {
         "CalendarDependencyAllOf.DependencyTypeEnum": CalendarDependencyAllOf.DependencyTypeEnum,
         "CallOnIntermediateSecuritiesEvent.InstrumentEventTypeEnum": CallOnIntermediateSecuritiesEvent.InstrumentEventTypeEnum,
         "CallOnIntermediateSecuritiesEventAllOf.InstrumentEventTypeEnum": CallOnIntermediateSecuritiesEventAllOf.InstrumentEventTypeEnum,
+        "CancelSchedule.ScheduleTypeEnum": CancelSchedule.ScheduleTypeEnum,
+        "CancelScheduleAllOf.ScheduleTypeEnum": CancelScheduleAllOf.ScheduleTypeEnum,
         "CapFloor.InstrumentTypeEnum": CapFloor.InstrumentTypeEnum,
         "CapFloorAllOf.InstrumentTypeEnum": CapFloorAllOf.InstrumentTypeEnum,
         "CapitalDistributionEvent.InstrumentEventTypeEnum": CapitalDistributionEvent.InstrumentEventTypeEnum,
@@ -3736,6 +3796,8 @@ let enumsMap: {[index: string]: any} = {
         "CloseEventAllOf.InstrumentEventTypeEnum": CloseEventAllOf.InstrumentEventTypeEnum,
         "CommodityForward.InstrumentTypeEnum": CommodityForward.InstrumentTypeEnum,
         "CommodityForwardAllOf.InstrumentTypeEnum": CommodityForwardAllOf.InstrumentTypeEnum,
+        "CommodityForwardCashSettlementEvent.InstrumentEventTypeEnum": CommodityForwardCashSettlementEvent.InstrumentEventTypeEnum,
+        "CommodityForwardCashSettlementEventAllOf.InstrumentEventTypeEnum": CommodityForwardCashSettlementEventAllOf.InstrumentEventTypeEnum,
         "CompletePortfolio.TypeEnum": CompletePortfolio.TypeEnum,
         "ComplexBond.InstrumentTypeEnum": ComplexBond.InstrumentTypeEnum,
         "ComplexBondAllOf.InstrumentTypeEnum": ComplexBondAllOf.InstrumentTypeEnum,
@@ -4387,7 +4449,9 @@ let typeMap: {[index: string]: any} = {
     "AdjustHolding": AdjustHolding,
     "AdjustHoldingForDateRequest": AdjustHoldingForDateRequest,
     "AdjustHoldingRequest": AdjustHoldingRequest,
+    "AggregateRuleValues": AggregateRuleValues,
     "AggregateSpec": AggregateSpec,
+    "AggregateToleranceBase": AggregateToleranceBase,
     "AggregatedReturn": AggregatedReturn,
     "AggregatedReturnsDispersionRequest": AggregatedReturnsDispersionRequest,
     "AggregatedReturnsEntityId": AggregatedReturnsEntityId,
@@ -4446,6 +4510,11 @@ let typeMap: {[index: string]: any} = {
     "BatchAmendCustomDataModelMembershipResponse": BatchAmendCustomDataModelMembershipResponse,
     "BatchAmendTransactionSettlementInstructionResponse": BatchAmendTransactionSettlementInstructionResponse,
     "BatchDeleteRelationalDataResponse": BatchDeleteRelationalDataResponse,
+    "BatchManageCommentRequest": BatchManageCommentRequest,
+    "BatchManageCommentResponse": BatchManageCommentResponse,
+    "BatchReviewRecResultItemResult": BatchReviewRecResultItemResult,
+    "BatchReviewRecResultRequest": BatchReviewRecResultRequest,
+    "BatchReviewRecResultResponse": BatchReviewRecResultResponse,
     "BatchUpdateUserReviewForComparisonResultRequest": BatchUpdateUserReviewForComparisonResultRequest,
     "BatchUpdateUserReviewForComparisonResultResponse": BatchUpdateUserReviewForComparisonResultResponse,
     "BatchUpsertDatesForCalendarResponse": BatchUpsertDatesForCalendarResponse,
@@ -4474,6 +4543,8 @@ let typeMap: {[index: string]: any} = {
     "BondCouponEventAllOf": BondCouponEventAllOf,
     "BondDefaultEvent": BondDefaultEvent,
     "BondDefaultEventAllOf": BondDefaultEventAllOf,
+    "BondOption": BondOption,
+    "BondOptionAllOf": BondOptionAllOf,
     "BondPrincipalEvent": BondPrincipalEvent,
     "BondPrincipalEventAllOf": BondPrincipalEventAllOf,
     "BonusIssueEvent": BonusIssueEvent,
@@ -4513,6 +4584,8 @@ let typeMap: {[index: string]: any} = {
     "CancelOrdersAndMoveRemainingResponse": CancelOrdersAndMoveRemainingResponse,
     "CancelOrdersResponse": CancelOrdersResponse,
     "CancelPlacementsResponse": CancelPlacementsResponse,
+    "CancelSchedule": CancelSchedule,
+    "CancelScheduleAllOf": CancelScheduleAllOf,
     "CancelSingleHoldingAdjustmentRequest": CancelSingleHoldingAdjustmentRequest,
     "CancelledOrderResult": CancelledOrderResult,
     "CancelledPlacementResult": CancelledPlacementResult,
@@ -4591,6 +4664,8 @@ let typeMap: {[index: string]: any} = {
     "CollateralInstrument": CollateralInstrument,
     "CommodityForward": CommodityForward,
     "CommodityForwardAllOf": CommodityForwardAllOf,
+    "CommodityForwardCashSettlementEvent": CommodityForwardCashSettlementEvent,
+    "CommodityForwardCashSettlementEventAllOf": CommodityForwardCashSettlementEventAllOf,
     "ComparisonAttributeValuePair": ComparisonAttributeValuePair,
     "CompletePortfolio": CompletePortfolio,
     "CompleteRelation": CompleteRelation,
@@ -4650,6 +4725,8 @@ let typeMap: {[index: string]: any} = {
     "ContributionToNonPassingRuleDetail": ContributionToNonPassingRuleDetail,
     "ConversionEvent": ConversionEvent,
     "ConversionEventAllOf": ConversionEventAllOf,
+    "CoreRuleValues": CoreRuleValues,
+    "CoreToleranceBase": CoreToleranceBase,
     "CorporateAction": CorporateAction,
     "CorporateActionSource": CorporateActionSource,
     "CorporateActionTransition": CorporateActionTransition,
@@ -5235,6 +5312,7 @@ let typeMap: {[index: string]: any} = {
     "NavTypeDefinition": NavTypeDefinition,
     "NewInstrument": NewInstrument,
     "NextValueInSequenceResponse": NextValueInSequenceResponse,
+    "NoticeConvention": NoticeConvention,
     "OpaqueDependency": OpaqueDependency,
     "OpaqueDependencyAllOf": OpaqueDependencyAllOf,
     "OpaqueMarketData": OpaqueMarketData,
@@ -5353,6 +5431,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfPropertyDefinition": PagedResourceListOfPropertyDefinition,
     "PagedResourceListOfPropertyDefinitionSearchResult": PagedResourceListOfPropertyDefinitionSearchResult,
     "PagedResourceListOfRecInstance": PagedResourceListOfRecInstance,
+    "PagedResourceListOfRecResult": PagedResourceListOfRecResult,
     "PagedResourceListOfRecResultSet": PagedResourceListOfRecResultSet,
     "PagedResourceListOfReconciliation": PagedResourceListOfReconciliation,
     "PagedResourceListOfReferenceListResponse": PagedResourceListOfReferenceListResponse,
@@ -5543,14 +5622,23 @@ let typeMap: {[index: string]: any} = {
     "RecOpenExceptionCounts": RecOpenExceptionCounts,
     "RecRequestedResultRevision": RecRequestedResultRevision,
     "RecRequiredApproval": RecRequiredApproval,
+    "RecResult": RecResult,
+    "RecResultAssignmentUpdate": RecResultAssignmentUpdate,
     "RecResultCountByReviewStatus": RecResultCountByReviewStatus,
     "RecResultCounts": RecResultCounts,
+    "RecResultDecisionGroup": RecResultDecisionGroup,
+    "RecResultDecisionUpdate": RecResultDecisionUpdate,
+    "RecResultException": RecResultException,
+    "RecResultItem": RecResultItem,
+    "RecResultItemDetails": RecResultItemDetails,
+    "RecResultReview": RecResultReview,
     "RecResultSet": RecResultSet,
     "RecResultSetApprovalDecisionRequest": RecResultSetApprovalDecisionRequest,
     "RecReview": RecReview,
     "RecRunLogEntry": RecRunLogEntry,
     "RecSubmission": RecSubmission,
     "RecSupersededRun": RecSupersededRun,
+    "RecUserComment": RecUserComment,
     "RecWorkflowTask": RecWorkflowTask,
     "RecipeBlock": RecipeBlock,
     "RecipeComposer": RecipeComposer,
@@ -5608,6 +5696,7 @@ let typeMap: {[index: string]: any} = {
     "RequestedChanges": RequestedChanges,
     "ResetEvent": ResetEvent,
     "ResetEventAllOf": ResetEventAllOf,
+    "ResetSchedule": ResetSchedule,
     "ResolveTenorsRequest": ResolveTenorsRequest,
     "ResolveTenorsResponse": ResolveTenorsResponse,
     "ResolvedCustodianAccount": ResolvedCustodianAccount,
@@ -5820,6 +5909,7 @@ let typeMap: {[index: string]: any} = {
     "SubmitRecResultSetReviewRequest": SubmitRecResultSetReviewRequest,
     "SubscribeElection": SubscribeElection,
     "SubscriptionDefinition": SubscriptionDefinition,
+    "SupplementalAttributeValues": SupplementalAttributeValues,
     "SwapCashFlowEvent": SwapCashFlowEvent,
     "SwapCashFlowEventAllOf": SwapCashFlowEventAllOf,
     "SwapPrincipalEvent": SwapPrincipalEvent,
