@@ -146,6 +146,8 @@ export * from './bondDefaultEvent';
 export * from './bondDefaultEventAllOf';
 export * from './bondOption';
 export * from './bondOptionAllOf';
+export * from './bondOptionTerminationEvent';
+export * from './bondOptionTerminationEventAllOf';
 export * from './bondPrincipalEvent';
 export * from './bondPrincipalEventAllOf';
 export * from './bonusIssueEvent';
@@ -188,6 +190,8 @@ export * from './cancelPlacementsResponse';
 export * from './cancelSchedule';
 export * from './cancelScheduleAllOf';
 export * from './cancelSingleHoldingAdjustmentRequest';
+export * from './cancelSwapEvent';
+export * from './cancelSwapEventAllOf';
 export * from './cancelledOrderResult';
 export * from './cancelledPlacementResult';
 export * from './capFloor';
@@ -2000,6 +2004,8 @@ import { BondDefaultEvent } from './bondDefaultEvent';
 import { BondDefaultEventAllOf } from './bondDefaultEventAllOf';
 import { BondOption } from './bondOption';
 import { BondOptionAllOf } from './bondOptionAllOf';
+import { BondOptionTerminationEvent } from './bondOptionTerminationEvent';
+import { BondOptionTerminationEventAllOf } from './bondOptionTerminationEventAllOf';
 import { BondPrincipalEvent } from './bondPrincipalEvent';
 import { BondPrincipalEventAllOf } from './bondPrincipalEventAllOf';
 import { BonusIssueEvent } from './bonusIssueEvent';
@@ -2042,6 +2048,8 @@ import { CancelPlacementsResponse } from './cancelPlacementsResponse';
 import { CancelSchedule } from './cancelSchedule';
 import { CancelScheduleAllOf } from './cancelScheduleAllOf';
 import { CancelSingleHoldingAdjustmentRequest } from './cancelSingleHoldingAdjustmentRequest';
+import { CancelSwapEvent } from './cancelSwapEvent';
+import { CancelSwapEventAllOf } from './cancelSwapEventAllOf';
 import { CancelledOrderResult } from './cancelledOrderResult';
 import { CancelledPlacementResult } from './cancelledPlacementResult';
 import { CapFloor } from './capFloor';
@@ -3756,6 +3764,8 @@ let enumsMap: {[index: string]: any} = {
         "BondDefaultEventAllOf.InstrumentEventTypeEnum": BondDefaultEventAllOf.InstrumentEventTypeEnum,
         "BondOption.InstrumentTypeEnum": BondOption.InstrumentTypeEnum,
         "BondOptionAllOf.InstrumentTypeEnum": BondOptionAllOf.InstrumentTypeEnum,
+        "BondOptionTerminationEvent.InstrumentEventTypeEnum": BondOptionTerminationEvent.InstrumentEventTypeEnum,
+        "BondOptionTerminationEventAllOf.InstrumentEventTypeEnum": BondOptionTerminationEventAllOf.InstrumentEventTypeEnum,
         "BondPrincipalEvent.InstrumentEventTypeEnum": BondPrincipalEvent.InstrumentEventTypeEnum,
         "BondPrincipalEventAllOf.InstrumentEventTypeEnum": BondPrincipalEventAllOf.InstrumentEventTypeEnum,
         "BonusIssueEvent.InstrumentEventTypeEnum": BonusIssueEvent.InstrumentEventTypeEnum,
@@ -3773,6 +3783,8 @@ let enumsMap: {[index: string]: any} = {
         "CallOnIntermediateSecuritiesEventAllOf.InstrumentEventTypeEnum": CallOnIntermediateSecuritiesEventAllOf.InstrumentEventTypeEnum,
         "CancelSchedule.ScheduleTypeEnum": CancelSchedule.ScheduleTypeEnum,
         "CancelScheduleAllOf.ScheduleTypeEnum": CancelScheduleAllOf.ScheduleTypeEnum,
+        "CancelSwapEvent.InstrumentEventTypeEnum": CancelSwapEvent.InstrumentEventTypeEnum,
+        "CancelSwapEventAllOf.InstrumentEventTypeEnum": CancelSwapEventAllOf.InstrumentEventTypeEnum,
         "CapFloor.InstrumentTypeEnum": CapFloor.InstrumentTypeEnum,
         "CapFloorAllOf.InstrumentTypeEnum": CapFloorAllOf.InstrumentTypeEnum,
         "CapitalDistributionEvent.InstrumentEventTypeEnum": CapitalDistributionEvent.InstrumentEventTypeEnum,
@@ -4575,6 +4587,8 @@ let typeMap: {[index: string]: any} = {
     "BondDefaultEventAllOf": BondDefaultEventAllOf,
     "BondOption": BondOption,
     "BondOptionAllOf": BondOptionAllOf,
+    "BondOptionTerminationEvent": BondOptionTerminationEvent,
+    "BondOptionTerminationEventAllOf": BondOptionTerminationEventAllOf,
     "BondPrincipalEvent": BondPrincipalEvent,
     "BondPrincipalEventAllOf": BondPrincipalEventAllOf,
     "BonusIssueEvent": BonusIssueEvent,
@@ -4617,6 +4631,8 @@ let typeMap: {[index: string]: any} = {
     "CancelSchedule": CancelSchedule,
     "CancelScheduleAllOf": CancelScheduleAllOf,
     "CancelSingleHoldingAdjustmentRequest": CancelSingleHoldingAdjustmentRequest,
+    "CancelSwapEvent": CancelSwapEvent,
+    "CancelSwapEventAllOf": CancelSwapEventAllOf,
     "CancelledOrderResult": CancelledOrderResult,
     "CancelledPlacementResult": CancelledPlacementResult,
     "CapFloor": CapFloor,
