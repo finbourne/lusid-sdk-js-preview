@@ -9,7 +9,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "2.0.1606",
+    "version": "2.0.1607",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -96316,6 +96316,7 @@
                       },
                       "booked": {
                         "quantity": 100,
+                        "amount": 0,
                         "details": [
                           {
                             "id": "txn1"
@@ -96490,6 +96491,7 @@
                       },
                       "booked": {
                         "quantity": 100,
+                        "amount": 0,
                         "details": [
                           {
                             "id": "txn1"
@@ -96664,6 +96666,7 @@
                       },
                       "booked": {
                         "quantity": 100,
+                        "amount": 0,
                         "details": [
                           {
                             "id": "txn1"
@@ -96913,10 +96916,12 @@
                             }
                           }
                         ],
-                        "quantity": 1250
+                        "quantity": 1250,
+                        "amount": 0
                       },
                       "executed": {
                         "quantity": 1100,
+                        "amount": 0,
                         "details": [
                           {
                             "id": {
@@ -96934,6 +96939,7 @@
                       },
                       "allocated": {
                         "quantity": 800,
+                        "amount": 0,
                         "details": [
                           {
                             "id": {
@@ -97052,10 +97058,12 @@
                             }
                           }
                         ],
-                        "quantity": 1250
+                        "quantity": 1250,
+                        "amount": 0
                       },
                       "executed": {
                         "quantity": 1100,
+                        "amount": 0,
                         "details": [
                           {
                             "id": {
@@ -97073,6 +97081,7 @@
                       },
                       "allocated": {
                         "quantity": 800,
+                        "amount": 0,
                         "details": [
                           {
                             "id": {
@@ -97191,10 +97200,12 @@
                             }
                           }
                         ],
-                        "quantity": 1250
+                        "quantity": 1250,
+                        "amount": 0
                       },
                       "executed": {
                         "quantity": 1100,
+                        "amount": 0,
                         "details": [
                           {
                             "id": {
@@ -97212,6 +97223,7 @@
                       },
                       "allocated": {
                         "quantity": 800,
+                        "amount": 0,
                         "details": [
                           {
                             "id": {
@@ -97455,10 +97467,12 @@
                             }
                           }
                         ],
-                        "quantity": 1250
+                        "quantity": 1250,
+                        "amount": 0
                       },
                       "executed": {
                         "quantity": 1100,
+                        "amount": 0,
                         "details": [
                           {
                             "id": {
@@ -97476,6 +97490,7 @@
                       },
                       "allocated": {
                         "quantity": 800,
+                        "amount": 0,
                         "details": [
                           {
                             "id": {
@@ -97594,10 +97609,12 @@
                             }
                           }
                         ],
-                        "quantity": 1250
+                        "quantity": 1250,
+                        "amount": 0
                       },
                       "executed": {
                         "quantity": 1100,
+                        "amount": 0,
                         "details": [
                           {
                             "id": {
@@ -97615,6 +97632,7 @@
                       },
                       "allocated": {
                         "quantity": 800,
+                        "amount": 0,
                         "details": [
                           {
                             "id": {
@@ -97733,10 +97751,12 @@
                             }
                           }
                         ],
-                        "quantity": 1250
+                        "quantity": 1250,
+                        "amount": 0
                       },
                       "executed": {
                         "quantity": 1100,
+                        "amount": 0,
                         "details": [
                           {
                             "id": {
@@ -97754,6 +97774,7 @@
                       },
                       "allocated": {
                         "quantity": 800,
+                        "amount": 0,
                         "details": [
                           {
                             "id": {
@@ -144991,6 +145012,1375 @@
         "x-fbn-apistatus": "Experimental"
       }
     },
+    "/api/recs/definitions": {
+      "post": {
+        "tags": [
+          "Recs"
+        ],
+        "summary": "[EXPERIMENTAL] CreateRecDefinition: CreateRecDefinition",
+        "description": "Create a rec definition, describing the two sides to reconcile and the rules to reconcile them with.",
+        "operationId": "CreateRecDefinition",
+        "requestBody": {
+          "description": "The rec definition to create.",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateRecDefinitionRequest"
+              },
+              "example": {
+                "id": {
+                  "scope": "Recs",
+                  "code": "CustodyDaily"
+                },
+                "displayName": "Daily Custody Reconciliation",
+                "description": "Daily reconciliation of UK equity fund holdings against custodian positions.",
+                "definitionType": "PortfolioContents",
+                "sideNames": {
+                  "left": "Investment Portfolios",
+                  "right": "Custodian"
+                },
+                "leftPortfolioSources": [
+                  {
+                    "sourceType": "PortfolioGroup",
+                    "id": {
+                      "scope": "Funds",
+                      "code": "UKEquityFunds"
+                    }
+                  }
+                ],
+                "rightPortfolioSources": [],
+                "valuationRecipes": {
+                  "left": {
+                    "scope": "Recipes",
+                    "code": "Default"
+                  },
+                  "right": {
+                    "scope": "Recipes",
+                    "code": "Default"
+                  }
+                },
+                "currencies": {
+                  "left": "GBP",
+                  "right": "USD"
+                },
+                "rulesets": [
+                  {
+                    "recType": "Holding",
+                    "matchingRulesetId": {
+                      "scope": "Recs",
+                      "code": "CustodyHoldingRules"
+                    },
+                    "relationalDataFilter": "custodian eq 'NT'"
+                  }
+                ]
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateRecDefinitionRequest"
+              },
+              "example": {
+                "id": {
+                  "scope": "Recs",
+                  "code": "CustodyDaily"
+                },
+                "displayName": "Daily Custody Reconciliation",
+                "description": "Daily reconciliation of UK equity fund holdings against custodian positions.",
+                "definitionType": "PortfolioContents",
+                "sideNames": {
+                  "left": "Investment Portfolios",
+                  "right": "Custodian"
+                },
+                "leftPortfolioSources": [
+                  {
+                    "sourceType": "PortfolioGroup",
+                    "id": {
+                      "scope": "Funds",
+                      "code": "UKEquityFunds"
+                    }
+                  }
+                ],
+                "rightPortfolioSources": [],
+                "valuationRecipes": {
+                  "left": {
+                    "scope": "Recipes",
+                    "code": "Default"
+                  },
+                  "right": {
+                    "scope": "Recipes",
+                    "code": "Default"
+                  }
+                },
+                "currencies": {
+                  "left": "GBP",
+                  "right": "USD"
+                },
+                "rulesets": [
+                  {
+                    "recType": "Holding",
+                    "matchingRulesetId": {
+                      "scope": "Recs",
+                      "code": "CustodyHoldingRules"
+                    },
+                    "relationalDataFilter": "custodian eq 'NT'"
+                  }
+                ]
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateRecDefinitionRequest"
+              },
+              "example": {
+                "id": {
+                  "scope": "Recs",
+                  "code": "CustodyDaily"
+                },
+                "displayName": "Daily Custody Reconciliation",
+                "description": "Daily reconciliation of UK equity fund holdings against custodian positions.",
+                "definitionType": "PortfolioContents",
+                "sideNames": {
+                  "left": "Investment Portfolios",
+                  "right": "Custodian"
+                },
+                "leftPortfolioSources": [
+                  {
+                    "sourceType": "PortfolioGroup",
+                    "id": {
+                      "scope": "Funds",
+                      "code": "UKEquityFunds"
+                    }
+                  }
+                ],
+                "rightPortfolioSources": [],
+                "valuationRecipes": {
+                  "left": {
+                    "scope": "Recipes",
+                    "code": "Default"
+                  },
+                  "right": {
+                    "scope": "Recipes",
+                    "code": "Default"
+                  }
+                },
+                "currencies": {
+                  "left": "GBP",
+                  "right": "USD"
+                },
+                "rulesets": [
+                  {
+                    "recType": "Holding",
+                    "matchingRulesetId": {
+                      "scope": "Recs",
+                      "code": "CustodyHoldingRules"
+                    },
+                    "relationalDataFilter": "custodian eq 'NT'"
+                  }
+                ]
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateRecDefinitionRequest"
+              },
+              "example": {
+                "id": {
+                  "scope": "Recs",
+                  "code": "CustodyDaily"
+                },
+                "displayName": "Daily Custody Reconciliation",
+                "description": "Daily reconciliation of UK equity fund holdings against custodian positions.",
+                "definitionType": "PortfolioContents",
+                "sideNames": {
+                  "left": "Investment Portfolios",
+                  "right": "Custodian"
+                },
+                "leftPortfolioSources": [
+                  {
+                    "sourceType": "PortfolioGroup",
+                    "id": {
+                      "scope": "Funds",
+                      "code": "UKEquityFunds"
+                    }
+                  }
+                ],
+                "rightPortfolioSources": [],
+                "valuationRecipes": {
+                  "left": {
+                    "scope": "Recipes",
+                    "code": "Default"
+                  },
+                  "right": {
+                    "scope": "Recipes",
+                    "code": "Default"
+                  }
+                },
+                "currencies": {
+                  "left": "GBP",
+                  "right": "USD"
+                },
+                "rulesets": [
+                  {
+                    "recType": "Holding",
+                    "matchingRulesetId": {
+                      "scope": "Recs",
+                      "code": "CustodyHoldingRules"
+                    },
+                    "relationalDataFilter": "custodian eq 'NT'"
+                  }
+                ]
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "The newly created rec definition.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecDefinition"
+                },
+                "example": {
+                  "id": {
+                    "scope": "Recs",
+                    "code": "CustodyDaily"
+                  },
+                  "displayName": "Daily Custody Reconciliation",
+                  "description": "Daily reconciliation of UK equity fund holdings against custodian positions.",
+                  "definitionType": "PortfolioContents",
+                  "sideNames": {
+                    "left": "Investment Portfolios",
+                    "right": "Custodian"
+                  },
+                  "leftPortfolioSources": [
+                    {
+                      "sourceType": "PortfolioGroup",
+                      "id": {
+                        "scope": "Funds",
+                        "code": "UKEquityFunds"
+                      }
+                    }
+                  ],
+                  "rightPortfolioSources": [],
+                  "valuationRecipes": {
+                    "left": {
+                      "scope": "Recipes",
+                      "code": "Default"
+                    },
+                    "right": {
+                      "scope": "Recipes",
+                      "code": "Default"
+                    }
+                  },
+                  "currencies": {
+                    "left": "GBP",
+                    "right": "USD"
+                  },
+                  "rulesets": [
+                    {
+                      "recType": "Holding",
+                      "matchingRulesetId": {
+                        "scope": "Recs",
+                        "code": "CustodyHoldingRules"
+                      },
+                      "relationalDataFilter": "custodian eq 'NT'"
+                    }
+                  ],
+                  "href": "https://example.com",
+                  "version": {
+                    "effectiveFrom": "2024-06-01T00:00:00.0000000+00:00",
+                    "asAtDate": "2024-06-01T10:30:00.0000000+00:00"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecDefinition"
+                },
+                "example": {
+                  "id": {
+                    "scope": "Recs",
+                    "code": "CustodyDaily"
+                  },
+                  "displayName": "Daily Custody Reconciliation",
+                  "description": "Daily reconciliation of UK equity fund holdings against custodian positions.",
+                  "definitionType": "PortfolioContents",
+                  "sideNames": {
+                    "left": "Investment Portfolios",
+                    "right": "Custodian"
+                  },
+                  "leftPortfolioSources": [
+                    {
+                      "sourceType": "PortfolioGroup",
+                      "id": {
+                        "scope": "Funds",
+                        "code": "UKEquityFunds"
+                      }
+                    }
+                  ],
+                  "rightPortfolioSources": [],
+                  "valuationRecipes": {
+                    "left": {
+                      "scope": "Recipes",
+                      "code": "Default"
+                    },
+                    "right": {
+                      "scope": "Recipes",
+                      "code": "Default"
+                    }
+                  },
+                  "currencies": {
+                    "left": "GBP",
+                    "right": "USD"
+                  },
+                  "rulesets": [
+                    {
+                      "recType": "Holding",
+                      "matchingRulesetId": {
+                        "scope": "Recs",
+                        "code": "CustodyHoldingRules"
+                      },
+                      "relationalDataFilter": "custodian eq 'NT'"
+                    }
+                  ],
+                  "href": "https://example.com",
+                  "version": {
+                    "effectiveFrom": "2024-06-01T00:00:00.0000000+00:00",
+                    "asAtDate": "2024-06-01T10:30:00.0000000+00:00"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecDefinition"
+                },
+                "example": {
+                  "id": {
+                    "scope": "Recs",
+                    "code": "CustodyDaily"
+                  },
+                  "displayName": "Daily Custody Reconciliation",
+                  "description": "Daily reconciliation of UK equity fund holdings against custodian positions.",
+                  "definitionType": "PortfolioContents",
+                  "sideNames": {
+                    "left": "Investment Portfolios",
+                    "right": "Custodian"
+                  },
+                  "leftPortfolioSources": [
+                    {
+                      "sourceType": "PortfolioGroup",
+                      "id": {
+                        "scope": "Funds",
+                        "code": "UKEquityFunds"
+                      }
+                    }
+                  ],
+                  "rightPortfolioSources": [],
+                  "valuationRecipes": {
+                    "left": {
+                      "scope": "Recipes",
+                      "code": "Default"
+                    },
+                    "right": {
+                      "scope": "Recipes",
+                      "code": "Default"
+                    }
+                  },
+                  "currencies": {
+                    "left": "GBP",
+                    "right": "USD"
+                  },
+                  "rulesets": [
+                    {
+                      "recType": "Holding",
+                      "matchingRulesetId": {
+                        "scope": "Recs",
+                        "code": "CustodyHoldingRules"
+                      },
+                      "relationalDataFilter": "custodian eq 'NT'"
+                    }
+                  ],
+                  "href": "https://example.com",
+                  "version": {
+                    "effectiveFrom": "2024-06-01T00:00:00.0000000+00:00",
+                    "asAtDate": "2024-06-01T10:30:00.0000000+00:00"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      },
+      "get": {
+        "tags": [
+          "Recs"
+        ],
+        "summary": "[EXPERIMENTAL] ListRecDefinitions: ListRecDefinitions",
+        "description": "List rec definitions, optionally filtered and sorted. Supports pagination.",
+        "operationId": "ListRecDefinitions",
+        "parameters": [
+          {
+            "name": "asAt",
+            "in": "query",
+            "description": "The asAt datetime at which to list the rec definitions. Defaults to latest if not specified.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "x-nullable": true
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "The pagination token to use to continue listing rec definitions from a previous call. This value is\r\n            returned from the previous call. If a pagination token is provided the sortBy, filter and asAt fields must not have\r\n            changed since the original request.",
+            "schema": {
+              "maxLength": 500,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\+/]*={0,3}$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "sortBy",
+            "in": "query",
+            "description": "A list of field names to sort by, each suffixed by \" ASC\" or \" DESC\".",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "x-nullable": true
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "When paginating, limit the number of returned results to this many per page.",
+            "schema": {
+              "maximum": 5000,
+              "minimum": 1,
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-nullable": true
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Expression to filter the result set. Read more about filtering results from LUSID here\r\n            https://support.lusid.com/filtering-results-from-lusid.",
+            "schema": {
+              "maxLength": 16384,
+              "minLength": 0,
+              "pattern": "^[\\s\\S]*$",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The requested list of rec definitions.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedResourceListOfRecDefinition"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedResourceListOfRecDefinition"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedResourceListOfRecDefinition"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      }
+    },
+    "/api/recs/definitions/{scope}/{code}": {
+      "get": {
+        "tags": [
+          "Recs"
+        ],
+        "summary": "[EXPERIMENTAL] GetRecDefinition: GetRecDefinition",
+        "description": "Retrieve a single rec definition by scope and code.",
+        "operationId": "GetRecDefinition",
+        "parameters": [
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope of the rec definition.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "code",
+            "in": "path",
+            "description": "The code of the rec definition. Together with the scope this uniquely identifies the rec definition.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "asAt",
+            "in": "query",
+            "description": "The asAt datetime at which to retrieve the rec definition. Defaults to latest if not specified.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The requested rec definition.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecDefinition"
+                },
+                "example": {
+                  "id": {
+                    "scope": "Recs",
+                    "code": "CustodyDaily"
+                  },
+                  "displayName": "Daily Custody Reconciliation",
+                  "description": "Daily reconciliation of UK equity fund holdings against custodian positions.",
+                  "definitionType": "PortfolioContents",
+                  "sideNames": {
+                    "left": "Investment Portfolios",
+                    "right": "Custodian"
+                  },
+                  "leftPortfolioSources": [
+                    {
+                      "sourceType": "PortfolioGroup",
+                      "id": {
+                        "scope": "Funds",
+                        "code": "UKEquityFunds"
+                      }
+                    }
+                  ],
+                  "rightPortfolioSources": [],
+                  "valuationRecipes": {
+                    "left": {
+                      "scope": "Recipes",
+                      "code": "Default"
+                    },
+                    "right": {
+                      "scope": "Recipes",
+                      "code": "Default"
+                    }
+                  },
+                  "currencies": {
+                    "left": "GBP",
+                    "right": "USD"
+                  },
+                  "rulesets": [
+                    {
+                      "recType": "Holding",
+                      "matchingRulesetId": {
+                        "scope": "Recs",
+                        "code": "CustodyHoldingRules"
+                      },
+                      "relationalDataFilter": "custodian eq 'NT'"
+                    }
+                  ],
+                  "href": "https://example.com",
+                  "version": {
+                    "effectiveFrom": "2024-06-01T00:00:00.0000000+00:00",
+                    "asAtDate": "2024-06-01T10:30:00.0000000+00:00"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecDefinition"
+                },
+                "example": {
+                  "id": {
+                    "scope": "Recs",
+                    "code": "CustodyDaily"
+                  },
+                  "displayName": "Daily Custody Reconciliation",
+                  "description": "Daily reconciliation of UK equity fund holdings against custodian positions.",
+                  "definitionType": "PortfolioContents",
+                  "sideNames": {
+                    "left": "Investment Portfolios",
+                    "right": "Custodian"
+                  },
+                  "leftPortfolioSources": [
+                    {
+                      "sourceType": "PortfolioGroup",
+                      "id": {
+                        "scope": "Funds",
+                        "code": "UKEquityFunds"
+                      }
+                    }
+                  ],
+                  "rightPortfolioSources": [],
+                  "valuationRecipes": {
+                    "left": {
+                      "scope": "Recipes",
+                      "code": "Default"
+                    },
+                    "right": {
+                      "scope": "Recipes",
+                      "code": "Default"
+                    }
+                  },
+                  "currencies": {
+                    "left": "GBP",
+                    "right": "USD"
+                  },
+                  "rulesets": [
+                    {
+                      "recType": "Holding",
+                      "matchingRulesetId": {
+                        "scope": "Recs",
+                        "code": "CustodyHoldingRules"
+                      },
+                      "relationalDataFilter": "custodian eq 'NT'"
+                    }
+                  ],
+                  "href": "https://example.com",
+                  "version": {
+                    "effectiveFrom": "2024-06-01T00:00:00.0000000+00:00",
+                    "asAtDate": "2024-06-01T10:30:00.0000000+00:00"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecDefinition"
+                },
+                "example": {
+                  "id": {
+                    "scope": "Recs",
+                    "code": "CustodyDaily"
+                  },
+                  "displayName": "Daily Custody Reconciliation",
+                  "description": "Daily reconciliation of UK equity fund holdings against custodian positions.",
+                  "definitionType": "PortfolioContents",
+                  "sideNames": {
+                    "left": "Investment Portfolios",
+                    "right": "Custodian"
+                  },
+                  "leftPortfolioSources": [
+                    {
+                      "sourceType": "PortfolioGroup",
+                      "id": {
+                        "scope": "Funds",
+                        "code": "UKEquityFunds"
+                      }
+                    }
+                  ],
+                  "rightPortfolioSources": [],
+                  "valuationRecipes": {
+                    "left": {
+                      "scope": "Recipes",
+                      "code": "Default"
+                    },
+                    "right": {
+                      "scope": "Recipes",
+                      "code": "Default"
+                    }
+                  },
+                  "currencies": {
+                    "left": "GBP",
+                    "right": "USD"
+                  },
+                  "rulesets": [
+                    {
+                      "recType": "Holding",
+                      "matchingRulesetId": {
+                        "scope": "Recs",
+                        "code": "CustodyHoldingRules"
+                      },
+                      "relationalDataFilter": "custodian eq 'NT'"
+                    }
+                  ],
+                  "href": "https://example.com",
+                  "version": {
+                    "effectiveFrom": "2024-06-01T00:00:00.0000000+00:00",
+                    "asAtDate": "2024-06-01T10:30:00.0000000+00:00"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      },
+      "put": {
+        "tags": [
+          "Recs"
+        ],
+        "summary": "[EXPERIMENTAL] UpdateRecDefinition: UpdateRecDefinition",
+        "description": "Overwrite an existing rec definition identified by scope and code.\r\nThe update request has the same required fields as create, apart from the identifier.",
+        "operationId": "UpdateRecDefinition",
+        "parameters": [
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope of the rec definition.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "code",
+            "in": "path",
+            "description": "The code of the rec definition. Together with the scope this uniquely identifies the rec definition.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The updated rec definition values.",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateRecDefinitionRequest"
+              },
+              "example": {
+                "displayName": "Daily Custody Reconciliation",
+                "description": "Daily reconciliation of UK equity fund holdings against custodian positions.",
+                "definitionType": "PortfolioContents",
+                "sideNames": {
+                  "left": "Investment Portfolios",
+                  "right": "Custodian"
+                },
+                "leftPortfolioSources": [
+                  {
+                    "sourceType": "PortfolioGroup",
+                    "id": {
+                      "scope": "Funds",
+                      "code": "UKEquityFunds"
+                    }
+                  }
+                ],
+                "rightPortfolioSources": [],
+                "valuationRecipes": {
+                  "left": {
+                    "scope": "Recipes",
+                    "code": "Default"
+                  },
+                  "right": {
+                    "scope": "Recipes",
+                    "code": "Default"
+                  }
+                },
+                "currencies": {
+                  "left": "GBP",
+                  "right": "USD"
+                },
+                "rulesets": [
+                  {
+                    "recType": "Holding",
+                    "matchingRulesetId": {
+                      "scope": "Recs",
+                      "code": "CustodyHoldingRules"
+                    },
+                    "relationalDataFilter": "custodian eq 'NT'"
+                  }
+                ]
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateRecDefinitionRequest"
+              },
+              "example": {
+                "displayName": "Daily Custody Reconciliation",
+                "description": "Daily reconciliation of UK equity fund holdings against custodian positions.",
+                "definitionType": "PortfolioContents",
+                "sideNames": {
+                  "left": "Investment Portfolios",
+                  "right": "Custodian"
+                },
+                "leftPortfolioSources": [
+                  {
+                    "sourceType": "PortfolioGroup",
+                    "id": {
+                      "scope": "Funds",
+                      "code": "UKEquityFunds"
+                    }
+                  }
+                ],
+                "rightPortfolioSources": [],
+                "valuationRecipes": {
+                  "left": {
+                    "scope": "Recipes",
+                    "code": "Default"
+                  },
+                  "right": {
+                    "scope": "Recipes",
+                    "code": "Default"
+                  }
+                },
+                "currencies": {
+                  "left": "GBP",
+                  "right": "USD"
+                },
+                "rulesets": [
+                  {
+                    "recType": "Holding",
+                    "matchingRulesetId": {
+                      "scope": "Recs",
+                      "code": "CustodyHoldingRules"
+                    },
+                    "relationalDataFilter": "custodian eq 'NT'"
+                  }
+                ]
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateRecDefinitionRequest"
+              },
+              "example": {
+                "displayName": "Daily Custody Reconciliation",
+                "description": "Daily reconciliation of UK equity fund holdings against custodian positions.",
+                "definitionType": "PortfolioContents",
+                "sideNames": {
+                  "left": "Investment Portfolios",
+                  "right": "Custodian"
+                },
+                "leftPortfolioSources": [
+                  {
+                    "sourceType": "PortfolioGroup",
+                    "id": {
+                      "scope": "Funds",
+                      "code": "UKEquityFunds"
+                    }
+                  }
+                ],
+                "rightPortfolioSources": [],
+                "valuationRecipes": {
+                  "left": {
+                    "scope": "Recipes",
+                    "code": "Default"
+                  },
+                  "right": {
+                    "scope": "Recipes",
+                    "code": "Default"
+                  }
+                },
+                "currencies": {
+                  "left": "GBP",
+                  "right": "USD"
+                },
+                "rulesets": [
+                  {
+                    "recType": "Holding",
+                    "matchingRulesetId": {
+                      "scope": "Recs",
+                      "code": "CustodyHoldingRules"
+                    },
+                    "relationalDataFilter": "custodian eq 'NT'"
+                  }
+                ]
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateRecDefinitionRequest"
+              },
+              "example": {
+                "displayName": "Daily Custody Reconciliation",
+                "description": "Daily reconciliation of UK equity fund holdings against custodian positions.",
+                "definitionType": "PortfolioContents",
+                "sideNames": {
+                  "left": "Investment Portfolios",
+                  "right": "Custodian"
+                },
+                "leftPortfolioSources": [
+                  {
+                    "sourceType": "PortfolioGroup",
+                    "id": {
+                      "scope": "Funds",
+                      "code": "UKEquityFunds"
+                    }
+                  }
+                ],
+                "rightPortfolioSources": [],
+                "valuationRecipes": {
+                  "left": {
+                    "scope": "Recipes",
+                    "code": "Default"
+                  },
+                  "right": {
+                    "scope": "Recipes",
+                    "code": "Default"
+                  }
+                },
+                "currencies": {
+                  "left": "GBP",
+                  "right": "USD"
+                },
+                "rulesets": [
+                  {
+                    "recType": "Holding",
+                    "matchingRulesetId": {
+                      "scope": "Recs",
+                      "code": "CustodyHoldingRules"
+                    },
+                    "relationalDataFilter": "custodian eq 'NT'"
+                  }
+                ]
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "The updated rec definition.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecDefinition"
+                },
+                "example": {
+                  "id": {
+                    "scope": "Recs",
+                    "code": "CustodyDaily"
+                  },
+                  "displayName": "Daily Custody Reconciliation",
+                  "description": "Daily reconciliation of UK equity fund holdings against custodian positions.",
+                  "definitionType": "PortfolioContents",
+                  "sideNames": {
+                    "left": "Investment Portfolios",
+                    "right": "Custodian"
+                  },
+                  "leftPortfolioSources": [
+                    {
+                      "sourceType": "PortfolioGroup",
+                      "id": {
+                        "scope": "Funds",
+                        "code": "UKEquityFunds"
+                      }
+                    }
+                  ],
+                  "rightPortfolioSources": [],
+                  "valuationRecipes": {
+                    "left": {
+                      "scope": "Recipes",
+                      "code": "Default"
+                    },
+                    "right": {
+                      "scope": "Recipes",
+                      "code": "Default"
+                    }
+                  },
+                  "currencies": {
+                    "left": "GBP",
+                    "right": "USD"
+                  },
+                  "rulesets": [
+                    {
+                      "recType": "Holding",
+                      "matchingRulesetId": {
+                        "scope": "Recs",
+                        "code": "CustodyHoldingRules"
+                      },
+                      "relationalDataFilter": "custodian eq 'NT'"
+                    }
+                  ],
+                  "href": "https://example.com",
+                  "version": {
+                    "effectiveFrom": "2024-06-01T00:00:00.0000000+00:00",
+                    "asAtDate": "2024-06-01T10:30:00.0000000+00:00"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecDefinition"
+                },
+                "example": {
+                  "id": {
+                    "scope": "Recs",
+                    "code": "CustodyDaily"
+                  },
+                  "displayName": "Daily Custody Reconciliation",
+                  "description": "Daily reconciliation of UK equity fund holdings against custodian positions.",
+                  "definitionType": "PortfolioContents",
+                  "sideNames": {
+                    "left": "Investment Portfolios",
+                    "right": "Custodian"
+                  },
+                  "leftPortfolioSources": [
+                    {
+                      "sourceType": "PortfolioGroup",
+                      "id": {
+                        "scope": "Funds",
+                        "code": "UKEquityFunds"
+                      }
+                    }
+                  ],
+                  "rightPortfolioSources": [],
+                  "valuationRecipes": {
+                    "left": {
+                      "scope": "Recipes",
+                      "code": "Default"
+                    },
+                    "right": {
+                      "scope": "Recipes",
+                      "code": "Default"
+                    }
+                  },
+                  "currencies": {
+                    "left": "GBP",
+                    "right": "USD"
+                  },
+                  "rulesets": [
+                    {
+                      "recType": "Holding",
+                      "matchingRulesetId": {
+                        "scope": "Recs",
+                        "code": "CustodyHoldingRules"
+                      },
+                      "relationalDataFilter": "custodian eq 'NT'"
+                    }
+                  ],
+                  "href": "https://example.com",
+                  "version": {
+                    "effectiveFrom": "2024-06-01T00:00:00.0000000+00:00",
+                    "asAtDate": "2024-06-01T10:30:00.0000000+00:00"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecDefinition"
+                },
+                "example": {
+                  "id": {
+                    "scope": "Recs",
+                    "code": "CustodyDaily"
+                  },
+                  "displayName": "Daily Custody Reconciliation",
+                  "description": "Daily reconciliation of UK equity fund holdings against custodian positions.",
+                  "definitionType": "PortfolioContents",
+                  "sideNames": {
+                    "left": "Investment Portfolios",
+                    "right": "Custodian"
+                  },
+                  "leftPortfolioSources": [
+                    {
+                      "sourceType": "PortfolioGroup",
+                      "id": {
+                        "scope": "Funds",
+                        "code": "UKEquityFunds"
+                      }
+                    }
+                  ],
+                  "rightPortfolioSources": [],
+                  "valuationRecipes": {
+                    "left": {
+                      "scope": "Recipes",
+                      "code": "Default"
+                    },
+                    "right": {
+                      "scope": "Recipes",
+                      "code": "Default"
+                    }
+                  },
+                  "currencies": {
+                    "left": "GBP",
+                    "right": "USD"
+                  },
+                  "rulesets": [
+                    {
+                      "recType": "Holding",
+                      "matchingRulesetId": {
+                        "scope": "Recs",
+                        "code": "CustodyHoldingRules"
+                      },
+                      "relationalDataFilter": "custodian eq 'NT'"
+                    }
+                  ],
+                  "href": "https://example.com",
+                  "version": {
+                    "effectiveFrom": "2024-06-01T00:00:00.0000000+00:00",
+                    "asAtDate": "2024-06-01T10:30:00.0000000+00:00"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      },
+      "delete": {
+        "tags": [
+          "Recs"
+        ],
+        "summary": "[EXPERIMENTAL] DeleteRecDefinition: DeleteRecDefinition",
+        "description": "Delete a rec definition identified by scope and code. The deletion takes effect from the deletion datetime,\r\ni.e. the rec definition will no longer exist at any asAt datetime after the asAt datetime of deletion.",
+        "operationId": "DeleteRecDefinition",
+        "parameters": [
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope of the rec definition.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "code",
+            "in": "path",
+            "description": "The code of the rec definition. Together with the scope this uniquely identifies the rec definition.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The deleted entity metadata.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeletedEntityResponse"
+                },
+                "example": {
+                  "asAt": "2018-03-05T10:10:10.0000000+00:00"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeletedEntityResponse"
+                },
+                "example": {
+                  "asAt": "2018-03-05T10:10:10.0000000+00:00"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeletedEntityResponse"
+                },
+                "example": {
+                  "asAt": "2018-03-05T10:10:10.0000000+00:00"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      }
+    },
     "/api/recs/instances": {
       "get": {
         "tags": [
@@ -145428,6 +146818,1564 @@
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/RecInstance"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      }
+    },
+    "/api/recs/matchingrulesets": {
+      "post": {
+        "tags": [
+          "Recs"
+        ],
+        "summary": "[EXPERIMENTAL] CreateMatchingRuleset: CreateMatchingRuleset",
+        "description": "Create a matching ruleset, describing the core and aggregate rules used to match a reconciliation's two sides.",
+        "operationId": "CreateMatchingRuleset",
+        "requestBody": {
+          "description": "The matching ruleset to create.",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateMatchingRulesetRequest"
+              },
+              "example": {
+                "id": {
+                  "scope": "Recs",
+                  "code": "CustodyHoldingRules"
+                },
+                "displayName": "Custody Holding Rules",
+                "recType": "Holding",
+                "datasetSchemas": {
+                  "right": {
+                    "type": "RelationalData",
+                    "relationalDatasetDefinitionId": {
+                      "scope": "Custody",
+                      "code": "CustodianPositions"
+                    }
+                  }
+                },
+                "filters": {
+                  "left": "holdingType eq 'P'",
+                  "right": "positionType eq 'STOCK'"
+                },
+                "coreRules": [
+                  {
+                    "ruleName": "Instrument",
+                    "leftFormula": "Properties[Instrument/default/Isin]",
+                    "rightFormula": "isin",
+                    "isCaseSensitive": false
+                  }
+                ],
+                "aggregateRules": [
+                  {
+                    "ruleName": "Units",
+                    "leftFormula": "units",
+                    "leftOperation": "Sum",
+                    "rightFormula": "quantity",
+                    "rightOperation": "Sum"
+                  }
+                ],
+                "aggregateTolerances": [
+                  {
+                    "referenceSide": "Left",
+                    "relativeThreshold": 0.01,
+                    "thresholdPriority": "GreaterOf",
+                    "offset": "Either",
+                    "toleranceType": "Numeric",
+                    "ruleName": "Units"
+                  }
+                ],
+                "allowPartialMatching": true,
+                "supplementalAttributes": [
+                  {
+                    "attributeName": "Custodian",
+                    "leftFormula": "Properties[Custody/default/CustodianCode]",
+                    "rightFormula": "custodian"
+                  }
+                ]
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateMatchingRulesetRequest"
+              },
+              "example": {
+                "id": {
+                  "scope": "Recs",
+                  "code": "CustodyHoldingRules"
+                },
+                "displayName": "Custody Holding Rules",
+                "recType": "Holding",
+                "datasetSchemas": {
+                  "right": {
+                    "type": "RelationalData",
+                    "relationalDatasetDefinitionId": {
+                      "scope": "Custody",
+                      "code": "CustodianPositions"
+                    }
+                  }
+                },
+                "filters": {
+                  "left": "holdingType eq 'P'",
+                  "right": "positionType eq 'STOCK'"
+                },
+                "coreRules": [
+                  {
+                    "ruleName": "Instrument",
+                    "leftFormula": "Properties[Instrument/default/Isin]",
+                    "rightFormula": "isin",
+                    "isCaseSensitive": false
+                  }
+                ],
+                "aggregateRules": [
+                  {
+                    "ruleName": "Units",
+                    "leftFormula": "units",
+                    "leftOperation": "Sum",
+                    "rightFormula": "quantity",
+                    "rightOperation": "Sum"
+                  }
+                ],
+                "aggregateTolerances": [
+                  {
+                    "referenceSide": "Left",
+                    "relativeThreshold": 0.01,
+                    "thresholdPriority": "GreaterOf",
+                    "offset": "Either",
+                    "toleranceType": "Numeric",
+                    "ruleName": "Units"
+                  }
+                ],
+                "allowPartialMatching": true,
+                "supplementalAttributes": [
+                  {
+                    "attributeName": "Custodian",
+                    "leftFormula": "Properties[Custody/default/CustodianCode]",
+                    "rightFormula": "custodian"
+                  }
+                ]
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateMatchingRulesetRequest"
+              },
+              "example": {
+                "id": {
+                  "scope": "Recs",
+                  "code": "CustodyHoldingRules"
+                },
+                "displayName": "Custody Holding Rules",
+                "recType": "Holding",
+                "datasetSchemas": {
+                  "right": {
+                    "type": "RelationalData",
+                    "relationalDatasetDefinitionId": {
+                      "scope": "Custody",
+                      "code": "CustodianPositions"
+                    }
+                  }
+                },
+                "filters": {
+                  "left": "holdingType eq 'P'",
+                  "right": "positionType eq 'STOCK'"
+                },
+                "coreRules": [
+                  {
+                    "ruleName": "Instrument",
+                    "leftFormula": "Properties[Instrument/default/Isin]",
+                    "rightFormula": "isin",
+                    "isCaseSensitive": false
+                  }
+                ],
+                "aggregateRules": [
+                  {
+                    "ruleName": "Units",
+                    "leftFormula": "units",
+                    "leftOperation": "Sum",
+                    "rightFormula": "quantity",
+                    "rightOperation": "Sum"
+                  }
+                ],
+                "aggregateTolerances": [
+                  {
+                    "referenceSide": "Left",
+                    "relativeThreshold": 0.01,
+                    "thresholdPriority": "GreaterOf",
+                    "offset": "Either",
+                    "toleranceType": "Numeric",
+                    "ruleName": "Units"
+                  }
+                ],
+                "allowPartialMatching": true,
+                "supplementalAttributes": [
+                  {
+                    "attributeName": "Custodian",
+                    "leftFormula": "Properties[Custody/default/CustodianCode]",
+                    "rightFormula": "custodian"
+                  }
+                ]
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateMatchingRulesetRequest"
+              },
+              "example": {
+                "id": {
+                  "scope": "Recs",
+                  "code": "CustodyHoldingRules"
+                },
+                "displayName": "Custody Holding Rules",
+                "recType": "Holding",
+                "datasetSchemas": {
+                  "right": {
+                    "type": "RelationalData",
+                    "relationalDatasetDefinitionId": {
+                      "scope": "Custody",
+                      "code": "CustodianPositions"
+                    }
+                  }
+                },
+                "filters": {
+                  "left": "holdingType eq 'P'",
+                  "right": "positionType eq 'STOCK'"
+                },
+                "coreRules": [
+                  {
+                    "ruleName": "Instrument",
+                    "leftFormula": "Properties[Instrument/default/Isin]",
+                    "rightFormula": "isin",
+                    "isCaseSensitive": false
+                  }
+                ],
+                "aggregateRules": [
+                  {
+                    "ruleName": "Units",
+                    "leftFormula": "units",
+                    "leftOperation": "Sum",
+                    "rightFormula": "quantity",
+                    "rightOperation": "Sum"
+                  }
+                ],
+                "aggregateTolerances": [
+                  {
+                    "referenceSide": "Left",
+                    "relativeThreshold": 0.01,
+                    "thresholdPriority": "GreaterOf",
+                    "offset": "Either",
+                    "toleranceType": "Numeric",
+                    "ruleName": "Units"
+                  }
+                ],
+                "allowPartialMatching": true,
+                "supplementalAttributes": [
+                  {
+                    "attributeName": "Custodian",
+                    "leftFormula": "Properties[Custody/default/CustodianCode]",
+                    "rightFormula": "custodian"
+                  }
+                ]
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "The newly created matching ruleset.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MatchingRuleset"
+                },
+                "example": {
+                  "id": {
+                    "scope": "Recs",
+                    "code": "CustodyHoldingRules"
+                  },
+                  "displayName": "Custody Holding Rules",
+                  "recType": "Holding",
+                  "datasetSchemas": {
+                    "left": {
+                      "type": "PortfolioContents",
+                      "entityType": "Holding"
+                    },
+                    "right": {
+                      "type": "RelationalData",
+                      "relationalDatasetDefinitionId": {
+                        "scope": "Custody",
+                        "code": "CustodianPositions"
+                      }
+                    }
+                  },
+                  "filters": {
+                    "left": "holdingType eq 'P'",
+                    "right": "positionType eq 'STOCK'"
+                  },
+                  "coreRules": [
+                    {
+                      "ruleName": "Instrument",
+                      "leftFormula": "Properties[Instrument/default/Isin]",
+                      "rightFormula": "isin",
+                      "isCaseSensitive": false
+                    }
+                  ],
+                  "aggregateRules": [
+                    {
+                      "ruleName": "Units",
+                      "leftFormula": "units",
+                      "leftOperation": "Sum",
+                      "rightFormula": "quantity",
+                      "rightOperation": "Sum"
+                    }
+                  ],
+                  "aggregateTolerances": [
+                    {
+                      "referenceSide": "Left",
+                      "relativeThreshold": 0.01,
+                      "thresholdPriority": "GreaterOf",
+                      "offset": "Either",
+                      "toleranceType": "Numeric",
+                      "ruleName": "Units"
+                    }
+                  ],
+                  "allowPartialMatching": true,
+                  "supplementalAttributes": [
+                    {
+                      "attributeName": "Custodian",
+                      "leftFormula": "Properties[Custody/default/CustodianCode]",
+                      "rightFormula": "custodian"
+                    }
+                  ],
+                  "href": "https://example.com",
+                  "version": {
+                    "effectiveFrom": "2024-06-01T00:00:00.0000000+00:00",
+                    "asAtDate": "2024-06-01T10:30:00.0000000+00:00"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MatchingRuleset"
+                },
+                "example": {
+                  "id": {
+                    "scope": "Recs",
+                    "code": "CustodyHoldingRules"
+                  },
+                  "displayName": "Custody Holding Rules",
+                  "recType": "Holding",
+                  "datasetSchemas": {
+                    "left": {
+                      "type": "PortfolioContents",
+                      "entityType": "Holding"
+                    },
+                    "right": {
+                      "type": "RelationalData",
+                      "relationalDatasetDefinitionId": {
+                        "scope": "Custody",
+                        "code": "CustodianPositions"
+                      }
+                    }
+                  },
+                  "filters": {
+                    "left": "holdingType eq 'P'",
+                    "right": "positionType eq 'STOCK'"
+                  },
+                  "coreRules": [
+                    {
+                      "ruleName": "Instrument",
+                      "leftFormula": "Properties[Instrument/default/Isin]",
+                      "rightFormula": "isin",
+                      "isCaseSensitive": false
+                    }
+                  ],
+                  "aggregateRules": [
+                    {
+                      "ruleName": "Units",
+                      "leftFormula": "units",
+                      "leftOperation": "Sum",
+                      "rightFormula": "quantity",
+                      "rightOperation": "Sum"
+                    }
+                  ],
+                  "aggregateTolerances": [
+                    {
+                      "referenceSide": "Left",
+                      "relativeThreshold": 0.01,
+                      "thresholdPriority": "GreaterOf",
+                      "offset": "Either",
+                      "toleranceType": "Numeric",
+                      "ruleName": "Units"
+                    }
+                  ],
+                  "allowPartialMatching": true,
+                  "supplementalAttributes": [
+                    {
+                      "attributeName": "Custodian",
+                      "leftFormula": "Properties[Custody/default/CustodianCode]",
+                      "rightFormula": "custodian"
+                    }
+                  ],
+                  "href": "https://example.com",
+                  "version": {
+                    "effectiveFrom": "2024-06-01T00:00:00.0000000+00:00",
+                    "asAtDate": "2024-06-01T10:30:00.0000000+00:00"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MatchingRuleset"
+                },
+                "example": {
+                  "id": {
+                    "scope": "Recs",
+                    "code": "CustodyHoldingRules"
+                  },
+                  "displayName": "Custody Holding Rules",
+                  "recType": "Holding",
+                  "datasetSchemas": {
+                    "left": {
+                      "type": "PortfolioContents",
+                      "entityType": "Holding"
+                    },
+                    "right": {
+                      "type": "RelationalData",
+                      "relationalDatasetDefinitionId": {
+                        "scope": "Custody",
+                        "code": "CustodianPositions"
+                      }
+                    }
+                  },
+                  "filters": {
+                    "left": "holdingType eq 'P'",
+                    "right": "positionType eq 'STOCK'"
+                  },
+                  "coreRules": [
+                    {
+                      "ruleName": "Instrument",
+                      "leftFormula": "Properties[Instrument/default/Isin]",
+                      "rightFormula": "isin",
+                      "isCaseSensitive": false
+                    }
+                  ],
+                  "aggregateRules": [
+                    {
+                      "ruleName": "Units",
+                      "leftFormula": "units",
+                      "leftOperation": "Sum",
+                      "rightFormula": "quantity",
+                      "rightOperation": "Sum"
+                    }
+                  ],
+                  "aggregateTolerances": [
+                    {
+                      "referenceSide": "Left",
+                      "relativeThreshold": 0.01,
+                      "thresholdPriority": "GreaterOf",
+                      "offset": "Either",
+                      "toleranceType": "Numeric",
+                      "ruleName": "Units"
+                    }
+                  ],
+                  "allowPartialMatching": true,
+                  "supplementalAttributes": [
+                    {
+                      "attributeName": "Custodian",
+                      "leftFormula": "Properties[Custody/default/CustodianCode]",
+                      "rightFormula": "custodian"
+                    }
+                  ],
+                  "href": "https://example.com",
+                  "version": {
+                    "effectiveFrom": "2024-06-01T00:00:00.0000000+00:00",
+                    "asAtDate": "2024-06-01T10:30:00.0000000+00:00"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      },
+      "get": {
+        "tags": [
+          "Recs"
+        ],
+        "summary": "[EXPERIMENTAL] ListMatchingRulesets: ListMatchingRulesets",
+        "description": "List matching rulesets, optionally filtered and sorted. Supports pagination.",
+        "operationId": "ListMatchingRulesets",
+        "parameters": [
+          {
+            "name": "asAt",
+            "in": "query",
+            "description": "The asAt datetime at which to list the matching rulesets. Defaults to latest if not specified.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "x-nullable": true
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "The pagination token to use to continue listing matching rulesets from a previous call. This value is\r\n            returned from the previous call. If a pagination token is provided the sortBy, filter and asAt fields must not have\r\n            changed since the original request.",
+            "schema": {
+              "maxLength": 500,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\+/]*={0,3}$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "sortBy",
+            "in": "query",
+            "description": "A list of field names to sort by, each suffixed by \" ASC\" or \" DESC\".",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "x-nullable": true
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "When paginating, limit the number of returned results to this many per page.",
+            "schema": {
+              "maximum": 5000,
+              "minimum": 1,
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-nullable": true
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Expression to filter the result set. Read more about filtering results from LUSID here\r\n            https://support.lusid.com/filtering-results-from-lusid.",
+            "schema": {
+              "maxLength": 16384,
+              "minLength": 0,
+              "pattern": "^[\\s\\S]*$",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The requested list of matching rulesets.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedResourceListOfMatchingRuleset"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedResourceListOfMatchingRuleset"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedResourceListOfMatchingRuleset"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      }
+    },
+    "/api/recs/matchingrulesets/{scope}/{code}": {
+      "get": {
+        "tags": [
+          "Recs"
+        ],
+        "summary": "[EXPERIMENTAL] GetMatchingRuleset: GetMatchingRuleset",
+        "description": "Retrieve a single matching ruleset by scope and code.",
+        "operationId": "GetMatchingRuleset",
+        "parameters": [
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope of the matching ruleset.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "code",
+            "in": "path",
+            "description": "The code of the matching ruleset. Together with the scope this uniquely identifies the matching ruleset.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "asAt",
+            "in": "query",
+            "description": "The asAt datetime at which to retrieve the matching ruleset. Defaults to latest if not specified.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The requested matching ruleset.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MatchingRuleset"
+                },
+                "example": {
+                  "id": {
+                    "scope": "Recs",
+                    "code": "CustodyHoldingRules"
+                  },
+                  "displayName": "Custody Holding Rules",
+                  "recType": "Holding",
+                  "datasetSchemas": {
+                    "left": {
+                      "type": "PortfolioContents",
+                      "entityType": "Holding"
+                    },
+                    "right": {
+                      "type": "RelationalData",
+                      "relationalDatasetDefinitionId": {
+                        "scope": "Custody",
+                        "code": "CustodianPositions"
+                      }
+                    }
+                  },
+                  "filters": {
+                    "left": "holdingType eq 'P'",
+                    "right": "positionType eq 'STOCK'"
+                  },
+                  "coreRules": [
+                    {
+                      "ruleName": "Instrument",
+                      "leftFormula": "Properties[Instrument/default/Isin]",
+                      "rightFormula": "isin",
+                      "isCaseSensitive": false
+                    }
+                  ],
+                  "aggregateRules": [
+                    {
+                      "ruleName": "Units",
+                      "leftFormula": "units",
+                      "leftOperation": "Sum",
+                      "rightFormula": "quantity",
+                      "rightOperation": "Sum"
+                    }
+                  ],
+                  "aggregateTolerances": [
+                    {
+                      "referenceSide": "Left",
+                      "relativeThreshold": 0.01,
+                      "thresholdPriority": "GreaterOf",
+                      "offset": "Either",
+                      "toleranceType": "Numeric",
+                      "ruleName": "Units"
+                    }
+                  ],
+                  "allowPartialMatching": true,
+                  "supplementalAttributes": [
+                    {
+                      "attributeName": "Custodian",
+                      "leftFormula": "Properties[Custody/default/CustodianCode]",
+                      "rightFormula": "custodian"
+                    }
+                  ],
+                  "href": "https://example.com",
+                  "version": {
+                    "effectiveFrom": "2024-06-01T00:00:00.0000000+00:00",
+                    "asAtDate": "2024-06-01T10:30:00.0000000+00:00"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MatchingRuleset"
+                },
+                "example": {
+                  "id": {
+                    "scope": "Recs",
+                    "code": "CustodyHoldingRules"
+                  },
+                  "displayName": "Custody Holding Rules",
+                  "recType": "Holding",
+                  "datasetSchemas": {
+                    "left": {
+                      "type": "PortfolioContents",
+                      "entityType": "Holding"
+                    },
+                    "right": {
+                      "type": "RelationalData",
+                      "relationalDatasetDefinitionId": {
+                        "scope": "Custody",
+                        "code": "CustodianPositions"
+                      }
+                    }
+                  },
+                  "filters": {
+                    "left": "holdingType eq 'P'",
+                    "right": "positionType eq 'STOCK'"
+                  },
+                  "coreRules": [
+                    {
+                      "ruleName": "Instrument",
+                      "leftFormula": "Properties[Instrument/default/Isin]",
+                      "rightFormula": "isin",
+                      "isCaseSensitive": false
+                    }
+                  ],
+                  "aggregateRules": [
+                    {
+                      "ruleName": "Units",
+                      "leftFormula": "units",
+                      "leftOperation": "Sum",
+                      "rightFormula": "quantity",
+                      "rightOperation": "Sum"
+                    }
+                  ],
+                  "aggregateTolerances": [
+                    {
+                      "referenceSide": "Left",
+                      "relativeThreshold": 0.01,
+                      "thresholdPriority": "GreaterOf",
+                      "offset": "Either",
+                      "toleranceType": "Numeric",
+                      "ruleName": "Units"
+                    }
+                  ],
+                  "allowPartialMatching": true,
+                  "supplementalAttributes": [
+                    {
+                      "attributeName": "Custodian",
+                      "leftFormula": "Properties[Custody/default/CustodianCode]",
+                      "rightFormula": "custodian"
+                    }
+                  ],
+                  "href": "https://example.com",
+                  "version": {
+                    "effectiveFrom": "2024-06-01T00:00:00.0000000+00:00",
+                    "asAtDate": "2024-06-01T10:30:00.0000000+00:00"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MatchingRuleset"
+                },
+                "example": {
+                  "id": {
+                    "scope": "Recs",
+                    "code": "CustodyHoldingRules"
+                  },
+                  "displayName": "Custody Holding Rules",
+                  "recType": "Holding",
+                  "datasetSchemas": {
+                    "left": {
+                      "type": "PortfolioContents",
+                      "entityType": "Holding"
+                    },
+                    "right": {
+                      "type": "RelationalData",
+                      "relationalDatasetDefinitionId": {
+                        "scope": "Custody",
+                        "code": "CustodianPositions"
+                      }
+                    }
+                  },
+                  "filters": {
+                    "left": "holdingType eq 'P'",
+                    "right": "positionType eq 'STOCK'"
+                  },
+                  "coreRules": [
+                    {
+                      "ruleName": "Instrument",
+                      "leftFormula": "Properties[Instrument/default/Isin]",
+                      "rightFormula": "isin",
+                      "isCaseSensitive": false
+                    }
+                  ],
+                  "aggregateRules": [
+                    {
+                      "ruleName": "Units",
+                      "leftFormula": "units",
+                      "leftOperation": "Sum",
+                      "rightFormula": "quantity",
+                      "rightOperation": "Sum"
+                    }
+                  ],
+                  "aggregateTolerances": [
+                    {
+                      "referenceSide": "Left",
+                      "relativeThreshold": 0.01,
+                      "thresholdPriority": "GreaterOf",
+                      "offset": "Either",
+                      "toleranceType": "Numeric",
+                      "ruleName": "Units"
+                    }
+                  ],
+                  "allowPartialMatching": true,
+                  "supplementalAttributes": [
+                    {
+                      "attributeName": "Custodian",
+                      "leftFormula": "Properties[Custody/default/CustodianCode]",
+                      "rightFormula": "custodian"
+                    }
+                  ],
+                  "href": "https://example.com",
+                  "version": {
+                    "effectiveFrom": "2024-06-01T00:00:00.0000000+00:00",
+                    "asAtDate": "2024-06-01T10:30:00.0000000+00:00"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      },
+      "put": {
+        "tags": [
+          "Recs"
+        ],
+        "summary": "[EXPERIMENTAL] UpdateMatchingRuleset: UpdateMatchingRuleset",
+        "description": "Overwrite an existing matching ruleset identified by scope and code.\r\nThe update request has the same required fields as create, apart from the identifier.",
+        "operationId": "UpdateMatchingRuleset",
+        "parameters": [
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope of the matching ruleset.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "code",
+            "in": "path",
+            "description": "The code of the matching ruleset. Together with the scope this uniquely identifies the matching ruleset.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The updated matching ruleset values.",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateMatchingRulesetRequest"
+              },
+              "example": {
+                "displayName": "Custody Holding Rules",
+                "recType": "Holding",
+                "datasetSchemas": {
+                  "right": {
+                    "type": "RelationalData",
+                    "relationalDatasetDefinitionId": {
+                      "scope": "Custody",
+                      "code": "CustodianPositions"
+                    }
+                  }
+                },
+                "filters": {
+                  "left": "holdingType eq 'P'",
+                  "right": "positionType eq 'STOCK'"
+                },
+                "coreRules": [
+                  {
+                    "ruleName": "Instrument",
+                    "leftFormula": "Properties[Instrument/default/Isin]",
+                    "rightFormula": "isin",
+                    "isCaseSensitive": false
+                  }
+                ],
+                "aggregateRules": [
+                  {
+                    "ruleName": "Units",
+                    "leftFormula": "units",
+                    "leftOperation": "Sum",
+                    "rightFormula": "quantity",
+                    "rightOperation": "Sum"
+                  }
+                ],
+                "aggregateTolerances": [
+                  {
+                    "referenceSide": "Left",
+                    "relativeThreshold": 0.01,
+                    "thresholdPriority": "GreaterOf",
+                    "offset": "Either",
+                    "toleranceType": "Numeric",
+                    "ruleName": "Units"
+                  }
+                ],
+                "allowPartialMatching": true,
+                "supplementalAttributes": [
+                  {
+                    "attributeName": "Custodian",
+                    "leftFormula": "Properties[Custody/default/CustodianCode]",
+                    "rightFormula": "custodian"
+                  }
+                ]
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateMatchingRulesetRequest"
+              },
+              "example": {
+                "displayName": "Custody Holding Rules",
+                "recType": "Holding",
+                "datasetSchemas": {
+                  "right": {
+                    "type": "RelationalData",
+                    "relationalDatasetDefinitionId": {
+                      "scope": "Custody",
+                      "code": "CustodianPositions"
+                    }
+                  }
+                },
+                "filters": {
+                  "left": "holdingType eq 'P'",
+                  "right": "positionType eq 'STOCK'"
+                },
+                "coreRules": [
+                  {
+                    "ruleName": "Instrument",
+                    "leftFormula": "Properties[Instrument/default/Isin]",
+                    "rightFormula": "isin",
+                    "isCaseSensitive": false
+                  }
+                ],
+                "aggregateRules": [
+                  {
+                    "ruleName": "Units",
+                    "leftFormula": "units",
+                    "leftOperation": "Sum",
+                    "rightFormula": "quantity",
+                    "rightOperation": "Sum"
+                  }
+                ],
+                "aggregateTolerances": [
+                  {
+                    "referenceSide": "Left",
+                    "relativeThreshold": 0.01,
+                    "thresholdPriority": "GreaterOf",
+                    "offset": "Either",
+                    "toleranceType": "Numeric",
+                    "ruleName": "Units"
+                  }
+                ],
+                "allowPartialMatching": true,
+                "supplementalAttributes": [
+                  {
+                    "attributeName": "Custodian",
+                    "leftFormula": "Properties[Custody/default/CustodianCode]",
+                    "rightFormula": "custodian"
+                  }
+                ]
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateMatchingRulesetRequest"
+              },
+              "example": {
+                "displayName": "Custody Holding Rules",
+                "recType": "Holding",
+                "datasetSchemas": {
+                  "right": {
+                    "type": "RelationalData",
+                    "relationalDatasetDefinitionId": {
+                      "scope": "Custody",
+                      "code": "CustodianPositions"
+                    }
+                  }
+                },
+                "filters": {
+                  "left": "holdingType eq 'P'",
+                  "right": "positionType eq 'STOCK'"
+                },
+                "coreRules": [
+                  {
+                    "ruleName": "Instrument",
+                    "leftFormula": "Properties[Instrument/default/Isin]",
+                    "rightFormula": "isin",
+                    "isCaseSensitive": false
+                  }
+                ],
+                "aggregateRules": [
+                  {
+                    "ruleName": "Units",
+                    "leftFormula": "units",
+                    "leftOperation": "Sum",
+                    "rightFormula": "quantity",
+                    "rightOperation": "Sum"
+                  }
+                ],
+                "aggregateTolerances": [
+                  {
+                    "referenceSide": "Left",
+                    "relativeThreshold": 0.01,
+                    "thresholdPriority": "GreaterOf",
+                    "offset": "Either",
+                    "toleranceType": "Numeric",
+                    "ruleName": "Units"
+                  }
+                ],
+                "allowPartialMatching": true,
+                "supplementalAttributes": [
+                  {
+                    "attributeName": "Custodian",
+                    "leftFormula": "Properties[Custody/default/CustodianCode]",
+                    "rightFormula": "custodian"
+                  }
+                ]
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateMatchingRulesetRequest"
+              },
+              "example": {
+                "displayName": "Custody Holding Rules",
+                "recType": "Holding",
+                "datasetSchemas": {
+                  "right": {
+                    "type": "RelationalData",
+                    "relationalDatasetDefinitionId": {
+                      "scope": "Custody",
+                      "code": "CustodianPositions"
+                    }
+                  }
+                },
+                "filters": {
+                  "left": "holdingType eq 'P'",
+                  "right": "positionType eq 'STOCK'"
+                },
+                "coreRules": [
+                  {
+                    "ruleName": "Instrument",
+                    "leftFormula": "Properties[Instrument/default/Isin]",
+                    "rightFormula": "isin",
+                    "isCaseSensitive": false
+                  }
+                ],
+                "aggregateRules": [
+                  {
+                    "ruleName": "Units",
+                    "leftFormula": "units",
+                    "leftOperation": "Sum",
+                    "rightFormula": "quantity",
+                    "rightOperation": "Sum"
+                  }
+                ],
+                "aggregateTolerances": [
+                  {
+                    "referenceSide": "Left",
+                    "relativeThreshold": 0.01,
+                    "thresholdPriority": "GreaterOf",
+                    "offset": "Either",
+                    "toleranceType": "Numeric",
+                    "ruleName": "Units"
+                  }
+                ],
+                "allowPartialMatching": true,
+                "supplementalAttributes": [
+                  {
+                    "attributeName": "Custodian",
+                    "leftFormula": "Properties[Custody/default/CustodianCode]",
+                    "rightFormula": "custodian"
+                  }
+                ]
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "The updated matching ruleset.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MatchingRuleset"
+                },
+                "example": {
+                  "id": {
+                    "scope": "Recs",
+                    "code": "CustodyHoldingRules"
+                  },
+                  "displayName": "Custody Holding Rules",
+                  "recType": "Holding",
+                  "datasetSchemas": {
+                    "left": {
+                      "type": "PortfolioContents",
+                      "entityType": "Holding"
+                    },
+                    "right": {
+                      "type": "RelationalData",
+                      "relationalDatasetDefinitionId": {
+                        "scope": "Custody",
+                        "code": "CustodianPositions"
+                      }
+                    }
+                  },
+                  "filters": {
+                    "left": "holdingType eq 'P'",
+                    "right": "positionType eq 'STOCK'"
+                  },
+                  "coreRules": [
+                    {
+                      "ruleName": "Instrument",
+                      "leftFormula": "Properties[Instrument/default/Isin]",
+                      "rightFormula": "isin",
+                      "isCaseSensitive": false
+                    }
+                  ],
+                  "aggregateRules": [
+                    {
+                      "ruleName": "Units",
+                      "leftFormula": "units",
+                      "leftOperation": "Sum",
+                      "rightFormula": "quantity",
+                      "rightOperation": "Sum"
+                    }
+                  ],
+                  "aggregateTolerances": [
+                    {
+                      "referenceSide": "Left",
+                      "relativeThreshold": 0.01,
+                      "thresholdPriority": "GreaterOf",
+                      "offset": "Either",
+                      "toleranceType": "Numeric",
+                      "ruleName": "Units"
+                    }
+                  ],
+                  "allowPartialMatching": true,
+                  "supplementalAttributes": [
+                    {
+                      "attributeName": "Custodian",
+                      "leftFormula": "Properties[Custody/default/CustodianCode]",
+                      "rightFormula": "custodian"
+                    }
+                  ],
+                  "href": "https://example.com",
+                  "version": {
+                    "effectiveFrom": "2024-06-01T00:00:00.0000000+00:00",
+                    "asAtDate": "2024-06-01T10:30:00.0000000+00:00"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MatchingRuleset"
+                },
+                "example": {
+                  "id": {
+                    "scope": "Recs",
+                    "code": "CustodyHoldingRules"
+                  },
+                  "displayName": "Custody Holding Rules",
+                  "recType": "Holding",
+                  "datasetSchemas": {
+                    "left": {
+                      "type": "PortfolioContents",
+                      "entityType": "Holding"
+                    },
+                    "right": {
+                      "type": "RelationalData",
+                      "relationalDatasetDefinitionId": {
+                        "scope": "Custody",
+                        "code": "CustodianPositions"
+                      }
+                    }
+                  },
+                  "filters": {
+                    "left": "holdingType eq 'P'",
+                    "right": "positionType eq 'STOCK'"
+                  },
+                  "coreRules": [
+                    {
+                      "ruleName": "Instrument",
+                      "leftFormula": "Properties[Instrument/default/Isin]",
+                      "rightFormula": "isin",
+                      "isCaseSensitive": false
+                    }
+                  ],
+                  "aggregateRules": [
+                    {
+                      "ruleName": "Units",
+                      "leftFormula": "units",
+                      "leftOperation": "Sum",
+                      "rightFormula": "quantity",
+                      "rightOperation": "Sum"
+                    }
+                  ],
+                  "aggregateTolerances": [
+                    {
+                      "referenceSide": "Left",
+                      "relativeThreshold": 0.01,
+                      "thresholdPriority": "GreaterOf",
+                      "offset": "Either",
+                      "toleranceType": "Numeric",
+                      "ruleName": "Units"
+                    }
+                  ],
+                  "allowPartialMatching": true,
+                  "supplementalAttributes": [
+                    {
+                      "attributeName": "Custodian",
+                      "leftFormula": "Properties[Custody/default/CustodianCode]",
+                      "rightFormula": "custodian"
+                    }
+                  ],
+                  "href": "https://example.com",
+                  "version": {
+                    "effectiveFrom": "2024-06-01T00:00:00.0000000+00:00",
+                    "asAtDate": "2024-06-01T10:30:00.0000000+00:00"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MatchingRuleset"
+                },
+                "example": {
+                  "id": {
+                    "scope": "Recs",
+                    "code": "CustodyHoldingRules"
+                  },
+                  "displayName": "Custody Holding Rules",
+                  "recType": "Holding",
+                  "datasetSchemas": {
+                    "left": {
+                      "type": "PortfolioContents",
+                      "entityType": "Holding"
+                    },
+                    "right": {
+                      "type": "RelationalData",
+                      "relationalDatasetDefinitionId": {
+                        "scope": "Custody",
+                        "code": "CustodianPositions"
+                      }
+                    }
+                  },
+                  "filters": {
+                    "left": "holdingType eq 'P'",
+                    "right": "positionType eq 'STOCK'"
+                  },
+                  "coreRules": [
+                    {
+                      "ruleName": "Instrument",
+                      "leftFormula": "Properties[Instrument/default/Isin]",
+                      "rightFormula": "isin",
+                      "isCaseSensitive": false
+                    }
+                  ],
+                  "aggregateRules": [
+                    {
+                      "ruleName": "Units",
+                      "leftFormula": "units",
+                      "leftOperation": "Sum",
+                      "rightFormula": "quantity",
+                      "rightOperation": "Sum"
+                    }
+                  ],
+                  "aggregateTolerances": [
+                    {
+                      "referenceSide": "Left",
+                      "relativeThreshold": 0.01,
+                      "thresholdPriority": "GreaterOf",
+                      "offset": "Either",
+                      "toleranceType": "Numeric",
+                      "ruleName": "Units"
+                    }
+                  ],
+                  "allowPartialMatching": true,
+                  "supplementalAttributes": [
+                    {
+                      "attributeName": "Custodian",
+                      "leftFormula": "Properties[Custody/default/CustodianCode]",
+                      "rightFormula": "custodian"
+                    }
+                  ],
+                  "href": "https://example.com",
+                  "version": {
+                    "effectiveFrom": "2024-06-01T00:00:00.0000000+00:00",
+                    "asAtDate": "2024-06-01T10:30:00.0000000+00:00"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      },
+      "delete": {
+        "tags": [
+          "Recs"
+        ],
+        "summary": "[EXPERIMENTAL] DeleteMatchingRuleset: DeleteMatchingRuleset",
+        "description": "Delete a matching ruleset identified by scope and code. The deletion takes effect from the deletion datetime,\r\ni.e. the matching ruleset will no longer exist at any asAt datetime after the asAt datetime of deletion.",
+        "operationId": "DeleteMatchingRuleset",
+        "parameters": [
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope of the matching ruleset.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "code",
+            "in": "path",
+            "description": "The code of the matching ruleset. Together with the scope this uniquely identifies the matching ruleset.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The deleted entity metadata.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeletedEntityResponse"
+                },
+                "example": {
+                  "asAt": "2018-03-05T10:10:10.0000000+00:00"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeletedEntityResponse"
+                },
+                "example": {
+                  "asAt": "2018-03-05T10:10:10.0000000+00:00"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeletedEntityResponse"
+                },
+                "example": {
+                  "asAt": "2018-03-05T10:10:10.0000000+00:00"
                 }
               }
             }
@@ -184555,7 +187503,7 @@
           {
             "name": "propertyKeys",
             "in": "query",
-            "description": "A list of property keys from the 'CustodianAccount' domain to decorate onto the Custodian Account.\r\n            These must have the format {domain}/{scope}/{code}, for example 'CustodianAccount/system/Name'.",
+            "description": "A list of property keys from the 'CustodianAccount' domain to decorate onto the Custodian Account.\r\n            These must have the format {domain}/{scope}/{code}, for example 'CustodianAccount/system/Name'.\r\n            If no property keys are specified, it will return 'IsDefault' and 'RelatedAccounts' properties, if they exist.",
             "schema": {
               "type": "array",
               "items": {
@@ -184890,7 +187838,7 @@
           {
             "name": "propertyKeys",
             "in": "query",
-            "description": "A list of property keys from the 'CustodianAccount' domain to decorate onto the Custodian Account.\r\n            These must take the format {domain}/{scope}/{code}, for example 'CustodianAccount/Manager/Id'. If no properties are specified, then no properties will be returned.",
+            "description": "A list of property keys from the 'CustodianAccount' domain to decorate onto the Custodian Account.\r\n            These must take the format {domain}/{scope}/{code}, for example 'CustodianAccount/system/Name'.\r\n            If no property keys are specified, it will return 'IsDefault' and 'RelatedAccounts' properties, if they exist.",
             "schema": {
               "type": "array",
               "items": {
@@ -206796,6 +209744,47 @@
         },
         "additionalProperties": false
       },
+      "AggregateMatchingRule": {
+        "required": [
+          "leftFormula",
+          "leftOperation",
+          "rightFormula",
+          "rightOperation",
+          "ruleName"
+        ],
+        "type": "object",
+        "properties": {
+          "ruleName": {
+            "maxLength": 256,
+            "minLength": 1,
+            "type": "string",
+            "description": "The reference name of the rule."
+          },
+          "leftFormula": {
+            "maxLength": 16384,
+            "minLength": 0,
+            "type": "string",
+            "description": "Derivation formula evaluated against the left side of the reconciliation."
+          },
+          "leftOperation": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Group-level operation applied to the left side's per-item values during reconciliation, e.g. Sum, Average, Count. Available values: Sum, Proportion, Average, Count, Min, Max, Value, SumOfPositiveValues, SumOfNegativeValues, SumOfAbsoluteValues, ProportionOfAbsoluteValues, SumCumulativeInAdvance, SumCumulativeInArrears."
+          },
+          "rightFormula": {
+            "maxLength": 16384,
+            "minLength": 0,
+            "type": "string",
+            "description": "Derivation formula evaluated against the right side of the reconciliation."
+          },
+          "rightOperation": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Group-level operation applied to the right side's per-item values during reconciliation, e.g. Sum, Average, Count. Available values: Sum, Proportion, Average, Count, Min, Max, Value, SumOfPositiveValues, SumOfNegativeValues, SumOfAbsoluteValues, ProportionOfAbsoluteValues, SumCumulativeInAdvance, SumCumulativeInArrears."
+          }
+        },
+        "additionalProperties": false
+      },
       "AggregateRuleValues": {
         "required": [
           "difference",
@@ -206824,7 +209813,7 @@
             "description": "The measured magnitude of the difference, ToString(ABS(leftValue - rightValue))."
           },
           "appliedTolerance": {
-            "$ref": "#/components/schemas/AggregateToleranceBase"
+            "$ref": "#/components/schemas/ToleranceBase"
           }
         },
         "additionalProperties": false,
@@ -206871,28 +209860,6 @@
           }
         },
         "additionalProperties": false
-      },
-      "AggregateToleranceBase": {
-        "required": [
-          "ruleName",
-          "toleranceType"
-        ],
-        "type": "object",
-        "properties": {
-          "toleranceType": {
-            "minLength": 1,
-            "type": "string",
-            "description": "Polymorphic discriminator. Supported types: CoreStringCross, CoreAttributeOptionality, CoreDateTolerance, Numeric. Available values: CoreStringCross, CoreAttributeOptionality, CoreDateTolerance, Numeric."
-          },
-          "ruleName": {
-            "maxLength": 256,
-            "minLength": 1,
-            "type": "string",
-            "description": "The reference name of the rule that this tolerance relaxes."
-          }
-        },
-        "additionalProperties": false,
-        "description": "Abstract base for tolerances that apply to aggregate matching rules. Distinguishes aggregate\r\ntolerances from core tolerances at the type level (both share a common tolerance base)."
       },
       "AggregationContext": {
         "type": "object",
@@ -219861,6 +222828,39 @@
         ],
         "description": "Conversion Event (CONV) - Conversion of securities (generally convertible bonds or preferred shares) into\r\nanother form of securities (usually common shares) at a pre-stated price/ratio."
       },
+      "CoreMatchingRule": {
+        "required": [
+          "leftFormula",
+          "rightFormula",
+          "ruleName"
+        ],
+        "type": "object",
+        "properties": {
+          "ruleName": {
+            "maxLength": 256,
+            "minLength": 1,
+            "type": "string",
+            "description": "The reference name of the rule."
+          },
+          "leftFormula": {
+            "maxLength": 16384,
+            "minLength": 0,
+            "type": "string",
+            "description": "Derivation formula evaluated against the left side of the reconciliation."
+          },
+          "rightFormula": {
+            "maxLength": 16384,
+            "minLength": 0,
+            "type": "string",
+            "description": "Derivation formula evaluated against the right side of the reconciliation."
+          },
+          "isCaseSensitive": {
+            "type": "boolean",
+            "description": "Whether the core rule comparison is case sensitive. Defaults to false."
+          }
+        },
+        "additionalProperties": false
+      },
       "CoreRuleValues": {
         "required": [
           "ruleName"
@@ -219883,33 +222883,11 @@
             "nullable": true
           },
           "appliedTolerance": {
-            "$ref": "#/components/schemas/CoreToleranceBase"
+            "$ref": "#/components/schemas/ToleranceBase"
           }
         },
         "additionalProperties": false,
         "description": "A core matching rule and the values that pin a rec result to its reconciled position. These values\r\ncontribute to the result id."
-      },
-      "CoreToleranceBase": {
-        "required": [
-          "ruleName",
-          "toleranceType"
-        ],
-        "type": "object",
-        "properties": {
-          "toleranceType": {
-            "minLength": 1,
-            "type": "string",
-            "description": "Polymorphic discriminator. Supported types: CoreStringCross, CoreAttributeOptionality, CoreDateTolerance, Numeric. Available values: CoreStringCross, CoreAttributeOptionality, CoreDateTolerance, Numeric."
-          },
-          "ruleName": {
-            "maxLength": 256,
-            "minLength": 1,
-            "type": "string",
-            "description": "The reference name of the rule that this tolerance relaxes."
-          }
-        },
-        "additionalProperties": false,
-        "description": "Abstract base for tolerances that apply to core matching rules. Distinguishes core tolerances from\r\naggregate tolerances at the type level (both share a common tolerance base)."
       },
       "CorporateAction": {
         "required": [
@@ -221353,6 +224331,83 @@
         },
         "additionalProperties": false
       },
+      "CreateMatchingRulesetRequest": {
+        "required": [
+          "aggregateRules",
+          "coreRules",
+          "displayName",
+          "id",
+          "recType"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "displayName": {
+            "maxLength": 256,
+            "minLength": 1,
+            "type": "string",
+            "description": "The name of the matching ruleset."
+          },
+          "recType": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The type of reconciliation to perform. Available values: Holding, CashHolding, Valuation, InputTransaction, OutputTransaction, SettlementActivity."
+          },
+          "datasetSchemas": {
+            "$ref": "#/components/schemas/RecDatasetSchemas"
+          },
+          "filters": {
+            "$ref": "#/components/schemas/GroupReconciliationFilters"
+          },
+          "coreRules": {
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CoreMatchingRule"
+            },
+            "description": "The core comparison rules evaluated as derivation formulae against each side of the reconciliation."
+          },
+          "aggregateRules": {
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AggregateMatchingRule"
+            },
+            "description": "The aggregate comparison rules evaluated as derivation formulae against values on each side of the reconciliation and operation to aggregate those values."
+          },
+          "coreTolerances": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ToleranceBase"
+            },
+            "description": "Tolerance configurations applied to core rule matching, in the specified order.",
+            "nullable": true
+          },
+          "aggregateTolerances": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ToleranceBase"
+            },
+            "description": "Tolerance configurations applied to aggregate rule matching.",
+            "nullable": true
+          },
+          "allowPartialMatching": {
+            "type": "boolean",
+            "description": "Whether to permit partial matches when applying rules."
+          },
+          "supplementalAttributes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SupplementalAttribute"
+            },
+            "description": "Supplemental attributes that decorate reconciliation results with additional values without participating in the reconciliation itself.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "CreatePortfolioDetails": {
         "type": "object",
         "properties": {
@@ -221580,6 +224635,75 @@
             "type": "string",
             "description": "The format in which values for this property definition should be represented. Available values: Text, Html.",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateRecDefinitionRequest": {
+        "required": [
+          "definitionType",
+          "displayName",
+          "id",
+          "rulesets"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "displayName": {
+            "maxLength": 512,
+            "minLength": 1,
+            "type": "string",
+            "description": "The name of the rec definition."
+          },
+          "description": {
+            "maxLength": 1024,
+            "minLength": 0,
+            "type": "string",
+            "description": "A description of the rec definition.",
+            "nullable": true
+          },
+          "definitionType": {
+            "minLength": 1,
+            "type": "string",
+            "description": "What this definition reconciles, naming the kind of dataset that must be present on at least one side. One of: PortfolioContents, LusidEntity, RelationalData. Only PortfolioContents is currently supported. Available values: PortfolioContents, LusidEntity, RelationalData."
+          },
+          "sideNames": {
+            "$ref": "#/components/schemas/RecDefSideNames"
+          },
+          "leftPortfolioSources": {
+            "maxItems": 100,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RecDefSource"
+            },
+            "description": "The portfolios, portfolio groups and funds contributing to the left side. Empty when the left side draws on relational data instead, which requires every ruleset to declare relational data for that side. Both sides cannot be empty.",
+            "nullable": true
+          },
+          "rightPortfolioSources": {
+            "maxItems": 100,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RecDefSource"
+            },
+            "description": "The portfolios, portfolio groups and funds contributing to the right side. Empty when the right side draws on relational data instead, which requires every ruleset to declare relational data for that side. Both sides cannot be empty.",
+            "nullable": true
+          },
+          "valuationRecipes": {
+            "$ref": "#/components/schemas/RecDefRecipeIds"
+          },
+          "currencies": {
+            "$ref": "#/components/schemas/RecDefCurrencies"
+          },
+          "rulesets": {
+            "maxItems": 10,
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RecDefRuleset"
+            },
+            "description": "The types of reconciliation included in the group, each naming the matching ruleset that drives it. At least one entry is required, and each rec type may appear at most once."
           }
         },
         "additionalProperties": false
@@ -234667,10 +237791,7 @@
           },
           {
             "required": [
-              "distributionPaymentType",
               "domCcy",
-              "fundShareClassType",
-              "hedging",
               "instrumentType",
               "shortCode"
             ],
@@ -234682,19 +237803,24 @@
                 "description": "A short identifier, unique across a single fund, usually made up of the ShareClass components. Eg \"A Accumulation Euro Hedged Class\" could become \"A Acc H EUR\"."
               },
               "fundShareClassType": {
-                "minLength": 1,
                 "type": "string",
-                "description": "The type of distribution that the ShareClass will calculate. Can be either 'Income' or 'Accumulation' - Income classes will pay out and Accumulation classes will retain their ShareClass attributable income. Available values: Income, Accumulation."
+                "description": "The type of distribution that the ShareClass will calculate. Can be either 'Income' or 'Accumulation' - Income classes will pay out and Accumulation classes will retain their ShareClass attributable income. Available values: Income, Accumulation.",
+                "nullable": true
               },
               "distributionPaymentType": {
-                "minLength": 1,
                 "type": "string",
-                "description": "The tax treatment applied to any distributions calculated within the ShareClass. Can be either 'Net' (Distribution Calculated net of tax) or 'Gross' (Distribution calculated gross of tax). Available values: Invalid, Gross, Net."
+                "description": "The tax treatment applied to any distributions calculated within the ShareClass. Can be either 'Net' (Distribution Calculated net of tax) or 'Gross' (Distribution calculated gross of tax). Available values: Invalid, Gross, Net.",
+                "nullable": true
+              },
+              "distributionType": {
+                "type": "string",
+                "description": "The type of distribution calculated for the ShareClass. Can be either 'Income' or 'Accumulation'. Available values: Income, Accumulation.",
+                "nullable": true
               },
               "hedging": {
-                "minLength": 1,
                 "type": "string",
-                "description": "A flag to indicate the ShareClass is operating currency hedging as a means to limit currency risk as part of its investment strategy. Available values: Invalid, None, ApplyHedging."
+                "description": "A flag to indicate the ShareClass is operating currency hedging as a means to limit currency risk as part of its investment strategy. Available values: Invalid, None, ApplyHedging.",
+                "nullable": true
               },
               "domCcy": {
                 "type": "string",
@@ -234706,6 +237832,14 @@
                   "$ref": "#/components/schemas/SimpleRoundingConvention"
                 },
                 "description": "Rounding Convention used for the FundShareClass quotes",
+                "nullable": true
+              },
+              "roundingConventionUnits": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/SimpleRoundingConvention"
+                },
+                "description": "Rounding Conventions used for the FundShareClass units",
                 "nullable": true
               },
               "tradingConventions": {
@@ -246556,6 +249690,97 @@
           "propertyName": "criterionType"
         }
       },
+      "MatchingRuleset": {
+        "required": [
+          "aggregateRules",
+          "coreRules",
+          "datasetSchemas",
+          "displayName",
+          "id",
+          "recType"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "displayName": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The name of the matching ruleset."
+          },
+          "recType": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The type of reconciliation to perform. Available values: Holding, CashHolding, Valuation, InputTransaction, OutputTransaction, SettlementActivity."
+          },
+          "datasetSchemas": {
+            "$ref": "#/components/schemas/RecDatasetSchemas"
+          },
+          "filters": {
+            "$ref": "#/components/schemas/GroupReconciliationFilters"
+          },
+          "coreRules": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CoreMatchingRule"
+            },
+            "description": "The core comparison rules evaluated as derivation formulae against each side of the reconciliation."
+          },
+          "aggregateRules": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AggregateMatchingRule"
+            },
+            "description": "The aggregate comparison rules evaluated as derivation formulae against values on each side of the reconciliation and operation to aggregate those values."
+          },
+          "coreTolerances": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ToleranceBase"
+            },
+            "description": "Tolerance configurations applied to core rule matching, in the specified order.",
+            "nullable": true
+          },
+          "aggregateTolerances": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ToleranceBase"
+            },
+            "description": "Tolerance configurations applied to aggregate rule matching.",
+            "nullable": true
+          },
+          "allowPartialMatching": {
+            "type": "boolean",
+            "description": "Whether to permit partial matches when applying rules."
+          },
+          "supplementalAttributes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SupplementalAttribute"
+            },
+            "description": "Supplemental attributes that decorate reconciliation results with additional values without participating in the reconciliation itself.",
+            "nullable": true
+          },
+          "href": {
+            "type": "string",
+            "description": "The specific Uniform Resource Identifier (URI) for this resource at the requested effective and asAt datetime.",
+            "format": "uri",
+            "nullable": true
+          },
+          "version": {
+            "$ref": "#/components/schemas/Version"
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "MaturityEvent": {
         "allOf": [
           {
@@ -249641,6 +252866,12 @@
             "type": "number",
             "description": "The quantity of this allocation, with direction relative to the containing block.",
             "format": "double"
+          },
+          "amount": {
+            "type": "number",
+            "description": "The amount of this allocation, derived from the quantity and price of the allocation.",
+            "format": "double",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -249656,6 +252887,12 @@
             "type": "number",
             "description": "Total number of units allocated.",
             "format": "double"
+          },
+          "amount": {
+            "type": "number",
+            "description": "Total monetary value allocated, derived from the quantity and price of each allocation.",
+            "format": "double",
+            "nullable": true
           },
           "details": {
             "type": "array",
@@ -249690,6 +252927,12 @@
             "type": "number",
             "description": "Total number of units executed.",
             "format": "double"
+          },
+          "amount": {
+            "type": "number",
+            "description": "Total monetary value executed, derived from the quantity and price of each execution.",
+            "format": "double",
+            "nullable": true
           },
           "details": {
             "type": "array",
@@ -249879,6 +253122,12 @@
             "description": "Total number of units booked.",
             "format": "double"
           },
+          "amount": {
+            "type": "number",
+            "description": "Total consideration booked, in the block currency.",
+            "format": "double",
+            "nullable": true
+          },
           "details": {
             "type": "array",
             "items": {
@@ -249957,6 +253206,12 @@
             "description": "Total number of units allocated.",
             "format": "double"
           },
+          "amount": {
+            "type": "number",
+            "description": "Total monetary value allocated, derived from the quantity and price of each allocation, in the placement's amount currency. Null where the placement has no amount, or where an allocation cannot be expressed in that currency.",
+            "format": "double",
+            "nullable": true
+          },
           "details": {
             "type": "array",
             "items": {
@@ -250002,6 +253257,12 @@
             "type": "number",
             "description": "Total number of units executed.",
             "format": "double"
+          },
+          "amount": {
+            "type": "number",
+            "description": "Total monetary value executed, derived from the quantity and price of each execution, in the placement's amount currency. Null where the placement has no amount, or where an execution cannot be expressed in that currency.",
+            "format": "double",
+            "nullable": true
           },
           "details": {
             "type": "array",
@@ -250056,13 +253317,13 @@
           },
           "quantity": {
             "type": "number",
-            "description": "Total number of units placed.",
+            "description": "Total number of units placed. Null where the placement is sized by amount.",
             "format": "double",
             "nullable": true
           },
           "amount": {
             "type": "number",
-            "description": "Total monetary value placed, in the block currency.",
+            "description": "Total monetary value placed, in the block currency. Null where the placement has no amount.",
             "format": "double",
             "nullable": true
           }
@@ -252457,6 +255718,41 @@
         },
         "additionalProperties": false
       },
+      "PagedResourceListOfMatchingRuleset": {
+        "required": [
+          "values"
+        ],
+        "type": "object",
+        "properties": {
+          "nextPage": {
+            "type": "string",
+            "nullable": true
+          },
+          "previousPage": {
+            "type": "string",
+            "nullable": true
+          },
+          "values": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MatchingRuleset"
+            }
+          },
+          "href": {
+            "type": "string",
+            "format": "uri",
+            "nullable": true
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "PagedResourceListOfOrder": {
         "required": [
           "values"
@@ -253000,6 +256296,41 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/PropertyDefinitionSearchResult"
+            }
+          },
+          "href": {
+            "type": "string",
+            "format": "uri",
+            "nullable": true
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PagedResourceListOfRecDefinition": {
+        "required": [
+          "values"
+        ],
+        "type": "object",
+        "properties": {
+          "nextPage": {
+            "type": "string",
+            "nullable": true
+          },
+          "previousPage": {
+            "type": "string",
+            "nullable": true
+          },
+          "values": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RecDefinition"
             }
           },
           "href": {
@@ -261989,6 +265320,40 @@
         "additionalProperties": false,
         "description": "References to the closed periods created on the left and right timelines when a Closed Period\r\ninstance is locked."
       },
+      "RecDatasetSchema": {
+        "required": [
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The kind of dataset this side draws on. One of: PortfolioContents, LusidEntity, RelationalData. At most one side may be RelationalData. Available values: PortfolioContents, LusidEntity, RelationalData."
+          },
+          "entityType": {
+            "type": "string",
+            "description": "The entity within the dataset. Required when type is PortfolioContents, in which case it is one of: Holding, Valuation, Transaction, OutputTransaction, SettlementActivity. Must be omitted when type is RelationalData. Available values: Holding, Valuation, Transaction, OutputTransaction, SettlementActivity.",
+            "nullable": true
+          },
+          "relationalDatasetDefinitionId": {
+            "$ref": "#/components/schemas/ResourceId"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RecDatasetSchemas": {
+        "type": "object",
+        "properties": {
+          "left": {
+            "$ref": "#/components/schemas/RecDatasetSchema"
+          },
+          "right": {
+            "$ref": "#/components/schemas/RecDatasetSchema"
+          }
+        },
+        "additionalProperties": false
+      },
       "RecDatesReconciled": {
         "required": [
           "leftAsAt",
@@ -262021,6 +265386,187 @@
         },
         "additionalProperties": false,
         "description": "The left and right effective and asAt dates of the data reconciled in a run."
+      },
+      "RecDefCurrencies": {
+        "required": [
+          "left",
+          "right"
+        ],
+        "type": "object",
+        "properties": {
+          "left": {
+            "maxLength": 4,
+            "minLength": 0,
+            "type": "string",
+            "description": "The currency used on the left side of the reconciliation."
+          },
+          "right": {
+            "maxLength": 4,
+            "minLength": 0,
+            "type": "string",
+            "description": "The currency used on the right side of the reconciliation."
+          }
+        },
+        "additionalProperties": false
+      },
+      "RecDefinition": {
+        "required": [
+          "definitionType",
+          "displayName",
+          "id",
+          "leftPortfolioSources",
+          "rightPortfolioSources",
+          "rulesets"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "displayName": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The name of the rec definition."
+          },
+          "description": {
+            "type": "string",
+            "description": "A description of the rec definition.",
+            "nullable": true
+          },
+          "definitionType": {
+            "minLength": 1,
+            "type": "string",
+            "description": "What this definition reconciles, naming the kind of dataset that must be present on at least one side. One of: PortfolioContents, LusidEntity, RelationalData. Only PortfolioContents is currently supported. Available values: PortfolioContents, LusidEntity, RelationalData."
+          },
+          "sideNames": {
+            "$ref": "#/components/schemas/RecDefSideNames"
+          },
+          "leftPortfolioSources": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RecDefSource"
+            },
+            "description": "The portfolios, portfolio groups and funds contributing to the left side. Empty when the left side draws on relational data instead, which requires every ruleset to declare relational data for that side. Both sides cannot be empty."
+          },
+          "rightPortfolioSources": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RecDefSource"
+            },
+            "description": "The portfolios, portfolio groups and funds contributing to the right side. Empty when the right side draws on relational data instead, which requires every ruleset to declare relational data for that side. Both sides cannot be empty."
+          },
+          "valuationRecipes": {
+            "$ref": "#/components/schemas/RecDefRecipeIds"
+          },
+          "currencies": {
+            "$ref": "#/components/schemas/RecDefCurrencies"
+          },
+          "rulesets": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RecDefRuleset"
+            },
+            "description": "The types of reconciliation included in the group, each naming the matching ruleset that drives it. At least one entry is required, and each rec type may appear at most once."
+          },
+          "href": {
+            "type": "string",
+            "description": "The specific Uniform Resource Identifier (URI) for this resource at the requested effective and asAt datetime.",
+            "format": "uri",
+            "nullable": true
+          },
+          "version": {
+            "$ref": "#/components/schemas/Version"
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RecDefRecipeIds": {
+        "required": [
+          "left",
+          "right"
+        ],
+        "type": "object",
+        "properties": {
+          "left": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "right": {
+            "$ref": "#/components/schemas/ResourceId"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RecDefRuleset": {
+        "required": [
+          "matchingRulesetId",
+          "recType"
+        ],
+        "type": "object",
+        "properties": {
+          "recType": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The type of reconciliation this entry configures. Must be valid for the definitionType, and must match the reconciliationType of the referenced matching ruleset. Available values: Holding, CashHolding, Valuation, InputTransaction, OutputTransaction, SettlementActivity."
+          },
+          "matchingRulesetId": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "relationalDataFilter": {
+            "maxLength": 16384,
+            "minLength": 0,
+            "type": "string",
+            "description": "Selects the slice of the relational dataset this definition draws from, e.g. \"custodian eq 'NT'\". Only permitted when the referenced ruleset declares a relational side, and combined with AND at run time with that ruleset's own filter for the side.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RecDefSideNames": {
+        "required": [
+          "left",
+          "right"
+        ],
+        "type": "object",
+        "properties": {
+          "left": {
+            "maxLength": 512,
+            "minLength": 1,
+            "type": "string",
+            "description": "The label for the left side of the reconciliation."
+          },
+          "right": {
+            "maxLength": 512,
+            "minLength": 1,
+            "type": "string",
+            "description": "The label for the right side of the reconciliation."
+          }
+        },
+        "additionalProperties": false
+      },
+      "RecDefSource": {
+        "required": [
+          "id",
+          "sourceType"
+        ],
+        "type": "object",
+        "properties": {
+          "sourceType": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The type of entity that this source refers to. One of: Portfolio, PortfolioGroup, Fund. Available values: Portfolio, PortfolioGroup, Fund."
+          },
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          }
+        },
+        "additionalProperties": false
       },
       "RecExceptionCountByClosureType": {
         "required": [
@@ -262116,9 +265662,6 @@
             "type": "string",
             "description": "The asAt datetime at which the instance was first created.",
             "format": "date-time"
-          },
-          "workflowTaskInstantiated": {
-            "$ref": "#/components/schemas/RecWorkflowTask"
           },
           "status": {
             "minLength": 1,
@@ -273381,6 +276924,35 @@
         },
         "additionalProperties": false
       },
+      "SupplementalAttribute": {
+        "required": [
+          "attributeName",
+          "leftFormula",
+          "rightFormula"
+        ],
+        "type": "object",
+        "properties": {
+          "attributeName": {
+            "maxLength": 256,
+            "minLength": 1,
+            "type": "string",
+            "description": "The reference name of the supplemental attribute."
+          },
+          "leftFormula": {
+            "maxLength": 16384,
+            "minLength": 0,
+            "type": "string",
+            "description": "Derivation formula evaluated against the left side of the reconciliation."
+          },
+          "rightFormula": {
+            "maxLength": 16384,
+            "minLength": 0,
+            "type": "string",
+            "description": "Derivation formula evaluated against the right side of the reconciliation."
+          }
+        },
+        "additionalProperties": false
+      },
       "SupplementalAttributeValues": {
         "required": [
           "attributeName"
@@ -274983,6 +278555,28 @@
           }
         ],
         "description": "LUSID representation of an OTC option on a ToBeAnnounced (TBA) forward contract."
+      },
+      "ToleranceBase": {
+        "required": [
+          "ruleName",
+          "toleranceType"
+        ],
+        "type": "object",
+        "properties": {
+          "toleranceType": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Polymorphic discriminator. Supported types: CoreStringCross, CoreAttributeOptionality, CoreDateTolerance, Numeric. Available values: CoreStringCross, CoreAttributeOptionality, CoreDateTolerance, Numeric."
+          },
+          "ruleName": {
+            "maxLength": 256,
+            "minLength": 1,
+            "type": "string",
+            "description": "The reference name of the rule that this tolerance relaxes."
+          }
+        },
+        "additionalProperties": false,
+        "description": "Base class for the tolerances that relax how strictly a matching rule compares its two sides. Polymorphic\r\nby ToleranceType; each supported type has a corresponding inherited class."
       },
       "TotalReturnSwap": {
         "allOf": [
@@ -278829,6 +282423,79 @@
         },
         "additionalProperties": false
       },
+      "UpdateMatchingRulesetRequest": {
+        "required": [
+          "aggregateRules",
+          "coreRules",
+          "displayName",
+          "recType"
+        ],
+        "type": "object",
+        "properties": {
+          "displayName": {
+            "maxLength": 256,
+            "minLength": 1,
+            "type": "string",
+            "description": "The name of the matching ruleset."
+          },
+          "recType": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The type of reconciliation to perform. Available values: Holding, CashHolding, Valuation, InputTransaction, OutputTransaction, SettlementActivity."
+          },
+          "datasetSchemas": {
+            "$ref": "#/components/schemas/RecDatasetSchemas"
+          },
+          "filters": {
+            "$ref": "#/components/schemas/GroupReconciliationFilters"
+          },
+          "coreRules": {
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CoreMatchingRule"
+            },
+            "description": "The core comparison rules evaluated as derivation formulae against each side of the reconciliation."
+          },
+          "aggregateRules": {
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AggregateMatchingRule"
+            },
+            "description": "The aggregate comparison rules evaluated as derivation formulae against values on each side of the reconciliation and operation to aggregate those values."
+          },
+          "coreTolerances": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ToleranceBase"
+            },
+            "description": "Tolerance configurations applied to core rule matching, in the specified order.",
+            "nullable": true
+          },
+          "aggregateTolerances": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ToleranceBase"
+            },
+            "description": "Tolerance configurations applied to aggregate rule matching.",
+            "nullable": true
+          },
+          "allowPartialMatching": {
+            "type": "boolean",
+            "description": "Whether to permit partial matches when applying rules."
+          },
+          "supplementalAttributes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SupplementalAttribute"
+            },
+            "description": "Supplemental attributes that decorate reconciliation results with additional values without participating in the reconciliation itself.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "UpdateOrdersResponse": {
         "type": "object",
         "properties": {
@@ -278992,6 +282659,71 @@
             "type": "string",
             "description": "The format in which values for this property definition should be represented. Available values: Text, Html.",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateRecDefinitionRequest": {
+        "required": [
+          "definitionType",
+          "displayName",
+          "rulesets"
+        ],
+        "type": "object",
+        "properties": {
+          "displayName": {
+            "maxLength": 512,
+            "minLength": 1,
+            "type": "string",
+            "description": "The name of the rec definition."
+          },
+          "description": {
+            "maxLength": 1024,
+            "minLength": 0,
+            "type": "string",
+            "description": "A description of the rec definition.",
+            "nullable": true
+          },
+          "definitionType": {
+            "minLength": 1,
+            "type": "string",
+            "description": "What this definition reconciles, naming the kind of dataset that must be present on at least one side. One of: PortfolioContents, LusidEntity, RelationalData. Only PortfolioContents is currently supported. Available values: PortfolioContents, LusidEntity, RelationalData."
+          },
+          "sideNames": {
+            "$ref": "#/components/schemas/RecDefSideNames"
+          },
+          "leftPortfolioSources": {
+            "maxItems": 100,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RecDefSource"
+            },
+            "description": "The portfolios, portfolio groups and funds contributing to the left side. Empty when the left side draws on relational data instead, which requires every ruleset to declare relational data for that side. Both sides cannot be empty.",
+            "nullable": true
+          },
+          "rightPortfolioSources": {
+            "maxItems": 100,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RecDefSource"
+            },
+            "description": "The portfolios, portfolio groups and funds contributing to the right side. Empty when the right side draws on relational data instead, which requires every ruleset to declare relational data for that side. Both sides cannot be empty.",
+            "nullable": true
+          },
+          "valuationRecipes": {
+            "$ref": "#/components/schemas/RecDefRecipeIds"
+          },
+          "currencies": {
+            "$ref": "#/components/schemas/RecDefCurrencies"
+          },
+          "rulesets": {
+            "maxItems": 10,
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RecDefRuleset"
+            },
+            "description": "The types of reconciliation included in the group, each naming the matching ruleset that drives it. At least one entry is required, and each rec type may appear at most once."
           }
         },
         "additionalProperties": false
@@ -284289,7 +288021,7 @@
     },
     {
       "name": "Recs",
-      "description": "Endpoints for advanced reconciliation instances and results."
+      "description": "Endpoints for advanced reconciliation instances and result sets."
     },
     {
       "name": "Reference Portfolio",

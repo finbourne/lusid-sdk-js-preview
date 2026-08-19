@@ -46,9 +46,9 @@ export * from './adjustGlobalCommitmentEventAllOf';
 export * from './adjustHolding';
 export * from './adjustHoldingForDateRequest';
 export * from './adjustHoldingRequest';
+export * from './aggregateMatchingRule';
 export * from './aggregateRuleValues';
 export * from './aggregateSpec';
-export * from './aggregateToleranceBase';
 export * from './aggregatedReturn';
 export * from './aggregatedReturnsDispersionRequest';
 export * from './aggregatedReturnsEntityId';
@@ -342,8 +342,8 @@ export * from './contractInitialisationEventAllOf';
 export * from './contributionToNonPassingRuleDetail';
 export * from './conversionEvent';
 export * from './conversionEventAllOf';
+export * from './coreMatchingRule';
 export * from './coreRuleValues';
-export * from './coreToleranceBase';
 export * from './corporateAction';
 export * from './corporateActionSource';
 export * from './corporateActionTransition';
@@ -371,9 +371,11 @@ export * from './createDerivedTransactionPortfolioRequest';
 export * from './createGroupReconciliationComparisonRulesetRequest';
 export * from './createGroupReconciliationDefinitionRequest';
 export * from './createIdentifierDefinitionRequest';
+export * from './createMatchingRulesetRequest';
 export * from './createPortfolioDetails';
 export * from './createPortfolioGroupRequest';
 export * from './createPropertyDefinitionRequest';
+export * from './createRecDefinitionRequest';
 export * from './createRecipeRequest';
 export * from './createReconciliationRequest';
 export * from './createReferencePortfolioRequest';
@@ -907,6 +909,7 @@ export * from './marketQuote';
 export * from './masteredInstrument';
 export * from './masteredInstrumentAllOf';
 export * from './matchCriterion';
+export * from './matchingRuleset';
 export * from './maturityEvent';
 export * from './maturityEventAllOf';
 export * from './mbsCouponEvent';
@@ -1057,6 +1060,7 @@ export * from './pagedResourceListOfInstrumentEventHolder';
 export * from './pagedResourceListOfInstrumentEventInstruction';
 export * from './pagedResourceListOfItemAndWorkspace';
 export * from './pagedResourceListOfLegalEntity';
+export * from './pagedResourceListOfMatchingRuleset';
 export * from './pagedResourceListOfOrder';
 export * from './pagedResourceListOfOrderBreachHistory';
 export * from './pagedResourceListOfOrderGraphBlock';
@@ -1073,6 +1077,7 @@ export * from './pagedResourceListOfPostingModuleResponse';
 export * from './pagedResourceListOfPostingModuleRule';
 export * from './pagedResourceListOfPropertyDefinition';
 export * from './pagedResourceListOfPropertyDefinitionSearchResult';
+export * from './pagedResourceListOfRecDefinition';
 export * from './pagedResourceListOfRecInstance';
 export * from './pagedResourceListOfRecResult';
 export * from './pagedResourceListOfRecResultSet';
@@ -1268,7 +1273,15 @@ export * from './recApprovalDecision';
 export * from './recClosedExceptionCounts';
 export * from './recClosedPeriodReference';
 export * from './recClosedPeriods';
+export * from './recDatasetSchema';
+export * from './recDatasetSchemas';
 export * from './recDatesReconciled';
+export * from './recDefCurrencies';
+export * from './recDefRecipeIds';
+export * from './recDefRuleset';
+export * from './recDefSideNames';
+export * from './recDefSource';
+export * from './recDefinition';
 export * from './recExceptionCountByClosureType';
 export * from './recExceptionCountByResultType';
 export * from './recExecution';
@@ -1577,6 +1590,7 @@ export * from './subHoldingKeyValueEqualsAllOf';
 export * from './submitRecResultSetReviewRequest';
 export * from './subscribeElection';
 export * from './subscriptionDefinition';
+export * from './supplementalAttribute';
 export * from './supplementalAttributeValues';
 export * from './swapCashFlowEvent';
 export * from './swapCashFlowEventAllOf';
@@ -1604,6 +1618,7 @@ export * from './toBeAnnounced';
 export * from './toBeAnnouncedAllOf';
 export * from './toBeAnnouncedOption';
 export * from './toBeAnnouncedOptionAllOf';
+export * from './toleranceBase';
 export * from './totalReturnSwap';
 export * from './totalReturnSwapAllOf';
 export * from './touch';
@@ -1702,11 +1717,13 @@ export * from './updateGroupReconciliationDefinitionRequest';
 export * from './updateIdentifierDefinitionRequest';
 export * from './updateInstrumentIdentifierRequest';
 export * from './updateMarketDataFieldConfigurationRequest';
+export * from './updateMatchingRulesetRequest';
 export * from './updateOrdersResponse';
 export * from './updatePlacementsResponse';
 export * from './updatePortfolioGroupRequest';
 export * from './updatePortfolioRequest';
 export * from './updatePropertyDefinitionRequest';
+export * from './updateRecDefinitionRequest';
 export * from './updateReconciliationRequest';
 export * from './updateReferenceDataRequest';
 export * from './updateRelationalDatasetDefinitionRequest';
@@ -1906,9 +1923,9 @@ import { AdjustGlobalCommitmentEventAllOf } from './adjustGlobalCommitmentEventA
 import { AdjustHolding } from './adjustHolding';
 import { AdjustHoldingForDateRequest } from './adjustHoldingForDateRequest';
 import { AdjustHoldingRequest } from './adjustHoldingRequest';
+import { AggregateMatchingRule } from './aggregateMatchingRule';
 import { AggregateRuleValues } from './aggregateRuleValues';
 import { AggregateSpec } from './aggregateSpec';
-import { AggregateToleranceBase } from './aggregateToleranceBase';
 import { AggregatedReturn } from './aggregatedReturn';
 import { AggregatedReturnsDispersionRequest } from './aggregatedReturnsDispersionRequest';
 import { AggregatedReturnsEntityId } from './aggregatedReturnsEntityId';
@@ -2202,8 +2219,8 @@ import { ContractInitialisationEventAllOf } from './contractInitialisationEventA
 import { ContributionToNonPassingRuleDetail } from './contributionToNonPassingRuleDetail';
 import { ConversionEvent } from './conversionEvent';
 import { ConversionEventAllOf } from './conversionEventAllOf';
+import { CoreMatchingRule } from './coreMatchingRule';
 import { CoreRuleValues } from './coreRuleValues';
-import { CoreToleranceBase } from './coreToleranceBase';
 import { CorporateAction } from './corporateAction';
 import { CorporateActionSource } from './corporateActionSource';
 import { CorporateActionTransition } from './corporateActionTransition';
@@ -2231,9 +2248,11 @@ import { CreateDerivedTransactionPortfolioRequest } from './createDerivedTransac
 import { CreateGroupReconciliationComparisonRulesetRequest } from './createGroupReconciliationComparisonRulesetRequest';
 import { CreateGroupReconciliationDefinitionRequest } from './createGroupReconciliationDefinitionRequest';
 import { CreateIdentifierDefinitionRequest } from './createIdentifierDefinitionRequest';
+import { CreateMatchingRulesetRequest } from './createMatchingRulesetRequest';
 import { CreatePortfolioDetails } from './createPortfolioDetails';
 import { CreatePortfolioGroupRequest } from './createPortfolioGroupRequest';
 import { CreatePropertyDefinitionRequest } from './createPropertyDefinitionRequest';
+import { CreateRecDefinitionRequest } from './createRecDefinitionRequest';
 import { CreateRecipeRequest } from './createRecipeRequest';
 import { CreateReconciliationRequest } from './createReconciliationRequest';
 import { CreateReferencePortfolioRequest } from './createReferencePortfolioRequest';
@@ -2767,6 +2786,7 @@ import { MarketQuote } from './marketQuote';
 import { MasteredInstrument } from './masteredInstrument';
 import { MasteredInstrumentAllOf } from './masteredInstrumentAllOf';
 import { MatchCriterion } from './matchCriterion';
+import { MatchingRuleset } from './matchingRuleset';
 import { MaturityEvent } from './maturityEvent';
 import { MaturityEventAllOf } from './maturityEventAllOf';
 import { MbsCouponEvent } from './mbsCouponEvent';
@@ -2917,6 +2937,7 @@ import { PagedResourceListOfInstrumentEventHolder } from './pagedResourceListOfI
 import { PagedResourceListOfInstrumentEventInstruction } from './pagedResourceListOfInstrumentEventInstruction';
 import { PagedResourceListOfItemAndWorkspace } from './pagedResourceListOfItemAndWorkspace';
 import { PagedResourceListOfLegalEntity } from './pagedResourceListOfLegalEntity';
+import { PagedResourceListOfMatchingRuleset } from './pagedResourceListOfMatchingRuleset';
 import { PagedResourceListOfOrder } from './pagedResourceListOfOrder';
 import { PagedResourceListOfOrderBreachHistory } from './pagedResourceListOfOrderBreachHistory';
 import { PagedResourceListOfOrderGraphBlock } from './pagedResourceListOfOrderGraphBlock';
@@ -2933,6 +2954,7 @@ import { PagedResourceListOfPostingModuleResponse } from './pagedResourceListOfP
 import { PagedResourceListOfPostingModuleRule } from './pagedResourceListOfPostingModuleRule';
 import { PagedResourceListOfPropertyDefinition } from './pagedResourceListOfPropertyDefinition';
 import { PagedResourceListOfPropertyDefinitionSearchResult } from './pagedResourceListOfPropertyDefinitionSearchResult';
+import { PagedResourceListOfRecDefinition } from './pagedResourceListOfRecDefinition';
 import { PagedResourceListOfRecInstance } from './pagedResourceListOfRecInstance';
 import { PagedResourceListOfRecResult } from './pagedResourceListOfRecResult';
 import { PagedResourceListOfRecResultSet } from './pagedResourceListOfRecResultSet';
@@ -3128,7 +3150,15 @@ import { RecApprovalDecision } from './recApprovalDecision';
 import { RecClosedExceptionCounts } from './recClosedExceptionCounts';
 import { RecClosedPeriodReference } from './recClosedPeriodReference';
 import { RecClosedPeriods } from './recClosedPeriods';
+import { RecDatasetSchema } from './recDatasetSchema';
+import { RecDatasetSchemas } from './recDatasetSchemas';
 import { RecDatesReconciled } from './recDatesReconciled';
+import { RecDefCurrencies } from './recDefCurrencies';
+import { RecDefRecipeIds } from './recDefRecipeIds';
+import { RecDefRuleset } from './recDefRuleset';
+import { RecDefSideNames } from './recDefSideNames';
+import { RecDefSource } from './recDefSource';
+import { RecDefinition } from './recDefinition';
 import { RecExceptionCountByClosureType } from './recExceptionCountByClosureType';
 import { RecExceptionCountByResultType } from './recExceptionCountByResultType';
 import { RecExecution } from './recExecution';
@@ -3437,6 +3467,7 @@ import { SubHoldingKeyValueEqualsAllOf } from './subHoldingKeyValueEqualsAllOf';
 import { SubmitRecResultSetReviewRequest } from './submitRecResultSetReviewRequest';
 import { SubscribeElection } from './subscribeElection';
 import { SubscriptionDefinition } from './subscriptionDefinition';
+import { SupplementalAttribute } from './supplementalAttribute';
 import { SupplementalAttributeValues } from './supplementalAttributeValues';
 import { SwapCashFlowEvent } from './swapCashFlowEvent';
 import { SwapCashFlowEventAllOf } from './swapCashFlowEventAllOf';
@@ -3464,6 +3495,7 @@ import { ToBeAnnounced } from './toBeAnnounced';
 import { ToBeAnnouncedAllOf } from './toBeAnnouncedAllOf';
 import { ToBeAnnouncedOption } from './toBeAnnouncedOption';
 import { ToBeAnnouncedOptionAllOf } from './toBeAnnouncedOptionAllOf';
+import { ToleranceBase } from './toleranceBase';
 import { TotalReturnSwap } from './totalReturnSwap';
 import { TotalReturnSwapAllOf } from './totalReturnSwapAllOf';
 import { Touch } from './touch';
@@ -3562,11 +3594,13 @@ import { UpdateGroupReconciliationDefinitionRequest } from './updateGroupReconci
 import { UpdateIdentifierDefinitionRequest } from './updateIdentifierDefinitionRequest';
 import { UpdateInstrumentIdentifierRequest } from './updateInstrumentIdentifierRequest';
 import { UpdateMarketDataFieldConfigurationRequest } from './updateMarketDataFieldConfigurationRequest';
+import { UpdateMatchingRulesetRequest } from './updateMatchingRulesetRequest';
 import { UpdateOrdersResponse } from './updateOrdersResponse';
 import { UpdatePlacementsResponse } from './updatePlacementsResponse';
 import { UpdatePortfolioGroupRequest } from './updatePortfolioGroupRequest';
 import { UpdatePortfolioRequest } from './updatePortfolioRequest';
 import { UpdatePropertyDefinitionRequest } from './updatePropertyDefinitionRequest';
+import { UpdateRecDefinitionRequest } from './updateRecDefinitionRequest';
 import { UpdateReconciliationRequest } from './updateReconciliationRequest';
 import { UpdateReferenceDataRequest } from './updateReferenceDataRequest';
 import { UpdateRelationalDatasetDefinitionRequest } from './updateRelationalDatasetDefinitionRequest';
@@ -4497,9 +4531,9 @@ let typeMap: {[index: string]: any} = {
     "AdjustHolding": AdjustHolding,
     "AdjustHoldingForDateRequest": AdjustHoldingForDateRequest,
     "AdjustHoldingRequest": AdjustHoldingRequest,
+    "AggregateMatchingRule": AggregateMatchingRule,
     "AggregateRuleValues": AggregateRuleValues,
     "AggregateSpec": AggregateSpec,
-    "AggregateToleranceBase": AggregateToleranceBase,
     "AggregatedReturn": AggregatedReturn,
     "AggregatedReturnsDispersionRequest": AggregatedReturnsDispersionRequest,
     "AggregatedReturnsEntityId": AggregatedReturnsEntityId,
@@ -4785,8 +4819,8 @@ let typeMap: {[index: string]: any} = {
     "ContributionToNonPassingRuleDetail": ContributionToNonPassingRuleDetail,
     "ConversionEvent": ConversionEvent,
     "ConversionEventAllOf": ConversionEventAllOf,
+    "CoreMatchingRule": CoreMatchingRule,
     "CoreRuleValues": CoreRuleValues,
-    "CoreToleranceBase": CoreToleranceBase,
     "CorporateAction": CorporateAction,
     "CorporateActionSource": CorporateActionSource,
     "CorporateActionTransition": CorporateActionTransition,
@@ -4814,9 +4848,11 @@ let typeMap: {[index: string]: any} = {
     "CreateGroupReconciliationComparisonRulesetRequest": CreateGroupReconciliationComparisonRulesetRequest,
     "CreateGroupReconciliationDefinitionRequest": CreateGroupReconciliationDefinitionRequest,
     "CreateIdentifierDefinitionRequest": CreateIdentifierDefinitionRequest,
+    "CreateMatchingRulesetRequest": CreateMatchingRulesetRequest,
     "CreatePortfolioDetails": CreatePortfolioDetails,
     "CreatePortfolioGroupRequest": CreatePortfolioGroupRequest,
     "CreatePropertyDefinitionRequest": CreatePropertyDefinitionRequest,
+    "CreateRecDefinitionRequest": CreateRecDefinitionRequest,
     "CreateRecipeRequest": CreateRecipeRequest,
     "CreateReconciliationRequest": CreateReconciliationRequest,
     "CreateReferencePortfolioRequest": CreateReferencePortfolioRequest,
@@ -5334,6 +5370,7 @@ let typeMap: {[index: string]: any} = {
     "MasteredInstrument": MasteredInstrument,
     "MasteredInstrumentAllOf": MasteredInstrumentAllOf,
     "MatchCriterion": MatchCriterion,
+    "MatchingRuleset": MatchingRuleset,
     "MaturityEvent": MaturityEvent,
     "MaturityEventAllOf": MaturityEventAllOf,
     "MbsCouponEvent": MbsCouponEvent,
@@ -5476,6 +5513,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfInstrumentEventInstruction": PagedResourceListOfInstrumentEventInstruction,
     "PagedResourceListOfItemAndWorkspace": PagedResourceListOfItemAndWorkspace,
     "PagedResourceListOfLegalEntity": PagedResourceListOfLegalEntity,
+    "PagedResourceListOfMatchingRuleset": PagedResourceListOfMatchingRuleset,
     "PagedResourceListOfOrder": PagedResourceListOfOrder,
     "PagedResourceListOfOrderBreachHistory": PagedResourceListOfOrderBreachHistory,
     "PagedResourceListOfOrderGraphBlock": PagedResourceListOfOrderGraphBlock,
@@ -5492,6 +5530,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfPostingModuleRule": PagedResourceListOfPostingModuleRule,
     "PagedResourceListOfPropertyDefinition": PagedResourceListOfPropertyDefinition,
     "PagedResourceListOfPropertyDefinitionSearchResult": PagedResourceListOfPropertyDefinitionSearchResult,
+    "PagedResourceListOfRecDefinition": PagedResourceListOfRecDefinition,
     "PagedResourceListOfRecInstance": PagedResourceListOfRecInstance,
     "PagedResourceListOfRecResult": PagedResourceListOfRecResult,
     "PagedResourceListOfRecResultSet": PagedResourceListOfRecResultSet,
@@ -5674,7 +5713,15 @@ let typeMap: {[index: string]: any} = {
     "RecClosedExceptionCounts": RecClosedExceptionCounts,
     "RecClosedPeriodReference": RecClosedPeriodReference,
     "RecClosedPeriods": RecClosedPeriods,
+    "RecDatasetSchema": RecDatasetSchema,
+    "RecDatasetSchemas": RecDatasetSchemas,
     "RecDatesReconciled": RecDatesReconciled,
+    "RecDefCurrencies": RecDefCurrencies,
+    "RecDefRecipeIds": RecDefRecipeIds,
+    "RecDefRuleset": RecDefRuleset,
+    "RecDefSideNames": RecDefSideNames,
+    "RecDefSource": RecDefSource,
+    "RecDefinition": RecDefinition,
     "RecExceptionCountByClosureType": RecExceptionCountByClosureType,
     "RecExceptionCountByResultType": RecExceptionCountByResultType,
     "RecExecution": RecExecution,
@@ -5973,6 +6020,7 @@ let typeMap: {[index: string]: any} = {
     "SubmitRecResultSetReviewRequest": SubmitRecResultSetReviewRequest,
     "SubscribeElection": SubscribeElection,
     "SubscriptionDefinition": SubscriptionDefinition,
+    "SupplementalAttribute": SupplementalAttribute,
     "SupplementalAttributeValues": SupplementalAttributeValues,
     "SwapCashFlowEvent": SwapCashFlowEvent,
     "SwapCashFlowEventAllOf": SwapCashFlowEventAllOf,
@@ -6000,6 +6048,7 @@ let typeMap: {[index: string]: any} = {
     "ToBeAnnouncedAllOf": ToBeAnnouncedAllOf,
     "ToBeAnnouncedOption": ToBeAnnouncedOption,
     "ToBeAnnouncedOptionAllOf": ToBeAnnouncedOptionAllOf,
+    "ToleranceBase": ToleranceBase,
     "TotalReturnSwap": TotalReturnSwap,
     "TotalReturnSwapAllOf": TotalReturnSwapAllOf,
     "Touch": Touch,
@@ -6091,11 +6140,13 @@ let typeMap: {[index: string]: any} = {
     "UpdateIdentifierDefinitionRequest": UpdateIdentifierDefinitionRequest,
     "UpdateInstrumentIdentifierRequest": UpdateInstrumentIdentifierRequest,
     "UpdateMarketDataFieldConfigurationRequest": UpdateMarketDataFieldConfigurationRequest,
+    "UpdateMatchingRulesetRequest": UpdateMatchingRulesetRequest,
     "UpdateOrdersResponse": UpdateOrdersResponse,
     "UpdatePlacementsResponse": UpdatePlacementsResponse,
     "UpdatePortfolioGroupRequest": UpdatePortfolioGroupRequest,
     "UpdatePortfolioRequest": UpdatePortfolioRequest,
     "UpdatePropertyDefinitionRequest": UpdatePropertyDefinitionRequest,
+    "UpdateRecDefinitionRequest": UpdateRecDefinitionRequest,
     "UpdateReconciliationRequest": UpdateReconciliationRequest,
     "UpdateReferenceDataRequest": UpdateReferenceDataRequest,
     "UpdateRelationalDatasetDefinitionRequest": UpdateRelationalDatasetDefinitionRequest,
