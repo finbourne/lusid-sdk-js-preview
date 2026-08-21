@@ -941,6 +941,7 @@ export * from './modelOptionsType';
 export * from './modelSelection';
 export * from './moveOrdersToDifferentBlocksRequest';
 export * from './movedOrderToDifferentBlockResponse';
+export * from './movementConditionMatch';
 export * from './movementSettlementSummary';
 export * from './movementType';
 export * from './multiCurrencyAmounts';
@@ -2820,6 +2821,7 @@ import { ModelOptionsType } from './modelOptionsType';
 import { ModelSelection } from './modelSelection';
 import { MoveOrdersToDifferentBlocksRequest } from './moveOrdersToDifferentBlocksRequest';
 import { MovedOrderToDifferentBlockResponse } from './movedOrderToDifferentBlockResponse';
+import { MovementConditionMatch } from './movementConditionMatch';
 import { MovementSettlementSummary } from './movementSettlementSummary';
 import { MovementType } from './movementType';
 import { MultiCurrencyAmounts } from './multiCurrencyAmounts';
@@ -5407,6 +5409,7 @@ let typeMap: {[index: string]: any} = {
     "ModelSelection": ModelSelection,
     "MoveOrdersToDifferentBlocksRequest": MoveOrdersToDifferentBlocksRequest,
     "MovedOrderToDifferentBlockResponse": MovedOrderToDifferentBlockResponse,
+    "MovementConditionMatch": MovementConditionMatch,
     "MovementSettlementSummary": MovementSettlementSummary,
     "MultiCurrencyAmounts": MultiCurrencyAmounts,
     "NavActivityAdjustment": NavActivityAdjustment,
