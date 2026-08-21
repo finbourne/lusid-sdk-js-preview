@@ -9,7 +9,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "2.0.1608",
+    "version": "2.0.1610",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -257692,7 +257692,7 @@
             "maxLength": 64,
             "minLength": 0,
             "type": "string",
-            "description": "The scope of the entity. Optional — required depends on the entity type.",
+            "description": "The scope of the entity. Optional, and narrows the match when supplied. Required for a Portfolio.",
             "nullable": true
           },
           "identifierType": {
@@ -257705,7 +257705,7 @@
             "maxLength": 64,
             "minLength": 0,
             "type": "string",
-            "description": "The scope of the identifier used to identify the entity. Optional — null for native LUSID identifiers such as code.",
+            "description": "The scope of the identifier used to identify the entity. Optional, and narrows the match when supplied.",
             "nullable": true
           },
           "identifierValue": {
@@ -257804,7 +257804,7 @@
             "maxLength": 64,
             "minLength": 0,
             "type": "string",
-            "description": "The type of payment series. One of \"Dividend\", \"Fee\", \"Rebate\", \"Redemption\", \"Subscription\"."
+            "description": "The type of payment series."
           },
           "currency": {
             "maxLength": 3,
@@ -265871,9 +265871,6 @@
             "description": "The asAt datetime at which the instance was first created.",
             "format": "date-time"
           },
-          "workflowTaskInstantiated": {
-            "$ref": "#/components/schemas/RecWorkflowTask"
-          },
           "status": {
             "minLength": 1,
             "type": "string",
@@ -267161,7 +267158,6 @@
       },
       "RecReview": {
         "required": [
-          "completionRatio",
           "countNotRequired",
           "countRequired",
           "countReviewed"
@@ -267186,7 +267182,8 @@
           "completionRatio": {
             "type": "number",
             "description": "Reviewed / (Reviewed + Required). Is 1.0 when the denominator is zero, and null when execution failed.",
-            "format": "double"
+            "format": "double",
+            "nullable": true
           }
         },
         "additionalProperties": false,
@@ -267366,26 +267363,6 @@
         },
         "additionalProperties": false,
         "description": "A user-authored comment attached to a rec result. Carried forward with the result across runs."
-      },
-      "RecWorkflowTask": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "description": "The identifier of the workflow service task.",
-            "nullable": true
-          },
-          "taskDefinitionId": {
-            "$ref": "#/components/schemas/ResourceId"
-          },
-          "state": {
-            "type": "string",
-            "description": "The current state of the workflow service task.",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false,
-        "description": "The workflow service task that instantiated a rec instance.\r\nMinimal placeholder until the full workflow service task DTO is available."
       },
       "ReferenceData": {
         "required": [

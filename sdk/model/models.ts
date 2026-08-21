@@ -1310,7 +1310,6 @@ export * from './recRunLogEntry';
 export * from './recSubmission';
 export * from './recSupersededRun';
 export * from './recUserComment';
-export * from './recWorkflowTask';
 export * from './recipeBlock';
 export * from './recipeComposer';
 export * from './recipeValue';
@@ -3190,7 +3189,6 @@ import { RecRunLogEntry } from './recRunLogEntry';
 import { RecSubmission } from './recSubmission';
 import { RecSupersededRun } from './recSupersededRun';
 import { RecUserComment } from './recUserComment';
-import { RecWorkflowTask } from './recWorkflowTask';
 import { RecipeBlock } from './recipeBlock';
 import { RecipeComposer } from './recipeComposer';
 import { RecipeValue } from './recipeValue';
@@ -5758,7 +5756,6 @@ let typeMap: {[index: string]: any} = {
     "RecSubmission": RecSubmission,
     "RecSupersededRun": RecSupersededRun,
     "RecUserComment": RecUserComment,
-    "RecWorkflowTask": RecWorkflowTask,
     "RecipeBlock": RecipeBlock,
     "RecipeComposer": RecipeComposer,
     "RecipeValue": RecipeValue,
