@@ -1163,6 +1163,8 @@ export * from './portfolioGroupIdListComplianceParameter';
 export * from './portfolioGroupProperties';
 export * from './portfolioGroupSearchResult';
 export * from './portfolioHolding';
+export * from './portfolioHoldingDataset';
+export * from './portfolioHoldingResult';
 export * from './portfolioId';
 export * from './portfolioIdComplianceParameter';
 export * from './portfolioIdList';
@@ -3043,6 +3045,8 @@ import { PortfolioGroupIdListComplianceParameter } from './portfolioGroupIdListC
 import { PortfolioGroupProperties } from './portfolioGroupProperties';
 import { PortfolioGroupSearchResult } from './portfolioGroupSearchResult';
 import { PortfolioHolding } from './portfolioHolding';
+import { PortfolioHoldingDataset } from './portfolioHoldingDataset';
+import { PortfolioHoldingResult } from './portfolioHoldingResult';
 import { PortfolioId } from './portfolioId';
 import { PortfolioIdComplianceParameter } from './portfolioIdComplianceParameter';
 import { PortfolioIdList } from './portfolioIdList';
@@ -5622,6 +5626,8 @@ let typeMap: {[index: string]: any} = {
     "PortfolioGroupProperties": PortfolioGroupProperties,
     "PortfolioGroupSearchResult": PortfolioGroupSearchResult,
     "PortfolioHolding": PortfolioHolding,
+    "PortfolioHoldingDataset": PortfolioHoldingDataset,
+    "PortfolioHoldingResult": PortfolioHoldingResult,
     "PortfolioId": PortfolioId,
     "PortfolioIdComplianceParameter": PortfolioIdComplianceParameter,
     "PortfolioIdList": PortfolioIdList,
