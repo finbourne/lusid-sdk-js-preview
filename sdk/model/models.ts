@@ -110,6 +110,7 @@ export * from './basketIdentifier';
 export * from './batchAdjustHoldingsResponse';
 export * from './batchAmendCustomDataModelMembershipResponse';
 export * from './batchAmendTransactionSettlementInstructionResponse';
+export * from './batchCreateClosedPeriodsRequest';
 export * from './batchDeleteRelationalDataResponse';
 export * from './batchManageCommentRequest';
 export * from './batchManageCommentResponse';
@@ -145,6 +146,8 @@ export * from './bondCouponEventAllOf';
 export * from './bondDefaultEvent';
 export * from './bondDefaultEventAllOf';
 export * from './bondDefaultSuppressionDetails';
+export * from './bondLookupModelOptions';
+export * from './bondLookupModelOptionsAllOf';
 export * from './bondOption';
 export * from './bondOptionAllOf';
 export * from './bondOptionTerminationEvent';
@@ -774,6 +777,8 @@ export * from './holdingIdsRequest';
 export * from './holdingPricingInfo';
 export * from './holdingsAdjustment';
 export * from './holdingsAdjustmentHeader';
+export * from './hullWhiteModelOptions';
+export * from './hullWhiteModelOptionsAllOf';
 export * from './iUnitDefinitionDto';
 export * from './idSelectorDefinition';
 export * from './identifierDefinition';
@@ -1401,6 +1406,7 @@ export * from './resourceListOfChange';
 export * from './resourceListOfChangeHistory';
 export * from './resourceListOfChangeInterval';
 export * from './resourceListOfChangeIntervalWithOrderManagementDetail';
+export * from './resourceListOfClosedPeriod';
 export * from './resourceListOfComplianceBreachedOrderInfo';
 export * from './resourceListOfComplianceRule';
 export * from './resourceListOfComplianceRuleResult';
@@ -1649,6 +1655,7 @@ export * from './transactionCurrencyAndAmount';
 export * from './transactionDateWindows';
 export * from './transactionDiagnostics';
 export * from './transactionEntity';
+export * from './transactionEntityLink';
 export * from './transactionFeeCapitalisation';
 export * from './transactionFeeType';
 export * from './transactionFieldMap';
@@ -2002,6 +2009,7 @@ import { BasketIdentifier } from './basketIdentifier';
 import { BatchAdjustHoldingsResponse } from './batchAdjustHoldingsResponse';
 import { BatchAmendCustomDataModelMembershipResponse } from './batchAmendCustomDataModelMembershipResponse';
 import { BatchAmendTransactionSettlementInstructionResponse } from './batchAmendTransactionSettlementInstructionResponse';
+import { BatchCreateClosedPeriodsRequest } from './batchCreateClosedPeriodsRequest';
 import { BatchDeleteRelationalDataResponse } from './batchDeleteRelationalDataResponse';
 import { BatchManageCommentRequest } from './batchManageCommentRequest';
 import { BatchManageCommentResponse } from './batchManageCommentResponse';
@@ -2037,6 +2045,8 @@ import { BondCouponEventAllOf } from './bondCouponEventAllOf';
 import { BondDefaultEvent } from './bondDefaultEvent';
 import { BondDefaultEventAllOf } from './bondDefaultEventAllOf';
 import { BondDefaultSuppressionDetails } from './bondDefaultSuppressionDetails';
+import { BondLookupModelOptions } from './bondLookupModelOptions';
+import { BondLookupModelOptionsAllOf } from './bondLookupModelOptionsAllOf';
 import { BondOption } from './bondOption';
 import { BondOptionAllOf } from './bondOptionAllOf';
 import { BondOptionTerminationEvent } from './bondOptionTerminationEvent';
@@ -2666,6 +2676,8 @@ import { HoldingIdsRequest } from './holdingIdsRequest';
 import { HoldingPricingInfo } from './holdingPricingInfo';
 import { HoldingsAdjustment } from './holdingsAdjustment';
 import { HoldingsAdjustmentHeader } from './holdingsAdjustmentHeader';
+import { HullWhiteModelOptions } from './hullWhiteModelOptions';
+import { HullWhiteModelOptionsAllOf } from './hullWhiteModelOptionsAllOf';
 import { IUnitDefinitionDto } from './iUnitDefinitionDto';
 import { IdSelectorDefinition } from './idSelectorDefinition';
 import { IdentifierDefinition } from './identifierDefinition';
@@ -3293,6 +3305,7 @@ import { ResourceListOfChange } from './resourceListOfChange';
 import { ResourceListOfChangeHistory } from './resourceListOfChangeHistory';
 import { ResourceListOfChangeInterval } from './resourceListOfChangeInterval';
 import { ResourceListOfChangeIntervalWithOrderManagementDetail } from './resourceListOfChangeIntervalWithOrderManagementDetail';
+import { ResourceListOfClosedPeriod } from './resourceListOfClosedPeriod';
 import { ResourceListOfComplianceBreachedOrderInfo } from './resourceListOfComplianceBreachedOrderInfo';
 import { ResourceListOfComplianceRule } from './resourceListOfComplianceRule';
 import { ResourceListOfComplianceRuleResult } from './resourceListOfComplianceRuleResult';
@@ -3541,6 +3554,7 @@ import { TransactionCurrencyAndAmount } from './transactionCurrencyAndAmount';
 import { TransactionDateWindows } from './transactionDateWindows';
 import { TransactionDiagnostics } from './transactionDiagnostics';
 import { TransactionEntity } from './transactionEntity';
+import { TransactionEntityLink } from './transactionEntityLink';
 import { TransactionFeeCapitalisation } from './transactionFeeCapitalisation';
 import { TransactionFeeType } from './transactionFeeType';
 import { TransactionFieldMap } from './transactionFieldMap';
@@ -3830,6 +3844,8 @@ let enumsMap: {[index: string]: any} = {
         "BondCouponEventAllOf.InstrumentEventTypeEnum": BondCouponEventAllOf.InstrumentEventTypeEnum,
         "BondDefaultEvent.InstrumentEventTypeEnum": BondDefaultEvent.InstrumentEventTypeEnum,
         "BondDefaultEventAllOf.InstrumentEventTypeEnum": BondDefaultEventAllOf.InstrumentEventTypeEnum,
+        "BondLookupModelOptions.ModelOptionsTypeEnum": BondLookupModelOptions.ModelOptionsTypeEnum,
+        "BondLookupModelOptionsAllOf.ModelOptionsTypeEnum": BondLookupModelOptionsAllOf.ModelOptionsTypeEnum,
         "BondOption.InstrumentTypeEnum": BondOption.InstrumentTypeEnum,
         "BondOptionAllOf.InstrumentTypeEnum": BondOptionAllOf.InstrumentTypeEnum,
         "BondOptionTerminationEvent.InstrumentEventTypeEnum": BondOptionTerminationEvent.InstrumentEventTypeEnum,
@@ -4143,6 +4159,8 @@ let enumsMap: {[index: string]: any} = {
         "GroupFilterStepRequest.ComplianceStepTypeRequestEnum": GroupFilterStepRequest.ComplianceStepTypeRequestEnum,
         "HoldingsAdjustment.UnmatchedHoldingMethodEnum": HoldingsAdjustment.UnmatchedHoldingMethodEnum,
         "HoldingsAdjustmentHeader.UnmatchedHoldingMethodEnum": HoldingsAdjustmentHeader.UnmatchedHoldingMethodEnum,
+        "HullWhiteModelOptions.ModelOptionsTypeEnum": HullWhiteModelOptions.ModelOptionsTypeEnum,
+        "HullWhiteModelOptionsAllOf.ModelOptionsTypeEnum": HullWhiteModelOptionsAllOf.ModelOptionsTypeEnum,
         "IUnitDefinitionDto.SchemaEnum": IUnitDefinitionDto.SchemaEnum,
         "IdentifierDefinition.DomainEnum": IdentifierDefinition.DomainEnum,
         "IdentifierDefinition.LifeTimeEnum": IdentifierDefinition.LifeTimeEnum,
@@ -4625,6 +4643,7 @@ let typeMap: {[index: string]: any} = {
     "BatchAdjustHoldingsResponse": BatchAdjustHoldingsResponse,
     "BatchAmendCustomDataModelMembershipResponse": BatchAmendCustomDataModelMembershipResponse,
     "BatchAmendTransactionSettlementInstructionResponse": BatchAmendTransactionSettlementInstructionResponse,
+    "BatchCreateClosedPeriodsRequest": BatchCreateClosedPeriodsRequest,
     "BatchDeleteRelationalDataResponse": BatchDeleteRelationalDataResponse,
     "BatchManageCommentRequest": BatchManageCommentRequest,
     "BatchManageCommentResponse": BatchManageCommentResponse,
@@ -4660,6 +4679,8 @@ let typeMap: {[index: string]: any} = {
     "BondDefaultEvent": BondDefaultEvent,
     "BondDefaultEventAllOf": BondDefaultEventAllOf,
     "BondDefaultSuppressionDetails": BondDefaultSuppressionDetails,
+    "BondLookupModelOptions": BondLookupModelOptions,
+    "BondLookupModelOptionsAllOf": BondLookupModelOptionsAllOf,
     "BondOption": BondOption,
     "BondOptionAllOf": BondOptionAllOf,
     "BondOptionTerminationEvent": BondOptionTerminationEvent,
@@ -5275,6 +5296,8 @@ let typeMap: {[index: string]: any} = {
     "HoldingPricingInfo": HoldingPricingInfo,
     "HoldingsAdjustment": HoldingsAdjustment,
     "HoldingsAdjustmentHeader": HoldingsAdjustmentHeader,
+    "HullWhiteModelOptions": HullWhiteModelOptions,
+    "HullWhiteModelOptionsAllOf": HullWhiteModelOptionsAllOf,
     "IUnitDefinitionDto": IUnitDefinitionDto,
     "IdSelectorDefinition": IdSelectorDefinition,
     "IdentifierDefinition": IdentifierDefinition,
@@ -5872,6 +5895,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfChangeHistory": ResourceListOfChangeHistory,
     "ResourceListOfChangeInterval": ResourceListOfChangeInterval,
     "ResourceListOfChangeIntervalWithOrderManagementDetail": ResourceListOfChangeIntervalWithOrderManagementDetail,
+    "ResourceListOfClosedPeriod": ResourceListOfClosedPeriod,
     "ResourceListOfComplianceBreachedOrderInfo": ResourceListOfComplianceBreachedOrderInfo,
     "ResourceListOfComplianceRule": ResourceListOfComplianceRule,
     "ResourceListOfComplianceRuleResult": ResourceListOfComplianceRuleResult,
@@ -6112,6 +6136,7 @@ let typeMap: {[index: string]: any} = {
     "TransactionDateWindows": TransactionDateWindows,
     "TransactionDiagnostics": TransactionDiagnostics,
     "TransactionEntity": TransactionEntity,
+    "TransactionEntityLink": TransactionEntityLink,
     "TransactionFeeCapitalisation": TransactionFeeCapitalisation,
     "TransactionFeeType": TransactionFeeType,
     "TransactionFieldMap": TransactionFieldMap,
