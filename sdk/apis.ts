@@ -85,6 +85,7 @@ import {TransactionFeesApi} from './api/transactionFeesApi';
 import {TransactionFeeTypesApi} from './api/transactionFeeTypesApi';
 import {TransactionPortfoliosApi} from './api/transactionPortfoliosApi';
 import {TransferAgencyApi} from './api/transferAgencyApi';
+import {TransfersApi} from './api/transfersApi';
 import {TranslationApi} from './api/translationApi';
 import {WorkspaceApi} from './api/workspaceApi';
 
@@ -176,6 +177,7 @@ export class Api {
     public transactionFeeTypes:  TransactionFeeTypesApi
     public transactionPortfolios:  TransactionPortfoliosApi
     public transferAgency:  TransferAgencyApi
+    public transfers:  TransfersApi
     public translation:  TranslationApi
     public workspace:  WorkspaceApi
 }

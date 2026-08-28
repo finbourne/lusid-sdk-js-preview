@@ -144,6 +144,7 @@ export * from './bondCouponEvent';
 export * from './bondCouponEventAllOf';
 export * from './bondDefaultEvent';
 export * from './bondDefaultEventAllOf';
+export * from './bondDefaultSuppressionDetails';
 export * from './bondOption';
 export * from './bondOptionAllOf';
 export * from './bondOptionTerminationEvent';
@@ -396,6 +397,8 @@ export * from './createTimelineRequest';
 export * from './createTradeTicketsResponse';
 export * from './createTransactionFeeTypeRequest';
 export * from './createTransactionPortfolioRequest';
+export * from './createTransferRequest';
+export * from './createTransferResponse';
 export * from './createUnitDefinition';
 export * from './createValuationPointRequest';
 export * from './creditDefaultSwap';
@@ -472,6 +475,9 @@ export * from './deleteModes';
 export * from './deleteRelationRequest';
 export * from './deleteRelationalDataPointRequest';
 export * from './deleteRelationshipRequest';
+export * from './deleteTransferAgencyOrderRequest';
+export * from './deleteTransferAgencyOrderResult';
+export * from './deleteTransferAgencyOrdersResponse';
 export * from './deletedEntityResponse';
 export * from './delistingEvent';
 export * from './delistingEventAllOf';
@@ -634,6 +640,7 @@ export * from './fundEstimateValuationPoint';
 export * from './fundEstimateValuationPointAllOf';
 export * from './fundIdList';
 export * from './fundIdListAllOf';
+export * from './fundInstrument';
 export * from './fundJournalEntryLine';
 export * from './fundPnlBreakdown';
 export * from './fundPreviousNAV';
@@ -1700,6 +1707,7 @@ export * from './trialBalanceQueryParameters';
 export * from './triggerEvent';
 export * from './triggerEventAllOf';
 export * from './typedResourceId';
+export * from './unconfirmClosedPeriodRequest';
 export * from './unitSchema';
 export * from './unitisationData';
 export * from './unitsRatio';
@@ -2028,6 +2036,7 @@ import { BondCouponEvent } from './bondCouponEvent';
 import { BondCouponEventAllOf } from './bondCouponEventAllOf';
 import { BondDefaultEvent } from './bondDefaultEvent';
 import { BondDefaultEventAllOf } from './bondDefaultEventAllOf';
+import { BondDefaultSuppressionDetails } from './bondDefaultSuppressionDetails';
 import { BondOption } from './bondOption';
 import { BondOptionAllOf } from './bondOptionAllOf';
 import { BondOptionTerminationEvent } from './bondOptionTerminationEvent';
@@ -2280,6 +2289,8 @@ import { CreateTimelineRequest } from './createTimelineRequest';
 import { CreateTradeTicketsResponse } from './createTradeTicketsResponse';
 import { CreateTransactionFeeTypeRequest } from './createTransactionFeeTypeRequest';
 import { CreateTransactionPortfolioRequest } from './createTransactionPortfolioRequest';
+import { CreateTransferRequest } from './createTransferRequest';
+import { CreateTransferResponse } from './createTransferResponse';
 import { CreateUnitDefinition } from './createUnitDefinition';
 import { CreateValuationPointRequest } from './createValuationPointRequest';
 import { CreditDefaultSwap } from './creditDefaultSwap';
@@ -2356,6 +2367,9 @@ import { DeleteModes } from './deleteModes';
 import { DeleteRelationRequest } from './deleteRelationRequest';
 import { DeleteRelationalDataPointRequest } from './deleteRelationalDataPointRequest';
 import { DeleteRelationshipRequest } from './deleteRelationshipRequest';
+import { DeleteTransferAgencyOrderRequest } from './deleteTransferAgencyOrderRequest';
+import { DeleteTransferAgencyOrderResult } from './deleteTransferAgencyOrderResult';
+import { DeleteTransferAgencyOrdersResponse } from './deleteTransferAgencyOrdersResponse';
 import { DeletedEntityResponse } from './deletedEntityResponse';
 import { DelistingEvent } from './delistingEvent';
 import { DelistingEventAllOf } from './delistingEventAllOf';
@@ -2518,6 +2532,7 @@ import { FundEstimateValuationPoint } from './fundEstimateValuationPoint';
 import { FundEstimateValuationPointAllOf } from './fundEstimateValuationPointAllOf';
 import { FundIdList } from './fundIdList';
 import { FundIdListAllOf } from './fundIdListAllOf';
+import { FundInstrument } from './fundInstrument';
 import { FundJournalEntryLine } from './fundJournalEntryLine';
 import { FundPnlBreakdown } from './fundPnlBreakdown';
 import { FundPreviousNAV } from './fundPreviousNAV';
@@ -3584,6 +3599,7 @@ import { TrialBalanceQueryParameters } from './trialBalanceQueryParameters';
 import { TriggerEvent } from './triggerEvent';
 import { TriggerEventAllOf } from './triggerEventAllOf';
 import { TypedResourceId } from './typedResourceId';
+import { UnconfirmClosedPeriodRequest } from './unconfirmClosedPeriodRequest';
 import { UnitSchema } from './unitSchema';
 import { UnitisationData } from './unitisationData';
 import { UnitsRatio } from './unitsRatio';
@@ -4643,6 +4659,7 @@ let typeMap: {[index: string]: any} = {
     "BondCouponEventAllOf": BondCouponEventAllOf,
     "BondDefaultEvent": BondDefaultEvent,
     "BondDefaultEventAllOf": BondDefaultEventAllOf,
+    "BondDefaultSuppressionDetails": BondDefaultSuppressionDetails,
     "BondOption": BondOption,
     "BondOptionAllOf": BondOptionAllOf,
     "BondOptionTerminationEvent": BondOptionTerminationEvent,
@@ -4891,6 +4908,8 @@ let typeMap: {[index: string]: any} = {
     "CreateTradeTicketsResponse": CreateTradeTicketsResponse,
     "CreateTransactionFeeTypeRequest": CreateTransactionFeeTypeRequest,
     "CreateTransactionPortfolioRequest": CreateTransactionPortfolioRequest,
+    "CreateTransferRequest": CreateTransferRequest,
+    "CreateTransferResponse": CreateTransferResponse,
     "CreateUnitDefinition": CreateUnitDefinition,
     "CreateValuationPointRequest": CreateValuationPointRequest,
     "CreditDefaultSwap": CreditDefaultSwap,
@@ -4962,6 +4981,9 @@ let typeMap: {[index: string]: any} = {
     "DeleteRelationRequest": DeleteRelationRequest,
     "DeleteRelationalDataPointRequest": DeleteRelationalDataPointRequest,
     "DeleteRelationshipRequest": DeleteRelationshipRequest,
+    "DeleteTransferAgencyOrderRequest": DeleteTransferAgencyOrderRequest,
+    "DeleteTransferAgencyOrderResult": DeleteTransferAgencyOrderResult,
+    "DeleteTransferAgencyOrdersResponse": DeleteTransferAgencyOrdersResponse,
     "DeletedEntityResponse": DeletedEntityResponse,
     "DelistingEvent": DelistingEvent,
     "DelistingEventAllOf": DelistingEventAllOf,
@@ -5120,6 +5142,7 @@ let typeMap: {[index: string]: any} = {
     "FundEstimateValuationPointAllOf": FundEstimateValuationPointAllOf,
     "FundIdList": FundIdList,
     "FundIdListAllOf": FundIdListAllOf,
+    "FundInstrument": FundInstrument,
     "FundJournalEntryLine": FundJournalEntryLine,
     "FundPnlBreakdown": FundPnlBreakdown,
     "FundPreviousNAV": FundPreviousNAV,
@@ -6143,6 +6166,7 @@ let typeMap: {[index: string]: any} = {
     "TriggerEvent": TriggerEvent,
     "TriggerEventAllOf": TriggerEventAllOf,
     "TypedResourceId": TypedResourceId,
+    "UnconfirmClosedPeriodRequest": UnconfirmClosedPeriodRequest,
     "UnitisationData": UnitisationData,
     "UnitsRatio": UnitsRatio,
     "UnsettledTransaction": UnsettledTransaction,

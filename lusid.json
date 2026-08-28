@@ -9,7 +9,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "2.0.1620",
+    "version": "2.0.1621",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -49560,7 +49560,7 @@
                       "launchPrice": 100,
                       "launchDate": "2024-01-01T00:00:00.0000000+00:00",
                       "properties": {},
-                      "fundShareClassType": "Unitised",
+                      "investorType": "Unitised",
                       "distributionType": "Income",
                       "domCcy": "USD",
                       "distributionPaymentType": "Gross",
@@ -49706,7 +49706,7 @@
                       "launchPrice": 100,
                       "launchDate": "2024-01-01T00:00:00.0000000+00:00",
                       "properties": {},
-                      "fundShareClassType": "Unitised",
+                      "investorType": "Unitised",
                       "distributionType": "Income",
                       "domCcy": "USD",
                       "distributionPaymentType": "Gross",
@@ -49852,7 +49852,7 @@
                       "launchPrice": 100,
                       "launchDate": "2024-01-01T00:00:00.0000000+00:00",
                       "properties": {},
-                      "fundShareClassType": "Unitised",
+                      "investorType": "Unitised",
                       "distributionType": "Income",
                       "domCcy": "USD",
                       "distributionPaymentType": "Gross",
@@ -50267,7 +50267,7 @@
                       "launchPrice": 100,
                       "launchDate": "2024-01-01T00:00:00.0000000+00:00",
                       "properties": {},
-                      "fundShareClassType": "Unitised",
+                      "investorType": "Unitised",
                       "distributionType": "Income",
                       "domCcy": "USD",
                       "distributionPaymentType": "Gross",
@@ -50413,7 +50413,7 @@
                       "launchPrice": 100,
                       "launchDate": "2024-01-01T00:00:00.0000000+00:00",
                       "properties": {},
-                      "fundShareClassType": "Unitised",
+                      "investorType": "Unitised",
                       "distributionType": "Income",
                       "domCcy": "USD",
                       "distributionPaymentType": "Gross",
@@ -50559,7 +50559,7 @@
                       "launchPrice": 100,
                       "launchDate": "2024-01-01T00:00:00.0000000+00:00",
                       "properties": {},
-                      "fundShareClassType": "Unitised",
+                      "investorType": "Unitised",
                       "distributionType": "Income",
                       "domCcy": "USD",
                       "distributionPaymentType": "Gross",
@@ -50816,7 +50816,7 @@
                       "launchPrice": 100,
                       "launchDate": "2024-01-01T00:00:00.0000000+00:00",
                       "properties": {},
-                      "fundShareClassType": "Unitised",
+                      "investorType": "Unitised",
                       "distributionType": "Income",
                       "domCcy": "USD",
                       "distributionPaymentType": "Gross",
@@ -50962,7 +50962,7 @@
                       "launchPrice": 100,
                       "launchDate": "2024-01-01T00:00:00.0000000+00:00",
                       "properties": {},
-                      "fundShareClassType": "Unitised",
+                      "investorType": "Unitised",
                       "distributionType": "Income",
                       "domCcy": "USD",
                       "distributionPaymentType": "Gross",
@@ -51108,7 +51108,7 @@
                       "launchPrice": 100,
                       "launchDate": "2024-01-01T00:00:00.0000000+00:00",
                       "properties": {},
-                      "fundShareClassType": "Unitised",
+                      "investorType": "Unitised",
                       "distributionType": "Income",
                       "domCcy": "USD",
                       "distributionPaymentType": "Gross",
@@ -51641,7 +51641,7 @@
                       "launchPrice": 100,
                       "launchDate": "2024-01-01T00:00:00.0000000+00:00",
                       "properties": {},
-                      "fundShareClassType": "Unitised",
+                      "investorType": "Unitised",
                       "distributionType": "Income",
                       "domCcy": "USD",
                       "distributionPaymentType": "Gross",
@@ -51787,7 +51787,7 @@
                       "launchPrice": 100,
                       "launchDate": "2024-01-01T00:00:00.0000000+00:00",
                       "properties": {},
-                      "fundShareClassType": "Unitised",
+                      "investorType": "Unitised",
                       "distributionType": "Income",
                       "domCcy": "USD",
                       "distributionPaymentType": "Gross",
@@ -51933,7 +51933,7 @@
                       "launchPrice": 100,
                       "launchDate": "2024-01-01T00:00:00.0000000+00:00",
                       "properties": {},
-                      "fundShareClassType": "Unitised",
+                      "investorType": "Unitised",
                       "distributionType": "Income",
                       "domCcy": "USD",
                       "distributionPaymentType": "Gross",
@@ -52980,7 +52980,7 @@
                       "launchPrice": 100,
                       "launchDate": "2024-01-01T00:00:00.0000000+00:00",
                       "properties": {},
-                      "fundShareClassType": "Unitised",
+                      "investorType": "Unitised",
                       "distributionType": "Income",
                       "domCcy": "USD",
                       "distributionPaymentType": "Gross",
@@ -53126,7 +53126,7 @@
                       "launchPrice": 100,
                       "launchDate": "2024-01-01T00:00:00.0000000+00:00",
                       "properties": {},
-                      "fundShareClassType": "Unitised",
+                      "investorType": "Unitised",
                       "distributionType": "Income",
                       "domCcy": "USD",
                       "distributionPaymentType": "Gross",
@@ -53272,7 +53272,7 @@
                       "launchPrice": 100,
                       "launchDate": "2024-01-01T00:00:00.0000000+00:00",
                       "properties": {},
-                      "fundShareClassType": "Unitised",
+                      "investorType": "Unitised",
                       "distributionType": "Income",
                       "domCcy": "USD",
                       "distributionPaymentType": "Gross",
@@ -54364,7 +54364,7 @@
                       "launchPrice": 100,
                       "launchDate": "2024-01-01T00:00:00.0000000+00:00",
                       "properties": {},
-                      "fundShareClassType": "Unitised",
+                      "investorType": "Unitised",
                       "distributionType": "Income",
                       "domCcy": "USD",
                       "distributionPaymentType": "Gross",
@@ -54510,7 +54510,7 @@
                       "launchPrice": 100,
                       "launchDate": "2024-01-01T00:00:00.0000000+00:00",
                       "properties": {},
-                      "fundShareClassType": "Unitised",
+                      "investorType": "Unitised",
                       "distributionType": "Income",
                       "domCcy": "USD",
                       "distributionPaymentType": "Gross",
@@ -54656,7 +54656,7 @@
                       "launchPrice": 100,
                       "launchDate": "2024-01-01T00:00:00.0000000+00:00",
                       "properties": {},
-                      "fundShareClassType": "Unitised",
+                      "investorType": "Unitised",
                       "distributionType": "Income",
                       "domCcy": "USD",
                       "distributionPaymentType": "Gross",
@@ -57890,7 +57890,7 @@
                       "launchPrice": 100,
                       "launchDate": "2024-01-01T00:00:00.0000000+00:00",
                       "properties": {},
-                      "fundShareClassType": "Unitised",
+                      "investorType": "Unitised",
                       "distributionType": "Income",
                       "domCcy": "USD",
                       "distributionPaymentType": "Gross",
@@ -58036,7 +58036,7 @@
                       "launchPrice": 100,
                       "launchDate": "2024-01-01T00:00:00.0000000+00:00",
                       "properties": {},
-                      "fundShareClassType": "Unitised",
+                      "investorType": "Unitised",
                       "distributionType": "Income",
                       "domCcy": "USD",
                       "distributionPaymentType": "Gross",
@@ -58182,7 +58182,7 @@
                       "launchPrice": 100,
                       "launchDate": "2024-01-01T00:00:00.0000000+00:00",
                       "properties": {},
-                      "fundShareClassType": "Unitised",
+                      "investorType": "Unitised",
                       "distributionType": "Income",
                       "domCcy": "USD",
                       "distributionPaymentType": "Gross",
@@ -58485,7 +58485,7 @@
                       "launchPrice": 100,
                       "launchDate": "2024-01-01T00:00:00.0000000+00:00",
                       "properties": {},
-                      "fundShareClassType": "Unitised",
+                      "investorType": "Unitised",
                       "distributionType": "Income",
                       "domCcy": "USD",
                       "distributionPaymentType": "Gross",
@@ -58631,7 +58631,7 @@
                       "launchPrice": 100,
                       "launchDate": "2024-01-01T00:00:00.0000000+00:00",
                       "properties": {},
-                      "fundShareClassType": "Unitised",
+                      "investorType": "Unitised",
                       "distributionType": "Income",
                       "domCcy": "USD",
                       "distributionPaymentType": "Gross",
@@ -58777,7 +58777,7 @@
                       "launchPrice": 100,
                       "launchDate": "2024-01-01T00:00:00.0000000+00:00",
                       "properties": {},
-                      "fundShareClassType": "Unitised",
+                      "investorType": "Unitised",
                       "distributionType": "Income",
                       "domCcy": "USD",
                       "distributionPaymentType": "Gross",
@@ -59762,6 +59762,7 @@
                     ],
                     "bucketSetResults": [
                       {
+                        "bucketSetCode": "BucketSetCode",
                         "isApportionment": true,
                         "nodes": [
                           {
@@ -59788,9 +59789,22 @@
                                 "bucketType": "PnL",
                                 "value": 999.99,
                                 "previousCumulativeValue": 9000,
-                                "cumulativeValue": 9999.99
+                                "cumulativeValue": 9999.99,
+                                "sourceBreakdown": {
+                                  "classSpecific": 99.99,
+                                  "nonClassSpecific": 800,
+                                  "AllocationGroupCode": 100
+                                },
+                                "perUnitValue": 0.0999,
+                                "unitsInIssue": 10000,
+                                "previousCumulativePerUnitValue": 0.9,
+                                "cumulativePerUnitValue": 0.9999
                               }
-                            ]
+                            ],
+                            "perUnitValue": 9.9999,
+                            "sharesInIssue": 10000,
+                            "previousPerUnitValue": 9,
+                            "previousSharesInIssue": 10000
                           }
                         ]
                       }
@@ -59886,6 +59900,7 @@
                     ],
                     "bucketSetResults": [
                       {
+                        "bucketSetCode": "BucketSetCode",
                         "isApportionment": true,
                         "nodes": [
                           {
@@ -59912,9 +59927,22 @@
                                 "bucketType": "PnL",
                                 "value": 999.99,
                                 "previousCumulativeValue": 9000,
-                                "cumulativeValue": 9999.99
+                                "cumulativeValue": 9999.99,
+                                "sourceBreakdown": {
+                                  "classSpecific": 99.99,
+                                  "nonClassSpecific": 800,
+                                  "AllocationGroupCode": 100
+                                },
+                                "perUnitValue": 0.0999,
+                                "unitsInIssue": 10000,
+                                "previousCumulativePerUnitValue": 0.9,
+                                "cumulativePerUnitValue": 0.9999
                               }
-                            ]
+                            ],
+                            "perUnitValue": 9.9999,
+                            "sharesInIssue": 10000,
+                            "previousPerUnitValue": 9,
+                            "previousSharesInIssue": 10000
                           }
                         ]
                       }
@@ -60018,6 +60046,7 @@
                     ],
                     "bucketSetResults": [
                       {
+                        "bucketSetCode": "BucketSetCode",
                         "isApportionment": true,
                         "nodes": [
                           {
@@ -60044,9 +60073,22 @@
                                 "bucketType": "PnL",
                                 "value": 999.99,
                                 "previousCumulativeValue": 9000,
-                                "cumulativeValue": 9999.99
+                                "cumulativeValue": 9999.99,
+                                "sourceBreakdown": {
+                                  "classSpecific": 99.99,
+                                  "nonClassSpecific": 800,
+                                  "AllocationGroupCode": 100
+                                },
+                                "perUnitValue": 0.0999,
+                                "unitsInIssue": 10000,
+                                "previousCumulativePerUnitValue": 0.9,
+                                "cumulativePerUnitValue": 0.9999
                               }
-                            ]
+                            ],
+                            "perUnitValue": 9.9999,
+                            "sharesInIssue": 10000,
+                            "previousPerUnitValue": 9,
+                            "previousSharesInIssue": 10000
                           }
                         ]
                       }
@@ -60142,6 +60184,7 @@
                     ],
                     "bucketSetResults": [
                       {
+                        "bucketSetCode": "BucketSetCode",
                         "isApportionment": true,
                         "nodes": [
                           {
@@ -60168,9 +60211,22 @@
                                 "bucketType": "PnL",
                                 "value": 999.99,
                                 "previousCumulativeValue": 9000,
-                                "cumulativeValue": 9999.99
+                                "cumulativeValue": 9999.99,
+                                "sourceBreakdown": {
+                                  "classSpecific": 99.99,
+                                  "nonClassSpecific": 800,
+                                  "AllocationGroupCode": 100
+                                },
+                                "perUnitValue": 0.0999,
+                                "unitsInIssue": 10000,
+                                "previousCumulativePerUnitValue": 0.9,
+                                "cumulativePerUnitValue": 0.9999
                               }
-                            ]
+                            ],
+                            "perUnitValue": 9.9999,
+                            "sharesInIssue": 10000,
+                            "previousPerUnitValue": 9,
+                            "previousSharesInIssue": 10000
                           }
                         ]
                       }
@@ -60274,6 +60330,7 @@
                     ],
                     "bucketSetResults": [
                       {
+                        "bucketSetCode": "BucketSetCode",
                         "isApportionment": true,
                         "nodes": [
                           {
@@ -60300,9 +60357,22 @@
                                 "bucketType": "PnL",
                                 "value": 999.99,
                                 "previousCumulativeValue": 9000,
-                                "cumulativeValue": 9999.99
+                                "cumulativeValue": 9999.99,
+                                "sourceBreakdown": {
+                                  "classSpecific": 99.99,
+                                  "nonClassSpecific": 800,
+                                  "AllocationGroupCode": 100
+                                },
+                                "perUnitValue": 0.0999,
+                                "unitsInIssue": 10000,
+                                "previousCumulativePerUnitValue": 0.9,
+                                "cumulativePerUnitValue": 0.9999
                               }
-                            ]
+                            ],
+                            "perUnitValue": 9.9999,
+                            "sharesInIssue": 10000,
+                            "previousPerUnitValue": 9,
+                            "previousSharesInIssue": 10000
                           }
                         ]
                       }
@@ -60398,6 +60468,7 @@
                     ],
                     "bucketSetResults": [
                       {
+                        "bucketSetCode": "BucketSetCode",
                         "isApportionment": true,
                         "nodes": [
                           {
@@ -60424,9 +60495,22 @@
                                 "bucketType": "PnL",
                                 "value": 999.99,
                                 "previousCumulativeValue": 9000,
-                                "cumulativeValue": 9999.99
+                                "cumulativeValue": 9999.99,
+                                "sourceBreakdown": {
+                                  "classSpecific": 99.99,
+                                  "nonClassSpecific": 800,
+                                  "AllocationGroupCode": 100
+                                },
+                                "perUnitValue": 0.0999,
+                                "unitsInIssue": 10000,
+                                "previousCumulativePerUnitValue": 0.9,
+                                "cumulativePerUnitValue": 0.9999
                               }
-                            ]
+                            ],
+                            "perUnitValue": 9.9999,
+                            "sharesInIssue": 10000,
+                            "previousPerUnitValue": 9,
+                            "previousSharesInIssue": 10000
                           }
                         ]
                       }
@@ -60920,6 +61004,7 @@
                   ],
                   "bucketSetResults": [
                     {
+                      "bucketSetCode": "BucketSetCode",
                       "isApportionment": true,
                       "nodes": [
                         {
@@ -60946,9 +61031,22 @@
                               "bucketType": "PnL",
                               "value": 999.99,
                               "previousCumulativeValue": 9000,
-                              "cumulativeValue": 9999.99
+                              "cumulativeValue": 9999.99,
+                              "sourceBreakdown": {
+                                "classSpecific": 99.99,
+                                "nonClassSpecific": 800,
+                                "AllocationGroupCode": 100
+                              },
+                              "perUnitValue": 0.0999,
+                              "unitsInIssue": 10000,
+                              "previousCumulativePerUnitValue": 0.9,
+                              "cumulativePerUnitValue": 0.9999
                             }
-                          ]
+                          ],
+                          "perUnitValue": 9.9999,
+                          "sharesInIssue": 10000,
+                          "previousPerUnitValue": 9,
+                          "previousSharesInIssue": 10000
                         }
                       ]
                     }
@@ -61049,6 +61147,7 @@
                   ],
                   "bucketSetResults": [
                     {
+                      "bucketSetCode": "BucketSetCode",
                       "isApportionment": true,
                       "nodes": [
                         {
@@ -61075,9 +61174,22 @@
                               "bucketType": "PnL",
                               "value": 999.99,
                               "previousCumulativeValue": 9000,
-                              "cumulativeValue": 9999.99
+                              "cumulativeValue": 9999.99,
+                              "sourceBreakdown": {
+                                "classSpecific": 99.99,
+                                "nonClassSpecific": 800,
+                                "AllocationGroupCode": 100
+                              },
+                              "perUnitValue": 0.0999,
+                              "unitsInIssue": 10000,
+                              "previousCumulativePerUnitValue": 0.9,
+                              "cumulativePerUnitValue": 0.9999
                             }
-                          ]
+                          ],
+                          "perUnitValue": 9.9999,
+                          "sharesInIssue": 10000,
+                          "previousPerUnitValue": 9,
+                          "previousSharesInIssue": 10000
                         }
                       ]
                     }
@@ -61178,6 +61290,7 @@
                   ],
                   "bucketSetResults": [
                     {
+                      "bucketSetCode": "BucketSetCode",
                       "isApportionment": true,
                       "nodes": [
                         {
@@ -61204,9 +61317,22 @@
                               "bucketType": "PnL",
                               "value": 999.99,
                               "previousCumulativeValue": 9000,
-                              "cumulativeValue": 9999.99
+                              "cumulativeValue": 9999.99,
+                              "sourceBreakdown": {
+                                "classSpecific": 99.99,
+                                "nonClassSpecific": 800,
+                                "AllocationGroupCode": 100
+                              },
+                              "perUnitValue": 0.0999,
+                              "unitsInIssue": 10000,
+                              "previousCumulativePerUnitValue": 0.9,
+                              "cumulativePerUnitValue": 0.9999
                             }
-                          ]
+                          ],
+                          "perUnitValue": 9.9999,
+                          "sharesInIssue": 10000,
+                          "previousPerUnitValue": 9,
+                          "previousSharesInIssue": 10000
                         }
                       ]
                     }
@@ -61457,6 +61583,7 @@
                   ],
                   "bucketSetResults": [
                     {
+                      "bucketSetCode": "BucketSetCode",
                       "isApportionment": true,
                       "nodes": [
                         {
@@ -61483,9 +61610,22 @@
                               "bucketType": "PnL",
                               "value": 999.99,
                               "previousCumulativeValue": 9000,
-                              "cumulativeValue": 9999.99
+                              "cumulativeValue": 9999.99,
+                              "sourceBreakdown": {
+                                "classSpecific": 99.99,
+                                "nonClassSpecific": 800,
+                                "AllocationGroupCode": 100
+                              },
+                              "perUnitValue": 0.0999,
+                              "unitsInIssue": 10000,
+                              "previousCumulativePerUnitValue": 0.9,
+                              "cumulativePerUnitValue": 0.9999
                             }
-                          ]
+                          ],
+                          "perUnitValue": 9.9999,
+                          "sharesInIssue": 10000,
+                          "previousPerUnitValue": 9,
+                          "previousSharesInIssue": 10000
                         }
                       ]
                     }
@@ -61586,6 +61726,7 @@
                   ],
                   "bucketSetResults": [
                     {
+                      "bucketSetCode": "BucketSetCode",
                       "isApportionment": true,
                       "nodes": [
                         {
@@ -61612,9 +61753,22 @@
                               "bucketType": "PnL",
                               "value": 999.99,
                               "previousCumulativeValue": 9000,
-                              "cumulativeValue": 9999.99
+                              "cumulativeValue": 9999.99,
+                              "sourceBreakdown": {
+                                "classSpecific": 99.99,
+                                "nonClassSpecific": 800,
+                                "AllocationGroupCode": 100
+                              },
+                              "perUnitValue": 0.0999,
+                              "unitsInIssue": 10000,
+                              "previousCumulativePerUnitValue": 0.9,
+                              "cumulativePerUnitValue": 0.9999
                             }
-                          ]
+                          ],
+                          "perUnitValue": 9.9999,
+                          "sharesInIssue": 10000,
+                          "previousPerUnitValue": 9,
+                          "previousSharesInIssue": 10000
                         }
                       ]
                     }
@@ -61715,6 +61869,7 @@
                   ],
                   "bucketSetResults": [
                     {
+                      "bucketSetCode": "BucketSetCode",
                       "isApportionment": true,
                       "nodes": [
                         {
@@ -61741,9 +61896,22 @@
                               "bucketType": "PnL",
                               "value": 999.99,
                               "previousCumulativeValue": 9000,
-                              "cumulativeValue": 9999.99
+                              "cumulativeValue": 9999.99,
+                              "sourceBreakdown": {
+                                "classSpecific": 99.99,
+                                "nonClassSpecific": 800,
+                                "AllocationGroupCode": 100
+                              },
+                              "perUnitValue": 0.0999,
+                              "unitsInIssue": 10000,
+                              "previousCumulativePerUnitValue": 0.9,
+                              "cumulativePerUnitValue": 0.9999
                             }
-                          ]
+                          ],
+                          "perUnitValue": 9.9999,
+                          "sharesInIssue": 10000,
+                          "previousPerUnitValue": 9,
+                          "previousSharesInIssue": 10000
                         }
                       ]
                     }
@@ -61972,6 +62140,7 @@
                   ],
                   "bucketSetResults": [
                     {
+                      "bucketSetCode": "BucketSetCode",
                       "isApportionment": true,
                       "nodes": [
                         {
@@ -61998,9 +62167,22 @@
                               "bucketType": "PnL",
                               "value": 999.99,
                               "previousCumulativeValue": 9000,
-                              "cumulativeValue": 9999.99
+                              "cumulativeValue": 9999.99,
+                              "sourceBreakdown": {
+                                "classSpecific": 99.99,
+                                "nonClassSpecific": 800,
+                                "AllocationGroupCode": 100
+                              },
+                              "perUnitValue": 0.0999,
+                              "unitsInIssue": 10000,
+                              "previousCumulativePerUnitValue": 0.9,
+                              "cumulativePerUnitValue": 0.9999
                             }
-                          ]
+                          ],
+                          "perUnitValue": 9.9999,
+                          "sharesInIssue": 10000,
+                          "previousPerUnitValue": 9,
+                          "previousSharesInIssue": 10000
                         }
                       ]
                     }
@@ -62101,6 +62283,7 @@
                   ],
                   "bucketSetResults": [
                     {
+                      "bucketSetCode": "BucketSetCode",
                       "isApportionment": true,
                       "nodes": [
                         {
@@ -62127,9 +62310,22 @@
                               "bucketType": "PnL",
                               "value": 999.99,
                               "previousCumulativeValue": 9000,
-                              "cumulativeValue": 9999.99
+                              "cumulativeValue": 9999.99,
+                              "sourceBreakdown": {
+                                "classSpecific": 99.99,
+                                "nonClassSpecific": 800,
+                                "AllocationGroupCode": 100
+                              },
+                              "perUnitValue": 0.0999,
+                              "unitsInIssue": 10000,
+                              "previousCumulativePerUnitValue": 0.9,
+                              "cumulativePerUnitValue": 0.9999
                             }
-                          ]
+                          ],
+                          "perUnitValue": 9.9999,
+                          "sharesInIssue": 10000,
+                          "previousPerUnitValue": 9,
+                          "previousSharesInIssue": 10000
                         }
                       ]
                     }
@@ -62230,6 +62426,7 @@
                   ],
                   "bucketSetResults": [
                     {
+                      "bucketSetCode": "BucketSetCode",
                       "isApportionment": true,
                       "nodes": [
                         {
@@ -62256,9 +62453,22 @@
                               "bucketType": "PnL",
                               "value": 999.99,
                               "previousCumulativeValue": 9000,
-                              "cumulativeValue": 9999.99
+                              "cumulativeValue": 9999.99,
+                              "sourceBreakdown": {
+                                "classSpecific": 99.99,
+                                "nonClassSpecific": 800,
+                                "AllocationGroupCode": 100
+                              },
+                              "perUnitValue": 0.0999,
+                              "unitsInIssue": 10000,
+                              "previousCumulativePerUnitValue": 0.9,
+                              "cumulativePerUnitValue": 0.9999
                             }
-                          ]
+                          ],
+                          "perUnitValue": 9.9999,
+                          "sharesInIssue": 10000,
+                          "previousPerUnitValue": 9,
+                          "previousSharesInIssue": 10000
                         }
                       ]
                     }
@@ -68616,7 +68826,7 @@
                               "launchPrice": 100,
                               "launchDate": "2024-01-01T00:00:00.0000000+00:00",
                               "properties": {},
-                              "fundShareClassType": "Unitised",
+                              "investorType": "Unitised",
                               "distributionType": "Income",
                               "domCcy": "USD",
                               "distributionPaymentType": "Gross",
@@ -68835,7 +69045,7 @@
                               "launchPrice": 100,
                               "launchDate": "2024-01-01T00:00:00.0000000+00:00",
                               "properties": {},
-                              "fundShareClassType": "Unitised",
+                              "investorType": "Unitised",
                               "distributionType": "Income",
                               "domCcy": "USD",
                               "distributionPaymentType": "Gross",
@@ -69054,7 +69264,7 @@
                               "launchPrice": 100,
                               "launchDate": "2024-01-01T00:00:00.0000000+00:00",
                               "properties": {},
-                              "fundShareClassType": "Unitised",
+                              "investorType": "Unitised",
                               "distributionType": "Income",
                               "domCcy": "USD",
                               "distributionPaymentType": "Gross",
@@ -69267,7 +69477,7 @@
                         "name": "Master Class A",
                         "shareClassShortCode": "A",
                         "properties": {},
-                        "fundShareClassType": "Series",
+                        "investorType": "Unitised",
                         "distributionType": "Income",
                         "domCcy": "GBP",
                         "distributionPaymentType": "Net",
@@ -69411,7 +69621,7 @@
                         "name": "Master Class A",
                         "shareClassShortCode": "A",
                         "properties": {},
-                        "fundShareClassType": "Series",
+                        "investorType": "Unitised",
                         "distributionType": "Income",
                         "domCcy": "GBP",
                         "distributionPaymentType": "Net",
@@ -69555,7 +69765,7 @@
                         "name": "Master Class A",
                         "shareClassShortCode": "A",
                         "properties": {},
-                        "fundShareClassType": "Series",
+                        "investorType": "Unitised",
                         "distributionType": "Income",
                         "domCcy": "GBP",
                         "distributionPaymentType": "Net",
@@ -69699,7 +69909,7 @@
                         "name": "Master Class A",
                         "shareClassShortCode": "A",
                         "properties": {},
-                        "fundShareClassType": "Series",
+                        "investorType": "Unitised",
                         "distributionType": "Income",
                         "domCcy": "GBP",
                         "distributionPaymentType": "Net",
@@ -69920,7 +70130,7 @@
                           "launchPrice": 100,
                           "launchDate": "2024-01-01T00:00:00.0000000+00:00",
                           "properties": {},
-                          "fundShareClassType": "Unitised",
+                          "investorType": "Unitised",
                           "distributionType": "Income",
                           "domCcy": "USD",
                           "distributionPaymentType": "Gross",
@@ -70134,7 +70344,7 @@
                           "launchPrice": 100,
                           "launchDate": "2024-01-01T00:00:00.0000000+00:00",
                           "properties": {},
-                          "fundShareClassType": "Unitised",
+                          "investorType": "Unitised",
                           "distributionType": "Income",
                           "domCcy": "USD",
                           "distributionPaymentType": "Gross",
@@ -70348,7 +70558,7 @@
                           "launchPrice": 100,
                           "launchDate": "2024-01-01T00:00:00.0000000+00:00",
                           "properties": {},
-                          "fundShareClassType": "Unitised",
+                          "investorType": "Unitised",
                           "distributionType": "Income",
                           "domCcy": "USD",
                           "distributionPaymentType": "Gross",
@@ -70664,7 +70874,7 @@
                           "launchPrice": 100,
                           "launchDate": "2024-01-01T00:00:00.0000000+00:00",
                           "properties": {},
-                          "fundShareClassType": "Unitised",
+                          "investorType": "Unitised",
                           "distributionType": "Income",
                           "domCcy": "USD",
                           "distributionPaymentType": "Gross",
@@ -70878,7 +71088,7 @@
                           "launchPrice": 100,
                           "launchDate": "2024-01-01T00:00:00.0000000+00:00",
                           "properties": {},
-                          "fundShareClassType": "Unitised",
+                          "investorType": "Unitised",
                           "distributionType": "Income",
                           "domCcy": "USD",
                           "distributionPaymentType": "Gross",
@@ -71092,7 +71302,7 @@
                           "launchPrice": 100,
                           "launchDate": "2024-01-01T00:00:00.0000000+00:00",
                           "properties": {},
-                          "fundShareClassType": "Unitised",
+                          "investorType": "Unitised",
                           "distributionType": "Income",
                           "domCcy": "USD",
                           "distributionPaymentType": "Gross",
@@ -160086,6 +160296,8 @@
                   "code": "rates-up-50",
                   "displayName": "Rates +50bps Parallel",
                   "description": "Parallel shift of +50bps across all rate curves",
+                  "shortCode": "RTUP2024",
+                  "scenarioType": "Hypothetical",
                   "shifts": [
                     {
                       "ccy": "USD",
@@ -160110,6 +160322,8 @@
                   "code": "rates-up-50",
                   "displayName": "Rates +50bps Parallel",
                   "description": "Parallel shift of +50bps across all rate curves",
+                  "shortCode": "RTUP2024",
+                  "scenarioType": "Hypothetical",
                   "shifts": [
                     {
                       "ccy": "USD",
@@ -160134,6 +160348,8 @@
                   "code": "rates-up-50",
                   "displayName": "Rates +50bps Parallel",
                   "description": "Parallel shift of +50bps across all rate curves",
+                  "shortCode": "RTUP2024",
+                  "scenarioType": "Hypothetical",
                   "shifts": [
                     {
                       "ccy": "USD",
@@ -160158,6 +160374,8 @@
                   "code": "rates-up-50",
                   "displayName": "Rates +50bps Parallel",
                   "description": "Parallel shift of +50bps across all rate curves",
+                  "shortCode": "RTUP2024",
+                  "scenarioType": "Hypothetical",
                   "shifts": [
                     {
                       "ccy": "USD",
@@ -160192,6 +160410,118 @@
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/UpsertSingleStructuredDataResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "EarlyAccess"
+      },
+      "get": {
+        "tags": [
+          "Scenarios"
+        ],
+        "summary": "[EARLY ACCESS] ListScenarios: List Scenarios",
+        "description": "List scenario definitions across all scopes at the specified date/time. Each item carries\r\nits scope and code. Scenarios the caller is not entitled to read are omitted.",
+        "operationId": "ListScenarios",
+        "parameters": [
+          {
+            "name": "asAt",
+            "in": "query",
+            "description": "The asAt datetime at which to list the scenarios. Defaults to latest if not specified.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "x-nullable": true
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Expression to filter the result set, e.g. \"scope eq 'MyScope'\".",
+            "schema": {
+              "maxLength": 16384,
+              "minLength": 0,
+              "pattern": "^[\\s\\S]*$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Maximum number of results to return. Defaults to 100.",
+            "schema": {
+              "maximum": 5000,
+              "minimum": 1,
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-nullable": true
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Pagination token from a previous result to fetch the next page.",
+            "schema": {
+              "maxLength": 500,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\+/]*={0,3}$",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The requested scenarios",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedResourceListOfGetScenarioResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedResourceListOfGetScenarioResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedResourceListOfGetScenarioResponse"
                 }
               }
             }
@@ -160406,9 +160736,9 @@
         "tags": [
           "Scenarios"
         ],
-        "summary": "[EARLY ACCESS] ListScenarios: List the set of Scenario definitions",
-        "description": "List the set of scenario definitions at the specified date/time and scope.",
-        "operationId": "ListScenarios",
+        "summary": "[EARLY ACCESS] ListScenariosForScope: List Scenarios for a scope",
+        "description": "List the set of scenario definitions in a single scope at the specified date/time.",
+        "operationId": "ListScenariosForScope",
         "parameters": [
           {
             "name": "scope",
@@ -160721,7 +161051,7 @@
         ],
         "responses": {
           "200": {
-            "description": "The successfully retrieved Scenario or any failure",
+            "description": "The successfully retrieved Scenario",
             "content": {
               "text/plain": {
                 "schema": {
@@ -173345,8 +173675,8 @@
         "tags": [
           "Timelines"
         ],
-        "summary": "[EXPERIMENTAL] UnconfirmClosedPeriod: Unconfirm the last confirmed Closed Period against a Timeline Entity",
-        "description": "Unconfirm the last confirmed Closed Period against a Timeline Entity",
+        "summary": "[EXPERIMENTAL] UnconfirmClosedPeriod: Unconfirm a confirmed Closed Period against a Timeline Entity",
+        "description": "Unconfirm a confirmed Closed Period against a Timeline Entity. By default only the latest confirmed\r\nClosed Period may be unconfirmed. Setting deleteSubsequentPeriods on the request body allows any\r\nconfirmed Closed Period to be unconfirmed, deleting every Closed Period after it on the Timeline.",
         "operationId": "UnconfirmClosedPeriod",
         "parameters": [
           {
@@ -173376,7 +173706,7 @@
           {
             "name": "closedPeriodId",
             "in": "path",
-            "description": "The id of the Closed Period. Together with the scope and code of the Timeline,\r\n            this uniquely identifies the ClosedPeriod. The closed period must be the last closed period on the Timeline.",
+            "description": "The id of the Closed Period. Together with the scope and code of the Timeline,\r\n            this uniquely identifies the ClosedPeriod. Must be the latest confirmed Closed Period unless\r\n            deleteSubsequentPeriods is set on the request body.",
             "required": true,
             "schema": {
               "maxLength": 512,
@@ -173387,31 +173717,39 @@
           }
         ],
         "requestBody": {
-          "description": "Not in use at the moment",
+          "description": "Controls whether a non-latest confirmed Closed Period may be unconfirmed.",
           "content": {
             "application/json-patch+json": {
               "schema": {
                 "$ref": "#/components/schemas/UnconfirmClosedPeriodRequest"
               },
-              "example": {}
+              "example": {
+                "deleteSubsequentPeriods": false
+              }
             },
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/UnconfirmClosedPeriodRequest"
               },
-              "example": {}
+              "example": {
+                "deleteSubsequentPeriods": false
+              }
             },
             "text/json": {
               "schema": {
                 "$ref": "#/components/schemas/UnconfirmClosedPeriodRequest"
               },
-              "example": {}
+              "example": {
+                "deleteSubsequentPeriods": false
+              }
             },
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/UnconfirmClosedPeriodRequest"
               },
-              "example": {}
+              "example": {
+                "deleteSubsequentPeriods": false
+              }
             }
           }
         },
@@ -203547,6 +203885,451 @@
         "x-fbn-apistatus": "Experimental"
       }
     },
+    "/api/transferagency/orders/$delete": {
+      "post": {
+        "tags": [
+          "TransferAgency"
+        ],
+        "summary": "[EXPERIMENTAL] DeleteTransferAgencyOrders: Delete transfer agency orders",
+        "description": "Deletes each order supplied, cancelling any cash transaction(s) already booked for it. Only an order in\r\n'New' or 'Pending' can be deleted. A priced order must be un-priced first. An order with no cash transaction\r\nbooked against it is deleted successfully and reports no cancelled transactions. Transaction staging rules are not applied to these\r\ncancellations.\r\nThe response contains both successfully deleted orders and any failures, each in the form of a\r\ndictionary keyed by the request's keys. For each failure, a reason is provided. It is important to\r\ncheck the failed set for unsuccessful results.",
+        "operationId": "DeleteTransferAgencyOrders",
+        "requestBody": {
+          "description": "The transfer agency orders to delete, keyed by a unique request identifier.",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": {
+                  "$ref": "#/components/schemas/DeleteTransferAgencyOrderRequest"
+                }
+              },
+              "example": {
+                "Order1": {
+                  "orderId": {
+                    "scope": "example-scope",
+                    "code": "order-1"
+                  }
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": {
+                  "$ref": "#/components/schemas/DeleteTransferAgencyOrderRequest"
+                }
+              },
+              "example": {
+                "Order1": {
+                  "orderId": {
+                    "scope": "example-scope",
+                    "code": "order-1"
+                  }
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": {
+                  "$ref": "#/components/schemas/DeleteTransferAgencyOrderRequest"
+                }
+              },
+              "example": {
+                "Order1": {
+                  "orderId": {
+                    "scope": "example-scope",
+                    "code": "order-1"
+                  }
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": {
+                  "$ref": "#/components/schemas/DeleteTransferAgencyOrderRequest"
+                }
+              },
+              "example": {
+                "Order1": {
+                  "orderId": {
+                    "scope": "example-scope",
+                    "code": "order-1"
+                  }
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successfully deleted orders and any failures.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteTransferAgencyOrdersResponse"
+                },
+                "example": {
+                  "successes": {
+                    "Order1": {
+                      "orderId": {
+                        "scope": "example-scope",
+                        "code": "order-1"
+                      },
+                      "cancelledTransactionIds": [
+                        "txn-0001"
+                      ]
+                    },
+                    "Order2": {
+                      "orderId": {
+                        "scope": "example-scope",
+                        "code": "order-2"
+                      },
+                      "cancelledTransactionIds": []
+                    }
+                  },
+                  "failed": {
+                    "Order3": {
+                      "id": "Order3",
+                      "type": "ExampleFailure",
+                      "detail": "One or more problems occurred."
+                    }
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteTransferAgencyOrdersResponse"
+                },
+                "example": {
+                  "successes": {
+                    "Order1": {
+                      "orderId": {
+                        "scope": "example-scope",
+                        "code": "order-1"
+                      },
+                      "cancelledTransactionIds": [
+                        "txn-0001"
+                      ]
+                    },
+                    "Order2": {
+                      "orderId": {
+                        "scope": "example-scope",
+                        "code": "order-2"
+                      },
+                      "cancelledTransactionIds": []
+                    }
+                  },
+                  "failed": {
+                    "Order3": {
+                      "id": "Order3",
+                      "type": "ExampleFailure",
+                      "detail": "One or more problems occurred."
+                    }
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteTransferAgencyOrdersResponse"
+                },
+                "example": {
+                  "successes": {
+                    "Order1": {
+                      "orderId": {
+                        "scope": "example-scope",
+                        "code": "order-1"
+                      },
+                      "cancelledTransactionIds": [
+                        "txn-0001"
+                      ]
+                    },
+                    "Order2": {
+                      "orderId": {
+                        "scope": "example-scope",
+                        "code": "order-2"
+                      },
+                      "cancelledTransactionIds": []
+                    }
+                  },
+                  "failed": {
+                    "Order3": {
+                      "id": "Order3",
+                      "type": "ExampleFailure",
+                      "detail": "One or more problems occurred."
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      }
+    },
+    "/api/transfers": {
+      "post": {
+        "tags": [
+          "Transfers"
+        ],
+        "summary": "[EXPERIMENTAL] CreateTransfer: Create a transfer.",
+        "description": "Move a position between two portfolios, exchange one instrument for another within a portfolio, or do\r\nboth at once.\r\n            \r\nThe outgoing and incoming transaction legs and the Transfer entity recording them are written as a single\r\natomic operation: if any part of the request is rejected, nothing is written.",
+        "operationId": "CreateTransfer",
+        "requestBody": {
+          "description": "The transfer to create.",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateTransferRequest"
+              },
+              "example": {
+                "transferId": {
+                  "scope": "MyScope",
+                  "code": "Transfer-0001"
+                },
+                "portfolioIdOut": {
+                  "scope": "MyScope",
+                  "code": "UkEquityFund"
+                },
+                "portfolioIdIn": {
+                  "scope": "MyScope",
+                  "code": "GlobalEquityFund"
+                },
+                "instrumentIdentifierOut": "LUID_00003D4V",
+                "instrumentIdentifierIn": "LUID_00003D4V",
+                "pricingMethod": "AtCost",
+                "taxLotStructure": "Consolidate",
+                "unitsOut": 1000,
+                "unitsIn": 1000,
+                "tradeDateOut": "2024-03-05T00:00:00.0000000+00:00",
+                "tradeDateIn": "2024-03-05T00:00:00.0000000+00:00",
+                "settlementDateOut": "2024-03-07T00:00:00.0000000+00:00",
+                "settlementDateIn": "2024-03-07T00:00:00.0000000+00:00",
+                "source": "default",
+                "properties": {
+                  "Transaction/MyScope/TransferReference": {
+                    "key": "Transaction/MyScope/TransferReference",
+                    "value": {
+                      "labelValue": "REORG-2024-03"
+                    }
+                  }
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateTransferRequest"
+              },
+              "example": {
+                "transferId": {
+                  "scope": "MyScope",
+                  "code": "Transfer-0001"
+                },
+                "portfolioIdOut": {
+                  "scope": "MyScope",
+                  "code": "UkEquityFund"
+                },
+                "portfolioIdIn": {
+                  "scope": "MyScope",
+                  "code": "GlobalEquityFund"
+                },
+                "instrumentIdentifierOut": "LUID_00003D4V",
+                "instrumentIdentifierIn": "LUID_00003D4V",
+                "pricingMethod": "AtCost",
+                "taxLotStructure": "Consolidate",
+                "unitsOut": 1000,
+                "unitsIn": 1000,
+                "tradeDateOut": "2024-03-05T00:00:00.0000000+00:00",
+                "tradeDateIn": "2024-03-05T00:00:00.0000000+00:00",
+                "settlementDateOut": "2024-03-07T00:00:00.0000000+00:00",
+                "settlementDateIn": "2024-03-07T00:00:00.0000000+00:00",
+                "source": "default",
+                "properties": {
+                  "Transaction/MyScope/TransferReference": {
+                    "key": "Transaction/MyScope/TransferReference",
+                    "value": {
+                      "labelValue": "REORG-2024-03"
+                    }
+                  }
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateTransferRequest"
+              },
+              "example": {
+                "transferId": {
+                  "scope": "MyScope",
+                  "code": "Transfer-0001"
+                },
+                "portfolioIdOut": {
+                  "scope": "MyScope",
+                  "code": "UkEquityFund"
+                },
+                "portfolioIdIn": {
+                  "scope": "MyScope",
+                  "code": "GlobalEquityFund"
+                },
+                "instrumentIdentifierOut": "LUID_00003D4V",
+                "instrumentIdentifierIn": "LUID_00003D4V",
+                "pricingMethod": "AtCost",
+                "taxLotStructure": "Consolidate",
+                "unitsOut": 1000,
+                "unitsIn": 1000,
+                "tradeDateOut": "2024-03-05T00:00:00.0000000+00:00",
+                "tradeDateIn": "2024-03-05T00:00:00.0000000+00:00",
+                "settlementDateOut": "2024-03-07T00:00:00.0000000+00:00",
+                "settlementDateIn": "2024-03-07T00:00:00.0000000+00:00",
+                "source": "default",
+                "properties": {
+                  "Transaction/MyScope/TransferReference": {
+                    "key": "Transaction/MyScope/TransferReference",
+                    "value": {
+                      "labelValue": "REORG-2024-03"
+                    }
+                  }
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateTransferRequest"
+              },
+              "example": {
+                "transferId": {
+                  "scope": "MyScope",
+                  "code": "Transfer-0001"
+                },
+                "portfolioIdOut": {
+                  "scope": "MyScope",
+                  "code": "UkEquityFund"
+                },
+                "portfolioIdIn": {
+                  "scope": "MyScope",
+                  "code": "GlobalEquityFund"
+                },
+                "instrumentIdentifierOut": "LUID_00003D4V",
+                "instrumentIdentifierIn": "LUID_00003D4V",
+                "pricingMethod": "AtCost",
+                "taxLotStructure": "Consolidate",
+                "unitsOut": 1000,
+                "unitsIn": 1000,
+                "tradeDateOut": "2024-03-05T00:00:00.0000000+00:00",
+                "tradeDateIn": "2024-03-05T00:00:00.0000000+00:00",
+                "settlementDateOut": "2024-03-07T00:00:00.0000000+00:00",
+                "settlementDateIn": "2024-03-07T00:00:00.0000000+00:00",
+                "source": "default",
+                "properties": {
+                  "Transaction/MyScope/TransferReference": {
+                    "key": "Transaction/MyScope/TransferReference",
+                    "value": {
+                      "labelValue": "REORG-2024-03"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "The transfer that was created.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateTransferResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateTransferResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateTransferResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      }
+    },
     "/api/translation/instrumentdefinitions": {
       "post": {
         "tags": [
@@ -213632,6 +214415,21 @@
                 "description": "The date the bond default occurred.",
                 "format": "date-time"
               },
+              "defaultReason": {
+                "maxLength": 512,
+                "minLength": 0,
+                "type": "string",
+                "description": "Why the issuer defaulted, in the client's own words. Free text, with no effect on any calculation.\r\nThis field is optional.",
+                "nullable": true
+              },
+              "suppressionDetails": {
+                "$ref": "#/components/schemas/BondDefaultSuppressionDetails"
+              },
+              "suppressionDetailsSpecified": {
+                "type": "boolean",
+                "description": "Whether SuppressionDetails was supplied at all, which an absent section and an empty one cannot\r\notherwise be told apart by when the percentages are read as separate columns. An absent section\r\nsuppresses coupons and principal outright; an empty one suppresses nothing.\r\nSetting this to false while also supplying a percentage is contradictory. The percentages win and\r\nthe section is treated as present, because honouring the false would silently discard values the\r\ncaller explicitly sent.",
+                "nullable": true
+              },
               "instrumentEventType": {
                 "enum": [
                   "TransitionEvent",
@@ -213744,6 +214542,31 @@
           }
         ],
         "description": "Indicates when an issuer has defaulted on an obligation due to technical default, missed payments, or bankruptcy filing."
+      },
+      "BondDefaultSuppressionDetails": {
+        "type": "object",
+        "properties": {
+          "accrualPercentage": {
+            "type": "number",
+            "description": "Fraction of the computed accrued interest returned from the default onwards, between 0.0 and 1.0.\r\nAccrued interest supplied through a results store is returned unchanged. Optional, defaulting to 1.0.",
+            "format": "double",
+            "nullable": true
+          },
+          "couponPercentage": {
+            "type": "number",
+            "description": "Fraction of each coupon from the default onwards that is still paid, between 0.0 and 1.0. Optional,\r\ndefaulting to 1.0.",
+            "format": "double",
+            "nullable": true
+          },
+          "principalPercentage": {
+            "type": "number",
+            "description": "Fraction of each principal repayment from the default onwards still paid, between 0.0 and 1.0.\r\nOptional, defaulting to 1.0.",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "How much of each component of a bond keeps paying after a default, as a fraction from 0.0 (fully\r\nsuppressed) to 1.0 (unaffected). An unset field means 1.0. Omitting the whole section is different: that\r\nsuppresses coupons and principal outright and leaves interest accruing."
       },
       "BondOption": {
         "allOf": [
@@ -215061,18 +215884,47 @@
               "$ref": "#/components/schemas/BucketSetResultBucket"
             },
             "description": "The buckets on this node, each with its period movement and cumulative values."
+          },
+          "perUnitValue": {
+            "type": "number",
+            "description": "The share class's NAV per unit in issue, in the fund currency, rounded to the share class's PricePrecision (left unrounded where the share class declares none). Reported only for a share class that is unitised and has units in issue to divide by. The dealing price - in the share class currency, with its instrument's rounding convention applied - is on the share class breakdown's unitisation data.",
+            "format": "double",
+            "nullable": true
+          },
+          "sharesInIssue": {
+            "type": "number",
+            "description": "The share class's units in issue at the end of the period. Reported only for a share class that is unitised.",
+            "format": "double",
+            "nullable": true
+          },
+          "previousPerUnitValue": {
+            "type": "number",
+            "description": "The share class's NAV per unit at the previous valuation point, on the same basis as PerUnitValue.",
+            "format": "double",
+            "nullable": true
+          },
+          "previousSharesInIssue": {
+            "type": "number",
+            "description": "The share class's units in issue at the start of the period. Reported only for a share class that is unitised.",
+            "format": "double",
+            "nullable": true
           }
         },
         "additionalProperties": false,
-        "description": "One node within a bucket set result: the fund aggregate or a single share class. Both carry NAV and buckets; the\r\ncapital ratio is set only on share class nodes."
+        "description": "One node within a bucket set result: the fund aggregate or a single share class. Both carry NAV and buckets; the\r\ncapital ratio, the unit counts and the per-unit values are set only on share class nodes."
       },
       "BucketSetResult": {
         "required": [
+          "bucketSetCode",
           "isApportionment",
           "nodes"
         ],
         "type": "object",
         "properties": {
+          "bucketSetCode": {
+            "type": "string",
+            "description": "The code of the fund configuration's bucket set definition these results were produced from. Empty for a fund valued from component filters, which has no bucket set definition to name."
+          },
           "isApportionment": {
             "type": "boolean",
             "description": "Whether this bucket set is the apportionment set (apportioning non-class-specific P&L across share classes)."
@@ -215122,10 +215974,43 @@
             "type": "number",
             "description": "The cumulative value of the bucket up to the end of the period (Value + PreviousCumulativeValue).",
             "format": "double"
+          },
+          "sourceBreakdown": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "number",
+              "format": "double"
+            },
+            "description": "The bucket's movement broken down by the source that contributed it, which always sums to Value. Set on share class nodes only. The keys are 'classSpecific' for amounts booked directly to the share class, 'nonClassSpecific' for fund-level amounts apportioned to it, and an allocation group's code for amounts allocated to that group and apportioned to the share class. Sources contributing nothing to the bucket are omitted.",
+            "nullable": true
+          },
+          "perUnitValue": {
+            "type": "number",
+            "description": "The bucket's movement over the period per unit in issue (Value divided by UnitsInIssue), in the fund currency, rounded to the share class's PricePrecision. Reported only where both the share class and the bucket are unitised and there are units in issue to divide by.",
+            "format": "double",
+            "nullable": true
+          },
+          "unitsInIssue": {
+            "type": "number",
+            "description": "The share class's units in issue at the end of the period. Reported only where both the share class and the bucket are unitised.",
+            "format": "double",
+            "nullable": true
+          },
+          "previousCumulativePerUnitValue": {
+            "type": "number",
+            "description": "The bucket's cumulative value at the start of the period, per unit in issue at that point - so it reads as it did at the previous valuation point rather than being restated at this period's unit count.",
+            "format": "double",
+            "nullable": true
+          },
+          "cumulativePerUnitValue": {
+            "type": "number",
+            "description": "The bucket's cumulative value at the end of the period per unit in issue (CumulativeValue divided by UnitsInIssue). Reported only where both the share class and the bucket are unitised and there are units in issue to divide by.",
+            "format": "double",
+            "nullable": true
           }
         },
         "additionalProperties": false,
-        "description": "One bucket's values within a bucket set node: the movement in the period plus the cumulative values before\r\nand after it (CumulativeValue = Value + PreviousCumulativeValue)."
+        "description": "One bucket's values within a bucket set node: the movement in the period plus the cumulative values before\r\nand after it (CumulativeValue = Value + PreviousCumulativeValue), and - on share class nodes - the breakdown\r\nof the movement by the source that contributed it and the same values restated per unit in issue."
       },
       "CalculateOrderDatesRequest": {
         "required": [
@@ -223345,6 +224230,14 @@
                 "description": "List of possible lapse elections for this conversion event. There must be at most one election of this type.\r\n\r\nIf provided, the holder is not entitled to receive anything for the conversion.",
                 "nullable": true
               },
+              "mixedLotConstituentsElections": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/MixedLotConstituentsElection"
+                },
+                "description": "List of possible mixed lot offers for this conversion event, if any. Each election converts the parent position\r\ninto one or more distinct new securities and/or cash legs, taking the place of the single event-level\r\nNewInstrument that the other security-bearing elections resolve to.\r\n\r\nA conversion may carry more than one of these, describing mutually exclusive multi-destination options.\r\nOnly supported when ConversionType is Regular.",
+                "nullable": true
+              },
               "conversionType": {
                 "type": "string",
                 "description": "The type of conversion. Regular for standard conversions; Exchange144A for SEC Rule 144A exchanges.\r\n            \r\nSupported string (enumeration) values are: [Regular, Exchange144A]. Available values: Regular, Exchange144A.",
@@ -226309,6 +227202,181 @@
         },
         "additionalProperties": false
       },
+      "CreateTransferRequest": {
+        "required": [
+          "instrumentIdentifierIn",
+          "instrumentIdentifierOut",
+          "portfolioIdIn",
+          "portfolioIdOut",
+          "pricingMethod",
+          "settlementDateOut",
+          "source",
+          "tradeDateIn",
+          "tradeDateOut",
+          "transferId",
+          "unitsIn",
+          "unitsOut"
+        ],
+        "type": "object",
+        "properties": {
+          "transferId": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "portfolioIdOut": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "portfolioIdIn": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "instrumentIdentifierOut": {
+            "maxLength": 64,
+            "minLength": 1,
+            "type": "string"
+          },
+          "instrumentIdentifierIn": {
+            "maxLength": 64,
+            "minLength": 1,
+            "type": "string"
+          },
+          "pricingMethod": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Available values: AtCost, AtPrice."
+          },
+          "taxLotStructure": {
+            "type": "string",
+            "description": "Available values: Consolidate, Preserve.",
+            "nullable": true
+          },
+          "unitsOut": {
+            "type": "number",
+            "format": "double"
+          },
+          "unitsIn": {
+            "type": "number",
+            "format": "double"
+          },
+          "amountOut": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "weightOut": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "tradeDateOut": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "tradeDateIn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "settlementDateOut": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "settlementDateIn": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "exchangeRateOut": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "exchangeRateIn": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "transactionPriceOut": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "transactionPriceIn": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "counterpartyIdOut": {
+            "maxLength": 64,
+            "minLength": 1,
+            "type": "string",
+            "nullable": true
+          },
+          "counterpartyIdIn": {
+            "maxLength": 64,
+            "minLength": 1,
+            "type": "string",
+            "nullable": true
+          },
+          "custodianAccountIdOut": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "custodianAccountIdIn": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "source": {
+            "maxLength": 64,
+            "minLength": 1,
+            "type": "string"
+          },
+          "accountingMethod": {
+            "type": "string",
+            "description": "Available values: AverageCost, FirstInFirstOut, LastInFirstOut, HighestCostFirst, LowestCostFirst, ProRateByUnits, ProRateByCost, ProRateByCostPortfolioCurrency, IntraDayThenFirstInFirstOut, LongTermHighestCostFirst, LongTermHighestCostFirstPortfolioCurrency, HighestCostFirstPortfolioCurrency, LowestCostFirstPortfolioCurrency, MaximumLossMinimumGain, MaximumLossMinimumGainPortfolioCurrency.",
+            "nullable": true
+          },
+          "properties": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/PerpetualProperty"
+            },
+            "nullable": true
+          },
+          "propertiesIn": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/PerpetualProperty"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "A request to create a transfer: the paired transaction legs that move a position, and the Transfer entity\r\nrecording them."
+      },
+      "CreateTransferResponse": {
+        "type": "object",
+        "properties": {
+          "transferId": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "transferType": {
+            "type": "string",
+            "nullable": true
+          },
+          "portfolioIdOut": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "portfolioIdIn": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "transactionIdOut": {
+            "type": "string",
+            "nullable": true
+          },
+          "transactionIdIn": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "The transfer that was created, and the transaction legs it booked."
+      },
       "CreateUnitDefinition": {
         "required": [
           "code",
@@ -229237,6 +230305,63 @@
         },
         "additionalProperties": false
       },
+      "DeleteTransferAgencyOrderRequest": {
+        "required": [
+          "orderId"
+        ],
+        "type": "object",
+        "properties": {
+          "orderId": {
+            "$ref": "#/components/schemas/ResourceId"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DeleteTransferAgencyOrderResult": {
+        "type": "object",
+        "properties": {
+          "orderId": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "cancelledTransactionIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DeleteTransferAgencyOrdersResponse": {
+        "type": "object",
+        "properties": {
+          "successes": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/DeleteTransferAgencyOrderResult"
+            },
+            "description": "A dictionary of successfully deleted orders, keyed by the request key.",
+            "nullable": true
+          },
+          "failed": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/ErrorDetail"
+            },
+            "description": "A dictionary of failed order deletion attempts, keyed by the request key, containing error details.",
+            "nullable": true
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "DelistingEvent": {
         "allOf": [
           {
@@ -230989,6 +232114,14 @@
                   "$ref": "#/components/schemas/LapseElection"
                 },
                 "description": "List of possible LapseElections for this event. Required on all three paths (Count == 1).\r\nAllows the holder to opt out of the offer (NOAC).",
+                "nullable": true
+              },
+              "mixedLotConstituentsElections": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/MixedLotConstituentsElection"
+                },
+                "description": "List of possible MixedLotConstituentsElections for this event, if any. Each election settles into one or more\r\ndistinct new securities and/or cash legs of its own, in place of the single event-level NewInstrument the\r\nSecurityOffer and CashAndSecurityOffer paths resolve to.\r\n\r\nSeveral may be present: a Dutch Auction commonly offers a number of mutually exclusive destinations, and each\r\nis described by its own election. Not applicable to the CASH path, which has no security leg to multiply.",
                 "nullable": true
               },
               "responseDeadlineDate": {
@@ -236828,6 +237961,9 @@
             "description": "An optional list of Share Class definitions for the Fund.",
             "nullable": true
           },
+          "fundInstrument": {
+            "$ref": "#/components/schemas/FundInstrument"
+          },
           "version": {
             "$ref": "#/components/schemas/Version"
           },
@@ -238108,6 +239244,23 @@
             }
           }
         ]
+      },
+      "FundInstrument": {
+        "required": [
+          "instrumentIdentifiers"
+        ],
+        "type": "object",
+        "properties": {
+          "instrumentIdentifiers": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string",
+              "nullable": true
+            },
+            "description": "Unique instrument identifiers. Must only point to the same instrument"
+          }
+        },
+        "additionalProperties": false
       },
       "FundJournalEntryLine": {
         "required": [
@@ -241289,9 +242442,6 @@
           "value": {
             "$ref": "#/components/schemas/AddressKeyAlias"
           },
-          "failed": {
-            "$ref": "#/components/schemas/ErrorDetail"
-          },
           "links": {
             "type": "array",
             "items": {
@@ -241300,7 +242450,8 @@
             "nullable": true
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": "The response to a singular address key alias read. There is deliberately no failure block on this\r\ntype: every route returning it is a singular (or list-of-singular) read, never a batch keyed\r\nlookup, so there is no per-key error to report - an invalid entity is rejected at upsert and\r\na failed read fails the whole request. The IGetResponse batch members below throw for the\r\nsame reason; do not reintroduce a Failed property when copying this shape."
       },
       "GetCdsFlowConventionsResponse": {
         "type": "object",
@@ -241721,9 +242872,6 @@
           "version": {
             "$ref": "#/components/schemas/Version"
           },
-          "failed": {
-            "$ref": "#/components/schemas/ErrorDetail"
-          },
           "links": {
             "type": "array",
             "items": {
@@ -241732,7 +242880,8 @@
             "nullable": true
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": "The response to a singular scenario read. There is deliberately no failure block on this\r\ntype: every route returning it is a singular (or list-of-singular) read, never a batch keyed\r\nlookup, so there is no per-key error to report - an invalid entity is rejected at upsert and\r\na failed read fails the whole request. The IGetResponse batch members below throw for the\r\nsame reason; do not reintroduce a Failed property when copying this shape."
       },
       "GetStructuredResultDataResponse": {
         "type": "object",
@@ -241780,9 +242929,6 @@
           "value": {
             "$ref": "#/components/schemas/SubscriptionDefinition"
           },
-          "failed": {
-            "$ref": "#/components/schemas/ErrorDetail"
-          },
           "links": {
             "type": "array",
             "items": {
@@ -241791,7 +242937,8 @@
             "nullable": true
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": "The response to a singular subscription read. There is deliberately no failure block on this\r\ntype: every route returning it is a singular (or list-of-singular) read, never a batch keyed\r\nlookup, so there is no per-key error to report - an invalid entity is rejected at upsert and\r\na failed read fails the whole request. The IGetResponse batch members below throw for the\r\nsame reason; do not reintroduce a Failed property when copying this shape."
       },
       "GetVirtualDocumentResponse": {
         "type": "object",
@@ -251618,6 +252765,14 @@
                 "description": "List of possible CashOfferElections for this merger event",
                 "nullable": true
               },
+              "mixedLotConstituentsElections": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/MixedLotConstituentsElection"
+                },
+                "description": "List of possible mixed lot offers for this merger event, if any. Each election replaces the parent position\r\nwith one or more distinct new securities and/or cash legs of its own, taking the place of the single\r\nevent-level NewInstrument that the other security-bearing elections resolve to.\r\n\r\nA merger may carry more than one of these, describing mutually exclusive multi-destination options.",
+                "nullable": true
+              },
               "exDate": {
                 "type": "string",
                 "description": "The first date on which the holder of record of the original shares has entitled ownership of the new shares.",
@@ -251877,6 +253032,7 @@
         "type": "object",
         "properties": {
           "electionKey": {
+            "minLength": 1,
             "type": "string"
           },
           "isDefault": {
@@ -273937,6 +275093,7 @@
       "ScenarioDefinition": {
         "required": [
           "code",
+          "scenarioType",
           "scope"
         ],
         "type": "object",
@@ -273965,6 +275122,19 @@
             "pattern": "^[\\s\\S]*$",
             "type": "string",
             "nullable": true
+          },
+          "shortCode": {
+            "maxLength": 10,
+            "minLength": 0,
+            "pattern": "^[A-Za-z0-9\\-_]*$",
+            "type": "string",
+            "description": "A short, memorable identifier for the scenario, for use in reporting. Optional on upsert:\r\nwhen omitted, reads return a value inferred from the display name (falling back to the\r\ncode) rather than null; the inferred value is computed fresh on every read and is never\r\npersisted. When supplied, the value is stored and returned verbatim. Independent of\r\nscenarioType.",
+            "nullable": true
+          },
+          "scenarioType": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Classifies the scenario. Required on upsert; supported string (enumeration) values are:\r\n[Historical, Regulatory, Hypothetical]. Independent of shortCode. Available values: Historical, Regulatory, Hypothetical."
           },
           "shifts": {
             "maxItems": 100,
@@ -275532,7 +276702,7 @@
       "ShareClass": {
         "required": [
           "domCcy",
-          "fundShareClassType",
+          "investorType",
           "name",
           "shareClassShortCode"
         ],
@@ -275588,10 +276758,10 @@
             "description": "An optional set of properties to attach to the auto-created Instrument. Only applied when createInstrument is true.",
             "nullable": true
           },
-          "fundShareClassType": {
+          "investorType": {
             "minLength": 1,
             "type": "string",
-            "description": "The Type of Share Class. Available values: Unitised, Inactive, Series, PrivateEquity, Partnership."
+            "description": "The Type of Share Class. Available values: Unitised."
           },
           "distributionType": {
             "type": "string",
@@ -275605,19 +276775,7 @@
           "tradingConventions": {
             "$ref": "#/components/schemas/TradingConventions"
           },
-          "unitsPrecision": {
-            "type": "integer",
-            "description": "Decimal places for the share class units.",
-            "format": "int32",
-            "nullable": true
-          },
-          "pricePrecision": {
-            "type": "integer",
-            "description": "Decimal places for the share class price.",
-            "format": "int32",
-            "nullable": true
-          },
-          "roundingConventions": {
+          "roundingConventionsPrice": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/SimpleRoundingConvention"
@@ -275777,8 +276935,8 @@
       "ShareClassDefinition": {
         "required": [
           "domCcy",
-          "fundShareClassType",
           "instrumentIdentifiers",
+          "investorType",
           "name",
           "shareClassShortCode"
         ],
@@ -275833,10 +276991,10 @@
             "description": "An optional set of properties to attach to the auto-created Instrument. Only applied when createInstrument is true.",
             "nullable": true
           },
-          "fundShareClassType": {
+          "investorType": {
             "minLength": 1,
             "type": "string",
-            "description": "The Type of Share Class. Available values: Unitised, Inactive, Series, PrivateEquity, Partnership."
+            "description": "The Type of Share Class. Available values: Unitised."
           },
           "distributionType": {
             "type": "string",
@@ -275850,19 +277008,7 @@
           "tradingConventions": {
             "$ref": "#/components/schemas/TradingConventions"
           },
-          "unitsPrecision": {
-            "type": "integer",
-            "description": "Decimal places for the share class units.",
-            "format": "int32",
-            "nullable": true
-          },
-          "pricePrecision": {
-            "type": "integer",
-            "description": "Decimal places for the share class price.",
-            "format": "int32",
-            "nullable": true
-          },
-          "roundingConventions": {
+          "roundingConventionsPrice": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/SimpleRoundingConvention"
@@ -278669,6 +279815,14 @@
                   "$ref": "#/components/schemas/CashOfferElection"
                 },
                 "description": "List of possible CashOfferElections for this event.",
+                "nullable": true
+              },
+              "mixedLotConstituentsElections": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/MixedLotConstituentsElection"
+                },
+                "description": "List of possible mixed lot offers for this tender event, if any. Each election replaces the tendered\r\nposition with one or more distinct new securities and/or cash legs of its own, taking the place of the\r\nsingle event-level NewInstrument that the other security-bearing elections resolve to.\r\n\r\nA tender may carry more than one of these, describing mutually exclusive multi-destination options.",
                 "nullable": true
               },
               "offerType": {
@@ -282783,6 +283937,12 @@
       },
       "UnconfirmClosedPeriodRequest": {
         "type": "object",
+        "properties": {
+          "deleteSubsequentPeriods": {
+            "type": "boolean",
+            "description": "Whether to delete every Closed Period that comes after the requested Closed Period on the Timeline. When false (the default) only the latest confirmed Closed Period may be unconfirmed."
+          }
+        },
         "additionalProperties": false
       },
       "UnitisationData": {
@@ -289371,6 +290531,10 @@
       "description": "."
     },
     {
+      "name": "Transfers",
+      "description": "Methods for creating transfers: paired transaction legs that move a position between portfolios, exchange one instrument for another within a portfolio, or do both at once."
+    },
+    {
       "name": "Translation",
       "description": "Methods for translating between dialects."
     },
@@ -289469,6 +290633,7 @@
       "Transaction Fees",
       "Transaction Portfolios",
       "TransferAgency",
+      "Transfers",
       "Translation",
       "Workspace"
     ]
