@@ -9,7 +9,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "2.0.1624",
+    "version": "2.0.1625",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -189989,7 +189989,7 @@
           "Transaction Portfolios"
         ],
         "summary": "PatchPortfolioDetails: Patch portfolio details",
-        "description": "Create or update certain details for a particular transaction portfolio.\r\nNote that not all elements of a transaction portfolio definition are\r\nmodifiable once it has been created due to the potential implications for data already stored.\r\nThe behaviour is defined by the JSON Patch specification.\r\n\r\nCurrently supported fields are: BaseCurrency, AccountingMethod, SubHoldingKeys, AmortisationMethod, TransactionTypeScope, CashGainLossCalculationDate, InstrumentEventConfiguration, AmortisationRuleSetId, TaxRuleSetScope, SettlementConfiguration, TransactionExclusionFilter.",
+        "description": "Create or update certain details for a particular transaction portfolio.\r\nNote that not all elements of a transaction portfolio definition are\r\nmodifiable once it has been created due to the potential implications for data already stored.\r\nThe behaviour is defined by the JSON Patch specification.\r\n\r\nCurrently supported fields are: BaseCurrency, AccountingMethod, SubHoldingKeys, AmortisationMethod, TransactionTypeScope, CashGainLossCalculationDate, InstrumentEventConfiguration, AmortisationRuleSetId, TaxRuleSetScope, SettlementConfiguration, TransactionExclusionFilter, TaxLotSelectionCostBasis.",
         "operationId": "PatchPortfolioDetails",
         "parameters": [
           {
@@ -226476,6 +226476,11 @@
             "type": "string",
             "description": "A filter expression that identifies transactions to exclude when building the transaction portfolio's transactions and holdings. Transactions matching this filter are flagged as excluded.",
             "nullable": true
+          },
+          "taxLotSelectionCostBasis": {
+            "type": "string",
+            "description": "The cost figure that cost-referencing accounting methods evaluate when selecting tax lots for a disposal. This can be: Cost or AmortisedCost. Defaults to Cost if not specified. Available values: Cost, AmortisedCost.",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -226824,6 +226829,11 @@
         "properties": {
           "corporateActionSourceId": {
             "$ref": "#/components/schemas/ResourceId"
+          },
+          "taxLotSelectionCostBasis": {
+            "type": "string",
+            "description": "The cost figure that cost-referencing accounting methods evaluate when selecting tax lots for a disposal. This can be: Cost or AmortisedCost. If not supplied, the portfolio's current value is left unchanged; supply Default to reset it. Available values: Cost, AmortisedCost.",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -227762,6 +227772,11 @@
           },
           "amortisationRuleSetId": {
             "$ref": "#/components/schemas/ResourceId"
+          },
+          "taxLotSelectionCostBasis": {
+            "type": "string",
+            "description": "The cost figure that cost-referencing accounting methods evaluate when selecting tax lots for a disposal. This can be: Cost or AmortisedCost. Defaults to Cost if not specified. Available values: Cost, AmortisedCost.",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -228079,6 +228094,11 @@
             "pattern": "^[\\s\\S]*$",
             "type": "string",
             "description": "A filter expression that identifies transactions to exclude when building the transaction portfolio's transactions and holdings. Transactions matching this filter are flagged as excluded.",
+            "nullable": true
+          },
+          "taxLotSelectionCostBasis": {
+            "type": "string",
+            "description": "The cost figure that cost-referencing accounting methods evaluate when selecting tax lots for a disposal. This can be: Cost or AmortisedCost. Defaults to Cost if not specified. Available values: Cost, AmortisedCost.",
             "nullable": true
           }
         },
@@ -228965,6 +228985,11 @@
             "type": "string",
             "description": "The type of the Custodian Account. This is a free-text field that accepts any value. Optional, with no default.",
             "nullable": true
+          },
+          "taxLotSelectionCostBasis": {
+            "type": "string",
+            "description": "The cost figure that cost-referencing accounting methods evaluate when selecting tax lots for disposals from this account. This can be: Cost or AmortisedCost. If not specified, resolution falls through to the transaction type and then the portfolio's default. Available values: Cost, AmortisedCost.",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -229069,6 +229094,11 @@
             "pattern": "^[\\s\\S]*$",
             "type": "string",
             "description": "The type of the Custodian Account. This is a free-text field that accepts any value. Optional, with no default.",
+            "nullable": true
+          },
+          "taxLotSelectionCostBasis": {
+            "type": "string",
+            "description": "The cost figure that cost-referencing accounting methods evaluate when selecting tax lots for disposals from this account. This can be: Cost or AmortisedCost. If not specified, resolution falls through to the transaction type and then the portfolio's default. Available values: Cost, AmortisedCost.",
             "nullable": true
           }
         },
@@ -253906,7 +253936,7 @@
                 "items": {
                   "$ref": "#/components/schemas/CashOfferElection"
                 },
-                "description": "List of possible CashOfferElections for this merger event",
+                "description": "List of possible CashOfferElections for this merger event. Under ParticipationType.Mandatory\r\na single CashOfferElection may be the event's only election — a cash-only merger — in which\r\ncase no NewInstrument is required. Under ParticipationType.MandatoryWithChoices cash offers\r\nare provided alongside the other elections on the event.",
                 "nullable": true
               },
               "mixedLotConstituentsElections": {
@@ -262911,6 +262941,11 @@
             "description": "A filter expression that identifies transactions to exclude when building the transaction portfolio's transactions and holdings. Transactions matching this filter are flagged as excluded.",
             "nullable": true
           },
+          "taxLotSelectionCostBasis": {
+            "type": "string",
+            "description": "The cost figure that cost-referencing accounting methods evaluate when selecting tax lots for a disposal. This can be: Cost or AmortisedCost. Defaults to Cost if not specified. Available values: Cost, AmortisedCost.",
+            "nullable": true
+          },
           "links": {
             "type": "array",
             "items": {
@@ -263159,6 +263194,11 @@
             "pattern": "^[\\s\\S]*$",
             "type": "string",
             "description": "A filter expression that identifies transactions to exclude when building the transaction portfolio's transactions and holdings. Transactions matching this filter are flagged as excluded.",
+            "nullable": true
+          },
+          "taxLotSelectionCostBasis": {
+            "type": "string",
+            "description": "The cost figure that cost-referencing accounting methods evaluate when selecting tax lots for a disposal. This can be: Cost or AmortisedCost. Defaults to Cost if not specified. Available values: Cost, AmortisedCost.",
             "nullable": true
           },
           "links": {
@@ -264774,6 +264814,11 @@
           "transactionExclusionFilter": {
             "type": "string",
             "description": "A filter expression that identifies transactions to exclude when building the transaction portfolio's transactions and holdings. Transactions matching this filter are flagged as excluded.",
+            "nullable": true
+          },
+          "taxLotSelectionCostBasis": {
+            "type": "string",
+            "description": "The cost figure that cost-referencing accounting methods evaluate when selecting tax lots for a disposal. This can be: Cost or AmortisedCost. Defaults to Cost if not specified. Available values: Cost, AmortisedCost.",
             "nullable": true
           },
           "links": {
