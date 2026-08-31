@@ -146,6 +146,12 @@ export * from './bondCouponEventAllOf';
 export * from './bondDefaultEvent';
 export * from './bondDefaultEventAllOf';
 export * from './bondDefaultSuppressionDetails';
+export * from './bondForward';
+export * from './bondForwardAllOf';
+export * from './bondForwardCashSettlementEvent';
+export * from './bondForwardCashSettlementEventAllOf';
+export * from './bondForwardTerminationEvent';
+export * from './bondForwardTerminationEventAllOf';
 export * from './bondLookupModelOptions';
 export * from './bondLookupModelOptionsAllOf';
 export * from './bondOption';
@@ -2047,6 +2053,12 @@ import { BondCouponEventAllOf } from './bondCouponEventAllOf';
 import { BondDefaultEvent } from './bondDefaultEvent';
 import { BondDefaultEventAllOf } from './bondDefaultEventAllOf';
 import { BondDefaultSuppressionDetails } from './bondDefaultSuppressionDetails';
+import { BondForward } from './bondForward';
+import { BondForwardAllOf } from './bondForwardAllOf';
+import { BondForwardCashSettlementEvent } from './bondForwardCashSettlementEvent';
+import { BondForwardCashSettlementEventAllOf } from './bondForwardCashSettlementEventAllOf';
+import { BondForwardTerminationEvent } from './bondForwardTerminationEvent';
+import { BondForwardTerminationEventAllOf } from './bondForwardTerminationEventAllOf';
 import { BondLookupModelOptions } from './bondLookupModelOptions';
 import { BondLookupModelOptionsAllOf } from './bondLookupModelOptionsAllOf';
 import { BondOption } from './bondOption';
@@ -3848,6 +3860,12 @@ let enumsMap: {[index: string]: any} = {
         "BondCouponEventAllOf.InstrumentEventTypeEnum": BondCouponEventAllOf.InstrumentEventTypeEnum,
         "BondDefaultEvent.InstrumentEventTypeEnum": BondDefaultEvent.InstrumentEventTypeEnum,
         "BondDefaultEventAllOf.InstrumentEventTypeEnum": BondDefaultEventAllOf.InstrumentEventTypeEnum,
+        "BondForward.InstrumentTypeEnum": BondForward.InstrumentTypeEnum,
+        "BondForwardAllOf.InstrumentTypeEnum": BondForwardAllOf.InstrumentTypeEnum,
+        "BondForwardCashSettlementEvent.InstrumentEventTypeEnum": BondForwardCashSettlementEvent.InstrumentEventTypeEnum,
+        "BondForwardCashSettlementEventAllOf.InstrumentEventTypeEnum": BondForwardCashSettlementEventAllOf.InstrumentEventTypeEnum,
+        "BondForwardTerminationEvent.InstrumentEventTypeEnum": BondForwardTerminationEvent.InstrumentEventTypeEnum,
+        "BondForwardTerminationEventAllOf.InstrumentEventTypeEnum": BondForwardTerminationEventAllOf.InstrumentEventTypeEnum,
         "BondLookupModelOptions.ModelOptionsTypeEnum": BondLookupModelOptions.ModelOptionsTypeEnum,
         "BondLookupModelOptionsAllOf.ModelOptionsTypeEnum": BondLookupModelOptionsAllOf.ModelOptionsTypeEnum,
         "BondOption.InstrumentTypeEnum": BondOption.InstrumentTypeEnum,
@@ -4685,6 +4703,12 @@ let typeMap: {[index: string]: any} = {
     "BondDefaultEvent": BondDefaultEvent,
     "BondDefaultEventAllOf": BondDefaultEventAllOf,
     "BondDefaultSuppressionDetails": BondDefaultSuppressionDetails,
+    "BondForward": BondForward,
+    "BondForwardAllOf": BondForwardAllOf,
+    "BondForwardCashSettlementEvent": BondForwardCashSettlementEvent,
+    "BondForwardCashSettlementEventAllOf": BondForwardCashSettlementEventAllOf,
+    "BondForwardTerminationEvent": BondForwardTerminationEvent,
+    "BondForwardTerminationEventAllOf": BondForwardTerminationEventAllOf,
     "BondLookupModelOptions": BondLookupModelOptions,
     "BondLookupModelOptionsAllOf": BondLookupModelOptionsAllOf,
     "BondOption": BondOption,
