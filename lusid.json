@@ -9,7 +9,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "2.0.1626",
+    "version": "2.0.1627",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -252245,7 +252245,7 @@
             "minLength": 1,
             "pattern": "^[a-zA-Z0-9\\-_]+$",
             "type": "string",
-            "description": "The scope of the entities to check. Required for scoped entity types (Instrument, Portfolio).\r\nMust not be provided for unscoped entity types (LegalEntity).",
+            "description": "The scope of the entities to check. Required for scoped entity types (Instrument, Portfolio, InvestmentAccount).\r\nMust not be provided for unscoped entity types (LegalEntity).",
             "nullable": true
           },
           "asAtModifiedSince": {
