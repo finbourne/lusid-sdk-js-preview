@@ -799,6 +799,8 @@ export * from './indexProjectionDependencyAllOf';
 export * from './industryClassifier';
 export * from './inflationCurveData';
 export * from './inflationCurveDataAllOf';
+export * from './inflationCurveShiftDefinition';
+export * from './inflationCurveShiftDefinitionAllOf';
 export * from './inflationFixingDependency';
 export * from './inflationFixingDependencyAllOf';
 export * from './inflationIndexConventions';
@@ -2706,6 +2708,8 @@ import { IndexProjectionDependencyAllOf } from './indexProjectionDependencyAllOf
 import { IndustryClassifier } from './industryClassifier';
 import { InflationCurveData } from './inflationCurveData';
 import { InflationCurveDataAllOf } from './inflationCurveDataAllOf';
+import { InflationCurveShiftDefinition } from './inflationCurveShiftDefinition';
+import { InflationCurveShiftDefinitionAllOf } from './inflationCurveShiftDefinitionAllOf';
 import { InflationFixingDependency } from './inflationFixingDependency';
 import { InflationFixingDependencyAllOf } from './inflationFixingDependencyAllOf';
 import { InflationIndexConventions } from './inflationIndexConventions';
@@ -4196,6 +4200,12 @@ let enumsMap: {[index: string]: any} = {
         "IndexProjectionDependencyAllOf.DependencyTypeEnum": IndexProjectionDependencyAllOf.DependencyTypeEnum,
         "InflationCurveData.MarketDataTypeEnum": InflationCurveData.MarketDataTypeEnum,
         "InflationCurveDataAllOf.MarketDataTypeEnum": InflationCurveDataAllOf.MarketDataTypeEnum,
+        "InflationCurveShiftDefinition.ShiftTypeEnum": InflationCurveShiftDefinition.ShiftTypeEnum,
+        "InflationCurveShiftDefinition.ScaleEnum": InflationCurveShiftDefinition.ScaleEnum,
+        "InflationCurveShiftDefinition.ScenarioShiftTypeEnum": InflationCurveShiftDefinition.ScenarioShiftTypeEnum,
+        "InflationCurveShiftDefinitionAllOf.ShiftTypeEnum": InflationCurveShiftDefinitionAllOf.ShiftTypeEnum,
+        "InflationCurveShiftDefinitionAllOf.ScaleEnum": InflationCurveShiftDefinitionAllOf.ScaleEnum,
+        "InflationCurveShiftDefinitionAllOf.ScenarioShiftTypeEnum": InflationCurveShiftDefinitionAllOf.ScenarioShiftTypeEnum,
         "InflationFixingDependency.DependencyTypeEnum": InflationFixingDependency.DependencyTypeEnum,
         "InflationFixingDependencyAllOf.DependencyTypeEnum": InflationFixingDependencyAllOf.DependencyTypeEnum,
         "InflationLeg.InstrumentTypeEnum": InflationLeg.InstrumentTypeEnum,
@@ -5342,6 +5352,8 @@ let typeMap: {[index: string]: any} = {
     "IndustryClassifier": IndustryClassifier,
     "InflationCurveData": InflationCurveData,
     "InflationCurveDataAllOf": InflationCurveDataAllOf,
+    "InflationCurveShiftDefinition": InflationCurveShiftDefinition,
+    "InflationCurveShiftDefinitionAllOf": InflationCurveShiftDefinitionAllOf,
     "InflationFixingDependency": InflationFixingDependency,
     "InflationFixingDependencyAllOf": InflationFixingDependencyAllOf,
     "InflationIndexConventions": InflationIndexConventions,
