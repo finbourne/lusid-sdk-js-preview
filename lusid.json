@@ -9,7 +9,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "2.0.1642",
+    "version": "2.0.1643",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -137607,7 +137607,8 @@
                       "enableLegLevelInferenceForCustomSrsColumns": false,
                       "useInstrumentScaleFactorAsDefault": false,
                       "scaleInstrumentAccruedOverrideByContractSize": false,
-                      "defaultPoolFactorsToUnity": false
+                      "defaultPoolFactorsToUnity": false,
+                      "findOrCalculateWriteThrough": false
                     },
                     "resultDataRules": [],
                     "holdingPricingInfo": {
@@ -137694,7 +137695,8 @@
                       "enableLegLevelInferenceForCustomSrsColumns": false,
                       "useInstrumentScaleFactorAsDefault": false,
                       "scaleInstrumentAccruedOverrideByContractSize": false,
-                      "defaultPoolFactorsToUnity": false
+                      "defaultPoolFactorsToUnity": false,
+                      "findOrCalculateWriteThrough": false
                     },
                     "resultDataRules": [],
                     "holdingPricingInfo": {
@@ -137781,7 +137783,8 @@
                       "enableLegLevelInferenceForCustomSrsColumns": false,
                       "useInstrumentScaleFactorAsDefault": false,
                       "scaleInstrumentAccruedOverrideByContractSize": false,
-                      "defaultPoolFactorsToUnity": false
+                      "defaultPoolFactorsToUnity": false,
+                      "findOrCalculateWriteThrough": false
                     },
                     "resultDataRules": [],
                     "holdingPricingInfo": {
@@ -137868,7 +137871,8 @@
                       "enableLegLevelInferenceForCustomSrsColumns": false,
                       "useInstrumentScaleFactorAsDefault": false,
                       "scaleInstrumentAccruedOverrideByContractSize": false,
-                      "defaultPoolFactorsToUnity": false
+                      "defaultPoolFactorsToUnity": false,
+                      "findOrCalculateWriteThrough": false
                     },
                     "resultDataRules": [],
                     "holdingPricingInfo": {
@@ -138065,7 +138069,8 @@
                             "enableLegLevelInferenceForCustomSrsColumns": false,
                             "useInstrumentScaleFactorAsDefault": false,
                             "scaleInstrumentAccruedOverrideByContractSize": false,
-                            "defaultPoolFactorsToUnity": false
+                            "defaultPoolFactorsToUnity": false,
+                            "findOrCalculateWriteThrough": false
                           },
                           "resultDataRules": [],
                           "holdingPricingInfo": {
@@ -138147,7 +138152,8 @@
                             "enableLegLevelInferenceForCustomSrsColumns": false,
                             "useInstrumentScaleFactorAsDefault": false,
                             "scaleInstrumentAccruedOverrideByContractSize": false,
-                            "defaultPoolFactorsToUnity": false
+                            "defaultPoolFactorsToUnity": false,
+                            "findOrCalculateWriteThrough": false
                           },
                           "resultDataRules": [],
                           "holdingPricingInfo": {
@@ -138259,7 +138265,8 @@
                             "enableLegLevelInferenceForCustomSrsColumns": false,
                             "useInstrumentScaleFactorAsDefault": false,
                             "scaleInstrumentAccruedOverrideByContractSize": false,
-                            "defaultPoolFactorsToUnity": false
+                            "defaultPoolFactorsToUnity": false,
+                            "findOrCalculateWriteThrough": false
                           },
                           "resultDataRules": [],
                           "holdingPricingInfo": {
@@ -138341,7 +138348,8 @@
                             "enableLegLevelInferenceForCustomSrsColumns": false,
                             "useInstrumentScaleFactorAsDefault": false,
                             "scaleInstrumentAccruedOverrideByContractSize": false,
-                            "defaultPoolFactorsToUnity": false
+                            "defaultPoolFactorsToUnity": false,
+                            "findOrCalculateWriteThrough": false
                           },
                           "resultDataRules": [],
                           "holdingPricingInfo": {
@@ -138453,7 +138461,8 @@
                             "enableLegLevelInferenceForCustomSrsColumns": false,
                             "useInstrumentScaleFactorAsDefault": false,
                             "scaleInstrumentAccruedOverrideByContractSize": false,
-                            "defaultPoolFactorsToUnity": false
+                            "defaultPoolFactorsToUnity": false,
+                            "findOrCalculateWriteThrough": false
                           },
                           "resultDataRules": [],
                           "holdingPricingInfo": {
@@ -138535,7 +138544,8 @@
                             "enableLegLevelInferenceForCustomSrsColumns": false,
                             "useInstrumentScaleFactorAsDefault": false,
                             "scaleInstrumentAccruedOverrideByContractSize": false,
-                            "defaultPoolFactorsToUnity": false
+                            "defaultPoolFactorsToUnity": false,
+                            "findOrCalculateWriteThrough": false
                           },
                           "resultDataRules": [],
                           "holdingPricingInfo": {
@@ -139317,7 +139327,8 @@
                         "enableLegLevelInferenceForCustomSrsColumns": false,
                         "useInstrumentScaleFactorAsDefault": false,
                         "scaleInstrumentAccruedOverrideByContractSize": false,
-                        "defaultPoolFactorsToUnity": false
+                        "defaultPoolFactorsToUnity": false,
+                        "findOrCalculateWriteThrough": false
                       },
                       "resultDataRules": [],
                       "holdingPricingInfo": {
@@ -139416,7 +139427,8 @@
                         "enableLegLevelInferenceForCustomSrsColumns": false,
                         "useInstrumentScaleFactorAsDefault": false,
                         "scaleInstrumentAccruedOverrideByContractSize": false,
-                        "defaultPoolFactorsToUnity": false
+                        "defaultPoolFactorsToUnity": false,
+                        "findOrCalculateWriteThrough": false
                       },
                       "resultDataRules": [],
                       "holdingPricingInfo": {
@@ -139515,7 +139527,8 @@
                         "enableLegLevelInferenceForCustomSrsColumns": false,
                         "useInstrumentScaleFactorAsDefault": false,
                         "scaleInstrumentAccruedOverrideByContractSize": false,
-                        "defaultPoolFactorsToUnity": false
+                        "defaultPoolFactorsToUnity": false,
+                        "findOrCalculateWriteThrough": false
                       },
                       "resultDataRules": [],
                       "holdingPricingInfo": {
@@ -139963,7 +139976,8 @@
                             "enableLegLevelInferenceForCustomSrsColumns": false,
                             "useInstrumentScaleFactorAsDefault": false,
                             "scaleInstrumentAccruedOverrideByContractSize": false,
-                            "defaultPoolFactorsToUnity": false
+                            "defaultPoolFactorsToUnity": false,
+                            "findOrCalculateWriteThrough": false
                           },
                           "resultDataRules": [],
                           "holdingPricingInfo": {
@@ -140045,7 +140059,8 @@
                             "enableLegLevelInferenceForCustomSrsColumns": false,
                             "useInstrumentScaleFactorAsDefault": false,
                             "scaleInstrumentAccruedOverrideByContractSize": false,
-                            "defaultPoolFactorsToUnity": false
+                            "defaultPoolFactorsToUnity": false,
+                            "findOrCalculateWriteThrough": false
                           },
                           "resultDataRules": [],
                           "holdingPricingInfo": {
@@ -140157,7 +140172,8 @@
                             "enableLegLevelInferenceForCustomSrsColumns": false,
                             "useInstrumentScaleFactorAsDefault": false,
                             "scaleInstrumentAccruedOverrideByContractSize": false,
-                            "defaultPoolFactorsToUnity": false
+                            "defaultPoolFactorsToUnity": false,
+                            "findOrCalculateWriteThrough": false
                           },
                           "resultDataRules": [],
                           "holdingPricingInfo": {
@@ -140239,7 +140255,8 @@
                             "enableLegLevelInferenceForCustomSrsColumns": false,
                             "useInstrumentScaleFactorAsDefault": false,
                             "scaleInstrumentAccruedOverrideByContractSize": false,
-                            "defaultPoolFactorsToUnity": false
+                            "defaultPoolFactorsToUnity": false,
+                            "findOrCalculateWriteThrough": false
                           },
                           "resultDataRules": [],
                           "holdingPricingInfo": {
@@ -140351,7 +140368,8 @@
                             "enableLegLevelInferenceForCustomSrsColumns": false,
                             "useInstrumentScaleFactorAsDefault": false,
                             "scaleInstrumentAccruedOverrideByContractSize": false,
-                            "defaultPoolFactorsToUnity": false
+                            "defaultPoolFactorsToUnity": false,
+                            "findOrCalculateWriteThrough": false
                           },
                           "resultDataRules": [],
                           "holdingPricingInfo": {
@@ -140433,7 +140451,8 @@
                             "enableLegLevelInferenceForCustomSrsColumns": false,
                             "useInstrumentScaleFactorAsDefault": false,
                             "scaleInstrumentAccruedOverrideByContractSize": false,
-                            "defaultPoolFactorsToUnity": false
+                            "defaultPoolFactorsToUnity": false,
+                            "findOrCalculateWriteThrough": false
                           },
                           "resultDataRules": [],
                           "holdingPricingInfo": {
@@ -140632,7 +140651,8 @@
                         "enableLegLevelInferenceForCustomSrsColumns": false,
                         "useInstrumentScaleFactorAsDefault": false,
                         "scaleInstrumentAccruedOverrideByContractSize": false,
-                        "defaultPoolFactorsToUnity": false
+                        "defaultPoolFactorsToUnity": false,
+                        "findOrCalculateWriteThrough": false
                       },
                       "resultDataRules": [],
                       "holdingPricingInfo": {
@@ -140731,7 +140751,8 @@
                         "enableLegLevelInferenceForCustomSrsColumns": false,
                         "useInstrumentScaleFactorAsDefault": false,
                         "scaleInstrumentAccruedOverrideByContractSize": false,
-                        "defaultPoolFactorsToUnity": false
+                        "defaultPoolFactorsToUnity": false,
+                        "findOrCalculateWriteThrough": false
                       },
                       "resultDataRules": [],
                       "holdingPricingInfo": {
@@ -140830,7 +140851,8 @@
                         "enableLegLevelInferenceForCustomSrsColumns": false,
                         "useInstrumentScaleFactorAsDefault": false,
                         "scaleInstrumentAccruedOverrideByContractSize": false,
-                        "defaultPoolFactorsToUnity": false
+                        "defaultPoolFactorsToUnity": false,
+                        "findOrCalculateWriteThrough": false
                       },
                       "resultDataRules": [],
                       "holdingPricingInfo": {
@@ -141018,7 +141040,8 @@
                         "enableLegLevelInferenceForCustomSrsColumns": false,
                         "useInstrumentScaleFactorAsDefault": false,
                         "scaleInstrumentAccruedOverrideByContractSize": false,
-                        "defaultPoolFactorsToUnity": false
+                        "defaultPoolFactorsToUnity": false,
+                        "findOrCalculateWriteThrough": false
                       },
                       "resultDataRules": [],
                       "holdingPricingInfo": {
@@ -141117,7 +141140,8 @@
                         "enableLegLevelInferenceForCustomSrsColumns": false,
                         "useInstrumentScaleFactorAsDefault": false,
                         "scaleInstrumentAccruedOverrideByContractSize": false,
-                        "defaultPoolFactorsToUnity": false
+                        "defaultPoolFactorsToUnity": false,
+                        "findOrCalculateWriteThrough": false
                       },
                       "resultDataRules": [],
                       "holdingPricingInfo": {
@@ -141216,7 +141240,8 @@
                         "enableLegLevelInferenceForCustomSrsColumns": false,
                         "useInstrumentScaleFactorAsDefault": false,
                         "scaleInstrumentAccruedOverrideByContractSize": false,
-                        "defaultPoolFactorsToUnity": false
+                        "defaultPoolFactorsToUnity": false,
+                        "findOrCalculateWriteThrough": false
                       },
                       "resultDataRules": [],
                       "holdingPricingInfo": {
@@ -213699,6 +213724,13 @@
             },
             "description": "Additional options to apply when performing computations. Options that do not apply to the Key will be\r\nignored. Option values can be boolean, numeric, string or date-time.",
             "nullable": true
+          },
+          "returnAs": {
+            "maxLength": 64,
+            "minLength": 0,
+            "type": "string",
+            "description": "Optional client-chosen name for this metric. When supplied, the corresponding column in the returned\r\ndata is keyed by this name instead of the serialised address key (with options), letting callers\r\nassociate each requested metric with its result without reconstructing the key serialisation.\r\nNames must be unique within a request, start with a letter and contain only letters, digits,\r\nunderscores or hyphens. When omitted, the column is keyed by the serialised address key as before.",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -270058,6 +270090,10 @@
           "defaultPoolFactorsToUnity": {
             "type": "boolean",
             "description": "When true, an asset-backed instrument with no pool-factor history defaults the pool\r\nfactor to 1.0 (the full original face) instead of 0. When false (default), the factor\r\ndefaults to 0 as before, preserving current behaviour."
+          },
+          "findOrCalculateWriteThrough": {
+            "type": "boolean",
+            "description": "When true, and FindOrCalculate is Enabled, results that had to be calculated because no\r\nverified stored value existed are written back into the structured result store, so a\r\nlater identical request can serve them without recomputing. The write targets the\r\ndocument selected by the same result data key rules the lookup reads. When false\r\n(default), calculated results are never persisted.\r\nResults are stored at unit level (per unit of holding), so a value served from the store\r\nis rescaled by the holding's units and may differ from a freshly calculated value in the\r\nleast significant digits."
           }
         },
         "additionalProperties": false,
