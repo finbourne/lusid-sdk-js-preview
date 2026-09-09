@@ -17,6 +17,7 @@ import {ConfigurationRecipeApi} from './api/configurationRecipeApi';
 import {ConventionsApi} from './api/conventionsApi';
 import {CorporateActionSourcesApi} from './api/corporateActionSourcesApi';
 import {CounterpartiesApi} from './api/counterpartiesApi';
+import {CurrencyGroupsApi} from './api/currencyGroupsApi';
 import {CustomDataModelsApi} from './api/customDataModelsApi';
 import {CustomEntitiesApi} from './api/customEntitiesApi';
 import {CustomEntityDefinitionsApi} from './api/customEntityDefinitionsApi';
@@ -109,6 +110,7 @@ export class Api {
     public conventions:  ConventionsApi
     public corporateActionSources:  CorporateActionSourcesApi
     public counterparties:  CounterpartiesApi
+    public currencyGroups:  CurrencyGroupsApi
     public customDataModels:  CustomDataModelsApi
     public customEntities:  CustomEntitiesApi
     public customEntityDefinitions:  CustomEntityDefinitionsApi

@@ -430,6 +430,8 @@ export * from './creditSpreadShiftDefinitionAllOf';
 export * from './creditSupportAnnex';
 export * from './criterionType';
 export * from './currencyAndAmount';
+export * from './currencyGroupMinorUnit';
+export * from './currencyGroupResponse';
 export * from './curveOptions';
 export * from './curveOptionsAllOf';
 export * from './curveShiftWindowBounds';
@@ -742,6 +744,7 @@ export * from './getDataMapResponse';
 export * from './getFlowConventionsResponse';
 export * from './getIndexConventionResponse';
 export * from './getInstrumentsResponse';
+export * from './getPaymentInstructionsResponse';
 export * from './getQuotesResponse';
 export * from './getRecipeComposerResponse';
 export * from './getRecipeResponse';
@@ -1077,6 +1080,7 @@ export * from './pagedResourceListOfComplianceRuleResponse';
 export * from './pagedResourceListOfComplianceRunInfoV2';
 export * from './pagedResourceListOfComplianceTemplate';
 export * from './pagedResourceListOfCorporateActionSource';
+export * from './pagedResourceListOfCurrencyGroupResponse';
 export * from './pagedResourceListOfCustodianAccount';
 export * from './pagedResourceListOfCustomEntityDefinition';
 export * from './pagedResourceListOfCustomEntityResponse';
@@ -1361,6 +1365,7 @@ export * from './recReviewConfiguration';
 export * from './recReviewRequiredApproval';
 export * from './recReviewRequirementRule';
 export * from './recReviewSubmission';
+export * from './recRunLog';
 export * from './recRunLogEntry';
 export * from './recSubmission';
 export * from './recSupersededRun';
@@ -1517,6 +1522,7 @@ export * from './resultDataKeyRuleAllOf';
 export * from './resultDataSchema';
 export * from './resultKeyRule';
 export * from './resultKeyRuleType';
+export * from './resultND';
 export * from './resultValue';
 export * from './resultValue0D';
 export * from './resultValue0DAllOf';
@@ -1735,6 +1741,7 @@ export * from './transactionTypePropertyMapping';
 export * from './transactionTypeRequest';
 export * from './transactionsReconciliationsResponse';
 export * from './transferAgencyDates';
+export * from './transferAgencyExcludedOrder';
 export * from './transferAgencyOrderEstimateResult';
 export * from './transferAgencyOrderResult';
 export * from './transferAgencyOrderToEstimate';
@@ -1760,6 +1767,7 @@ export * from './triggerEvent';
 export * from './triggerEventAllOf';
 export * from './typedResourceId';
 export * from './unconfirmClosedPeriodRequest';
+export * from './unitDimension';
 export * from './unitSchema';
 export * from './unitisationData';
 export * from './unitsRatio';
@@ -1814,6 +1822,7 @@ export * from './upsertCorporateActionRequest';
 export * from './upsertCorporateActionsResponse';
 export * from './upsertCounterpartyAgreementRequest';
 export * from './upsertCreditSupportAnnexRequest';
+export * from './upsertCurrencyGroupRequest';
 export * from './upsertCustomEntitiesResponse';
 export * from './upsertCustomEntityAccessMetadataRequest';
 export * from './upsertDataQualityRule';
@@ -2374,6 +2383,8 @@ import { CreditSpreadShiftDefinitionAllOf } from './creditSpreadShiftDefinitionA
 import { CreditSupportAnnex } from './creditSupportAnnex';
 import { CriterionType } from './criterionType';
 import { CurrencyAndAmount } from './currencyAndAmount';
+import { CurrencyGroupMinorUnit } from './currencyGroupMinorUnit';
+import { CurrencyGroupResponse } from './currencyGroupResponse';
 import { CurveOptions } from './curveOptions';
 import { CurveOptionsAllOf } from './curveOptionsAllOf';
 import { CurveShiftWindowBounds } from './curveShiftWindowBounds';
@@ -2686,6 +2697,7 @@ import { GetDataMapResponse } from './getDataMapResponse';
 import { GetFlowConventionsResponse } from './getFlowConventionsResponse';
 import { GetIndexConventionResponse } from './getIndexConventionResponse';
 import { GetInstrumentsResponse } from './getInstrumentsResponse';
+import { GetPaymentInstructionsResponse } from './getPaymentInstructionsResponse';
 import { GetQuotesResponse } from './getQuotesResponse';
 import { GetRecipeComposerResponse } from './getRecipeComposerResponse';
 import { GetRecipeResponse } from './getRecipeResponse';
@@ -3021,6 +3033,7 @@ import { PagedResourceListOfComplianceRuleResponse } from './pagedResourceListOf
 import { PagedResourceListOfComplianceRunInfoV2 } from './pagedResourceListOfComplianceRunInfoV2';
 import { PagedResourceListOfComplianceTemplate } from './pagedResourceListOfComplianceTemplate';
 import { PagedResourceListOfCorporateActionSource } from './pagedResourceListOfCorporateActionSource';
+import { PagedResourceListOfCurrencyGroupResponse } from './pagedResourceListOfCurrencyGroupResponse';
 import { PagedResourceListOfCustodianAccount } from './pagedResourceListOfCustodianAccount';
 import { PagedResourceListOfCustomEntityDefinition } from './pagedResourceListOfCustomEntityDefinition';
 import { PagedResourceListOfCustomEntityResponse } from './pagedResourceListOfCustomEntityResponse';
@@ -3305,6 +3318,7 @@ import { RecReviewConfiguration } from './recReviewConfiguration';
 import { RecReviewRequiredApproval } from './recReviewRequiredApproval';
 import { RecReviewRequirementRule } from './recReviewRequirementRule';
 import { RecReviewSubmission } from './recReviewSubmission';
+import { RecRunLog } from './recRunLog';
 import { RecRunLogEntry } from './recRunLogEntry';
 import { RecSubmission } from './recSubmission';
 import { RecSupersededRun } from './recSupersededRun';
@@ -3461,6 +3475,7 @@ import { ResultDataKeyRuleAllOf } from './resultDataKeyRuleAllOf';
 import { ResultDataSchema } from './resultDataSchema';
 import { ResultKeyRule } from './resultKeyRule';
 import { ResultKeyRuleType } from './resultKeyRuleType';
+import { ResultND } from './resultND';
 import { ResultValue } from './resultValue';
 import { ResultValue0D } from './resultValue0D';
 import { ResultValue0DAllOf } from './resultValue0DAllOf';
@@ -3679,6 +3694,7 @@ import { TransactionTypePropertyMapping } from './transactionTypePropertyMapping
 import { TransactionTypeRequest } from './transactionTypeRequest';
 import { TransactionsReconciliationsResponse } from './transactionsReconciliationsResponse';
 import { TransferAgencyDates } from './transferAgencyDates';
+import { TransferAgencyExcludedOrder } from './transferAgencyExcludedOrder';
 import { TransferAgencyOrderEstimateResult } from './transferAgencyOrderEstimateResult';
 import { TransferAgencyOrderResult } from './transferAgencyOrderResult';
 import { TransferAgencyOrderToEstimate } from './transferAgencyOrderToEstimate';
@@ -3704,6 +3720,7 @@ import { TriggerEvent } from './triggerEvent';
 import { TriggerEventAllOf } from './triggerEventAllOf';
 import { TypedResourceId } from './typedResourceId';
 import { UnconfirmClosedPeriodRequest } from './unconfirmClosedPeriodRequest';
+import { UnitDimension } from './unitDimension';
 import { UnitSchema } from './unitSchema';
 import { UnitisationData } from './unitisationData';
 import { UnitsRatio } from './unitsRatio';
@@ -3758,6 +3775,7 @@ import { UpsertCorporateActionRequest } from './upsertCorporateActionRequest';
 import { UpsertCorporateActionsResponse } from './upsertCorporateActionsResponse';
 import { UpsertCounterpartyAgreementRequest } from './upsertCounterpartyAgreementRequest';
 import { UpsertCreditSupportAnnexRequest } from './upsertCreditSupportAnnexRequest';
+import { UpsertCurrencyGroupRequest } from './upsertCurrencyGroupRequest';
 import { UpsertCustomEntitiesResponse } from './upsertCustomEntitiesResponse';
 import { UpsertCustomEntityAccessMetadataRequest } from './upsertCustomEntityAccessMetadataRequest';
 import { UpsertDataQualityRule } from './upsertDataQualityRule';
@@ -5099,6 +5117,8 @@ let typeMap: {[index: string]: any} = {
     "CreditSpreadShiftDefinitionAllOf": CreditSpreadShiftDefinitionAllOf,
     "CreditSupportAnnex": CreditSupportAnnex,
     "CurrencyAndAmount": CurrencyAndAmount,
+    "CurrencyGroupMinorUnit": CurrencyGroupMinorUnit,
+    "CurrencyGroupResponse": CurrencyGroupResponse,
     "CurveOptions": CurveOptions,
     "CurveOptionsAllOf": CurveOptionsAllOf,
     "CustodianAccount": CustodianAccount,
@@ -5401,6 +5421,7 @@ let typeMap: {[index: string]: any} = {
     "GetFlowConventionsResponse": GetFlowConventionsResponse,
     "GetIndexConventionResponse": GetIndexConventionResponse,
     "GetInstrumentsResponse": GetInstrumentsResponse,
+    "GetPaymentInstructionsResponse": GetPaymentInstructionsResponse,
     "GetQuotesResponse": GetQuotesResponse,
     "GetRecipeComposerResponse": GetRecipeComposerResponse,
     "GetRecipeResponse": GetRecipeResponse,
@@ -5721,6 +5742,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfComplianceRunInfoV2": PagedResourceListOfComplianceRunInfoV2,
     "PagedResourceListOfComplianceTemplate": PagedResourceListOfComplianceTemplate,
     "PagedResourceListOfCorporateActionSource": PagedResourceListOfCorporateActionSource,
+    "PagedResourceListOfCurrencyGroupResponse": PagedResourceListOfCurrencyGroupResponse,
     "PagedResourceListOfCustodianAccount": PagedResourceListOfCustodianAccount,
     "PagedResourceListOfCustomEntityDefinition": PagedResourceListOfCustomEntityDefinition,
     "PagedResourceListOfCustomEntityResponse": PagedResourceListOfCustomEntityResponse,
@@ -5992,6 +6014,7 @@ let typeMap: {[index: string]: any} = {
     "RecReviewRequiredApproval": RecReviewRequiredApproval,
     "RecReviewRequirementRule": RecReviewRequirementRule,
     "RecReviewSubmission": RecReviewSubmission,
+    "RecRunLog": RecRunLog,
     "RecRunLogEntry": RecRunLogEntry,
     "RecSubmission": RecSubmission,
     "RecSupersededRun": RecSupersededRun,
@@ -6144,6 +6167,7 @@ let typeMap: {[index: string]: any} = {
     "ResultDataKeyRuleAllOf": ResultDataKeyRuleAllOf,
     "ResultDataSchema": ResultDataSchema,
     "ResultKeyRule": ResultKeyRule,
+    "ResultND": ResultND,
     "ResultValue": ResultValue,
     "ResultValue0D": ResultValue0D,
     "ResultValue0DAllOf": ResultValue0DAllOf,
@@ -6350,6 +6374,7 @@ let typeMap: {[index: string]: any} = {
     "TransactionTypeRequest": TransactionTypeRequest,
     "TransactionsReconciliationsResponse": TransactionsReconciliationsResponse,
     "TransferAgencyDates": TransferAgencyDates,
+    "TransferAgencyExcludedOrder": TransferAgencyExcludedOrder,
     "TransferAgencyOrderEstimateResult": TransferAgencyOrderEstimateResult,
     "TransferAgencyOrderResult": TransferAgencyOrderResult,
     "TransferAgencyOrderToEstimate": TransferAgencyOrderToEstimate,
@@ -6375,6 +6400,7 @@ let typeMap: {[index: string]: any} = {
     "TriggerEventAllOf": TriggerEventAllOf,
     "TypedResourceId": TypedResourceId,
     "UnconfirmClosedPeriodRequest": UnconfirmClosedPeriodRequest,
+    "UnitDimension": UnitDimension,
     "UnitisationData": UnitisationData,
     "UnitsRatio": UnitsRatio,
     "UnsettledTransaction": UnsettledTransaction,
@@ -6427,6 +6453,7 @@ let typeMap: {[index: string]: any} = {
     "UpsertCorporateActionsResponse": UpsertCorporateActionsResponse,
     "UpsertCounterpartyAgreementRequest": UpsertCounterpartyAgreementRequest,
     "UpsertCreditSupportAnnexRequest": UpsertCreditSupportAnnexRequest,
+    "UpsertCurrencyGroupRequest": UpsertCurrencyGroupRequest,
     "UpsertCustomEntitiesResponse": UpsertCustomEntitiesResponse,
     "UpsertCustomEntityAccessMetadataRequest": UpsertCustomEntityAccessMetadataRequest,
     "UpsertDataQualityRule": UpsertDataQualityRule,

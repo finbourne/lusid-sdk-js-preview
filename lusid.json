@@ -9,7 +9,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "2.0.1640",
+    "version": "2.0.1641",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -1206,7 +1206,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the results.\r\n            For example, to filter on the Abor type, specify \"id.Code eq 'Abor1'\". For more information about filtering\r\n            results, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the results.\r\n            For example, to filter on the Abor type, specify \"id.Code eq 'Abor1'\". For more information about filtering\r\n            results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -2259,7 +2259,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the results.\r\n            For example, to filter on the DiaryEntry type, specify \"type eq 'PeriodBoundary'\". For more information about filtering\r\n            results, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the results.\r\n            For example, to filter on the DiaryEntry type, specify \"type eq 'PeriodBoundary'\". For more information about filtering\r\n            results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -3921,7 +3921,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the results by.\r\n             For more information about filtering results, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the results by.\r\n             For more information about filtering results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -4517,7 +4517,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the results.\r\n            For example, to filter on the AborConfiguration type, specify \"id.Code eq 'AborConfiguration1'\". For more information about filtering\r\n            results, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the results.\r\n            For example, to filter on the AborConfiguration type, specify \"id.Code eq 'AborConfiguration1'\". For more information about filtering\r\n            results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -8426,7 +8426,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the results.\r\n            For more information about filtering results, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the results.\r\n            For more information about filtering results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -13826,7 +13826,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the results.\r\n            For example, to filter on the Chart of Accounts type, specify \"id.Code eq '001'\". For more information about filtering\r\n            results, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the results.\r\n            For example, to filter on the Chart of Accounts type, specify \"id.Code eq '001'\". For more information about filtering\r\n            results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -14765,7 +14765,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the results.\r\n            For example, to filter on the Account type, specify \"code eq '001'\". For more information about filtering\r\n            results, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the results.\r\n            For example, to filter on the Account type, specify \"code eq '001'\". For more information about filtering\r\n            results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -15784,7 +15784,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the results.\r\n            For example, to filter on the Cleardown Module status, specify \"status eq 'Active'\". For more information about filtering\r\n            results, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the results.\r\n            For example, to filter on the Cleardown Module status, specify \"status eq 'Active'\". For more information about filtering\r\n            results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -16721,7 +16721,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the results.\r\n            For example, to filter on the rule id, specify \"ruleId eq 'rule 1'\". For more information about filtering\r\n            results, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the results.\r\n            For example, to filter on the rule id, specify \"ruleId eq 'rule 1'\". For more information about filtering\r\n            results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -17081,7 +17081,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the results.\r\n            For example, to filter on the General Ledger profiles type, specify \"type eq 'PeriodBoundary'\". For more information about filtering\r\n            results, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the results.\r\n            For example, to filter on the General Ledger profiles type, specify \"type eq 'PeriodBoundary'\". For more information about filtering\r\n            results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -17931,7 +17931,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the results.\r\n            For example, to filter on the Posting Module status, specify \"status eq 'Active'\". For more information about filtering\r\n            results, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the results.\r\n            For example, to filter on the Posting Module status, specify \"status eq 'Active'\". For more information about filtering\r\n            results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -18868,7 +18868,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the results.\r\n            For example, to filter on the rule id, specify \"ruleId eq 'rule 1'\". For more information about filtering\r\n            results, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the results.\r\n            For example, to filter on the rule id, specify \"ruleId eq 'rule 1'\". For more information about filtering\r\n            results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -31543,6 +31543,625 @@
         "x-fbn-apistatus": "EarlyAccess"
       }
     },
+    "/api/currencies/groups": {
+      "get": {
+        "tags": [
+          "CurrencyGroups"
+        ],
+        "summary": "[EXPERIMENTAL] ListCurrencyGroups: List currency groups.",
+        "description": "List the currency groups defined in the tenant that the caller is entitled to read.",
+        "operationId": "ListCurrencyGroups",
+        "parameters": [
+          {
+            "name": "asAt",
+            "in": "query",
+            "description": "The asAt datetime at which to list the currency groups. Defaults to returning\r\n            the latest version of each currency group if not specified.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "x-nullable": true
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "The pagination token to use to continue listing currency groups from a previous\r\n            call to list currency groups. This value is returned from the previous call. If a pagination token\r\n            is provided the filter, sortBy and asAt fields must not have changed since the original request.",
+            "schema": {
+              "maxLength": 500,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\+/]*={0,3}$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "When paginating, limit the results to this number.",
+            "schema": {
+              "maximum": 5000,
+              "minimum": 1,
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-nullable": true
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Expression to filter the results. Filterable fields are the group's code,\r\n            displayName and majorUnitCurrency. For example, \"majorUnitCurrency eq 'GBP'\".",
+            "schema": {
+              "maxLength": 16384,
+              "minLength": 0,
+              "pattern": "^[\\s\\S]*$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "sortBy",
+            "in": "query",
+            "description": "A list of field names to sort by, each prefixed with \"+\" for ascending or\r\n            \"-\" for descending. Sortable fields are the group's code, displayName and majorUnitCurrency.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The requested currency groups.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedResourceListOfCurrencyGroupResponse"
+                },
+                "example": {
+                  "values": [
+                    {
+                      "code": "PoundSterling",
+                      "displayName": "Pound Sterling",
+                      "description": "The Sterling currency group",
+                      "majorUnitCurrency": "GBP",
+                      "circulationDomain": "GB",
+                      "minorUnits": [
+                        {
+                          "currency": "GBX",
+                          "fractionOfMajor": 0.01
+                        }
+                      ],
+                      "version": {
+                        "effectiveFrom": "0001-01-01T00:00:00.0000000+00:00",
+                        "asAtDate": "2026-01-01T00:00:00.0000000+00:00"
+                      }
+                    }
+                  ],
+                  "links": []
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedResourceListOfCurrencyGroupResponse"
+                },
+                "example": {
+                  "values": [
+                    {
+                      "code": "PoundSterling",
+                      "displayName": "Pound Sterling",
+                      "description": "The Sterling currency group",
+                      "majorUnitCurrency": "GBP",
+                      "circulationDomain": "GB",
+                      "minorUnits": [
+                        {
+                          "currency": "GBX",
+                          "fractionOfMajor": 0.01
+                        }
+                      ],
+                      "version": {
+                        "effectiveFrom": "0001-01-01T00:00:00.0000000+00:00",
+                        "asAtDate": "2026-01-01T00:00:00.0000000+00:00"
+                      }
+                    }
+                  ],
+                  "links": []
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedResourceListOfCurrencyGroupResponse"
+                },
+                "example": {
+                  "values": [
+                    {
+                      "code": "PoundSterling",
+                      "displayName": "Pound Sterling",
+                      "description": "The Sterling currency group",
+                      "majorUnitCurrency": "GBP",
+                      "circulationDomain": "GB",
+                      "minorUnits": [
+                        {
+                          "currency": "GBX",
+                          "fractionOfMajor": 0.01
+                        }
+                      ],
+                      "version": {
+                        "effectiveFrom": "0001-01-01T00:00:00.0000000+00:00",
+                        "asAtDate": "2026-01-01T00:00:00.0000000+00:00"
+                      }
+                    }
+                  ],
+                  "links": []
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      },
+      "post": {
+        "tags": [
+          "CurrencyGroups"
+        ],
+        "summary": "[EXPERIMENTAL] UpsertCurrencyGroup: Upsert a currency group.",
+        "description": "Create or update a currency group. If a currency group with the same code already exists it is replaced.\r\nA currency may belong to at most one currency group.",
+        "operationId": "UpsertCurrencyGroup",
+        "requestBody": {
+          "description": "The currency group to upsert.",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpsertCurrencyGroupRequest"
+              },
+              "example": {
+                "code": "PoundSterling",
+                "displayName": "Pound Sterling",
+                "description": "The Sterling currency group",
+                "majorUnitCurrency": "GBP",
+                "circulationDomain": "GB",
+                "minorUnits": [
+                  {
+                    "currency": "GBX",
+                    "fractionOfMajor": 0.01
+                  }
+                ]
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpsertCurrencyGroupRequest"
+              },
+              "example": {
+                "code": "PoundSterling",
+                "displayName": "Pound Sterling",
+                "description": "The Sterling currency group",
+                "majorUnitCurrency": "GBP",
+                "circulationDomain": "GB",
+                "minorUnits": [
+                  {
+                    "currency": "GBX",
+                    "fractionOfMajor": 0.01
+                  }
+                ]
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpsertCurrencyGroupRequest"
+              },
+              "example": {
+                "code": "PoundSterling",
+                "displayName": "Pound Sterling",
+                "description": "The Sterling currency group",
+                "majorUnitCurrency": "GBP",
+                "circulationDomain": "GB",
+                "minorUnits": [
+                  {
+                    "currency": "GBX",
+                    "fractionOfMajor": 0.01
+                  }
+                ]
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpsertCurrencyGroupRequest"
+              },
+              "example": {
+                "code": "PoundSterling",
+                "displayName": "Pound Sterling",
+                "description": "The Sterling currency group",
+                "majorUnitCurrency": "GBP",
+                "circulationDomain": "GB",
+                "minorUnits": [
+                  {
+                    "currency": "GBX",
+                    "fractionOfMajor": 0.01
+                  }
+                ]
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "The upserted currency group.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CurrencyGroupResponse"
+                },
+                "example": {
+                  "code": "PoundSterling",
+                  "displayName": "Pound Sterling",
+                  "description": "The Sterling currency group",
+                  "majorUnitCurrency": "GBP",
+                  "circulationDomain": "GB",
+                  "minorUnits": [
+                    {
+                      "currency": "GBX",
+                      "fractionOfMajor": 0.01
+                    }
+                  ],
+                  "version": {
+                    "effectiveFrom": "0001-01-01T00:00:00.0000000+00:00",
+                    "asAtDate": "2026-01-01T00:00:00.0000000+00:00"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CurrencyGroupResponse"
+                },
+                "example": {
+                  "code": "PoundSterling",
+                  "displayName": "Pound Sterling",
+                  "description": "The Sterling currency group",
+                  "majorUnitCurrency": "GBP",
+                  "circulationDomain": "GB",
+                  "minorUnits": [
+                    {
+                      "currency": "GBX",
+                      "fractionOfMajor": 0.01
+                    }
+                  ],
+                  "version": {
+                    "effectiveFrom": "0001-01-01T00:00:00.0000000+00:00",
+                    "asAtDate": "2026-01-01T00:00:00.0000000+00:00"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CurrencyGroupResponse"
+                },
+                "example": {
+                  "code": "PoundSterling",
+                  "displayName": "Pound Sterling",
+                  "description": "The Sterling currency group",
+                  "majorUnitCurrency": "GBP",
+                  "circulationDomain": "GB",
+                  "minorUnits": [
+                    {
+                      "currency": "GBX",
+                      "fractionOfMajor": 0.01
+                    }
+                  ],
+                  "version": {
+                    "effectiveFrom": "0001-01-01T00:00:00.0000000+00:00",
+                    "asAtDate": "2026-01-01T00:00:00.0000000+00:00"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      }
+    },
+    "/api/currencies/groups/{code}": {
+      "get": {
+        "tags": [
+          "CurrencyGroups"
+        ],
+        "summary": "[EXPERIMENTAL] GetCurrencyGroup: Get a currency group.",
+        "description": "Get the currency group with the given code.",
+        "operationId": "GetCurrencyGroup",
+        "parameters": [
+          {
+            "name": "code",
+            "in": "path",
+            "description": "The code of the currency group.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "asAt",
+            "in": "query",
+            "description": "The asAt datetime at which to retrieve the currency group. Defaults to returning\r\n            the latest version if not specified.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The requested currency group.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CurrencyGroupResponse"
+                },
+                "example": {
+                  "code": "PoundSterling",
+                  "displayName": "Pound Sterling",
+                  "description": "The Sterling currency group",
+                  "majorUnitCurrency": "GBP",
+                  "circulationDomain": "GB",
+                  "minorUnits": [
+                    {
+                      "currency": "GBX",
+                      "fractionOfMajor": 0.01
+                    }
+                  ],
+                  "version": {
+                    "effectiveFrom": "0001-01-01T00:00:00.0000000+00:00",
+                    "asAtDate": "2026-01-01T00:00:00.0000000+00:00"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CurrencyGroupResponse"
+                },
+                "example": {
+                  "code": "PoundSterling",
+                  "displayName": "Pound Sterling",
+                  "description": "The Sterling currency group",
+                  "majorUnitCurrency": "GBP",
+                  "circulationDomain": "GB",
+                  "minorUnits": [
+                    {
+                      "currency": "GBX",
+                      "fractionOfMajor": 0.01
+                    }
+                  ],
+                  "version": {
+                    "effectiveFrom": "0001-01-01T00:00:00.0000000+00:00",
+                    "asAtDate": "2026-01-01T00:00:00.0000000+00:00"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CurrencyGroupResponse"
+                },
+                "example": {
+                  "code": "PoundSterling",
+                  "displayName": "Pound Sterling",
+                  "description": "The Sterling currency group",
+                  "majorUnitCurrency": "GBP",
+                  "circulationDomain": "GB",
+                  "minorUnits": [
+                    {
+                      "currency": "GBX",
+                      "fractionOfMajor": 0.01
+                    }
+                  ],
+                  "version": {
+                    "effectiveFrom": "0001-01-01T00:00:00.0000000+00:00",
+                    "asAtDate": "2026-01-01T00:00:00.0000000+00:00"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      },
+      "delete": {
+        "tags": [
+          "CurrencyGroups"
+        ],
+        "summary": "[EXPERIMENTAL] DeleteCurrencyGroup: Delete a currency group.",
+        "description": "Delete the currency group with the given code. The group's currencies are freed to be claimed\r\nby other currency groups.",
+        "operationId": "DeleteCurrencyGroup",
+        "parameters": [
+          {
+            "name": "code",
+            "in": "path",
+            "description": "The code of the currency group to delete.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The deleted entity metadata.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeletedEntityResponse"
+                },
+                "example": {
+                  "asAt": "2018-03-05T10:10:10.0000000+00:00"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeletedEntityResponse"
+                },
+                "example": {
+                  "asAt": "2018-03-05T10:10:10.0000000+00:00"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeletedEntityResponse"
+                },
+                "example": {
+                  "asAt": "2018-03-05T10:10:10.0000000+00:00"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      }
+    },
     "/api/customentities/entitytypes": {
       "post": {
         "tags": [
@@ -31904,7 +32523,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the results. For more information about filtering\r\n            results, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the results. For more information about filtering\r\n            results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -32995,7 +33614,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the results. For more information about filtering\r\n            results, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the results. For more information about filtering\r\n            results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -35813,7 +36432,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the results. For more information about filtering\r\n            results, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the results. For more information about filtering\r\n            results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -39796,7 +40415,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the results.\r\n            For example, to filter on the displayName, specify \"displayName eq 'MyCheckDefinition'\". For more information about filtering\r\n            results, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the results.\r\n            For example, to filter on the displayName, specify \"displayName eq 'MyCheckDefinition'\". For more information about filtering\r\n            results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -46210,7 +46829,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the results.\r\n            For example, to filter on the Code of the FeeType type, specify \"id.Code eq 'FeeType1'\". For more information about filtering\r\n            results, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the results.\r\n            For example, to filter on the Code of the FeeType type, specify \"id.Code eq 'FeeType1'\". For more information about filtering\r\n            results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -47611,7 +48230,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the results.\r\n            For example, to filter on the FundConfiguration type, specify \"id.Code eq 'FundConfiguration1'\". For more information about filtering\r\n            results, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the results.\r\n            For example, to filter on the FundConfiguration type, specify \"id.Code eq 'FundConfiguration1'\". For more information about filtering\r\n            results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -48823,7 +49442,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the results.\r\n            For example, to filter on the Fund code, specify \"id.Code eq 'Fund1'\". For more information about filtering\r\n            results, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the results.\r\n            For example, to filter on the Fund code, specify \"id.Code eq 'Fund1'\". For more information about filtering\r\n            results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -53794,7 +54413,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the results. For more information about filtering\r\n            results, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the results. For more information about filtering\r\n            results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -54086,7 +54705,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the results. For more information about filtering\r\n            results, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the results. For more information about filtering\r\n            results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -55075,7 +55694,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the results.\r\n            For example, to filter on the treatment, specify \"treatment eq 'Monthly'\". For more information about filtering\r\n            results, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the results.\r\n            For example, to filter on the treatment, specify \"treatment eq 'Monthly'\". For more information about filtering\r\n            results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -58963,7 +59582,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the results by.\r\n            For example, to filter on the NAV, specify \"NAV gt 300\". For more information about filtering\r\n            results, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the results by.\r\n            For example, to filter on the NAV, specify \"NAV gt 300\". For more information about filtering\r\n            results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -67676,7 +68295,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the results by.\r\n             For more information about filtering results, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the results by.\r\n             For more information about filtering results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -68709,7 +69328,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the results. For example, to filter on the Fund Structure code, specify \"id.Code eq 'Structure1'\". For more information about filtering results, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the results. For example, to filter on the Fund Structure code, specify \"id.Code eq 'Structure1'\". For more information about filtering results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -75071,7 +75690,7 @@
           "Instruments"
         ],
         "summary": "UpsertInstruments: Upsert instruments",
-        "description": "Create or update one or more instruments in the instrument master. An instrument is updated\r\nif it already exists and created if it does not.\r\n            \r\nIn the request, each instrument definition should be keyed by a unique correlation ID. This ID is ephemeral\r\nand not stored by LUSID. It serves only to easily identify each instrument in the response.\r\n            \r\nNote that an instrument must have at least one unique identifier, which is a combination of a type\r\n(such as 'Figi') and a value (such as 'BBG000BS1N49'). In addition, a random value is automatically\r\ngenerated for a LUSID Instrument ID (LUID) unique type by the system. For more information, see\r\nhttps://support.lusid.com/knowledgebase/article/KA-01862.\r\n            \r\nThe response returns both the collection of successfully created or updated instruments, as well as those\r\nthat failed. For each failure, a reason is provided. It is important to check the failed set for\r\nunsuccessful results.\n\nThe maximum number of instruments that this method can upsert per request is 2,000.",
+        "description": "Create or update one or more instruments in the instrument master. An instrument is updated\r\nif it already exists and created if it does not.\r\n            \r\nIn the request, each instrument definition should be keyed by a unique correlation ID. This ID is ephemeral\r\nand not stored by LUSID. It serves only to easily identify each instrument in the response.\r\n            \r\nNote that an instrument must have at least one unique identifier, which is a combination of a type\r\n(such as 'Figi') and a value (such as 'BBG000BS1N49'). In addition, a random value is automatically\r\ngenerated for a LUSID Instrument ID (LUID) unique type by the system. For more information, see\r\nhttps://support.lusid.com/docs/understanding-instrument-identifiers.\r\n            \r\nThe response returns both the collection of successfully created or updated instruments, as well as those\r\nthat failed. For each failure, a reason is provided. It is important to check the failed set for\r\nunsuccessful results.\n\nThe maximum number of instruments that this method can upsert per request is 2,000.",
         "operationId": "UpsertInstruments",
         "parameters": [
           {
@@ -75544,7 +76163,7 @@
           {
             "name": "page",
             "in": "query",
-            "description": "The pagination token to use to continue listing instruments; this value is returned from\r\n             the previous call. If a pagination token is provided, the <i>sortBy</i>, <i>filter</i>, <i>effectiveAt</i> and\r\n             <i>asAt</i> fields must not have changed since the original request.\r\n             For more information, see https://support.lusid.com/knowledgebase/article/KA-01915.",
+            "description": "The pagination token to use to continue listing instruments; this value is returned from\r\n             the previous call. If a pagination token is provided, the <i>sortBy</i>, <i>filter</i>, <i>effectiveAt</i> and\r\n             <i>asAt</i> fields must not have changed since the original request.\r\n             For more information, see https://support.lusid.com/docs/paging-and-limiting-an-api-request.",
             "schema": {
               "maxLength": 500,
               "minLength": 1,
@@ -75579,7 +76198,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the result set. Defaults to filtering out inactive instruments\r\n             (that is, those that have been deleted). For more information about filtering results,\r\n             see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the result set. Defaults to filtering out inactive instruments\r\n             (that is, those that have been deleted). For more information about filtering results,\r\n             see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -78374,7 +78993,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the results. For more information about filtering,\r\n            see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the results. For more information about filtering,\r\n            see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -78385,7 +79004,7 @@
           {
             "name": "page",
             "in": "query",
-            "description": "The pagination token to use to continue listing properties; this value is returned from\r\n            the previous call. If a pagination token is provided, the <i>filter</i>, <i>effectiveAt</i> and\r\n            <i>asAt</i> fields must not have changed since the original request. For more information, see\r\n            https://support.lusid.com/knowledgebase/article/KA-01915.",
+            "description": "The pagination token to use to continue listing properties; this value is returned from\r\n            the previous call. If a pagination token is provided, the <i>filter</i>, <i>effectiveAt</i> and\r\n            <i>asAt</i> fields must not have changed since the original request. For more information, see\r\n            https://support.lusid.com/docs/paging-and-limiting-an-api-request.",
             "schema": {
               "maxLength": 500,
               "minLength": 1,
@@ -87704,7 +88323,7 @@
           "Legacy Compliance"
         ],
         "summary": "[EXPERIMENTAL] ListLegacyComplianceRules: List compliance rules, with optional filtering.",
-        "description": "For more information about filtering results,\r\nsee https://support.lusid.com/knowledgebase/article/KA-01914.",
+        "description": "For more information about filtering results,\r\nsee https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
         "operationId": "ListLegacyComplianceRules",
         "parameters": [
           {
@@ -96420,7 +97039,7 @@
           {
             "name": "asAt",
             "in": "query",
-            "description": "See https://support.lusid.com/knowledgebase/article/KA-01832/",
+            "description": "See https://support.lusid.com/docs/what-is-the-asat-timestamp",
             "schema": {
               "type": "string",
               "format": "date-time"
@@ -96430,7 +97049,7 @@
           {
             "name": "paginationToken",
             "in": "query",
-            "description": "See https://support.lusid.com/knowledgebase/article/KA-01915/",
+            "description": "See https://support.lusid.com/docs/paging-and-limiting-an-api-request",
             "schema": {
               "maxLength": 500,
               "minLength": 1,
@@ -96453,7 +97072,7 @@
           {
             "name": "limit",
             "in": "query",
-            "description": "See https://support.lusid.com/knowledgebase/article/KA-01915/",
+            "description": "See https://support.lusid.com/docs/paging-and-limiting-an-api-request",
             "schema": {
               "maximum": 5000,
               "minimum": 1,
@@ -96465,7 +97084,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "See https://support.lusid.com/knowledgebase/article/KA-01914/",
+            "description": "See https://support.lusid.com/docs/filtering-information-retrieved-from-lusid",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -96477,7 +97096,7 @@
           {
             "name": "propertyKeys",
             "in": "query",
-            "description": "Must be block-level properties. See https://support.lusid.com/knowledgebase/article/KA-01855/",
+            "description": "Must be block-level properties. See https://support.lusid.com/docs/properties",
             "schema": {
               "type": "array",
               "items": {
@@ -97106,7 +97725,7 @@
           {
             "name": "asAt",
             "in": "query",
-            "description": "See https://support.lusid.com/knowledgebase/article/KA-01832/",
+            "description": "See https://support.lusid.com/docs/what-is-the-asat-timestamp",
             "schema": {
               "type": "string",
               "format": "date-time"
@@ -97116,7 +97735,7 @@
           {
             "name": "paginationToken",
             "in": "query",
-            "description": "See https://support.lusid.com/knowledgebase/article/KA-01915/",
+            "description": "See https://support.lusid.com/docs/paging-and-limiting-an-api-request",
             "schema": {
               "maxLength": 500,
               "minLength": 1,
@@ -97139,7 +97758,7 @@
           {
             "name": "limit",
             "in": "query",
-            "description": "See https://support.lusid.com/knowledgebase/article/KA-01915/",
+            "description": "See https://support.lusid.com/docs/paging-and-limiting-an-api-request",
             "schema": {
               "maximum": 5000,
               "minimum": 1,
@@ -97151,7 +97770,7 @@
           {
             "name": "propertyKeys",
             "in": "query",
-            "description": "Must be placement properties. See https://support.lusid.com/knowledgebase/article/KA-01855/",
+            "description": "Must be placement properties. See https://support.lusid.com/docs/properties",
             "schema": {
               "type": "array",
               "items": {
@@ -97648,7 +98267,7 @@
           {
             "name": "asAt",
             "in": "query",
-            "description": "See https://support.lusid.com/knowledgebase/article/KA-01832/",
+            "description": "See https://support.lusid.com/docs/what-is-the-asat-timestamp",
             "schema": {
               "type": "string",
               "format": "date-time"
@@ -97658,7 +98277,7 @@
           {
             "name": "paginationToken",
             "in": "query",
-            "description": "See https://support.lusid.com/knowledgebase/article/KA-01915/",
+            "description": "See https://support.lusid.com/docs/paging-and-limiting-an-api-request",
             "schema": {
               "maxLength": 500,
               "minLength": 1,
@@ -97681,7 +98300,7 @@
           {
             "name": "limit",
             "in": "query",
-            "description": "See https://support.lusid.com/knowledgebase/article/KA-01915/",
+            "description": "See https://support.lusid.com/docs/paging-and-limiting-an-api-request",
             "schema": {
               "maximum": 5000,
               "minimum": 1,
@@ -97693,7 +98312,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "See https://support.lusid.com/knowledgebase/article/KA-01914/",
+            "description": "See https://support.lusid.com/docs/filtering-information-retrieved-from-lusid",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -97705,7 +98324,7 @@
           {
             "name": "propertyKeys",
             "in": "query",
-            "description": "Must be placement properties. See https://support.lusid.com/knowledgebase/article/KA-01855/",
+            "description": "Must be placement properties. See https://support.lusid.com/docs/properties",
             "schema": {
               "type": "array",
               "items": {
@@ -106275,6 +106894,165 @@
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/PaymentInstructionsResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      }
+    },
+    "/api/paymentinstructions/$getByPaymentRecordIds": {
+      "post": {
+        "tags": [
+          "Payment Instructions"
+        ],
+        "summary": "[EXPERIMENTAL] GetPaymentInstructionsByPaymentRecordIds: Get Payment Instructions by Payment Record Ids",
+        "description": "Retrieve the Payment Instructions that reference the given Payment Records. Payment record ids are unique\r\nacross the system scope, so no scope or identifier type is required. The response contains the payment\r\ninstructions that could be found, keyed by the payment record id used to retrieve them, along with the\r\nnature of any failures.",
+        "operationId": "GetPaymentInstructionsByPaymentRecordIds",
+        "parameters": [
+          {
+            "name": "propertyKeys",
+            "in": "query",
+            "description": "A list of property keys from the \"PaymentInstruction\" domain to decorate onto each\r\n            payment instruction. These take the format {domain}/{scope}/{code} e.g. \"PaymentInstruction/myScope/myProperty\".",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "description": "The key that uniquely identifies the property. It has the format {domain}/{scope}/{code}."
+              }
+            },
+            "x-nullable": true
+          },
+          {
+            "name": "effectiveAt",
+            "in": "query",
+            "description": "The effective datetime or cut label at which to retrieve the payment instructions.\r\n            Defaults to the current LUSID system datetime if not specified.",
+            "schema": {
+              "maxLength": 256,
+              "minLength": 0,
+              "pattern": "^[a-zA-Z0-9\\-_\\+:\\.]+$",
+              "type": "string",
+              "format": "dateorcutlabel"
+            }
+          },
+          {
+            "name": "asAt",
+            "in": "query",
+            "description": "The asAt datetime at which to retrieve the payment instructions. Defaults to return the latest\r\n            version of each payment instruction if not specified.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "x-nullable": true
+          }
+        ],
+        "requestBody": {
+          "description": "A collection of payment record ids to retrieve payment instructions for.\r\n            Duplicate ids are ignored.",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "example": [
+                "payment-record-id-1",
+                "payment-record-id-2"
+              ]
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "example": [
+                "payment-record-id-1",
+                "payment-record-id-2"
+              ]
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "example": [
+                "payment-record-id-1",
+                "payment-record-id-2"
+              ]
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "example": [
+                "payment-record-id-1",
+                "payment-record-id-2"
+              ]
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "The payment instructions that could be found for the supplied payment record ids, along with any failures",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetPaymentInstructionsResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetPaymentInstructionsResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetPaymentInstructionsResponse"
                 }
               }
             }
@@ -118779,16 +119557,6 @@
             "schema": {
               "type": "string"
             }
-          },
-          {
-            "name": "returnExcludedTransactions",
-            "in": "query",
-            "description": "Whether to include transactions that a portfolio's transaction exclusion filter marks as excluded. Defaults to false.",
-            "schema": {
-              "type": "boolean",
-              "default": false
-            },
-            "x-nullable": true
           }
         ],
         "requestBody": {
@@ -118806,7 +119574,8 @@
                 "timelineScope": "MyAccountingTimelineScope",
                 "timelineCode": "MyAccountingTimelineCode",
                 "includeEconomics": false,
-                "includeSettlementStatus": false
+                "includeSettlementStatus": false,
+                "returnExcludedTransactions": false
               }
             },
             "application/json": {
@@ -118821,7 +119590,8 @@
                 "timelineScope": "MyAccountingTimelineScope",
                 "timelineCode": "MyAccountingTimelineCode",
                 "includeEconomics": false,
-                "includeSettlementStatus": false
+                "includeSettlementStatus": false,
+                "returnExcludedTransactions": false
               }
             },
             "text/json": {
@@ -118836,7 +119606,8 @@
                 "timelineScope": "MyAccountingTimelineScope",
                 "timelineCode": "MyAccountingTimelineCode",
                 "includeEconomics": false,
-                "includeSettlementStatus": false
+                "includeSettlementStatus": false,
+                "returnExcludedTransactions": false
               }
             },
             "application/*+json": {
@@ -118851,7 +119622,8 @@
                 "timelineScope": "MyAccountingTimelineScope",
                 "timelineCode": "MyAccountingTimelineCode",
                 "includeEconomics": false,
-                "includeSettlementStatus": false
+                "includeSettlementStatus": false,
+                "returnExcludedTransactions": false
               }
             }
           },
@@ -120042,7 +120814,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the results.\r\n            For example, to filter on the transaction type, specify \"type eq 'Transaction'\". For more information about filtering\r\n            results, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the results.\r\n            For example, to filter on the transaction type, specify \"type eq 'Transaction'\". For more information about filtering\r\n            results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -123091,7 +123863,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the results.\r\n            For example, to filter on the reconciliation type, specify \"id.Code eq '001'\". For more information about filtering\r\n            results, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the results.\r\n            For example, to filter on the reconciliation type, specify \"id.Code eq '001'\". For more information about filtering\r\n            results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -126726,7 +127498,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the results.\r\n            For example, to return only transactions with a transaction type of 'Buy', specify \"type eq 'Buy'\".\r\n            For more information about filtering results, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the results.\r\n            For example, to return only transactions with a transaction type of 'Buy', specify \"type eq 'Buy'\".\r\n            For more information about filtering results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -127430,7 +128202,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the results.\r\n            For example, to filter on the User ID, specify \"userId.id eq 'string'\".\r\n            For more information about filtering, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the results.\r\n            For example, to filter on the User ID, specify \"userId.id eq 'string'\".\r\n            For more information about filtering, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -127910,7 +128682,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the results. For more information about filtering\r\n            results, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the results. For more information about filtering\r\n            results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -130119,7 +130891,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the results. For more information about filtering,\r\n            see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the results. For more information about filtering,\r\n            see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -130278,7 +131050,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the results. For more information about filtering,\r\n            see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the results. For more information about filtering,\r\n            see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -132238,7 +133010,7 @@
           {
             "name": "metrics",
             "in": "query",
-            "description": "Determines what type of returns should be calculated, see https://support.lusid.com/knowledgebase/article/KA-01675/en-us for a list of available metrics.",
+            "description": "Determines what type of returns should be calculated, see https://support.lusid.com/docs/aggregating-performance-returns-for-a-portfolio for a list of available metrics.",
             "schema": {
               "type": "array",
               "items": {
@@ -132767,7 +133539,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the results.\r\n            For example, to filter on the display name, specify \"DisplayName eq 'DisplayName'\". For more information about filtering\r\n            results, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the results.\r\n            For example, to filter on the display name, specify \"DisplayName eq 'DisplayName'\". For more information about filtering\r\n            results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -136834,7 +137606,8 @@
                       },
                       "enableLegLevelInferenceForCustomSrsColumns": false,
                       "useInstrumentScaleFactorAsDefault": false,
-                      "scaleInstrumentAccruedOverrideByContractSize": false
+                      "scaleInstrumentAccruedOverrideByContractSize": false,
+                      "defaultPoolFactorsToUnity": false
                     },
                     "resultDataRules": [],
                     "holdingPricingInfo": {
@@ -136920,7 +137693,8 @@
                       },
                       "enableLegLevelInferenceForCustomSrsColumns": false,
                       "useInstrumentScaleFactorAsDefault": false,
-                      "scaleInstrumentAccruedOverrideByContractSize": false
+                      "scaleInstrumentAccruedOverrideByContractSize": false,
+                      "defaultPoolFactorsToUnity": false
                     },
                     "resultDataRules": [],
                     "holdingPricingInfo": {
@@ -137006,7 +137780,8 @@
                       },
                       "enableLegLevelInferenceForCustomSrsColumns": false,
                       "useInstrumentScaleFactorAsDefault": false,
-                      "scaleInstrumentAccruedOverrideByContractSize": false
+                      "scaleInstrumentAccruedOverrideByContractSize": false,
+                      "defaultPoolFactorsToUnity": false
                     },
                     "resultDataRules": [],
                     "holdingPricingInfo": {
@@ -137092,7 +137867,8 @@
                       },
                       "enableLegLevelInferenceForCustomSrsColumns": false,
                       "useInstrumentScaleFactorAsDefault": false,
-                      "scaleInstrumentAccruedOverrideByContractSize": false
+                      "scaleInstrumentAccruedOverrideByContractSize": false,
+                      "defaultPoolFactorsToUnity": false
                     },
                     "resultDataRules": [],
                     "holdingPricingInfo": {
@@ -137288,7 +138064,8 @@
                             },
                             "enableLegLevelInferenceForCustomSrsColumns": false,
                             "useInstrumentScaleFactorAsDefault": false,
-                            "scaleInstrumentAccruedOverrideByContractSize": false
+                            "scaleInstrumentAccruedOverrideByContractSize": false,
+                            "defaultPoolFactorsToUnity": false
                           },
                           "resultDataRules": [],
                           "holdingPricingInfo": {
@@ -137369,7 +138146,8 @@
                             },
                             "enableLegLevelInferenceForCustomSrsColumns": false,
                             "useInstrumentScaleFactorAsDefault": false,
-                            "scaleInstrumentAccruedOverrideByContractSize": false
+                            "scaleInstrumentAccruedOverrideByContractSize": false,
+                            "defaultPoolFactorsToUnity": false
                           },
                           "resultDataRules": [],
                           "holdingPricingInfo": {
@@ -137480,7 +138258,8 @@
                             },
                             "enableLegLevelInferenceForCustomSrsColumns": false,
                             "useInstrumentScaleFactorAsDefault": false,
-                            "scaleInstrumentAccruedOverrideByContractSize": false
+                            "scaleInstrumentAccruedOverrideByContractSize": false,
+                            "defaultPoolFactorsToUnity": false
                           },
                           "resultDataRules": [],
                           "holdingPricingInfo": {
@@ -137561,7 +138340,8 @@
                             },
                             "enableLegLevelInferenceForCustomSrsColumns": false,
                             "useInstrumentScaleFactorAsDefault": false,
-                            "scaleInstrumentAccruedOverrideByContractSize": false
+                            "scaleInstrumentAccruedOverrideByContractSize": false,
+                            "defaultPoolFactorsToUnity": false
                           },
                           "resultDataRules": [],
                           "holdingPricingInfo": {
@@ -137672,7 +138452,8 @@
                             },
                             "enableLegLevelInferenceForCustomSrsColumns": false,
                             "useInstrumentScaleFactorAsDefault": false,
-                            "scaleInstrumentAccruedOverrideByContractSize": false
+                            "scaleInstrumentAccruedOverrideByContractSize": false,
+                            "defaultPoolFactorsToUnity": false
                           },
                           "resultDataRules": [],
                           "holdingPricingInfo": {
@@ -137753,7 +138534,8 @@
                             },
                             "enableLegLevelInferenceForCustomSrsColumns": false,
                             "useInstrumentScaleFactorAsDefault": false,
-                            "scaleInstrumentAccruedOverrideByContractSize": false
+                            "scaleInstrumentAccruedOverrideByContractSize": false,
+                            "defaultPoolFactorsToUnity": false
                           },
                           "resultDataRules": [],
                           "holdingPricingInfo": {
@@ -138534,7 +139316,8 @@
                         },
                         "enableLegLevelInferenceForCustomSrsColumns": false,
                         "useInstrumentScaleFactorAsDefault": false,
-                        "scaleInstrumentAccruedOverrideByContractSize": false
+                        "scaleInstrumentAccruedOverrideByContractSize": false,
+                        "defaultPoolFactorsToUnity": false
                       },
                       "resultDataRules": [],
                       "holdingPricingInfo": {
@@ -138632,7 +139415,8 @@
                         },
                         "enableLegLevelInferenceForCustomSrsColumns": false,
                         "useInstrumentScaleFactorAsDefault": false,
-                        "scaleInstrumentAccruedOverrideByContractSize": false
+                        "scaleInstrumentAccruedOverrideByContractSize": false,
+                        "defaultPoolFactorsToUnity": false
                       },
                       "resultDataRules": [],
                       "holdingPricingInfo": {
@@ -138730,7 +139514,8 @@
                         },
                         "enableLegLevelInferenceForCustomSrsColumns": false,
                         "useInstrumentScaleFactorAsDefault": false,
-                        "scaleInstrumentAccruedOverrideByContractSize": false
+                        "scaleInstrumentAccruedOverrideByContractSize": false,
+                        "defaultPoolFactorsToUnity": false
                       },
                       "resultDataRules": [],
                       "holdingPricingInfo": {
@@ -139177,7 +139962,8 @@
                             },
                             "enableLegLevelInferenceForCustomSrsColumns": false,
                             "useInstrumentScaleFactorAsDefault": false,
-                            "scaleInstrumentAccruedOverrideByContractSize": false
+                            "scaleInstrumentAccruedOverrideByContractSize": false,
+                            "defaultPoolFactorsToUnity": false
                           },
                           "resultDataRules": [],
                           "holdingPricingInfo": {
@@ -139258,7 +140044,8 @@
                             },
                             "enableLegLevelInferenceForCustomSrsColumns": false,
                             "useInstrumentScaleFactorAsDefault": false,
-                            "scaleInstrumentAccruedOverrideByContractSize": false
+                            "scaleInstrumentAccruedOverrideByContractSize": false,
+                            "defaultPoolFactorsToUnity": false
                           },
                           "resultDataRules": [],
                           "holdingPricingInfo": {
@@ -139369,7 +140156,8 @@
                             },
                             "enableLegLevelInferenceForCustomSrsColumns": false,
                             "useInstrumentScaleFactorAsDefault": false,
-                            "scaleInstrumentAccruedOverrideByContractSize": false
+                            "scaleInstrumentAccruedOverrideByContractSize": false,
+                            "defaultPoolFactorsToUnity": false
                           },
                           "resultDataRules": [],
                           "holdingPricingInfo": {
@@ -139450,7 +140238,8 @@
                             },
                             "enableLegLevelInferenceForCustomSrsColumns": false,
                             "useInstrumentScaleFactorAsDefault": false,
-                            "scaleInstrumentAccruedOverrideByContractSize": false
+                            "scaleInstrumentAccruedOverrideByContractSize": false,
+                            "defaultPoolFactorsToUnity": false
                           },
                           "resultDataRules": [],
                           "holdingPricingInfo": {
@@ -139561,7 +140350,8 @@
                             },
                             "enableLegLevelInferenceForCustomSrsColumns": false,
                             "useInstrumentScaleFactorAsDefault": false,
-                            "scaleInstrumentAccruedOverrideByContractSize": false
+                            "scaleInstrumentAccruedOverrideByContractSize": false,
+                            "defaultPoolFactorsToUnity": false
                           },
                           "resultDataRules": [],
                           "holdingPricingInfo": {
@@ -139642,7 +140432,8 @@
                             },
                             "enableLegLevelInferenceForCustomSrsColumns": false,
                             "useInstrumentScaleFactorAsDefault": false,
-                            "scaleInstrumentAccruedOverrideByContractSize": false
+                            "scaleInstrumentAccruedOverrideByContractSize": false,
+                            "defaultPoolFactorsToUnity": false
                           },
                           "resultDataRules": [],
                           "holdingPricingInfo": {
@@ -139840,7 +140631,8 @@
                         },
                         "enableLegLevelInferenceForCustomSrsColumns": false,
                         "useInstrumentScaleFactorAsDefault": false,
-                        "scaleInstrumentAccruedOverrideByContractSize": false
+                        "scaleInstrumentAccruedOverrideByContractSize": false,
+                        "defaultPoolFactorsToUnity": false
                       },
                       "resultDataRules": [],
                       "holdingPricingInfo": {
@@ -139938,7 +140730,8 @@
                         },
                         "enableLegLevelInferenceForCustomSrsColumns": false,
                         "useInstrumentScaleFactorAsDefault": false,
-                        "scaleInstrumentAccruedOverrideByContractSize": false
+                        "scaleInstrumentAccruedOverrideByContractSize": false,
+                        "defaultPoolFactorsToUnity": false
                       },
                       "resultDataRules": [],
                       "holdingPricingInfo": {
@@ -140036,7 +140829,8 @@
                         },
                         "enableLegLevelInferenceForCustomSrsColumns": false,
                         "useInstrumentScaleFactorAsDefault": false,
-                        "scaleInstrumentAccruedOverrideByContractSize": false
+                        "scaleInstrumentAccruedOverrideByContractSize": false,
+                        "defaultPoolFactorsToUnity": false
                       },
                       "resultDataRules": [],
                       "holdingPricingInfo": {
@@ -140223,7 +141017,8 @@
                         },
                         "enableLegLevelInferenceForCustomSrsColumns": false,
                         "useInstrumentScaleFactorAsDefault": false,
-                        "scaleInstrumentAccruedOverrideByContractSize": false
+                        "scaleInstrumentAccruedOverrideByContractSize": false,
+                        "defaultPoolFactorsToUnity": false
                       },
                       "resultDataRules": [],
                       "holdingPricingInfo": {
@@ -140321,7 +141116,8 @@
                         },
                         "enableLegLevelInferenceForCustomSrsColumns": false,
                         "useInstrumentScaleFactorAsDefault": false,
-                        "scaleInstrumentAccruedOverrideByContractSize": false
+                        "scaleInstrumentAccruedOverrideByContractSize": false,
+                        "defaultPoolFactorsToUnity": false
                       },
                       "resultDataRules": [],
                       "holdingPricingInfo": {
@@ -140419,7 +141215,8 @@
                         },
                         "enableLegLevelInferenceForCustomSrsColumns": false,
                         "useInstrumentScaleFactorAsDefault": false,
-                        "scaleInstrumentAccruedOverrideByContractSize": false
+                        "scaleInstrumentAccruedOverrideByContractSize": false,
+                        "defaultPoolFactorsToUnity": false
                       },
                       "resultDataRules": [],
                       "holdingPricingInfo": {
@@ -169978,7 +170775,7 @@
           "System Configuration"
         ],
         "summary": "[EARLY ACCESS] ListConfigurationTransactionTypes: List transaction types",
-        "description": "Get the list of current transaction types. For information on the default transaction types provided with\r\nLUSID, see https://support.lusid.com/knowledgebase/article/KA-01873/.",
+        "description": "Get the list of current transaction types. For information on the default transaction types provided with\r\nLUSID, see https://support.lusid.com/docs/what-built-in-transaction-types-and-sides-are-provided-with-lusid.",
         "operationId": "ListConfigurationTransactionTypes",
         "parameters": [
           {
@@ -170058,7 +170855,7 @@
           "System Configuration"
         ],
         "summary": "[EXPERIMENTAL] CreateSideDefinition: Create side definition",
-        "description": "Create a new side definition for use in a transaction type. For more information, see https://support.lusid.com/knowledgebase/article/KA-01875.",
+        "description": "Create a new side definition for use in a transaction type. For more information, see https://support.lusid.com/docs/what-is-a-side.",
         "operationId": "CreateSideDefinition",
         "requestBody": {
           "description": "The definition of the side.",
@@ -172305,7 +173102,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the results.\r\n            For example, to filter on the displayName, specify \"displayName eq 'AccountingTimeline'\". For more information about filtering\r\n            results, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the results.\r\n            For example, to filter on the displayName, specify \"displayName eq 'AccountingTimeline'\". For more information about filtering\r\n            results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -173457,7 +174254,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the results.\r\n            For example, to filter on the effectiveEnd, specify \"effectiveEnd gt 2019-01-15T10:00:00\". For more information about filtering\r\n            results, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the results.\r\n            For example, to filter on the effectiveEnd, specify \"effectiveEnd gt 2019-01-15T10:00:00\". For more information about filtering\r\n            results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -175832,7 +176629,7 @@
           "Transaction Configuration"
         ],
         "summary": "SetSideDefinitions: Set the given side definitions",
-        "description": "Set a new side definition for use in a transaction type. For more information, see https://support.lusid.com/knowledgebase/article/KA-01875.",
+        "description": "Set a new side definition for use in a transaction type. For more information, see https://support.lusid.com/docs/what-is-a-side.",
         "operationId": "SetSideDefinitions",
         "parameters": [
           {
@@ -176319,7 +177116,7 @@
           "Transaction Configuration"
         ],
         "summary": "SetSideDefinition: Set a side definition",
-        "description": "Set a new side definition for use in a transaction type. For more information, see https://support.lusid.com/knowledgebase/article/KA-01875.",
+        "description": "Set a new side definition for use in a transaction type. For more information, see https://support.lusid.com/docs/what-is-a-side.",
         "operationId": "SetSideDefinition",
         "parameters": [
           {
@@ -176606,7 +177403,7 @@
           "Transaction Configuration"
         ],
         "summary": "ListTransactionTypes: List transaction types",
-        "description": "Get the list of current transaction types. For information on the default transaction types provided with\r\nLUSID, see https://support.lusid.com/knowledgebase/article/KA-01873/.",
+        "description": "Get the list of current transaction types. For information on the default transaction types provided with\r\nLUSID, see https://support.lusid.com/docs/what-built-in-transaction-types-and-sides-are-provided-with-lusid.",
         "operationId": "ListTransactionTypes",
         "parameters": [
           {
@@ -185740,7 +186537,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the result set.\r\n             For example, to return only transactions with a transaction type of 'Buy', specify \"type eq 'Buy'\".\r\n             For more information about filtering LUSID results, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the result set.\r\n             For example, to return only transactions with a transaction type of 'Buy', specify \"type eq 'Buy'\".\r\n             For more information about filtering LUSID results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -185935,7 +186732,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the result set.\r\n            For example, to return only transactions with a transaction type of 'Buy', specify \"type eq 'Buy'\".\r\n            For more information about filtering LUSID results, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the result set.\r\n            For example, to return only transactions with a transaction type of 'Buy', specify \"type eq 'Buy'\".\r\n            For more information about filtering LUSID results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -186459,7 +187256,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the result set.\r\n            For example, to return only transactions with a transaction type of 'Buy', specify \"type eq 'Buy'\".\r\n            For more information about filtering LUSID results, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the result set.\r\n            For example, to return only transactions with a transaction type of 'Buy', specify \"type eq 'Buy'\".\r\n            For more information about filtering LUSID results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -189598,7 +190395,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the results.\r\n            For example, to filter on the Custodian Account type, specify \"code eq '001'\". For more information about filtering\r\n            results, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the results.\r\n            For example, to filter on the Custodian Account type, specify \"code eq '001'\". For more information about filtering\r\n            results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -191927,7 +192724,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the result set.\r\n            For example, to filter on the Holding Type, use \"holdingType eq 'p'\".\r\n            For more information about filtering LUSID results, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the result set.\r\n            For example, to filter on the Holding Type, use \"holdingType eq 'p'\".\r\n            For more information about filtering LUSID results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -194721,7 +195518,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the holding adjustments result set.\r\n            Supported fields: InstrumentUid, InstrumentScope, Currency, Properties[Holding/{scope}/{code}], SubHoldingKeys[Transaction/{scope}/{code}].\r\n            For example, to filter on a specific instrument, specify \"InstrumentUid eq 'LUID_00003D4X'\".\r\n            For more information about filtering LUSID results, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the holding adjustments result set.\r\n            Supported fields: InstrumentUid, InstrumentScope, Currency, Properties[Holding/{scope}/{code}], SubHoldingKeys[Transaction/{scope}/{code}].\r\n            For example, to filter on a specific instrument, specify \"InstrumentUid eq 'LUID_00003D4X'\".\r\n            For more information about filtering LUSID results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -194859,7 +195656,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the holding adjustments result set.\r\n            Supported fields: InstrumentUid, InstrumentScope, Currency, Properties[Holding/{scope}/{code}], SubHoldingKeys[Transaction/{scope}/{code}].\r\n            For example, to filter on a specific instrument, specify \"InstrumentUid eq 'LUID_00003D4X'\".\r\n            For more information about filtering LUSID results, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the holding adjustments result set.\r\n            Supported fields: InstrumentUid, InstrumentScope, Currency, Properties[Holding/{scope}/{code}], SubHoldingKeys[Transaction/{scope}/{code}].\r\n            For example, to filter on a specific instrument, specify \"InstrumentUid eq 'LUID_00003D4X'\".\r\n            For more information about filtering LUSID results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -195151,7 +195948,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the result set.\r\n            For example, to filter on the Holding Type, use \"holdingType eq 'p'\"\r\n            For more information about filtering LUSID results, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the result set.\r\n            For example, to filter on the Holding Type, use \"holdingType eq 'p'\"\r\n            For more information about filtering LUSID results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -198830,7 +199627,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression with which to filter the result set.\r\n             For example, to return only transactions with a transaction type of 'Buy', specify \"type eq 'Buy'\"\r\n             For more information about filtering LUSID results, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression with which to filter the result set.\r\n             For example, to return only transactions with a transaction type of 'Buy', specify \"type eq 'Buy'\"\r\n             For more information about filtering LUSID results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -200331,7 +201128,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the result set.\r\n            For example, to return only transactions with a transaction type of 'Buy', specify \"type eq 'Buy'\".\r\n            For more information about filtering LUSID results, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the result set.\r\n            For example, to return only transactions with a transaction type of 'Buy', specify \"type eq 'Buy'\".\r\n            For more information about filtering LUSID results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -200402,16 +201199,6 @@
             "schema": {
               "type": "string"
             }
-          },
-          {
-            "name": "returnExcludedTransactions",
-            "in": "query",
-            "description": "Whether to include transactions that the portfolio's transaction exclusion filter marks as excluded. Defaults to false.",
-            "schema": {
-              "type": "boolean",
-              "default": false
-            },
-            "x-nullable": true
           }
         ],
         "requestBody": {
@@ -200429,7 +201216,8 @@
                 "timelineScope": "MyAccountingTimelineScope",
                 "timelineCode": "MyAccountingTimelineCode",
                 "includeEconomics": false,
-                "includeSettlementStatus": false
+                "includeSettlementStatus": false,
+                "returnExcludedTransactions": false
               }
             },
             "application/json": {
@@ -200444,7 +201232,8 @@
                 "timelineScope": "MyAccountingTimelineScope",
                 "timelineCode": "MyAccountingTimelineCode",
                 "includeEconomics": false,
-                "includeSettlementStatus": false
+                "includeSettlementStatus": false,
+                "returnExcludedTransactions": false
               }
             },
             "text/json": {
@@ -200459,7 +201248,8 @@
                 "timelineScope": "MyAccountingTimelineScope",
                 "timelineCode": "MyAccountingTimelineCode",
                 "includeEconomics": false,
-                "includeSettlementStatus": false
+                "includeSettlementStatus": false,
+                "returnExcludedTransactions": false
               }
             },
             "application/*+json": {
@@ -200474,7 +201264,8 @@
                 "timelineScope": "MyAccountingTimelineScope",
                 "timelineCode": "MyAccountingTimelineCode",
                 "includeEconomics": false,
-                "includeSettlementStatus": false
+                "includeSettlementStatus": false,
+                "returnExcludedTransactions": false
               }
             }
           },
@@ -202464,7 +203255,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Expression to filter the result set.\r\n             For example, to return only transactions with a transaction type of 'Buy', specify \"type eq 'Buy'\".\r\n             For more information about filtering LUSID results, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the result set.\r\n             For example, to return only transactions with a transaction type of 'Buy', specify \"type eq 'Buy'\".\r\n             For more information about filtering LUSID results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "schema": {
               "maxLength": 16384,
               "minLength": 0,
@@ -202960,7 +203751,7 @@
           "Transaction Fees"
         ],
         "summary": "ListTransactionFeeRules: List fee rules, with optional filtering.",
-        "description": "For more information about filtering results,\r\nsee https://support.lusid.com/knowledgebase/article/KA-01914.",
+        "description": "For more information about filtering results,\r\nsee https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
         "operationId": "ListTransactionFeeRules",
         "parameters": [
           {
@@ -205783,7 +206574,8 @@
                       "estimatedUnits": 800,
                       "estimatedAmount": 10000,
                       "estimatedAmountCurrency": "GBP",
-                      "fxRateUsed": 1
+                      "fxRateUsed": 1,
+                      "excludedOrders": []
                     },
                     "Order2": {
                       "orderId": {
@@ -205796,7 +206588,16 @@
                       "estimatedUnits": 400,
                       "estimatedAmount": 5750,
                       "estimatedAmountCurrency": "USD",
-                      "fxRateUsed": 0.87
+                      "fxRateUsed": 0.87,
+                      "excludedOrders": [
+                        {
+                          "orderId": {
+                            "scope": "example-scope",
+                            "code": "order-9"
+                          },
+                          "reason": "Unable to size orders because the transaction type for side 'Unknown' does not resolve to a single buy or sell movement direction."
+                        }
+                      ]
                     }
                   },
                   "failed": {
@@ -205825,7 +206626,8 @@
                       "estimatedUnits": 800,
                       "estimatedAmount": 10000,
                       "estimatedAmountCurrency": "GBP",
-                      "fxRateUsed": 1
+                      "fxRateUsed": 1,
+                      "excludedOrders": []
                     },
                     "Order2": {
                       "orderId": {
@@ -205838,7 +206640,16 @@
                       "estimatedUnits": 400,
                       "estimatedAmount": 5750,
                       "estimatedAmountCurrency": "USD",
-                      "fxRateUsed": 0.87
+                      "fxRateUsed": 0.87,
+                      "excludedOrders": [
+                        {
+                          "orderId": {
+                            "scope": "example-scope",
+                            "code": "order-9"
+                          },
+                          "reason": "Unable to size orders because the transaction type for side 'Unknown' does not resolve to a single buy or sell movement direction."
+                        }
+                      ]
                     }
                   },
                   "failed": {
@@ -205867,7 +206678,8 @@
                       "estimatedUnits": 800,
                       "estimatedAmount": 10000,
                       "estimatedAmountCurrency": "GBP",
-                      "fxRateUsed": 1
+                      "fxRateUsed": 1,
+                      "excludedOrders": []
                     },
                     "Order2": {
                       "orderId": {
@@ -205880,7 +206692,16 @@
                       "estimatedUnits": 400,
                       "estimatedAmount": 5750,
                       "estimatedAmountCurrency": "USD",
-                      "fxRateUsed": 0.87
+                      "fxRateUsed": 0.87,
+                      "excludedOrders": [
+                        {
+                          "orderId": {
+                            "scope": "example-scope",
+                            "code": "order-9"
+                          },
+                          "reason": "Unable to size orders because the transaction type for side 'Unknown' does not resolve to a single buy or sell movement direction."
+                        }
+                      ]
                     }
                   },
                   "failed": {
@@ -211788,10 +212609,11 @@
               "Result0D",
               "Result1D",
               "Result2D",
-              "Json"
+              "Json",
+              "ResultND"
             ],
             "type": "string",
-            "description": "Available values: String, Int, Decimal, DateTime, Boolean, ResultValue, Result0D, Result1D, Result2D, Json."
+            "description": "Available values: String, Int, Decimal, DateTime, Boolean, ResultValue, Result0D, Result1D, Result2D, Json, ResultND."
           },
           "description": {
             "type": "string",
@@ -211819,7 +212641,7 @@
             "items": {
               "$ref": "#/components/schemas/ResultAxisDefinition"
             },
-            "description": "For keys whose type is a labelled vector or matrix (Result1D/Result2D), describes what the\r\nlabels on each axis mean. Null for scalar results and for shaped results whose axes have\r\nnot been described.",
+            "description": "For keys whose type is a labelled vector or matrix (Result1D/Result2D), describes what the\r\nlabels on each axis mean. Null for scalar results and for shaped results whose axes have\r\nnot been described. Note the constructor below collapses an empty axes list to null, so a\r\ndescribed-but-empty axis set is indistinguishable from an undescribed one.",
             "nullable": true
           }
         },
@@ -212994,10 +213816,11 @@
               "Result0D",
               "Result1D",
               "Result2D",
-              "Json"
+              "Json",
+              "ResultND"
             ],
             "type": "string",
-            "description": "Financially meaningful results can be presented as either simple flat types or more complex expanded types. This field gives the type of the more complex representation.\r\n\r\nFor example, the present value (PV) of a holding could be represented either as a simple decimal (with currency implied) or as a decimal-currency pair. In this example, the type returned in this field would be \"Result0D\", the decimal-currency pair. Available values: String, Int, Decimal, DateTime, Boolean, ResultValue, Result0D, Result1D, Result2D, Json."
+            "description": "Financially meaningful results can be presented as either simple flat types or more complex expanded types. This field gives the type of the more complex representation.\r\n\r\nFor example, the present value (PV) of a holding could be represented either as a simple decimal (with currency implied) or as a decimal-currency pair. In this example, the type returned in this field would be \"Result0D\", the decimal-currency pair. Available values: String, Int, Decimal, DateTime, Boolean, ResultValue, Result0D, Result1D, Result2D, Json, ResultND."
           },
           "flattenedType": {
             "enum": [
@@ -213010,10 +213833,11 @@
               "Result0D",
               "Result1D",
               "Result2D",
-              "Json"
+              "Json",
+              "ResultND"
             ],
             "type": "string",
-            "description": "Financially meaningful results can be presented as either simple flat types or more complex expanded types. This field gives the type of the simpler representation.\r\n\r\nFor example, the present value (PV) of a holding could be represented either as a simple decimal (with currency implied) or as a decimal-currency pair. In this example, the type returned in this field would be \"Decimal\". Available values: String, Int, Decimal, DateTime, Boolean, ResultValue, Result0D, Result1D, Result2D, Json."
+            "description": "Financially meaningful results can be presented as either simple flat types or more complex expanded types. This field gives the type of the simpler representation.\r\n\r\nFor example, the present value (PV) of a holding could be represented either as a simple decimal (with currency implied) or as a decimal-currency pair. In this example, the type returned in this field would be \"Decimal\". Available values: String, Int, Decimal, DateTime, Boolean, ResultValue, Result0D, Result1D, Result2D, Json, ResultND."
           },
           "scalesWithHoldingQuantity": {
             "type": "boolean",
@@ -213057,7 +213881,8 @@
           "Result0D",
           "Result1D",
           "Result2D",
-          "Json"
+          "Json",
+          "ResultND"
         ],
         "type": "string",
         "description": "A list of types, that define the expected output types found from an aggregation request in its result."
@@ -221646,7 +222471,7 @@
             "maxLength": 16,
             "minLength": 0,
             "type": "string",
-            "description": "The frequency at which the reference bonds are updated, this defaults to 6M, but can be 3M, exp for historically issued products.\r\n\r\nFor more information on tenors, see [knowledge base article KA-02097](https://support.lusid.com/knowledgebase/article/KA-02097)",
+            "description": "The frequency at which the reference bonds are updated, this defaults to 6M, but can be 3M, exp for historically issued products.\r\n\r\nFor more information on tenors, see [Specifying tenors in LUSID](https://support.lusid.com/docs/specifying-tenors-in-lusid)",
             "nullable": true
           },
           "currency": {
@@ -221663,7 +222488,7 @@
             "maxLength": 50,
             "minLength": 0,
             "type": "string",
-            "description": "when calculating the fraction of a year between two dates, what convention is used to represent the number of days in a year\r\nand difference between them.\r\nFor more information on day counts, see [knowledge base article KA-01798](https://support.lusid.com/knowledgebase/article/KA-01798)\r\n            \r\nSupported string (enumeration) values are: [Actual360, Act360, MoneyMarket, Actual365, Act365, Thirty360, ThirtyU360, Bond, ThirtyE360, EuroBond, ActualActual, ActAct, ActActIsda, ActActIsma, ActActIcma, OneOne, Act364, Act365F, Act365L, Act365_25, Act252, Bus252, NL360, NL365, ActActAFB, Act365Cad, ThirtyActIsda, Thirty365Isda, ThirtyEActIsda, ThirtyE360Isda, ThirtyE365Isda, ThirtyU360EOM]."
+            "description": "when calculating the fraction of a year between two dates, what convention is used to represent the number of days in a year\r\nand difference between them.\r\nFor more information on day counts, see [Day count conventions supported by LUSID](https://support.lusid.com/docs/day-count-conventions-supported-by-lusid)\r\n            \r\nSupported string (enumeration) values are: [Actual360, Act360, MoneyMarket, Actual365, Act365, Thirty360, ThirtyU360, Bond, ThirtyE360, EuroBond, ActualActual, ActAct, ActActIsda, ActActIsma, ActActIcma, OneOne, Act364, Act365F, Act365L, Act365_25, Act252, Bus252, NL360, NL365, ActActAFB, Act365Cad, ThirtyActIsda, Thirty365Isda, ThirtyEActIsda, ThirtyE360Isda, ThirtyE365Isda, ThirtyU360EOM]."
           },
           "rollConvention": {
             "maxLength": 50,
@@ -221850,7 +222675,7 @@
             }
           }
         ],
-        "description": "LUSID representation of a Credit Default Swap Index (CDX).\r\n            \r\nThis instrument has multiple legs, to see how legs are used in LUSID see [knowledge base article KA-02252](https://support.lusid.com/knowledgebase/article/KA-02252).\r\n            \r\n| Leg Index | Leg Identifier | Description |\r\n| --------- | -------------- | ----------- |\r\n| 1 | ProtectionLeg | Payments made by the protection seller in the case of default across all CDS instruments in the index. |\r\n| 2 | PremiumLeg | The premium payments made by the protection buyer across all CDS instruments in the index. |\r\n| 3 | AdditionalPayments | Cash flows relating to any additional payments (optional). |"
+        "description": "LUSID representation of a Credit Default Swap Index (CDX).\r\n            \r\nThis instrument has multiple legs, to see how legs are used in LUSID see [How does LUSID handle instrument legs?](https://support.lusid.com/docs/how-does-lusid-handle-instrument-legs).\r\n            \r\n| Leg Index | Leg Identifier | Description |\r\n| --------- | -------------- | ----------- |\r\n| 1 | ProtectionLeg | Payments made by the protection seller in the case of default across all CDS instruments in the index. |\r\n| 2 | PremiumLeg | The premium payments made by the protection buyer across all CDS instruments in the index. |\r\n| 3 | AdditionalPayments | Cash flows relating to any additional payments (optional). |"
       },
       "CdsModelOptions": {
         "allOf": [
@@ -223434,7 +224259,7 @@
             "minLength": 1,
             "pattern": "^[\\s\\S]*$",
             "type": "string",
-            "description": "The filter syntax for the Cleardown Rule. See https://support.lusid.com/knowledgebase/article/KA-02140 for more information on filter syntax."
+            "description": "The filter syntax for the Cleardown Rule. See https://support.lusid.com/docs/assigning-economic-activity-to-general-ledger-accounts-using-posting-rules for more information on filter syntax."
           }
         },
         "additionalProperties": false,
@@ -226549,7 +227374,7 @@
           "resetFrequency": {
             "minLength": 1,
             "type": "string",
-            "description": "The interest payment frequency.\r\n\r\nFor more information on tenors, see [knowledge base article KA-02097](https://support.lusid.com/knowledgebase/article/KA-02097)"
+            "description": "The interest payment frequency.\r\n\r\nFor more information on tenors, see [Specifying tenors in LUSID](https://support.lusid.com/docs/specifying-tenors-in-lusid)"
           },
           "shift": {
             "type": "integer",
@@ -228540,7 +229365,7 @@
               "CurrencyGroup"
             ],
             "type": "string",
-            "description": "The domain that the property exists in. Not all available values are currently supported, please check the documentation: https://support.lusid.com/knowledgebase/article/KA-01719/. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, FundStructure, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, TaskDefinition, Workflow, IdentifierDefinition, SettlementInstruction, TransactionFeeType, PaymentInstruction, Transfer."
+            "description": "The domain that the property exists in. Not all available values are currently supported, please check the documentation: https://support.lusid.com/docs/what-is-an-entity. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, FundStructure, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, TaskDefinition, Workflow, IdentifierDefinition, SettlementInstruction, TransactionFeeType, PaymentInstruction, Transfer."
           },
           "scope": {
             "type": "string",
@@ -228666,7 +229491,7 @@
               "type": "string",
               "description": "The key that uniquely identifies the property. It has the format {domain}/{scope}/{code}."
             },
-            "description": "A set of unique transaction properties to group the derived transaction portfolio's holdings by, perhaps for strategy tagging. Each property must be from the 'Transaction' domain and identified by a key in the format {domain}/{scope}/{code}, for example 'Transaction/strategies/quantsignal'. See https://support.lusid.com/knowledgebase/article/KA-01879/en-us for more information.",
+            "description": "A set of unique transaction properties to group the derived transaction portfolio's holdings by, perhaps for strategy tagging. Each property must be from the 'Transaction' domain and identified by a key in the format {domain}/{scope}/{code}, for example 'Transaction/strategies/quantsignal'. See https://support.lusid.com/docs/how-do-i-register-sub-holding-keys-shks-with-a-portfolio for more information.",
             "nullable": true
           },
           "instrumentScopes": {
@@ -229970,7 +230795,7 @@
               "type": "string",
               "description": "The key that uniquely identifies the property. It has the format {domain}/{scope}/{code}."
             },
-            "description": "A set of unique transaction properties to group the simple position portfolio's holdings by, perhaps for strategy tagging. Each property must be from the 'Transaction' domain and identified by a key in the format {domain}/{scope}/{code}, for example 'Transaction/strategies/quantsignal'. See https://support.lusid.com/knowledgebase/article/KA-01879/en-us for more information.",
+            "description": "A set of unique transaction properties to group the simple position portfolio's holdings by, perhaps for strategy tagging. Each property must be from the 'Transaction' domain and identified by a key in the format {domain}/{scope}/{code}, for example 'Transaction/strategies/quantsignal'. See https://support.lusid.com/docs/how-do-i-register-sub-holding-keys-shks-with-a-portfolio for more information.",
             "nullable": true
           },
           "properties": {
@@ -230274,7 +231099,7 @@
               "type": "string",
               "description": "The key that uniquely identifies the property. It has the format {domain}/{scope}/{code}."
             },
-            "description": "A set of unique transaction properties to group the transaction portfolio's holdings by, perhaps for strategy tagging. Each property must be from the 'Transaction' domain and identified by a key in the format {domain}/{scope}/{code}, for example 'Transaction/strategies/quantsignal'. See https://support.lusid.com/knowledgebase/article/KA-01879/en-us for more information.",
+            "description": "A set of unique transaction properties to group the transaction portfolio's holdings by, perhaps for strategy tagging. Each property must be from the 'Transaction' domain and identified by a key in the format {domain}/{scope}/{code}, for example 'Transaction/strategies/quantsignal'. See https://support.lusid.com/docs/how-do-i-register-sub-holding-keys-shks-with-a-portfolio for more information.",
             "nullable": true
           },
           "properties": {
@@ -230758,7 +231583,7 @@
             }
           }
         ],
-        "description": "LUSID representation of a Credit Default Swap (CDS).\r\n            \r\nThis instrument has multiple legs, to see how legs are used in LUSID see [knowledge base article KA-02252](https://support.lusid.com/knowledgebase/article/KA-02252).\r\n            \r\n| Leg Index | Leg Identifier | Description |\r\n| --------- | -------------- | ----------- |\r\n| 1 | ProtectionLeg | Cash flows occurring in the case of default. |\r\n| 2 | PremiumLeg | The premium payments made by the protection buyer. |\r\n| 3 | AdditionalPayments | Cash flows relating to any additional payments (optional). |"
+        "description": "LUSID representation of a Credit Default Swap (CDS).\r\n            \r\nThis instrument has multiple legs, to see how legs are used in LUSID see [How does LUSID handle instrument legs?](https://support.lusid.com/docs/how-does-lusid-handle-instrument-legs).\r\n            \r\n| Leg Index | Leg Identifier | Description |\r\n| --------- | -------------- | ----------- |\r\n| 1 | ProtectionLeg | Cash flows occurring in the case of default. |\r\n| 2 | PremiumLeg | The premium payments made by the protection buyer. |\r\n| 3 | AdditionalPayments | Cash flows relating to any additional payments (optional). |"
       },
       "CreditPremiumCashFlowEvent": {
         "allOf": [
@@ -230967,7 +231792,7 @@
                 "items": {
                   "type": "string"
                 },
-                "description": "The tenors for which the rates apply\r\nFor more information on tenors, see [knowledge base article KA-02097](https://support.lusid.com/knowledgebase/article/KA-02097)"
+                "description": "The tenors for which the rates apply\r\nFor more information on tenors, see [Specifying tenors in LUSID](https://support.lusid.com/docs/specifying-tenors-in-lusid)"
               },
               "spreads": {
                 "type": "array",
@@ -231243,6 +232068,88 @@
         },
         "additionalProperties": false,
         "description": "An amount of a specific currency, specifying a value and an associated unit"
+      },
+      "CurrencyGroupMinorUnit": {
+        "required": [
+          "currency",
+          "fractionOfMajor"
+        ],
+        "type": "object",
+        "properties": {
+          "currency": {
+            "maxLength": 3,
+            "minLength": 3,
+            "pattern": "^[a-zA-Z]*$",
+            "type": "string",
+            "description": "The three-letter, case-sensitive currency code of the minor unit, e.g. GBX."
+          },
+          "fractionOfMajor": {
+            "maximum": 1,
+            "minimum": 0,
+            "exclusiveMinimum": true,
+            "type": "number",
+            "description": "The fraction of the major unit that one minor unit is worth, greater than zero and no more than one, e.g. 0.01 for GBX against GBP.",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false,
+        "description": "A minor unit currency within a currency group."
+      },
+      "CurrencyGroupResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "description": "The code of the currency group. This uniquely identifies the currency group within the tenant.",
+            "nullable": true
+          },
+          "displayName": {
+            "type": "string",
+            "description": "The name of the currency group.",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "description": "A description for the currency group.",
+            "nullable": true
+          },
+          "majorUnitCurrency": {
+            "type": "string",
+            "description": "The three-letter, case-sensitive currency code of the group's major unit, e.g. GBP for the sterling group.",
+            "nullable": true
+          },
+          "circulationDomain": {
+            "type": "string",
+            "description": "The domain in which the group's currencies circulate, e.g. an ISO 3166 country code.",
+            "nullable": true
+          },
+          "minorUnits": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CurrencyGroupMinorUnit"
+            },
+            "description": "The minor unit currencies belonging to this currency group.",
+            "nullable": true
+          },
+          "version": {
+            "$ref": "#/components/schemas/Version"
+          },
+          "href": {
+            "type": "string",
+            "description": "The specific Uniform Resource Identifier (URI) for this resource.",
+            "format": "uri",
+            "nullable": true
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "A currency group: a set of related currencies sharing a major unit (e.g. GBP with minor unit GBX at 100:1)."
       },
       "CurveOptions": {
         "allOf": [
@@ -237050,7 +237957,7 @@
             }
           }
         ],
-        "description": "LUSID representation of an Equity Swap.\r\n            \r\nThis instrument has multiple legs, to see how legs are used in LUSID see [knowledge base article KA-02252](https://support.lusid.com/knowledgebase/article/KA-02252).\r\n            \r\n| Leg Index | Leg Identifier | Description |\r\n| --------- | -------------- | ----------- |\r\n| 1 | EquityLeg | Cash flows relating to the performance of the underlying equity. |\r\n| 2 | FundingLeg | The funding leg of the swap. |\r\n| 3 | EquityDividendLeg | Cash flows relating to dividend payments on the underlying equity (optional). |\r\n| 4 | AdditionalPayments | Cash flows relating to any additional payments (optional). |"
+        "description": "LUSID representation of an Equity Swap.\r\n            \r\nThis instrument has multiple legs, to see how legs are used in LUSID see [How does LUSID handle instrument legs?](https://support.lusid.com/docs/how-does-lusid-handle-instrument-legs).\r\n            \r\n| Leg Index | Leg Identifier | Description |\r\n| --------- | -------------- | ----------- |\r\n| 1 | EquityLeg | Cash flows relating to the performance of the underlying equity. |\r\n| 2 | FundingLeg | The funding leg of the swap. |\r\n| 3 | EquityDividendLeg | Cash flows relating to dividend payments on the underlying equity (optional). |\r\n| 4 | AdditionalPayments | Cash flows relating to any additional payments (optional). |"
       },
       "EquityVolDependency": {
         "allOf": [
@@ -241260,7 +242167,7 @@
           "tenor": {
             "minLength": 1,
             "type": "string",
-            "description": "Tenor for the convention name.\r\n\r\nFor more information on tenors, see [knowledge base article KA-02097](https://support.lusid.com/knowledgebase/article/KA-02097)"
+            "description": "Tenor for the convention name.\r\n\r\nFor more information on tenors, see [Specifying tenors in LUSID](https://support.lusid.com/docs/specifying-tenors-in-lusid)"
           }
         },
         "additionalProperties": false,
@@ -241285,13 +242192,13 @@
             "maxLength": 50,
             "minLength": 0,
             "type": "string",
-            "description": "When generating a multiperiod flow, or when the maturity of the flow is not given but the start date is,\r\nthe tenor is the time-step from the anchor-date to the nominal maturity of the flow prior to any adjustment.\r\n\r\nFor more information on tenors, see [knowledge base article KA-02097](https://support.lusid.com/knowledgebase/article/KA-02097)"
+            "description": "When generating a multiperiod flow, or when the maturity of the flow is not given but the start date is,\r\nthe tenor is the time-step from the anchor-date to the nominal maturity of the flow prior to any adjustment.\r\n\r\nFor more information on tenors, see [Specifying tenors in LUSID](https://support.lusid.com/docs/specifying-tenors-in-lusid)"
           },
           "dayCountConvention": {
             "maxLength": 50,
             "minLength": 0,
             "type": "string",
-            "description": "when calculating the fraction of a year between two dates, what convention is used to represent the number of days in a year\r\nand difference between them.\r\nFor more information on day counts, see [knowledge base article KA-01798](https://support.lusid.com/knowledgebase/article/KA-01798)\r\n            \r\nSupported string (enumeration) values are: [Actual360, Act360, MoneyMarket, Actual365, Act365, Thirty360, ThirtyU360, Bond, ThirtyE360, EuroBond, ActualActual, ActAct, ActActIsda, ActActIsma, ActActIcma, OneOne, Act364, Act365F, Act365L, Act365_25, Act252, Bus252, NL360, NL365, ActActAFB, Act365Cad, ThirtyActIsda, Thirty365Isda, ThirtyEActIsda, ThirtyE360Isda, ThirtyE365Isda, ThirtyU360EOM]."
+            "description": "when calculating the fraction of a year between two dates, what convention is used to represent the number of days in a year\r\nand difference between them.\r\nFor more information on day counts, see [Day count conventions supported by LUSID](https://support.lusid.com/docs/day-count-conventions-supported-by-lusid)\r\n            \r\nSupported string (enumeration) values are: [Actual360, Act360, MoneyMarket, Actual365, Act365, Thirty360, ThirtyU360, Bond, ThirtyE360, EuroBond, ActualActual, ActAct, ActActIsda, ActActIsma, ActActIcma, OneOne, Act364, Act365F, Act365L, Act365_25, Act252, Bus252, NL360, NL365, ActActAFB, Act365Cad, ThirtyActIsda, Thirty365Isda, ThirtyEActIsda, ThirtyE360Isda, ThirtyE365Isda, ThirtyU360EOM]."
           },
           "rollConvention": {
             "maxLength": 50,
@@ -241368,7 +242275,7 @@
           }
         },
         "additionalProperties": false,
-        "description": "A flow convention defines the specification for generation of the date schedule for a leg or set of cashflows.\r\nIt determines the tenor of these and, how to map the unadjusted set of dates to dates which are 'good business\r\ndays'. For example, if an unadjusted date falls on a Saturday or a bank holiday, should it be rolled forward\r\nor backward to obtain the adjusted date.\r\nFor more information, see https://support.lusid.com/knowledgebase/article/KA-02055/"
+        "description": "A flow convention defines the specification for generation of the date schedule for a leg or set of cashflows.\r\nIt determines the tenor of these and, how to map the unadjusted set of dates to dates which are 'good business\r\ndays'. For example, if an unadjusted date falls on a Saturday or a bank holiday, should it be rolled forward\r\nor backward to obtain the adjusted date.\r\nFor more information, see https://support.lusid.com/docs/flow-conventions-and-index-conventions"
       },
       "ForwardRateAgreement": {
         "allOf": [
@@ -242950,7 +243857,7 @@
               },
               "notional": {
                 "type": "number",
-                "description": "The initial notional of the Funding Leg instrument.\r\nWhen \"RequiresFundingLegHistory\" property key is present in transaction key, during a GetValuation endpoint call (for instance),\r\nthis field would overriden by the Funding Leg history's notional and this notional field would not be used in the pricing and accrual calculations.\r\nAs such, we recommend setting this to 0 or not setting it at all.\r\nPlease see the following Notebook example and Knowledge Base article:\r\nNotebook: https://github.com/finbourne/sample-notebooks/blob/master/examples/use-cases/instruments/Funding%20Leg%20Swap.ipynb\r\nKnowledge Base article: https://support.lusid.com/knowledgebase/article/KA-01764/",
+                "description": "The initial notional of the Funding Leg instrument.\r\nWhen \"RequiresFundingLegHistory\" property key is present in transaction key, during a GetValuation endpoint call (for instance),\r\nthis field would overriden by the Funding Leg history's notional and this notional field would not be used in the pricing and accrual calculations.\r\nAs such, we recommend setting this to 0 or not setting it at all.\r\nPlease see the following Notebook example and Knowledge Base article:\r\nNotebook: https://github.com/finbourne/sample-notebooks/blob/master/examples/use-cases/instruments/Funding%20Leg%20Swap.ipynb\r\nKnowledge Base article: https://support.lusid.com/docs/supported-instruments-in-lusid",
                 "format": "double",
                 "nullable": true
               },
@@ -244493,7 +245400,7 @@
           },
           "convention": {
             "type": "string",
-            "description": "If appropriate, the day count convention method used in pricing (rates futures).\r\nFor more information on day counts, see [knowledge base article KA-01798](https://support.lusid.com/knowledgebase/article/KA-01798)\r\n            \r\nSupported string (enumeration) values are: [Actual360, Act360, MoneyMarket, Actual365, Act365, Thirty360, ThirtyU360, Bond, ThirtyE360, EuroBond, ActualActual, ActAct, ActActIsda, ActActIsma, ActActIcma, OneOne, Act364, Act365F, Act365L, Act365_25, Act252, Bus252, NL360, NL365, ActActAFB, Act365Cad, ThirtyActIsda, Thirty365Isda, ThirtyEActIsda, ThirtyE360Isda, ThirtyE365Isda, ThirtyU360EOM].",
+            "description": "If appropriate, the day count convention method used in pricing (rates futures).\r\nFor more information on day counts, see [Day count conventions supported by LUSID](https://support.lusid.com/docs/day-count-conventions-supported-by-lusid)\r\n            \r\nSupported string (enumeration) values are: [Actual360, Act360, MoneyMarket, Actual365, Act365, Thirty360, ThirtyU360, Bond, ThirtyE360, EuroBond, ActualActual, ActAct, ActActIsda, ActActIsma, ActActIcma, OneOne, Act364, Act365F, Act365L, Act365_25, Act252, Bus252, NL360, NL365, ActActAFB, Act365Cad, ThirtyActIsda, Thirty365Isda, ThirtyEActIsda, ThirtyE360Isda, ThirtyE365Isda, ThirtyU360EOM].",
             "nullable": true
           },
           "country": {
@@ -244777,7 +245684,7 @@
             }
           }
         ],
-        "description": "LUSID representation of an FX Forward.\r\nIncluding FX Spot and Non-Deliverable Forwards.\r\n            \r\nThis instrument has multiple legs, to see how legs are used in LUSID see [knowledge base article KA-02252](https://support.lusid.com/knowledgebase/article/KA-02252).\r\n            \r\n| Leg Index | Leg Identifier | Description |\r\n| --------- | -------------- | ----------- |\r\n| 1 | DomesticLeg | Cash flows in the domestic currency of the forward. |\r\n| 2 | ForeignLeg | Cash flows in the foreign currency of the forward (not present for non-deliverable forwards). |"
+        "description": "LUSID representation of an FX Forward.\r\nIncluding FX Spot and Non-Deliverable Forwards.\r\n            \r\nThis instrument has multiple legs, to see how legs are used in LUSID see [How does LUSID handle instrument legs?](https://support.lusid.com/docs/how-does-lusid-handle-instrument-legs).\r\n            \r\n| Leg Index | Leg Identifier | Description |\r\n| --------- | -------------- | ----------- |\r\n| 1 | DomesticLeg | Cash flows in the domestic currency of the forward. |\r\n| 2 | ForeignLeg | Cash flows in the foreign currency of the forward (not present for non-deliverable forwards). |"
       },
       "FxForwardCurveByQuoteReference": {
         "allOf": [
@@ -244807,7 +245714,7 @@
                 "items": {
                   "type": "string"
                 },
-                "description": "Tenors for which the forward rates apply.\r\nFor more information on tenors, see [knowledge base article KA-02097](https://support.lusid.com/knowledgebase/article/KA-02097)"
+                "description": "Tenors for which the forward rates apply.\r\nFor more information on tenors, see [Specifying tenors in LUSID](https://support.lusid.com/docs/specifying-tenors-in-lusid)"
               },
               "quoteReferences": {
                 "type": "array",
@@ -245395,7 +246302,7 @@
                 "items": {
                   "type": "string"
                 },
-                "description": "Tenors for which the forward rates apply.\r\nFor more information on tenors, see [knowledge base article KA-02097](https://support.lusid.com/knowledgebase/article/KA-02097)"
+                "description": "Tenors for which the forward rates apply.\r\nFor more information on tenors, see [Specifying tenors in LUSID](https://support.lusid.com/docs/specifying-tenors-in-lusid)"
               },
               "rates": {
                 "type": "array",
@@ -245491,7 +246398,7 @@
                 "items": {
                   "type": "string"
                 },
-                "description": "Tenors for which the forward rates apply.\r\nFor more information on tenors, see [knowledge base article KA-02097](https://support.lusid.com/knowledgebase/article/KA-02097)"
+                "description": "Tenors for which the forward rates apply.\r\nFor more information on tenors, see [Specifying tenors in LUSID](https://support.lusid.com/docs/specifying-tenors-in-lusid)"
               },
               "pipRates": {
                 "type": "array",
@@ -245976,7 +246883,7 @@
             }
           }
         ],
-        "description": "LUSID representation of an FX Swap. Composed of two FX Forwards.\r\n            \r\nThis instrument has multiple legs, to see how legs are used in LUSID see [knowledge base article KA-02252](https://support.lusid.com/knowledgebase/article/KA-02252).\r\n            \r\n| Leg Index | Leg Identifier | Description |\r\n| --------- | -------------- | ----------- |\r\n| 1 | FarDomesticLeg | Cash flows in the domestic currency for the far forward. |\r\n| 2 | FarForeignLeg | Cash flows in the foreign currency for the far forward (not present for non-deliverable forwards). |\r\n| 3 | NearDomesticLeg | Cash flows in the domestic currency for the near forward. |\r\n| 4 | NearForeignLeg | Cash flows in the foreign currency for the near forward (not present for non-deliverable forwards). |"
+        "description": "LUSID representation of an FX Swap. Composed of two FX Forwards.\r\n            \r\nThis instrument has multiple legs, to see how legs are used in LUSID see [How does LUSID handle instrument legs?](https://support.lusid.com/docs/how-does-lusid-handle-instrument-legs).\r\n            \r\n| Leg Index | Leg Identifier | Description |\r\n| --------- | -------------- | ----------- |\r\n| 1 | FarDomesticLeg | Cash flows in the domestic currency for the far forward. |\r\n| 2 | FarForeignLeg | Cash flows in the foreign currency for the far forward (not present for non-deliverable forwards). |\r\n| 3 | NearDomesticLeg | Cash flows in the domestic currency for the near forward. |\r\n| 4 | NearForeignLeg | Cash flows in the foreign currency for the near forward (not present for non-deliverable forwards). |"
       },
       "FxTenorConvention": {
         "required": [
@@ -246140,7 +247047,7 @@
             "minLength": 1,
             "pattern": "^[\\s\\S]*$",
             "type": "string",
-            "description": "The filter syntax for the Mapping filter. See https://support.lusid.com/knowledgebase/article/KA-02140 for more information on filter syntax"
+            "description": "The filter syntax for the Mapping filter. See https://support.lusid.com/docs/assigning-economic-activity-to-general-ledger-accounts-using-posting-rules for more information on filter syntax"
           },
           "levels": {
             "maxItems": 5,
@@ -246565,6 +247472,36 @@
           }
         },
         "additionalProperties": false
+      },
+      "GetPaymentInstructionsResponse": {
+        "type": "object",
+        "properties": {
+          "values": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/PaymentInstruction"
+            },
+            "description": "The Payment Instructions that were found, keyed by the payment record id used to retrieve them. Only Payment Instructions that were found will be contained in this collection.",
+            "nullable": true
+          },
+          "failed": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/ErrorDetail"
+            },
+            "description": "The payment record ids that did not resolve to a Payment Instruction, along with the nature of the failure.",
+            "nullable": true
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "The response from getting Payment Instructions by payment record id. Each requested payment record id\r\nappears in exactly one of Values or Failed."
       },
       "GetQuotesResponse": {
         "type": "object",
@@ -248804,13 +249741,13 @@
             "maxLength": 32,
             "minLength": 0,
             "type": "string",
-            "description": "The tenor of the payment. For an OIS index this is always 1 day. For other indices, e.g. LIBOR it will have a variable tenor typically between 1 day and 1 year.\r\n\r\nFor more information on tenors, see [knowledge base article KA-02097](https://support.lusid.com/knowledgebase/article/KA-02097)"
+            "description": "The tenor of the payment. For an OIS index this is always 1 day. For other indices, e.g. LIBOR it will have a variable tenor typically between 1 day and 1 year.\r\n\r\nFor more information on tenors, see [Specifying tenors in LUSID](https://support.lusid.com/docs/specifying-tenors-in-lusid)"
           },
           "dayCountConvention": {
             "maxLength": 32,
             "minLength": 0,
             "type": "string",
-            "description": "when calculating the fraction of a year between two dates, what convention is used to represent the number of days in a year\r\nand difference between them.\r\nFor more information on day counts, see [knowledge base article KA-01798](https://support.lusid.com/knowledgebase/article/KA-01798)\r\n            \r\nSupported string (enumeration) values are: [Actual360, Act360, MoneyMarket, Actual365, Act365, Thirty360, ThirtyU360, Bond, ThirtyE360, EuroBond, ActualActual, ActAct, ActActIsda, ActActIsma, ActActIcma, OneOne, Act364, Act365F, Act365L, Act365_25, Act252, Bus252, NL360, NL365]."
+            "description": "when calculating the fraction of a year between two dates, what convention is used to represent the number of days in a year\r\nand difference between them.\r\nFor more information on day counts, see [Day count conventions supported by LUSID](https://support.lusid.com/docs/day-count-conventions-supported-by-lusid)\r\n            \r\nSupported string (enumeration) values are: [Actual360, Act360, MoneyMarket, Actual365, Act365, Thirty360, ThirtyU360, Bond, ThirtyE360, EuroBond, ActualActual, ActAct, ActActIsda, ActActIsma, ActActIcma, OneOne, Act364, Act365F, Act365L, Act365_25, Act252, Bus252, NL360, NL365]."
           },
           "currency": {
             "type": "string",
@@ -249249,7 +250186,7 @@
             "maxLength": 32,
             "minLength": 0,
             "type": "string",
-            "description": "Observation lag. This is a string that must have units of Month.\r\nThis field is typically 3 or 4 months, but can vary, older bonds and swaps have 8 months lag.\r\nFor Bonds with a calculation type of Ratio, this property, if set, must be 0Invalid.\r\n\r\nFor more information on tenors, see [knowledge base article KA-02097](https://support.lusid.com/knowledgebase/article/KA-02097)"
+            "description": "Observation lag. This is a string that must have units of Month.\r\nThis field is typically 3 or 4 months, but can vary, older bonds and swaps have 8 months lag.\r\nFor Bonds with a calculation type of Ratio, this property, if set, must be 0Invalid.\r\n\r\nFor more information on tenors, see [Specifying tenors in LUSID](https://support.lusid.com/docs/specifying-tenors-in-lusid)"
           },
           "inflationInterpolation": {
             "maxLength": 32,
@@ -249262,7 +250199,7 @@
             "maxLength": 32,
             "minLength": 0,
             "type": "string",
-            "description": "Frequency of inflation updated. Optional and defaults to Monthly which is the most common.\r\nHowever both Australian and New Zealand inflation is published Quarterly. Only tenors of 1M or 3M are supported.\r\n\r\nFor more information on tenors, see [knowledge base article KA-02097](https://support.lusid.com/knowledgebase/article/KA-02097)",
+            "description": "Frequency of inflation updated. Optional and defaults to Monthly which is the most common.\r\nHowever both Australian and New Zealand inflation is published Quarterly. Only tenors of 1M or 3M are supported.\r\n\r\nFor more information on tenors, see [Specifying tenors in LUSID](https://support.lusid.com/docs/specifying-tenors-in-lusid)",
             "nullable": true
           },
           "inflationRollDay": {
@@ -249704,7 +250641,7 @@
             }
           }
         ],
-        "description": "LUSID representation of an Inflation Swap.\r\nThe implementation supports the following swap types:\r\n* Zero Coupon inflation swap, with a single payment at maturity.\r\n* LPI Swap (capped and floored)\r\n* Year on Year inflation swap\r\n            \r\nThis instrument has multiple legs, to see how legs are used in LUSID see [knowledge base article KA-02252](https://support.lusid.com/knowledgebase/article/KA-02252).\r\n            \r\n| Leg Index | Leg Identifier | Description |\r\n| --------- | -------------- | ----------- |\r\n| 1 | InflationLeg | Cash flows with a rate relating to an underlying inflation index. |\r\n| 2 | FixedLeg | Cash flows with a fixed rate. |\r\n| 3 | AdditionalPayments | Cash flows relating to any additional payments (optional). |"
+        "description": "LUSID representation of an Inflation Swap.\r\nThe implementation supports the following swap types:\r\n* Zero Coupon inflation swap, with a single payment at maturity.\r\n* LPI Swap (capped and floored)\r\n* Year on Year inflation swap\r\n            \r\nThis instrument has multiple legs, to see how legs are used in LUSID see [How does LUSID handle instrument legs?](https://support.lusid.com/docs/how-does-lusid-handle-instrument-legs).\r\n            \r\n| Leg Index | Leg Identifier | Description |\r\n| --------- | -------------- | ----------- |\r\n| 1 | InflationLeg | Cash flows with a rate relating to an underlying inflation index. |\r\n| 2 | FixedLeg | Cash flows with a fixed rate. |\r\n| 3 | AdditionalPayments | Cash flows relating to any additional payments (optional). |"
       },
       "InformationalErrorEvent": {
         "allOf": [
@@ -252022,7 +252959,7 @@
             }
           }
         ],
-        "description": "LUSID representation of an Interest Rate Swap, including:\r\n\r\n  * Vanilla (single currency fixed-float non-amortising)\r\n  * CrossCurrency (>1 currency is used by the swap legs)\r\n  * Basis (single currency, floating-floating legs of different tenors)\r\n  * Amortising (the swap has 1+ leg with amortised notional)\r\n            \r\nThis instrument has multiple legs, to see how legs are used in LUSID see [knowledge base article KA-02252](https://support.lusid.com/knowledgebase/article/KA-02252).\r\n            \r\n| Leg Index | Leg Identifier | Description |\r\n| --------- | -------------- | ----------- |\r\n| 1 | Pay/Receive | Cash flows representing the pay/receive leg. |\r\n| 2 | Receive/Pay | Cash flows representing the receive/pay leg. |\r\n| 3 | AdditionalPayments | Cash flows relating to any additional payments (optional). |"
+        "description": "LUSID representation of an Interest Rate Swap, including:\r\n\r\n  * Vanilla (single currency fixed-float non-amortising)\r\n  * CrossCurrency (>1 currency is used by the swap legs)\r\n  * Basis (single currency, floating-floating legs of different tenors)\r\n  * Amortising (the swap has 1+ leg with amortised notional)\r\n            \r\nThis instrument has multiple legs, to see how legs are used in LUSID see [How does LUSID handle instrument legs?](https://support.lusid.com/docs/how-does-lusid-handle-instrument-legs).\r\n            \r\n| Leg Index | Leg Identifier | Description |\r\n| --------- | -------------- | ----------- |\r\n| 1 | Pay/Receive | Cash flows representing the pay/receive leg. |\r\n| 2 | Receive/Pay | Cash flows representing the receive/pay leg. |\r\n| 3 | AdditionalPayments | Cash flows relating to any additional payments (optional). |"
       },
       "InterestRateSwaption": {
         "allOf": [
@@ -257981,7 +258918,7 @@
               "type": "string",
               "description": "The key that uniquely identifies the property. It has the format {domain}/{scope}/{code}."
             },
-            "description": "A set of unique transaction properties to group the derived transaction portfolio's holdings by, perhaps for strategy tagging. Each property must be from the 'Transaction' domain and identified by a key in the format {domain}/{scope}/{code}, for example 'Transaction/strategies/quantsignal'. See https://support.lusid.com/knowledgebase/article/KA-01879/en-us for more information.",
+            "description": "A set of unique transaction properties to group the derived transaction portfolio's holdings by, perhaps for strategy tagging. Each property must be from the 'Transaction' domain and identified by a key in the format {domain}/{scope}/{code}, for example 'Transaction/strategies/quantsignal'. See https://support.lusid.com/docs/how-do-i-register-sub-holding-keys-shks-with-a-portfolio for more information.",
             "nullable": true
           },
           "amortisationMethod": {
@@ -258098,7 +259035,7 @@
               "type": "string",
               "description": "The key that uniquely identifies the property. It has the format {domain}/{scope}/{code}."
             },
-            "description": "A set of unique transaction properties to group the derived transaction portfolio's holdings by, perhaps for strategy tagging. Each property must be from the 'Transaction' domain and identified by a key in the format {domain}/{scope}/{code}, for example 'Transaction/strategies/quantsignal'. See https://support.lusid.com/knowledgebase/article/KA-01879/en-us for more information.",
+            "description": "A set of unique transaction properties to group the derived transaction portfolio's holdings by, perhaps for strategy tagging. Each property must be from the 'Transaction' domain and identified by a key in the format {domain}/{scope}/{code}, for example 'Transaction/strategies/quantsignal'. See https://support.lusid.com/docs/how-do-i-register-sub-holding-keys-shks-with-a-portfolio for more information.",
             "nullable": true
           },
           "amortisationMethod": {
@@ -261182,6 +262119,41 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/CorporateActionSource"
+            }
+          },
+          "href": {
+            "type": "string",
+            "format": "uri",
+            "nullable": true
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PagedResourceListOfCurrencyGroupResponse": {
+        "required": [
+          "values"
+        ],
+        "type": "object",
+        "properties": {
+          "nextPage": {
+            "type": "string",
+            "nullable": true
+          },
+          "previousPage": {
+            "type": "string",
+            "nullable": true
+          },
+          "values": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CurrencyGroupResponse"
             }
           },
           "href": {
@@ -267164,18 +268136,6 @@
           },
           "custodianAccount": {
             "$ref": "#/components/schemas/CustodianAccount"
-          },
-          "resolvedCustodianAccount": {
-            "$ref": "#/components/schemas/ResolvedCustodianAccount"
-          },
-          "holdingPropertyBalances": {
-            "type": "object",
-            "additionalProperties": {
-              "type": "number",
-              "format": "double"
-            },
-            "description": "The latest running balance of each holding property maintained on the holding by transaction type holding property deltas, keyed by holding property key, for example 'CommittedCapital'. Only populated when the holding has at least one balance.",
-            "nullable": true
           }
         },
         "additionalProperties": false,
@@ -268438,7 +269398,7 @@
             "minLength": 1,
             "pattern": "^[\\s\\S]*$",
             "type": "string",
-            "description": "The filter syntax for the Posting Rule. See https://support.lusid.com/knowledgebase/article/KA-02140 for more information on filter syntax."
+            "description": "The filter syntax for the Posting Rule. See https://support.lusid.com/docs/assigning-economic-activity-to-general-ledger-accounts-using-posting-rules for more information on filter syntax."
           }
         },
         "additionalProperties": false,
@@ -269090,6 +270050,10 @@
             },
             "description": "Names the funding curve each currency discounts on, keyed by ISO 4217 currency code\r\n(e.g. \"GBP\" -> \"GBPOIS-USDCOLL\"). Keys are case-insensitive. A currency absent from\r\nthe map keeps the default funding curve, {CCY}OIS, so an absent or empty map leaves\r\nevery valuation unchanged.",
             "nullable": true
+          },
+          "defaultPoolFactorsToUnity": {
+            "type": "boolean",
+            "description": "When true, an asset-backed instrument with no pool-factor history defaults the pool\r\nfactor to 1.0 (the full original face) instead of 0. When false (default), the factor\r\ndefaults to 0 as before, preserving current behaviour."
           }
         },
         "additionalProperties": false,
@@ -271371,7 +272335,7 @@
             "maxLength": 1024,
             "minLength": 0,
             "type": "string",
-            "description": "Expression to filter the result set. For more information about filtering LUSID results, see https://support.lusid.com/knowledgebase/article/KA-01914.",
+            "description": "Expression to filter the result set. For more information about filtering LUSID results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
             "nullable": true
           },
           "customSortBy": {
@@ -271698,6 +272662,14 @@
                 "type": "string",
                 "description": "The effectiveAt of the quote for the identified entity.",
                 "format": "date-time"
+              },
+              "descriptor": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Optional additional description of the quote being depended upon, e.g. the model or lineage that produced it.\r\nWhen matching a dependency against supplied market data overrides, the descriptor must match as well as the identifier and code.\r\nIf omitted, the dependency has no descriptor.",
+                "nullable": true
               },
               "dependencyType": {
                 "enum": [
@@ -272693,7 +273665,7 @@
           "id",
           "recDefinitionDisplayName",
           "recDefinitionId",
-          "runLog",
+          "runLogs",
           "status"
         ],
         "type": "object",
@@ -272731,12 +273703,12 @@
           "closedPeriods": {
             "$ref": "#/components/schemas/RecClosedPeriods"
           },
-          "runLog": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/RecRunLogEntry"
+          "runLogs": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/RecRunLog"
             },
-            "description": "A chronologically ordered list of all runs on the instance. Always contains at least one entry."
+            "description": "The instance's run history, keyed by rec type. Contains an entry for each rec type that has produced a result set, so a run appears only once it has completed or failed. Empty while the instance's first run is still in flight."
           },
           "href": {
             "type": "string",
@@ -272756,7 +273728,7 @@
           }
         },
         "additionalProperties": false,
-        "description": "The expanded view of a rec instance: its identity, lifecycle status, lock state, closed periods\r\n(for Closed Period windows) and the time-series of runs in the run log."
+        "description": "The expanded view of a rec instance: its identity, lifecycle status, lock state, closed periods\r\n(for Closed Period windows) and, per rec type, the time-series of runs in that rec type's run log."
       },
       "RecInstanceId": {
         "required": [
@@ -274226,9 +275198,35 @@
         "additionalProperties": false,
         "description": "When the reviewer is allowed to submit their work for approval. Omit it to let them submit at any time."
       },
+      "RecRunLog": {
+        "required": [
+          "runCount",
+          "runs"
+        ],
+        "type": "object",
+        "properties": {
+          "runCount": {
+            "type": "integer",
+            "description": "The total number of runs of this rec type, which is not necessarily the number returned. A value greater than ten means runs has been truncated; the runs beyond it remain retrievable from previousRuns on the rec type's result set.",
+            "format": "int32"
+          },
+          "runs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RecRunLogEntry"
+            },
+            "description": "The ten most recent runs of this rec type, ordered by run number descending, so the current run is always the first entry. Exactly one entry has a null supersededAsAt."
+          }
+        },
+        "additionalProperties": false,
+        "description": "One rec type's run history within a rec instance: its most recent runs, and the total number of runs those\r\nwere taken from."
+      },
       "RecRunLogEntry": {
         "required": [
+          "approvalStatus",
           "datesReconciled",
+          "execution",
+          "recResultSetHref",
           "runAsAt",
           "runNumber"
         ],
@@ -274252,10 +275250,29 @@
           },
           "datesReconciled": {
             "$ref": "#/components/schemas/RecDatesReconciled"
+          },
+          "execution": {
+            "$ref": "#/components/schemas/RecExecution"
+          },
+          "approvalStatus": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The position of this result set in the approval ceremony. Available values: UnderReview, PendingApproval, RevisionsRequested, Approved, NotApplicable."
+          },
+          "resultCounts": {
+            "$ref": "#/components/schemas/RecResultCounts"
+          },
+          "review": {
+            "$ref": "#/components/schemas/RecReview"
+          },
+          "recResultSetHref": {
+            "type": "string",
+            "description": "The specific Uniform Resource Identifier (URI) of the full rec result set this run belongs to.",
+            "format": "uri"
           }
         },
         "additionalProperties": false,
-        "description": "A single run within an instance's run log. All runs share the same effective dates (frozen at\r\ninstantiation); each has a different asAt, advanced on re-run."
+        "description": "A summary of a single run of a single rec type within an instance's run log, carrying the per-run outcome\r\ndetail the grouped-by-instance overview renders. Every entry comes off a result set, so only a run that has\r\ncompleted or failed appears: a run still in flight is not logged until it lands."
       },
       "RecSubmission": {
         "required": [
@@ -275151,7 +276168,7 @@
           "traversalDirection": {
             "minLength": 1,
             "type": "string",
-            "description": "Direction of relationship between the requested entity and related entity. This can be 'In' or 'Out'. Read more about relationships traversal direction in LUSID Knowledge Base here https://support.lusid.com/knowledgebase/article/KA-01679."
+            "description": "Direction of relationship between the requested entity and related entity. This can be 'In' or 'Out'. Read more about relationships traversal direction in LUSID Knowledge Base here https://support.lusid.com/docs/creating-relationships-between-certain-types-of-entity."
           },
           "traversalDescription": {
             "minLength": 1,
@@ -275315,7 +276332,7 @@
               "accrualBasis": {
                 "minLength": 1,
                 "type": "string",
-                "description": "For calculation of interest, the accrual basis to be used.\r\nFor more information on day counts, see [knowledge base article KA-01798](https://support.lusid.com/knowledgebase/article/KA-01798)\r\n            \r\nSupported string (enumeration) values are: [Actual360, Act360, MoneyMarket, Actual365, Act365, Thirty360, ThirtyU360, Bond, ThirtyE360, EuroBond, ActualActual, ActAct, ActActIsda, ActActIsma, ActActIcma, OneOne, Act364, Act365F, Act365L, Act365_25, Act252, Bus252, NL360, NL365, ActActAFB, Act365Cad, ThirtyActIsda, Thirty365Isda, ThirtyEActIsda, ThirtyE360Isda, ThirtyE365Isda, ThirtyU360EOM]."
+                "description": "For calculation of interest, the accrual basis to be used.\r\nFor more information on day counts, see [Day count conventions supported by LUSID](https://support.lusid.com/docs/day-count-conventions-supported-by-lusid)\r\n            \r\nSupported string (enumeration) values are: [Actual360, Act360, MoneyMarket, Actual365, Act365, Thirty360, ThirtyU360, Bond, ThirtyE360, EuroBond, ActualActual, ActAct, ActActIsda, ActActIsma, ActActIcma, OneOne, Act364, Act365F, Act365L, Act365_25, Act252, Bus252, NL360, NL365, ActActAFB, Act365Cad, ThirtyActIsda, Thirty365Isda, ThirtyEActIsda, ThirtyE360Isda, ThirtyE365Isda, ThirtyU360EOM]."
               },
               "collateral": {
                 "type": "array",
@@ -279344,6 +280361,62 @@
           "PortfolioResultDataKeyRule"
         ],
         "type": "string"
+      },
+      "ResultND": {
+        "type": "object",
+        "properties": {
+          "resultValueType": {
+            "type": "string",
+            "description": "The discriminator for this result shape. Always \"ResultND\".",
+            "nullable": true,
+            "readOnly": true
+          },
+          "dimension": {
+            "type": "integer",
+            "description": "The rank of the result, 0..N. Determines which of `value` / `values` is populated\r\nand how deeply `values` is nested.",
+            "format": "int32"
+          },
+          "labels": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "description": "One ordered array of labels per axis, index to label, in the same axis order as\r\n`AddressDefinition.Axes`. Length equals `dimension`; empty for a scalar.",
+            "nullable": true
+          },
+          "value": {
+            "type": "number",
+            "description": "The scalar value. Present if and only if `dimension` is 0.",
+            "format": "double",
+            "nullable": true
+          },
+          "values": {
+            "type": "array",
+            "items": {
+              "type": "number",
+              "format": "double"
+            },
+            "description": "The values, flattened row-major with axis 0 outermost and dense - a coordinate the legacy\r\nformat would have elided is materialised as 0. The shape is read off `labels`: position\r\n(i0, i1, ..., ik) is at offset i0 * len(labels[1]) * ... * len(labels[k]) + i1 * ... + ik.\r\nPresent if and only if `dimension` is at least 1.",
+            "nullable": true
+          },
+          "hasAnnotation": {
+            "type": "boolean",
+            "description": "Unchanged from Result0D/1D/2D."
+          },
+          "units": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UnitDimension"
+            },
+            "description": "A flat list of dimensional-analysis units, replacing the doubled\r\n`{ units: { units: [] } }` wrapper on the legacy types. The count reflects the order of\r\nthe derivative (e.g. two entries for a ratio such as a rates delta), not the result's axes.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "A single result-value shape whose structure is derived from `dimension`, replacing one\r\nhand-maintained type per rank (Result0D/Result1D/Result2D). Additive and opt-in: existing\r\nconsumers of those types see no change to their response bytes."
       },
       "ResultValue": {
         "required": [
@@ -286370,7 +287443,7 @@
             }
           }
         ],
-        "description": "A swap in which one party makes payments based on leg rates (fixed or floating) while the other party makes payments based on the return of an underlying instrument.\r\nThe underlying instrument can be provided as an inline economic definition or as a reference instrument pointing to an already upserted instrument.\r\nA reference instrument in this case would consist of instrument scope, instrument id and instrument id type (ISIN, LUID etc.).\r\n            \r\nThis instrument has multiple legs, to see how legs are used in LUSID see [knowledge base article KA-02252](https://support.lusid.com/knowledgebase/article/KA-02252).\r\n            \r\n| Leg Index | Leg Identifier | Description |\r\n| --------- | -------------- | ----------- |\r\n| 1 | AssetLeg | Cash flows relating to the returns generated by the underlying instrument. |\r\n| 2 | FundingLeg | The funding leg of the swap. |\r\n| 3 | AdditionalPayments | Cash flows relating to any additional payments (optional). |"
+        "description": "A swap in which one party makes payments based on leg rates (fixed or floating) while the other party makes payments based on the return of an underlying instrument.\r\nThe underlying instrument can be provided as an inline economic definition or as a reference instrument pointing to an already upserted instrument.\r\nA reference instrument in this case would consist of instrument scope, instrument id and instrument id type (ISIN, LUID etc.).\r\n            \r\nThis instrument has multiple legs, to see how legs are used in LUSID see [How does LUSID handle instrument legs?](https://support.lusid.com/docs/how-does-lusid-handle-instrument-legs).\r\n            \r\n| Leg Index | Leg Identifier | Description |\r\n| --------- | -------------- | ----------- |\r\n| 1 | AssetLeg | Cash flows relating to the returns generated by the underlying instrument. |\r\n| 2 | FundingLeg | The funding leg of the swap. |\r\n| 3 | AdditionalPayments | Cash flows relating to any additional payments (optional). |"
       },
       "Touch": {
         "required": [
@@ -287414,6 +288487,10 @@
             "description": "Optional date used to specify end of an extended window for settlement information. When provided, transactions will be returned between start and end date, but settlement information between start date and this date will be included. When provided, the value must be greater than or equal to end date.",
             "format": "dateorcutlabel",
             "nullable": true
+          },
+          "returnExcludedTransactions": {
+            "type": "boolean",
+            "description": "Option to specify whether or not to include transactions that are marked as excluded by the portfolio's transaction exclusion filter. Excluded transactions do not affect holdings. Defaults to false if not specified."
           }
         },
         "additionalProperties": false
@@ -288494,6 +289571,20 @@
         },
         "additionalProperties": false
       },
+      "TransferAgencyExcludedOrder": {
+        "type": "object",
+        "properties": {
+          "orderId": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "reason": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "An order left out of the sizing an estimate was struck from, with the reason it was left out."
+      },
       "TransferAgencyOrderEstimateResult": {
         "type": "object",
         "properties": {
@@ -288527,6 +289618,13 @@
           "fxRateUsed": {
             "type": "number",
             "format": "double"
+          },
+          "excludedOrders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TransferAgencyExcludedOrder"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false,
@@ -289443,6 +290541,33 @@
           }
         },
         "additionalProperties": false
+      },
+      "UnitDimension": {
+        "type": "object",
+        "properties": {
+          "unitDomain": {
+            "type": "string",
+            "description": "The domain this factor is drawn from, e.g. \"Ccy\", \"Rate\", \"Vol\", \"Security\".",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "description": "The name within the domain, e.g. a currency code or a curve identifier.",
+            "nullable": true
+          },
+          "power": {
+            "type": "integer",
+            "description": "The exponent this factor is raised to.",
+            "format": "int32"
+          },
+          "scale": {
+            "type": "number",
+            "description": "The scale of one unit of this factor, e.g. 1e-4 for a basis point.",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false,
+        "description": "One factor of a result's unit, modelled as dimensional analysis rather than a label, e.g. a\r\nrates delta is GBP^1 . GBP.LIBOR.3M^-1 - \"GBP per basis point\". A result's `units` is a\r\nflat list of these; the count tracks the order of the derivative (a ratio), not the result's\r\naxes, and must not be indexed by axis."
       },
       "UnitisationData": {
         "required": [
@@ -291324,6 +292449,60 @@
         },
         "additionalProperties": false,
         "description": "Credit Support Annex information. The interaction in terms of margining requirements between a set of trades for a given counterparty."
+      },
+      "UpsertCurrencyGroupRequest": {
+        "required": [
+          "code",
+          "displayName",
+          "majorUnitCurrency"
+        ],
+        "type": "object",
+        "properties": {
+          "code": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The code of the currency group. This uniquely identifies the currency group within the tenant."
+          },
+          "displayName": {
+            "maxLength": 512,
+            "minLength": 0,
+            "type": "string",
+            "description": "The name of the currency group."
+          },
+          "description": {
+            "maxLength": 512,
+            "minLength": 0,
+            "type": "string",
+            "description": "A description for the currency group.",
+            "nullable": true
+          },
+          "majorUnitCurrency": {
+            "maxLength": 3,
+            "minLength": 3,
+            "pattern": "^[a-zA-Z]*$",
+            "type": "string",
+            "description": "The three-letter, case-sensitive currency code of the group's major unit, e.g. GBP for the sterling group."
+          },
+          "circulationDomain": {
+            "maxLength": 512,
+            "minLength": 0,
+            "type": "string",
+            "description": "The domain in which the group's currencies circulate, e.g. an ISO 3166 country code.",
+            "nullable": true
+          },
+          "minorUnits": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CurrencyGroupMinorUnit"
+            },
+            "description": "The minor unit currencies belonging to this currency group.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Request body for creating or updating a currency group."
       },
       "UpsertCustomEntitiesResponse": {
         "type": "object",
@@ -294795,7 +295974,8 @@
               "instrument": {
                 "maxLength": 50,
                 "minLength": 1,
-                "type": "string"
+                "type": "string",
+                "description": "The market-data descriptor of the surfaces to shift, not an instrument identifier such as a LUID.\r\nFor an equity vol surface this is the underlier code the surface was mastered against (e.g. 'TSLA'\r\nfor market asset 'TSLA/USD/LN'); for an interest rate vol surface it is the currency (e.g. 'USD');\r\nfor an FX vol surface it is the currency pair (e.g. 'GBP/USD'). The wildcard 'EquityVol.*' widens\r\nthe shift to every equity vol surface in the valuation; interest rate and FX vol surfaces cannot\r\nbe widened, since neither a currency nor a currency pair names a set of instruments."
               },
               "amount": {
                 "maximum": 1000000,
@@ -295795,6 +296975,10 @@
       "description": "Methods for the storage and retrieval of counterparty related information such as Counterparty Agreements, Credit Support Annexes and Netting Set data."
     },
     {
+      "name": "CurrencyGroups",
+      "description": "Endpoints for managing currency groups in LUSID."
+    },
+    {
       "name": "Custom Data Models",
       "description": "Endpoints for Creating/Reading/Updating/Deleting Custom Data Models"
     },
@@ -295820,7 +297004,7 @@
     },
     {
       "name": "Derived Transaction Portfolios",
-      "description": "A derived transaction portfolio inherits all the transactions from a parent transaction portfolio (though it can also contain its own transactions), enabling different modelling strategies to be devised, among other operations. Note that a derived transaction portfolio is a type of portfolio, so endpoints in the TransactionPortfolios API and the Portfolios API can also be called. For more information, see https://support.lusid.com/knowledgebase/article/KA-01853."
+      "description": "A derived transaction portfolio inherits all the transactions from a parent transaction portfolio (though it can also contain its own transactions), enabling different modelling strategies to be devised, among other operations. Note that a derived transaction portfolio is a type of portfolio, so endpoints in the TransactionPortfolios API and the Portfolios API can also be called. For more information, see https://support.lusid.com/docs/how-do-i-create-a-derived-transaction-portfolio."
     },
     {
       "name": "Entities",
@@ -295864,7 +297048,7 @@
     },
     {
       "name": "Instruments",
-      "description": "An instrument represents a financial asset that an investor owns or has exposure to. Each transaction should be booked against an instrument stored in the LUSID instrument master. For more information, see https://support.lusid.com/knowledgebase/article/KA-01857."
+      "description": "An instrument represents a financial asset that an investor owns or has exposure to. Each transaction should be booked against an instrument stored in the LUSID instrument master. For more information, see https://support.lusid.com/docs/instruments."
     },
     {
       "name": "Investment Accounts",
@@ -295928,7 +297112,7 @@
     },
     {
       "name": "Portfolios",
-      "description": "A portfolio is a store of economic information. There are three types: transaction, reference and derived transaction. Note that these endpoints can also be called when interacting with the respective Transaction Portfolios API,  Reference Portfolio API and Derived Transaction Portfolios API. For more information, see https://support.lusid.com/knowledgebase/article/KA-01848."
+      "description": "A portfolio is a store of economic information. There are three types: transaction, reference and derived transaction. Note that these endpoints can also be called when interacting with the respective Transaction Portfolios API,  Reference Portfolio API and Derived Transaction Portfolios API. For more information, see https://support.lusid.com/docs/portfolios."
     },
     {
       "name": "Property Definitions",
@@ -295952,7 +297136,7 @@
     },
     {
       "name": "Reference Portfolio",
-      "description": "A reference portfolio stores a weighted set of instruments rather than transactions, enabling entities such as indices to be represented. Note that a reference portfolio is a type of portfolio, so endpoints in the Portfolios API can also be called. For more information, see https://support.lusid.com/knowledgebase/article/KA-01852."
+      "description": "A reference portfolio stores a weighted set of instruments rather than transactions, enabling entities such as indices to be represented. Note that a reference portfolio is a type of portfolio, so endpoints in the Portfolios API can also be called. For more information, see https://support.lusid.com/docs/how-do-i-create-a-reference-portfolio."
     },
     {
       "name": "ReferenceLists",
@@ -295976,11 +297160,11 @@
     },
     {
       "name": "Relationship Definitions",
-      "description": "Methods for interacting with Relationship Definitions. Read more about Relationships in the LUSID Knowledge Base at https://support.lusid.com/knowledgebase/article/KA-01679."
+      "description": "Methods for interacting with Relationship Definitions. Read more about Relationships in the LUSID Knowledge Base at https://support.lusid.com/docs/creating-relationships-between-certain-types-of-entity."
     },
     {
       "name": "Relationships",
-      "description": "Methods for interacting with Relationships. Read more about Relationships in the LUSID Knowledge Base here https://support.lusid.com/knowledgebase/article/KA-01679."
+      "description": "Methods for interacting with Relationships. Read more about Relationships in the LUSID Knowledge Base here https://support.lusid.com/docs/creating-relationships-between-certain-types-of-entity."
     },
     {
       "name": "Resource Record",
@@ -296028,7 +297212,7 @@
     },
     {
       "name": "Structured Result Data",
-      "description": "The structured result store persists information that might be useful to help value a portfolio or analyse performance or risk, but that is not traded like quote data (which can be stored in the quote store). For more information, see https://support.lusid.com/knowledgebase/article/KA-01893."
+      "description": "The structured result store persists information that might be useful to help value a portfolio or analyse performance or risk, but that is not traded like quote data (which can be stored in the quote store). For more information, see https://support.lusid.com/docs/what-is-structured-result-data."
     },
     {
       "name": "Subscriptions",
@@ -296036,7 +297220,7 @@
     },
     {
       "name": "System Configuration",
-      "description": "LUSID is a transaction-based system. Every transaction in a particular instrument should belong to a transaction type in order that it might contribute to measuring your holding (position) in that instrument. Transaction types are a fundamental building block of LUSID, and care should be exercised when changing them. For more information, see https://support.lusid.com/knowledgebase/article/KA-01872/."
+      "description": "LUSID is a transaction-based system. Every transaction in a particular instrument should belong to a transaction type in order that it might contribute to measuring your holding (position) in that instrument. Transaction types are a fundamental building block of LUSID, and care should be exercised when changing them. For more information, see https://support.lusid.com/docs/how-do-i-create-a-transaction-type."
     },
     {
       "name": "Tax Rule Sets",
@@ -296048,7 +297232,7 @@
     },
     {
       "name": "Transaction Configuration",
-      "description": "LUSID is a transaction-based system. Every transaction in a particular instrument should belong to a transaction type in order that it might contribute to measuring your holding (position) in that instrument. Transaction types are a fundamental building block of LUSID, and care should be exercised when changing them. For more information, see https://support.lusid.com/knowledgebase/article/KA-01872/."
+      "description": "LUSID is a transaction-based system. Every transaction in a particular instrument should belong to a transaction type in order that it might contribute to measuring your holding (position) in that instrument. Transaction types are a fundamental building block of LUSID, and care should be exercised when changing them. For more information, see https://support.lusid.com/docs/how-do-i-create-a-transaction-type."
     },
     {
       "name": "Transaction Fee Types",
@@ -296060,7 +297244,7 @@
     },
     {
       "name": "Transaction Portfolios",
-      "description": "A transaction portfolio stores transactions and calculates instrument holdings and cash balances, enabling valuation, analytic, profit & loss, risk assessment and other operations to be performed. Note that a transaction portfolio is a type of portfolio, so endpoints in the Portfolios API can also be called. For more information, see https://support.lusid.com/knowledgebase/article/KA-01851."
+      "description": "A transaction portfolio stores transactions and calculates instrument holdings and cash balances, enabling valuation, analytic, profit & loss, risk assessment and other operations to be performed. Note that a transaction portfolio is a type of portfolio, so endpoints in the Portfolios API can also be called. For more information, see https://support.lusid.com/docs/how-do-i-create-a-transaction-portfolio."
     },
     {
       "name": "TransferAgency",
@@ -296101,6 +297285,7 @@
       "Conventions",
       "Corporate Action Sources",
       "Counterparties",
+      "CurrencyGroups",
       "Custom Data Models",
       "Custom Entity Types",
       "CustomEntities",
