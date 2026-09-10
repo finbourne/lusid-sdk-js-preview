@@ -528,6 +528,8 @@ export * from './discountingMethod';
 export * from './dividendOptionEvent';
 export * from './dividendOptionEventAllOf';
 export * from './dividendReinvestmentEvent';
+export * from './dividendSuspensionEvent';
+export * from './dividendSuspensionEventAllOf';
 export * from './drawdownEvent';
 export * from './drawdownEventAllOf';
 export * from './drawingEvent';
@@ -2481,6 +2483,8 @@ import { DiscountingMethod } from './discountingMethod';
 import { DividendOptionEvent } from './dividendOptionEvent';
 import { DividendOptionEventAllOf } from './dividendOptionEventAllOf';
 import { DividendReinvestmentEvent } from './dividendReinvestmentEvent';
+import { DividendSuspensionEvent } from './dividendSuspensionEvent';
+import { DividendSuspensionEventAllOf } from './dividendSuspensionEventAllOf';
 import { DrawdownEvent } from './drawdownEvent';
 import { DrawdownEventAllOf } from './drawdownEventAllOf';
 import { DrawingEvent } from './drawingEvent';
@@ -4135,6 +4139,8 @@ let enumsMap: {[index: string]: any} = {
         "DividendOptionEvent.InstrumentEventTypeEnum": DividendOptionEvent.InstrumentEventTypeEnum,
         "DividendOptionEventAllOf.InstrumentEventTypeEnum": DividendOptionEventAllOf.InstrumentEventTypeEnum,
         "DividendReinvestmentEvent.InstrumentEventTypeEnum": DividendReinvestmentEvent.InstrumentEventTypeEnum,
+        "DividendSuspensionEvent.InstrumentEventTypeEnum": DividendSuspensionEvent.InstrumentEventTypeEnum,
+        "DividendSuspensionEventAllOf.InstrumentEventTypeEnum": DividendSuspensionEventAllOf.InstrumentEventTypeEnum,
         "DrawdownEvent.InstrumentEventTypeEnum": DrawdownEvent.InstrumentEventTypeEnum,
         "DrawdownEventAllOf.InstrumentEventTypeEnum": DrawdownEventAllOf.InstrumentEventTypeEnum,
         "DrawingEvent.InstrumentEventTypeEnum": DrawingEvent.InstrumentEventTypeEnum,
@@ -5209,6 +5215,8 @@ let typeMap: {[index: string]: any} = {
     "DividendOptionEvent": DividendOptionEvent,
     "DividendOptionEventAllOf": DividendOptionEventAllOf,
     "DividendReinvestmentEvent": DividendReinvestmentEvent,
+    "DividendSuspensionEvent": DividendSuspensionEvent,
+    "DividendSuspensionEventAllOf": DividendSuspensionEventAllOf,
     "DrawdownEvent": DrawdownEvent,
     "DrawdownEventAllOf": DrawdownEventAllOf,
     "DrawingEvent": DrawingEvent,
