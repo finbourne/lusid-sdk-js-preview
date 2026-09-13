@@ -9,7 +9,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "2.0.1646",
+    "version": "2.0.1647",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -66306,6 +66306,17 @@
               "pattern": "^[a-zA-Z0-9\\-_]+$",
               "type": "string"
             }
+          },
+          {
+            "name": "bucketSetCode",
+            "in": "query",
+            "description": "When provided, each line's bucketMemberships report only this bucket set's classification of it.\r\n             Otherwise, every bucket set covering the NAV Type is reported.",
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
@@ -66449,7 +66460,13 @@
                         "scope": "Scope1",
                         "code": "CustodianAccountCode"
                       },
-                      "custodianAccountType": "Custodian_Cash"
+                      "custodianAccountType": "Custodian_Cash",
+                      "bucketMemberships": [
+                        {
+                          "bucketSetCode": "byActivity",
+                          "bucketId": "RealisedGainLoss"
+                        }
+                      ]
                     }
                   ],
                   "href": "http://example.com",
@@ -66543,7 +66560,13 @@
                         "scope": "Scope1",
                         "code": "CustodianAccountCode"
                       },
-                      "custodianAccountType": "Custodian_Cash"
+                      "custodianAccountType": "Custodian_Cash",
+                      "bucketMemberships": [
+                        {
+                          "bucketSetCode": "byActivity",
+                          "bucketId": "RealisedGainLoss"
+                        }
+                      ]
                     }
                   ],
                   "href": "http://example.com",
@@ -66637,7 +66660,13 @@
                         "scope": "Scope1",
                         "code": "CustodianAccountCode"
                       },
-                      "custodianAccountType": "Custodian_Cash"
+                      "custodianAccountType": "Custodian_Cash",
+                      "bucketMemberships": [
+                        {
+                          "bucketSetCode": "byActivity",
+                          "bucketId": "RealisedGainLoss"
+                        }
+                      ]
                     }
                   ],
                   "href": "http://example.com",
@@ -137608,7 +137637,8 @@
                       "useInstrumentScaleFactorAsDefault": false,
                       "scaleInstrumentAccruedOverrideByContractSize": false,
                       "defaultPoolFactorsToUnity": false,
-                      "findOrCalculateWriteThrough": false
+                      "findOrCalculateWriteThrough": false,
+                      "allowFallbackOnModelDecline": false
                     },
                     "resultDataRules": [],
                     "holdingPricingInfo": {
@@ -137696,7 +137726,8 @@
                       "useInstrumentScaleFactorAsDefault": false,
                       "scaleInstrumentAccruedOverrideByContractSize": false,
                       "defaultPoolFactorsToUnity": false,
-                      "findOrCalculateWriteThrough": false
+                      "findOrCalculateWriteThrough": false,
+                      "allowFallbackOnModelDecline": false
                     },
                     "resultDataRules": [],
                     "holdingPricingInfo": {
@@ -137784,7 +137815,8 @@
                       "useInstrumentScaleFactorAsDefault": false,
                       "scaleInstrumentAccruedOverrideByContractSize": false,
                       "defaultPoolFactorsToUnity": false,
-                      "findOrCalculateWriteThrough": false
+                      "findOrCalculateWriteThrough": false,
+                      "allowFallbackOnModelDecline": false
                     },
                     "resultDataRules": [],
                     "holdingPricingInfo": {
@@ -137872,7 +137904,8 @@
                       "useInstrumentScaleFactorAsDefault": false,
                       "scaleInstrumentAccruedOverrideByContractSize": false,
                       "defaultPoolFactorsToUnity": false,
-                      "findOrCalculateWriteThrough": false
+                      "findOrCalculateWriteThrough": false,
+                      "allowFallbackOnModelDecline": false
                     },
                     "resultDataRules": [],
                     "holdingPricingInfo": {
@@ -138070,7 +138103,8 @@
                             "useInstrumentScaleFactorAsDefault": false,
                             "scaleInstrumentAccruedOverrideByContractSize": false,
                             "defaultPoolFactorsToUnity": false,
-                            "findOrCalculateWriteThrough": false
+                            "findOrCalculateWriteThrough": false,
+                            "allowFallbackOnModelDecline": false
                           },
                           "resultDataRules": [],
                           "holdingPricingInfo": {
@@ -138153,7 +138187,8 @@
                             "useInstrumentScaleFactorAsDefault": false,
                             "scaleInstrumentAccruedOverrideByContractSize": false,
                             "defaultPoolFactorsToUnity": false,
-                            "findOrCalculateWriteThrough": false
+                            "findOrCalculateWriteThrough": false,
+                            "allowFallbackOnModelDecline": false
                           },
                           "resultDataRules": [],
                           "holdingPricingInfo": {
@@ -138266,7 +138301,8 @@
                             "useInstrumentScaleFactorAsDefault": false,
                             "scaleInstrumentAccruedOverrideByContractSize": false,
                             "defaultPoolFactorsToUnity": false,
-                            "findOrCalculateWriteThrough": false
+                            "findOrCalculateWriteThrough": false,
+                            "allowFallbackOnModelDecline": false
                           },
                           "resultDataRules": [],
                           "holdingPricingInfo": {
@@ -138349,7 +138385,8 @@
                             "useInstrumentScaleFactorAsDefault": false,
                             "scaleInstrumentAccruedOverrideByContractSize": false,
                             "defaultPoolFactorsToUnity": false,
-                            "findOrCalculateWriteThrough": false
+                            "findOrCalculateWriteThrough": false,
+                            "allowFallbackOnModelDecline": false
                           },
                           "resultDataRules": [],
                           "holdingPricingInfo": {
@@ -138462,7 +138499,8 @@
                             "useInstrumentScaleFactorAsDefault": false,
                             "scaleInstrumentAccruedOverrideByContractSize": false,
                             "defaultPoolFactorsToUnity": false,
-                            "findOrCalculateWriteThrough": false
+                            "findOrCalculateWriteThrough": false,
+                            "allowFallbackOnModelDecline": false
                           },
                           "resultDataRules": [],
                           "holdingPricingInfo": {
@@ -138545,7 +138583,8 @@
                             "useInstrumentScaleFactorAsDefault": false,
                             "scaleInstrumentAccruedOverrideByContractSize": false,
                             "defaultPoolFactorsToUnity": false,
-                            "findOrCalculateWriteThrough": false
+                            "findOrCalculateWriteThrough": false,
+                            "allowFallbackOnModelDecline": false
                           },
                           "resultDataRules": [],
                           "holdingPricingInfo": {
@@ -139328,7 +139367,8 @@
                         "useInstrumentScaleFactorAsDefault": false,
                         "scaleInstrumentAccruedOverrideByContractSize": false,
                         "defaultPoolFactorsToUnity": false,
-                        "findOrCalculateWriteThrough": false
+                        "findOrCalculateWriteThrough": false,
+                        "allowFallbackOnModelDecline": false
                       },
                       "resultDataRules": [],
                       "holdingPricingInfo": {
@@ -139428,7 +139468,8 @@
                         "useInstrumentScaleFactorAsDefault": false,
                         "scaleInstrumentAccruedOverrideByContractSize": false,
                         "defaultPoolFactorsToUnity": false,
-                        "findOrCalculateWriteThrough": false
+                        "findOrCalculateWriteThrough": false,
+                        "allowFallbackOnModelDecline": false
                       },
                       "resultDataRules": [],
                       "holdingPricingInfo": {
@@ -139528,7 +139569,8 @@
                         "useInstrumentScaleFactorAsDefault": false,
                         "scaleInstrumentAccruedOverrideByContractSize": false,
                         "defaultPoolFactorsToUnity": false,
-                        "findOrCalculateWriteThrough": false
+                        "findOrCalculateWriteThrough": false,
+                        "allowFallbackOnModelDecline": false
                       },
                       "resultDataRules": [],
                       "holdingPricingInfo": {
@@ -139977,7 +140019,8 @@
                             "useInstrumentScaleFactorAsDefault": false,
                             "scaleInstrumentAccruedOverrideByContractSize": false,
                             "defaultPoolFactorsToUnity": false,
-                            "findOrCalculateWriteThrough": false
+                            "findOrCalculateWriteThrough": false,
+                            "allowFallbackOnModelDecline": false
                           },
                           "resultDataRules": [],
                           "holdingPricingInfo": {
@@ -140060,7 +140103,8 @@
                             "useInstrumentScaleFactorAsDefault": false,
                             "scaleInstrumentAccruedOverrideByContractSize": false,
                             "defaultPoolFactorsToUnity": false,
-                            "findOrCalculateWriteThrough": false
+                            "findOrCalculateWriteThrough": false,
+                            "allowFallbackOnModelDecline": false
                           },
                           "resultDataRules": [],
                           "holdingPricingInfo": {
@@ -140173,7 +140217,8 @@
                             "useInstrumentScaleFactorAsDefault": false,
                             "scaleInstrumentAccruedOverrideByContractSize": false,
                             "defaultPoolFactorsToUnity": false,
-                            "findOrCalculateWriteThrough": false
+                            "findOrCalculateWriteThrough": false,
+                            "allowFallbackOnModelDecline": false
                           },
                           "resultDataRules": [],
                           "holdingPricingInfo": {
@@ -140256,7 +140301,8 @@
                             "useInstrumentScaleFactorAsDefault": false,
                             "scaleInstrumentAccruedOverrideByContractSize": false,
                             "defaultPoolFactorsToUnity": false,
-                            "findOrCalculateWriteThrough": false
+                            "findOrCalculateWriteThrough": false,
+                            "allowFallbackOnModelDecline": false
                           },
                           "resultDataRules": [],
                           "holdingPricingInfo": {
@@ -140369,7 +140415,8 @@
                             "useInstrumentScaleFactorAsDefault": false,
                             "scaleInstrumentAccruedOverrideByContractSize": false,
                             "defaultPoolFactorsToUnity": false,
-                            "findOrCalculateWriteThrough": false
+                            "findOrCalculateWriteThrough": false,
+                            "allowFallbackOnModelDecline": false
                           },
                           "resultDataRules": [],
                           "holdingPricingInfo": {
@@ -140452,7 +140499,8 @@
                             "useInstrumentScaleFactorAsDefault": false,
                             "scaleInstrumentAccruedOverrideByContractSize": false,
                             "defaultPoolFactorsToUnity": false,
-                            "findOrCalculateWriteThrough": false
+                            "findOrCalculateWriteThrough": false,
+                            "allowFallbackOnModelDecline": false
                           },
                           "resultDataRules": [],
                           "holdingPricingInfo": {
@@ -140652,7 +140700,8 @@
                         "useInstrumentScaleFactorAsDefault": false,
                         "scaleInstrumentAccruedOverrideByContractSize": false,
                         "defaultPoolFactorsToUnity": false,
-                        "findOrCalculateWriteThrough": false
+                        "findOrCalculateWriteThrough": false,
+                        "allowFallbackOnModelDecline": false
                       },
                       "resultDataRules": [],
                       "holdingPricingInfo": {
@@ -140752,7 +140801,8 @@
                         "useInstrumentScaleFactorAsDefault": false,
                         "scaleInstrumentAccruedOverrideByContractSize": false,
                         "defaultPoolFactorsToUnity": false,
-                        "findOrCalculateWriteThrough": false
+                        "findOrCalculateWriteThrough": false,
+                        "allowFallbackOnModelDecline": false
                       },
                       "resultDataRules": [],
                       "holdingPricingInfo": {
@@ -140852,7 +140902,8 @@
                         "useInstrumentScaleFactorAsDefault": false,
                         "scaleInstrumentAccruedOverrideByContractSize": false,
                         "defaultPoolFactorsToUnity": false,
-                        "findOrCalculateWriteThrough": false
+                        "findOrCalculateWriteThrough": false,
+                        "allowFallbackOnModelDecline": false
                       },
                       "resultDataRules": [],
                       "holdingPricingInfo": {
@@ -141041,7 +141092,8 @@
                         "useInstrumentScaleFactorAsDefault": false,
                         "scaleInstrumentAccruedOverrideByContractSize": false,
                         "defaultPoolFactorsToUnity": false,
-                        "findOrCalculateWriteThrough": false
+                        "findOrCalculateWriteThrough": false,
+                        "allowFallbackOnModelDecline": false
                       },
                       "resultDataRules": [],
                       "holdingPricingInfo": {
@@ -141141,7 +141193,8 @@
                         "useInstrumentScaleFactorAsDefault": false,
                         "scaleInstrumentAccruedOverrideByContractSize": false,
                         "defaultPoolFactorsToUnity": false,
-                        "findOrCalculateWriteThrough": false
+                        "findOrCalculateWriteThrough": false,
+                        "allowFallbackOnModelDecline": false
                       },
                       "resultDataRules": [],
                       "holdingPricingInfo": {
@@ -141241,7 +141294,8 @@
                         "useInstrumentScaleFactorAsDefault": false,
                         "scaleInstrumentAccruedOverrideByContractSize": false,
                         "defaultPoolFactorsToUnity": false,
-                        "findOrCalculateWriteThrough": false
+                        "findOrCalculateWriteThrough": false,
+                        "allowFallbackOnModelDecline": false
                       },
                       "resultDataRules": [],
                       "holdingPricingInfo": {
@@ -219350,6 +219404,23 @@
         "additionalProperties": false,
         "description": "A schedule for dates"
       },
+      "BucketMembership": {
+        "type": "object",
+        "properties": {
+          "bucketSetCode": {
+            "type": "string",
+            "description": "The code of the bucket set that produced this classification.",
+            "nullable": true
+          },
+          "bucketId": {
+            "type": "string",
+            "description": "The id of the bucket within that bucket set the line was assigned to, following the same first-match-wins waterfall used at valuation. One of the reserved '_unmatched_dealing', '_unmatched_fees' or '_unmatched_pnl' ids when the line matched no bucket's filter in the set.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "The bucket a Journal Entry Line was assigned to within one of a Fund Configuration's bucket sets.\r\nComputed when the lines are read, from the bucket set definitions in force at that point."
+      },
       "BucketSetDefinition": {
         "required": [
           "buckets",
@@ -244710,6 +244781,14 @@
             "description": "Indicates the Account Type of the resolved Custodian Account for this Journal Entry Line.",
             "nullable": true
           },
+          "bucketMemberships": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BucketMembership"
+            },
+            "description": "The bucket this Journal Entry Line is assigned to in each of the Fund Configuration's bucket sets that covers the NAV type, in bucket set definition order. Each bucket set classifies the line independently, so a line normally carries one entry per bucket set.",
+            "nullable": true
+          },
           "links": {
             "type": "array",
             "items": {
@@ -267046,8 +267125,19 @@
               },
               "couponPerUnit": {
                 "type": "number",
-                "description": "The capitalised coupon amount per unit of the held bond's current face",
+                "description": "The capitalised coupon amount per unit of the held bond's current face. Never rounded.",
                 "format": "double",
+                "nullable": true
+              },
+              "faceRoundingConvention": {
+                "type": "string",
+                "description": "How the face credited to a holding is rounded once CouponPerUnit has been scaled by the holding's\r\ncurrent face. Defaults to null, which leaves it unrounded. Carried from the bond's PikSchedule; the\r\nper-unit coupon itself is never rounded. BuyUp is one of the available values but is rejected for\r\nthis event: a capitalisation has no cash leg to fund the next whole unit from. Available values: Floor, Ceiling, RoundHalfUp, RoundHalfDown, RoundToDecimalPlaces, BuyUp, BankerRounding.",
+                "nullable": true
+              },
+              "faceRoundingDecimalPlaces": {
+                "type": "integer",
+                "description": "The number of decimal places the credited face is rounded to. Required when\r\nFaceRoundingConvention is RoundToDecimalPlaces and not permitted otherwise.",
+                "format": "int32",
                 "nullable": true
               },
               "instrumentEventType": {
@@ -267575,6 +267665,17 @@
                 "type": "string",
                 "description": "The end date of the PIK schedule period.",
                 "format": "date-time"
+              },
+              "faceRoundingConvention": {
+                "type": "string",
+                "description": "How the face credited by an interest capitalisation is rounded. A PIK indenture typically increases\r\nthe note's principal by the interest payable rounded to a whole currency unit, and which way it\r\nrounds varies by issuer. Defaults to null, which leaves the credited face unrounded. BuyUp is one\r\nof the available values but is rejected: a capitalisation has no cash leg to fund the next whole\r\nunit from. The per-unit coupon itself is never rounded. Available values: Floor, Ceiling, RoundHalfUp, RoundHalfDown, RoundToDecimalPlaces, BuyUp, BankerRounding.",
+                "nullable": true
+              },
+              "faceRoundingDecimalPlaces": {
+                "type": "integer",
+                "description": "The number of decimal places the credited face is rounded to. Required when\r\nFaceRoundingConvention is RoundToDecimalPlaces and not permitted otherwise.",
+                "format": "int32",
+                "nullable": true
               },
               "isPikFractionElectable": {
                 "type": "boolean",
@@ -270907,6 +271008,10 @@
           },
           "inflationConvexity": {
             "$ref": "#/components/schemas/InflationConvexityOptions"
+          },
+          "allowFallbackOnModelDecline": {
+            "type": "boolean",
+            "description": "When true, a model that refuses an instrument outright - because the instrument is outside\r\nwhat that model can represent, not because data was missing - hands the instrument to the\r\nnext model this recipe's rules offer for it, and to the default model for its type after\r\nthose. The row is then priced by the first model that accepts it, and carries a diagnostic\r\nnaming the model that stood down, its objection, and the model that served it. The caller\r\nmust be entitled to the model that serves the row; where none of the alternatives is both\r\nlicensed and willing, the row keeps the original refusal.\r\nWhen false (default), a refusal ends the row however many other models the recipe offers.\r\nA failure that is not a refusal - a missing curve, an unresolved fixing, a malformed model\r\noption - always ends the row, whatever this is set to, because another model's number would\r\nhide the gap rather than close it."
           }
         },
         "additionalProperties": false,
@@ -287878,7 +287983,7 @@
               "settlementMethod": {
                 "minLength": 1,
                 "type": "string",
-                "description": "The basis on which the asset-side settlement amount is computed, determined by the trigger. Required.\r\n            \r\nSupported string (enumeration) values are: [CurrentNotionalPlusAccrued, CashOfferPlusAccrued, CashOfferPlusRealAccrued, FairValue, CashOffer]. Available values: CurrentNotionalPlusAccrued, CashOfferPlusAccrued, CashOfferPlusRealAccrued, FairValue, CashOffer."
+                "description": "The basis on which the asset-side settlement amount is computed, determined by the trigger. Required.\r\n            \r\nSupported string (enumeration) values are: [CurrentNotionalPlusAccrued, CashOfferPlusAccrued, CashOfferPlusRealAccrued, FairValue, CashOffer, PriceReturn]. Available values: CurrentNotionalPlusAccrued, CashOfferPlusAccrued, CashOfferPlusRealAccrued, FairValue, CashOffer, PriceReturn."
               },
               "assetSettlementAmount": {
                 "type": "number",

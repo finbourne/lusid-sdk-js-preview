@@ -181,6 +181,7 @@ export * from './breakCodeSource';
 export * from './bucket';
 export * from './bucketBorderConfiguration';
 export * from './bucketDefinition';
+export * from './bucketMembership';
 export * from './bucketSetDefinition';
 export * from './bucketSetNode';
 export * from './bucketSetResult';
@@ -2148,6 +2149,7 @@ import { BreakCodeSource } from './breakCodeSource';
 import { Bucket } from './bucket';
 import { BucketBorderConfiguration } from './bucketBorderConfiguration';
 import { BucketDefinition } from './bucketDefinition';
+import { BucketMembership } from './bucketMembership';
 import { BucketSetDefinition } from './bucketSetDefinition';
 import { BucketSetNode } from './bucketSetNode';
 import { BucketSetResult } from './bucketSetResult';
@@ -4905,6 +4907,7 @@ let typeMap: {[index: string]: any} = {
     "Bucket": Bucket,
     "BucketBorderConfiguration": BucketBorderConfiguration,
     "BucketDefinition": BucketDefinition,
+    "BucketMembership": BucketMembership,
     "BucketSetDefinition": BucketSetDefinition,
     "BucketSetNode": BucketSetNode,
     "BucketSetResult": BucketSetResult,
