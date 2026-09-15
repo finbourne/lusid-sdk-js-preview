@@ -186,6 +186,7 @@ export * from './bucketSetDefinition';
 export * from './bucketSetNode';
 export * from './bucketSetResult';
 export * from './bucketSetResultBucket';
+export * from './bucketSetShareClassDetails';
 export * from './bucketedCashFlowRequest';
 export * from './bucketedCashFlowResponse';
 export * from './bucketingSchedule';
@@ -760,6 +761,8 @@ export * from './getReferencePortfolioConstituentsResponse';
 export * from './getScenarioResponse';
 export * from './getStructuredResultDataResponse';
 export * from './getSubscriptionResponse';
+export * from './getTransferRequest';
+export * from './getTransferResponse';
 export * from './getVirtualDocumentResponse';
 export * from './groupBySelectorComplianceParameter';
 export * from './groupByStep';
@@ -2154,6 +2157,7 @@ import { BucketSetDefinition } from './bucketSetDefinition';
 import { BucketSetNode } from './bucketSetNode';
 import { BucketSetResult } from './bucketSetResult';
 import { BucketSetResultBucket } from './bucketSetResultBucket';
+import { BucketSetShareClassDetails } from './bucketSetShareClassDetails';
 import { BucketedCashFlowRequest } from './bucketedCashFlowRequest';
 import { BucketedCashFlowResponse } from './bucketedCashFlowResponse';
 import { BucketingSchedule } from './bucketingSchedule';
@@ -2728,6 +2732,8 @@ import { GetReferencePortfolioConstituentsResponse } from './getReferencePortfol
 import { GetScenarioResponse } from './getScenarioResponse';
 import { GetStructuredResultDataResponse } from './getStructuredResultDataResponse';
 import { GetSubscriptionResponse } from './getSubscriptionResponse';
+import { GetTransferRequest } from './getTransferRequest';
+import { GetTransferResponse } from './getTransferResponse';
 import { GetVirtualDocumentResponse } from './getVirtualDocumentResponse';
 import { GroupBySelectorComplianceParameter } from './groupBySelectorComplianceParameter';
 import { GroupByStep } from './groupByStep';
@@ -4912,6 +4918,7 @@ let typeMap: {[index: string]: any} = {
     "BucketSetNode": BucketSetNode,
     "BucketSetResult": BucketSetResult,
     "BucketSetResultBucket": BucketSetResultBucket,
+    "BucketSetShareClassDetails": BucketSetShareClassDetails,
     "BucketedCashFlowRequest": BucketedCashFlowRequest,
     "BucketedCashFlowResponse": BucketedCashFlowResponse,
     "BucketingSchedule": BucketingSchedule,
@@ -5471,6 +5478,8 @@ let typeMap: {[index: string]: any} = {
     "GetScenarioResponse": GetScenarioResponse,
     "GetStructuredResultDataResponse": GetStructuredResultDataResponse,
     "GetSubscriptionResponse": GetSubscriptionResponse,
+    "GetTransferRequest": GetTransferRequest,
+    "GetTransferResponse": GetTransferResponse,
     "GetVirtualDocumentResponse": GetVirtualDocumentResponse,
     "GroupBySelectorComplianceParameter": GroupBySelectorComplianceParameter,
     "GroupByStep": GroupByStep,
