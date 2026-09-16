@@ -100,6 +100,7 @@ export * from './applicableEntityTypes';
 export * from './applicableInstrumentEvent';
 export * from './appliedScenarioShift';
 export * from './apportionmentBreakdown';
+export * from './apportionmentInput';
 export * from './apportionmentMemberFactor';
 export * from './apportionmentMethodProperty';
 export * from './assetClass';
@@ -321,6 +322,7 @@ export * from './complianceParameterType';
 export * from './complianceRule';
 export * from './complianceRuleBreakdown';
 export * from './complianceRuleBreakdownRequest';
+export * from './complianceRuleEntity';
 export * from './complianceRuleResponse';
 export * from './complianceRuleResult';
 export * from './complianceRuleResultDetail';
@@ -1562,6 +1564,9 @@ export * from './returnsEntity';
 export * from './returnsMetric';
 export * from './reverseStockSplitEvent';
 export * from './reverseStockSplitEventAllOf';
+export * from './reverseStressRequest';
+export * from './reverseStressResponse';
+export * from './reverseStressRung';
 export * from './revertValuationPointDataRequest';
 export * from './riskBumpOptions';
 export * from './rollInterestUpdates';
@@ -2071,6 +2076,7 @@ import { ApplicableEntityTypes } from './applicableEntityTypes';
 import { ApplicableInstrumentEvent } from './applicableInstrumentEvent';
 import { AppliedScenarioShift } from './appliedScenarioShift';
 import { ApportionmentBreakdown } from './apportionmentBreakdown';
+import { ApportionmentInput } from './apportionmentInput';
 import { ApportionmentMemberFactor } from './apportionmentMemberFactor';
 import { ApportionmentMethodProperty } from './apportionmentMethodProperty';
 import { AssetClass } from './assetClass';
@@ -2292,6 +2298,7 @@ import { ComplianceParameterType } from './complianceParameterType';
 import { ComplianceRule } from './complianceRule';
 import { ComplianceRuleBreakdown } from './complianceRuleBreakdown';
 import { ComplianceRuleBreakdownRequest } from './complianceRuleBreakdownRequest';
+import { ComplianceRuleEntity } from './complianceRuleEntity';
 import { ComplianceRuleResponse } from './complianceRuleResponse';
 import { ComplianceRuleResult } from './complianceRuleResult';
 import { ComplianceRuleResultDetail } from './complianceRuleResultDetail';
@@ -3533,6 +3540,9 @@ import { ReturnsEntity } from './returnsEntity';
 import { ReturnsMetric } from './returnsMetric';
 import { ReverseStockSplitEvent } from './reverseStockSplitEvent';
 import { ReverseStockSplitEventAllOf } from './reverseStockSplitEventAllOf';
+import { ReverseStressRequest } from './reverseStressRequest';
+import { ReverseStressResponse } from './reverseStressResponse';
+import { ReverseStressRung } from './reverseStressRung';
 import { RevertValuationPointDataRequest } from './revertValuationPointDataRequest';
 import { RiskBumpOptions } from './riskBumpOptions';
 import { RollInterestUpdates } from './rollInterestUpdates';
@@ -4833,6 +4843,7 @@ let typeMap: {[index: string]: any} = {
     "ApplicableInstrumentEvent": ApplicableInstrumentEvent,
     "AppliedScenarioShift": AppliedScenarioShift,
     "ApportionmentBreakdown": ApportionmentBreakdown,
+    "ApportionmentInput": ApportionmentInput,
     "ApportionmentMemberFactor": ApportionmentMemberFactor,
     "ApportionmentMethodProperty": ApportionmentMethodProperty,
     "AssetLeg": AssetLeg,
@@ -5051,6 +5062,7 @@ let typeMap: {[index: string]: any} = {
     "ComplianceRule": ComplianceRule,
     "ComplianceRuleBreakdown": ComplianceRuleBreakdown,
     "ComplianceRuleBreakdownRequest": ComplianceRuleBreakdownRequest,
+    "ComplianceRuleEntity": ComplianceRuleEntity,
     "ComplianceRuleResponse": ComplianceRuleResponse,
     "ComplianceRuleResult": ComplianceRuleResult,
     "ComplianceRuleResultDetail": ComplianceRuleResultDetail,
@@ -6246,6 +6258,9 @@ let typeMap: {[index: string]: any} = {
     "ReturnsMetric": ReturnsMetric,
     "ReverseStockSplitEvent": ReverseStockSplitEvent,
     "ReverseStockSplitEventAllOf": ReverseStockSplitEventAllOf,
+    "ReverseStressRequest": ReverseStressRequest,
+    "ReverseStressResponse": ReverseStressResponse,
+    "ReverseStressRung": ReverseStressRung,
     "RevertValuationPointDataRequest": RevertValuationPointDataRequest,
     "RiskBumpOptions": RiskBumpOptions,
     "RollInterestUpdates": RollInterestUpdates,
