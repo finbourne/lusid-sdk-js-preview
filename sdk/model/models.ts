@@ -1075,7 +1075,10 @@ export * from './orderUpdateRequest';
 export * from './otcConfirmation';
 export * from './outputTransaction';
 export * from './outputTransition';
-export * from './overrideVirtualTransactionsResponse';
+export * from './overrideDefinitionRequest';
+export * from './overrideDefinitionResponse';
+export * from './overrideEntryResponse';
+export * from './overrideVirtualTransactionsRequest';
 export * from './oversubscribeElection';
 export * from './package';
 export * from './packageRequest';
@@ -1341,12 +1344,15 @@ export * from './rawVendorEvent';
 export * from './rawVendorEventAllOf';
 export * from './reOpenPeriodDiaryEntryRequest';
 export * from './realisedGainLoss';
+export * from './recActivityWindow';
 export * from './recApprovalDecision';
+export * from './recAsAtPolicy';
 export * from './recClosedExceptionCounts';
 export * from './recClosedPeriodReference';
 export * from './recClosedPeriods';
 export * from './recDatasetSchema';
 export * from './recDatasetSchemas';
+export * from './recDatePolicy';
 export * from './recDatesReconciled';
 export * from './recDefCurrencies';
 export * from './recDefRecipeIds';
@@ -1530,6 +1536,7 @@ export * from './resourceListOfTransactionFeeType';
 export * from './resourceListOfTransactionSettlementInstruction';
 export * from './resourceListOfTransactionType';
 export * from './resourceListOfValueType';
+export * from './resourceListOfVirtualTransactionOverrideRecord';
 export * from './resourceListWithPostBodiesOfSettlementActivityToSettlementActivityQuery';
 export * from './resourceRecord';
 export * from './responseMetaData';
@@ -1667,6 +1674,7 @@ export * from './stockDividendEvent';
 export * from './stockDividendEventAllOf';
 export * from './stockSplitEvent';
 export * from './stockSplitEventAllOf';
+export * from './storedOverrideDefinition';
 export * from './strategy';
 export * from './stringComparisonType';
 export * from './stringComplianceParameter';
@@ -1681,6 +1689,7 @@ export * from './subscribeElection';
 export * from './subscriptionDefinition';
 export * from './supplementalAttribute';
 export * from './supplementalAttributeValues';
+export * from './suppressionEntryResponse';
 export * from './swapCashFlowEvent';
 export * from './swapCashFlowEventAllOf';
 export * from './swapPrincipalEvent';
@@ -1893,6 +1902,7 @@ export * from './upsertTransactionPropertiesResponse';
 export * from './upsertTransferAgencyOrderRequest';
 export * from './upsertTranslationScriptRequest';
 export * from './upsertValuationPointRequest';
+export * from './upsertVirtualTransactionOverrideResponse';
 export * from './user';
 export * from './valuationPoint';
 export * from './valuationPointDataQueryParameters';
@@ -1936,6 +1946,8 @@ export * from './versionedResourceListWithWarningsOfPortfolioHolding';
 export * from './virtualDocument';
 export * from './virtualDocumentRow';
 export * from './virtualRow';
+export * from './virtualTransactionOverrideRecord';
+export * from './virtualTransactionOverridesResponse';
 export * from './volSurfaceShiftDefinition';
 export * from './volSurfaceShiftDefinitionAllOf';
 export * from './volSurfaceShiftMode';
@@ -3051,7 +3063,10 @@ import { OrderUpdateRequest } from './orderUpdateRequest';
 import { OtcConfirmation } from './otcConfirmation';
 import { OutputTransaction } from './outputTransaction';
 import { OutputTransition } from './outputTransition';
-import { OverrideVirtualTransactionsResponse } from './overrideVirtualTransactionsResponse';
+import { OverrideDefinitionRequest } from './overrideDefinitionRequest';
+import { OverrideDefinitionResponse } from './overrideDefinitionResponse';
+import { OverrideEntryResponse } from './overrideEntryResponse';
+import { OverrideVirtualTransactionsRequest } from './overrideVirtualTransactionsRequest';
 import { OversubscribeElection } from './oversubscribeElection';
 import { Package } from './package';
 import { PackageRequest } from './packageRequest';
@@ -3317,12 +3332,15 @@ import { RawVendorEvent } from './rawVendorEvent';
 import { RawVendorEventAllOf } from './rawVendorEventAllOf';
 import { ReOpenPeriodDiaryEntryRequest } from './reOpenPeriodDiaryEntryRequest';
 import { RealisedGainLoss } from './realisedGainLoss';
+import { RecActivityWindow } from './recActivityWindow';
 import { RecApprovalDecision } from './recApprovalDecision';
+import { RecAsAtPolicy } from './recAsAtPolicy';
 import { RecClosedExceptionCounts } from './recClosedExceptionCounts';
 import { RecClosedPeriodReference } from './recClosedPeriodReference';
 import { RecClosedPeriods } from './recClosedPeriods';
 import { RecDatasetSchema } from './recDatasetSchema';
 import { RecDatasetSchemas } from './recDatasetSchemas';
+import { RecDatePolicy } from './recDatePolicy';
 import { RecDatesReconciled } from './recDatesReconciled';
 import { RecDefCurrencies } from './recDefCurrencies';
 import { RecDefRecipeIds } from './recDefRecipeIds';
@@ -3506,6 +3524,7 @@ import { ResourceListOfTransactionFeeType } from './resourceListOfTransactionFee
 import { ResourceListOfTransactionSettlementInstruction } from './resourceListOfTransactionSettlementInstruction';
 import { ResourceListOfTransactionType } from './resourceListOfTransactionType';
 import { ResourceListOfValueType } from './resourceListOfValueType';
+import { ResourceListOfVirtualTransactionOverrideRecord } from './resourceListOfVirtualTransactionOverrideRecord';
 import { ResourceListWithPostBodiesOfSettlementActivityToSettlementActivityQuery } from './resourceListWithPostBodiesOfSettlementActivityToSettlementActivityQuery';
 import { ResourceRecord } from './resourceRecord';
 import { ResponseMetaData } from './responseMetaData';
@@ -3643,6 +3662,7 @@ import { StockDividendEvent } from './stockDividendEvent';
 import { StockDividendEventAllOf } from './stockDividendEventAllOf';
 import { StockSplitEvent } from './stockSplitEvent';
 import { StockSplitEventAllOf } from './stockSplitEventAllOf';
+import { StoredOverrideDefinition } from './storedOverrideDefinition';
 import { Strategy } from './strategy';
 import { StringComparisonType } from './stringComparisonType';
 import { StringComplianceParameter } from './stringComplianceParameter';
@@ -3657,6 +3677,7 @@ import { SubscribeElection } from './subscribeElection';
 import { SubscriptionDefinition } from './subscriptionDefinition';
 import { SupplementalAttribute } from './supplementalAttribute';
 import { SupplementalAttributeValues } from './supplementalAttributeValues';
+import { SuppressionEntryResponse } from './suppressionEntryResponse';
 import { SwapCashFlowEvent } from './swapCashFlowEvent';
 import { SwapCashFlowEventAllOf } from './swapCashFlowEventAllOf';
 import { SwapPrincipalEvent } from './swapPrincipalEvent';
@@ -3869,6 +3890,7 @@ import { UpsertTransactionPropertiesResponse } from './upsertTransactionProperti
 import { UpsertTransferAgencyOrderRequest } from './upsertTransferAgencyOrderRequest';
 import { UpsertTranslationScriptRequest } from './upsertTranslationScriptRequest';
 import { UpsertValuationPointRequest } from './upsertValuationPointRequest';
+import { UpsertVirtualTransactionOverrideResponse } from './upsertVirtualTransactionOverrideResponse';
 import { User } from './user';
 import { ValuationPoint } from './valuationPoint';
 import { ValuationPointDataQueryParameters } from './valuationPointDataQueryParameters';
@@ -3912,6 +3934,8 @@ import { VersionedResourceListWithWarningsOfPortfolioHolding } from './versioned
 import { VirtualDocument } from './virtualDocument';
 import { VirtualDocumentRow } from './virtualDocumentRow';
 import { VirtualRow } from './virtualRow';
+import { VirtualTransactionOverrideRecord } from './virtualTransactionOverrideRecord';
+import { VirtualTransactionOverridesResponse } from './virtualTransactionOverridesResponse';
 import { VolSurfaceShiftDefinition } from './volSurfaceShiftDefinition';
 import { VolSurfaceShiftDefinitionAllOf } from './volSurfaceShiftDefinitionAllOf';
 import { VolSurfaceShiftMode } from './volSurfaceShiftMode';
@@ -5787,7 +5811,10 @@ let typeMap: {[index: string]: any} = {
     "OtcConfirmation": OtcConfirmation,
     "OutputTransaction": OutputTransaction,
     "OutputTransition": OutputTransition,
-    "OverrideVirtualTransactionsResponse": OverrideVirtualTransactionsResponse,
+    "OverrideDefinitionRequest": OverrideDefinitionRequest,
+    "OverrideDefinitionResponse": OverrideDefinitionResponse,
+    "OverrideEntryResponse": OverrideEntryResponse,
+    "OverrideVirtualTransactionsRequest": OverrideVirtualTransactionsRequest,
     "OversubscribeElection": OversubscribeElection,
     "Package": Package,
     "PackageRequest": PackageRequest,
@@ -6040,12 +6067,15 @@ let typeMap: {[index: string]: any} = {
     "RawVendorEventAllOf": RawVendorEventAllOf,
     "ReOpenPeriodDiaryEntryRequest": ReOpenPeriodDiaryEntryRequest,
     "RealisedGainLoss": RealisedGainLoss,
+    "RecActivityWindow": RecActivityWindow,
     "RecApprovalDecision": RecApprovalDecision,
+    "RecAsAtPolicy": RecAsAtPolicy,
     "RecClosedExceptionCounts": RecClosedExceptionCounts,
     "RecClosedPeriodReference": RecClosedPeriodReference,
     "RecClosedPeriods": RecClosedPeriods,
     "RecDatasetSchema": RecDatasetSchema,
     "RecDatasetSchemas": RecDatasetSchemas,
+    "RecDatePolicy": RecDatePolicy,
     "RecDatesReconciled": RecDatesReconciled,
     "RecDefCurrencies": RecDefCurrencies,
     "RecDefRecipeIds": RecDefRecipeIds,
@@ -6226,6 +6256,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfTransactionSettlementInstruction": ResourceListOfTransactionSettlementInstruction,
     "ResourceListOfTransactionType": ResourceListOfTransactionType,
     "ResourceListOfValueType": ResourceListOfValueType,
+    "ResourceListOfVirtualTransactionOverrideRecord": ResourceListOfVirtualTransactionOverrideRecord,
     "ResourceListWithPostBodiesOfSettlementActivityToSettlementActivityQuery": ResourceListWithPostBodiesOfSettlementActivityToSettlementActivityQuery,
     "ResourceRecord": ResourceRecord,
     "ResponseMetaData": ResponseMetaData,
@@ -6356,6 +6387,7 @@ let typeMap: {[index: string]: any} = {
     "StockDividendEventAllOf": StockDividendEventAllOf,
     "StockSplitEvent": StockSplitEvent,
     "StockSplitEventAllOf": StockSplitEventAllOf,
+    "StoredOverrideDefinition": StoredOverrideDefinition,
     "Strategy": Strategy,
     "StringComplianceParameter": StringComplianceParameter,
     "StringList": StringList,
@@ -6369,6 +6401,7 @@ let typeMap: {[index: string]: any} = {
     "SubscriptionDefinition": SubscriptionDefinition,
     "SupplementalAttribute": SupplementalAttribute,
     "SupplementalAttributeValues": SupplementalAttributeValues,
+    "SuppressionEntryResponse": SuppressionEntryResponse,
     "SwapCashFlowEvent": SwapCashFlowEvent,
     "SwapCashFlowEventAllOf": SwapCashFlowEventAllOf,
     "SwapPrincipalEvent": SwapPrincipalEvent,
@@ -6574,6 +6607,7 @@ let typeMap: {[index: string]: any} = {
     "UpsertTransferAgencyOrderRequest": UpsertTransferAgencyOrderRequest,
     "UpsertTranslationScriptRequest": UpsertTranslationScriptRequest,
     "UpsertValuationPointRequest": UpsertValuationPointRequest,
+    "UpsertVirtualTransactionOverrideResponse": UpsertVirtualTransactionOverrideResponse,
     "User": User,
     "ValuationPoint": ValuationPoint,
     "ValuationPointDataQueryParameters": ValuationPointDataQueryParameters,
@@ -6615,6 +6649,8 @@ let typeMap: {[index: string]: any} = {
     "VirtualDocument": VirtualDocument,
     "VirtualDocumentRow": VirtualDocumentRow,
     "VirtualRow": VirtualRow,
+    "VirtualTransactionOverrideRecord": VirtualTransactionOverrideRecord,
+    "VirtualTransactionOverridesResponse": VirtualTransactionOverridesResponse,
     "VolSurfaceShiftDefinition": VolSurfaceShiftDefinition,
     "VolSurfaceShiftDefinitionAllOf": VolSurfaceShiftDefinitionAllOf,
     "VolatilitySwap": VolatilitySwap,
