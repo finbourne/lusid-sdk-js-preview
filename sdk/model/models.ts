@@ -1254,6 +1254,8 @@ export * from './portfolioTransaction';
 export * from './portfolioTransactionAdjustment';
 export * from './portfolioTransactionAdjustmentAllOf';
 export * from './portfolioTransactionAllOf';
+export * from './portfolioTransactionDataset';
+export * from './portfolioTransactionResult';
 export * from './portfolioType';
 export * from './portfolioWeight';
 export * from './portfolioWithoutHref';
@@ -3242,6 +3244,8 @@ import { PortfolioTransaction } from './portfolioTransaction';
 import { PortfolioTransactionAdjustment } from './portfolioTransactionAdjustment';
 import { PortfolioTransactionAdjustmentAllOf } from './portfolioTransactionAdjustmentAllOf';
 import { PortfolioTransactionAllOf } from './portfolioTransactionAllOf';
+import { PortfolioTransactionDataset } from './portfolioTransactionDataset';
+import { PortfolioTransactionResult } from './portfolioTransactionResult';
 import { PortfolioType } from './portfolioType';
 import { PortfolioWeight } from './portfolioWeight';
 import { PortfolioWithoutHref } from './portfolioWithoutHref';
@@ -5988,6 +5992,8 @@ let typeMap: {[index: string]: any} = {
     "PortfolioTransactionAdjustment": PortfolioTransactionAdjustment,
     "PortfolioTransactionAdjustmentAllOf": PortfolioTransactionAdjustmentAllOf,
     "PortfolioTransactionAllOf": PortfolioTransactionAllOf,
+    "PortfolioTransactionDataset": PortfolioTransactionDataset,
+    "PortfolioTransactionResult": PortfolioTransactionResult,
     "PortfolioWeight": PortfolioWeight,
     "PortfolioWithoutHref": PortfolioWithoutHref,
     "PortfoliosReconciliationRequest": PortfoliosReconciliationRequest,

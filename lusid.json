@@ -9,7 +9,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "2.0.1654",
+    "version": "2.0.1655",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -73197,7 +73197,7 @@
           {
             "name": "domain",
             "in": "path",
-            "description": "The type of entity to which the identifier relates. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, FundStructure, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, TaskDefinition, Workflow, IdentifierDefinition, SettlementInstruction, TransactionFeeType, PaymentInstruction, Transfer, RecDefinition.",
+            "description": "The type of entity to which the identifier relates. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, FundStructure, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, TaskDefinition, Workflow, IdentifierDefinition, SettlementInstruction, TransactionFeeType, PaymentInstruction, Transfer, RecDefinition, RecResult.",
             "required": true,
             "schema": {
               "enum": [
@@ -73294,7 +73294,8 @@
                 "PaymentInstruction",
                 "Transfer",
                 "CurrencyGroup",
-                "RecDefinition"
+                "RecDefinition",
+                "RecResult"
               ],
               "type": "string"
             }
@@ -73504,7 +73505,7 @@
           {
             "name": "domain",
             "in": "path",
-            "description": "The type of entity to which the identifier relates. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, FundStructure, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, TaskDefinition, Workflow, IdentifierDefinition, SettlementInstruction, TransactionFeeType, PaymentInstruction, Transfer, RecDefinition.",
+            "description": "The type of entity to which the identifier relates. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, FundStructure, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, TaskDefinition, Workflow, IdentifierDefinition, SettlementInstruction, TransactionFeeType, PaymentInstruction, Transfer, RecDefinition, RecResult.",
             "required": true,
             "schema": {
               "enum": [
@@ -73601,7 +73602,8 @@
                 "PaymentInstruction",
                 "Transfer",
                 "CurrencyGroup",
-                "RecDefinition"
+                "RecDefinition",
+                "RecResult"
               ],
               "type": "string"
             }
@@ -73710,7 +73712,7 @@
           {
             "name": "domain",
             "in": "path",
-            "description": "The type of entity to which the identifier relates. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, FundStructure, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, TaskDefinition, Workflow, IdentifierDefinition, SettlementInstruction, TransactionFeeType, PaymentInstruction, Transfer, RecDefinition.",
+            "description": "The type of entity to which the identifier relates. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, FundStructure, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, TaskDefinition, Workflow, IdentifierDefinition, SettlementInstruction, TransactionFeeType, PaymentInstruction, Transfer, RecDefinition, RecResult.",
             "required": true,
             "schema": {
               "enum": [
@@ -73807,7 +73809,8 @@
                 "PaymentInstruction",
                 "Transfer",
                 "CurrencyGroup",
-                "RecDefinition"
+                "RecDefinition",
+                "RecResult"
               ],
               "type": "string"
             }
@@ -100305,9 +100308,9 @@
                   },
                   "type": "Limit",
                   "limitPrice": 100,
-                  "stopPrice": 100,
                   "counterparty": "SomeCounterparty",
-                  "entryType": "Manual"
+                  "entryType": "Manual",
+                  "currency": "USD"
                 }
               }
             },
@@ -100335,9 +100338,9 @@
                   },
                   "type": "Limit",
                   "limitPrice": 100,
-                  "stopPrice": 100,
                   "counterparty": "SomeCounterparty",
-                  "entryType": "Manual"
+                  "entryType": "Manual",
+                  "currency": "USD"
                 }
               }
             },
@@ -100365,9 +100368,9 @@
                   },
                   "type": "Limit",
                   "limitPrice": 100,
-                  "stopPrice": 100,
                   "counterparty": "SomeCounterparty",
-                  "entryType": "Manual"
+                  "entryType": "Manual",
+                  "currency": "USD"
                 }
               }
             },
@@ -100395,9 +100398,9 @@
                   },
                   "type": "Limit",
                   "limitPrice": 100,
-                  "stopPrice": 100,
                   "counterparty": "SomeCounterparty",
-                  "entryType": "Manual"
+                  "entryType": "Manual",
+                  "currency": "USD"
                 }
               }
             }
@@ -134988,7 +134991,7 @@
           {
             "name": "domain",
             "in": "path",
-            "description": "Domain of the property definition. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, FundStructure, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, TaskDefinition, Workflow, IdentifierDefinition, SettlementInstruction, TransactionFeeType, PaymentInstruction, Transfer, RecDefinition.",
+            "description": "Domain of the property definition. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, FundStructure, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, TaskDefinition, Workflow, IdentifierDefinition, SettlementInstruction, TransactionFeeType, PaymentInstruction, Transfer, RecDefinition, RecResult.",
             "required": true,
             "schema": {
               "enum": [
@@ -135085,7 +135088,8 @@
                 "PaymentInstruction",
                 "Transfer",
                 "CurrencyGroup",
-                "RecDefinition"
+                "RecDefinition",
+                "RecResult"
               ],
               "type": "string"
             }
@@ -135365,7 +135369,7 @@
           {
             "name": "domain",
             "in": "path",
-            "description": "The domain of the property being updated. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, FundStructure, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, TaskDefinition, Workflow, IdentifierDefinition, SettlementInstruction, TransactionFeeType, PaymentInstruction, Transfer, RecDefinition.",
+            "description": "The domain of the property being updated. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, FundStructure, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, TaskDefinition, Workflow, IdentifierDefinition, SettlementInstruction, TransactionFeeType, PaymentInstruction, Transfer, RecDefinition, RecResult.",
             "required": true,
             "schema": {
               "enum": [
@@ -135462,7 +135466,8 @@
                 "PaymentInstruction",
                 "Transfer",
                 "CurrencyGroup",
-                "RecDefinition"
+                "RecDefinition",
+                "RecResult"
               ],
               "type": "string"
             }
@@ -135712,7 +135717,7 @@
           {
             "name": "domain",
             "in": "path",
-            "description": "The domain of the property to be deleted. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, FundStructure, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, TaskDefinition, Workflow, IdentifierDefinition, SettlementInstruction, TransactionFeeType, PaymentInstruction, Transfer, RecDefinition.",
+            "description": "The domain of the property to be deleted. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, FundStructure, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, TaskDefinition, Workflow, IdentifierDefinition, SettlementInstruction, TransactionFeeType, PaymentInstruction, Transfer, RecDefinition, RecResult.",
             "required": true,
             "schema": {
               "enum": [
@@ -135809,7 +135814,8 @@
                 "PaymentInstruction",
                 "Transfer",
                 "CurrencyGroup",
-                "RecDefinition"
+                "RecDefinition",
+                "RecResult"
               ],
               "type": "string"
             }
@@ -135918,7 +135924,7 @@
           {
             "name": "domain",
             "in": "path",
-            "description": "The domain of the specified property. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, FundStructure, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, TaskDefinition, Workflow, IdentifierDefinition, SettlementInstruction, TransactionFeeType, PaymentInstruction, Transfer, RecDefinition.",
+            "description": "The domain of the specified property. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, FundStructure, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, TaskDefinition, Workflow, IdentifierDefinition, SettlementInstruction, TransactionFeeType, PaymentInstruction, Transfer, RecDefinition, RecResult.",
             "required": true,
             "schema": {
               "enum": [
@@ -136015,7 +136021,8 @@
                 "PaymentInstruction",
                 "Transfer",
                 "CurrencyGroup",
-                "RecDefinition"
+                "RecDefinition",
+                "RecResult"
               ],
               "type": "string"
             }
@@ -136244,7 +136251,7 @@
           {
             "name": "domain",
             "in": "path",
-            "description": "The domain of the specified property. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, FundStructure, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, TaskDefinition, Workflow, IdentifierDefinition, SettlementInstruction, TransactionFeeType, PaymentInstruction, Transfer, RecDefinition.",
+            "description": "The domain of the specified property. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, FundStructure, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, TaskDefinition, Workflow, IdentifierDefinition, SettlementInstruction, TransactionFeeType, PaymentInstruction, Transfer, RecDefinition, RecResult.",
             "required": true,
             "schema": {
               "enum": [
@@ -136341,7 +136348,8 @@
                 "PaymentInstruction",
                 "Transfer",
                 "CurrencyGroup",
-                "RecDefinition"
+                "RecDefinition",
+                "RecResult"
               ],
               "type": "string"
             }
@@ -136624,7 +136632,7 @@
           {
             "name": "domain",
             "in": "path",
-            "description": "The domain of the property definition to delete properties from. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, FundStructure, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, TaskDefinition, Workflow, IdentifierDefinition, SettlementInstruction, TransactionFeeType, PaymentInstruction, Transfer, RecDefinition.",
+            "description": "The domain of the property definition to delete properties from. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, FundStructure, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, TaskDefinition, Workflow, IdentifierDefinition, SettlementInstruction, TransactionFeeType, PaymentInstruction, Transfer, RecDefinition, RecResult.",
             "required": true,
             "schema": {
               "enum": [
@@ -136721,7 +136729,8 @@
                 "PaymentInstruction",
                 "Transfer",
                 "CurrencyGroup",
-                "RecDefinition"
+                "RecDefinition",
+                "RecResult"
               ],
               "type": "string"
             }
@@ -136899,7 +136908,7 @@
           {
             "name": "domain",
             "in": "path",
-            "description": "The domain of the property definition to which the property is attached. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, FundStructure, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, TaskDefinition, Workflow, IdentifierDefinition, SettlementInstruction, TransactionFeeType, PaymentInstruction, Transfer, RecDefinition.",
+            "description": "The domain of the property definition to which the property is attached. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, FundStructure, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, TaskDefinition, Workflow, IdentifierDefinition, SettlementInstruction, TransactionFeeType, PaymentInstruction, Transfer, RecDefinition, RecResult.",
             "required": true,
             "schema": {
               "enum": [
@@ -136996,7 +137005,8 @@
                 "PaymentInstruction",
                 "Transfer",
                 "CurrencyGroup",
-                "RecDefinition"
+                "RecDefinition",
+                "RecResult"
               ],
               "type": "string"
             }
@@ -154684,6 +154694,119 @@
           }
         ],
         "x-fbn-apistatus": "EarlyAccess"
+      }
+    },
+    "/api/referenceportfolios/{scope}/{code}/constituentsadjustment": {
+      "delete": {
+        "tags": [
+          "Reference Portfolio"
+        ],
+        "summary": "DeleteReferencePortfolioConstituentAdjustment: Delete constituents adjustment",
+        "description": "Delete the constituents adjustment made to a reference portfolio at the specified effective\r\ndatetime. After deletion the constituents in effect revert to the previous effective-dated\r\nadjustment, or to none if there is no earlier adjustment.",
+        "operationId": "DeleteReferencePortfolioConstituentAdjustment",
+        "parameters": [
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope of the reference portfolio.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "code",
+            "in": "path",
+            "description": "The code of the reference portfolio. Together with the scope this uniquely\r\n            identifies the reference portfolio.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "effectiveAt",
+            "in": "query",
+            "description": "The effective datetime or cut label at which the constituents adjustment was made.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "dateorcutlabel"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The datetime that the constituents adjustment was deleted",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeletedEntityResponse"
+                },
+                "example": {
+                  "asAt": "2018-03-05T10:10:10.0000000+00:00"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeletedEntityResponse"
+                },
+                "example": {
+                  "asAt": "2018-03-05T10:10:10.0000000+00:00"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeletedEntityResponse"
+                },
+                "example": {
+                  "asAt": "2018-03-05T10:10:10.0000000+00:00"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Stable"
       }
     },
     "/api/referenceportfolios/{scope}/{code}/constituentsadjustments": {
@@ -231410,10 +231533,11 @@
               "PaymentInstruction",
               "Transfer",
               "CurrencyGroup",
-              "RecDefinition"
+              "RecDefinition",
+              "RecResult"
             ],
             "type": "string",
-            "description": "The domain that the property exists in. Not all available values are currently supported, please check the documentation: https://support.lusid.com/docs/what-is-an-entity. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, FundStructure, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, TaskDefinition, Workflow, IdentifierDefinition, SettlementInstruction, TransactionFeeType, PaymentInstruction, Transfer, RecDefinition."
+            "description": "The domain that the property exists in. Not all available values are currently supported, please check the documentation: https://support.lusid.com/docs/what-is-an-entity. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, FundStructure, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, TaskDefinition, Workflow, IdentifierDefinition, SettlementInstruction, TransactionFeeType, PaymentInstruction, Transfer, RecDefinition, RecResult."
           },
           "scope": {
             "type": "string",
@@ -231791,10 +231915,11 @@
               "PaymentInstruction",
               "Transfer",
               "CurrencyGroup",
-              "RecDefinition"
+              "RecDefinition",
+              "RecResult"
             ],
             "type": "string",
-            "description": "The type of entity to which the identifier can be attached. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, FundStructure, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, TaskDefinition, Workflow, IdentifierDefinition, SettlementInstruction, TransactionFeeType, PaymentInstruction, Transfer, RecDefinition."
+            "description": "The type of entity to which the identifier can be attached. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, FundStructure, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, TaskDefinition, Workflow, IdentifierDefinition, SettlementInstruction, TransactionFeeType, PaymentInstruction, Transfer, RecDefinition, RecResult."
           },
           "identifierScope": {
             "maxLength": 64,
@@ -232108,10 +232233,11 @@
               "PaymentInstruction",
               "Transfer",
               "CurrencyGroup",
-              "RecDefinition"
+              "RecDefinition",
+              "RecResult"
             ],
             "type": "string",
-            "description": "The domain that the property exists in. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, FundStructure, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, TaskDefinition, Workflow, IdentifierDefinition, SettlementInstruction, TransactionFeeType, PaymentInstruction, Transfer, RecDefinition."
+            "description": "The domain that the property exists in. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, FundStructure, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, TaskDefinition, Workflow, IdentifierDefinition, SettlementInstruction, TransactionFeeType, PaymentInstruction, Transfer, RecDefinition, RecResult."
           },
           "scope": {
             "type": "string",
@@ -233936,8 +234062,9 @@
                 "description": "The ticker of the reference entity whose spread curve is shifted."
               },
               "ccy": {
-                "maxLength": 3,
+                "maxLength": 5,
                 "minLength": 3,
+                "pattern": "^[a-zA-Z]*$",
                 "type": "string",
                 "description": "The currency the curve is quoted in; disambiguates a ticker quoted in more than one\r\ncurrency. Omitted, the shift matches the ticker in every currency.",
                 "nullable": true
@@ -234134,11 +234261,11 @@
         "type": "object",
         "properties": {
           "currency": {
-            "maxLength": 3,
+            "maxLength": 5,
             "minLength": 3,
             "pattern": "^[a-zA-Z]*$",
             "type": "string",
-            "description": "The three-letter, case-sensitive currency code of the minor unit, e.g. GBX."
+            "description": "The three to five letter, case-sensitive currency code of the minor unit, e.g. GBX."
           },
           "fractionOfMajor": {
             "maximum": 1,
@@ -234172,7 +234299,7 @@
           },
           "majorUnitCurrency": {
             "type": "string",
-            "description": "The three-letter, case-sensitive currency code of the group's major unit, e.g. GBP for the sterling group.",
+            "description": "The three to five letter, case-sensitive currency code of the group's major unit, e.g. GBP for the sterling group.",
             "nullable": true
           },
           "circulationDomain": {
@@ -235544,11 +235671,14 @@
           },
           "resultId": {
             "type": "string",
-            "description": "Unique identifier for the result in format: {{GUID of Check Definition}}-{{resultType}}-{{rulesetKey}}-{{ruleKey}}-{{entity GUID}}.\r\nFor holdings the trailing segment is {{source portfolio GUID}}-{{subEntityId}}, since a holding id only\r\nidentifies a holding within its own portfolio.",
+            "description": "Unique, stable identifier for this result, scoped to the check definition, ruleset, rule and breaching\r\nentity. Treat as opaque — composition varies by entityType.",
             "nullable": true
           },
           "portfolioHolding": {
             "$ref": "#/components/schemas/PortfolioHoldingResult"
+          },
+          "portfolioTransaction": {
+            "$ref": "#/components/schemas/PortfolioTransactionResult"
           }
         },
         "additionalProperties": false,
@@ -241710,8 +241840,9 @@
             "nullable": true
           },
           "accrualCurrency": {
-            "maxLength": 3,
+            "maxLength": 5,
             "minLength": 0,
+            "pattern": "^[a-zA-Z]*$",
             "type": "string",
             "description": "The accrual currency."
           },
@@ -241949,8 +242080,9 @@
             "nullable": true
           },
           "accrualCurrency": {
-            "maxLength": 3,
+            "maxLength": 5,
             "minLength": 0,
+            "pattern": "^[a-zA-Z]*$",
             "type": "string",
             "description": "The accrual currency."
           },
@@ -249052,7 +249184,7 @@
             "properties": {
               "currencyPair": {
                 "minLength": 1,
-                "pattern": "^[A-Z]{3}/[A-Z]{3}$",
+                "pattern": "^[A-Z]{3,5}/[A-Z]{3,5}$",
                 "type": "string"
               },
               "amount": {
@@ -250918,14 +251050,14 @@
         "type": "object",
         "properties": {
           "left": {
-            "maxLength": 3,
+            "maxLength": 5,
             "minLength": 0,
             "pattern": "^[a-zA-Z]*$",
             "type": "string",
             "description": "Currency for the left side of a reconciliation"
           },
           "right": {
-            "maxLength": 3,
+            "maxLength": 5,
             "minLength": 0,
             "pattern": "^[a-zA-Z]*$",
             "type": "string",
@@ -251937,10 +252069,11 @@
               "PaymentInstruction",
               "Transfer",
               "CurrencyGroup",
-              "RecDefinition"
+              "RecDefinition",
+              "RecResult"
             ],
             "type": "string",
-            "description": "The type of entity to which the identifier can be attached. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, FundStructure, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, TaskDefinition, Workflow, IdentifierDefinition, SettlementInstruction, TransactionFeeType, PaymentInstruction, Transfer, RecDefinition."
+            "description": "The type of entity to which the identifier can be attached. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, FundStructure, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, TaskDefinition, Workflow, IdentifierDefinition, SettlementInstruction, TransactionFeeType, PaymentInstruction, Transfer, RecDefinition, RecResult."
           },
           "identifierScope": {
             "maxLength": 64,
@@ -253398,10 +253531,11 @@
             "nullable": true
           },
           "reportCurrency": {
-            "maxLength": 3,
+            "maxLength": 5,
             "minLength": 0,
+            "pattern": "^[a-zA-Z]*$",
             "type": "string",
-            "description": "Three letter ISO currency string indicating what currency to report in for ReportCurrency denominated queries.\r\nIf not present, then the currency of the relevant portfolio will be used in its place.",
+            "description": "Three to five letter currency string indicating what currency to report in for ReportCurrency denominated queries.\r\nIf not present, then the currency of the relevant portfolio will be used in its place.",
             "nullable": true
           },
           "equipWithSubtotals": {
@@ -253501,25 +253635,25 @@
           },
           "leftEffectiveAt": {
             "type": "string",
-            "description": "The left effective datetime, as a date-time or a LUSID cut label. Defaults to the current date-time.",
+            "description": "The left effective datetime, as a date-time or a LUSID cut label. Defaults to the current date-time. When the definition's datePolicy.effectiveAtProgression is Series, must be strictly after the previous instance's leftEffectiveAt.",
             "format": "dateorcutlabel",
             "nullable": true
           },
           "leftAsAt": {
             "type": "string",
-            "description": "The left asAt datetime, as a date-time or a LUSID cut label. Defaults to the current date-time.",
+            "description": "The left asAt datetime, as a date-time or a LUSID cut label. Must be omitted when the definition's datePolicy.asAtPolicy.left is Latest, as the system reconciles at the latest knowledge on every run. When it is Explicit, defaults to the current date-time and is pinned on the instance.",
             "format": "dateorcutlabel",
             "nullable": true
           },
           "rightEffectiveAt": {
             "type": "string",
-            "description": "The right effective datetime, as a date-time or a LUSID cut label. Defaults to the current date-time.",
+            "description": "The right effective datetime, as a date-time or a LUSID cut label. Defaults to the current date-time. When the definition's datePolicy.effectiveAtProgression is Series, must be strictly after the previous instance's rightEffectiveAt.",
             "format": "dateorcutlabel",
             "nullable": true
           },
           "rightAsAt": {
             "type": "string",
-            "description": "The right asAt datetime, as a date-time or a LUSID cut label. Defaults to the current date-time.",
+            "description": "The right asAt datetime, as a date-time or a LUSID cut label. Must be omitted when the definition's datePolicy.asAtPolicy.right is Latest, as the system reconciles at the latest knowledge on every run. When it is Explicit, defaults to the current date-time and is pinned on the instance.",
             "format": "dateorcutlabel",
             "nullable": true
           }
@@ -260934,10 +261068,11 @@
                 "description": "The model option field the shift moves, e.g. \"Volatility\" or \"MeanReversion\" for\r\nHullWhite1F. Only a whitelisted set of options per model is shiftable; an unknown option\r\nname is rejected when the scenario is stored."
               },
               "ccy": {
-                "maxLength": 3,
+                "maxLength": 5,
                 "minLength": 3,
+                "pattern": "^[a-zA-Z]*$",
                 "type": "string",
-                "description": "For options carrying per-currency overrides (e.g. HullWhite1F's VolatilityByCurrency): the\r\nISO currency code whose effective value the shift moves. The shifted entry starts from the\r\nexisting override for that currency, or from the scalar option where no override exists.\r\nOmitted, the shift moves the scalar option and every per-currency override together, so the\r\neffective value moves for every instrument regardless of which level supplies it.",
+                "description": "For options carrying per-currency overrides (e.g. HullWhite1F's VolatilityByCurrency): the\r\nthree to five letter currency code whose effective value the shift moves. The shifted entry starts from the\r\nexisting override for that currency, or from the scalar option where no override exists.\r\nOmitted, the shift moves the scalar option and every per-currency override together, so the\r\neffective value moves for every instrument regardless of which level supplies it.",
                 "nullable": true
               },
               "amount": {
@@ -268009,7 +268144,7 @@
             "description": "The type of payment series."
           },
           "currency": {
-            "maxLength": 3,
+            "maxLength": 5,
             "minLength": 0,
             "type": "string",
             "description": "ISO 4217 currency code identifying the currency-specific series row. Must match the top-level currency field."
@@ -269765,7 +269900,7 @@
           "type": {
             "minLength": 1,
             "type": "string",
-            "description": "The type of this placement (Market, Limit, etc)."
+            "description": "The type of this placement (Market, Limit, Stop, StopLimit, etc). A Limit placement must specify a limit price, a Stop placement a stop price, and a StopLimit placement both."
           },
           "createdDate": {
             "type": "string",
@@ -269878,7 +270013,7 @@
           "type": {
             "minLength": 1,
             "type": "string",
-            "description": "The type of this placement (Market, Limit, etc)."
+            "description": "The type of this placement (Market, Limit, Stop, StopLimit, etc). A Limit placement must specify a limit price, a Stop placement a stop price, and a StopLimit placement both."
           },
           "createdDate": {
             "type": "string",
@@ -269959,18 +270094,18 @@
             "maxLength": 256,
             "minLength": 1,
             "type": "string",
-            "description": "The type of this placement (Market, Limit, etc).",
+            "description": "Optionally changes the type of this placement (Market, Limit, Stop, StopLimit). A type may only be tightened: a Market placement may become Limit, Stop or StopLimit, and any placement may become StopLimit. A placement may be relaxed to Market only when the associated block is of type 'Market'. Changing to a priced type requires a currency and the price(s) that type carries; a price the new type does not carry is cleared. Changing to Market clears both prices and may not be combined with a price update. A change to or from any other type is not subject to these rules, leaves both prices as they are, and is permitted only when the associated block is of type 'Market'.",
             "nullable": true
           },
           "limitPrice": {
             "type": "number",
-            "description": "The optional price, as currency and amount, associated with this placement.",
+            "description": "Optionally updates the limit price of this placement, in the placement's limit price currency unless a currency is also specified. A currency is required if the placement has no limit price currency.",
             "format": "double",
             "nullable": true
           },
           "stopPrice": {
             "type": "number",
-            "description": "The optional price, as currency and amount, associated with this placement.",
+            "description": "Optionally updates the stop price of this placement, in the placement's stop price currency unless a currency is also specified. A currency is required if the placement has no stop price currency.",
             "format": "double",
             "nullable": true
           },
@@ -269992,10 +270127,17 @@
             "type": "string",
             "description": "Optionally specifies the entry type of this placement. Available values: Undecided, Manual, Direct, Ems, External.",
             "nullable": true
+          },
+          "currency": {
+            "maxLength": 3,
+            "minLength": 0,
+            "type": "string",
+            "description": "The ISO currency code of the stop and/or limit price carried by the placement's type. Required when the type is changed to Stop, Limit or StopLimit, or when a price is set that the placement has no currency for; not permitted for a Market placement. For a value placement it must match the currency of the amount exactly, whether that amount is on the placement or in the update.",
+            "nullable": true
           }
         },
         "additionalProperties": false,
-        "description": "A request to create or update a Placement."
+        "description": "A request to update a Placement."
       },
       "PnlJournalEntryLine": {
         "type": "object",
@@ -271868,6 +272010,139 @@
           }
         ]
       },
+      "PortfolioTransactionDataset": {
+        "type": "object",
+        "properties": {
+          "asAt": {
+            "type": "string",
+            "description": "The asAt date to fetch the data. Nullable. Defaults to latest.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "fromEffectiveDate": {
+            "type": "string",
+            "description": "The earliest transaction date to check, inclusive. Nullable. Unbounded if not provided.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "toEffectiveDate": {
+            "type": "string",
+            "description": "The latest transaction date to check, inclusive. Nullable — the window is unbounded above if not\r\nprovided. This value also resolves as the run's effectiveAt, so portfolios are resolved and transactions\r\ndecorated as of it; when not provided, that defaults to latest. Must be on or after fromEffectiveDate\r\nwhen both are provided.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "portfolioScope": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The scope of the portfolios whose transactions to check. Nullable. Every scope is checked if not provided.",
+            "nullable": true
+          },
+          "portfolioSelectorAttribute": {
+            "maxLength": 1024,
+            "minLength": 0,
+            "type": "string",
+            "description": "An attribute (field name or propertyKey) to use to narrow down the portfolios whose transactions are\r\nchecked. Cannot be provided without portfolioSelectorValue, and vice versa.",
+            "nullable": true
+          },
+          "portfolioSelectorValue": {
+            "maxLength": 1024,
+            "minLength": 0,
+            "type": "string",
+            "description": "The value of the above attribute used to narrow down the portfolios. Cannot be provided without\r\nportfolioSelectorAttribute, and vice versa.",
+            "nullable": true
+          },
+          "transactionSelectorAttribute": {
+            "maxLength": 1024,
+            "minLength": 0,
+            "type": "string",
+            "description": "An attribute (field name or propertyKey) to use to narrow down the transactions checked within those\r\nportfolios. Cannot be provided without transactionSelectorValue, and vice versa.",
+            "nullable": true
+          },
+          "transactionSelectorValue": {
+            "maxLength": 1024,
+            "minLength": 0,
+            "type": "string",
+            "description": "The value of the above attribute used to narrow down the transactions. Cannot be provided without\r\ntransactionSelectorAttribute, and vice versa.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Contains the run-time parameters that are appropriate for check definitions\r\nwith datasetSchema.type = \"PortfolioContents\" and datasetSchema.entityType = \"Transaction\""
+      },
+      "PortfolioTransactionResult": {
+        "type": "object",
+        "properties": {
+          "entityType": {
+            "type": "string",
+            "description": "The type of the entity. Always \"Transaction\".",
+            "nullable": true
+          },
+          "transactionView": {
+            "type": "string",
+            "description": "Whether this is an input or an output transaction",
+            "nullable": true
+          },
+          "asAt": {
+            "type": "string",
+            "description": "The as-at timestamp for the transaction",
+            "format": "date-time"
+          },
+          "transactionDate": {
+            "type": "string",
+            "description": "The transaction date",
+            "format": "date-time"
+          },
+          "transactionId": {
+            "type": "string",
+            "description": "The transaction's identifier within its portfolio",
+            "nullable": true
+          },
+          "entityUniqueId": {
+            "type": "string",
+            "description": "The transaction's unique identifier across portfolios",
+            "nullable": true
+          },
+          "sourcePortfolioScope": {
+            "type": "string",
+            "description": "The scope of the portfolio this transaction came from",
+            "nullable": true
+          },
+          "sourcePortfolioCode": {
+            "type": "string",
+            "description": "The code of the portfolio this transaction came from",
+            "nullable": true
+          },
+          "sourcePortfolioEntityUniqueId": {
+            "type": "string",
+            "description": "The unique identifier of the portfolio this transaction came from",
+            "nullable": true
+          },
+          "sourcePortfolioDisplayName": {
+            "type": "string",
+            "description": "The display name of the portfolio this transaction came from",
+            "nullable": true
+          },
+          "lusidInstrumentId": {
+            "type": "string",
+            "description": "The LUSID instrument identifier of the instrument transacted",
+            "nullable": true
+          },
+          "instrumentDisplayName": {
+            "type": "string",
+            "description": "The name of the instrument transacted",
+            "nullable": true
+          },
+          "transactionType": {
+            "type": "string",
+            "description": "The transaction type, e.g. Buy, Sell",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents transaction details for a data quality check result."
+      },
       "PortfolioType": {
         "enum": [
           "Transaction",
@@ -273410,10 +273685,11 @@
               "PaymentInstruction",
               "Transfer",
               "CurrencyGroup",
-              "RecDefinition"
+              "RecDefinition",
+              "RecResult"
             ],
             "type": "string",
-            "description": "The domain that the property exists in. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, FundStructure, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, TaskDefinition, Workflow, IdentifierDefinition, SettlementInstruction, TransactionFeeType, PaymentInstruction, Transfer, RecDefinition."
+            "description": "The domain that the property exists in. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, FundStructure, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, TaskDefinition, Workflow, IdentifierDefinition, SettlementInstruction, TransactionFeeType, PaymentInstruction, Transfer, RecDefinition, RecResult."
           },
           "scope": {
             "type": "string",
@@ -273746,10 +274022,11 @@
               "PaymentInstruction",
               "Transfer",
               "CurrencyGroup",
-              "RecDefinition"
+              "RecDefinition",
+              "RecResult"
             ],
             "type": "string",
-            "description": "The domain that the property exists in. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, FundStructure, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, TaskDefinition, Workflow, IdentifierDefinition, SettlementInstruction, TransactionFeeType, PaymentInstruction, Transfer, RecDefinition."
+            "description": "The domain that the property exists in. Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, FundStructure, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, TaskDefinition, Workflow, IdentifierDefinition, SettlementInstruction, TransactionFeeType, PaymentInstruction, Transfer, RecDefinition, RecResult."
           },
           "scope": {
             "type": "string",
@@ -273915,7 +274192,8 @@
           "PaymentInstruction",
           "Transfer",
           "CurrencyGroup",
-          "RecDefinition"
+          "RecDefinition",
+          "RecResult"
         ],
         "type": "string",
         "description": "See https://wiki.finbourne.com/information/domain-model-properties\r\n            \r\nEach domain refers to a logical set of properties which reside within it."
@@ -275782,8 +276060,9 @@
             "type": "object",
             "properties": {
               "ccy": {
-                "maxLength": 3,
+                "maxLength": 5,
                 "minLength": 3,
+                "pattern": "^[a-zA-Z]*$",
                 "type": "string"
               },
               "amount": {
@@ -276360,10 +276639,22 @@
             "type": "string",
             "description": "The asAt datetime of the data reconciled on the right side.",
             "format": "date-time"
+          },
+          "leftActivitySinceEffectiveAt": {
+            "type": "string",
+            "description": "The exclusive lower bound of the left side's activity window, so the window is (leftActivitySinceEffectiveAt, leftEffectiveAt]. Populated only on activity-based rec types; null on point-in-time rec types and when the definition has no activity window.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "rightActivitySinceEffectiveAt": {
+            "type": "string",
+            "description": "The exclusive lower bound of the right side's activity window, so the window is (rightActivitySinceEffectiveAt, rightEffectiveAt]. Populated only on activity-based rec types; null on point-in-time rec types and when the definition has no activity window.",
+            "format": "date-time",
+            "nullable": true
           }
         },
         "additionalProperties": false,
-        "description": "The left and right effective and asAt dates of the data reconciled in a run."
+        "description": "The left and right effective and asAt dates of the data reconciled in a run, plus the exclusive lower bound of each side's activity window on activity-based rec types."
       },
       "RecDefCurrencies": {
         "required": [
@@ -277714,10 +278005,16 @@
         "required": [
           "closedExceptions",
           "matches",
-          "openExceptions"
+          "openExceptions",
+          "total"
         ],
         "type": "object",
         "properties": {
+          "total": {
+            "type": "integer",
+            "description": "The total number of results in this result set, across all categories.",
+            "format": "int32"
+          },
           "openExceptions": {
             "$ref": "#/components/schemas/RecOpenExceptionCounts"
           },
@@ -284179,10 +284476,11 @@
             "nullable": true
           },
           "reportCurrency": {
-            "maxLength": 3,
+            "maxLength": 5,
             "minLength": 0,
+            "pattern": "^[a-zA-Z]*$",
             "type": "string",
-            "description": "Three letter ISO currency string to report in. If absent the portfolio's own currency is used,\r\nwhich makes the target ambiguous across a multi-currency portfolio group - supply it there.",
+            "description": "Three to five letter currency string to report in. If absent the portfolio's own currency is used,\r\nwhich makes the target ambiguous across a multi-currency portfolio group - supply it there.",
             "nullable": true
           },
           "filters": {
@@ -284541,9 +284839,13 @@
           },
           "portfolioHoldingDataset": {
             "$ref": "#/components/schemas/PortfolioHoldingDataset"
+          },
+          "portfolioTransactionDataset": {
+            "$ref": "#/components/schemas/PortfolioTransactionDataset"
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": "Exactly one dataset must be provided, matching the check definition's datasetSchema."
       },
       "RunCheckResponse": {
         "type": "object",
@@ -291587,7 +291889,7 @@
           "entityType": {
             "minLength": 1,
             "type": "string",
-            "description": "Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, FundStructure, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, TaskDefinition, Workflow, IdentifierDefinition, SettlementInstruction, TransactionFeeType, PaymentInstruction, Transfer, RecDefinition."
+            "description": "Available values: Transaction, Portfolio, Holding, ReferenceHolding, TransactionConfiguration, Instrument, PortfolioGroup, Person, Order, Allocation, Calendar, LegalEntity, InvestorRecord, InvestmentAccount, Placement, Execution, Block, Participation, Package, OrderInstruction, CustomEntity, InstrumentEvent, Account, ChartOfAccounts, CustodianAccount, CheckDefinition, Abor, AborConfiguration, Fund, FundConfiguration, FundStructure, Fee, Reconciliation, PropertyDefinition, Compliance, DiaryEntry, Leg, DerivedValuation, Timeline, ClosedPeriod, TaskDefinition, Workflow, IdentifierDefinition, SettlementInstruction, TransactionFeeType, PaymentInstruction, Transfer, RecDefinition, RecResult."
           },
           "entityIdName": {
             "maxLength": 256,
@@ -295965,11 +296267,11 @@
             "nullable": true
           },
           "majorUnitCurrency": {
-            "maxLength": 3,
+            "maxLength": 5,
             "minLength": 3,
             "pattern": "^[a-zA-Z]*$",
             "type": "string",
-            "description": "The three-letter, case-sensitive currency code of the group's major unit, e.g. GBP for the sterling group."
+            "description": "The three to five letter, case-sensitive currency code of the group's major unit, e.g. GBP for the sterling group."
           },
           "circulationDomain": {
             "maxLength": 512,
@@ -298416,10 +298718,11 @@
             "nullable": true
           },
           "reportCurrency": {
-            "maxLength": 3,
+            "maxLength": 5,
             "minLength": 0,
+            "pattern": "^[a-zA-Z]*$",
             "type": "string",
-            "description": "Three letter ISO currency string indicating what currency to report in for ReportCurrency denominated queries.\r\nIf not present, then the currency of the relevant portfolio will be used in its place.",
+            "description": "Three to five letter currency string indicating what currency to report in for ReportCurrency denominated queries.\r\nIf not present, then the currency of the relevant portfolio will be used in its place.",
             "nullable": true
           },
           "equipWithSubtotals": {
