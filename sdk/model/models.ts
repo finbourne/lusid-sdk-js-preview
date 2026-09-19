@@ -656,6 +656,7 @@ export * from './flowConventionName';
 export * from './flowConventions';
 export * from './forwardRateAgreement';
 export * from './forwardRateAgreementAllOf';
+export * from './fractionalUnitsTrueUpConfiguration';
 export * from './fromRecipe';
 export * from './fund';
 export * from './fundA2BDataRecord';
@@ -1369,6 +1370,9 @@ export * from './recExecution';
 export * from './recInstance';
 export * from './recInstanceId';
 export * from './recInstanceSummary';
+export * from './recLinkKey';
+export * from './recLinkedBy';
+export * from './recLinkedResult';
 export * from './recMatchCountByResultType';
 export * from './recMatchCounts';
 export * from './recOpenExceptionCounts';
@@ -2647,6 +2651,7 @@ import { FlowConventionName } from './flowConventionName';
 import { FlowConventions } from './flowConventions';
 import { ForwardRateAgreement } from './forwardRateAgreement';
 import { ForwardRateAgreementAllOf } from './forwardRateAgreementAllOf';
+import { FractionalUnitsTrueUpConfiguration } from './fractionalUnitsTrueUpConfiguration';
 import { FromRecipe } from './fromRecipe';
 import { Fund } from './fund';
 import { FundA2BDataRecord } from './fundA2BDataRecord';
@@ -3360,6 +3365,9 @@ import { RecExecution } from './recExecution';
 import { RecInstance } from './recInstance';
 import { RecInstanceId } from './recInstanceId';
 import { RecInstanceSummary } from './recInstanceSummary';
+import { RecLinkKey } from './recLinkKey';
+import { RecLinkedBy } from './recLinkedBy';
+import { RecLinkedResult } from './recLinkedResult';
 import { RecMatchCountByResultType } from './recMatchCountByResultType';
 import { RecMatchCounts } from './recMatchCounts';
 import { RecOpenExceptionCounts } from './recOpenExceptionCounts';
@@ -5416,6 +5424,7 @@ let typeMap: {[index: string]: any} = {
     "FlowConventions": FlowConventions,
     "ForwardRateAgreement": ForwardRateAgreement,
     "ForwardRateAgreementAllOf": ForwardRateAgreementAllOf,
+    "FractionalUnitsTrueUpConfiguration": FractionalUnitsTrueUpConfiguration,
     "FromRecipe": FromRecipe,
     "Fund": Fund,
     "FundA2BDataRecord": FundA2BDataRecord,
@@ -6098,6 +6107,9 @@ let typeMap: {[index: string]: any} = {
     "RecInstance": RecInstance,
     "RecInstanceId": RecInstanceId,
     "RecInstanceSummary": RecInstanceSummary,
+    "RecLinkKey": RecLinkKey,
+    "RecLinkedBy": RecLinkedBy,
+    "RecLinkedResult": RecLinkedResult,
     "RecMatchCountByResultType": RecMatchCountByResultType,
     "RecMatchCounts": RecMatchCounts,
     "RecOpenExceptionCounts": RecOpenExceptionCounts,
