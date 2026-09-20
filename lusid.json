@@ -9,7 +9,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "2.0.1658",
+    "version": "2.0.1659",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -31644,7 +31644,9 @@
                       "displayName": "Pound Sterling",
                       "description": "The Sterling currency group",
                       "majorUnitCurrency": "GBP",
-                      "circulationDomain": "GB",
+                      "circulationDomain": [
+                        "GB"
+                      ],
                       "minorUnits": [
                         {
                           "currency": "GBX",
@@ -31671,7 +31673,9 @@
                       "displayName": "Pound Sterling",
                       "description": "The Sterling currency group",
                       "majorUnitCurrency": "GBP",
-                      "circulationDomain": "GB",
+                      "circulationDomain": [
+                        "GB"
+                      ],
                       "minorUnits": [
                         {
                           "currency": "GBX",
@@ -31698,7 +31702,9 @@
                       "displayName": "Pound Sterling",
                       "description": "The Sterling currency group",
                       "majorUnitCurrency": "GBP",
-                      "circulationDomain": "GB",
+                      "circulationDomain": [
+                        "GB"
+                      ],
                       "minorUnits": [
                         {
                           "currency": "GBX",
@@ -31773,7 +31779,9 @@
                 "displayName": "Pound Sterling",
                 "description": "The Sterling currency group",
                 "majorUnitCurrency": "GBP",
-                "circulationDomain": "GB",
+                "circulationDomain": [
+                  "GB"
+                ],
                 "minorUnits": [
                   {
                     "currency": "GBX",
@@ -31791,7 +31799,9 @@
                 "displayName": "Pound Sterling",
                 "description": "The Sterling currency group",
                 "majorUnitCurrency": "GBP",
-                "circulationDomain": "GB",
+                "circulationDomain": [
+                  "GB"
+                ],
                 "minorUnits": [
                   {
                     "currency": "GBX",
@@ -31809,7 +31819,9 @@
                 "displayName": "Pound Sterling",
                 "description": "The Sterling currency group",
                 "majorUnitCurrency": "GBP",
-                "circulationDomain": "GB",
+                "circulationDomain": [
+                  "GB"
+                ],
                 "minorUnits": [
                   {
                     "currency": "GBX",
@@ -31827,7 +31839,9 @@
                 "displayName": "Pound Sterling",
                 "description": "The Sterling currency group",
                 "majorUnitCurrency": "GBP",
-                "circulationDomain": "GB",
+                "circulationDomain": [
+                  "GB"
+                ],
                 "minorUnits": [
                   {
                     "currency": "GBX",
@@ -31852,7 +31866,9 @@
                   "displayName": "Pound Sterling",
                   "description": "The Sterling currency group",
                   "majorUnitCurrency": "GBP",
-                  "circulationDomain": "GB",
+                  "circulationDomain": [
+                    "GB"
+                  ],
                   "minorUnits": [
                     {
                       "currency": "GBX",
@@ -31874,7 +31890,9 @@
                   "displayName": "Pound Sterling",
                   "description": "The Sterling currency group",
                   "majorUnitCurrency": "GBP",
-                  "circulationDomain": "GB",
+                  "circulationDomain": [
+                    "GB"
+                  ],
                   "minorUnits": [
                     {
                       "currency": "GBX",
@@ -31896,7 +31914,9 @@
                   "displayName": "Pound Sterling",
                   "description": "The Sterling currency group",
                   "majorUnitCurrency": "GBP",
-                  "circulationDomain": "GB",
+                  "circulationDomain": [
+                    "GB"
+                  ],
                   "minorUnits": [
                     {
                       "currency": "GBX",
@@ -31995,7 +32015,9 @@
                   "displayName": "Pound Sterling",
                   "description": "The Sterling currency group",
                   "majorUnitCurrency": "GBP",
-                  "circulationDomain": "GB",
+                  "circulationDomain": [
+                    "GB"
+                  ],
                   "minorUnits": [
                     {
                       "currency": "GBX",
@@ -32017,7 +32039,9 @@
                   "displayName": "Pound Sterling",
                   "description": "The Sterling currency group",
                   "majorUnitCurrency": "GBP",
-                  "circulationDomain": "GB",
+                  "circulationDomain": [
+                    "GB"
+                  ],
                   "minorUnits": [
                     {
                       "currency": "GBX",
@@ -32039,7 +32063,9 @@
                   "displayName": "Pound Sterling",
                   "description": "The Sterling currency group",
                   "majorUnitCurrency": "GBP",
-                  "circulationDomain": "GB",
+                  "circulationDomain": [
+                    "GB"
+                  ],
                   "minorUnits": [
                     {
                       "currency": "GBX",
@@ -223744,6 +223770,11 @@
             "type": "string",
             "description": "The LUSID instrument identifier of the instrument that produced the cashflow."
           },
+          "instrumentDisplayName": {
+            "type": "string",
+            "description": "The display name of the instrument that produced the cashflow. Not present when the instrument cannot be resolved (e.g. deleted, no permission).",
+            "nullable": true
+          },
           "transactionId": {
             "type": "string",
             "description": "The identifier of the transaction from which the cashflow originates, where known.",
@@ -223755,6 +223786,11 @@
           "flowType": {
             "type": "string",
             "description": "The type of the cashflow, e.g. Coupon, Principal or Premium.",
+            "nullable": true
+          },
+          "movementName": {
+            "type": "string",
+            "description": "The name of the movement that produced the cashflow (e.g. Coupon, Side1), falling back to the flow type when the movement is unnamed. Not present when the cashflow could not be valued.",
             "nullable": true
           },
           "payReceive": {
@@ -234582,8 +234618,11 @@
             "nullable": true
           },
           "circulationDomain": {
-            "type": "string",
-            "description": "The domain in which the group's currencies circulate, e.g. an ISO 3166 country code.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The domains in which the group's currencies circulate, e.g. ISO 3166 country codes or the ISO 4217 entity names of the countries using the major unit.",
             "nullable": true
           },
           "minorUnits": {
@@ -296688,10 +296727,11 @@
             "description": "The three to five letter, case-sensitive currency code of the group's major unit, e.g. GBP for the sterling group."
           },
           "circulationDomain": {
-            "maxLength": 512,
-            "minLength": 0,
-            "type": "string",
-            "description": "The domain in which the group's currencies circulate, e.g. an ISO 3166 country code.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The domains in which the group's currencies circulate, e.g. ISO 3166 country codes or the ISO 4217 entity names of the countries using the major unit.",
             "nullable": true
           },
           "minorUnits": {
