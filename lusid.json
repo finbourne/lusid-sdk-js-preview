@@ -9,7 +9,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "2.0.1663",
+    "version": "2.0.1664",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -6530,6 +6530,139 @@
           }
         ],
         "x-fbn-apistatus": "EarlyAccess"
+      }
+    },
+    "/api/aggregation/$queryablekeys": {
+      "post": {
+        "tags": [
+          "Aggregation"
+        ],
+        "summary": "[EXPERIMENTAL] GetQueryableKeysForMetrics: Query the queryable keys behind a given set of valuation metrics.",
+        "description": "Describes what a valuation would return for each of the supplied metrics, so that a caller can\r\nprepare for the response, and render it, without having to ask for the valuation first. The\r\nmetrics are given exactly as they would be supplied to the metrics of a valuation request.\r\n            \r\nEach metric is reported on individually, keyed by its normalised address key: those that resolve\r\nappear under metrics with their queryable key definition, and the rest appear under failed with the\r\nreason. A metric that does not exist, or that you are not entitled to read, is reported as failed;\r\nthe two cases are not distinguished from one another.",
+        "operationId": "GetQueryableKeysForMetrics",
+        "requestBody": {
+          "description": "The set of metrics whose queryable keys are to be described",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/QueryableKeysForMetricsRequest"
+              },
+              "example": {
+                "metrics": [
+                  "Valuation/PV",
+                  "Instrument/default/Name"
+                ],
+                "recipeId": {
+                  "scope": "MyRecipeScope",
+                  "code": "default"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QueryableKeysForMetricsRequest"
+              },
+              "example": {
+                "metrics": [
+                  "Valuation/PV",
+                  "Instrument/default/Name"
+                ],
+                "recipeId": {
+                  "scope": "MyRecipeScope",
+                  "code": "default"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QueryableKeysForMetricsRequest"
+              },
+              "example": {
+                "metrics": [
+                  "Valuation/PV",
+                  "Instrument/default/Name"
+                ],
+                "recipeId": {
+                  "scope": "MyRecipeScope",
+                  "code": "default"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/QueryableKeysForMetricsRequest"
+              },
+              "example": {
+                "metrics": [
+                  "Valuation/PV",
+                  "Instrument/default/Name"
+                ],
+                "recipeId": {
+                  "scope": "MyRecipeScope",
+                  "code": "default"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueryableKeysForMetricsResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueryableKeysForMetricsResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueryableKeysForMetricsResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
       }
     },
     "/api/aggregation/$valuation": {
@@ -22271,6 +22404,12 @@
                       },
                       "DecimalParameter": {
                         "value": 0,
+                        "inclusiveBounds": false,
+                        "complianceParameterType": "DecimalComplianceParameter"
+                      },
+                      "InclusiveDecimalParameter": {
+                        "value": 0,
+                        "inclusiveBounds": true,
                         "complianceParameterType": "DecimalComplianceParameter"
                       },
                       "StringParameter": {
@@ -22391,18 +22530,22 @@
                     "parameters": {
                       "UpperBound": {
                         "value": 15,
+                        "inclusiveBounds": false,
                         "complianceParameterType": "DecimalComplianceParameter"
                       },
                       "LowerBound": {
                         "value": 0,
+                        "inclusiveBounds": false,
                         "complianceParameterType": "DecimalComplianceParameter"
                       },
                       "UpperWarning": {
                         "value": 15,
+                        "inclusiveBounds": false,
                         "complianceParameterType": "DecimalComplianceParameter"
                       },
                       "LowerWarning": {
                         "value": 0,
+                        "inclusiveBounds": false,
                         "complianceParameterType": "DecimalComplianceParameter"
                       },
                       "Metric": {
@@ -22485,6 +22628,12 @@
                       },
                       "DecimalParameter": {
                         "value": 0,
+                        "inclusiveBounds": false,
+                        "complianceParameterType": "DecimalComplianceParameter"
+                      },
+                      "InclusiveDecimalParameter": {
+                        "value": 0,
+                        "inclusiveBounds": true,
                         "complianceParameterType": "DecimalComplianceParameter"
                       },
                       "StringParameter": {
@@ -22605,18 +22754,22 @@
                     "parameters": {
                       "UpperBound": {
                         "value": 15,
+                        "inclusiveBounds": false,
                         "complianceParameterType": "DecimalComplianceParameter"
                       },
                       "LowerBound": {
                         "value": 0,
+                        "inclusiveBounds": false,
                         "complianceParameterType": "DecimalComplianceParameter"
                       },
                       "UpperWarning": {
                         "value": 15,
+                        "inclusiveBounds": false,
                         "complianceParameterType": "DecimalComplianceParameter"
                       },
                       "LowerWarning": {
                         "value": 0,
+                        "inclusiveBounds": false,
                         "complianceParameterType": "DecimalComplianceParameter"
                       },
                       "Metric": {
@@ -22699,6 +22852,12 @@
                       },
                       "DecimalParameter": {
                         "value": 0,
+                        "inclusiveBounds": false,
+                        "complianceParameterType": "DecimalComplianceParameter"
+                      },
+                      "InclusiveDecimalParameter": {
+                        "value": 0,
+                        "inclusiveBounds": true,
                         "complianceParameterType": "DecimalComplianceParameter"
                       },
                       "StringParameter": {
@@ -22819,18 +22978,22 @@
                     "parameters": {
                       "UpperBound": {
                         "value": 15,
+                        "inclusiveBounds": false,
                         "complianceParameterType": "DecimalComplianceParameter"
                       },
                       "LowerBound": {
                         "value": 0,
+                        "inclusiveBounds": false,
                         "complianceParameterType": "DecimalComplianceParameter"
                       },
                       "UpperWarning": {
                         "value": 15,
+                        "inclusiveBounds": false,
                         "complianceParameterType": "DecimalComplianceParameter"
                       },
                       "LowerWarning": {
                         "value": 0,
+                        "inclusiveBounds": false,
                         "complianceParameterType": "DecimalComplianceParameter"
                       },
                       "Metric": {
@@ -22913,6 +23076,12 @@
                       },
                       "DecimalParameter": {
                         "value": 0,
+                        "inclusiveBounds": false,
+                        "complianceParameterType": "DecimalComplianceParameter"
+                      },
+                      "InclusiveDecimalParameter": {
+                        "value": 0,
+                        "inclusiveBounds": true,
                         "complianceParameterType": "DecimalComplianceParameter"
                       },
                       "StringParameter": {
@@ -23033,18 +23202,22 @@
                     "parameters": {
                       "UpperBound": {
                         "value": 15,
+                        "inclusiveBounds": false,
                         "complianceParameterType": "DecimalComplianceParameter"
                       },
                       "LowerBound": {
                         "value": 0,
+                        "inclusiveBounds": false,
                         "complianceParameterType": "DecimalComplianceParameter"
                       },
                       "UpperWarning": {
                         "value": 15,
+                        "inclusiveBounds": false,
                         "complianceParameterType": "DecimalComplianceParameter"
                       },
                       "LowerWarning": {
                         "value": 0,
+                        "inclusiveBounds": false,
                         "complianceParameterType": "DecimalComplianceParameter"
                       },
                       "Metric": {
@@ -23127,6 +23300,7 @@
                   "parameters": {
                     "UpperBound": {
                       "value": 30,
+                      "inclusiveBounds": false,
                       "complianceParameterType": "DecimalComplianceParameter"
                     }
                   },
@@ -23179,6 +23353,7 @@
                   "parameters": {
                     "UpperBound": {
                       "value": 30,
+                      "inclusiveBounds": false,
                       "complianceParameterType": "DecimalComplianceParameter"
                     }
                   },
@@ -23231,6 +23406,7 @@
                   "parameters": {
                     "UpperBound": {
                       "value": 30,
+                      "inclusiveBounds": false,
                       "complianceParameterType": "DecimalComplianceParameter"
                     }
                   },
@@ -23395,6 +23571,7 @@
                       "parameters": {
                         "UpperBound": {
                           "value": 30,
+                          "inclusiveBounds": false,
                           "complianceParameterType": "DecimalComplianceParameter"
                         }
                       },
@@ -23453,6 +23630,7 @@
                       "parameters": {
                         "UpperBound": {
                           "value": 30,
+                          "inclusiveBounds": false,
                           "complianceParameterType": "DecimalComplianceParameter"
                         }
                       },
@@ -23511,6 +23689,7 @@
                       "parameters": {
                         "UpperBound": {
                           "value": 30,
+                          "inclusiveBounds": false,
                           "complianceParameterType": "DecimalComplianceParameter"
                         }
                       },
@@ -23669,6 +23848,7 @@
                   "parameters": {
                     "UpperBound": {
                       "value": 30,
+                      "inclusiveBounds": false,
                       "complianceParameterType": "DecimalComplianceParameter"
                     }
                   },
@@ -23721,6 +23901,7 @@
                   "parameters": {
                     "UpperBound": {
                       "value": 30,
+                      "inclusiveBounds": false,
                       "complianceParameterType": "DecimalComplianceParameter"
                     }
                   },
@@ -23773,6 +23954,7 @@
                   "parameters": {
                     "UpperBound": {
                       "value": 30,
+                      "inclusiveBounds": false,
                       "complianceParameterType": "DecimalComplianceParameter"
                     }
                   },
@@ -100447,9 +100629,9 @@
                   },
                   "type": "Limit",
                   "limitPrice": 100,
-                  "stopPrice": 100,
                   "counterparty": "SomeCounterparty",
-                  "entryType": "Manual"
+                  "entryType": "Manual",
+                  "currency": "USD"
                 }
               }
             },
@@ -100477,9 +100659,9 @@
                   },
                   "type": "Limit",
                   "limitPrice": 100,
-                  "stopPrice": 100,
                   "counterparty": "SomeCounterparty",
-                  "entryType": "Manual"
+                  "entryType": "Manual",
+                  "currency": "USD"
                 }
               }
             },
@@ -100507,9 +100689,9 @@
                   },
                   "type": "Limit",
                   "limitPrice": 100,
-                  "stopPrice": 100,
                   "counterparty": "SomeCounterparty",
-                  "entryType": "Manual"
+                  "entryType": "Manual",
+                  "currency": "USD"
                 }
               }
             },
@@ -100537,9 +100719,9 @@
                   },
                   "type": "Limit",
                   "limitPrice": 100,
-                  "stopPrice": 100,
                   "counterparty": "SomeCounterparty",
-                  "entryType": "Manual"
+                  "entryType": "Manual",
+                  "currency": "USD"
                 }
               }
             }
@@ -215534,6 +215716,56 @@
         },
         "additionalProperties": false
       },
+      "AggregateNumericTolerance": {
+        "required": [
+          "referenceSide",
+          "ruleName",
+          "thresholdPriority",
+          "toleranceType"
+        ],
+        "type": "object",
+        "properties": {
+          "referenceSide": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Reference side (source of truth). One of: Left, Right. Available values: Left, Right."
+          },
+          "absoluteThreshold": {
+            "type": "number",
+            "description": "Numeric tolerance absolute value (allowable diff compared to the reference side value).",
+            "format": "double",
+            "nullable": true
+          },
+          "relativeThreshold": {
+            "type": "number",
+            "description": "Numeric tolerance value as a relative % of the reference value.",
+            "format": "double",
+            "nullable": true
+          },
+          "thresholdPriority": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Whether to apply the GreaterOf or LesserOf the absoluteThreshold vs relativeThreshold. One of: GreaterOf, LesserOf. Available values: GreaterOf, LesserOf."
+          },
+          "offset": {
+            "type": "string",
+            "description": "How the threshold should be applied to the reference side value. One of: Above, Below, Either. Defaults to Either. Available values: Above, Below, Either.",
+            "nullable": true
+          },
+          "toleranceType": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Polymorphic discriminator. Supported types: CoreStringCross, CoreAttributeOptionality, CoreDateTolerance, Numeric. Available values: CoreStringCross, CoreAttributeOptionality, CoreDateTolerance, Numeric."
+          },
+          "ruleName": {
+            "maxLength": 256,
+            "minLength": 1,
+            "type": "string",
+            "description": "The reference name of the rule that this tolerance relaxes."
+          }
+        },
+        "additionalProperties": false
+      },
       "AggregateRuleValues": {
         "required": [
           "ruleName"
@@ -215944,6 +216176,12 @@
           },
           "dataModelMembership": {
             "$ref": "#/components/schemas/DataModelMembership"
+          },
+          "direction": {
+            "type": "integer",
+            "description": "The direction of the allocation's side, derived from its transaction type at write time: 1 the side increases the position (longer), -1 it decreases it (shorter), null when no direction could be resolved.",
+            "format": "int32",
+            "nullable": true
           },
           "links": {
             "type": "array",
@@ -230156,6 +230394,25 @@
         },
         "additionalProperties": false
       },
+      "ContiguousActivityWindow": {
+        "required": [
+          "initialActivitySinceEffectiveAt",
+          "windowType"
+        ],
+        "type": "object",
+        "properties": {
+          "initialActivitySinceEffectiveAt": {
+            "$ref": "#/components/schemas/RecActivitySinceEffectiveAt"
+          },
+          "windowType": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Polymorphic discriminator. Supported types: Contiguous. Contiguous requires effectiveAtProgression Series. Available values: Contiguous, FixedLookback, Explicit, ClosedPeriod, ContiguousAsAt."
+          }
+        },
+        "additionalProperties": false,
+        "description": "The activity window for a running series of instances: each instance's window starts where the previous\r\ninstance's ended, so the series tiles the effective timeline with no gaps and no overlap. Requires the\r\ndefinition's effectiveAtProgression to be Series."
+      },
       "ContractDetails": {
         "required": [
           "identifiers"
@@ -230749,6 +231006,70 @@
         ],
         "description": "Conversion Event (CONV) - Conversion of securities (generally convertible bonds or preferred shares) into\r\nanother form of securities (usually common shares) at a pre-stated price/ratio."
       },
+      "CoreAttributeOptionalityTolerance": {
+        "required": [
+          "ruleName",
+          "toleranceType"
+        ],
+        "type": "object",
+        "properties": {
+          "optionalSide": {
+            "type": "string",
+            "description": "Which side is allowed to have no value while still attempting to match. One of: Left, Right, Either. Defaults to Either. Available values: Left, Right, Either.",
+            "nullable": true
+          },
+          "toleranceType": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Polymorphic discriminator. Supported types: CoreStringCross, CoreAttributeOptionality, CoreDateTolerance, Numeric. Available values: CoreStringCross, CoreAttributeOptionality, CoreDateTolerance, Numeric."
+          },
+          "ruleName": {
+            "maxLength": 256,
+            "minLength": 1,
+            "type": "string",
+            "description": "The reference name of the rule that this tolerance relaxes."
+          }
+        },
+        "additionalProperties": false
+      },
+      "CoreDateTolerance": {
+        "required": [
+          "interval",
+          "referenceSide",
+          "ruleName",
+          "toleranceType"
+        ],
+        "type": "object",
+        "properties": {
+          "referenceSide": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Reference side (source of truth). One of: Left, Right. Available values: Left, Right."
+          },
+          "interval": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The allowed tolerance for date time core rule values, defined as an ISO Period."
+          },
+          "offset": {
+            "type": "string",
+            "description": "How the interval should be applied to the reference side value. One of: Earlier, Later, Either. Defaults to Either. Available values: Earlier, Later, Either.",
+            "nullable": true
+          },
+          "toleranceType": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Polymorphic discriminator. Supported types: CoreStringCross, CoreAttributeOptionality, CoreDateTolerance, Numeric. Available values: CoreStringCross, CoreAttributeOptionality, CoreDateTolerance, Numeric."
+          },
+          "ruleName": {
+            "maxLength": 256,
+            "minLength": 1,
+            "type": "string",
+            "description": "The reference name of the rule that this tolerance relaxes."
+          }
+        },
+        "additionalProperties": false
+      },
       "CoreMatchingRule": {
         "required": [
           "leftFormula",
@@ -230809,6 +231130,46 @@
         },
         "additionalProperties": false,
         "description": "A core matching rule and the values that pin a rec result to its reconciled position. These values\r\ncontribute to the result id."
+      },
+      "CoreStringCrossTolerance": {
+        "required": [
+          "crossValue",
+          "referenceValue",
+          "ruleName",
+          "toleranceType"
+        ],
+        "type": "object",
+        "properties": {
+          "referenceValue": {
+            "maxLength": 256,
+            "minLength": 1,
+            "type": "string",
+            "description": "The value for the reference side."
+          },
+          "crossValue": {
+            "maxLength": 256,
+            "minLength": 1,
+            "type": "string",
+            "description": "The value for the side other than the reference one."
+          },
+          "referenceSide": {
+            "type": "string",
+            "description": "Reference side (source of truth). One of: Left, Right. Available values: Left, Right, Either.",
+            "nullable": true
+          },
+          "toleranceType": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Polymorphic discriminator. Supported types: CoreStringCross, CoreAttributeOptionality, CoreDateTolerance, Numeric. Available values: CoreStringCross, CoreAttributeOptionality, CoreDateTolerance, Numeric."
+          },
+          "ruleName": {
+            "maxLength": 256,
+            "minLength": 1,
+            "type": "string",
+            "description": "The reference name of the rule that this tolerance relaxes."
+          }
+        },
+        "additionalProperties": false
       },
       "CorporateAction": {
         "required": [
@@ -236565,6 +236926,10 @@
               "value": {
                 "type": "number",
                 "format": "double"
+              },
+              "inclusiveBounds": {
+                "type": "boolean",
+                "description": "Whether the bound is inclusive of the value; when true a candidate landing exactly on the bound satisfies it. Defaults to false (exclusive)."
               },
               "complianceParameterType": {
                 "enum": [
@@ -263244,6 +263609,12 @@
             "description": "The approval state of the order.",
             "nullable": true
           },
+          "direction": {
+            "type": "integer",
+            "description": "The direction of the order's side, derived from its transaction type at write time: 1 the side increases the position (longer), -1 it decreases it (shorter), null when no direction could be resolved.",
+            "format": "int32",
+            "nullable": true
+          },
           "links": {
             "type": "array",
             "items": {
@@ -263375,6 +263746,12 @@
             "minLength": 1,
             "type": "string",
             "description": "The overall approval state of a block, derived from approval of the block's orders. Available values: Pending, Rejected, Approved, Placed."
+          },
+          "derivedDirection": {
+            "type": "integer",
+            "description": "The overall direction of a block, derived from its orders' transaction types: 1 the block increases the position (longer), -1 it decreases it (shorter), 0 its orders net flat, null when no direction could be resolved (including unsolicited blocks).",
+            "format": "int32",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -270285,6 +270662,12 @@
           "dataModelMembership": {
             "$ref": "#/components/schemas/DataModelMembership"
           },
+          "direction": {
+            "type": "integer",
+            "description": "The direction of the placement's side, inherited at creation from its block's orders: 1 the side increases the position (longer), -1 it decreases it (shorter), 0 the block's orders net flat, null when no direction could be resolved.",
+            "format": "int32",
+            "nullable": true
+          },
           "links": {
             "type": "array",
             "items": {
@@ -270445,18 +270828,18 @@
             "maxLength": 256,
             "minLength": 1,
             "type": "string",
-            "description": "The type of this placement (Market, Limit, etc).",
+            "description": "Optionally changes the type of this placement (Market, Limit, Stop, StopLimit, etc). A type change is permitted only when the associated block is of type 'Market', and leaves the placement's prices as they are.",
             "nullable": true
           },
           "limitPrice": {
             "type": "number",
-            "description": "The optional price, as currency and amount, associated with this placement.",
+            "description": "Optionally updates the limit price of this placement, in the placement's limit price currency unless a currency is also specified. A price on a placement with no limit price currency is stored but not returned until a currency is supplied.",
             "format": "double",
             "nullable": true
           },
           "stopPrice": {
             "type": "number",
-            "description": "The optional price, as currency and amount, associated with this placement.",
+            "description": "Optionally updates the stop price of this placement, in the placement's stop price currency unless a currency is also specified. A price on a placement with no stop price currency is stored but not returned until a currency is supplied.",
             "format": "double",
             "nullable": true
           },
@@ -270478,10 +270861,17 @@
             "type": "string",
             "description": "Optionally specifies the entry type of this placement. Available values: Undecided, Manual, Direct, Ems, External.",
             "nullable": true
+          },
+          "currency": {
+            "maxLength": 3,
+            "minLength": 0,
+            "type": "string",
+            "description": "Optionally sets the ISO currency code of the placement's stop and/or limit price. Not permitted for a Market placement. For a value placement it must match the currency of the amount exactly, whether that amount is on the placement or in the update. When omitted, no currency checks are applied.",
+            "nullable": true
           }
         },
         "additionalProperties": false,
-        "description": "A request to create or update a Placement."
+        "description": "A request to update a Placement."
       },
       "PnlJournalEntryLine": {
         "type": "object",
@@ -275467,6 +275857,67 @@
         },
         "additionalProperties": false
       },
+      "QueryableKeysForMetricsRequest": {
+        "required": [
+          "metrics"
+        ],
+        "type": "object",
+        "properties": {
+          "metrics": {
+            "maxItems": 100,
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "description": "The key that uniquely identifies a queryable address in Lusid."
+            },
+            "description": "The address keys of the metrics to describe, given exactly as they would be supplied as the key of\r\na valuation request's metrics, for example 'Valuation/PV' or 'Holding/Properties[Holding/MyScope/Rating]'."
+          },
+          "recipeId": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "effectiveAt": {
+            "type": "string",
+            "description": "The effective time to describe the metrics at, for definitions and entitlements that vary\r\nalong the effective timeline. Optional; defaults to the current time.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "asAt": {
+            "type": "string",
+            "description": "The as-at time to describe the metrics at. Optional; defaults to the latest.",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Specification of the metrics whose queryable key definitions are being requested."
+      },
+      "QueryableKeysForMetricsResponse": {
+        "required": [
+          "failed",
+          "metrics"
+        ],
+        "type": "object",
+        "properties": {
+          "metrics": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/QueryableKey"
+            },
+            "description": "The definition of each metric that resolved, describing what a valuation returns for it and how to\r\npresent it. Keyed by the metric as it was requested, for example 'Valuation/PV' or\r\n'ProfitAndLoss/Realised/Market(Window=YTD)'. Identical requested keys appear once; different\r\nspellings of the same underlying key, such as a property's raw and wrapper forms, each appear."
+          },
+          "failed": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string",
+              "nullable": true
+            },
+            "description": "Why each metric that did not resolve cannot be requested, keyed as for Metrics. Empty when every\r\nmetric resolved."
+          }
+        },
+        "additionalProperties": false,
+        "description": "The queryable key definition of each requested metric. Every requested metric appears in exactly one of\r\nthe two maps."
+      },
       "QueryApplicableInstrumentEventsRequest": {
         "required": [
           "forecastingRecipeId",
@@ -276792,11 +277243,37 @@
         },
         "additionalProperties": false
       },
+      "RecActivitySinceEffectiveAt": {
+        "required": [
+          "left",
+          "right"
+        ],
+        "type": "object",
+        "properties": {
+          "left": {
+            "type": "string",
+            "description": "The exclusive lower bound for the left side. Activity effective at exactly this datetime falls outside the window.",
+            "format": "date-time"
+          },
+          "right": {
+            "type": "string",
+            "description": "The exclusive lower bound for the right side. Activity effective at exactly this datetime falls outside the window.",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false,
+        "description": "A per-side exclusive lower bound on an activity window's effective range."
+      },
       "RecActivityWindow": {
         "required": [
           "windowType"
         ],
         "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/ContiguousActivityWindow"
+          }
+        ],
         "properties": {
           "windowType": {
             "minLength": 1,
@@ -291533,6 +292010,20 @@
           "toleranceType"
         ],
         "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/AggregateNumericTolerance"
+          },
+          {
+            "$ref": "#/components/schemas/CoreAttributeOptionalityTolerance"
+          },
+          {
+            "$ref": "#/components/schemas/CoreDateTolerance"
+          },
+          {
+            "$ref": "#/components/schemas/CoreStringCrossTolerance"
+          }
+        ],
         "properties": {
           "toleranceType": {
             "minLength": 1,

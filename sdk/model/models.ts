@@ -48,6 +48,7 @@ export * from './adjustHolding';
 export * from './adjustHoldingForDateRequest';
 export * from './adjustHoldingRequest';
 export * from './aggregateMatchingRule';
+export * from './aggregateNumericTolerance';
 export * from './aggregateRuleValues';
 export * from './aggregateSpec';
 export * from './aggregatedReturn';
@@ -364,6 +365,7 @@ export * from './consentGrantedElection';
 export * from './constantVolatilitySurface';
 export * from './constantVolatilitySurfaceAllOf';
 export * from './constituentsAdjustmentHeader';
+export * from './contiguousActivityWindow';
 export * from './contractDetails';
 export * from './contractForDifference';
 export * from './contractForDifferenceAllOf';
@@ -372,8 +374,11 @@ export * from './contractInitialisationEventAllOf';
 export * from './contributionToNonPassingRuleDetail';
 export * from './conversionEvent';
 export * from './conversionEventAllOf';
+export * from './coreAttributeOptionalityTolerance';
+export * from './coreDateTolerance';
 export * from './coreMatchingRule';
 export * from './coreRuleValues';
+export * from './coreStringCrossTolerance';
 export * from './corporateAction';
 export * from './corporateActionSource';
 export * from './corporateActionTransition';
@@ -1326,6 +1331,8 @@ export * from './queryInstrumentEventsRequest';
 export * from './queryRelationalDatasetRequest';
 export * from './queryTradeTicketsRequest';
 export * from './queryableKey';
+export * from './queryableKeysForMetricsRequest';
+export * from './queryableKeysForMetricsResponse';
 export * from './quote';
 export * from './quoteAccessMetadataRule';
 export * from './quoteAccessMetadataRuleId';
@@ -1348,6 +1355,7 @@ export * from './rawVendorEvent';
 export * from './rawVendorEventAllOf';
 export * from './reOpenPeriodDiaryEntryRequest';
 export * from './realisedGainLoss';
+export * from './recActivitySinceEffectiveAt';
 export * from './recActivityWindow';
 export * from './recApprovalDecision';
 export * from './recAsAtPolicy';
@@ -2043,6 +2051,7 @@ import { AdjustHolding } from './adjustHolding';
 import { AdjustHoldingForDateRequest } from './adjustHoldingForDateRequest';
 import { AdjustHoldingRequest } from './adjustHoldingRequest';
 import { AggregateMatchingRule } from './aggregateMatchingRule';
+import { AggregateNumericTolerance } from './aggregateNumericTolerance';
 import { AggregateRuleValues } from './aggregateRuleValues';
 import { AggregateSpec } from './aggregateSpec';
 import { AggregatedReturn } from './aggregatedReturn';
@@ -2359,6 +2368,7 @@ import { ConsentGrantedElection } from './consentGrantedElection';
 import { ConstantVolatilitySurface } from './constantVolatilitySurface';
 import { ConstantVolatilitySurfaceAllOf } from './constantVolatilitySurfaceAllOf';
 import { ConstituentsAdjustmentHeader } from './constituentsAdjustmentHeader';
+import { ContiguousActivityWindow } from './contiguousActivityWindow';
 import { ContractDetails } from './contractDetails';
 import { ContractForDifference } from './contractForDifference';
 import { ContractForDifferenceAllOf } from './contractForDifferenceAllOf';
@@ -2367,8 +2377,11 @@ import { ContractInitialisationEventAllOf } from './contractInitialisationEventA
 import { ContributionToNonPassingRuleDetail } from './contributionToNonPassingRuleDetail';
 import { ConversionEvent } from './conversionEvent';
 import { ConversionEventAllOf } from './conversionEventAllOf';
+import { CoreAttributeOptionalityTolerance } from './coreAttributeOptionalityTolerance';
+import { CoreDateTolerance } from './coreDateTolerance';
 import { CoreMatchingRule } from './coreMatchingRule';
 import { CoreRuleValues } from './coreRuleValues';
+import { CoreStringCrossTolerance } from './coreStringCrossTolerance';
 import { CorporateAction } from './corporateAction';
 import { CorporateActionSource } from './corporateActionSource';
 import { CorporateActionTransition } from './corporateActionTransition';
@@ -3321,6 +3334,8 @@ import { QueryInstrumentEventsRequest } from './queryInstrumentEventsRequest';
 import { QueryRelationalDatasetRequest } from './queryRelationalDatasetRequest';
 import { QueryTradeTicketsRequest } from './queryTradeTicketsRequest';
 import { QueryableKey } from './queryableKey';
+import { QueryableKeysForMetricsRequest } from './queryableKeysForMetricsRequest';
+import { QueryableKeysForMetricsResponse } from './queryableKeysForMetricsResponse';
 import { Quote } from './quote';
 import { QuoteAccessMetadataRule } from './quoteAccessMetadataRule';
 import { QuoteAccessMetadataRuleId } from './quoteAccessMetadataRuleId';
@@ -3343,6 +3358,7 @@ import { RawVendorEvent } from './rawVendorEvent';
 import { RawVendorEventAllOf } from './rawVendorEventAllOf';
 import { ReOpenPeriodDiaryEntryRequest } from './reOpenPeriodDiaryEntryRequest';
 import { RealisedGainLoss } from './realisedGainLoss';
+import { RecActivitySinceEffectiveAt } from './recActivitySinceEffectiveAt';
 import { RecActivityWindow } from './recActivityWindow';
 import { RecApprovalDecision } from './recApprovalDecision';
 import { RecAsAtPolicy } from './recAsAtPolicy';
@@ -4832,6 +4848,7 @@ let typeMap: {[index: string]: any} = {
     "AdjustHoldingForDateRequest": AdjustHoldingForDateRequest,
     "AdjustHoldingRequest": AdjustHoldingRequest,
     "AggregateMatchingRule": AggregateMatchingRule,
+    "AggregateNumericTolerance": AggregateNumericTolerance,
     "AggregateRuleValues": AggregateRuleValues,
     "AggregateSpec": AggregateSpec,
     "AggregatedReturn": AggregatedReturn,
@@ -5140,6 +5157,7 @@ let typeMap: {[index: string]: any} = {
     "ConstantVolatilitySurface": ConstantVolatilitySurface,
     "ConstantVolatilitySurfaceAllOf": ConstantVolatilitySurfaceAllOf,
     "ConstituentsAdjustmentHeader": ConstituentsAdjustmentHeader,
+    "ContiguousActivityWindow": ContiguousActivityWindow,
     "ContractDetails": ContractDetails,
     "ContractForDifference": ContractForDifference,
     "ContractForDifferenceAllOf": ContractForDifferenceAllOf,
@@ -5148,8 +5166,11 @@ let typeMap: {[index: string]: any} = {
     "ContributionToNonPassingRuleDetail": ContributionToNonPassingRuleDetail,
     "ConversionEvent": ConversionEvent,
     "ConversionEventAllOf": ConversionEventAllOf,
+    "CoreAttributeOptionalityTolerance": CoreAttributeOptionalityTolerance,
+    "CoreDateTolerance": CoreDateTolerance,
     "CoreMatchingRule": CoreMatchingRule,
     "CoreRuleValues": CoreRuleValues,
+    "CoreStringCrossTolerance": CoreStringCrossTolerance,
     "CorporateAction": CorporateAction,
     "CorporateActionSource": CorporateActionSource,
     "CorporateActionTransition": CorporateActionTransition,
@@ -6067,6 +6088,8 @@ let typeMap: {[index: string]: any} = {
     "QueryRelationalDatasetRequest": QueryRelationalDatasetRequest,
     "QueryTradeTicketsRequest": QueryTradeTicketsRequest,
     "QueryableKey": QueryableKey,
+    "QueryableKeysForMetricsRequest": QueryableKeysForMetricsRequest,
+    "QueryableKeysForMetricsResponse": QueryableKeysForMetricsResponse,
     "Quote": Quote,
     "QuoteAccessMetadataRule": QuoteAccessMetadataRule,
     "QuoteAccessMetadataRuleId": QuoteAccessMetadataRuleId,
@@ -6085,6 +6108,7 @@ let typeMap: {[index: string]: any} = {
     "RawVendorEventAllOf": RawVendorEventAllOf,
     "ReOpenPeriodDiaryEntryRequest": ReOpenPeriodDiaryEntryRequest,
     "RealisedGainLoss": RealisedGainLoss,
+    "RecActivitySinceEffectiveAt": RecActivitySinceEffectiveAt,
     "RecActivityWindow": RecActivityWindow,
     "RecApprovalDecision": RecApprovalDecision,
     "RecAsAtPolicy": RecAsAtPolicy,
