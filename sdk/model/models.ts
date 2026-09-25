@@ -323,12 +323,15 @@ export * from './complianceParameterType';
 export * from './complianceRule';
 export * from './complianceRuleBreakdown';
 export * from './complianceRuleBreakdownRequest';
+export * from './complianceRuleBreakdownWithContributions';
+export * from './complianceRuleContribution';
 export * from './complianceRuleEntity';
 export * from './complianceRuleResponse';
 export * from './complianceRuleResult';
 export * from './complianceRuleResultDetail';
 export * from './complianceRuleResultPortfolioDetail';
 export * from './complianceRuleResultV2';
+export * from './complianceRuleResultV2WithContributions';
 export * from './complianceRuleTemplate';
 export * from './complianceRuleTemplateEntity';
 export * from './complianceRuleUpsertRequest';
@@ -342,6 +345,7 @@ export * from './complianceStepType';
 export * from './complianceStepTypeRequest';
 export * from './complianceSummaryRuleResult';
 export * from './complianceSummaryRuleResultRequest';
+export * from './complianceSummaryRuleResultWithContributions';
 export * from './complianceTemplate';
 export * from './complianceTemplateParameter';
 export * from './complianceTemplateVariation';
@@ -403,6 +407,7 @@ export * from './createDataTypeRequest';
 export * from './createDateRequest';
 export * from './createDerivedPropertyDefinitionRequest';
 export * from './createDerivedTransactionPortfolioRequest';
+export * from './createEntityResolverRequest';
 export * from './createGroupReconciliationComparisonRulesetRequest';
 export * from './createGroupReconciliationDefinitionRequest';
 export * from './createIdentifierDefinitionRequest';
@@ -569,6 +574,7 @@ export * from './eligibilityCalculation';
 export * from './emptyModelOptions';
 export * from './emptyModelOptionsAllOf';
 export * from './entityIdentifier';
+export * from './entityResolver';
 export * from './equity';
 export * from './equityAllOf';
 export * from './equityAllOfIdentifiers';
@@ -831,6 +837,7 @@ export * from './hullWhiteModelOptionsAllOf';
 export * from './iUnitDefinitionDto';
 export * from './idSelectorDefinition';
 export * from './identifierDefinition';
+export * from './identifierForResolution';
 export * from './identifierPartSchema';
 export * from './indexConvention';
 export * from './indexModelOptions';
@@ -1371,6 +1378,7 @@ export * from './recDatasetSchema';
 export * from './recDatasetSchemas';
 export * from './recDatePolicy';
 export * from './recDatesReconciled';
+export * from './recDefByTaxLots';
 export * from './recDefCurrencies';
 export * from './recDefRecipeIds';
 export * from './recDefRuleset';
@@ -1383,7 +1391,6 @@ export * from './recExecution';
 export * from './recInstance';
 export * from './recInstanceId';
 export * from './recInstanceSummary';
-export * from './recLinkKey';
 export * from './recLinkedBy';
 export * from './recLinkedResult';
 export * from './recMatchCountByResultType';
@@ -1398,11 +1405,16 @@ export * from './recResultCounts';
 export * from './recResultDecisionGroup';
 export * from './recResultDecisionUpdate';
 export * from './recResultException';
+export * from './recResultHoldingImpact';
+export * from './recResultHoldingItem';
 export * from './recResultItem';
 export * from './recResultItemDetails';
+export * from './recResultLinkKey';
 export * from './recResultReview';
 export * from './recResultSet';
 export * from './recResultSetApprovalDecisionRequest';
+export * from './recResultSettlementActivityItem';
+export * from './recResultTransactionItem';
 export * from './recReview';
 export * from './recReviewConfiguration';
 export * from './recReviewRequiredApproval';
@@ -1882,6 +1894,7 @@ export * from './upsertCustomEntitiesResponse';
 export * from './upsertCustomEntityAccessMetadataRequest';
 export * from './upsertDataQualityRule';
 export * from './upsertDialectRequest';
+export * from './upsertEntityResolverRequest';
 export * from './upsertFlowConventionsRequest';
 export * from './upsertFundBookmarkRequest';
 export * from './upsertIndexConventionRequest';
@@ -2339,12 +2352,15 @@ import { ComplianceParameterType } from './complianceParameterType';
 import { ComplianceRule } from './complianceRule';
 import { ComplianceRuleBreakdown } from './complianceRuleBreakdown';
 import { ComplianceRuleBreakdownRequest } from './complianceRuleBreakdownRequest';
+import { ComplianceRuleBreakdownWithContributions } from './complianceRuleBreakdownWithContributions';
+import { ComplianceRuleContribution } from './complianceRuleContribution';
 import { ComplianceRuleEntity } from './complianceRuleEntity';
 import { ComplianceRuleResponse } from './complianceRuleResponse';
 import { ComplianceRuleResult } from './complianceRuleResult';
 import { ComplianceRuleResultDetail } from './complianceRuleResultDetail';
 import { ComplianceRuleResultPortfolioDetail } from './complianceRuleResultPortfolioDetail';
 import { ComplianceRuleResultV2 } from './complianceRuleResultV2';
+import { ComplianceRuleResultV2WithContributions } from './complianceRuleResultV2WithContributions';
 import { ComplianceRuleTemplate } from './complianceRuleTemplate';
 import { ComplianceRuleTemplateEntity } from './complianceRuleTemplateEntity';
 import { ComplianceRuleUpsertRequest } from './complianceRuleUpsertRequest';
@@ -2358,6 +2374,7 @@ import { ComplianceStepType } from './complianceStepType';
 import { ComplianceStepTypeRequest } from './complianceStepTypeRequest';
 import { ComplianceSummaryRuleResult } from './complianceSummaryRuleResult';
 import { ComplianceSummaryRuleResultRequest } from './complianceSummaryRuleResultRequest';
+import { ComplianceSummaryRuleResultWithContributions } from './complianceSummaryRuleResultWithContributions';
 import { ComplianceTemplate } from './complianceTemplate';
 import { ComplianceTemplateParameter } from './complianceTemplateParameter';
 import { ComplianceTemplateVariation } from './complianceTemplateVariation';
@@ -2419,6 +2436,7 @@ import { CreateDataTypeRequest } from './createDataTypeRequest';
 import { CreateDateRequest } from './createDateRequest';
 import { CreateDerivedPropertyDefinitionRequest } from './createDerivedPropertyDefinitionRequest';
 import { CreateDerivedTransactionPortfolioRequest } from './createDerivedTransactionPortfolioRequest';
+import { CreateEntityResolverRequest } from './createEntityResolverRequest';
 import { CreateGroupReconciliationComparisonRulesetRequest } from './createGroupReconciliationComparisonRulesetRequest';
 import { CreateGroupReconciliationDefinitionRequest } from './createGroupReconciliationDefinitionRequest';
 import { CreateIdentifierDefinitionRequest } from './createIdentifierDefinitionRequest';
@@ -2585,6 +2603,7 @@ import { EligibilityCalculation } from './eligibilityCalculation';
 import { EmptyModelOptions } from './emptyModelOptions';
 import { EmptyModelOptionsAllOf } from './emptyModelOptionsAllOf';
 import { EntityIdentifier } from './entityIdentifier';
+import { EntityResolver } from './entityResolver';
 import { Equity } from './equity';
 import { EquityAllOf } from './equityAllOf';
 import { EquityAllOfIdentifiers } from './equityAllOfIdentifiers';
@@ -2847,6 +2866,7 @@ import { HullWhiteModelOptionsAllOf } from './hullWhiteModelOptionsAllOf';
 import { IUnitDefinitionDto } from './iUnitDefinitionDto';
 import { IdSelectorDefinition } from './idSelectorDefinition';
 import { IdentifierDefinition } from './identifierDefinition';
+import { IdentifierForResolution } from './identifierForResolution';
 import { IdentifierPartSchema } from './identifierPartSchema';
 import { IndexConvention } from './indexConvention';
 import { IndexModelOptions } from './indexModelOptions';
@@ -3387,6 +3407,7 @@ import { RecDatasetSchema } from './recDatasetSchema';
 import { RecDatasetSchemas } from './recDatasetSchemas';
 import { RecDatePolicy } from './recDatePolicy';
 import { RecDatesReconciled } from './recDatesReconciled';
+import { RecDefByTaxLots } from './recDefByTaxLots';
 import { RecDefCurrencies } from './recDefCurrencies';
 import { RecDefRecipeIds } from './recDefRecipeIds';
 import { RecDefRuleset } from './recDefRuleset';
@@ -3399,7 +3420,6 @@ import { RecExecution } from './recExecution';
 import { RecInstance } from './recInstance';
 import { RecInstanceId } from './recInstanceId';
 import { RecInstanceSummary } from './recInstanceSummary';
-import { RecLinkKey } from './recLinkKey';
 import { RecLinkedBy } from './recLinkedBy';
 import { RecLinkedResult } from './recLinkedResult';
 import { RecMatchCountByResultType } from './recMatchCountByResultType';
@@ -3414,11 +3434,16 @@ import { RecResultCounts } from './recResultCounts';
 import { RecResultDecisionGroup } from './recResultDecisionGroup';
 import { RecResultDecisionUpdate } from './recResultDecisionUpdate';
 import { RecResultException } from './recResultException';
+import { RecResultHoldingImpact } from './recResultHoldingImpact';
+import { RecResultHoldingItem } from './recResultHoldingItem';
 import { RecResultItem } from './recResultItem';
 import { RecResultItemDetails } from './recResultItemDetails';
+import { RecResultLinkKey } from './recResultLinkKey';
 import { RecResultReview } from './recResultReview';
 import { RecResultSet } from './recResultSet';
 import { RecResultSetApprovalDecisionRequest } from './recResultSetApprovalDecisionRequest';
+import { RecResultSettlementActivityItem } from './recResultSettlementActivityItem';
+import { RecResultTransactionItem } from './recResultTransactionItem';
 import { RecReview } from './recReview';
 import { RecReviewConfiguration } from './recReviewConfiguration';
 import { RecReviewRequiredApproval } from './recReviewRequiredApproval';
@@ -3898,6 +3923,7 @@ import { UpsertCustomEntitiesResponse } from './upsertCustomEntitiesResponse';
 import { UpsertCustomEntityAccessMetadataRequest } from './upsertCustomEntityAccessMetadataRequest';
 import { UpsertDataQualityRule } from './upsertDataQualityRule';
 import { UpsertDialectRequest } from './upsertDialectRequest';
+import { UpsertEntityResolverRequest } from './upsertEntityResolverRequest';
 import { UpsertFlowConventionsRequest } from './upsertFlowConventionsRequest';
 import { UpsertFundBookmarkRequest } from './upsertFundBookmarkRequest';
 import { UpsertIndexConventionRequest } from './upsertIndexConventionRequest';
@@ -5145,12 +5171,15 @@ let typeMap: {[index: string]: any} = {
     "ComplianceRule": ComplianceRule,
     "ComplianceRuleBreakdown": ComplianceRuleBreakdown,
     "ComplianceRuleBreakdownRequest": ComplianceRuleBreakdownRequest,
+    "ComplianceRuleBreakdownWithContributions": ComplianceRuleBreakdownWithContributions,
+    "ComplianceRuleContribution": ComplianceRuleContribution,
     "ComplianceRuleEntity": ComplianceRuleEntity,
     "ComplianceRuleResponse": ComplianceRuleResponse,
     "ComplianceRuleResult": ComplianceRuleResult,
     "ComplianceRuleResultDetail": ComplianceRuleResultDetail,
     "ComplianceRuleResultPortfolioDetail": ComplianceRuleResultPortfolioDetail,
     "ComplianceRuleResultV2": ComplianceRuleResultV2,
+    "ComplianceRuleResultV2WithContributions": ComplianceRuleResultV2WithContributions,
     "ComplianceRuleTemplate": ComplianceRuleTemplate,
     "ComplianceRuleTemplateEntity": ComplianceRuleTemplateEntity,
     "ComplianceRuleUpsertRequest": ComplianceRuleUpsertRequest,
@@ -5162,6 +5191,7 @@ let typeMap: {[index: string]: any} = {
     "ComplianceStepRequest": ComplianceStepRequest,
     "ComplianceSummaryRuleResult": ComplianceSummaryRuleResult,
     "ComplianceSummaryRuleResultRequest": ComplianceSummaryRuleResultRequest,
+    "ComplianceSummaryRuleResultWithContributions": ComplianceSummaryRuleResultWithContributions,
     "ComplianceTemplate": ComplianceTemplate,
     "ComplianceTemplateParameter": ComplianceTemplateParameter,
     "ComplianceTemplateVariation": ComplianceTemplateVariation,
@@ -5223,6 +5253,7 @@ let typeMap: {[index: string]: any} = {
     "CreateDateRequest": CreateDateRequest,
     "CreateDerivedPropertyDefinitionRequest": CreateDerivedPropertyDefinitionRequest,
     "CreateDerivedTransactionPortfolioRequest": CreateDerivedTransactionPortfolioRequest,
+    "CreateEntityResolverRequest": CreateEntityResolverRequest,
     "CreateGroupReconciliationComparisonRulesetRequest": CreateGroupReconciliationComparisonRulesetRequest,
     "CreateGroupReconciliationDefinitionRequest": CreateGroupReconciliationDefinitionRequest,
     "CreateIdentifierDefinitionRequest": CreateIdentifierDefinitionRequest,
@@ -5381,6 +5412,7 @@ let typeMap: {[index: string]: any} = {
     "EmptyModelOptions": EmptyModelOptions,
     "EmptyModelOptionsAllOf": EmptyModelOptionsAllOf,
     "EntityIdentifier": EntityIdentifier,
+    "EntityResolver": EntityResolver,
     "Equity": Equity,
     "EquityAllOf": EquityAllOf,
     "EquityAllOfIdentifiers": EquityAllOfIdentifiers,
@@ -5640,6 +5672,7 @@ let typeMap: {[index: string]: any} = {
     "IUnitDefinitionDto": IUnitDefinitionDto,
     "IdSelectorDefinition": IdSelectorDefinition,
     "IdentifierDefinition": IdentifierDefinition,
+    "IdentifierForResolution": IdentifierForResolution,
     "IdentifierPartSchema": IdentifierPartSchema,
     "IndexConvention": IndexConvention,
     "IndexModelOptions": IndexModelOptions,
@@ -6152,6 +6185,7 @@ let typeMap: {[index: string]: any} = {
     "RecDatasetSchemas": RecDatasetSchemas,
     "RecDatePolicy": RecDatePolicy,
     "RecDatesReconciled": RecDatesReconciled,
+    "RecDefByTaxLots": RecDefByTaxLots,
     "RecDefCurrencies": RecDefCurrencies,
     "RecDefRecipeIds": RecDefRecipeIds,
     "RecDefRuleset": RecDefRuleset,
@@ -6164,7 +6198,6 @@ let typeMap: {[index: string]: any} = {
     "RecInstance": RecInstance,
     "RecInstanceId": RecInstanceId,
     "RecInstanceSummary": RecInstanceSummary,
-    "RecLinkKey": RecLinkKey,
     "RecLinkedBy": RecLinkedBy,
     "RecLinkedResult": RecLinkedResult,
     "RecMatchCountByResultType": RecMatchCountByResultType,
@@ -6179,11 +6212,16 @@ let typeMap: {[index: string]: any} = {
     "RecResultDecisionGroup": RecResultDecisionGroup,
     "RecResultDecisionUpdate": RecResultDecisionUpdate,
     "RecResultException": RecResultException,
+    "RecResultHoldingImpact": RecResultHoldingImpact,
+    "RecResultHoldingItem": RecResultHoldingItem,
     "RecResultItem": RecResultItem,
     "RecResultItemDetails": RecResultItemDetails,
+    "RecResultLinkKey": RecResultLinkKey,
     "RecResultReview": RecResultReview,
     "RecResultSet": RecResultSet,
     "RecResultSetApprovalDecisionRequest": RecResultSetApprovalDecisionRequest,
+    "RecResultSettlementActivityItem": RecResultSettlementActivityItem,
+    "RecResultTransactionItem": RecResultTransactionItem,
     "RecReview": RecReview,
     "RecReviewConfiguration": RecReviewConfiguration,
     "RecReviewRequiredApproval": RecReviewRequiredApproval,
@@ -6645,6 +6683,7 @@ let typeMap: {[index: string]: any} = {
     "UpsertCustomEntityAccessMetadataRequest": UpsertCustomEntityAccessMetadataRequest,
     "UpsertDataQualityRule": UpsertDataQualityRule,
     "UpsertDialectRequest": UpsertDialectRequest,
+    "UpsertEntityResolverRequest": UpsertEntityResolverRequest,
     "UpsertFlowConventionsRequest": UpsertFlowConventionsRequest,
     "UpsertFundBookmarkRequest": UpsertFundBookmarkRequest,
     "UpsertIndexConventionRequest": UpsertIndexConventionRequest,

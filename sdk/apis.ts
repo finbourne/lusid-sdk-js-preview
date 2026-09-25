@@ -26,6 +26,7 @@ import {CutLabelDefinitionsApi} from './api/cutLabelDefinitionsApi';
 import {DataTypesApi} from './api/dataTypesApi';
 import {DerivedTransactionPortfoliosApi} from './api/derivedTransactionPortfoliosApi';
 import {EntitiesApi} from './api/entitiesApi';
+import {EntityResolversApi} from './api/entityResolversApi';
 import {ExecutionsApi} from './api/executionsApi';
 import {FeeTypesApi} from './api/feeTypesApi';
 import {FundConfigurationApi} from './api/fundConfigurationApi';
@@ -120,6 +121,7 @@ export class Api {
     public dataTypes:  DataTypesApi
     public derivedTransactionPortfolios:  DerivedTransactionPortfoliosApi
     public entities:  EntitiesApi
+    public entityResolvers:  EntityResolversApi
     public executions:  ExecutionsApi
     public feeTypes:  FeeTypesApi
     public fundConfiguration:  FundConfigurationApi

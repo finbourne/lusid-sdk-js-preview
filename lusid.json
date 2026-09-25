@@ -9,7 +9,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "2.0.1668",
+    "version": "2.0.1669",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -24697,6 +24697,454 @@
         "x-fbn-apistatus": "Experimental"
       }
     },
+    "/api/compliance/runs/breakdown/{runScope}/{runCode}/{ruleScope}/{ruleCode}": {
+      "get": {
+        "tags": [
+          "Compliance"
+        ],
+        "summary": "[EARLY ACCESS] GetComplianceRuleBreakdown: Get the position-level breakdown for a single rule of a compliance run.",
+        "description": "Specify a run scope and code from a previously run compliance check, and the scope and code of a rule within that run, to get the per-position contributions behind that rule's breakdown groups.",
+        "operationId": "GetComplianceRuleBreakdown",
+        "parameters": [
+          {
+            "name": "runScope",
+            "in": "path",
+            "description": "Required: Run Scope.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "runCode",
+            "in": "path",
+            "description": "Required: Run Code.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "ruleScope",
+            "in": "path",
+            "description": "Required: Rule Scope.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "ruleCode",
+            "in": "path",
+            "description": "Required: Rule Code.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The position-level breakdown for the requested rule of a compliance run.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ComplianceRuleResultV2WithContributions"
+                },
+                "example": {
+                  "runId": {
+                    "scope": "SomeScope",
+                    "code": "run-1"
+                  },
+                  "instigatedAt": "2020-01-05T00:00:00.0000000+00:00",
+                  "completedAt": "2020-01-05T00:00:01.0000000+00:00",
+                  "schedule": "PreTrade",
+                  "ruleResult": {
+                    "ruleId": {
+                      "scope": "SomeScope",
+                      "code": "rule-1"
+                    },
+                    "templateId": {
+                      "scope": "system",
+                      "code": "template-1"
+                    },
+                    "variation": "standard",
+                    "ruleStatus": "failed",
+                    "affectedPortfolios": [
+                      {
+                        "scope": "PortfolioScope",
+                        "code": "PortfolioCode"
+                      }
+                    ],
+                    "affectedOrders": [
+                      {
+                        "scope": "OrderScope",
+                        "code": "OrderCode"
+                      }
+                    ],
+                    "parametersUsed": {
+                      "UpperBound": "30",
+                      "LowerBound": "0"
+                    },
+                    "ruleBreakdown": [
+                      {
+                        "groupStatus": "failed",
+                        "resultsUsed": {
+                          "Valuation/PV": 650,
+                          "Exposure/PV": 650
+                        },
+                        "propertiesUsed": {
+                          "Instrument/data/Issuer": [
+                            {
+                              "key": "Instrument/data/Issuer",
+                              "value": {
+                                "labelValue": "ABC"
+                              }
+                            }
+                          ]
+                        },
+                        "missingDataInformation": [
+                          "No Missing Data"
+                        ],
+                        "lineage": [
+                          {
+                            "index": 0,
+                            "label": "Initial",
+                            "subLabel": "Initial",
+                            "infoType": "",
+                            "information": ""
+                          },
+                          {
+                            "index": 1,
+                            "label": "Step1",
+                            "subLabel": "SomeStep1Information",
+                            "infoType": "",
+                            "information": ""
+                          },
+                          {
+                            "index": 2,
+                            "label": "Step2",
+                            "subLabel": "Step2",
+                            "infoType": "",
+                            "information": ""
+                          }
+                        ],
+                        "contributions": [
+                          {
+                            "index": 0,
+                            "portfolioId": {
+                              "scope": "PortfolioScope",
+                              "code": "PortfolioCode"
+                            },
+                            "instrument": "LUID_00003D5F",
+                            "instrumentType": "Bond",
+                            "holdingType": "P",
+                            "holdingId": "1234567890",
+                            "resultValues": {
+                              "Valuation/PV": 650
+                            },
+                            "properties": {
+                              "Instrument/data/Issuer": {
+                                "key": "Instrument/data/Issuer",
+                                "value": {
+                                  "labelValue": "ABC"
+                                }
+                              }
+                            },
+                            "relatedProperties": {
+                              "LegalEntity/data/LEI": "5493001KJTIIGC8Y1R12"
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "otherPositionsConsidered": []
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ComplianceRuleResultV2WithContributions"
+                },
+                "example": {
+                  "runId": {
+                    "scope": "SomeScope",
+                    "code": "run-1"
+                  },
+                  "instigatedAt": "2020-01-05T00:00:00.0000000+00:00",
+                  "completedAt": "2020-01-05T00:00:01.0000000+00:00",
+                  "schedule": "PreTrade",
+                  "ruleResult": {
+                    "ruleId": {
+                      "scope": "SomeScope",
+                      "code": "rule-1"
+                    },
+                    "templateId": {
+                      "scope": "system",
+                      "code": "template-1"
+                    },
+                    "variation": "standard",
+                    "ruleStatus": "failed",
+                    "affectedPortfolios": [
+                      {
+                        "scope": "PortfolioScope",
+                        "code": "PortfolioCode"
+                      }
+                    ],
+                    "affectedOrders": [
+                      {
+                        "scope": "OrderScope",
+                        "code": "OrderCode"
+                      }
+                    ],
+                    "parametersUsed": {
+                      "UpperBound": "30",
+                      "LowerBound": "0"
+                    },
+                    "ruleBreakdown": [
+                      {
+                        "groupStatus": "failed",
+                        "resultsUsed": {
+                          "Valuation/PV": 650,
+                          "Exposure/PV": 650
+                        },
+                        "propertiesUsed": {
+                          "Instrument/data/Issuer": [
+                            {
+                              "key": "Instrument/data/Issuer",
+                              "value": {
+                                "labelValue": "ABC"
+                              }
+                            }
+                          ]
+                        },
+                        "missingDataInformation": [
+                          "No Missing Data"
+                        ],
+                        "lineage": [
+                          {
+                            "index": 0,
+                            "label": "Initial",
+                            "subLabel": "Initial",
+                            "infoType": "",
+                            "information": ""
+                          },
+                          {
+                            "index": 1,
+                            "label": "Step1",
+                            "subLabel": "SomeStep1Information",
+                            "infoType": "",
+                            "information": ""
+                          },
+                          {
+                            "index": 2,
+                            "label": "Step2",
+                            "subLabel": "Step2",
+                            "infoType": "",
+                            "information": ""
+                          }
+                        ],
+                        "contributions": [
+                          {
+                            "index": 0,
+                            "portfolioId": {
+                              "scope": "PortfolioScope",
+                              "code": "PortfolioCode"
+                            },
+                            "instrument": "LUID_00003D5F",
+                            "instrumentType": "Bond",
+                            "holdingType": "P",
+                            "holdingId": "1234567890",
+                            "resultValues": {
+                              "Valuation/PV": 650
+                            },
+                            "properties": {
+                              "Instrument/data/Issuer": {
+                                "key": "Instrument/data/Issuer",
+                                "value": {
+                                  "labelValue": "ABC"
+                                }
+                              }
+                            },
+                            "relatedProperties": {
+                              "LegalEntity/data/LEI": "5493001KJTIIGC8Y1R12"
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "otherPositionsConsidered": []
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ComplianceRuleResultV2WithContributions"
+                },
+                "example": {
+                  "runId": {
+                    "scope": "SomeScope",
+                    "code": "run-1"
+                  },
+                  "instigatedAt": "2020-01-05T00:00:00.0000000+00:00",
+                  "completedAt": "2020-01-05T00:00:01.0000000+00:00",
+                  "schedule": "PreTrade",
+                  "ruleResult": {
+                    "ruleId": {
+                      "scope": "SomeScope",
+                      "code": "rule-1"
+                    },
+                    "templateId": {
+                      "scope": "system",
+                      "code": "template-1"
+                    },
+                    "variation": "standard",
+                    "ruleStatus": "failed",
+                    "affectedPortfolios": [
+                      {
+                        "scope": "PortfolioScope",
+                        "code": "PortfolioCode"
+                      }
+                    ],
+                    "affectedOrders": [
+                      {
+                        "scope": "OrderScope",
+                        "code": "OrderCode"
+                      }
+                    ],
+                    "parametersUsed": {
+                      "UpperBound": "30",
+                      "LowerBound": "0"
+                    },
+                    "ruleBreakdown": [
+                      {
+                        "groupStatus": "failed",
+                        "resultsUsed": {
+                          "Valuation/PV": 650,
+                          "Exposure/PV": 650
+                        },
+                        "propertiesUsed": {
+                          "Instrument/data/Issuer": [
+                            {
+                              "key": "Instrument/data/Issuer",
+                              "value": {
+                                "labelValue": "ABC"
+                              }
+                            }
+                          ]
+                        },
+                        "missingDataInformation": [
+                          "No Missing Data"
+                        ],
+                        "lineage": [
+                          {
+                            "index": 0,
+                            "label": "Initial",
+                            "subLabel": "Initial",
+                            "infoType": "",
+                            "information": ""
+                          },
+                          {
+                            "index": 1,
+                            "label": "Step1",
+                            "subLabel": "SomeStep1Information",
+                            "infoType": "",
+                            "information": ""
+                          },
+                          {
+                            "index": 2,
+                            "label": "Step2",
+                            "subLabel": "Step2",
+                            "infoType": "",
+                            "information": ""
+                          }
+                        ],
+                        "contributions": [
+                          {
+                            "index": 0,
+                            "portfolioId": {
+                              "scope": "PortfolioScope",
+                              "code": "PortfolioCode"
+                            },
+                            "instrument": "LUID_00003D5F",
+                            "instrumentType": "Bond",
+                            "holdingType": "P",
+                            "holdingId": "1234567890",
+                            "resultValues": {
+                              "Valuation/PV": 650
+                            },
+                            "properties": {
+                              "Instrument/data/Issuer": {
+                                "key": "Instrument/data/Issuer",
+                                "value": {
+                                  "labelValue": "ABC"
+                                }
+                              }
+                            },
+                            "relatedProperties": {
+                              "LegalEntity/data/LEI": "5493001KJTIIGC8Y1R12"
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "otherPositionsConsidered": []
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "EarlyAccess"
+      }
+    },
     "/api/compliance/runs/summary": {
       "post": {
         "tags": [
@@ -46301,6 +46749,863 @@
           }
         ],
         "x-fbn-apistatus": "Stable"
+      }
+    },
+    "/api/entityresolvers": {
+      "post": {
+        "tags": [
+          "Entity Resolvers"
+        ],
+        "summary": "[EXPERIMENTAL] CreateEntityResolver: Create an Entity Resolver",
+        "description": "Define a new Entity Resolver. The resolver's identifier matching order is the sequence of identifier\r\nproperty keys that will be tried, in turn, when resolving an entity of the given type in the resolver's scope.",
+        "operationId": "CreateEntityResolver",
+        "requestBody": {
+          "description": "The request defining the new Entity Resolver",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateEntityResolverRequest"
+              },
+              "example": {
+                "id": {
+                  "scope": "MyScope",
+                  "code": "default"
+                },
+                "entityType": "Instrument",
+                "description": "Resolve instruments by Figi first, then Isin, then the client identifier",
+                "identifierMatchingOrder": [
+                  {
+                    "identifierKey": "Instrument/default/Figi"
+                  },
+                  {
+                    "identifierKey": "Instrument/default/Isin"
+                  },
+                  {
+                    "identifierKey": "Instrument/MyScope/ClientInternal"
+                  }
+                ]
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateEntityResolverRequest"
+              },
+              "example": {
+                "id": {
+                  "scope": "MyScope",
+                  "code": "default"
+                },
+                "entityType": "Instrument",
+                "description": "Resolve instruments by Figi first, then Isin, then the client identifier",
+                "identifierMatchingOrder": [
+                  {
+                    "identifierKey": "Instrument/default/Figi"
+                  },
+                  {
+                    "identifierKey": "Instrument/default/Isin"
+                  },
+                  {
+                    "identifierKey": "Instrument/MyScope/ClientInternal"
+                  }
+                ]
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateEntityResolverRequest"
+              },
+              "example": {
+                "id": {
+                  "scope": "MyScope",
+                  "code": "default"
+                },
+                "entityType": "Instrument",
+                "description": "Resolve instruments by Figi first, then Isin, then the client identifier",
+                "identifierMatchingOrder": [
+                  {
+                    "identifierKey": "Instrument/default/Figi"
+                  },
+                  {
+                    "identifierKey": "Instrument/default/Isin"
+                  },
+                  {
+                    "identifierKey": "Instrument/MyScope/ClientInternal"
+                  }
+                ]
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateEntityResolverRequest"
+              },
+              "example": {
+                "id": {
+                  "scope": "MyScope",
+                  "code": "default"
+                },
+                "entityType": "Instrument",
+                "description": "Resolve instruments by Figi first, then Isin, then the client identifier",
+                "identifierMatchingOrder": [
+                  {
+                    "identifierKey": "Instrument/default/Figi"
+                  },
+                  {
+                    "identifierKey": "Instrument/default/Isin"
+                  },
+                  {
+                    "identifierKey": "Instrument/MyScope/ClientInternal"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "The created Entity Resolver",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EntityResolver"
+                },
+                "example": {
+                  "id": {
+                    "scope": "MyScope",
+                    "code": "default"
+                  },
+                  "entityType": "Instrument",
+                  "description": "Resolve instruments by Figi first, then Isin, then the client identifier",
+                  "identifierMatchingOrder": [
+                    {
+                      "identifierKey": "Instrument/default/Figi"
+                    },
+                    {
+                      "identifierKey": "Instrument/default/Isin"
+                    },
+                    {
+                      "identifierKey": "Instrument/MyScope/ClientInternal"
+                    }
+                  ],
+                  "href": "http://example.lusid.com/api/entityresolvers/MyScope/default",
+                  "version": {
+                    "effectiveFrom": "2024-06-01T10:30:00.0000000+00:00",
+                    "asAtDate": "2024-06-01T10:30:00.0000000+00:00",
+                    "asAtCreated": "2024-06-01T10:30:00.0000000+00:00",
+                    "userIdCreated": "User1",
+                    "requestIdCreated": "RequestId1",
+                    "reasonCreated": "",
+                    "asAtModified": "2024-06-04T10:30:00.0000000+00:00",
+                    "userIdModified": "User2",
+                    "requestIdModified": "RequestId2",
+                    "reasonModified": "",
+                    "asAtVersionNumber": 2,
+                    "entityUniqueId": "67cd5403-60d3-4744-8455-c4522a3886cb"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EntityResolver"
+                },
+                "example": {
+                  "id": {
+                    "scope": "MyScope",
+                    "code": "default"
+                  },
+                  "entityType": "Instrument",
+                  "description": "Resolve instruments by Figi first, then Isin, then the client identifier",
+                  "identifierMatchingOrder": [
+                    {
+                      "identifierKey": "Instrument/default/Figi"
+                    },
+                    {
+                      "identifierKey": "Instrument/default/Isin"
+                    },
+                    {
+                      "identifierKey": "Instrument/MyScope/ClientInternal"
+                    }
+                  ],
+                  "href": "http://example.lusid.com/api/entityresolvers/MyScope/default",
+                  "version": {
+                    "effectiveFrom": "2024-06-01T10:30:00.0000000+00:00",
+                    "asAtDate": "2024-06-01T10:30:00.0000000+00:00",
+                    "asAtCreated": "2024-06-01T10:30:00.0000000+00:00",
+                    "userIdCreated": "User1",
+                    "requestIdCreated": "RequestId1",
+                    "reasonCreated": "",
+                    "asAtModified": "2024-06-04T10:30:00.0000000+00:00",
+                    "userIdModified": "User2",
+                    "requestIdModified": "RequestId2",
+                    "reasonModified": "",
+                    "asAtVersionNumber": 2,
+                    "entityUniqueId": "67cd5403-60d3-4744-8455-c4522a3886cb"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EntityResolver"
+                },
+                "example": {
+                  "id": {
+                    "scope": "MyScope",
+                    "code": "default"
+                  },
+                  "entityType": "Instrument",
+                  "description": "Resolve instruments by Figi first, then Isin, then the client identifier",
+                  "identifierMatchingOrder": [
+                    {
+                      "identifierKey": "Instrument/default/Figi"
+                    },
+                    {
+                      "identifierKey": "Instrument/default/Isin"
+                    },
+                    {
+                      "identifierKey": "Instrument/MyScope/ClientInternal"
+                    }
+                  ],
+                  "href": "http://example.lusid.com/api/entityresolvers/MyScope/default",
+                  "version": {
+                    "effectiveFrom": "2024-06-01T10:30:00.0000000+00:00",
+                    "asAtDate": "2024-06-01T10:30:00.0000000+00:00",
+                    "asAtCreated": "2024-06-01T10:30:00.0000000+00:00",
+                    "userIdCreated": "User1",
+                    "requestIdCreated": "RequestId1",
+                    "reasonCreated": "",
+                    "asAtModified": "2024-06-04T10:30:00.0000000+00:00",
+                    "userIdModified": "User2",
+                    "requestIdModified": "RequestId2",
+                    "reasonModified": "",
+                    "asAtVersionNumber": 2,
+                    "entityUniqueId": "67cd5403-60d3-4744-8455-c4522a3886cb"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      }
+    },
+    "/api/entityresolvers/{scope}/{code}": {
+      "get": {
+        "tags": [
+          "Entity Resolvers"
+        ],
+        "summary": "[EXPERIMENTAL] GetEntityResolver: Get a single Entity Resolver",
+        "description": "Get a single Entity Resolver by scope and code at an optional asAt, defaulting to latest if not specified.",
+        "operationId": "GetEntityResolver",
+        "parameters": [
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope of the Entity Resolver",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "code",
+            "in": "path",
+            "description": "The code of the Entity Resolver. Together with the scope this uniquely identifies the Entity Resolver",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "asAt",
+            "in": "query",
+            "description": "The asAt datetime at which to retrieve the Entity Resolver. Defaults to return\r\n            the latest version if not specified.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The requested Entity Resolver",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EntityResolver"
+                },
+                "example": {
+                  "id": {
+                    "scope": "MyScope",
+                    "code": "default"
+                  },
+                  "entityType": "Instrument",
+                  "description": "Resolve instruments by Figi first, then Isin, then the client identifier",
+                  "identifierMatchingOrder": [
+                    {
+                      "identifierKey": "Instrument/default/Figi"
+                    },
+                    {
+                      "identifierKey": "Instrument/default/Isin"
+                    },
+                    {
+                      "identifierKey": "Instrument/MyScope/ClientInternal"
+                    }
+                  ],
+                  "href": "http://example.lusid.com/api/entityresolvers/MyScope/default",
+                  "version": {
+                    "effectiveFrom": "2024-06-01T10:30:00.0000000+00:00",
+                    "asAtDate": "2024-06-01T10:30:00.0000000+00:00",
+                    "asAtCreated": "2024-06-01T10:30:00.0000000+00:00",
+                    "userIdCreated": "User1",
+                    "requestIdCreated": "RequestId1",
+                    "reasonCreated": "",
+                    "asAtModified": "2024-06-04T10:30:00.0000000+00:00",
+                    "userIdModified": "User2",
+                    "requestIdModified": "RequestId2",
+                    "reasonModified": "",
+                    "asAtVersionNumber": 2,
+                    "entityUniqueId": "67cd5403-60d3-4744-8455-c4522a3886cb"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EntityResolver"
+                },
+                "example": {
+                  "id": {
+                    "scope": "MyScope",
+                    "code": "default"
+                  },
+                  "entityType": "Instrument",
+                  "description": "Resolve instruments by Figi first, then Isin, then the client identifier",
+                  "identifierMatchingOrder": [
+                    {
+                      "identifierKey": "Instrument/default/Figi"
+                    },
+                    {
+                      "identifierKey": "Instrument/default/Isin"
+                    },
+                    {
+                      "identifierKey": "Instrument/MyScope/ClientInternal"
+                    }
+                  ],
+                  "href": "http://example.lusid.com/api/entityresolvers/MyScope/default",
+                  "version": {
+                    "effectiveFrom": "2024-06-01T10:30:00.0000000+00:00",
+                    "asAtDate": "2024-06-01T10:30:00.0000000+00:00",
+                    "asAtCreated": "2024-06-01T10:30:00.0000000+00:00",
+                    "userIdCreated": "User1",
+                    "requestIdCreated": "RequestId1",
+                    "reasonCreated": "",
+                    "asAtModified": "2024-06-04T10:30:00.0000000+00:00",
+                    "userIdModified": "User2",
+                    "requestIdModified": "RequestId2",
+                    "reasonModified": "",
+                    "asAtVersionNumber": 2,
+                    "entityUniqueId": "67cd5403-60d3-4744-8455-c4522a3886cb"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EntityResolver"
+                },
+                "example": {
+                  "id": {
+                    "scope": "MyScope",
+                    "code": "default"
+                  },
+                  "entityType": "Instrument",
+                  "description": "Resolve instruments by Figi first, then Isin, then the client identifier",
+                  "identifierMatchingOrder": [
+                    {
+                      "identifierKey": "Instrument/default/Figi"
+                    },
+                    {
+                      "identifierKey": "Instrument/default/Isin"
+                    },
+                    {
+                      "identifierKey": "Instrument/MyScope/ClientInternal"
+                    }
+                  ],
+                  "href": "http://example.lusid.com/api/entityresolvers/MyScope/default",
+                  "version": {
+                    "effectiveFrom": "2024-06-01T10:30:00.0000000+00:00",
+                    "asAtDate": "2024-06-01T10:30:00.0000000+00:00",
+                    "asAtCreated": "2024-06-01T10:30:00.0000000+00:00",
+                    "userIdCreated": "User1",
+                    "requestIdCreated": "RequestId1",
+                    "reasonCreated": "",
+                    "asAtModified": "2024-06-04T10:30:00.0000000+00:00",
+                    "userIdModified": "User2",
+                    "requestIdModified": "RequestId2",
+                    "reasonModified": "",
+                    "asAtVersionNumber": 2,
+                    "entityUniqueId": "67cd5403-60d3-4744-8455-c4522a3886cb"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      },
+      "put": {
+        "tags": [
+          "Entity Resolvers"
+        ],
+        "summary": "[EXPERIMENTAL] UpdateEntityResolver: Update an Entity Resolver",
+        "description": "Overwrites the description and identifier matching order of an existing Entity Resolver.",
+        "operationId": "UpdateEntityResolver",
+        "parameters": [
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope of the Entity Resolver",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "code",
+            "in": "path",
+            "description": "The code of the Entity Resolver. Together with the scope this uniquely identifies the Entity Resolver",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The request containing the updated details of the Entity Resolver",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpsertEntityResolverRequest"
+              },
+              "example": {
+                "entityType": "Instrument",
+                "description": "Resolve instruments by Figi first, then Isin, then the client identifier",
+                "identifierMatchingOrder": [
+                  {
+                    "identifierKey": "Instrument/default/Figi"
+                  },
+                  {
+                    "identifierKey": "Instrument/default/Isin"
+                  },
+                  {
+                    "identifierKey": "Instrument/MyScope/ClientInternal"
+                  }
+                ]
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpsertEntityResolverRequest"
+              },
+              "example": {
+                "entityType": "Instrument",
+                "description": "Resolve instruments by Figi first, then Isin, then the client identifier",
+                "identifierMatchingOrder": [
+                  {
+                    "identifierKey": "Instrument/default/Figi"
+                  },
+                  {
+                    "identifierKey": "Instrument/default/Isin"
+                  },
+                  {
+                    "identifierKey": "Instrument/MyScope/ClientInternal"
+                  }
+                ]
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpsertEntityResolverRequest"
+              },
+              "example": {
+                "entityType": "Instrument",
+                "description": "Resolve instruments by Figi first, then Isin, then the client identifier",
+                "identifierMatchingOrder": [
+                  {
+                    "identifierKey": "Instrument/default/Figi"
+                  },
+                  {
+                    "identifierKey": "Instrument/default/Isin"
+                  },
+                  {
+                    "identifierKey": "Instrument/MyScope/ClientInternal"
+                  }
+                ]
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpsertEntityResolverRequest"
+              },
+              "example": {
+                "entityType": "Instrument",
+                "description": "Resolve instruments by Figi first, then Isin, then the client identifier",
+                "identifierMatchingOrder": [
+                  {
+                    "identifierKey": "Instrument/default/Figi"
+                  },
+                  {
+                    "identifierKey": "Instrument/default/Isin"
+                  },
+                  {
+                    "identifierKey": "Instrument/MyScope/ClientInternal"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The updated Entity Resolver",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EntityResolver"
+                },
+                "example": {
+                  "id": {
+                    "scope": "MyScope",
+                    "code": "default"
+                  },
+                  "entityType": "Instrument",
+                  "description": "Resolve instruments by Figi first, then Isin, then the client identifier",
+                  "identifierMatchingOrder": [
+                    {
+                      "identifierKey": "Instrument/default/Figi"
+                    },
+                    {
+                      "identifierKey": "Instrument/default/Isin"
+                    },
+                    {
+                      "identifierKey": "Instrument/MyScope/ClientInternal"
+                    }
+                  ],
+                  "href": "http://example.lusid.com/api/entityresolvers/MyScope/default",
+                  "version": {
+                    "effectiveFrom": "2024-06-01T10:30:00.0000000+00:00",
+                    "asAtDate": "2024-06-01T10:30:00.0000000+00:00",
+                    "asAtCreated": "2024-06-01T10:30:00.0000000+00:00",
+                    "userIdCreated": "User1",
+                    "requestIdCreated": "RequestId1",
+                    "reasonCreated": "",
+                    "asAtModified": "2024-06-04T10:30:00.0000000+00:00",
+                    "userIdModified": "User2",
+                    "requestIdModified": "RequestId2",
+                    "reasonModified": "",
+                    "asAtVersionNumber": 2,
+                    "entityUniqueId": "67cd5403-60d3-4744-8455-c4522a3886cb"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EntityResolver"
+                },
+                "example": {
+                  "id": {
+                    "scope": "MyScope",
+                    "code": "default"
+                  },
+                  "entityType": "Instrument",
+                  "description": "Resolve instruments by Figi first, then Isin, then the client identifier",
+                  "identifierMatchingOrder": [
+                    {
+                      "identifierKey": "Instrument/default/Figi"
+                    },
+                    {
+                      "identifierKey": "Instrument/default/Isin"
+                    },
+                    {
+                      "identifierKey": "Instrument/MyScope/ClientInternal"
+                    }
+                  ],
+                  "href": "http://example.lusid.com/api/entityresolvers/MyScope/default",
+                  "version": {
+                    "effectiveFrom": "2024-06-01T10:30:00.0000000+00:00",
+                    "asAtDate": "2024-06-01T10:30:00.0000000+00:00",
+                    "asAtCreated": "2024-06-01T10:30:00.0000000+00:00",
+                    "userIdCreated": "User1",
+                    "requestIdCreated": "RequestId1",
+                    "reasonCreated": "",
+                    "asAtModified": "2024-06-04T10:30:00.0000000+00:00",
+                    "userIdModified": "User2",
+                    "requestIdModified": "RequestId2",
+                    "reasonModified": "",
+                    "asAtVersionNumber": 2,
+                    "entityUniqueId": "67cd5403-60d3-4744-8455-c4522a3886cb"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EntityResolver"
+                },
+                "example": {
+                  "id": {
+                    "scope": "MyScope",
+                    "code": "default"
+                  },
+                  "entityType": "Instrument",
+                  "description": "Resolve instruments by Figi first, then Isin, then the client identifier",
+                  "identifierMatchingOrder": [
+                    {
+                      "identifierKey": "Instrument/default/Figi"
+                    },
+                    {
+                      "identifierKey": "Instrument/default/Isin"
+                    },
+                    {
+                      "identifierKey": "Instrument/MyScope/ClientInternal"
+                    }
+                  ],
+                  "href": "http://example.lusid.com/api/entityresolvers/MyScope/default",
+                  "version": {
+                    "effectiveFrom": "2024-06-01T10:30:00.0000000+00:00",
+                    "asAtDate": "2024-06-01T10:30:00.0000000+00:00",
+                    "asAtCreated": "2024-06-01T10:30:00.0000000+00:00",
+                    "userIdCreated": "User1",
+                    "requestIdCreated": "RequestId1",
+                    "reasonCreated": "",
+                    "asAtModified": "2024-06-04T10:30:00.0000000+00:00",
+                    "userIdModified": "User2",
+                    "requestIdModified": "RequestId2",
+                    "reasonModified": "",
+                    "asAtVersionNumber": 2,
+                    "entityUniqueId": "67cd5403-60d3-4744-8455-c4522a3886cb"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      },
+      "delete": {
+        "tags": [
+          "Entity Resolvers"
+        ],
+        "summary": "[EXPERIMENTAL] DeleteEntityResolver: Delete an Entity Resolver",
+        "description": "The deletion will take effect from the deletion datetime, i.e. the Entity Resolver will no longer exist\r\nat any asAt datetime after the asAt datetime of deletion. Resolution in the affected scope reverts to\r\nthe default matching order.",
+        "operationId": "DeleteEntityResolver",
+        "parameters": [
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope of the Entity Resolver",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "code",
+            "in": "path",
+            "description": "The code of the Entity Resolver. Together with the scope this uniquely identifies the Entity Resolver",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The deleted entity metadata",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeletedEntityResponse"
+                },
+                "example": {
+                  "asAt": "2018-03-05T10:10:10.0000000+00:00"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeletedEntityResponse"
+                },
+                "example": {
+                  "asAt": "2018-03-05T10:10:10.0000000+00:00"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeletedEntityResponse"
+                },
+                "example": {
+                  "asAt": "2018-03-05T10:10:10.0000000+00:00"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
       }
     },
     "/api/executions": {
@@ -69842,7 +71147,7 @@
           "Funds"
         ],
         "summary": "[EARLY ACCESS] GetValuationPointUnsettledTransactions: Get Unsettled Transactions for the given Fund.",
-        "description": "Gets all transactions that remain unsettled as at the specified Valuation Point for a Fund,\r\nlooking back from inception. Settlement status is point-in-time: post-cutoff settlement\r\nactivity does not alter the result.\r\nThe Valuation Point must be identified either by the date or diaryEntry query parameters or by the\r\n'dateOrDiaryEntry' parameter in the request body; when both are supplied the query parameters are used.",
+        "description": "Gets all transactions that remain unsettled as at the specified Valuation Point for a Fund,\r\nlooking back from inception. Settlement status is point-in-time: post-cutoff settlement\r\nactivity does not alter the result.",
         "operationId": "GetValuationPointUnsettledTransactions",
         "parameters": [
           {
@@ -69925,41 +71230,10 @@
               "pattern": "^[a-zA-Z0-9\\-_]+$",
               "type": "string"
             }
-          },
-          {
-            "name": "date",
-            "in": "query",
-            "description": "The optional date of the Valuation Point to report against, as an alternative to supplying\r\n            it in the request body. Must not be supplied together with diaryEntry.",
-            "schema": {
-              "type": "string",
-              "format": "dateorcutlabel"
-            }
-          },
-          {
-            "name": "diaryEntry",
-            "in": "query",
-            "description": "The optional diary entry code of the Valuation Point to report against, as an\r\n            alternative to supplying it in the request body. Must not be supplied together with date.",
-            "schema": {
-              "maxLength": 64,
-              "minLength": 1,
-              "pattern": "^[a-zA-Z0-9\\-_]+$",
-              "type": "string"
-            }
-          },
-          {
-            "name": "variant",
-            "in": "query",
-            "description": "The optional variant code of the Valuation Point to report against, as an alternative to\r\n            supplying it in the request body. Only required when it is necessary to choose between scenarios with multiple\r\n            estimates.",
-            "schema": {
-              "maxLength": 64,
-              "minLength": 1,
-              "pattern": "^[a-zA-Z0-9\\-_]+$",
-              "type": "string"
-            }
           }
         ],
         "requestBody": {
-          "description": "The optional arguments to use for querying the unsettled transactions. Can be\r\n            omitted when the Valuation Point is identified by the date or diaryEntry query parameters.",
+          "description": "The arguments to use for querying the unsettled transactions.",
           "content": {
             "application/json-patch+json": {
               "schema": {
@@ -70001,7 +71275,8 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -147764,7 +149039,10 @@
                       "scope": "Recs",
                       "code": "CustodyHoldingRules"
                     },
-                    "relationalDataFilter": "custodian eq 'NT'"
+                    "relationalDataFilter": "custodian eq 'NT'",
+                    "byTaxLots": {
+                      "left": true
+                    }
                   },
                   {
                     "recType": "InputTransaction",
@@ -147866,7 +149144,10 @@
                       "scope": "Recs",
                       "code": "CustodyHoldingRules"
                     },
-                    "relationalDataFilter": "custodian eq 'NT'"
+                    "relationalDataFilter": "custodian eq 'NT'",
+                    "byTaxLots": {
+                      "left": true
+                    }
                   },
                   {
                     "recType": "InputTransaction",
@@ -147968,7 +149249,10 @@
                       "scope": "Recs",
                       "code": "CustodyHoldingRules"
                     },
-                    "relationalDataFilter": "custodian eq 'NT'"
+                    "relationalDataFilter": "custodian eq 'NT'",
+                    "byTaxLots": {
+                      "left": true
+                    }
                   },
                   {
                     "recType": "InputTransaction",
@@ -148070,7 +149354,10 @@
                       "scope": "Recs",
                       "code": "CustodyHoldingRules"
                     },
-                    "relationalDataFilter": "custodian eq 'NT'"
+                    "relationalDataFilter": "custodian eq 'NT'",
+                    "byTaxLots": {
+                      "left": true
+                    }
                   },
                   {
                     "recType": "InputTransaction",
@@ -148179,7 +149466,10 @@
                         "scope": "Recs",
                         "code": "CustodyHoldingRules"
                       },
-                      "relationalDataFilter": "custodian eq 'NT'"
+                      "relationalDataFilter": "custodian eq 'NT'",
+                      "byTaxLots": {
+                        "left": true
+                      }
                     },
                     {
                       "recType": "InputTransaction",
@@ -148286,7 +149576,10 @@
                         "scope": "Recs",
                         "code": "CustodyHoldingRules"
                       },
-                      "relationalDataFilter": "custodian eq 'NT'"
+                      "relationalDataFilter": "custodian eq 'NT'",
+                      "byTaxLots": {
+                        "left": true
+                      }
                     },
                     {
                       "recType": "InputTransaction",
@@ -148393,7 +149686,10 @@
                         "scope": "Recs",
                         "code": "CustodyHoldingRules"
                       },
-                      "relationalDataFilter": "custodian eq 'NT'"
+                      "relationalDataFilter": "custodian eq 'NT'",
+                      "byTaxLots": {
+                        "left": true
+                      }
                     },
                     {
                       "recType": "InputTransaction",
@@ -148713,7 +150009,10 @@
                         "scope": "Recs",
                         "code": "CustodyHoldingRules"
                       },
-                      "relationalDataFilter": "custodian eq 'NT'"
+                      "relationalDataFilter": "custodian eq 'NT'",
+                      "byTaxLots": {
+                        "left": true
+                      }
                     },
                     {
                       "recType": "InputTransaction",
@@ -148820,7 +150119,10 @@
                         "scope": "Recs",
                         "code": "CustodyHoldingRules"
                       },
-                      "relationalDataFilter": "custodian eq 'NT'"
+                      "relationalDataFilter": "custodian eq 'NT'",
+                      "byTaxLots": {
+                        "left": true
+                      }
                     },
                     {
                       "recType": "InputTransaction",
@@ -148927,7 +150229,10 @@
                         "scope": "Recs",
                         "code": "CustodyHoldingRules"
                       },
-                      "relationalDataFilter": "custodian eq 'NT'"
+                      "relationalDataFilter": "custodian eq 'NT'",
+                      "byTaxLots": {
+                        "left": true
+                      }
                     },
                     {
                       "recType": "InputTransaction",
@@ -149106,7 +150411,10 @@
                       "scope": "Recs",
                       "code": "CustodyHoldingRules"
                     },
-                    "relationalDataFilter": "custodian eq 'NT'"
+                    "relationalDataFilter": "custodian eq 'NT'",
+                    "byTaxLots": {
+                      "left": true
+                    }
                   },
                   {
                     "recType": "InputTransaction",
@@ -149204,7 +150512,10 @@
                       "scope": "Recs",
                       "code": "CustodyHoldingRules"
                     },
-                    "relationalDataFilter": "custodian eq 'NT'"
+                    "relationalDataFilter": "custodian eq 'NT'",
+                    "byTaxLots": {
+                      "left": true
+                    }
                   },
                   {
                     "recType": "InputTransaction",
@@ -149302,7 +150613,10 @@
                       "scope": "Recs",
                       "code": "CustodyHoldingRules"
                     },
-                    "relationalDataFilter": "custodian eq 'NT'"
+                    "relationalDataFilter": "custodian eq 'NT'",
+                    "byTaxLots": {
+                      "left": true
+                    }
                   },
                   {
                     "recType": "InputTransaction",
@@ -149400,7 +150714,10 @@
                       "scope": "Recs",
                       "code": "CustodyHoldingRules"
                     },
-                    "relationalDataFilter": "custodian eq 'NT'"
+                    "relationalDataFilter": "custodian eq 'NT'",
+                    "byTaxLots": {
+                      "left": true
+                    }
                   },
                   {
                     "recType": "InputTransaction",
@@ -149509,7 +150826,10 @@
                         "scope": "Recs",
                         "code": "CustodyHoldingRules"
                       },
-                      "relationalDataFilter": "custodian eq 'NT'"
+                      "relationalDataFilter": "custodian eq 'NT'",
+                      "byTaxLots": {
+                        "left": true
+                      }
                     },
                     {
                       "recType": "InputTransaction",
@@ -149616,7 +150936,10 @@
                         "scope": "Recs",
                         "code": "CustodyHoldingRules"
                       },
-                      "relationalDataFilter": "custodian eq 'NT'"
+                      "relationalDataFilter": "custodian eq 'NT'",
+                      "byTaxLots": {
+                        "left": true
+                      }
                     },
                     {
                       "recType": "InputTransaction",
@@ -149723,7 +151046,10 @@
                         "scope": "Recs",
                         "code": "CustodyHoldingRules"
                       },
-                      "relationalDataFilter": "custodian eq 'NT'"
+                      "relationalDataFilter": "custodian eq 'NT'",
+                      "byTaxLots": {
+                        "left": true
+                      }
                     },
                     {
                       "recType": "InputTransaction",
@@ -152108,7 +153434,7 @@
           "Recs"
         ],
         "summary": "[EXPERIMENTAL] BatchManageRecResultComments: BatchManageRecResultComments",
-        "description": "Add, edit or delete comments on rec results in a batch.",
+        "description": "Add, edit or delete comments on rec results in a batch.\n\nThe batch limit per request is 2,000.",
         "operationId": "BatchManageRecResultComments",
         "parameters": [
           {
@@ -152267,7 +153593,7 @@
           "Recs"
         ],
         "summary": "[EXPERIMENTAL] BatchReviewRecResults: BatchReviewRecResults",
-        "description": "Apply a batch of review actions (decisions, assignments, comments, properties) to rec results.",
+        "description": "Apply a batch of review actions (decisions, assignments, comments, properties) to rec results.\n\nThe batch limit per request is 2,000.",
         "operationId": "BatchReviewRecResults",
         "parameters": [
           {
@@ -220678,6 +222004,28 @@
                 "description": "Free-text detail: court, jurisdiction, trustee, plan reference. Optional.",
                 "nullable": true
               },
+              "paymentDate": {
+                "type": "string",
+                "description": "Settlement date of the cash leg. Required when a CashOfferElection is offered, and accepted\r\nbut unused otherwise — inbound ballot notifications populate a pay date on pure votes that\r\nsettle no cash.",
+                "format": "date-time",
+                "nullable": true
+              },
+              "cashOfferElections": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CashOfferElection"
+                },
+                "description": "One election per ballot option that pays cash, keyed \"{OptionNumber}-{OptionCode}\", for\r\nexample \"1-CASH\". Each election's CashOfferPrice is per eligible unit, not per 1000 of face.\r\nDefaults to an empty list.",
+                "nullable": true
+              },
+              "lapseElections": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/LapseElection"
+                },
+                "description": "One election per ballot option that pays nothing — consent granted with no fee, consent\r\ndenied, abstain, or no action — keyed \"{OptionNumber}-{OptionCode}\", for example \"6-NOAC\".\r\nKeys are free-form because a real ballot carries CONY twice and CONN twice. Defaults to an\r\nempty list.",
+                "nullable": true
+              },
               "instrumentEventType": {
                 "enum": [
                   "TransitionEvent",
@@ -220799,7 +222147,7 @@
             }
           }
         ],
-        "description": "A Bankruptcy (BRUP) event recording the legal status of a company unable to meet its financial\r\nobligations. Pure informational marker — generates no transactions and has no position impact."
+        "description": "A Bankruptcy (BRUP) event recording the legal status of a company unable to meet its financial\r\nobligations. With no elections it is a pure informational marker, generating no transactions and\r\nhaving no position impact. It may also carry a ballot: one CashOfferElection per option that pays\r\ncash and one LapseElection per option that pays nothing."
       },
       "Barrier": {
         "required": [
@@ -231661,6 +233009,139 @@
         },
         "additionalProperties": false
       },
+      "ComplianceRuleBreakdownWithContributions": {
+        "required": [
+          "contributions",
+          "groupStatus",
+          "lineage",
+          "missingDataInformation",
+          "propertiesUsed",
+          "resultsUsed"
+        ],
+        "type": "object",
+        "properties": {
+          "groupStatus": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The status of this subset of results."
+          },
+          "resultsUsed": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "number",
+              "format": "double"
+            },
+            "description": "Dictionary of AddressKey (as string) and their corresponding decimal values, that were used in this rule."
+          },
+          "propertiesUsed": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/Property"
+              },
+              "nullable": true
+            },
+            "description": "Dictionary of PropertyKey (as string) and their corresponding Properties, that were used in this rule"
+          },
+          "missingDataInformation": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of string information detailing data that was missing from contributions processed in this rule"
+          },
+          "lineage": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LineageMember"
+            }
+          },
+          "contributions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ComplianceRuleContribution"
+            },
+            "description": "The per-position contributions aggregated into this rule breakdown group. Empty when the run\r\ngenuinely produced no contributions; a run with no recorded breakdown (e.g. one that predates\r\nthis feature) returns a 404 rather than this response."
+          }
+        },
+        "additionalProperties": false
+      },
+      "ComplianceRuleContribution": {
+        "required": [
+          "index",
+          "instrument",
+          "portfolioId",
+          "properties",
+          "relatedProperties",
+          "resultValues"
+        ],
+        "type": "object",
+        "properties": {
+          "index": {
+            "type": "integer",
+            "description": "The position of this contribution within the compliance run.",
+            "format": "int32"
+          },
+          "portfolioId": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "orderId": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "instrument": {
+            "maxLength": 6000,
+            "minLength": 0,
+            "type": "string",
+            "description": "The LUSID instrument identifier (LUID) of the instrument for this contribution."
+          },
+          "instrumentType": {
+            "maxLength": 6000,
+            "minLength": 0,
+            "type": "string",
+            "description": "Optional. The economic type of the instrument for this contribution.",
+            "nullable": true
+          },
+          "holdingType": {
+            "maxLength": 6000,
+            "minLength": 0,
+            "type": "string",
+            "description": "Optional. The holding type of this contribution.",
+            "nullable": true
+          },
+          "holdingId": {
+            "maxLength": 6000,
+            "minLength": 0,
+            "type": "string",
+            "description": "Optional. The internal holding identifier encoding the detail of what the holding includes.",
+            "nullable": true
+          },
+          "resultValues": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "number",
+              "format": "double"
+            },
+            "description": "Dictionary of AddressKey (as string) and their corresponding decimal valuation results for this contribution."
+          },
+          "properties": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/Property"
+            },
+            "description": "Dictionary of PropertyKey (as string) and their corresponding property for this contribution."
+          },
+          "relatedProperties": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string",
+              "nullable": true
+            },
+            "description": "Dictionary of related property keys (as string) and their string values, read from related entities across a relationship."
+          }
+        },
+        "additionalProperties": false
+      },
       "ComplianceRuleEntity": {
         "required": [
           "entityUniqueId",
@@ -231970,6 +233451,38 @@
           },
           "ruleResult": {
             "$ref": "#/components/schemas/ComplianceSummaryRuleResult"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ComplianceRuleResultV2WithContributions": {
+        "required": [
+          "completedAt",
+          "instigatedAt",
+          "ruleResult",
+          "runId",
+          "schedule"
+        ],
+        "type": "object",
+        "properties": {
+          "runId": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "instigatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "completedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "schedule": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Available values: PreTrade, PostTrade, PreAndPostTrade."
+          },
+          "ruleResult": {
+            "$ref": "#/components/schemas/ComplianceSummaryRuleResultWithContributions"
           }
         },
         "additionalProperties": false
@@ -232486,6 +233999,69 @@
             "items": {
               "$ref": "#/components/schemas/ComplianceRuleBreakdownRequest"
             }
+          }
+        },
+        "additionalProperties": false
+      },
+      "ComplianceSummaryRuleResultWithContributions": {
+        "required": [
+          "affectedOrders",
+          "affectedPortfolios",
+          "otherPositionsConsidered",
+          "parametersUsed",
+          "ruleBreakdown",
+          "ruleId",
+          "ruleStatus",
+          "templateId",
+          "variation"
+        ],
+        "type": "object",
+        "properties": {
+          "ruleId": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "templateId": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "variation": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "ruleStatus": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "affectedPortfolios": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResourceId"
+            }
+          },
+          "affectedOrders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResourceId"
+            }
+          },
+          "parametersUsed": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          "ruleBreakdown": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ComplianceRuleBreakdownWithContributions"
+            }
+          },
+          "otherPositionsConsidered": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ComplianceRuleContribution"
+            },
+            "description": "The rest of the basis the rule was measured against but did not directly evaluate — the positions in\r\nthe referenced/denominator (or initial) group that are not in the RuleBreakdown's\r\ncontributions. Together with those contributions this forms the whole basis, with no overlap, so a\r\nbreach can be explained against the full picture (e.g. the non-equity remainder behind an equity limit).\r\nEmpty when the rule evaluated everything it considered."
           }
         },
         "additionalProperties": false
@@ -235451,6 +237027,40 @@
             "type": "string",
             "description": "Whether the portfolio's holdings are fungible across the currencies of a currency group. This can be: Default or Enabled. Defaults to Default if not specified, which currently means holdings fungibility is not applied. Supply Default to explicitly reset it; a reset or never-configured flag reads back as absent. Available values: Default, Enabled.",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateEntityResolverRequest": {
+        "required": [
+          "entityType",
+          "id",
+          "identifierMatchingOrder"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "entityType": {
+            "maxLength": 64,
+            "minLength": 1,
+            "type": "string",
+            "description": "The entity type that a specific resolution configuration is applicable to (e.g. Instrument)."
+          },
+          "description": {
+            "maxLength": 1024,
+            "minLength": 0,
+            "type": "string",
+            "description": "Describes what this specific identifier order is used for.",
+            "nullable": true
+          },
+          "identifierMatchingOrder": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IdentifierForResolution"
+            },
+            "description": "Ordered collection of related identifier keys that are used to define which identifier takes priority in resolving an entity."
           }
         },
         "additionalProperties": false
@@ -243522,6 +245132,55 @@
         "additionalProperties": false,
         "description": "Dto to expose mapped keys to new standardised format"
       },
+      "EntityResolver": {
+        "required": [
+          "entityType",
+          "id",
+          "identifierMatchingOrder"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "entityType": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The entity type that a specific resolution configuration is applicable to (e.g. Instrument)."
+          },
+          "description": {
+            "maxLength": 1024,
+            "minLength": 0,
+            "type": "string",
+            "description": "Describes what this specific identifier order is used for.",
+            "nullable": true
+          },
+          "identifierMatchingOrder": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IdentifierForResolution"
+            },
+            "description": "Ordered collection of related identifier keys that are used to define which identifier takes priority in resolving an entity."
+          },
+          "href": {
+            "type": "string",
+            "description": "The specific Uniform Resource Identifier (URI) for this resource at the requested effective and asAt datetime.",
+            "format": "uri",
+            "nullable": true
+          },
+          "version": {
+            "$ref": "#/components/schemas/Version"
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "Equity": {
         "allOf": [
           {
@@ -244482,6 +246141,7 @@
                 "items": {
                   "$ref": "#/components/schemas/CashOfferElection"
                 },
+                "description": "List of possible CashOfferElections for this exchange offer event (CASH).\r\n\r\n- The event requires at least one election of any type.\r\n\r\n- If ParticipationType is Mandatory, CashOfferElection is not permitted.\r\n\r\n- If ParticipationType is MandatoryWithChoices or Voluntary, at most one CashOfferElection may be supplied.\r\n\r\n- Exactly one election on the event must be the default, and at most one may be chosen.",
                 "nullable": true
               },
               "securityOfferElections": {
@@ -244489,6 +246149,7 @@
                 "items": {
                   "$ref": "#/components/schemas/SecurityOfferElection"
                 },
+                "description": "List of possible SecurityOfferElections for this exchange offer event (SECU).\r\n\r\n- The event requires at least one election of any type.\r\n\r\n- Any number of SecurityOfferElections may be supplied.\r\n\r\n- A NewInstrument is required on the event when this list is non-empty.\r\n\r\n- Exactly one election on the event must be the default, and at most one may be chosen.\r\n\r\n- If ParticipationType is Mandatory, the event must carry exactly one election in total; if MandatoryWithChoices, at least two.",
                 "nullable": true
               },
               "mixedLotConstituentsElections": {
@@ -244496,6 +246157,7 @@
                 "items": {
                   "$ref": "#/components/schemas/MixedLotConstituentsElection"
                 },
+                "description": "List of possible MixedLotConstituentsElections for this exchange offer event.\r\n\r\n- The event requires at least one election of any type.\r\n\r\n- Any number of MixedLotConstituentsElections may be supplied, up to a limit of 100 entries.\r\n\r\n- Exactly one election on the event must be the default, and at most one may be chosen.\r\n\r\n- If ParticipationType is Mandatory, the event must carry exactly one election in total; if MandatoryWithChoices, at least two.",
                 "nullable": true
               },
               "lapseElections": {
@@ -244503,6 +246165,7 @@
                 "items": {
                   "$ref": "#/components/schemas/LapseElection"
                 },
+                "description": "List of possible LapseElections for this exchange offer event (NOAC).\r\n\r\n- The event requires at least one election of any type.\r\n\r\n- If ParticipationType is Mandatory, LapseElection is not permitted.\r\n\r\n- If ParticipationType is MandatoryWithChoices, any number of LapseElections may be supplied, but none of them may be the default.\r\n\r\n- If ParticipationType is Voluntary, at most one LapseElection may be supplied.",
                 "nullable": true
               },
               "cashAndSecurityOfferElections": {
@@ -244510,7 +246173,7 @@
                 "items": {
                   "$ref": "#/components/schemas/CashAndSecurityOfferElection"
                 },
-                "description": "List of possible CashAndSecurityOfferElections for this exchange offer event.",
+                "description": "List of possible CashAndSecurityOfferElections for this exchange offer event (CASE).\r\n\r\n- The event requires at least one election of any type.\r\n\r\n- Any number of CashAndSecurityOfferElections may be supplied.\r\n\r\n- Exactly one election on the event must be the default, and at most one may be chosen.\r\n\r\n- If ParticipationType is Mandatory, the event must carry exactly one election in total; if MandatoryWithChoices, at least two.",
                 "nullable": true
               },
               "consentAndExchangeElections": {
@@ -244518,7 +246181,7 @@
                 "items": {
                   "$ref": "#/components/schemas/ConsentAndExchangeElection"
                 },
-                "description": "List of possible consent-and-exchange elections for this event (CTEN-style consent paired with the exchange).",
+                "description": "List of possible ConsentAndExchangeElections for this exchange offer event (CEXC).\r\n\r\n- The event requires at least one election of any type.\r\n\r\n- Any number of ConsentAndExchangeElections may be supplied.\r\n\r\n- Exactly one election on the event must be the default, and at most one may be chosen.\r\n\r\n- If ParticipationType is Mandatory, the event must carry exactly one election in total; if MandatoryWithChoices, at least two.",
                 "nullable": true
               },
               "abstainElections": {
@@ -244526,7 +246189,7 @@
                 "items": {
                   "$ref": "#/components/schemas/AbstainElection"
                 },
-                "description": "List of possible abstain elections for this event (ABST) — decline to vote on the consent.",
+                "description": "List of possible AbstainElections for this exchange offer event (ABST).\r\n\r\n- The event requires at least one election of any type.\r\n\r\n- Any number of AbstainElections may be supplied.\r\n\r\n- Exactly one election on the event must be the default, and at most one may be chosen.\r\n\r\n- If ParticipationType is Mandatory, the event must carry exactly one election in total; if MandatoryWithChoices, at least two.",
                 "nullable": true
               },
               "unknownProceedsElections": {
@@ -244534,7 +246197,7 @@
                 "items": {
                   "$ref": "#/components/schemas/UnknownProceedsElection"
                 },
-                "description": "List of possible unknown-proceeds elections for this event (UNKNOWN) — the outturn is not yet known.",
+                "description": "List of possible UnknownProceedsElections for this exchange offer event (UNKNOWN).\r\n\r\n- The event requires at least one election of any type.\r\n\r\n- Any number of UnknownProceedsElections may be supplied.\r\n\r\n- Exactly one election on the event must be the default, and at most one may be chosen.\r\n\r\n- If ParticipationType is Mandatory, the event must carry exactly one election in total; if MandatoryWithChoices, at least two.",
                 "nullable": true
               },
               "minPieceSize": {
@@ -244691,7 +246354,8 @@
               }
             }
           }
-        ]
+        ],
+        "description": "Exchange Offer Event (EXOF)."
       },
       "ExchangeTradedOption": {
         "allOf": [
@@ -256005,6 +257669,21 @@
           },
           "version": {
             "$ref": "#/components/schemas/Version"
+          }
+        },
+        "additionalProperties": false
+      },
+      "IdentifierForResolution": {
+        "required": [
+          "identifierKey"
+        ],
+        "type": "object",
+        "properties": {
+          "identifierKey": {
+            "maxLength": 256,
+            "minLength": 1,
+            "type": "string",
+            "description": "Identifier key in the format '{domain}/{scope}/{code}'."
           }
         },
         "additionalProperties": false
@@ -280803,6 +282482,23 @@
         "additionalProperties": false,
         "description": "The left and right effective and asAt dates of the data reconciled in a run, plus the exclusive lower bound of each side's activity window on activity-based rec types."
       },
+      "RecDefByTaxLots": {
+        "type": "object",
+        "properties": {
+          "left": {
+            "type": "boolean",
+            "description": "Whether the left side splits holdings by tax lot. Must be omitted when the left side is relational, and reads as null there.",
+            "nullable": true
+          },
+          "right": {
+            "type": "boolean",
+            "description": "Whether the right side splits holdings by tax lot. Must be omitted when the right side is relational, and reads as null there.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Per-side tax-lot granularity for a Holding entry of a rec definition's rulesets."
+      },
       "RecDefCurrencies": {
         "required": [
           "left",
@@ -280948,6 +282644,9 @@
             "type": "string",
             "description": "Selects the slice of the relational dataset this definition draws from, e.g. \"custodian eq 'NT'\". Only permitted when the referenced ruleset declares a relational side, and combined with AND at run time with that ruleset's own filter for the side.",
             "nullable": true
+          },
+          "byTaxLots": {
+            "$ref": "#/components/schemas/RecDefByTaxLots"
           }
         },
         "additionalProperties": false
@@ -281284,20 +282983,20 @@
           "left": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RecLinkKey"
+              "$ref": "#/components/schemas/RecResultLinkKey"
             },
-            "description": "The keys shared by the two results' left-side items. May be empty."
+            "description": "The pairings between the two results' left-side items, one entry per pairing. May be empty."
           },
           "right": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/RecLinkKey"
+              "$ref": "#/components/schemas/RecResultLinkKey"
             },
-            "description": "The keys shared by the two results' right-side items. May be empty."
+            "description": "The pairings between the two results' right-side items, one entry per pairing. May be empty."
           }
         },
         "additionalProperties": false,
-        "description": "The item keys a link between two rec results was established on, per side."
+        "description": "The item pairings a link between two rec results was established on, per side."
       },
       "RecLinkedResult": {
         "required": [
@@ -281323,27 +283022,6 @@
         },
         "additionalProperties": false,
         "description": "A rec result of a different rec type in the same rec instance whose items share an identifier with this\r\nresult's items, and the keys that established the link. Links are symmetric: the linked result carries one back."
-      },
-      "RecLinkKey": {
-        "required": [
-          "key",
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "key": {
-            "minLength": 1,
-            "type": "string",
-            "description": "The key name: holdingId or transactionId."
-          },
-          "value": {
-            "minLength": 1,
-            "type": "string",
-            "description": "The identifier value both results' items carried under the key."
-          }
-        },
-        "additionalProperties": false,
-        "description": "One item key that established a link between two rec results: the key name and the identifier value both\r\nresults' items carried for it."
       },
       "RecMatchCountByResultType": {
         "required": [
@@ -282335,16 +284013,50 @@
         "additionalProperties": false,
         "description": "The exception lifecycle of a rec result. Present only for exception result types\r\n(Break, PartialMatch, PartialCross); null for Match and Cross."
       },
-      "RecResultItem": {
+      "RecResultHoldingImpact": {
         "required": [
-          "itemType"
+          "holdingId"
         ],
         "type": "object",
         "properties": {
+          "holdingId": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The impacted holding, at holding level: the id a holding item over it carries."
+          },
+          "taxLotId": {
+            "type": "string",
+            "description": "The impacted tax lot within the holding, where the source states one; null when the impact is known at holding level only. Opaque: compare it whole, do not parse it.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "One holding, and where known the tax lot within it, that a transaction or settlement activity item impacted."
+      },
+      "RecResultHoldingItem": {
+        "required": [
+          "itemType",
+          "portfolioId"
+        ],
+        "type": "object",
+        "properties": {
+          "portfolioId": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "holdingId": {
+            "type": "string",
+            "description": "The holding identifier, at holding level: the same id whichever granularity the holding was read at, so that items of different rec types over one holding name it alike.",
+            "nullable": true
+          },
+          "taxLotId": {
+            "type": "string",
+            "description": "The tax lot the item is, where the source row was a single lot: a lot of a position read by tax lot, or a cash commitment. Null for an aggregated position and for a cash balance. Opaque: compare it whole, do not parse it.",
+            "nullable": true
+          },
           "itemType": {
             "minLength": 1,
             "type": "string",
-            "description": "The polymorphic item-type discriminator (e.g. SettlementActivity, Holding, Transaction). Available values: SettlementActivity, Holding, Transaction."
+            "description": "The polymorphic item-type discriminator: Holding, ValuedHolding, Transaction or SettlementActivity. Names the item rather than the rec type: Holding and CashHolding recs produce Holding items, a Valuation rec produces ValuedHolding items, and both transaction rec types produce Transaction items. Available values: SettlementActivity, Holding, Transaction, ValuedHolding."
           },
           "ruleAndAttributeValues": {
             "type": "object",
@@ -282353,12 +284065,46 @@
               "nullable": true
             },
             "description": "The core rule, aggregate rule and supplemental attribute values for the item, keyed by name.",
-            "nullable": true,
-            "readOnly": true
+            "nullable": true
           }
         },
         "additionalProperties": false,
-        "description": "An individual item that makes up (one side of) a rec result. Polymorphic by rec type / item type."
+        "description": "A holding-shaped item within a rec result: the holding a Holding or CashHolding rec reconciled\r\n(itemType Holding), or the one a Valuation rec valued (itemType ValuedHolding)."
+      },
+      "RecResultItem": {
+        "required": [
+          "itemType"
+        ],
+        "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/RecResultHoldingItem"
+          },
+          {
+            "$ref": "#/components/schemas/RecResultSettlementActivityItem"
+          },
+          {
+            "$ref": "#/components/schemas/RecResultTransactionItem"
+          }
+        ],
+        "properties": {
+          "itemType": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The polymorphic item-type discriminator: Holding, ValuedHolding, Transaction or SettlementActivity. Names the item rather than the rec type: Holding and CashHolding recs produce Holding items, a Valuation rec produces ValuedHolding items, and both transaction rec types produce Transaction items. Available values: SettlementActivity, Holding, Transaction, ValuedHolding."
+          },
+          "ruleAndAttributeValues": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string",
+              "nullable": true
+            },
+            "description": "The core rule, aggregate rule and supplemental attribute values for the item, keyed by name.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "An individual item that makes up (one side of) a rec result. Polymorphic by itemType; each value has a\r\ncorresponding inherited class."
       },
       "RecResultItemDetails": {
         "required": [
@@ -282396,6 +284142,28 @@
         },
         "additionalProperties": false,
         "description": "The individual items that make up a rec result, split by side. Zero counts and empty arrays for\r\nresults that have cleared."
+      },
+      "RecResultLinkKey": {
+        "type": "object",
+        "properties": {
+          "holdingId": {
+            "type": "string",
+            "description": "The holding both items carried, for a holding-keyed pairing. Null for a transaction-keyed one.",
+            "nullable": true
+          },
+          "taxLotId": {
+            "type": "string",
+            "description": "The tax lot both items carried within the holding, where the pairing was established at tax-lot precision. Null where it was established at holding precision, and always null for a transaction-keyed pairing.",
+            "nullable": true
+          },
+          "transactionId": {
+            "type": "string",
+            "description": "The transaction both items carried, for a transaction-keyed pairing. Null for a holding-keyed one.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "One item pairing that established a link between two rec results: the identifiers both results' items carried.\r\nExactly one of holdingId and transactionId is populated; taxLotId only ever accompanies a holdingId, and only\r\nwhere the pairing was established at tax-lot precision."
       },
       "RecResultReview": {
         "required": [
@@ -282557,6 +284325,100 @@
         },
         "additionalProperties": false,
         "description": "The request for an approver to approve a submitted review or request revisions. Each call satisfies\r\n(or rejects) one approval slot from the result set's required approvals."
+      },
+      "RecResultSettlementActivityItem": {
+        "required": [
+          "holdingImpacts",
+          "itemType",
+          "portfolioId"
+        ],
+        "type": "object",
+        "properties": {
+          "portfolioId": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "activityId": {
+            "type": "string",
+            "description": "The settlement activity identifier.",
+            "nullable": true
+          },
+          "transactionId": {
+            "type": "string",
+            "description": "The transaction identifier.",
+            "nullable": true
+          },
+          "settlementInstructionId": {
+            "type": "string",
+            "description": "The settlement instruction identifier.",
+            "nullable": true
+          },
+          "holdingImpacts": {
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RecResultHoldingImpact"
+            },
+            "description": "The holdings, and where the source states them the tax lots, the item impacted. A distinct set ordered by holdingId then taxLotId; may be empty. An input transaction has not run the movements engine and impacts nothing yet."
+          },
+          "itemType": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The polymorphic item-type discriminator: Holding, ValuedHolding, Transaction or SettlementActivity. Names the item rather than the rec type: Holding and CashHolding recs produce Holding items, a Valuation rec produces ValuedHolding items, and both transaction rec types produce Transaction items. Available values: SettlementActivity, Holding, Transaction, ValuedHolding."
+          },
+          "ruleAndAttributeValues": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string",
+              "nullable": true
+            },
+            "description": "The core rule, aggregate rule and supplemental attribute values for the item, keyed by name.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "A settlement-activity item within a rec result."
+      },
+      "RecResultTransactionItem": {
+        "required": [
+          "holdingImpacts",
+          "itemType",
+          "portfolioId"
+        ],
+        "type": "object",
+        "properties": {
+          "portfolioId": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "transactionId": {
+            "type": "string",
+            "description": "The transaction identifier.",
+            "nullable": true
+          },
+          "holdingImpacts": {
+            "minItems": 0,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RecResultHoldingImpact"
+            },
+            "description": "The holdings, and where the source states them the tax lots, the item impacted. A distinct set ordered by holdingId then taxLotId; may be empty. An input transaction has not run the movements engine and impacts nothing yet."
+          },
+          "itemType": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The polymorphic item-type discriminator: Holding, ValuedHolding, Transaction or SettlementActivity. Names the item rather than the rec type: Holding and CashHolding recs produce Holding items, a Valuation rec produces ValuedHolding items, and both transaction rec types produce Transaction items. Available values: SettlementActivity, Holding, Transaction, ValuedHolding."
+          },
+          "ruleAndAttributeValues": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string",
+              "nullable": true
+            },
+            "description": "The core rule, aggregate rule and supplemental attribute values for the item, keyed by name.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "A transaction item within a rec result."
       },
       "RecReview": {
         "required": [
@@ -284286,21 +286148,21 @@
                 "items": {
                   "$ref": "#/components/schemas/CashOfferElection"
                 },
-                "description": "List of possible CashOfferElections for this event. Only 1 should be provided."
+                "description": "List of possible CashOfferElections for this event.\r\n\r\n- The event requires at least one election of any type.\r\n\r\n- Any number of CashOfferElections may be supplied.\r\n\r\n- At most one election on the event may be the default, and at most one may be chosen."
               },
               "lapseElections": {
                 "type": "array",
                 "items": {
                   "$ref": "#/components/schemas/LapseElection"
                 },
-                "description": "List of possible LapseElections for this event. Only 1 should be provided.\r\nAllows the user to opt out of the offer."
+                "description": "List of possible LapseElections for this event. Allows the user to opt out of the offer.\r\n\r\n- The event requires at least one election of any type.\r\n\r\n- Any number of LapseElections may be supplied.\r\n\r\n- At most one election on the event may be the default, and at most one may be chosen."
               },
               "tenderOfferElections": {
                 "type": "array",
                 "items": {
                   "$ref": "#/components/schemas/TenderOfferElection"
                 },
-                "description": "List of possible TenderOfferElections for this event. Only 1 should be provided."
+                "description": "List of possible TenderOfferElections for this event.\r\n\r\n- The event requires at least one election of any type.\r\n\r\n- Any number of TenderOfferElections may be supplied.\r\n\r\n- At most one election on the event may be the default, and at most one may be chosen."
               },
               "prorationRate": {
                 "type": "number",
@@ -284343,7 +286205,7 @@
                 "items": {
                   "$ref": "#/components/schemas/ConsentAndTenderElection"
                 },
-                "description": "List of possible consent-and-tender elections for this event (CTEN) — tender the holding and grant consent together.",
+                "description": "List of possible consent-and-tender elections for this event (CTEN) — tender the holding and grant consent together.\r\n\r\n- The event requires at least one election of any type.\r\n\r\n- Any number of ConsentAndTenderElections may be supplied.\r\n\r\n- At most one election on the event may be the default, and at most one may be chosen.",
                 "nullable": true
               },
               "consentGrantedElections": {
@@ -284351,7 +286213,7 @@
                 "items": {
                   "$ref": "#/components/schemas/ConsentGrantedElection"
                 },
-                "description": "List of possible consent-granted elections for this event (CONY) — vote in favour, optionally attracting a consent fee.",
+                "description": "List of possible consent-granted elections for this event (CONY) — vote in favour, optionally attracting a consent fee.\r\n\r\n- The event requires at least one election of any type.\r\n\r\n- Any number of ConsentGrantedElections may be supplied.\r\n\r\n- At most one election on the event may be the default, and at most one may be chosen.",
                 "nullable": true
               },
               "consentDeniedElections": {
@@ -284359,7 +286221,7 @@
                 "items": {
                   "$ref": "#/components/schemas/ConsentDeniedElection"
                 },
-                "description": "List of possible consent-denied elections for this event (CONN) — vote against the proposal.",
+                "description": "List of possible consent-denied elections for this event (CONN) — vote against the proposal.\r\n\r\n- The event requires at least one election of any type.\r\n\r\n- Any number of ConsentDeniedElections may be supplied.\r\n\r\n- At most one election on the event may be the default, and at most one may be chosen.",
                 "nullable": true
               },
               "abstainElections": {
@@ -284367,7 +286229,7 @@
                 "items": {
                   "$ref": "#/components/schemas/AbstainElection"
                 },
-                "description": "List of possible abstain elections for this event (ABST) — decline to vote on the consent.",
+                "description": "List of possible abstain elections for this event (ABST) — decline to vote on the consent.\r\n\r\n- The event requires at least one election of any type.\r\n\r\n- Any number of AbstainElections may be supplied.\r\n\r\n- At most one election on the event may be the default, and at most one may be chosen.",
                 "nullable": true
               },
               "unknownProceedsElections": {
@@ -284375,7 +286237,7 @@
                 "items": {
                   "$ref": "#/components/schemas/UnknownProceedsElection"
                 },
-                "description": "List of possible unknown-proceeds elections for this event (UNKNOWN) — the outturn is not yet known.",
+                "description": "List of possible unknown-proceeds elections for this event (UNKNOWN) — the outturn is not yet known.\r\n\r\n- The event requires at least one election of any type.\r\n\r\n- Any number of UnknownProceedsElections may be supplied.\r\n\r\n- At most one election on the event may be the default, and at most one may be chosen.",
                 "nullable": true
               },
               "instrumentEventType": {
@@ -300860,6 +302722,36 @@
         },
         "additionalProperties": false
       },
+      "UpsertEntityResolverRequest": {
+        "required": [
+          "entityType",
+          "identifierMatchingOrder"
+        ],
+        "type": "object",
+        "properties": {
+          "entityType": {
+            "maxLength": 64,
+            "minLength": 1,
+            "type": "string",
+            "description": "The entity type that a specific resolution configuration is applicable to (e.g. Instrument)."
+          },
+          "description": {
+            "maxLength": 1024,
+            "minLength": 0,
+            "type": "string",
+            "description": "Describes what this specific identifier order is used for.",
+            "nullable": true
+          },
+          "identifierMatchingOrder": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IdentifierForResolution"
+            },
+            "description": "Ordered collection of related identifier keys that are used to define which identifier takes priority in resolving an entity."
+          }
+        },
+        "additionalProperties": false
+      },
       "UpsertFlowConventionsRequest": {
         "type": "object",
         "properties": {
@@ -305634,6 +307526,10 @@
       "description": "Methods for querying data about entities"
     },
     {
+      "name": "Entity Resolvers",
+      "description": "Endpoints for managing the order in which identifiers are matched when resolving an entity"
+    },
+    {
       "name": "Executions",
       "description": "Methods for interacting with Executions. An Execution represents a market's fill of a street order. Executions are treated monotemporally; any updates are effective at the as-at time of update, and its not possible to make retroactive (or forward) changes."
     },
@@ -305921,6 +307817,7 @@
       "Data Types",
       "Derived Transaction Portfolios",
       "Entities",
+      "Entity Resolvers",
       "Executions",
       "Fee Types",
       "Fund Configuration",
