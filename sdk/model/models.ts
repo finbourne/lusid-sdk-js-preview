@@ -1653,6 +1653,8 @@ export * from './setPersonPropertiesRequest';
 export * from './setShareClassInstrumentsRequest';
 export * from './setTransactionConfigurationAlias';
 export * from './setTransactionConfigurationSourceRequest';
+export * from './settleExpectedActivityRuleNames';
+export * from './settleExpectedActivityWritebackConfiguration';
 export * from './settlementActivity';
 export * from './settlementActivityQuery';
 export * from './settlementConfigurationCategory';
@@ -1683,6 +1685,8 @@ export * from './simpleCashFlowLoan';
 export * from './simpleCashFlowLoanAllOf';
 export * from './simpleInstrument';
 export * from './simpleInstrumentAllOf';
+export * from './simpleModelOptions';
+export * from './simpleModelOptionsAllOf';
 export * from './simpleRoundingConvention';
 export * from './singleValuationPointQueryParameters';
 export * from './sortOrder';
@@ -2012,6 +2016,8 @@ export * from './workspaceUpdateRequest';
 export * from './workspaceVisibility';
 export * from './worthlessEvent';
 export * from './worthlessEventAllOf';
+export * from './writebackConfiguration';
+export * from './writebackResultPattern';
 export * from './yearMonthDay';
 export * from './yieldCurveData';
 export * from './yieldCurveDataAllOf';
@@ -3682,6 +3688,8 @@ import { SetPersonPropertiesRequest } from './setPersonPropertiesRequest';
 import { SetShareClassInstrumentsRequest } from './setShareClassInstrumentsRequest';
 import { SetTransactionConfigurationAlias } from './setTransactionConfigurationAlias';
 import { SetTransactionConfigurationSourceRequest } from './setTransactionConfigurationSourceRequest';
+import { SettleExpectedActivityRuleNames } from './settleExpectedActivityRuleNames';
+import { SettleExpectedActivityWritebackConfiguration } from './settleExpectedActivityWritebackConfiguration';
 import { SettlementActivity } from './settlementActivity';
 import { SettlementActivityQuery } from './settlementActivityQuery';
 import { SettlementConfigurationCategory } from './settlementConfigurationCategory';
@@ -3712,6 +3720,8 @@ import { SimpleCashFlowLoan } from './simpleCashFlowLoan';
 import { SimpleCashFlowLoanAllOf } from './simpleCashFlowLoanAllOf';
 import { SimpleInstrument } from './simpleInstrument';
 import { SimpleInstrumentAllOf } from './simpleInstrumentAllOf';
+import { SimpleModelOptions } from './simpleModelOptions';
+import { SimpleModelOptionsAllOf } from './simpleModelOptionsAllOf';
 import { SimpleRoundingConvention } from './simpleRoundingConvention';
 import { SingleValuationPointQueryParameters } from './singleValuationPointQueryParameters';
 import { SortOrder } from './sortOrder';
@@ -4041,6 +4051,8 @@ import { WorkspaceUpdateRequest } from './workspaceUpdateRequest';
 import { WorkspaceVisibility } from './workspaceVisibility';
 import { WorthlessEvent } from './worthlessEvent';
 import { WorthlessEventAllOf } from './worthlessEventAllOf';
+import { WritebackConfiguration } from './writebackConfiguration';
+import { WritebackResultPattern } from './writebackResultPattern';
 import { YearMonthDay } from './yearMonthDay';
 import { YieldCurveData } from './yieldCurveData';
 import { YieldCurveDataAllOf } from './yieldCurveDataAllOf';
@@ -4775,6 +4787,8 @@ let enumsMap: {[index: string]: any} = {
         "SimpleInstrument.InstrumentTypeEnum": SimpleInstrument.InstrumentTypeEnum,
         "SimpleInstrumentAllOf.AssetClassEnum": SimpleInstrumentAllOf.AssetClassEnum,
         "SimpleInstrumentAllOf.InstrumentTypeEnum": SimpleInstrumentAllOf.InstrumentTypeEnum,
+        "SimpleModelOptions.ModelOptionsTypeEnum": SimpleModelOptions.ModelOptionsTypeEnum,
+        "SimpleModelOptionsAllOf.ModelOptionsTypeEnum": SimpleModelOptionsAllOf.ModelOptionsTypeEnum,
         "SortOrder": SortOrder,
         "SpinOffEvent.InstrumentEventTypeEnum": SpinOffEvent.InstrumentEventTypeEnum,
         "StepSchedule.ScheduleTypeEnum": StepSchedule.ScheduleTypeEnum,
@@ -6452,6 +6466,8 @@ let typeMap: {[index: string]: any} = {
     "SetShareClassInstrumentsRequest": SetShareClassInstrumentsRequest,
     "SetTransactionConfigurationAlias": SetTransactionConfigurationAlias,
     "SetTransactionConfigurationSourceRequest": SetTransactionConfigurationSourceRequest,
+    "SettleExpectedActivityRuleNames": SettleExpectedActivityRuleNames,
+    "SettleExpectedActivityWritebackConfiguration": SettleExpectedActivityWritebackConfiguration,
     "SettlementActivity": SettlementActivity,
     "SettlementActivityQuery": SettlementActivityQuery,
     "SettlementConfigurationCategory": SettlementConfigurationCategory,
@@ -6481,6 +6497,8 @@ let typeMap: {[index: string]: any} = {
     "SimpleCashFlowLoanAllOf": SimpleCashFlowLoanAllOf,
     "SimpleInstrument": SimpleInstrument,
     "SimpleInstrumentAllOf": SimpleInstrumentAllOf,
+    "SimpleModelOptions": SimpleModelOptions,
+    "SimpleModelOptionsAllOf": SimpleModelOptionsAllOf,
     "SimpleRoundingConvention": SimpleRoundingConvention,
     "SingleValuationPointQueryParameters": SingleValuationPointQueryParameters,
     "SpecificHoldingPricingInfo": SpecificHoldingPricingInfo,
@@ -6797,6 +6815,8 @@ let typeMap: {[index: string]: any} = {
     "WorkspaceUpdateRequest": WorkspaceUpdateRequest,
     "WorthlessEvent": WorthlessEvent,
     "WorthlessEventAllOf": WorthlessEventAllOf,
+    "WritebackConfiguration": WritebackConfiguration,
+    "WritebackResultPattern": WritebackResultPattern,
     "YearMonthDay": YearMonthDay,
     "YieldCurveData": YieldCurveData,
     "YieldCurveDataAllOf": YieldCurveDataAllOf,
