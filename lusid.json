@@ -9,7 +9,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "2.0.1673",
+    "version": "2.0.1674",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -71494,6 +71494,15 @@
         "operationId": "ListFundStructures",
         "parameters": [
           {
+            "name": "effectiveAt",
+            "in": "query",
+            "description": "The effective datetime or cut label at which to list the Fund Structures. Defaults to the current LUSID system datetime if not specified.",
+            "schema": {
+              "type": "string",
+              "format": "dateorcutlabel"
+            }
+          },
+          {
             "name": "asAt",
             "in": "query",
             "description": "The asAt datetime at which to list Fund Structures. Defaults to returning the latest version of each Fund Structure if not specified.",
@@ -73278,7 +73287,7 @@
           "Fund Structures"
         ],
         "summary": "[EXPERIMENTAL] GetFundStructure: Get a Fund Structure.",
-        "description": "Retrieve the definition of a particular Fund Structure, including its nodes, edges, and any inline fund definitions.",
+        "description": "Retrieve the definition of a particular Fund Structure at an effective and asAt datetime, including its nodes,\r\nedges, allocation groups and the funds its nodes refer to.",
         "operationId": "GetFundStructure",
         "parameters": [
           {
@@ -73303,6 +73312,15 @@
               "minLength": 1,
               "pattern": "^[a-zA-Z0-9\\-_]+$",
               "type": "string"
+            }
+          },
+          {
+            "name": "effectiveAt",
+            "in": "query",
+            "description": "The effective datetime or cut label at which to retrieve the Fund Structure. Defaults to the current LUSID system datetime if not specified.",
+            "schema": {
+              "type": "string",
+              "format": "dateorcutlabel"
             }
           },
           {
@@ -73973,6 +73991,116 @@
                     }
                   ],
                   "properties": {}
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      },
+      "delete": {
+        "tags": [
+          "Fund Structures"
+        ],
+        "summary": "[EXPERIMENTAL] DeleteFundStructure: Delete a Fund Structure.",
+        "description": "Delete a Fund Structure from the given effective datetime. It remains retrievable at earlier effective datetimes.",
+        "operationId": "DeleteFundStructure",
+        "parameters": [
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope of the Fund Structure to be deleted.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "code",
+            "in": "path",
+            "description": "The code of the Fund Structure to be deleted. Together with the scope this uniquely identifies the Fund Structure.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "effectiveAt",
+            "in": "query",
+            "description": "The effective datetime or cut label from which the Fund Structure is deleted. Defaults to the current LUSID system datetime if not specified.",
+            "schema": {
+              "type": "string",
+              "format": "dateorcutlabel"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The datetime that the Fund Structure was deleted.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeletedEntityResponse"
+                },
+                "example": {
+                  "asAt": "2018-03-05T10:10:10.0000000+00:00"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeletedEntityResponse"
+                },
+                "example": {
+                  "asAt": "2018-03-05T10:10:10.0000000+00:00"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeletedEntityResponse"
+                },
+                "example": {
+                  "asAt": "2018-03-05T10:10:10.0000000+00:00"
                 }
               }
             }
@@ -252433,6 +252561,12 @@
               "$ref": "#/components/schemas/FundStructureEdge"
             },
             "description": "The list of edges that define the relationships between feeder and master nodes in the structure."
+          },
+          "effectiveAt": {
+            "type": "string",
+            "description": "The effective datetime from which the Fund Structure applies. Defaults to the beginning of time if not specified, so that the structure is visible at every effective datetime.",
+            "format": "date-time",
+            "nullable": true
           },
           "properties": {
             "type": "object",
