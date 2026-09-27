@@ -9,7 +9,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "2.0.1672",
+    "version": "2.0.1673",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -72304,77 +72304,6 @@
                     "code": "ExistingFundCode"
                   }
                 ],
-                "newFunds": [
-                  {
-                    "code": "MasterFundCode",
-                    "displayName": "Master Fund A",
-                    "description": "Master fund for the structure",
-                    "baseCurrency": "GBP",
-                    "investorStructure": "Classes",
-                    "portfolioIds": [
-                      {
-                        "scope": "FundStructureScope",
-                        "code": "PortfolioCode",
-                        "portfolioEntityType": "SinglePortfolio"
-                      }
-                    ],
-                    "fundConfigurationId": {
-                      "scope": "FundStructureScope",
-                      "code": "FundConfigCode"
-                    },
-                    "shareClassInstrumentScopes": [],
-                    "shareClassInstruments": [],
-                    "type": "Master",
-                    "inceptionDate": "2024-01-01T00:00:00.0000000+00:00",
-                    "decimalPlaces": 6,
-                    "primaryNavType": {
-                      "code": "PrimaryNav",
-                      "displayName": "Primary Nav",
-                      "description": "Primary NAV type for the fund",
-                      "chartOfAccountsId": {
-                        "scope": "ChartOfAccountsScope",
-                        "code": "ChartOfAccountsCode"
-                      },
-                      "postingModuleCodes": [
-                        "PostingModule1"
-                      ],
-                      "cleardownModuleCodes": [
-                        "CleardownModule1"
-                      ],
-                      "settlementConfiguration": {},
-                      "valuationRecipeId": {
-                        "scope": "RecipeScope",
-                        "code": "RecipeCode"
-                      },
-                      "holdingRecipeId": {
-                        "scope": "RecipeScope",
-                        "code": "RecipeCode"
-                      },
-                      "accountingMethod": "FirstInFirstOut",
-                      "subHoldingKeys": [],
-                      "amortisationMethod": "EffectiveYield",
-                      "transactionTypeScope": "TransactionTypeScope",
-                      "cashGainLossCalculationDate": "TransactionDate",
-                      "transactionTemplateScope": "TransactionTemplateScope"
-                    },
-                    "additionalNavTypes": [],
-                    "properties": {},
-                    "createInstrument": true,
-                    "shareClasses": [
-                      {
-                        "instrumentIdentifiers": {},
-                        "name": "Master Class A",
-                        "shareClassShortCode": "A",
-                        "properties": {},
-                        "investorType": "Unitised",
-                        "distributionType": "Income",
-                        "domCcy": "GBP",
-                        "distributionPaymentType": "Net",
-                        "hedging": "None"
-                      }
-                    ]
-                  }
-                ],
                 "allocationGroups": [
                   {
                     "classes": [
@@ -72446,77 +72375,6 @@
                   {
                     "scope": "ExistingFundScope",
                     "code": "ExistingFundCode"
-                  }
-                ],
-                "newFunds": [
-                  {
-                    "code": "MasterFundCode",
-                    "displayName": "Master Fund A",
-                    "description": "Master fund for the structure",
-                    "baseCurrency": "GBP",
-                    "investorStructure": "Classes",
-                    "portfolioIds": [
-                      {
-                        "scope": "FundStructureScope",
-                        "code": "PortfolioCode",
-                        "portfolioEntityType": "SinglePortfolio"
-                      }
-                    ],
-                    "fundConfigurationId": {
-                      "scope": "FundStructureScope",
-                      "code": "FundConfigCode"
-                    },
-                    "shareClassInstrumentScopes": [],
-                    "shareClassInstruments": [],
-                    "type": "Master",
-                    "inceptionDate": "2024-01-01T00:00:00.0000000+00:00",
-                    "decimalPlaces": 6,
-                    "primaryNavType": {
-                      "code": "PrimaryNav",
-                      "displayName": "Primary Nav",
-                      "description": "Primary NAV type for the fund",
-                      "chartOfAccountsId": {
-                        "scope": "ChartOfAccountsScope",
-                        "code": "ChartOfAccountsCode"
-                      },
-                      "postingModuleCodes": [
-                        "PostingModule1"
-                      ],
-                      "cleardownModuleCodes": [
-                        "CleardownModule1"
-                      ],
-                      "settlementConfiguration": {},
-                      "valuationRecipeId": {
-                        "scope": "RecipeScope",
-                        "code": "RecipeCode"
-                      },
-                      "holdingRecipeId": {
-                        "scope": "RecipeScope",
-                        "code": "RecipeCode"
-                      },
-                      "accountingMethod": "FirstInFirstOut",
-                      "subHoldingKeys": [],
-                      "amortisationMethod": "EffectiveYield",
-                      "transactionTypeScope": "TransactionTypeScope",
-                      "cashGainLossCalculationDate": "TransactionDate",
-                      "transactionTemplateScope": "TransactionTemplateScope"
-                    },
-                    "additionalNavTypes": [],
-                    "properties": {},
-                    "createInstrument": true,
-                    "shareClasses": [
-                      {
-                        "instrumentIdentifiers": {},
-                        "name": "Master Class A",
-                        "shareClassShortCode": "A",
-                        "properties": {},
-                        "investorType": "Unitised",
-                        "distributionType": "Income",
-                        "domCcy": "GBP",
-                        "distributionPaymentType": "Net",
-                        "hedging": "None"
-                      }
-                    ]
                   }
                 ],
                 "allocationGroups": [
@@ -72592,77 +72450,6 @@
                     "code": "ExistingFundCode"
                   }
                 ],
-                "newFunds": [
-                  {
-                    "code": "MasterFundCode",
-                    "displayName": "Master Fund A",
-                    "description": "Master fund for the structure",
-                    "baseCurrency": "GBP",
-                    "investorStructure": "Classes",
-                    "portfolioIds": [
-                      {
-                        "scope": "FundStructureScope",
-                        "code": "PortfolioCode",
-                        "portfolioEntityType": "SinglePortfolio"
-                      }
-                    ],
-                    "fundConfigurationId": {
-                      "scope": "FundStructureScope",
-                      "code": "FundConfigCode"
-                    },
-                    "shareClassInstrumentScopes": [],
-                    "shareClassInstruments": [],
-                    "type": "Master",
-                    "inceptionDate": "2024-01-01T00:00:00.0000000+00:00",
-                    "decimalPlaces": 6,
-                    "primaryNavType": {
-                      "code": "PrimaryNav",
-                      "displayName": "Primary Nav",
-                      "description": "Primary NAV type for the fund",
-                      "chartOfAccountsId": {
-                        "scope": "ChartOfAccountsScope",
-                        "code": "ChartOfAccountsCode"
-                      },
-                      "postingModuleCodes": [
-                        "PostingModule1"
-                      ],
-                      "cleardownModuleCodes": [
-                        "CleardownModule1"
-                      ],
-                      "settlementConfiguration": {},
-                      "valuationRecipeId": {
-                        "scope": "RecipeScope",
-                        "code": "RecipeCode"
-                      },
-                      "holdingRecipeId": {
-                        "scope": "RecipeScope",
-                        "code": "RecipeCode"
-                      },
-                      "accountingMethod": "FirstInFirstOut",
-                      "subHoldingKeys": [],
-                      "amortisationMethod": "EffectiveYield",
-                      "transactionTypeScope": "TransactionTypeScope",
-                      "cashGainLossCalculationDate": "TransactionDate",
-                      "transactionTemplateScope": "TransactionTemplateScope"
-                    },
-                    "additionalNavTypes": [],
-                    "properties": {},
-                    "createInstrument": true,
-                    "shareClasses": [
-                      {
-                        "instrumentIdentifiers": {},
-                        "name": "Master Class A",
-                        "shareClassShortCode": "A",
-                        "properties": {},
-                        "investorType": "Unitised",
-                        "distributionType": "Income",
-                        "domCcy": "GBP",
-                        "distributionPaymentType": "Net",
-                        "hedging": "None"
-                      }
-                    ]
-                  }
-                ],
                 "allocationGroups": [
                   {
                     "classes": [
@@ -72734,77 +72521,6 @@
                   {
                     "scope": "ExistingFundScope",
                     "code": "ExistingFundCode"
-                  }
-                ],
-                "newFunds": [
-                  {
-                    "code": "MasterFundCode",
-                    "displayName": "Master Fund A",
-                    "description": "Master fund for the structure",
-                    "baseCurrency": "GBP",
-                    "investorStructure": "Classes",
-                    "portfolioIds": [
-                      {
-                        "scope": "FundStructureScope",
-                        "code": "PortfolioCode",
-                        "portfolioEntityType": "SinglePortfolio"
-                      }
-                    ],
-                    "fundConfigurationId": {
-                      "scope": "FundStructureScope",
-                      "code": "FundConfigCode"
-                    },
-                    "shareClassInstrumentScopes": [],
-                    "shareClassInstruments": [],
-                    "type": "Master",
-                    "inceptionDate": "2024-01-01T00:00:00.0000000+00:00",
-                    "decimalPlaces": 6,
-                    "primaryNavType": {
-                      "code": "PrimaryNav",
-                      "displayName": "Primary Nav",
-                      "description": "Primary NAV type for the fund",
-                      "chartOfAccountsId": {
-                        "scope": "ChartOfAccountsScope",
-                        "code": "ChartOfAccountsCode"
-                      },
-                      "postingModuleCodes": [
-                        "PostingModule1"
-                      ],
-                      "cleardownModuleCodes": [
-                        "CleardownModule1"
-                      ],
-                      "settlementConfiguration": {},
-                      "valuationRecipeId": {
-                        "scope": "RecipeScope",
-                        "code": "RecipeCode"
-                      },
-                      "holdingRecipeId": {
-                        "scope": "RecipeScope",
-                        "code": "RecipeCode"
-                      },
-                      "accountingMethod": "FirstInFirstOut",
-                      "subHoldingKeys": [],
-                      "amortisationMethod": "EffectiveYield",
-                      "transactionTypeScope": "TransactionTypeScope",
-                      "cashGainLossCalculationDate": "TransactionDate",
-                      "transactionTemplateScope": "TransactionTemplateScope"
-                    },
-                    "additionalNavTypes": [],
-                    "properties": {},
-                    "createInstrument": true,
-                    "shareClasses": [
-                      {
-                        "instrumentIdentifiers": {},
-                        "name": "Master Class A",
-                        "shareClassShortCode": "A",
-                        "properties": {},
-                        "investorType": "Unitised",
-                        "distributionType": "Income",
-                        "domCcy": "GBP",
-                        "distributionPaymentType": "Net",
-                        "hedging": "None"
-                      }
-                    ]
                   }
                 ],
                 "allocationGroups": [
@@ -252694,14 +252410,6 @@
               "$ref": "#/components/schemas/ResourceId"
             },
             "description": "An optional list of existing funds to be incorporated as part of the structure.",
-            "nullable": true
-          },
-          "newFunds": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/FundDefinitionRequest"
-            },
-            "description": "An optional list of Fund definitions to be created inline as part of the structure.",
             "nullable": true
           },
           "allocationGroups": {
