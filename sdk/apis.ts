@@ -4,6 +4,8 @@ import {AddressKeyAliasApi} from './api/addressKeyAliasApi';
 import {AddressKeyDefinitionApi} from './api/addressKeyDefinitionApi';
 import {AggregatedReturnsApi} from './api/aggregatedReturnsApi';
 import {AggregationApi} from './api/aggregationApi';
+import {AllocationEventsApi} from './api/allocationEventsApi';
+import {AllocationMapsApi} from './api/allocationMapsApi';
 import {AllocationsApi} from './api/allocationsApi';
 import {AmortisationRuleSetsApi} from './api/amortisationRuleSetsApi';
 import {ApplicationMetadataApi} from './api/applicationMetadataApi';
@@ -99,6 +101,8 @@ export class Api {
     public addressKeyDefinition:  AddressKeyDefinitionApi
     public aggregatedReturns:  AggregatedReturnsApi
     public aggregation:  AggregationApi
+    public allocationEvents:  AllocationEventsApi
+    public allocationMaps:  AllocationMapsApi
     public allocations:  AllocationsApi
     public amortisationRuleSets:  AmortisationRuleSetsApi
     public applicationMetadata:  ApplicationMetadataApi

@@ -66,10 +66,25 @@ export * from './aggregationQuery';
 export * from './aggregationType';
 export * from './alias';
 export * from './allocation';
+export * from './allocationEvent';
+export * from './allocationEventBookRequest';
+export * from './allocationEventReallocateRequest';
+export * from './allocationEventRequest';
 export * from './allocationGroup';
 export * from './allocationGroupClass';
 export * from './allocationGroupClassDefinition';
 export * from './allocationGroupDefinition';
+export * from './allocationMap';
+export * from './allocationMapAllocation';
+export * from './allocationMapBasis';
+export * from './allocationMapBasisValue';
+export * from './allocationMapEventBasis';
+export * from './allocationMapException';
+export * from './allocationMapFixedFactor';
+export * from './allocationMapParticipants';
+export * from './allocationMapRequest';
+export * from './allocationMapResolution';
+export * from './allocationMapResolveRequest';
 export * from './allocationRequest';
 export * from './allocationServiceRunResponse';
 export * from './allocationSetRequest';
@@ -703,8 +718,10 @@ export * from './fundRequest';
 export * from './fundShareClass';
 export * from './fundShareClassAllOf';
 export * from './fundStructure';
+export * from './fundStructureAllocationBasis';
 export * from './fundStructureEdge';
 export * from './fundStructureEdgeTarget';
+export * from './fundStructureMemberRequest';
 export * from './fundStructureNode';
 export * from './fundStructureRequest';
 export * from './fundValuationPointData';
@@ -1104,6 +1121,8 @@ export * from './pagedResourceListOfAborConfiguration';
 export * from './pagedResourceListOfAccount';
 export * from './pagedResourceListOfAddressKeyDefinition';
 export * from './pagedResourceListOfAllocation';
+export * from './pagedResourceListOfAllocationEvent';
+export * from './pagedResourceListOfAllocationMap';
 export * from './pagedResourceListOfAmortisationRuleSet';
 export * from './pagedResourceListOfBlock';
 export * from './pagedResourceListOfCalendar';
@@ -2101,10 +2120,25 @@ import { AggregationQuery } from './aggregationQuery';
 import { AggregationType } from './aggregationType';
 import { Alias } from './alias';
 import { Allocation } from './allocation';
+import { AllocationEvent } from './allocationEvent';
+import { AllocationEventBookRequest } from './allocationEventBookRequest';
+import { AllocationEventReallocateRequest } from './allocationEventReallocateRequest';
+import { AllocationEventRequest } from './allocationEventRequest';
 import { AllocationGroup } from './allocationGroup';
 import { AllocationGroupClass } from './allocationGroupClass';
 import { AllocationGroupClassDefinition } from './allocationGroupClassDefinition';
 import { AllocationGroupDefinition } from './allocationGroupDefinition';
+import { AllocationMap } from './allocationMap';
+import { AllocationMapAllocation } from './allocationMapAllocation';
+import { AllocationMapBasis } from './allocationMapBasis';
+import { AllocationMapBasisValue } from './allocationMapBasisValue';
+import { AllocationMapEventBasis } from './allocationMapEventBasis';
+import { AllocationMapException } from './allocationMapException';
+import { AllocationMapFixedFactor } from './allocationMapFixedFactor';
+import { AllocationMapParticipants } from './allocationMapParticipants';
+import { AllocationMapRequest } from './allocationMapRequest';
+import { AllocationMapResolution } from './allocationMapResolution';
+import { AllocationMapResolveRequest } from './allocationMapResolveRequest';
 import { AllocationRequest } from './allocationRequest';
 import { AllocationServiceRunResponse } from './allocationServiceRunResponse';
 import { AllocationSetRequest } from './allocationSetRequest';
@@ -2738,8 +2772,10 @@ import { FundRequest } from './fundRequest';
 import { FundShareClass } from './fundShareClass';
 import { FundShareClassAllOf } from './fundShareClassAllOf';
 import { FundStructure } from './fundStructure';
+import { FundStructureAllocationBasis } from './fundStructureAllocationBasis';
 import { FundStructureEdge } from './fundStructureEdge';
 import { FundStructureEdgeTarget } from './fundStructureEdgeTarget';
+import { FundStructureMemberRequest } from './fundStructureMemberRequest';
 import { FundStructureNode } from './fundStructureNode';
 import { FundStructureRequest } from './fundStructureRequest';
 import { FundValuationPointData } from './fundValuationPointData';
@@ -3139,6 +3175,8 @@ import { PagedResourceListOfAborConfiguration } from './pagedResourceListOfAborC
 import { PagedResourceListOfAccount } from './pagedResourceListOfAccount';
 import { PagedResourceListOfAddressKeyDefinition } from './pagedResourceListOfAddressKeyDefinition';
 import { PagedResourceListOfAllocation } from './pagedResourceListOfAllocation';
+import { PagedResourceListOfAllocationEvent } from './pagedResourceListOfAllocationEvent';
+import { PagedResourceListOfAllocationMap } from './pagedResourceListOfAllocationMap';
 import { PagedResourceListOfAmortisationRuleSet } from './pagedResourceListOfAmortisationRuleSet';
 import { PagedResourceListOfBlock } from './pagedResourceListOfBlock';
 import { PagedResourceListOfCalendar } from './pagedResourceListOfCalendar';
@@ -4932,10 +4970,25 @@ let typeMap: {[index: string]: any} = {
     "AggregationQuery": AggregationQuery,
     "Alias": Alias,
     "Allocation": Allocation,
+    "AllocationEvent": AllocationEvent,
+    "AllocationEventBookRequest": AllocationEventBookRequest,
+    "AllocationEventReallocateRequest": AllocationEventReallocateRequest,
+    "AllocationEventRequest": AllocationEventRequest,
     "AllocationGroup": AllocationGroup,
     "AllocationGroupClass": AllocationGroupClass,
     "AllocationGroupClassDefinition": AllocationGroupClassDefinition,
     "AllocationGroupDefinition": AllocationGroupDefinition,
+    "AllocationMap": AllocationMap,
+    "AllocationMapAllocation": AllocationMapAllocation,
+    "AllocationMapBasis": AllocationMapBasis,
+    "AllocationMapBasisValue": AllocationMapBasisValue,
+    "AllocationMapEventBasis": AllocationMapEventBasis,
+    "AllocationMapException": AllocationMapException,
+    "AllocationMapFixedFactor": AllocationMapFixedFactor,
+    "AllocationMapParticipants": AllocationMapParticipants,
+    "AllocationMapRequest": AllocationMapRequest,
+    "AllocationMapResolution": AllocationMapResolution,
+    "AllocationMapResolveRequest": AllocationMapResolveRequest,
     "AllocationRequest": AllocationRequest,
     "AllocationServiceRunResponse": AllocationServiceRunResponse,
     "AllocationSetRequest": AllocationSetRequest,
@@ -5553,8 +5606,10 @@ let typeMap: {[index: string]: any} = {
     "FundShareClass": FundShareClass,
     "FundShareClassAllOf": FundShareClassAllOf,
     "FundStructure": FundStructure,
+    "FundStructureAllocationBasis": FundStructureAllocationBasis,
     "FundStructureEdge": FundStructureEdge,
     "FundStructureEdgeTarget": FundStructureEdgeTarget,
+    "FundStructureMemberRequest": FundStructureMemberRequest,
     "FundStructureNode": FundStructureNode,
     "FundStructureRequest": FundStructureRequest,
     "FundValuationPointData": FundValuationPointData,
@@ -5938,6 +5993,8 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfAccount": PagedResourceListOfAccount,
     "PagedResourceListOfAddressKeyDefinition": PagedResourceListOfAddressKeyDefinition,
     "PagedResourceListOfAllocation": PagedResourceListOfAllocation,
+    "PagedResourceListOfAllocationEvent": PagedResourceListOfAllocationEvent,
+    "PagedResourceListOfAllocationMap": PagedResourceListOfAllocationMap,
     "PagedResourceListOfAmortisationRuleSet": PagedResourceListOfAmortisationRuleSet,
     "PagedResourceListOfBlock": PagedResourceListOfBlock,
     "PagedResourceListOfCalendar": PagedResourceListOfCalendar,
