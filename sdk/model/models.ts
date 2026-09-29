@@ -525,6 +525,7 @@ export * from './decimalList';
 export * from './decimalListAllOf';
 export * from './decimalListComplianceParameter';
 export * from './decoratedComplianceRunSummary';
+export * from './decoratedComplianceRunSummaryRequest';
 export * from './deleteAccountsResponse';
 export * from './deleteCustodianAccountsResponse';
 export * from './deleteDataQualityRule';
@@ -1675,6 +1676,7 @@ export * from './setTransactionConfigurationAlias';
 export * from './setTransactionConfigurationSourceRequest';
 export * from './settleExpectedActivityRuleNames';
 export * from './settleExpectedActivityWritebackConfiguration';
+export * from './settleExpectedActivityWritebackSuggestion';
 export * from './settlementActivity';
 export * from './settlementActivityQuery';
 export * from './settlementConfigurationCategory';
@@ -2038,6 +2040,7 @@ export * from './worthlessEvent';
 export * from './worthlessEventAllOf';
 export * from './writebackConfiguration';
 export * from './writebackResultPattern';
+export * from './writebackSuggestion';
 export * from './yearMonthDay';
 export * from './yieldCurveData';
 export * from './yieldCurveDataAllOf';
@@ -2580,6 +2583,7 @@ import { DecimalList } from './decimalList';
 import { DecimalListAllOf } from './decimalListAllOf';
 import { DecimalListComplianceParameter } from './decimalListComplianceParameter';
 import { DecoratedComplianceRunSummary } from './decoratedComplianceRunSummary';
+import { DecoratedComplianceRunSummaryRequest } from './decoratedComplianceRunSummaryRequest';
 import { DeleteAccountsResponse } from './deleteAccountsResponse';
 import { DeleteCustodianAccountsResponse } from './deleteCustodianAccountsResponse';
 import { DeleteDataQualityRule } from './deleteDataQualityRule';
@@ -3730,6 +3734,7 @@ import { SetTransactionConfigurationAlias } from './setTransactionConfigurationA
 import { SetTransactionConfigurationSourceRequest } from './setTransactionConfigurationSourceRequest';
 import { SettleExpectedActivityRuleNames } from './settleExpectedActivityRuleNames';
 import { SettleExpectedActivityWritebackConfiguration } from './settleExpectedActivityWritebackConfiguration';
+import { SettleExpectedActivityWritebackSuggestion } from './settleExpectedActivityWritebackSuggestion';
 import { SettlementActivity } from './settlementActivity';
 import { SettlementActivityQuery } from './settlementActivityQuery';
 import { SettlementConfigurationCategory } from './settlementConfigurationCategory';
@@ -4093,6 +4098,7 @@ import { WorthlessEvent } from './worthlessEvent';
 import { WorthlessEventAllOf } from './worthlessEventAllOf';
 import { WritebackConfiguration } from './writebackConfiguration';
 import { WritebackResultPattern } from './writebackResultPattern';
+import { WritebackSuggestion } from './writebackSuggestion';
 import { YearMonthDay } from './yearMonthDay';
 import { YieldCurveData } from './yieldCurveData';
 import { YieldCurveDataAllOf } from './yieldCurveDataAllOf';
@@ -5420,6 +5426,7 @@ let typeMap: {[index: string]: any} = {
     "DecimalListAllOf": DecimalListAllOf,
     "DecimalListComplianceParameter": DecimalListComplianceParameter,
     "DecoratedComplianceRunSummary": DecoratedComplianceRunSummary,
+    "DecoratedComplianceRunSummaryRequest": DecoratedComplianceRunSummaryRequest,
     "DeleteAccountsResponse": DeleteAccountsResponse,
     "DeleteCustodianAccountsResponse": DeleteCustodianAccountsResponse,
     "DeleteDataQualityRule": DeleteDataQualityRule,
@@ -6528,6 +6535,7 @@ let typeMap: {[index: string]: any} = {
     "SetTransactionConfigurationSourceRequest": SetTransactionConfigurationSourceRequest,
     "SettleExpectedActivityRuleNames": SettleExpectedActivityRuleNames,
     "SettleExpectedActivityWritebackConfiguration": SettleExpectedActivityWritebackConfiguration,
+    "SettleExpectedActivityWritebackSuggestion": SettleExpectedActivityWritebackSuggestion,
     "SettlementActivity": SettlementActivity,
     "SettlementActivityQuery": SettlementActivityQuery,
     "SettlementConfigurationCategory": SettlementConfigurationCategory,
@@ -6877,6 +6885,7 @@ let typeMap: {[index: string]: any} = {
     "WorthlessEventAllOf": WorthlessEventAllOf,
     "WritebackConfiguration": WritebackConfiguration,
     "WritebackResultPattern": WritebackResultPattern,
+    "WritebackSuggestion": WritebackSuggestion,
     "YearMonthDay": YearMonthDay,
     "YieldCurveData": YieldCurveData,
     "YieldCurveDataAllOf": YieldCurveDataAllOf,
