@@ -9,7 +9,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "2.0.1677",
+    "version": "2.0.1678",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -50318,6 +50318,110 @@
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ComplianceRuleTemplateEntity"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "EarlyAccess"
+      }
+    },
+    "/api/entities/corporateactionsources/{entityUniqueId}": {
+      "get": {
+        "tags": [
+          "Entities"
+        ],
+        "summary": "[EARLY ACCESS] GetCorporateActionSourceByEntityUniqueId: Get corporate action source by EntityUniqueId",
+        "description": "Retrieve the definition of a particular corporate action source.\r\n\r\nIf the corporate action source is deleted, this will return the state of the source immediately prior to deletion.",
+        "operationId": "GetCorporateActionSourceByEntityUniqueId",
+        "parameters": [
+          {
+            "name": "entityUniqueId",
+            "in": "path",
+            "description": "The universally unique identifier of the corporate action source.",
+            "required": true,
+            "schema": {
+              "maxLength": 36,
+              "minLength": 36,
+              "pattern": "^[a-zA-Z0-9\\-]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "asAt",
+            "in": "query",
+            "description": "The asAt datetime at which to retrieve the corporate action source. Defaults to returning the latest version of the corporate action source if not specified.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "x-nullable": true
+          },
+          {
+            "name": "previews",
+            "in": "query",
+            "description": "The ids of the staged modifications to be previewed in the response.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The requested corporate action source entity",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CorporateActionSourceEntity"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CorporateActionSourceEntity"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CorporateActionSourceEntity"
                 }
               }
             }
@@ -157039,6 +157143,14 @@
                     },
                     "windowType": "Contiguous"
                   }
+                },
+                "properties": {
+                  "RecDefinition/Workflow/WorkflowId": {
+                    "key": "RecDefinition/Workflow/WorkflowId",
+                    "value": {
+                      "labelValue": "CustodyReviewWorkflow"
+                    }
+                  }
                 }
               }
             },
@@ -157143,6 +157255,14 @@
                       "right": "2024-05-31T00:00:00.0000000+00:00"
                     },
                     "windowType": "Contiguous"
+                  }
+                },
+                "properties": {
+                  "RecDefinition/Workflow/WorkflowId": {
+                    "key": "RecDefinition/Workflow/WorkflowId",
+                    "value": {
+                      "labelValue": "CustodyReviewWorkflow"
+                    }
                   }
                 }
               }
@@ -157249,6 +157369,14 @@
                     },
                     "windowType": "Contiguous"
                   }
+                },
+                "properties": {
+                  "RecDefinition/Workflow/WorkflowId": {
+                    "key": "RecDefinition/Workflow/WorkflowId",
+                    "value": {
+                      "labelValue": "CustodyReviewWorkflow"
+                    }
+                  }
                 }
               }
             },
@@ -157353,6 +157481,14 @@
                       "right": "2024-05-31T00:00:00.0000000+00:00"
                     },
                     "windowType": "Contiguous"
+                  }
+                },
+                "properties": {
+                  "RecDefinition/Workflow/WorkflowId": {
+                    "key": "RecDefinition/Workflow/WorkflowId",
+                    "value": {
+                      "labelValue": "CustodyReviewWorkflow"
+                    }
                   }
                 }
               }
@@ -157467,6 +157603,14 @@
                       "windowType": "Contiguous"
                     }
                   },
+                  "properties": {
+                    "RecDefinition/Workflow/WorkflowId": {
+                      "key": "RecDefinition/Workflow/WorkflowId",
+                      "value": {
+                        "labelValue": "CustodyReviewWorkflow"
+                      }
+                    }
+                  },
                   "href": "https://example.com",
                   "version": {
                     "effectiveFrom": "2024-06-01T00:00:00.0000000+00:00",
@@ -157577,6 +157721,14 @@
                       "windowType": "Contiguous"
                     }
                   },
+                  "properties": {
+                    "RecDefinition/Workflow/WorkflowId": {
+                      "key": "RecDefinition/Workflow/WorkflowId",
+                      "value": {
+                        "labelValue": "CustodyReviewWorkflow"
+                      }
+                    }
+                  },
                   "href": "https://example.com",
                   "version": {
                     "effectiveFrom": "2024-06-01T00:00:00.0000000+00:00",
@@ -157685,6 +157837,14 @@
                         "right": "2024-05-31T00:00:00.0000000+00:00"
                       },
                       "windowType": "Contiguous"
+                    }
+                  },
+                  "properties": {
+                    "RecDefinition/Workflow/WorkflowId": {
+                      "key": "RecDefinition/Workflow/WorkflowId",
+                      "value": {
+                        "labelValue": "CustodyReviewWorkflow"
+                      }
                     }
                   },
                   "href": "https://example.com",
@@ -157797,6 +157957,19 @@
               "pattern": "^[\\s\\S]*$",
               "type": "string"
             }
+          },
+          {
+            "name": "propertyKeys",
+            "in": "query",
+            "description": "A list of property keys from the 'RecDefinition' domain to decorate onto the rec\r\n            definitions. These must have the format {domain}/{scope}/{code}, for example\r\n            'RecDefinition/Workflow/WorkflowId'. They are not carried in the pagination token, so must be supplied again\r\n            with each page.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "description": "The key that uniquely identifies the property. It has the format {domain}/{scope}/{code}."
+              }
+            },
+            "x-nullable": true
           }
         ],
         "responses": {
@@ -157899,6 +158072,19 @@
             "schema": {
               "type": "string",
               "format": "date-time"
+            },
+            "x-nullable": true
+          },
+          {
+            "name": "propertyKeys",
+            "in": "query",
+            "description": "A list of property keys from the 'RecDefinition' domain to decorate onto the rec\r\n            definition. These must have the format {domain}/{scope}/{code}, for example\r\n            'RecDefinition/Workflow/WorkflowId'.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "description": "The key that uniquely identifies the property. It has the format {domain}/{scope}/{code}."
+              }
             },
             "x-nullable": true
           }
@@ -158010,6 +158196,14 @@
                       "windowType": "Contiguous"
                     }
                   },
+                  "properties": {
+                    "RecDefinition/Workflow/WorkflowId": {
+                      "key": "RecDefinition/Workflow/WorkflowId",
+                      "value": {
+                        "labelValue": "CustodyReviewWorkflow"
+                      }
+                    }
+                  },
                   "href": "https://example.com",
                   "version": {
                     "effectiveFrom": "2024-06-01T00:00:00.0000000+00:00",
@@ -158120,6 +158314,14 @@
                       "windowType": "Contiguous"
                     }
                   },
+                  "properties": {
+                    "RecDefinition/Workflow/WorkflowId": {
+                      "key": "RecDefinition/Workflow/WorkflowId",
+                      "value": {
+                        "labelValue": "CustodyReviewWorkflow"
+                      }
+                    }
+                  },
                   "href": "https://example.com",
                   "version": {
                     "effectiveFrom": "2024-06-01T00:00:00.0000000+00:00",
@@ -158228,6 +158430,14 @@
                         "right": "2024-05-31T00:00:00.0000000+00:00"
                       },
                       "windowType": "Contiguous"
+                    }
+                  },
+                  "properties": {
+                    "RecDefinition/Workflow/WorkflowId": {
+                      "key": "RecDefinition/Workflow/WorkflowId",
+                      "value": {
+                        "labelValue": "CustodyReviewWorkflow"
+                      }
                     }
                   },
                   "href": "https://example.com",
@@ -158282,7 +158492,7 @@
           "Recs"
         ],
         "summary": "[EXPERIMENTAL] UpdateRecDefinition: UpdateRecDefinition",
-        "description": "Overwrite an existing rec definition identified by scope and code.\r\nThe update request has the same required fields as create, apart from the identifier.",
+        "description": "Overwrite an existing rec definition identified by scope and code.\r\nThe update request has the same required fields as create, apart from the identifier.\r\nProperties are merged rather than overwritten - each property supplied is set, a property supplied with a null\r\nvalue is deleted, and any property not supplied is left unchanged.",
         "operationId": "UpdateRecDefinition",
         "parameters": [
           {
@@ -158411,6 +158621,14 @@
                     },
                     "windowType": "Contiguous"
                   }
+                },
+                "properties": {
+                  "RecDefinition/Workflow/WorkflowId": {
+                    "key": "RecDefinition/Workflow/WorkflowId",
+                    "value": {
+                      "labelValue": "CustodyReviewWorkflow"
+                    }
+                  }
                 }
               }
             },
@@ -158511,6 +158729,14 @@
                       "right": "2024-05-31T00:00:00.0000000+00:00"
                     },
                     "windowType": "Contiguous"
+                  }
+                },
+                "properties": {
+                  "RecDefinition/Workflow/WorkflowId": {
+                    "key": "RecDefinition/Workflow/WorkflowId",
+                    "value": {
+                      "labelValue": "CustodyReviewWorkflow"
+                    }
                   }
                 }
               }
@@ -158613,6 +158839,14 @@
                     },
                     "windowType": "Contiguous"
                   }
+                },
+                "properties": {
+                  "RecDefinition/Workflow/WorkflowId": {
+                    "key": "RecDefinition/Workflow/WorkflowId",
+                    "value": {
+                      "labelValue": "CustodyReviewWorkflow"
+                    }
+                  }
                 }
               }
             },
@@ -158713,6 +158947,14 @@
                       "right": "2024-05-31T00:00:00.0000000+00:00"
                     },
                     "windowType": "Contiguous"
+                  }
+                },
+                "properties": {
+                  "RecDefinition/Workflow/WorkflowId": {
+                    "key": "RecDefinition/Workflow/WorkflowId",
+                    "value": {
+                      "labelValue": "CustodyReviewWorkflow"
+                    }
                   }
                 }
               }
@@ -158827,6 +159069,14 @@
                       "windowType": "Contiguous"
                     }
                   },
+                  "properties": {
+                    "RecDefinition/Workflow/WorkflowId": {
+                      "key": "RecDefinition/Workflow/WorkflowId",
+                      "value": {
+                        "labelValue": "CustodyReviewWorkflow"
+                      }
+                    }
+                  },
                   "href": "https://example.com",
                   "version": {
                     "effectiveFrom": "2024-06-01T00:00:00.0000000+00:00",
@@ -158937,6 +159187,14 @@
                       "windowType": "Contiguous"
                     }
                   },
+                  "properties": {
+                    "RecDefinition/Workflow/WorkflowId": {
+                      "key": "RecDefinition/Workflow/WorkflowId",
+                      "value": {
+                        "labelValue": "CustodyReviewWorkflow"
+                      }
+                    }
+                  },
                   "href": "https://example.com",
                   "version": {
                     "effectiveFrom": "2024-06-01T00:00:00.0000000+00:00",
@@ -159045,6 +159303,14 @@
                         "right": "2024-05-31T00:00:00.0000000+00:00"
                       },
                       "windowType": "Contiguous"
+                    }
+                  },
+                  "properties": {
+                    "RecDefinition/Workflow/WorkflowId": {
+                      "key": "RecDefinition/Workflow/WorkflowId",
+                      "value": {
+                        "labelValue": "CustodyReviewWorkflow"
+                      }
                     }
                   },
                   "href": "https://example.com",
@@ -228028,7 +228294,6 @@
         "required": [
           "referenceSide",
           "ruleName",
-          "thresholdPriority",
           "toleranceType"
         ],
         "type": "object",
@@ -228036,7 +228301,7 @@
           "referenceSide": {
             "minLength": 1,
             "type": "string",
-            "description": "Reference side (source of truth). One of: Left, Right. Available values: Left, Right."
+            "description": "Reference side (source of truth). Available values: Left, Right."
           },
           "absoluteThreshold": {
             "type": "number",
@@ -228051,13 +228316,13 @@
             "nullable": true
           },
           "thresholdPriority": {
-            "minLength": 1,
             "type": "string",
-            "description": "Whether to apply the GreaterOf or LesserOf the absoluteThreshold vs relativeThreshold. One of: GreaterOf, LesserOf. Available values: GreaterOf, LesserOf."
+            "description": "Whether to apply the GreaterOf or LesserOf the absoluteThreshold vs relativeThreshold. Required when both thresholds are provided; must be omitted when only one is. Available values: GreaterOf, LesserOf.",
+            "nullable": true
           },
           "offset": {
             "type": "string",
-            "description": "How the threshold should be applied to the reference side value. One of: Above, Below, Either. Defaults to Either. Available values: Above, Below, Either.",
+            "description": "How the threshold should be applied to the reference side value. Defaults to Either. Available values: Above, Below, Either.",
             "nullable": true
           },
           "toleranceType": {
@@ -237066,18 +237331,18 @@
           },
           "error": {
             "type": "string",
-            "description": "Present when the cashflow could not be valued, for example because of missing market data: the valuation error, matching the CashflowError diagnostic reported by the QueryCashFlows endpoint. In that case the amount is null rather than zero. Error may also be set when only the portfolio-currency FX lookup failed (see AmountInPortfolioCcy), in which case the base Amount remains populated and only AmountInPortfolioCcy and TradeToPortfolioRate are null.",
+            "description": "Present when the cashflow could not be valued, for example because of missing market data: the valuation error, matching the CashflowError diagnostic reported by the QueryCashFlows endpoint. In that case the amount is null rather than zero. Error may also be set when only the report-currency FX lookup failed (see AmountInReportCurrency), in which case the base Amount remains populated and only AmountInReportCurrency and TradeToReportCurrencyRate are null.",
             "nullable": true
           },
-          "amountInPortfolioCcy": {
+          "amountInReportCurrency": {
             "type": "number",
-            "description": "The signed amount of the cashflow (see Amount), converted into the portfolio's base currency. Not present when the FX rate used to convert into the portfolio currency could not be resolved; see Error.",
+            "description": "The signed amount of the cashflow (see Amount), converted into the request's report currency (see QueryBucketCashFlowDrillDownRequest.ReportCurrency). Not present when the FX rate used to convert into the report currency could not be resolved; see Error.",
             "format": "double",
             "nullable": true
           },
-          "tradeToPortfolioRate": {
+          "tradeToReportCurrencyRate": {
             "type": "number",
-            "description": "The FX rate used to convert the cashflow amount into the portfolio's base currency, resolved at the cashflow's transaction (trade) date, not its payment date. Not present when the rate could not be resolved; see Error.",
+            "description": "The FX rate used to convert the cashflow amount into the request's report currency, resolved at the cashflow's transaction (trade) date, not its payment date. Not present when the rate could not be resolved; see Error.",
             "format": "double",
             "nullable": true
           },
@@ -237966,7 +238231,7 @@
               },
               "isNonStandard": {
                 "type": "boolean",
-                "description": "By default IsNonStandard is false, and the contract follows the IMM convention: the roll and payment\r\nfrequencies must be 3M or 6M, and the start and maturity dates are rolled onto IMM dates\r\n(the 20th of March, June, September or December).\r\nIf IsNonStandard=true, the premium schedule uses the stated start and maturity dates and any payment\r\nfrequency is accepted. The payment dates roll back from the maturity, so a term that is not a whole\r\nnumber of payment periods has a short first period."
+                "description": "By default IsNonStandard is false, and the contract follows the IMM convention: the roll and payment\r\nfrequencies must be 3M or 6M, and the start and maturity dates are rolled onto IMM dates\r\n(the 20th of March, June, September or December).\r\nIf IsNonStandard=true, the premium schedule uses the stated start and maturity dates. The payment\r\nfrequency can be any whole number of days, weeks, months, quarters, half-years or years, for example\r\n1W, 1M or 4M. Term (T) and business-day (BD) frequencies are not accepted. The payment dates roll back\r\nfrom the maturity, so a term that is not a whole number of payment periods has a short first period."
               },
               "additionalPayments": {
                 "type": "array",
@@ -244273,7 +244538,7 @@
         "properties": {
           "optionalSide": {
             "type": "string",
-            "description": "Which side is allowed to have no value while still attempting to match. One of: Left, Right, Either. Defaults to Either. Available values: Left, Right, Either.",
+            "description": "Which side is allowed to have no value while still attempting to match. Defaults to Either. Available values: Left, Right, Either.",
             "nullable": true
           },
           "toleranceType": {
@@ -244302,7 +244567,7 @@
           "referenceSide": {
             "minLength": 1,
             "type": "string",
-            "description": "Reference side (source of truth). One of: Left, Right. Available values: Left, Right."
+            "description": "Reference side (source of truth). Available values: Left, Right."
           },
           "interval": {
             "minLength": 1,
@@ -244311,7 +244576,7 @@
           },
           "offset": {
             "type": "string",
-            "description": "How the interval should be applied to the reference side value. One of: Earlier, Later, Either. Defaults to Either. Available values: Earlier, Later, Either.",
+            "description": "How the interval should be applied to the reference side value. Defaults to Either. Available values: Earlier, Later, Either.",
             "nullable": true
           },
           "toleranceType": {
@@ -244412,7 +244677,7 @@
           },
           "referenceSide": {
             "type": "string",
-            "description": "Reference side (source of truth). One of: Left, Right. Available values: Left, Right, Either.",
+            "description": "Reference side (source of truth). Available values: Left, Right, Either.",
             "nullable": true
           },
           "toleranceType": {
@@ -244512,6 +244777,9 @@
           "eventInheritance": {
             "$ref": "#/components/schemas/EventInheritance"
           },
+          "stagedModifications": {
+            "$ref": "#/components/schemas/StagedModificationsInfo"
+          },
           "links": {
             "type": "array",
             "items": {
@@ -244522,6 +244790,81 @@
         },
         "additionalProperties": false,
         "description": "A corporate action source"
+      },
+      "CorporateActionSourceEntity": {
+        "required": [
+          "entityUniqueId",
+          "href",
+          "status"
+        ],
+        "type": "object",
+        "properties": {
+          "href": {
+            "type": "string",
+            "description": "The specific Uniform Resource Identifier (URI) for this resource at the requested effective and asAt datetime.",
+            "format": "uri"
+          },
+          "entityUniqueId": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The unique id of the entity."
+          },
+          "asAtVersionNumber": {
+            "type": "integer",
+            "description": "The integer version number for the entity (the entity was created at version 1)",
+            "format": "int32",
+            "nullable": true
+          },
+          "status": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The status of the entity at the current time. Available values: Prevailing, Deleted, DoesNotExist."
+          },
+          "asAtDeleted": {
+            "type": "string",
+            "description": "The asAt datetime at which the entity was deleted.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "userIdDeleted": {
+            "type": "string",
+            "description": "The unique id of the user who deleted the entity.",
+            "nullable": true
+          },
+          "requestIdDeleted": {
+            "type": "string",
+            "description": "The unique request id of the command that deleted the entity.",
+            "nullable": true
+          },
+          "effectiveAtCreated": {
+            "type": "string",
+            "description": "The EffectiveAt this Entity is created, if entity does not currently exist in EffectiveAt.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "prevailingCorporateActionSource": {
+            "$ref": "#/components/schemas/CorporateActionSource"
+          },
+          "deletedCorporateActionSource": {
+            "$ref": "#/components/schemas/CorporateActionSource"
+          },
+          "previewedStatus": {
+            "type": "string",
+            "description": "The status of the previewed entity. Available values: Prevailing, Deleted, DoesNotExist.",
+            "nullable": true
+          },
+          "previewedCorporateActionSource": {
+            "$ref": "#/components/schemas/CorporateActionSource"
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
       },
       "CorporateActionTransition": {
         "type": "object",
@@ -246293,7 +246636,7 @@
           "definitionType": {
             "minLength": 1,
             "type": "string",
-            "description": "What this definition reconciles, naming the kind of dataset that must be present on at least one side. One of: PortfolioContents, LusidEntity, RelationalData. Only PortfolioContents is currently supported. Available values: PortfolioContents, LusidEntity, RelationalData."
+            "description": "What this definition reconciles, naming the kind of dataset that must be present on at least one side. Only PortfolioContents is currently supported. Available values: PortfolioContents, LusidEntity, RelationalData."
           },
           "sideNames": {
             "$ref": "#/components/schemas/RecDefSideNames"
@@ -246336,6 +246679,14 @@
           },
           "datePolicy": {
             "$ref": "#/components/schemas/RecDatePolicy"
+          },
+          "properties": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/PerpetualProperty"
+            },
+            "description": "Properties in the RecDefinition domain. On update, a property with a null value is deleted and omitted properties are left unchanged. Filterable and sortable.",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -247710,7 +248061,7 @@
               },
               "isNonStandard": {
                 "type": "boolean",
-                "description": "By default IsNonStandard is false, and the contract follows the IMM convention: the roll and payment\r\nfrequencies must be 3M or 6M, and the start and maturity dates are rolled onto IMM dates\r\n(the 20th of March, June, September or December).\r\nIf IsNonStandard=true, the premium schedule uses the stated start and maturity dates and any payment\r\nfrequency is accepted. The payment dates roll back from the maturity, so a term that is not a whole\r\nnumber of payment periods has a short first period."
+                "description": "By default IsNonStandard is false, and the contract follows the IMM convention: the roll and payment\r\nfrequencies must be 3M or 6M, and the start and maturity dates are rolled onto IMM dates\r\n(the 20th of March, June, September or December).\r\nIf IsNonStandard=true, the premium schedule uses the stated start and maturity dates. The payment\r\nfrequency can be any whole number of days, weeks, months, quarters, half-years or years, for example\r\n1W, 1M or 4M. Term (T) and business-day (BD) frequencies are not accepted. The payment dates roll back\r\nfrom the maturity, so a term that is not a whole number of payment periods has a short first period."
               },
               "protectionDetailSpecification": {
                 "$ref": "#/components/schemas/CdsProtectionDetailSpecification"
@@ -262651,6 +263002,12 @@
                 },
                 "description": "Rates provided for the fx forward (price in FgnCcy per unit of DomCcy), expressed in pips"
               },
+              "pipMultiplier": {
+                "type": "number",
+                "description": "Optional. The scaling factor applied to the pip rates to convert them into a forward rate adjustment,\r\nso that forwardRate = spotRate + pipRate * pipMultiplier. Must be strictly positive when supplied.\r\nWhen omitted, the market convention for the currency pair is used:\r\n0.01 when the foreign (quote) currency is JPY, and 0.0001 (the four-decimal-place convention of the major pairs) otherwise.",
+                "format": "double",
+                "nullable": true
+              },
               "lineage": {
                 "maxLength": 1024,
                 "minLength": 0,
@@ -263090,6 +263447,12 @@
                   "format": "double"
                 },
                 "description": "Rates provided for the fx forward (price in FgnCcy per unit of DomCcy), expressed in pips"
+              },
+              "pipMultiplier": {
+                "type": "number",
+                "description": "Optional. The scaling factor applied to the pip rates to convert them into a forward rate adjustment,\r\nso that forwardRate = spotRate + pipRate * pipMultiplier. Must be strictly positive when supplied.\r\nWhen omitted, the market convention for the currency pair is used:\r\n0.01 when the foreign (quote) currency is JPY, and 0.0001 (the four-decimal-place convention of the major pairs) otherwise.",
+                "format": "double",
+                "nullable": true
               },
               "lineage": {
                 "maxLength": 1024,
@@ -291219,7 +291582,7 @@
           "type": {
             "minLength": 1,
             "type": "string",
-            "description": "The kind of dataset this side draws on. One of: PortfolioContents, LusidEntity, RelationalData. At most one side may be RelationalData. Available values: PortfolioContents, LusidEntity, RelationalData."
+            "description": "The kind of dataset this side draws on. At most one side may be RelationalData. Available values: PortfolioContents, LusidEntity, RelationalData."
           },
           "entityType": {
             "type": "string",
@@ -291332,14 +291695,16 @@
         "type": "object",
         "properties": {
           "left": {
-            "maxLength": 4,
-            "minLength": 0,
+            "maxLength": 5,
+            "minLength": 3,
+            "pattern": "^[a-zA-Z]*$",
             "type": "string",
             "description": "The currency used on the left side of the reconciliation."
           },
           "right": {
-            "maxLength": 4,
-            "minLength": 0,
+            "maxLength": 5,
+            "minLength": 3,
+            "pattern": "^[a-zA-Z]*$",
             "type": "string",
             "description": "The currency used on the right side of the reconciliation."
           }
@@ -291375,7 +291740,7 @@
           "definitionType": {
             "minLength": 1,
             "type": "string",
-            "description": "What this definition reconciles, naming the kind of dataset that must be present on at least one side. One of: PortfolioContents, LusidEntity, RelationalData. Only PortfolioContents is currently supported. Available values: PortfolioContents, LusidEntity, RelationalData."
+            "description": "What this definition reconciles, naming the kind of dataset that must be present on at least one side. Only PortfolioContents is currently supported. Available values: PortfolioContents, LusidEntity, RelationalData."
           },
           "sideNames": {
             "$ref": "#/components/schemas/RecDefSideNames"
@@ -291412,6 +291777,14 @@
           },
           "datePolicy": {
             "$ref": "#/components/schemas/RecDatePolicy"
+          },
+          "properties": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/PerpetualProperty"
+            },
+            "description": "Properties in the RecDefinition domain. On update, a property with a null value is deleted and omitted properties are left unchanged. Filterable and sortable.",
+            "nullable": true
           },
           "href": {
             "type": "string",
@@ -291508,7 +291881,7 @@
           "sourceType": {
             "minLength": 1,
             "type": "string",
-            "description": "The type of entity that this source refers to. One of: Portfolio, PortfolioGroup, Fund. Available values: Portfolio, PortfolioGroup, Fund."
+            "description": "The type of entity that this source refers to. Available values: Portfolio, PortfolioGroup, Fund."
           },
           "id": {
             "$ref": "#/components/schemas/ResourceId"
@@ -293345,7 +293718,7 @@
           "reviewRequirement": {
             "minLength": 1,
             "type": "string",
-            "description": "Whether this category's results need reviewing. One of: Required, NotRequired. Available values: Required, NotRequired."
+            "description": "Whether this category's results need reviewing. Available values: Required, NotRequired."
           },
           "overrideCondition": {
             "maxLength": 16384,
@@ -301011,7 +301384,7 @@
           "targetSide": {
             "minLength": 1,
             "type": "string",
-            "description": "The side the writeback changes, the other being the source of truth. One of: Left, Right. As the writeback changes LUSID, this side must draw on a native LUSID dataset rather than relational data. Available values: Left, Right."
+            "description": "The side the writeback changes, the other being the source of truth. As the writeback changes LUSID, this side must draw on a native LUSID dataset rather than relational data. Available values: Left, Right."
           }
         },
         "additionalProperties": false,
@@ -306290,7 +306663,7 @@
             }
           }
         ],
-        "description": "A swap in which one party makes payments based on leg rates (fixed or floating) while the other party makes payments based on the return of an underlying instrument.\r\nThe underlying instrument can be provided as an inline economic definition or as a reference instrument pointing to an already upserted instrument.\r\nA reference instrument in this case would consist of instrument scope, instrument id and instrument id type (ISIN, LUID etc.).\r\n            \r\nThis instrument has multiple legs, to see how legs are used in LUSID see [How does LUSID handle instrument legs?](https://support.lusid.com/docs/how-does-lusid-handle-instrument-legs).\r\n            \r\n| Leg Index | Leg Identifier | Description |\r\n| --------- | -------------- | ----------- |\r\n| 1 | AssetLeg | Cash flows relating to the returns generated by the underlying instrument. |\r\n| 2 | FundingLeg | The funding leg of the swap. |\r\n| 3 | AdditionalPayments | Cash flows relating to any additional payments (optional). |"
+        "description": "A swap in which one party makes payments based on leg rates (fixed or floating) while the other party makes payments based on the return of an underlying instrument.\r\nThe underlying instrument can be provided as an inline economic definition or as a MasteredInstrument pointing to an already upserted instrument by its identifiers.\r\nThe older ReferenceInstrument pointer (instrument scope, id and id type) remains accepted for existing definitions but is deprecated in favour of the MasteredInstrument.\r\n            \r\nThis instrument has multiple legs, to see how legs are used in LUSID see [How does LUSID handle instrument legs?](https://support.lusid.com/docs/how-does-lusid-handle-instrument-legs).\r\n            \r\n| Leg Index | Leg Identifier | Description |\r\n| --------- | -------------- | ----------- |\r\n| 1 | AssetLeg | Cash flows relating to the returns generated by the underlying instrument. |\r\n| 2 | FundingLeg | The funding leg of the swap. |\r\n| 3 | AdditionalPayments | Cash flows relating to any additional payments (optional). |"
       },
       "TotalReturnSwapCashFlowEvent": {
         "allOf": [
@@ -310773,7 +311146,7 @@
           "definitionType": {
             "minLength": 1,
             "type": "string",
-            "description": "What this definition reconciles, naming the kind of dataset that must be present on at least one side. One of: PortfolioContents, LusidEntity, RelationalData. Only PortfolioContents is currently supported. Available values: PortfolioContents, LusidEntity, RelationalData."
+            "description": "What this definition reconciles, naming the kind of dataset that must be present on at least one side. Only PortfolioContents is currently supported. Available values: PortfolioContents, LusidEntity, RelationalData."
           },
           "sideNames": {
             "$ref": "#/components/schemas/RecDefSideNames"
@@ -310816,6 +311189,14 @@
           },
           "datePolicy": {
             "$ref": "#/components/schemas/RecDatePolicy"
+          },
+          "properties": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/PerpetualProperty"
+            },
+            "description": "Properties in the RecDefinition domain. On update, a property with a null value is deleted and omitted properties are left unchanged. Filterable and sortable.",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -316254,7 +316635,7 @@
           "targetSide": {
             "minLength": 1,
             "type": "string",
-            "description": "The side the writeback changes, the other being the source of truth. One of: Left, Right. As the writeback changes LUSID, this side must draw on a native LUSID dataset rather than relational data. Available values: Left, Right."
+            "description": "The side the writeback changes, the other being the source of truth. As the writeback changes LUSID, this side must draw on a native LUSID dataset rather than relational data. Available values: Left, Right."
           }
         },
         "additionalProperties": false,
@@ -316270,12 +316651,12 @@
           "unitsDifference": {
             "minLength": 1,
             "type": "string",
-            "description": "How the origin units compare to the target units, on a literal comparison rather than on the result type. One of: Exact, ShortWithinTolerance, ShortBeyondTolerance, LongWithinTolerance. LongBeyondTolerance is reported on results but cannot be configured. Available values: Exact, ShortWithinTolerance, ShortBeyondTolerance, LongWithinTolerance, LongBeyondTolerance."
+            "description": "How the origin units compare to the target units, on a literal comparison rather than on the result type. LongBeyondTolerance is reported on results but cannot be configured. Available values: Exact, ShortWithinTolerance, ShortBeyondTolerance, LongWithinTolerance, LongBeyondTolerance."
           },
           "resultCardinality": {
             "minLength": 1,
             "type": "string",
-            "description": "The item cardinality of the result, read left to right. One of: OneToOne, OneToMany, ManyToOne. ManyToMany is not supported. Available values: OneToOne, OneToMany, ManyToOne, ManyToMany, OneToNone, ManyToNone, NoneToOne, NoneToMany, NoneToNone."
+            "description": "The item cardinality of the result, read left to right. ManyToMany is not supported. Available values: OneToOne, OneToMany, ManyToOne, ManyToMany, OneToNone, ManyToNone, NoneToOne, NoneToMany, NoneToNone."
           },
           "useTargetUnits": {
             "type": "boolean",

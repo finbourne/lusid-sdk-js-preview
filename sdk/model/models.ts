@@ -400,6 +400,7 @@ export * from './coreRuleValues';
 export * from './coreStringCrossTolerance';
 export * from './corporateAction';
 export * from './corporateActionSource';
+export * from './corporateActionSourceEntity';
 export * from './corporateActionTransition';
 export * from './corporateActionTransitionComponent';
 export * from './corporateActionTransitionComponentRequest';
@@ -2454,6 +2455,7 @@ import { CoreRuleValues } from './coreRuleValues';
 import { CoreStringCrossTolerance } from './coreStringCrossTolerance';
 import { CorporateAction } from './corporateAction';
 import { CorporateActionSource } from './corporateActionSource';
+import { CorporateActionSourceEntity } from './corporateActionSourceEntity';
 import { CorporateActionTransition } from './corporateActionTransition';
 import { CorporateActionTransitionComponent } from './corporateActionTransitionComponent';
 import { CorporateActionTransitionComponentRequest } from './corporateActionTransitionComponentRequest';
@@ -5298,6 +5300,7 @@ let typeMap: {[index: string]: any} = {
     "CoreStringCrossTolerance": CoreStringCrossTolerance,
     "CorporateAction": CorporateAction,
     "CorporateActionSource": CorporateActionSource,
+    "CorporateActionSourceEntity": CorporateActionSourceEntity,
     "CorporateActionTransition": CorporateActionTransition,
     "CorporateActionTransitionComponent": CorporateActionTransitionComponent,
     "CorporateActionTransitionComponentRequest": CorporateActionTransitionComponentRequest,
