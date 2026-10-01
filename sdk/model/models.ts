@@ -1945,6 +1945,7 @@ export * from './upsertPortfolioTransactionsResponse';
 export * from './upsertQuoteAccessMetadataRuleRequest';
 export * from './upsertQuoteRequest';
 export * from './upsertQuotesResponse';
+export * from './upsertRecDefinitionPropertiesResponse';
 export * from './upsertRecipeComposerRequest';
 export * from './upsertRecipeRequest';
 export * from './upsertReferencePortfolioConstituentPropertiesRequest';
@@ -2024,6 +2025,8 @@ export * from './weightedAllocationServiceRunRequest';
 export * from './weightedInstrument';
 export * from './weightedInstrumentInLineLookupIdentifiers';
 export * from './weightedInstruments';
+export * from './wholeLoanFacility';
+export * from './wholeLoanFacilityAllOf';
 export * from './withholdingTaxConfiguration';
 export * from './withholdingTaxDataset';
 export * from './withholdingTaxDatasetDefinitions';
@@ -4003,6 +4006,7 @@ import { UpsertPortfolioTransactionsResponse } from './upsertPortfolioTransactio
 import { UpsertQuoteAccessMetadataRuleRequest } from './upsertQuoteAccessMetadataRuleRequest';
 import { UpsertQuoteRequest } from './upsertQuoteRequest';
 import { UpsertQuotesResponse } from './upsertQuotesResponse';
+import { UpsertRecDefinitionPropertiesResponse } from './upsertRecDefinitionPropertiesResponse';
 import { UpsertRecipeComposerRequest } from './upsertRecipeComposerRequest';
 import { UpsertRecipeRequest } from './upsertRecipeRequest';
 import { UpsertReferencePortfolioConstituentPropertiesRequest } from './upsertReferencePortfolioConstituentPropertiesRequest';
@@ -4082,6 +4086,8 @@ import { WeightedAllocationServiceRunRequest } from './weightedAllocationService
 import { WeightedInstrument } from './weightedInstrument';
 import { WeightedInstrumentInLineLookupIdentifiers } from './weightedInstrumentInLineLookupIdentifiers';
 import { WeightedInstruments } from './weightedInstruments';
+import { WholeLoanFacility } from './wholeLoanFacility';
+import { WholeLoanFacilityAllOf } from './wholeLoanFacilityAllOf';
 import { WithholdingTaxConfiguration } from './withholdingTaxConfiguration';
 import { WithholdingTaxDataset } from './withholdingTaxDataset';
 import { WithholdingTaxDatasetDefinitions } from './withholdingTaxDatasetDefinitions';
@@ -4907,6 +4913,8 @@ let enumsMap: {[index: string]: any} = {
         "VolatilitySwapAllOf.InstrumentTypeEnum": VolatilitySwapAllOf.InstrumentTypeEnum,
         "WarrantsExerciseEvent.InstrumentEventTypeEnum": WarrantsExerciseEvent.InstrumentEventTypeEnum,
         "WarrantsExerciseEventAllOf.InstrumentEventTypeEnum": WarrantsExerciseEventAllOf.InstrumentEventTypeEnum,
+        "WholeLoanFacility.InstrumentTypeEnum": WholeLoanFacility.InstrumentTypeEnum,
+        "WholeLoanFacilityAllOf.InstrumentTypeEnum": WholeLoanFacilityAllOf.InstrumentTypeEnum,
         "WorkspaceVisibility": WorkspaceVisibility,
         "WorthlessEvent.InstrumentEventTypeEnum": WorthlessEvent.InstrumentEventTypeEnum,
         "WorthlessEventAllOf.InstrumentEventTypeEnum": WorthlessEventAllOf.InstrumentEventTypeEnum,
@@ -6794,6 +6802,7 @@ let typeMap: {[index: string]: any} = {
     "UpsertQuoteAccessMetadataRuleRequest": UpsertQuoteAccessMetadataRuleRequest,
     "UpsertQuoteRequest": UpsertQuoteRequest,
     "UpsertQuotesResponse": UpsertQuotesResponse,
+    "UpsertRecDefinitionPropertiesResponse": UpsertRecDefinitionPropertiesResponse,
     "UpsertRecipeComposerRequest": UpsertRecipeComposerRequest,
     "UpsertRecipeRequest": UpsertRecipeRequest,
     "UpsertReferencePortfolioConstituentPropertiesRequest": UpsertReferencePortfolioConstituentPropertiesRequest,
@@ -6870,6 +6879,8 @@ let typeMap: {[index: string]: any} = {
     "WeightedInstrument": WeightedInstrument,
     "WeightedInstrumentInLineLookupIdentifiers": WeightedInstrumentInLineLookupIdentifiers,
     "WeightedInstruments": WeightedInstruments,
+    "WholeLoanFacility": WholeLoanFacility,
+    "WholeLoanFacilityAllOf": WholeLoanFacilityAllOf,
     "WithholdingTaxConfiguration": WithholdingTaxConfiguration,
     "WithholdingTaxDataset": WithholdingTaxDataset,
     "WithholdingTaxDatasetDefinitions": WithholdingTaxDatasetDefinitions,
