@@ -9,7 +9,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "2.0.1681",
+    "version": "2.0.1682",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -211656,11 +211656,13 @@
                           "Instrument/default/Figi": "BBG000C6K6G9",
                           "Instrument/default/Isin": "GB00BH4HKS39"
                         },
+                        "status": "Orphan",
                         "isActive": true,
                         "version": {
                           "effectiveFrom": "2023-03-05T00:00:00.0000000+00:00",
                           "asAtDate": "2023-03-04T23:50:00.0000000+00:00"
-                        }
+                        },
+                        "problemCode": "TransactionNotFound"
                       }
                     }
                   ],
@@ -211815,11 +211817,13 @@
                           "Instrument/default/Figi": "BBG000C6K6G9",
                           "Instrument/default/Isin": "GB00BH4HKS39"
                         },
+                        "status": "Orphan",
                         "isActive": true,
                         "version": {
                           "effectiveFrom": "2023-03-05T00:00:00.0000000+00:00",
                           "asAtDate": "2023-03-04T23:50:00.0000000+00:00"
-                        }
+                        },
+                        "problemCode": "TransactionNotFound"
                       }
                     }
                   ],
@@ -211974,11 +211978,13 @@
                           "Instrument/default/Figi": "BBG000C6K6G9",
                           "Instrument/default/Isin": "GB00BH4HKS39"
                         },
+                        "status": "Orphan",
                         "isActive": true,
                         "version": {
                           "effectiveFrom": "2023-03-05T00:00:00.0000000+00:00",
                           "asAtDate": "2023-03-04T23:50:00.0000000+00:00"
-                        }
+                        },
+                        "problemCode": "TransactionNotFound"
                       }
                     }
                   ],
@@ -219514,6 +219520,141 @@
           }
         ],
         "x-fbn-apistatus": "Experimental"
+      },
+      "get": {
+        "tags": [
+          "Transfers"
+        ],
+        "summary": "[EXPERIMENTAL] ListTransfers: List transfers",
+        "description": "List transfers matching the specified criteria, decorated with the requested properties.",
+        "operationId": "ListTransfers",
+        "parameters": [
+          {
+            "name": "asAt",
+            "in": "query",
+            "description": "The asAt datetime at which to retrieve the transfers. Defaults to latest\r\n            version if not specified.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "x-nullable": true
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "The pagination token to use to continue listing transfers from a previous call.",
+            "schema": {
+              "maxLength": 500,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\+/]*={0,3}$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "When paginating, limit the number of returned results to this many.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-nullable": true
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Expression to filter the result set. NOTE: Filtering on nested transaction out/in fields is not supported.",
+            "schema": {
+              "maxLength": 16384,
+              "minLength": 0,
+              "pattern": "^[\\s\\S]*$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "sortBy",
+            "in": "query",
+            "description": "A list of field names to sort by, each suffixed by \" ASC\" or \" DESC\".",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "x-nullable": true
+          },
+          {
+            "name": "propertyKeys",
+            "in": "query",
+            "description": "The collection of `PropertyKey`s to decorate onto each transfer.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "description": "The key that uniquely identifies the property. It has the format {domain}/{scope}/{code}."
+              }
+            },
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A collection of transfers matching the specified criteria.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceListOfTransfer"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceListOfTransfer"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceListOfTransfer"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
       }
     },
     "/api/transfers/$get": {
@@ -219624,17 +219765,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetTransferResponse"
+                  "$ref": "#/components/schemas/Transfer"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetTransferResponse"
+                  "$ref": "#/components/schemas/Transfer"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetTransferResponse"
+                  "$ref": "#/components/schemas/Transfer"
                 }
               }
             }
@@ -248792,75 +248933,89 @@
           "instrumentIdentifierOut": {
             "maxLength": 64,
             "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "description": "The LUSID instrument id of the instrument moving out. A position in this instrument must exist in the outgoing portfolio on the outgoing trade date."
           },
           "instrumentIdentifierIn": {
             "maxLength": 64,
             "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "description": "The LUSID instrument id of the instrument moving in. Equal to InstrumentIdentifierOut for a transfer between portfolios."
           },
           "pricingMethod": {
             "minLength": 1,
             "type": "string",
-            "description": "Available values: AtCost, AtPrice."
+            "description": "How the legs are priced. 'AtCost' uses the cost per unit of the outgoing holding; 'AtPrice' uses the supplied TransactionPriceOut, which is then required. Available values: AtCost, AtPrice."
           },
           "taxLotStructure": {
             "type": "string",
-            "description": "Available values: Consolidate, Preserve.",
+            "description": "What happens to the tax lots of the outgoing position. Only 'Consolidate' is currently supported; 'Preserve' is rejected. Defaults to 'Consolidate'. Available values: Consolidate, Preserve.",
             "nullable": true
           },
           "unitsOut": {
             "type": "number",
+            "description": "The number of units to move out. Must be greater than zero.",
             "format": "double"
           },
           "unitsIn": {
             "type": "number",
+            "description": "The number of units to move in. Must be greater than zero.",
             "format": "double"
           },
           "amountOut": {
             "type": "number",
+            "description": "The total consideration of the outgoing leg. Recorded, not applied.",
             "format": "double",
             "nullable": true
           },
           "weightOut": {
             "type": "number",
+            "description": "The weighting factor of the outgoing leg. Recorded, not applied.",
             "format": "double",
             "nullable": true
           },
           "tradeDateOut": {
             "type": "string",
+            "description": "The trade date of the outgoing leg. Must not be later than TradeDateIn.",
             "format": "date-time"
           },
           "tradeDateIn": {
             "type": "string",
+            "description": "The trade date of the incoming leg.",
             "format": "date-time"
           },
           "settlementDateOut": {
             "type": "string",
+            "description": "The settlement date of the outgoing leg. Must not be later than SettlementDateIn.",
             "format": "date-time"
           },
           "settlementDateIn": {
             "type": "string",
+            "description": "The settlement date of the incoming leg. Defaults to SettlementDateOut when not supplied.",
             "format": "date-time",
             "nullable": true
           },
           "exchangeRateOut": {
             "type": "number",
+            "description": "The FX rate to apply to the outgoing leg.",
             "format": "double",
             "nullable": true
           },
           "exchangeRateIn": {
             "type": "number",
+            "description": "The FX rate to apply to the incoming leg.",
             "format": "double",
             "nullable": true
           },
           "transactionPriceOut": {
             "type": "number",
+            "description": "The unit price of the outgoing leg. Required when PricingMethod is 'AtPrice', and ignored when it is 'AtCost'.",
             "format": "double",
             "nullable": true
           },
           "transactionPriceIn": {
             "type": "number",
+            "description": "The unit price of the incoming leg. Ignored for a transfer, which carries the outgoing price across; defaults to the outgoing price for a switch.",
             "format": "double",
             "nullable": true
           },
@@ -248868,12 +249023,14 @@
             "maxLength": 64,
             "minLength": 1,
             "type": "string",
+            "description": "The counterparty identifier of the outgoing leg.",
             "nullable": true
           },
           "counterpartyIdIn": {
             "maxLength": 64,
             "minLength": 1,
             "type": "string",
+            "description": "The counterparty identifier of the incoming leg. Defaults to CounterpartyIdOut.",
             "nullable": true
           },
           "custodianAccountIdOut": {
@@ -248885,11 +249042,12 @@
           "source": {
             "maxLength": 64,
             "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "description": "The transaction source the generated legs are booked against."
           },
           "accountingMethod": {
             "type": "string",
-            "description": "Available values: AverageCost, FirstInFirstOut, LastInFirstOut, HighestCostFirst, LowestCostFirst, ProRateByUnits, ProRateByCost, ProRateByCostPortfolioCurrency, IntraDayThenFirstInFirstOut, LongTermHighestCostFirst, LongTermHighestCostFirstPortfolioCurrency, HighestCostFirstPortfolioCurrency, LowestCostFirstPortfolioCurrency, MaximumLossMinimumGain, MaximumLossMinimumGainPortfolioCurrency.",
+            "description": "An accounting method to record against the transfer. Available values: AverageCost, FirstInFirstOut, LastInFirstOut, HighestCostFirst, LowestCostFirst, ProRateByUnits, ProRateByCost, ProRateByCostPortfolioCurrency, IntraDayThenFirstInFirstOut, LongTermHighestCostFirst, LongTermHighestCostFirstPortfolioCurrency, HighestCostFirstPortfolioCurrency, LowestCostFirstPortfolioCurrency, MaximumLossMinimumGain, MaximumLossMinimumGainPortfolioCurrency.",
             "nullable": true
           },
           "propertiesOut": {
@@ -248897,6 +249055,7 @@
             "additionalProperties": {
               "$ref": "#/components/schemas/PerpetualProperty"
             },
+            "description": "Transaction Properties to set on the outgoing transaction leg, and on the incoming transaction leg when PropertiesIn is absent. Supplying an empty collection for PropertiesIn leaves the incoming leg with no properties.",
             "nullable": true
           },
           "propertiesIn": {
@@ -248904,6 +249063,7 @@
             "additionalProperties": {
               "$ref": "#/components/schemas/PerpetualProperty"
             },
+            "description": "Transaction Properties to set on the incoming transaction leg, replacing rather than adding to PropertiesOut.",
             "nullable": true
           },
           "properties": {
@@ -248911,6 +249071,7 @@
             "additionalProperties": {
               "$ref": "#/components/schemas/PerpetualProperty"
             },
+            "description": "Properties to set on the transfer itself, in the Transfer domain. These are separate from PropertiesOut and PropertiesIn, which are Transaction domain and land on the legs.",
             "nullable": true
           }
         },
@@ -248925,6 +249086,7 @@
           },
           "transferType": {
             "type": "string",
+            "description": "The derived type of the transfer: 'Transfer' when the position moves between portfolios, 'Switch' when one instrument is exchanged for another within a portfolio, and 'Twitch' when the position moves between portfolios and changes instrument at the same time.",
             "nullable": true
           },
           "portfolioIdOut": {
@@ -248935,10 +249097,12 @@
           },
           "transactionIdOut": {
             "type": "string",
+            "description": "The transaction id of the created outgoing leg.",
             "nullable": true
           },
           "transactionIdIn": {
             "type": "string",
+            "description": "The transaction id of the created incoming leg.",
             "nullable": true
           }
         },
@@ -265997,44 +266161,12 @@
               "type": "string",
               "description": "The key that uniquely identifies the property. It has the format {domain}/{scope}/{code}."
             },
+            "description": "A list of property keys from the Transfer domain to decorate onto the transfer. These must have the format {domain}/{scope}/{code}.",
             "nullable": true
           }
         },
         "additionalProperties": false,
         "description": "The transfer to read. Every part of its identity is required: a transfer is identified by its scope, its code\r\nand the two portfolios its in and out transaction are booked into."
-      },
-      "GetTransferResponse": {
-        "type": "object",
-        "properties": {
-          "transferId": {
-            "$ref": "#/components/schemas/ResourceId"
-          },
-          "transferType": {
-            "type": "string",
-            "nullable": true
-          },
-          "portfolioIdOut": {
-            "$ref": "#/components/schemas/ResourceId"
-          },
-          "portfolioIdIn": {
-            "$ref": "#/components/schemas/ResourceId"
-          },
-          "transactionOut": {
-            "$ref": "#/components/schemas/Transaction"
-          },
-          "transactionIn": {
-            "$ref": "#/components/schemas/Transaction"
-          },
-          "properties": {
-            "type": "object",
-            "additionalProperties": {
-              "$ref": "#/components/schemas/Property"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false,
-        "description": "A transfer and both of the transactions it booked."
       },
       "GetVirtualDocumentResponse": {
         "type": "object",
@@ -267761,6 +267893,12 @@
               "latticeStepsPerYear": {
                 "type": "integer",
                 "description": "The lattice time-step density as steps per year. When supplied, the lattice uses\r\nceil(horizon in years x this value) steps, raised if necessary so that one step is no longer\r\nthan the shortest gap between consecutive cashflows, so the fixed LatticeSteps is ignored and\r\nthe \"lattice coarser than coupon spacing\" refusal cannot fire. Must be at least 1 when\r\nsupplied. Absent, the fixed LatticeSteps count applies.",
+                "format": "int32",
+                "nullable": true
+              },
+              "maxLatticeNodes": {
+                "type": "integer",
+                "description": "A ceiling on the lattice size, counted as (steps + 1) x rate levels, that the pricer may\r\nbuild for one instrument. An instrument whose lattice would exceed it is declined by the\r\nmodel before any allocation, so the cost of a long-dated or finely-stepped row can be\r\nbounded. Must be at least 1 when supplied. Absent, no ceiling applies.",
                 "format": "int32",
                 "nullable": true
               },
@@ -299929,6 +300067,41 @@
         },
         "additionalProperties": false
       },
+      "ResourceListOfTransfer": {
+        "required": [
+          "values"
+        ],
+        "type": "object",
+        "properties": {
+          "values": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Transfer"
+            }
+          },
+          "href": {
+            "type": "string",
+            "format": "uri",
+            "nullable": true
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            },
+            "nullable": true
+          },
+          "nextPage": {
+            "type": "string",
+            "nullable": true
+          },
+          "previousPage": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "ResourceListOfValueType": {
         "required": [
           "values"
@@ -309688,6 +309861,11 @@
           },
           "version": {
             "$ref": "#/components/schemas/Version"
+          },
+          "problemCode": {
+            "type": "string",
+            "description": "Why the settlement instruction was not applied. Set only when the status is Invalid, Orphan or Rejected.",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -310277,6 +310455,57 @@
           }
         },
         "additionalProperties": false
+      },
+      "Transfer": {
+        "type": "object",
+        "properties": {
+          "transferId": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "transferType": {
+            "type": "string",
+            "description": "The derived type of the transfer: 'Transfer' when the position moves between portfolios, 'Switch' when one instrument is exchanged for another within a portfolio, and 'Twitch' when the position moves between portfolios and changes instrument at the same time.",
+            "nullable": true
+          },
+          "portfolioIdOut": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "portfolioIdIn": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "transactionOut": {
+            "$ref": "#/components/schemas/Transaction"
+          },
+          "transactionIn": {
+            "$ref": "#/components/schemas/Transaction"
+          },
+          "properties": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/Property"
+            },
+            "description": "The properties of the transfer, for the requested PropertyKeys.",
+            "nullable": true
+          },
+          "href": {
+            "type": "string",
+            "description": "The specifc Uniform Resource Identifier (URI) for this resource at the requested effective and asAt datetime.",
+            "format": "uri",
+            "nullable": true
+          },
+          "version": {
+            "$ref": "#/components/schemas/Version"
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "A transfer and both of the transactions it booked."
       },
       "TransferAgencyDates": {
         "type": "object",
@@ -317565,7 +317794,7 @@
             }
           }
         ],
-        "description": "Whole Loan Facility. A loan facility wholly funded by a single lender: it shares the contractual terms of a\r\nLoanFacility, but ownership is not shared pro-rata across investors. Like a LoanFacility, this is a lightweight\r\ninstrument; the state of the facility is carried by the holding rather than by the instrument itself."
+        "description": "Whole Loan Facility. A loan facility wholly funded by a single lender: it shares the contractual terms, schedules\r\nand instrument events of a LoanFacility, but ownership is not shared pro-rata across investors, and it is valued\r\nat par rather than from a price quote. Like a LoanFacility, this is a lightweight instrument which acts as a\r\nplaceholder for the state that is built from the instrument events, with its contracts modelled via FlexibleLoan\r\ninstruments in LUSID."
       },
       "WithholdingTaxConfiguration": {
         "required": [

@@ -798,7 +798,6 @@ export * from './getScenarioResponse';
 export * from './getStructuredResultDataResponse';
 export * from './getSubscriptionResponse';
 export * from './getTransferRequest';
-export * from './getTransferResponse';
 export * from './getVirtualDocumentResponse';
 export * from './groupBySelectorComplianceParameter';
 export * from './groupByStep';
@@ -1588,6 +1587,7 @@ export * from './resourceListOfTransaction';
 export * from './resourceListOfTransactionFeeType';
 export * from './resourceListOfTransactionSettlementInstruction';
 export * from './resourceListOfTransactionType';
+export * from './resourceListOfTransfer';
 export * from './resourceListOfValueType';
 export * from './resourceListOfVirtualTransactionOverrideRecord';
 export * from './resourceListWithPostBodiesOfSettlementActivityToSettlementActivityQuery';
@@ -1832,6 +1832,7 @@ export * from './transactionTypeMovement';
 export * from './transactionTypePropertyMapping';
 export * from './transactionTypeRequest';
 export * from './transactionsReconciliationsResponse';
+export * from './transfer';
 export * from './transferAgencyDates';
 export * from './transferAgencyExcludedOrder';
 export * from './transferAgencyOrderEstimateResult';
@@ -2859,7 +2860,6 @@ import { GetScenarioResponse } from './getScenarioResponse';
 import { GetStructuredResultDataResponse } from './getStructuredResultDataResponse';
 import { GetSubscriptionResponse } from './getSubscriptionResponse';
 import { GetTransferRequest } from './getTransferRequest';
-import { GetTransferResponse } from './getTransferResponse';
 import { GetVirtualDocumentResponse } from './getVirtualDocumentResponse';
 import { GroupBySelectorComplianceParameter } from './groupBySelectorComplianceParameter';
 import { GroupByStep } from './groupByStep';
@@ -3649,6 +3649,7 @@ import { ResourceListOfTransaction } from './resourceListOfTransaction';
 import { ResourceListOfTransactionFeeType } from './resourceListOfTransactionFeeType';
 import { ResourceListOfTransactionSettlementInstruction } from './resourceListOfTransactionSettlementInstruction';
 import { ResourceListOfTransactionType } from './resourceListOfTransactionType';
+import { ResourceListOfTransfer } from './resourceListOfTransfer';
 import { ResourceListOfValueType } from './resourceListOfValueType';
 import { ResourceListOfVirtualTransactionOverrideRecord } from './resourceListOfVirtualTransactionOverrideRecord';
 import { ResourceListWithPostBodiesOfSettlementActivityToSettlementActivityQuery } from './resourceListWithPostBodiesOfSettlementActivityToSettlementActivityQuery';
@@ -3893,6 +3894,7 @@ import { TransactionTypeMovement } from './transactionTypeMovement';
 import { TransactionTypePropertyMapping } from './transactionTypePropertyMapping';
 import { TransactionTypeRequest } from './transactionTypeRequest';
 import { TransactionsReconciliationsResponse } from './transactionsReconciliationsResponse';
+import { Transfer } from './transfer';
 import { TransferAgencyDates } from './transferAgencyDates';
 import { TransferAgencyExcludedOrder } from './transferAgencyExcludedOrder';
 import { TransferAgencyOrderEstimateResult } from './transferAgencyOrderEstimateResult';
@@ -5701,7 +5703,6 @@ let typeMap: {[index: string]: any} = {
     "GetStructuredResultDataResponse": GetStructuredResultDataResponse,
     "GetSubscriptionResponse": GetSubscriptionResponse,
     "GetTransferRequest": GetTransferRequest,
-    "GetTransferResponse": GetTransferResponse,
     "GetVirtualDocumentResponse": GetVirtualDocumentResponse,
     "GroupBySelectorComplianceParameter": GroupBySelectorComplianceParameter,
     "GroupByStep": GroupByStep,
@@ -6460,6 +6461,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfTransactionFeeType": ResourceListOfTransactionFeeType,
     "ResourceListOfTransactionSettlementInstruction": ResourceListOfTransactionSettlementInstruction,
     "ResourceListOfTransactionType": ResourceListOfTransactionType,
+    "ResourceListOfTransfer": ResourceListOfTransfer,
     "ResourceListOfValueType": ResourceListOfValueType,
     "ResourceListOfVirtualTransactionOverrideRecord": ResourceListOfVirtualTransactionOverrideRecord,
     "ResourceListWithPostBodiesOfSettlementActivityToSettlementActivityQuery": ResourceListWithPostBodiesOfSettlementActivityToSettlementActivityQuery,
@@ -6691,6 +6693,7 @@ let typeMap: {[index: string]: any} = {
     "TransactionTypePropertyMapping": TransactionTypePropertyMapping,
     "TransactionTypeRequest": TransactionTypeRequest,
     "TransactionsReconciliationsResponse": TransactionsReconciliationsResponse,
+    "Transfer": Transfer,
     "TransferAgencyDates": TransferAgencyDates,
     "TransferAgencyExcludedOrder": TransferAgencyExcludedOrder,
     "TransferAgencyOrderEstimateResult": TransferAgencyOrderEstimateResult,
