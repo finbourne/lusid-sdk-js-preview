@@ -1755,6 +1755,8 @@ export * from './swapPrincipalEvent';
 export * from './swapPrincipalEventAllOf';
 export * from './sweepBlocksRequest';
 export * from './sweepBlocksResponse';
+export * from './swingPricingDecision';
+export * from './swingPricingRule';
 export * from './targetTaxLot';
 export * from './targetTaxLotRequest';
 export * from './taxRule';
@@ -3817,6 +3819,8 @@ import { SwapPrincipalEvent } from './swapPrincipalEvent';
 import { SwapPrincipalEventAllOf } from './swapPrincipalEventAllOf';
 import { SweepBlocksRequest } from './sweepBlocksRequest';
 import { SweepBlocksResponse } from './sweepBlocksResponse';
+import { SwingPricingDecision } from './swingPricingDecision';
+import { SwingPricingRule } from './swingPricingRule';
 import { TargetTaxLot } from './targetTaxLot';
 import { TargetTaxLotRequest } from './targetTaxLotRequest';
 import { TaxRule } from './taxRule';
@@ -6621,6 +6625,8 @@ let typeMap: {[index: string]: any} = {
     "SwapPrincipalEventAllOf": SwapPrincipalEventAllOf,
     "SweepBlocksRequest": SweepBlocksRequest,
     "SweepBlocksResponse": SweepBlocksResponse,
+    "SwingPricingDecision": SwingPricingDecision,
+    "SwingPricingRule": SwingPricingRule,
     "TargetTaxLot": TargetTaxLot,
     "TargetTaxLotRequest": TargetTaxLotRequest,
     "TaxRule": TaxRule,
