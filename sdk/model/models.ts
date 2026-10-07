@@ -98,6 +98,7 @@ export * from './amount';
 export * from './annulQuotesResponse';
 export * from './annulSingleStructuredDataResponse';
 export * from './annulStructuredDataResponse';
+export * from './apiEndpoint';
 export * from './appendComplexMarketDataRequest';
 export * from './appendFxForwardCurveByQuoteReference';
 export * from './appendFxForwardCurveByQuoteReferenceAllOf';
@@ -1680,6 +1681,7 @@ export * from './sequenceDefinition';
 export * from './seriesDefinition';
 export * from './seriesDefinitionRequest';
 export * from './seriesIdentifierField';
+export * from './serviceApiEndpoints';
 export * from './setAmortisationRulesRequest';
 export * from './setLegalEntityIdentifiersRequest';
 export * from './setLegalEntityPropertiesRequest';
@@ -1755,6 +1757,8 @@ export * from './stringList';
 export * from './stringListComplianceParameter';
 export * from './structuredResultData';
 export * from './structuredResultDataId';
+export * from './structuredResultDataResult';
+export * from './structuredResultDataset';
 export * from './subHoldingKeyValueEquals';
 export * from './subHoldingKeyValueEqualsAllOf';
 export * from './submitRecResultSetReviewRequest';
@@ -2179,6 +2183,7 @@ import { Amount } from './amount';
 import { AnnulQuotesResponse } from './annulQuotesResponse';
 import { AnnulSingleStructuredDataResponse } from './annulSingleStructuredDataResponse';
 import { AnnulStructuredDataResponse } from './annulStructuredDataResponse';
+import { ApiEndpoint } from './apiEndpoint';
 import { AppendComplexMarketDataRequest } from './appendComplexMarketDataRequest';
 import { AppendFxForwardCurveByQuoteReference } from './appendFxForwardCurveByQuoteReference';
 import { AppendFxForwardCurveByQuoteReferenceAllOf } from './appendFxForwardCurveByQuoteReferenceAllOf';
@@ -3761,6 +3766,7 @@ import { SequenceDefinition } from './sequenceDefinition';
 import { SeriesDefinition } from './seriesDefinition';
 import { SeriesDefinitionRequest } from './seriesDefinitionRequest';
 import { SeriesIdentifierField } from './seriesIdentifierField';
+import { ServiceApiEndpoints } from './serviceApiEndpoints';
 import { SetAmortisationRulesRequest } from './setAmortisationRulesRequest';
 import { SetLegalEntityIdentifiersRequest } from './setLegalEntityIdentifiersRequest';
 import { SetLegalEntityPropertiesRequest } from './setLegalEntityPropertiesRequest';
@@ -3836,6 +3842,8 @@ import { StringList } from './stringList';
 import { StringListComplianceParameter } from './stringListComplianceParameter';
 import { StructuredResultData } from './structuredResultData';
 import { StructuredResultDataId } from './structuredResultDataId';
+import { StructuredResultDataResult } from './structuredResultDataResult';
+import { StructuredResultDataset } from './structuredResultDataset';
 import { SubHoldingKeyValueEquals } from './subHoldingKeyValueEquals';
 import { SubHoldingKeyValueEqualsAllOf } from './subHoldingKeyValueEqualsAllOf';
 import { SubmitRecResultSetReviewRequest } from './submitRecResultSetReviewRequest';
@@ -5062,6 +5070,7 @@ let typeMap: {[index: string]: any} = {
     "AnnulQuotesResponse": AnnulQuotesResponse,
     "AnnulSingleStructuredDataResponse": AnnulSingleStructuredDataResponse,
     "AnnulStructuredDataResponse": AnnulStructuredDataResponse,
+    "ApiEndpoint": ApiEndpoint,
     "AppendComplexMarketDataRequest": AppendComplexMarketDataRequest,
     "AppendFxForwardCurveByQuoteReference": AppendFxForwardCurveByQuoteReference,
     "AppendFxForwardCurveByQuoteReferenceAllOf": AppendFxForwardCurveByQuoteReferenceAllOf,
@@ -6591,6 +6600,7 @@ let typeMap: {[index: string]: any} = {
     "SeriesDefinition": SeriesDefinition,
     "SeriesDefinitionRequest": SeriesDefinitionRequest,
     "SeriesIdentifierField": SeriesIdentifierField,
+    "ServiceApiEndpoints": ServiceApiEndpoints,
     "SetAmortisationRulesRequest": SetAmortisationRulesRequest,
     "SetLegalEntityIdentifiersRequest": SetLegalEntityIdentifiersRequest,
     "SetLegalEntityPropertiesRequest": SetLegalEntityPropertiesRequest,
@@ -6663,6 +6673,8 @@ let typeMap: {[index: string]: any} = {
     "StringListComplianceParameter": StringListComplianceParameter,
     "StructuredResultData": StructuredResultData,
     "StructuredResultDataId": StructuredResultDataId,
+    "StructuredResultDataResult": StructuredResultDataResult,
+    "StructuredResultDataset": StructuredResultDataset,
     "SubHoldingKeyValueEquals": SubHoldingKeyValueEquals,
     "SubHoldingKeyValueEqualsAllOf": SubHoldingKeyValueEqualsAllOf,
     "SubmitRecResultSetReviewRequest": SubmitRecResultSetReviewRequest,

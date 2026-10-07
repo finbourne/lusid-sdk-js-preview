@@ -9,7 +9,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "2.0.1689",
+    "version": "2.0.1690",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -59011,6 +59011,15 @@
               "pattern": "^[a-zA-Z0-9\\-_]+$",
               "type": "string"
             }
+          },
+          {
+            "name": "effectiveAt",
+            "in": "query",
+            "description": "The effective datetime or cut label from which the patch applies. If not specified, the patch applies for all time.\r\n            Only DisplayName and Description can be patched with an effectiveAt, and the Fund is returned as at that datetime.\r\n            A value patched with an effectiveAt stays in force from that datetime. A later patch of the same field without an effectiveAt\r\n            changes it only before that datetime; to change it from that datetime, patch it again with the same effectiveAt.",
+            "schema": {
+              "type": "string",
+              "format": "dateorcutlabel"
+            }
           }
         ],
         "requestBody": {
@@ -106895,6 +106904,120 @@
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Stable"
+      }
+    },
+    "/api/metadata/endpoints": {
+      "get": {
+        "tags": [
+          "Application Metadata"
+        ],
+        "summary": "ListApiEndpoints: Get the API endpoints available",
+        "description": "Get the name of the application and the operation, HTTP method, path, status, summary and description of each of its API endpoints",
+        "operationId": "ListApiEndpoints",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceApiEndpoints"
+                },
+                "example": {
+                  "application": "lusid",
+                  "endpoints": [
+                    {
+                      "operation": "CreatePortfolio",
+                      "httpMethod": "POST",
+                      "path": "/api/api/transactionportfolios/{scope}",
+                      "status": "Stable",
+                      "summary": "Create portfolio",
+                      "description": "Create a transaction portfolio in a particular scope."
+                    },
+                    {
+                      "operation": "ListAccessControlledResources",
+                      "httpMethod": "GET",
+                      "path": "/api/api/metadata/access/resources",
+                      "status": "Stable",
+                      "summary": "Get resources available for access control",
+                      "description": "Get the comprehensive set of resources that are available for access control"
+                    }
+                  ],
+                  "href": "https://example.lusid.com/api/api/metadata/endpoints"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceApiEndpoints"
+                },
+                "example": {
+                  "application": "lusid",
+                  "endpoints": [
+                    {
+                      "operation": "CreatePortfolio",
+                      "httpMethod": "POST",
+                      "path": "/api/api/transactionportfolios/{scope}",
+                      "status": "Stable",
+                      "summary": "Create portfolio",
+                      "description": "Create a transaction portfolio in a particular scope."
+                    },
+                    {
+                      "operation": "ListAccessControlledResources",
+                      "httpMethod": "GET",
+                      "path": "/api/api/metadata/access/resources",
+                      "status": "Stable",
+                      "summary": "Get resources available for access control",
+                      "description": "Get the comprehensive set of resources that are available for access control"
+                    }
+                  ],
+                  "href": "https://example.lusid.com/api/api/metadata/endpoints"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceApiEndpoints"
+                },
+                "example": {
+                  "application": "lusid",
+                  "endpoints": [
+                    {
+                      "operation": "CreatePortfolio",
+                      "httpMethod": "POST",
+                      "path": "/api/api/transactionportfolios/{scope}",
+                      "status": "Stable",
+                      "summary": "Create portfolio",
+                      "description": "Create a transaction portfolio in a particular scope."
+                    },
+                    {
+                      "operation": "ListAccessControlledResources",
+                      "httpMethod": "GET",
+                      "path": "/api/api/metadata/access/resources",
+                      "status": "Stable",
+                      "summary": "Get resources available for access control",
+                      "description": "Get the comprehensive set of resources that are available for access control"
+                    }
+                  ],
+                  "href": "https://example.lusid.com/api/api/metadata/endpoints"
                 }
               }
             }
@@ -231645,6 +231768,40 @@
         "additionalProperties": false,
         "description": "The response to a request to annul (delete) a set of structured data from Lusid. This might have been for market data or some other structured entity."
       },
+      "ApiEndpoint": {
+        "required": [
+          "httpMethod",
+          "path"
+        ],
+        "type": "object",
+        "properties": {
+          "operation": {
+            "type": "string",
+            "nullable": true
+          },
+          "httpMethod": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "path": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "summary": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "AppendComplexMarketDataRequest": {
         "required": [
           "appendMarketData",
@@ -249464,6 +249621,18 @@
             },
             "description": "Properties to set on the transfer itself, in the Transfer domain. These are separate from PropertiesOut and PropertiesIn, which are Transaction domain and land on the legs.",
             "nullable": true
+          },
+          "transactionToPortfolioRateOut": {
+            "type": "number",
+            "description": "The rate from the outgoing leg's trade currency to the outgoing portfolio's base currency, applied whenever supplied.",
+            "format": "double",
+            "nullable": true
+          },
+          "transactionToPortfolioRateIn": {
+            "type": "number",
+            "description": "The rate from the incoming leg's trade currency to the incoming portfolio's base currency. Required when the two portfolios have different base currencies, and applied whenever supplied.",
+            "format": "double",
+            "nullable": true
           }
         },
         "additionalProperties": false,
@@ -251710,6 +251879,9 @@
           },
           "portfolioTransaction": {
             "$ref": "#/components/schemas/PortfolioTransactionResult"
+          },
+          "structuredResultData": {
+            "$ref": "#/components/schemas/StructuredResultDataResult"
           }
         },
         "additionalProperties": false,
@@ -271093,6 +271265,9 @@
             "type": "string",
             "description": "The group code that determines the processing order of instrument events with the same effective datetime. Available values: Tier1, Tier2, Tier3, Legacy.",
             "nullable": true
+          },
+          "stagedModifications": {
+            "$ref": "#/components/schemas/StagedModificationsInfo"
           }
         },
         "additionalProperties": false,
@@ -290683,7 +290858,7 @@
               },
               "subscriptionPrice": {
                 "type": "number",
-                "description": "The subscription price per new unit. Applies to both SECU and OVER subscriptions.\r\nMust be greater than zero.",
+                "description": "The subscription price per new unit. Applies to both SECU and OVER subscriptions.\r\nMust be greater than zero. For Bond and ComplexBond it is per unit of face, e.g. 0.97 for 97% of par.",
                 "format": "double"
               },
               "subscriptionCurrency": {
@@ -302870,6 +303045,9 @@
           },
           "portfolioTransactionDataset": {
             "$ref": "#/components/schemas/PortfolioTransactionDataset"
+          },
+          "structuredResultDataset": {
+            "$ref": "#/components/schemas/StructuredResultDataset"
           }
         },
         "additionalProperties": false,
@@ -303968,6 +304146,39 @@
         },
         "additionalProperties": false,
         "description": "A series identifier field, carrying the same fields as the CreateSeriesIdentifierField that asks for one, so\r\nthat a caller reads back what they wrote. The field category is not among them, because every field of this\r\nshape is a series identifier; nor is a required flag, which is not the caller's to set."
+      },
+      "ServiceApiEndpoints": {
+        "required": [
+          "application",
+          "endpoints"
+        ],
+        "type": "object",
+        "properties": {
+          "application": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "endpoints": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEndpoint"
+            }
+          },
+          "href": {
+            "type": "string",
+            "description": "The specific Uniform Resource Identifier (URI) for this resource at the requested effective and asAt datetime.",
+            "format": "uri",
+            "nullable": true
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
       },
       "SetAmortisationRulesRequest": {
         "required": [
@@ -307170,6 +307381,127 @@
         },
         "additionalProperties": false,
         "description": "An identifier that uniquely describes an item of structured result data such as the risk to an interest curve or a set of yields or analytics on an index."
+      },
+      "StructuredResultDataResult": {
+        "type": "object",
+        "properties": {
+          "entityType": {
+            "type": "string",
+            "description": "The type of the entity, e.g. \"SrsRow\".",
+            "nullable": true
+          },
+          "asAt": {
+            "type": "string",
+            "description": "The as-at timestamp the document was read at",
+            "format": "date-time"
+          },
+          "effectiveAt": {
+            "type": "string",
+            "description": "The effective-at timestamp the document was read at",
+            "format": "date-time"
+          },
+          "documentEffectiveAt": {
+            "type": "string",
+            "description": "The effective date of the upload the row was read from: the latest upload at or before effectiveAt",
+            "format": "date-time"
+          },
+          "scope": {
+            "type": "string",
+            "description": "The scope of the document",
+            "nullable": true
+          },
+          "code": {
+            "type": "string",
+            "description": "The code of the document",
+            "nullable": true
+          },
+          "source": {
+            "type": "string",
+            "description": "The platform or vendor that provided the document",
+            "nullable": true
+          },
+          "resultType": {
+            "type": "string",
+            "description": "The document's result type",
+            "nullable": true
+          },
+          "rowIdentifiers": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string",
+              "nullable": true
+            },
+            "description": "The row's identifier columns, keyed by address key. Populated when entityType is \"SrsRow\".",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents structured result data document and row details for a data quality check result."
+      },
+      "StructuredResultDataset": {
+        "type": "object",
+        "properties": {
+          "effectiveAt": {
+            "type": "string",
+            "description": "The effectiveAt date of the document's rows to check. Required.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "asAt": {
+            "type": "string",
+            "description": "The asAt date to fetch the data. Nullable. Defaults to latest.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "scope": {
+            "maxLength": 256,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The scope of the document. Required.",
+            "nullable": true
+          },
+          "code": {
+            "maxLength": 256,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The code of the document. Required.",
+            "nullable": true
+          },
+          "source": {
+            "maxLength": 256,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The platform or vendor that provided the document, e.g. \"Client\". Required.",
+            "nullable": true
+          },
+          "resultType": {
+            "maxLength": 256,
+            "minLength": 0,
+            "type": "string",
+            "description": "The document's result type, e.g. \"UnitResult/Custom\". Required.",
+            "nullable": true
+          },
+          "rowSelectorAttribute": {
+            "maxLength": 16384,
+            "minLength": 0,
+            "pattern": "^[\\s\\S]*$",
+            "type": "string",
+            "description": "A row field to narrow down the rows checked, e.g. rowId['Instrument/default/LusidInstrumentId'] or\r\nrowData['Valuation/PV'].Units. Cannot be provided without rowSelectorValue, and vice versa.",
+            "nullable": true
+          },
+          "rowSelectorValue": {
+            "maxLength": 1024,
+            "minLength": 0,
+            "type": "string",
+            "description": "The value of the above row field used to narrow down the rows. Cannot be provided without\r\nrowSelectorAttribute, and vice versa.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Contains the run-time parameters that are appropriate for check definitions\r\nwith datasetSchema.type = \"StructuredResultData\". Names one structured result data document."
       },
       "SubHoldingKeyValueEquals": {
         "allOf": [
@@ -315175,7 +315507,7 @@
             "additionalProperties": {
               "$ref": "#/components/schemas/InstrumentEventHolder"
             },
-            "description": "The corporate actions which have been successfully updated or inserted.",
+            "description": "The instrument events which have been successfully updated or inserted.",
             "nullable": true
           },
           "failed": {
@@ -315183,7 +315515,15 @@
             "additionalProperties": {
               "$ref": "#/components/schemas/ErrorDetail"
             },
-            "description": "The corporate actions that could not be updated or inserted along with a reason for their failure.",
+            "description": "The instrument events that could not be updated or inserted along with a reason for their failure.",
+            "nullable": true
+          },
+          "staged": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/InstrumentEventHolder"
+            },
+            "description": "The instrument events that have been staged pending approval.",
             "nullable": true
           },
           "links": {
