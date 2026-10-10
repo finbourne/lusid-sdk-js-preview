@@ -521,6 +521,7 @@ export * from './dateTimeComplianceParameterAllOf';
 export * from './dateTimeListComplianceParameter';
 export * from './dayMonth';
 export * from './dayOfWeek';
+export * from './dealingFlowSummary';
 export * from './decimalComplianceParameter';
 export * from './decimalComplianceParameterAllOf';
 export * from './decimalList';
@@ -562,6 +563,7 @@ export * from './dialectId';
 export * from './dialectSchema';
 export * from './diaryEntry';
 export * from './diaryEntryRequest';
+export * from './directionSpreads';
 export * from './discountFactorCurveData';
 export * from './discountFactorCurveDataAllOf';
 export * from './discountingDependency';
@@ -576,6 +578,8 @@ export * from './drawdownEvent';
 export * from './drawdownEventAllOf';
 export * from './drawingEvent';
 export * from './drawingEventAllOf';
+export * from './dualPriceDealing';
+export * from './dualPriceDerivation';
 export * from './dutchAuctionEvent';
 export * from './dutchAuctionEventAllOf';
 export * from './earlyCloseOutEvent';
@@ -1332,6 +1336,12 @@ export * from './priceShiftDefinition';
 export * from './priceShiftDefinitionAllOf';
 export * from './priceShiftMode';
 export * from './pricingContext';
+export * from './pricingMethodology';
+export * from './pricingMethodologyAudit';
+export * from './pricingMethodologyEngineProposal';
+export * from './pricingMethodologyOverride';
+export * from './pricingMethodologyOverrideRequest';
+export * from './pricingMethodologyResult';
 export * from './pricingModel';
 export * from './pricingOptions';
 export * from './primarySchedule';
@@ -1513,6 +1523,7 @@ export * from './repoCashFlowEvent';
 export * from './repoCashFlowEventAllOf';
 export * from './repoPartialClosureEvent';
 export * from './repoPartialClosureEventAllOf';
+export * from './reportingPrice';
 export * from './repurchaseOfferEvent';
 export * from './repurchaseOfferEventAllOf';
 export * from './requestedChanges';
@@ -1726,6 +1737,7 @@ export * from './simpleInstrumentAllOf';
 export * from './simpleModelOptions';
 export * from './simpleModelOptionsAllOf';
 export * from './simpleRoundingConvention';
+export * from './singlePriceDealing';
 export * from './singleValuationPointQueryParameters';
 export * from './sortOrder';
 export * from './specificHoldingPricingInfo';
@@ -1773,8 +1785,16 @@ export * from './swapPrincipalEvent';
 export * from './swapPrincipalEventAllOf';
 export * from './sweepBlocksRequest';
 export * from './sweepBlocksResponse';
+export * from './swingBaseline';
+export * from './swingPolicy';
 export * from './swingPricingDecision';
 export * from './swingPricingRule';
+export * from './swingSpreadApplied';
+export * from './swingSpreadTier';
+export * from './swingSpreadTierBounds';
+export * from './swingSpreads';
+export * from './swingTrigger';
+export * from './swingTriggerEvaluation';
 export * from './targetTaxLot';
 export * from './targetTaxLotRequest';
 export * from './taxRule';
@@ -1859,6 +1879,7 @@ export * from './transferAgencyOrderEstimateResult';
 export * from './transferAgencyOrderResult';
 export * from './transferAgencyOrderToEstimate';
 export * from './transferAgencyOrdersResponse';
+export * from './transferAgencyTransactionFromOrderResult';
 export * from './transitionEvent';
 export * from './transitionEventAllOf';
 export * from './transitionRecInstanceRequest';
@@ -1984,6 +2005,8 @@ export * from './upsertStructuredResultDataRequest';
 export * from './upsertSubscriptionRequest';
 export * from './upsertTransactionPropertiesResponse';
 export * from './upsertTransferAgencyOrderRequest';
+export * from './upsertTransferAgencyTransactionFromOrderRequest';
+export * from './upsertTransferAgencyTransactionsFromOrdersResponse';
 export * from './upsertTranslationScriptRequest';
 export * from './upsertValuationPointRequest';
 export * from './upsertVirtualTransactionOverrideResponse';
@@ -2606,6 +2629,7 @@ import { DateTimeComplianceParameterAllOf } from './dateTimeComplianceParameterA
 import { DateTimeListComplianceParameter } from './dateTimeListComplianceParameter';
 import { DayMonth } from './dayMonth';
 import { DayOfWeek } from './dayOfWeek';
+import { DealingFlowSummary } from './dealingFlowSummary';
 import { DecimalComplianceParameter } from './decimalComplianceParameter';
 import { DecimalComplianceParameterAllOf } from './decimalComplianceParameterAllOf';
 import { DecimalList } from './decimalList';
@@ -2647,6 +2671,7 @@ import { DialectId } from './dialectId';
 import { DialectSchema } from './dialectSchema';
 import { DiaryEntry } from './diaryEntry';
 import { DiaryEntryRequest } from './diaryEntryRequest';
+import { DirectionSpreads } from './directionSpreads';
 import { DiscountFactorCurveData } from './discountFactorCurveData';
 import { DiscountFactorCurveDataAllOf } from './discountFactorCurveDataAllOf';
 import { DiscountingDependency } from './discountingDependency';
@@ -2661,6 +2686,8 @@ import { DrawdownEvent } from './drawdownEvent';
 import { DrawdownEventAllOf } from './drawdownEventAllOf';
 import { DrawingEvent } from './drawingEvent';
 import { DrawingEventAllOf } from './drawingEventAllOf';
+import { DualPriceDealing } from './dualPriceDealing';
+import { DualPriceDerivation } from './dualPriceDerivation';
 import { DutchAuctionEvent } from './dutchAuctionEvent';
 import { DutchAuctionEventAllOf } from './dutchAuctionEventAllOf';
 import { EarlyCloseOutEvent } from './earlyCloseOutEvent';
@@ -3417,6 +3444,12 @@ import { PriceShiftDefinition } from './priceShiftDefinition';
 import { PriceShiftDefinitionAllOf } from './priceShiftDefinitionAllOf';
 import { PriceShiftMode } from './priceShiftMode';
 import { PricingContext } from './pricingContext';
+import { PricingMethodology } from './pricingMethodology';
+import { PricingMethodologyAudit } from './pricingMethodologyAudit';
+import { PricingMethodologyEngineProposal } from './pricingMethodologyEngineProposal';
+import { PricingMethodologyOverride } from './pricingMethodologyOverride';
+import { PricingMethodologyOverrideRequest } from './pricingMethodologyOverrideRequest';
+import { PricingMethodologyResult } from './pricingMethodologyResult';
 import { PricingModel } from './pricingModel';
 import { PricingOptions } from './pricingOptions';
 import { PrimarySchedule } from './primarySchedule';
@@ -3598,6 +3631,7 @@ import { RepoCashFlowEvent } from './repoCashFlowEvent';
 import { RepoCashFlowEventAllOf } from './repoCashFlowEventAllOf';
 import { RepoPartialClosureEvent } from './repoPartialClosureEvent';
 import { RepoPartialClosureEventAllOf } from './repoPartialClosureEventAllOf';
+import { ReportingPrice } from './reportingPrice';
 import { RepurchaseOfferEvent } from './repurchaseOfferEvent';
 import { RepurchaseOfferEventAllOf } from './repurchaseOfferEventAllOf';
 import { RequestedChanges } from './requestedChanges';
@@ -3811,6 +3845,7 @@ import { SimpleInstrumentAllOf } from './simpleInstrumentAllOf';
 import { SimpleModelOptions } from './simpleModelOptions';
 import { SimpleModelOptionsAllOf } from './simpleModelOptionsAllOf';
 import { SimpleRoundingConvention } from './simpleRoundingConvention';
+import { SinglePriceDealing } from './singlePriceDealing';
 import { SingleValuationPointQueryParameters } from './singleValuationPointQueryParameters';
 import { SortOrder } from './sortOrder';
 import { SpecificHoldingPricingInfo } from './specificHoldingPricingInfo';
@@ -3858,8 +3893,16 @@ import { SwapPrincipalEvent } from './swapPrincipalEvent';
 import { SwapPrincipalEventAllOf } from './swapPrincipalEventAllOf';
 import { SweepBlocksRequest } from './sweepBlocksRequest';
 import { SweepBlocksResponse } from './sweepBlocksResponse';
+import { SwingBaseline } from './swingBaseline';
+import { SwingPolicy } from './swingPolicy';
 import { SwingPricingDecision } from './swingPricingDecision';
 import { SwingPricingRule } from './swingPricingRule';
+import { SwingSpreadApplied } from './swingSpreadApplied';
+import { SwingSpreadTier } from './swingSpreadTier';
+import { SwingSpreadTierBounds } from './swingSpreadTierBounds';
+import { SwingSpreads } from './swingSpreads';
+import { SwingTrigger } from './swingTrigger';
+import { SwingTriggerEvaluation } from './swingTriggerEvaluation';
 import { TargetTaxLot } from './targetTaxLot';
 import { TargetTaxLotRequest } from './targetTaxLotRequest';
 import { TaxRule } from './taxRule';
@@ -3944,6 +3987,7 @@ import { TransferAgencyOrderEstimateResult } from './transferAgencyOrderEstimate
 import { TransferAgencyOrderResult } from './transferAgencyOrderResult';
 import { TransferAgencyOrderToEstimate } from './transferAgencyOrderToEstimate';
 import { TransferAgencyOrdersResponse } from './transferAgencyOrdersResponse';
+import { TransferAgencyTransactionFromOrderResult } from './transferAgencyTransactionFromOrderResult';
 import { TransitionEvent } from './transitionEvent';
 import { TransitionEventAllOf } from './transitionEventAllOf';
 import { TransitionRecInstanceRequest } from './transitionRecInstanceRequest';
@@ -4069,6 +4113,8 @@ import { UpsertStructuredResultDataRequest } from './upsertStructuredResultDataR
 import { UpsertSubscriptionRequest } from './upsertSubscriptionRequest';
 import { UpsertTransactionPropertiesResponse } from './upsertTransactionPropertiesResponse';
 import { UpsertTransferAgencyOrderRequest } from './upsertTransferAgencyOrderRequest';
+import { UpsertTransferAgencyTransactionFromOrderRequest } from './upsertTransferAgencyTransactionFromOrderRequest';
+import { UpsertTransferAgencyTransactionsFromOrdersResponse } from './upsertTransferAgencyTransactionsFromOrdersResponse';
 import { UpsertTranslationScriptRequest } from './upsertTranslationScriptRequest';
 import { UpsertValuationPointRequest } from './upsertValuationPointRequest';
 import { UpsertVirtualTransactionOverrideResponse } from './upsertVirtualTransactionOverrideResponse';
@@ -5482,6 +5528,7 @@ let typeMap: {[index: string]: any} = {
     "DateTimeComplianceParameterAllOf": DateTimeComplianceParameterAllOf,
     "DateTimeListComplianceParameter": DateTimeListComplianceParameter,
     "DayMonth": DayMonth,
+    "DealingFlowSummary": DealingFlowSummary,
     "DecimalComplianceParameter": DecimalComplianceParameter,
     "DecimalComplianceParameterAllOf": DecimalComplianceParameterAllOf,
     "DecimalList": DecimalList,
@@ -5522,6 +5569,7 @@ let typeMap: {[index: string]: any} = {
     "DialectSchema": DialectSchema,
     "DiaryEntry": DiaryEntry,
     "DiaryEntryRequest": DiaryEntryRequest,
+    "DirectionSpreads": DirectionSpreads,
     "DiscountFactorCurveData": DiscountFactorCurveData,
     "DiscountFactorCurveDataAllOf": DiscountFactorCurveDataAllOf,
     "DiscountingDependency": DiscountingDependency,
@@ -5535,6 +5583,8 @@ let typeMap: {[index: string]: any} = {
     "DrawdownEventAllOf": DrawdownEventAllOf,
     "DrawingEvent": DrawingEvent,
     "DrawingEventAllOf": DrawingEventAllOf,
+    "DualPriceDealing": DualPriceDealing,
+    "DualPriceDerivation": DualPriceDerivation,
     "DutchAuctionEvent": DutchAuctionEvent,
     "DutchAuctionEventAllOf": DutchAuctionEventAllOf,
     "EarlyCloseOutEvent": EarlyCloseOutEvent,
@@ -6268,6 +6318,12 @@ let typeMap: {[index: string]: any} = {
     "PriceShiftDefinition": PriceShiftDefinition,
     "PriceShiftDefinitionAllOf": PriceShiftDefinitionAllOf,
     "PricingContext": PricingContext,
+    "PricingMethodology": PricingMethodology,
+    "PricingMethodologyAudit": PricingMethodologyAudit,
+    "PricingMethodologyEngineProposal": PricingMethodologyEngineProposal,
+    "PricingMethodologyOverride": PricingMethodologyOverride,
+    "PricingMethodologyOverrideRequest": PricingMethodologyOverrideRequest,
+    "PricingMethodologyResult": PricingMethodologyResult,
     "PricingOptions": PricingOptions,
     "PrimarySchedule": PrimarySchedule,
     "PriorityIssueEvent": PriorityIssueEvent,
@@ -6437,6 +6493,7 @@ let typeMap: {[index: string]: any} = {
     "RepoCashFlowEventAllOf": RepoCashFlowEventAllOf,
     "RepoPartialClosureEvent": RepoPartialClosureEvent,
     "RepoPartialClosureEventAllOf": RepoPartialClosureEventAllOf,
+    "ReportingPrice": ReportingPrice,
     "RepurchaseOfferEvent": RepurchaseOfferEvent,
     "RepurchaseOfferEventAllOf": RepurchaseOfferEventAllOf,
     "RequestedChanges": RequestedChanges,
@@ -6644,6 +6701,7 @@ let typeMap: {[index: string]: any} = {
     "SimpleModelOptions": SimpleModelOptions,
     "SimpleModelOptionsAllOf": SimpleModelOptionsAllOf,
     "SimpleRoundingConvention": SimpleRoundingConvention,
+    "SinglePriceDealing": SinglePriceDealing,
     "SingleValuationPointQueryParameters": SingleValuationPointQueryParameters,
     "SpecificHoldingPricingInfo": SpecificHoldingPricingInfo,
     "SpinOffEvent": SpinOffEvent,
@@ -6689,8 +6747,16 @@ let typeMap: {[index: string]: any} = {
     "SwapPrincipalEventAllOf": SwapPrincipalEventAllOf,
     "SweepBlocksRequest": SweepBlocksRequest,
     "SweepBlocksResponse": SweepBlocksResponse,
+    "SwingBaseline": SwingBaseline,
+    "SwingPolicy": SwingPolicy,
     "SwingPricingDecision": SwingPricingDecision,
     "SwingPricingRule": SwingPricingRule,
+    "SwingSpreadApplied": SwingSpreadApplied,
+    "SwingSpreadTier": SwingSpreadTier,
+    "SwingSpreadTierBounds": SwingSpreadTierBounds,
+    "SwingSpreads": SwingSpreads,
+    "SwingTrigger": SwingTrigger,
+    "SwingTriggerEvaluation": SwingTriggerEvaluation,
     "TargetTaxLot": TargetTaxLot,
     "TargetTaxLotRequest": TargetTaxLotRequest,
     "TaxRule": TaxRule,
@@ -6770,6 +6836,7 @@ let typeMap: {[index: string]: any} = {
     "TransferAgencyOrderResult": TransferAgencyOrderResult,
     "TransferAgencyOrderToEstimate": TransferAgencyOrderToEstimate,
     "TransferAgencyOrdersResponse": TransferAgencyOrdersResponse,
+    "TransferAgencyTransactionFromOrderResult": TransferAgencyTransactionFromOrderResult,
     "TransitionEvent": TransitionEvent,
     "TransitionEventAllOf": TransitionEventAllOf,
     "TransitionRecInstanceRequest": TransitionRecInstanceRequest,
@@ -6893,6 +6960,8 @@ let typeMap: {[index: string]: any} = {
     "UpsertSubscriptionRequest": UpsertSubscriptionRequest,
     "UpsertTransactionPropertiesResponse": UpsertTransactionPropertiesResponse,
     "UpsertTransferAgencyOrderRequest": UpsertTransferAgencyOrderRequest,
+    "UpsertTransferAgencyTransactionFromOrderRequest": UpsertTransferAgencyTransactionFromOrderRequest,
+    "UpsertTransferAgencyTransactionsFromOrdersResponse": UpsertTransferAgencyTransactionsFromOrdersResponse,
     "UpsertTranslationScriptRequest": UpsertTranslationScriptRequest,
     "UpsertValuationPointRequest": UpsertValuationPointRequest,
     "UpsertVirtualTransactionOverrideResponse": UpsertVirtualTransactionOverrideResponse,
