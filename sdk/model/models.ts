@@ -67,9 +67,28 @@ export * from './aggregationType';
 export * from './alias';
 export * from './allocation';
 export * from './allocationEvent';
+export * from './allocationEventBasisDiagnostics';
+export * from './allocationEventBasisWarning';
 export * from './allocationEventBookRequest';
+export * from './allocationEventBookingError';
+export * from './allocationEventBookingWarning';
+export * from './allocationEventComponent';
+export * from './allocationEventDealFunding';
+export * from './allocationEventEqualisation';
+export * from './allocationEventEqualisationFeeCatchUp';
+export * from './allocationEventEqualisationMark';
 export * from './allocationEventReallocateRequest';
+export * from './allocationEventReceipt';
+export * from './allocationEventReceiptRequest';
+export * from './allocationEventRefund';
 export * from './allocationEventRequest';
+export * from './allocationEventReversal';
+export * from './allocationEventReverseRequest';
+export * from './allocationEventRoundingResidual';
+export * from './allocationEventTransfer';
+export * from './allocationEventTransferConsideration';
+export * from './allocationEventUnbookRequest';
+export * from './allocationEventUseOfProceeds';
 export * from './allocationGroup';
 export * from './allocationGroupClass';
 export * from './allocationGroupClassDefinition';
@@ -81,10 +100,18 @@ export * from './allocationMapBasisValue';
 export * from './allocationMapEventBasis';
 export * from './allocationMapException';
 export * from './allocationMapFixedFactor';
+export * from './allocationMapIlpaTransactionType';
 export * from './allocationMapParticipants';
 export * from './allocationMapRequest';
 export * from './allocationMapResolution';
 export * from './allocationMapResolveRequest';
+export * from './allocationPostingCounts';
+export * from './allocationPostingFundLine';
+export * from './allocationPostingLpLine';
+export * from './allocationPostingPlan';
+export * from './allocationPostingRollUp';
+export * from './allocationReceivable';
+export * from './allocationReceivablesAgeing';
 export * from './allocationRequest';
 export * from './allocationServiceRunResponse';
 export * from './allocationSetRequest';
@@ -232,16 +259,22 @@ export * from './cancelledOrderResult';
 export * from './cancelledPlacementResult';
 export * from './capFloor';
 export * from './capFloorAllOf';
+export * from './capabilityOverride';
 export * from './capitalCallEvent';
 export * from './capitalCallEventAllOf';
+export * from './capitalCallReceiptEvent';
+export * from './capitalCallReceiptEventAllOf';
 export * from './capitalDistributionEvent';
 export * from './capitalDistributionEventAllOf';
 export * from './capitalGainsDistributionEvent';
 export * from './capitalGainsDistributionEventAllOf';
 export * from './capitalInterest';
 export * from './capitalInterestAllOf';
+export * from './capitalInterestTransferEvent';
+export * from './capitalInterestTransferEventAllOf';
 export * from './capletFloorletCashFlowEvent';
 export * from './capletFloorletCashFlowEventAllOf';
+export * from './carryParameters';
 export * from './cash';
 export * from './cashAllOf';
 export * from './cashAndSecurityOfferElection';
@@ -599,6 +632,7 @@ export * from './emptyModelOptions';
 export * from './emptyModelOptionsAllOf';
 export * from './entityIdentifier';
 export * from './entityResolver';
+export * from './equalisationTerms';
 export * from './equity';
 export * from './equityAllOf';
 export * from './equityAllOfIdentifiers';
@@ -639,14 +673,27 @@ export * from './expandedGroup';
 export * from './expiryEvent';
 export * from './expiryEventAllOf';
 export * from './externalFeeComponentFilter';
+export * from './facility';
+export * from './facilityCommitmentFeeEvent';
+export * from './facilityCommitmentFeeEventAllOf';
+export * from './facilityDrawEvent';
+export * from './facilityDrawEventAllOf';
+export * from './facilityInterestEvent';
+export * from './facilityInterestEventAllOf';
+export * from './facilityRepaymentEvent';
+export * from './facilityRepaymentEventAllOf';
+export * from './facilityRequest';
 export * from './fee';
 export * from './feeAccrual';
 export * from './feeCalculationRequest';
+export * from './feeDefinition';
 export * from './feeProperties';
 export * from './feeRequest';
 export * from './feeRule';
 export * from './feeRuleUpsertRequest';
 export * from './feeRuleUpsertResponse';
+export * from './feeSizeTier';
+export * from './feeStepDown';
 export * from './feeTransactionTemplateSpecification';
 export * from './feeType';
 export * from './feeTypeRequest';
@@ -707,6 +754,7 @@ export * from './fundCalendarEntry';
 export * from './fundCalendarEntryType';
 export * from './fundCashStatementLocalCurrency';
 export * from './fundCashStatementRow';
+export * from './fundClosing';
 export * from './fundConfiguration';
 export * from './fundConfigurationProperties';
 export * from './fundConfigurationRequest';
@@ -720,6 +768,11 @@ export * from './fundIdList';
 export * from './fundIdListAllOf';
 export * from './fundInstrument';
 export * from './fundJournalEntryLine';
+export * from './fundPartner';
+export * from './fundPartnerBalances';
+export * from './fundPartnerUnfundedReconciliation';
+export * from './fundPartnerUnfundedReconciliationLine';
+export * from './fundPartnersTotals';
 export * from './fundPnlBreakdown';
 export * from './fundPreviousNAV';
 export * from './fundProperties';
@@ -734,6 +787,8 @@ export * from './fundStructureEdgeTarget';
 export * from './fundStructureMemberRequest';
 export * from './fundStructureNode';
 export * from './fundStructureRequest';
+export * from './fundTerms';
+export * from './fundTermsVersion';
 export * from './fundValuationPointData';
 export * from './fundValuationRequest';
 export * from './fundValuationSchedule';
@@ -1162,12 +1217,14 @@ export * from './pagedResourceListOfDataTypeSummary';
 export * from './pagedResourceListOfDialectId';
 export * from './pagedResourceListOfDiaryEntry';
 export * from './pagedResourceListOfExecution';
+export * from './pagedResourceListOfFacility';
 export * from './pagedResourceListOfFee';
 export * from './pagedResourceListOfFeeType';
 export * from './pagedResourceListOfFund';
 export * from './pagedResourceListOfFundCalendarEntries';
 export * from './pagedResourceListOfFundCalendarEntry';
 export * from './pagedResourceListOfFundConfiguration';
+export * from './pagedResourceListOfFundPartner';
 export * from './pagedResourceListOfFundStructure';
 export * from './pagedResourceListOfGeneralLedgerProfileResponse';
 export * from './pagedResourceListOfGetAddressKeyAliasResponse';
@@ -1234,6 +1291,7 @@ export * from './partialDefeasanceEventAllOf';
 export * from './participation';
 export * from './participationRequest';
 export * from './participationSetRequest';
+export * from './partnershipAccountingConfiguration';
 export * from './paymentDetailsApplicableEntity';
 export * from './paymentDetailsReference';
 export * from './paymentDetailsReferenceResponse';
@@ -1469,6 +1527,8 @@ export * from './recRunLogEntry';
 export * from './recSubmission';
 export * from './recSupersededRun';
 export * from './recUserComment';
+export * from './recallableCapitalExpiryEvent';
+export * from './recallableCapitalExpiryEventAllOf';
 export * from './recipeBlock';
 export * from './recipeComposer';
 export * from './recipeValue';
@@ -1493,6 +1553,7 @@ export * from './reconciliationRule';
 export * from './reconciliationRuleType';
 export * from './reconciliationSideConfiguration';
 export * from './reconciliationTransactions';
+export * from './recyclingTerms';
 export * from './referenceData';
 export * from './referenceInstrument';
 export * from './referenceInstrumentAllOf';
@@ -1689,6 +1750,7 @@ export * from './securityWriteOffEvent';
 export * from './securityWriteOffEventAllOf';
 export * from './sellEntitlementElection';
 export * from './sequenceDefinition';
+export * from './seriesConfiguration';
 export * from './seriesDefinition';
 export * from './seriesDefinitionRequest';
 export * from './seriesIdentifierField';
@@ -2175,9 +2237,28 @@ import { AggregationType } from './aggregationType';
 import { Alias } from './alias';
 import { Allocation } from './allocation';
 import { AllocationEvent } from './allocationEvent';
+import { AllocationEventBasisDiagnostics } from './allocationEventBasisDiagnostics';
+import { AllocationEventBasisWarning } from './allocationEventBasisWarning';
 import { AllocationEventBookRequest } from './allocationEventBookRequest';
+import { AllocationEventBookingError } from './allocationEventBookingError';
+import { AllocationEventBookingWarning } from './allocationEventBookingWarning';
+import { AllocationEventComponent } from './allocationEventComponent';
+import { AllocationEventDealFunding } from './allocationEventDealFunding';
+import { AllocationEventEqualisation } from './allocationEventEqualisation';
+import { AllocationEventEqualisationFeeCatchUp } from './allocationEventEqualisationFeeCatchUp';
+import { AllocationEventEqualisationMark } from './allocationEventEqualisationMark';
 import { AllocationEventReallocateRequest } from './allocationEventReallocateRequest';
+import { AllocationEventReceipt } from './allocationEventReceipt';
+import { AllocationEventReceiptRequest } from './allocationEventReceiptRequest';
+import { AllocationEventRefund } from './allocationEventRefund';
 import { AllocationEventRequest } from './allocationEventRequest';
+import { AllocationEventReversal } from './allocationEventReversal';
+import { AllocationEventReverseRequest } from './allocationEventReverseRequest';
+import { AllocationEventRoundingResidual } from './allocationEventRoundingResidual';
+import { AllocationEventTransfer } from './allocationEventTransfer';
+import { AllocationEventTransferConsideration } from './allocationEventTransferConsideration';
+import { AllocationEventUnbookRequest } from './allocationEventUnbookRequest';
+import { AllocationEventUseOfProceeds } from './allocationEventUseOfProceeds';
 import { AllocationGroup } from './allocationGroup';
 import { AllocationGroupClass } from './allocationGroupClass';
 import { AllocationGroupClassDefinition } from './allocationGroupClassDefinition';
@@ -2189,10 +2270,18 @@ import { AllocationMapBasisValue } from './allocationMapBasisValue';
 import { AllocationMapEventBasis } from './allocationMapEventBasis';
 import { AllocationMapException } from './allocationMapException';
 import { AllocationMapFixedFactor } from './allocationMapFixedFactor';
+import { AllocationMapIlpaTransactionType } from './allocationMapIlpaTransactionType';
 import { AllocationMapParticipants } from './allocationMapParticipants';
 import { AllocationMapRequest } from './allocationMapRequest';
 import { AllocationMapResolution } from './allocationMapResolution';
 import { AllocationMapResolveRequest } from './allocationMapResolveRequest';
+import { AllocationPostingCounts } from './allocationPostingCounts';
+import { AllocationPostingFundLine } from './allocationPostingFundLine';
+import { AllocationPostingLpLine } from './allocationPostingLpLine';
+import { AllocationPostingPlan } from './allocationPostingPlan';
+import { AllocationPostingRollUp } from './allocationPostingRollUp';
+import { AllocationReceivable } from './allocationReceivable';
+import { AllocationReceivablesAgeing } from './allocationReceivablesAgeing';
 import { AllocationRequest } from './allocationRequest';
 import { AllocationServiceRunResponse } from './allocationServiceRunResponse';
 import { AllocationSetRequest } from './allocationSetRequest';
@@ -2340,16 +2429,22 @@ import { CancelledOrderResult } from './cancelledOrderResult';
 import { CancelledPlacementResult } from './cancelledPlacementResult';
 import { CapFloor } from './capFloor';
 import { CapFloorAllOf } from './capFloorAllOf';
+import { CapabilityOverride } from './capabilityOverride';
 import { CapitalCallEvent } from './capitalCallEvent';
 import { CapitalCallEventAllOf } from './capitalCallEventAllOf';
+import { CapitalCallReceiptEvent } from './capitalCallReceiptEvent';
+import { CapitalCallReceiptEventAllOf } from './capitalCallReceiptEventAllOf';
 import { CapitalDistributionEvent } from './capitalDistributionEvent';
 import { CapitalDistributionEventAllOf } from './capitalDistributionEventAllOf';
 import { CapitalGainsDistributionEvent } from './capitalGainsDistributionEvent';
 import { CapitalGainsDistributionEventAllOf } from './capitalGainsDistributionEventAllOf';
 import { CapitalInterest } from './capitalInterest';
 import { CapitalInterestAllOf } from './capitalInterestAllOf';
+import { CapitalInterestTransferEvent } from './capitalInterestTransferEvent';
+import { CapitalInterestTransferEventAllOf } from './capitalInterestTransferEventAllOf';
 import { CapletFloorletCashFlowEvent } from './capletFloorletCashFlowEvent';
 import { CapletFloorletCashFlowEventAllOf } from './capletFloorletCashFlowEventAllOf';
+import { CarryParameters } from './carryParameters';
 import { Cash } from './cash';
 import { CashAllOf } from './cashAllOf';
 import { CashAndSecurityOfferElection } from './cashAndSecurityOfferElection';
@@ -2707,6 +2802,7 @@ import { EmptyModelOptions } from './emptyModelOptions';
 import { EmptyModelOptionsAllOf } from './emptyModelOptionsAllOf';
 import { EntityIdentifier } from './entityIdentifier';
 import { EntityResolver } from './entityResolver';
+import { EqualisationTerms } from './equalisationTerms';
 import { Equity } from './equity';
 import { EquityAllOf } from './equityAllOf';
 import { EquityAllOfIdentifiers } from './equityAllOfIdentifiers';
@@ -2747,14 +2843,27 @@ import { ExpandedGroup } from './expandedGroup';
 import { ExpiryEvent } from './expiryEvent';
 import { ExpiryEventAllOf } from './expiryEventAllOf';
 import { ExternalFeeComponentFilter } from './externalFeeComponentFilter';
+import { Facility } from './facility';
+import { FacilityCommitmentFeeEvent } from './facilityCommitmentFeeEvent';
+import { FacilityCommitmentFeeEventAllOf } from './facilityCommitmentFeeEventAllOf';
+import { FacilityDrawEvent } from './facilityDrawEvent';
+import { FacilityDrawEventAllOf } from './facilityDrawEventAllOf';
+import { FacilityInterestEvent } from './facilityInterestEvent';
+import { FacilityInterestEventAllOf } from './facilityInterestEventAllOf';
+import { FacilityRepaymentEvent } from './facilityRepaymentEvent';
+import { FacilityRepaymentEventAllOf } from './facilityRepaymentEventAllOf';
+import { FacilityRequest } from './facilityRequest';
 import { Fee } from './fee';
 import { FeeAccrual } from './feeAccrual';
 import { FeeCalculationRequest } from './feeCalculationRequest';
+import { FeeDefinition } from './feeDefinition';
 import { FeeProperties } from './feeProperties';
 import { FeeRequest } from './feeRequest';
 import { FeeRule } from './feeRule';
 import { FeeRuleUpsertRequest } from './feeRuleUpsertRequest';
 import { FeeRuleUpsertResponse } from './feeRuleUpsertResponse';
+import { FeeSizeTier } from './feeSizeTier';
+import { FeeStepDown } from './feeStepDown';
 import { FeeTransactionTemplateSpecification } from './feeTransactionTemplateSpecification';
 import { FeeType } from './feeType';
 import { FeeTypeRequest } from './feeTypeRequest';
@@ -2815,6 +2924,7 @@ import { FundCalendarEntry } from './fundCalendarEntry';
 import { FundCalendarEntryType } from './fundCalendarEntryType';
 import { FundCashStatementLocalCurrency } from './fundCashStatementLocalCurrency';
 import { FundCashStatementRow } from './fundCashStatementRow';
+import { FundClosing } from './fundClosing';
 import { FundConfiguration } from './fundConfiguration';
 import { FundConfigurationProperties } from './fundConfigurationProperties';
 import { FundConfigurationRequest } from './fundConfigurationRequest';
@@ -2828,6 +2938,11 @@ import { FundIdList } from './fundIdList';
 import { FundIdListAllOf } from './fundIdListAllOf';
 import { FundInstrument } from './fundInstrument';
 import { FundJournalEntryLine } from './fundJournalEntryLine';
+import { FundPartner } from './fundPartner';
+import { FundPartnerBalances } from './fundPartnerBalances';
+import { FundPartnerUnfundedReconciliation } from './fundPartnerUnfundedReconciliation';
+import { FundPartnerUnfundedReconciliationLine } from './fundPartnerUnfundedReconciliationLine';
+import { FundPartnersTotals } from './fundPartnersTotals';
 import { FundPnlBreakdown } from './fundPnlBreakdown';
 import { FundPreviousNAV } from './fundPreviousNAV';
 import { FundProperties } from './fundProperties';
@@ -2842,6 +2957,8 @@ import { FundStructureEdgeTarget } from './fundStructureEdgeTarget';
 import { FundStructureMemberRequest } from './fundStructureMemberRequest';
 import { FundStructureNode } from './fundStructureNode';
 import { FundStructureRequest } from './fundStructureRequest';
+import { FundTerms } from './fundTerms';
+import { FundTermsVersion } from './fundTermsVersion';
 import { FundValuationPointData } from './fundValuationPointData';
 import { FundValuationRequest } from './fundValuationRequest';
 import { FundValuationSchedule } from './fundValuationSchedule';
@@ -3270,12 +3387,14 @@ import { PagedResourceListOfDataTypeSummary } from './pagedResourceListOfDataTyp
 import { PagedResourceListOfDialectId } from './pagedResourceListOfDialectId';
 import { PagedResourceListOfDiaryEntry } from './pagedResourceListOfDiaryEntry';
 import { PagedResourceListOfExecution } from './pagedResourceListOfExecution';
+import { PagedResourceListOfFacility } from './pagedResourceListOfFacility';
 import { PagedResourceListOfFee } from './pagedResourceListOfFee';
 import { PagedResourceListOfFeeType } from './pagedResourceListOfFeeType';
 import { PagedResourceListOfFund } from './pagedResourceListOfFund';
 import { PagedResourceListOfFundCalendarEntries } from './pagedResourceListOfFundCalendarEntries';
 import { PagedResourceListOfFundCalendarEntry } from './pagedResourceListOfFundCalendarEntry';
 import { PagedResourceListOfFundConfiguration } from './pagedResourceListOfFundConfiguration';
+import { PagedResourceListOfFundPartner } from './pagedResourceListOfFundPartner';
 import { PagedResourceListOfFundStructure } from './pagedResourceListOfFundStructure';
 import { PagedResourceListOfGeneralLedgerProfileResponse } from './pagedResourceListOfGeneralLedgerProfileResponse';
 import { PagedResourceListOfGetAddressKeyAliasResponse } from './pagedResourceListOfGetAddressKeyAliasResponse';
@@ -3342,6 +3461,7 @@ import { PartialDefeasanceEventAllOf } from './partialDefeasanceEventAllOf';
 import { Participation } from './participation';
 import { ParticipationRequest } from './participationRequest';
 import { ParticipationSetRequest } from './participationSetRequest';
+import { PartnershipAccountingConfiguration } from './partnershipAccountingConfiguration';
 import { PaymentDetailsApplicableEntity } from './paymentDetailsApplicableEntity';
 import { PaymentDetailsReference } from './paymentDetailsReference';
 import { PaymentDetailsReferenceResponse } from './paymentDetailsReferenceResponse';
@@ -3577,6 +3697,8 @@ import { RecRunLogEntry } from './recRunLogEntry';
 import { RecSubmission } from './recSubmission';
 import { RecSupersededRun } from './recSupersededRun';
 import { RecUserComment } from './recUserComment';
+import { RecallableCapitalExpiryEvent } from './recallableCapitalExpiryEvent';
+import { RecallableCapitalExpiryEventAllOf } from './recallableCapitalExpiryEventAllOf';
 import { RecipeBlock } from './recipeBlock';
 import { RecipeComposer } from './recipeComposer';
 import { RecipeValue } from './recipeValue';
@@ -3601,6 +3723,7 @@ import { ReconciliationRule } from './reconciliationRule';
 import { ReconciliationRuleType } from './reconciliationRuleType';
 import { ReconciliationSideConfiguration } from './reconciliationSideConfiguration';
 import { ReconciliationTransactions } from './reconciliationTransactions';
+import { RecyclingTerms } from './recyclingTerms';
 import { ReferenceData } from './referenceData';
 import { ReferenceInstrument } from './referenceInstrument';
 import { ReferenceInstrumentAllOf } from './referenceInstrumentAllOf';
@@ -3797,6 +3920,7 @@ import { SecurityWriteOffEvent } from './securityWriteOffEvent';
 import { SecurityWriteOffEventAllOf } from './securityWriteOffEventAllOf';
 import { SellEntitlementElection } from './sellEntitlementElection';
 import { SequenceDefinition } from './sequenceDefinition';
+import { SeriesConfiguration } from './seriesConfiguration';
 import { SeriesDefinition } from './seriesDefinition';
 import { SeriesDefinitionRequest } from './seriesDefinitionRequest';
 import { SeriesIdentifierField } from './seriesIdentifierField';
@@ -4301,12 +4425,16 @@ let enumsMap: {[index: string]: any} = {
         "CapFloorAllOf.InstrumentTypeEnum": CapFloorAllOf.InstrumentTypeEnum,
         "CapitalCallEvent.InstrumentEventTypeEnum": CapitalCallEvent.InstrumentEventTypeEnum,
         "CapitalCallEventAllOf.InstrumentEventTypeEnum": CapitalCallEventAllOf.InstrumentEventTypeEnum,
+        "CapitalCallReceiptEvent.InstrumentEventTypeEnum": CapitalCallReceiptEvent.InstrumentEventTypeEnum,
+        "CapitalCallReceiptEventAllOf.InstrumentEventTypeEnum": CapitalCallReceiptEventAllOf.InstrumentEventTypeEnum,
         "CapitalDistributionEvent.InstrumentEventTypeEnum": CapitalDistributionEvent.InstrumentEventTypeEnum,
         "CapitalDistributionEventAllOf.InstrumentEventTypeEnum": CapitalDistributionEventAllOf.InstrumentEventTypeEnum,
         "CapitalGainsDistributionEvent.InstrumentEventTypeEnum": CapitalGainsDistributionEvent.InstrumentEventTypeEnum,
         "CapitalGainsDistributionEventAllOf.InstrumentEventTypeEnum": CapitalGainsDistributionEventAllOf.InstrumentEventTypeEnum,
         "CapitalInterest.InstrumentTypeEnum": CapitalInterest.InstrumentTypeEnum,
         "CapitalInterestAllOf.InstrumentTypeEnum": CapitalInterestAllOf.InstrumentTypeEnum,
+        "CapitalInterestTransferEvent.InstrumentEventTypeEnum": CapitalInterestTransferEvent.InstrumentEventTypeEnum,
+        "CapitalInterestTransferEventAllOf.InstrumentEventTypeEnum": CapitalInterestTransferEventAllOf.InstrumentEventTypeEnum,
         "CapletFloorletCashFlowEvent.InstrumentEventTypeEnum": CapletFloorletCashFlowEvent.InstrumentEventTypeEnum,
         "CapletFloorletCashFlowEventAllOf.InstrumentEventTypeEnum": CapletFloorletCashFlowEventAllOf.InstrumentEventTypeEnum,
         "Cash.InstrumentTypeEnum": Cash.InstrumentTypeEnum,
@@ -4487,6 +4615,14 @@ let enumsMap: {[index: string]: any} = {
         "ExoticInstrumentAllOf.InstrumentTypeEnum": ExoticInstrumentAllOf.InstrumentTypeEnum,
         "ExpiryEvent.InstrumentEventTypeEnum": ExpiryEvent.InstrumentEventTypeEnum,
         "ExpiryEventAllOf.InstrumentEventTypeEnum": ExpiryEventAllOf.InstrumentEventTypeEnum,
+        "FacilityCommitmentFeeEvent.InstrumentEventTypeEnum": FacilityCommitmentFeeEvent.InstrumentEventTypeEnum,
+        "FacilityCommitmentFeeEventAllOf.InstrumentEventTypeEnum": FacilityCommitmentFeeEventAllOf.InstrumentEventTypeEnum,
+        "FacilityDrawEvent.InstrumentEventTypeEnum": FacilityDrawEvent.InstrumentEventTypeEnum,
+        "FacilityDrawEventAllOf.InstrumentEventTypeEnum": FacilityDrawEventAllOf.InstrumentEventTypeEnum,
+        "FacilityInterestEvent.InstrumentEventTypeEnum": FacilityInterestEvent.InstrumentEventTypeEnum,
+        "FacilityInterestEventAllOf.InstrumentEventTypeEnum": FacilityInterestEventAllOf.InstrumentEventTypeEnum,
+        "FacilityRepaymentEvent.InstrumentEventTypeEnum": FacilityRepaymentEvent.InstrumentEventTypeEnum,
+        "FacilityRepaymentEventAllOf.InstrumentEventTypeEnum": FacilityRepaymentEventAllOf.InstrumentEventTypeEnum,
         "FieldSchema.TypeEnum": FieldSchema.TypeEnum,
         "FilterPredicateComplianceParameter.ComplianceParameterTypeEnum": FilterPredicateComplianceParameter.ComplianceParameterTypeEnum,
         "FilterPredicateComplianceParameterAllOf.ComplianceParameterTypeEnum": FilterPredicateComplianceParameterAllOf.ComplianceParameterTypeEnum,
@@ -4867,6 +5003,8 @@ let enumsMap: {[index: string]: any} = {
         "RateCurveShiftScale": RateCurveShiftScale,
         "RawVendorEvent.InstrumentEventTypeEnum": RawVendorEvent.InstrumentEventTypeEnum,
         "RawVendorEventAllOf.InstrumentEventTypeEnum": RawVendorEventAllOf.InstrumentEventTypeEnum,
+        "RecallableCapitalExpiryEvent.InstrumentEventTypeEnum": RecallableCapitalExpiryEvent.InstrumentEventTypeEnum,
+        "RecallableCapitalExpiryEventAllOf.InstrumentEventTypeEnum": RecallableCapitalExpiryEventAllOf.InstrumentEventTypeEnum,
         "RecombineStep.ComplianceStepTypeEnum": RecombineStep.ComplianceStepTypeEnum,
         "ReconcileDateTimeRule.ComparisonTypeEnum": ReconcileDateTimeRule.ComparisonTypeEnum,
         "ReconcileDateTimeRule.RuleTypeEnum": ReconcileDateTimeRule.RuleTypeEnum,
@@ -5085,9 +5223,28 @@ let typeMap: {[index: string]: any} = {
     "Alias": Alias,
     "Allocation": Allocation,
     "AllocationEvent": AllocationEvent,
+    "AllocationEventBasisDiagnostics": AllocationEventBasisDiagnostics,
+    "AllocationEventBasisWarning": AllocationEventBasisWarning,
     "AllocationEventBookRequest": AllocationEventBookRequest,
+    "AllocationEventBookingError": AllocationEventBookingError,
+    "AllocationEventBookingWarning": AllocationEventBookingWarning,
+    "AllocationEventComponent": AllocationEventComponent,
+    "AllocationEventDealFunding": AllocationEventDealFunding,
+    "AllocationEventEqualisation": AllocationEventEqualisation,
+    "AllocationEventEqualisationFeeCatchUp": AllocationEventEqualisationFeeCatchUp,
+    "AllocationEventEqualisationMark": AllocationEventEqualisationMark,
     "AllocationEventReallocateRequest": AllocationEventReallocateRequest,
+    "AllocationEventReceipt": AllocationEventReceipt,
+    "AllocationEventReceiptRequest": AllocationEventReceiptRequest,
+    "AllocationEventRefund": AllocationEventRefund,
     "AllocationEventRequest": AllocationEventRequest,
+    "AllocationEventReversal": AllocationEventReversal,
+    "AllocationEventReverseRequest": AllocationEventReverseRequest,
+    "AllocationEventRoundingResidual": AllocationEventRoundingResidual,
+    "AllocationEventTransfer": AllocationEventTransfer,
+    "AllocationEventTransferConsideration": AllocationEventTransferConsideration,
+    "AllocationEventUnbookRequest": AllocationEventUnbookRequest,
+    "AllocationEventUseOfProceeds": AllocationEventUseOfProceeds,
     "AllocationGroup": AllocationGroup,
     "AllocationGroupClass": AllocationGroupClass,
     "AllocationGroupClassDefinition": AllocationGroupClassDefinition,
@@ -5099,10 +5256,18 @@ let typeMap: {[index: string]: any} = {
     "AllocationMapEventBasis": AllocationMapEventBasis,
     "AllocationMapException": AllocationMapException,
     "AllocationMapFixedFactor": AllocationMapFixedFactor,
+    "AllocationMapIlpaTransactionType": AllocationMapIlpaTransactionType,
     "AllocationMapParticipants": AllocationMapParticipants,
     "AllocationMapRequest": AllocationMapRequest,
     "AllocationMapResolution": AllocationMapResolution,
     "AllocationMapResolveRequest": AllocationMapResolveRequest,
+    "AllocationPostingCounts": AllocationPostingCounts,
+    "AllocationPostingFundLine": AllocationPostingFundLine,
+    "AllocationPostingLpLine": AllocationPostingLpLine,
+    "AllocationPostingPlan": AllocationPostingPlan,
+    "AllocationPostingRollUp": AllocationPostingRollUp,
+    "AllocationReceivable": AllocationReceivable,
+    "AllocationReceivablesAgeing": AllocationReceivablesAgeing,
     "AllocationRequest": AllocationRequest,
     "AllocationServiceRunResponse": AllocationServiceRunResponse,
     "AllocationSetRequest": AllocationSetRequest,
@@ -5248,16 +5413,22 @@ let typeMap: {[index: string]: any} = {
     "CancelledPlacementResult": CancelledPlacementResult,
     "CapFloor": CapFloor,
     "CapFloorAllOf": CapFloorAllOf,
+    "CapabilityOverride": CapabilityOverride,
     "CapitalCallEvent": CapitalCallEvent,
     "CapitalCallEventAllOf": CapitalCallEventAllOf,
+    "CapitalCallReceiptEvent": CapitalCallReceiptEvent,
+    "CapitalCallReceiptEventAllOf": CapitalCallReceiptEventAllOf,
     "CapitalDistributionEvent": CapitalDistributionEvent,
     "CapitalDistributionEventAllOf": CapitalDistributionEventAllOf,
     "CapitalGainsDistributionEvent": CapitalGainsDistributionEvent,
     "CapitalGainsDistributionEventAllOf": CapitalGainsDistributionEventAllOf,
     "CapitalInterest": CapitalInterest,
     "CapitalInterestAllOf": CapitalInterestAllOf,
+    "CapitalInterestTransferEvent": CapitalInterestTransferEvent,
+    "CapitalInterestTransferEventAllOf": CapitalInterestTransferEventAllOf,
     "CapletFloorletCashFlowEvent": CapletFloorletCashFlowEvent,
     "CapletFloorletCashFlowEventAllOf": CapletFloorletCashFlowEventAllOf,
+    "CarryParameters": CarryParameters,
     "Cash": Cash,
     "CashAllOf": CashAllOf,
     "CashAndSecurityOfferElection": CashAndSecurityOfferElection,
@@ -5603,6 +5774,7 @@ let typeMap: {[index: string]: any} = {
     "EmptyModelOptionsAllOf": EmptyModelOptionsAllOf,
     "EntityIdentifier": EntityIdentifier,
     "EntityResolver": EntityResolver,
+    "EqualisationTerms": EqualisationTerms,
     "Equity": Equity,
     "EquityAllOf": EquityAllOf,
     "EquityAllOfIdentifiers": EquityAllOfIdentifiers,
@@ -5643,14 +5815,27 @@ let typeMap: {[index: string]: any} = {
     "ExpiryEvent": ExpiryEvent,
     "ExpiryEventAllOf": ExpiryEventAllOf,
     "ExternalFeeComponentFilter": ExternalFeeComponentFilter,
+    "Facility": Facility,
+    "FacilityCommitmentFeeEvent": FacilityCommitmentFeeEvent,
+    "FacilityCommitmentFeeEventAllOf": FacilityCommitmentFeeEventAllOf,
+    "FacilityDrawEvent": FacilityDrawEvent,
+    "FacilityDrawEventAllOf": FacilityDrawEventAllOf,
+    "FacilityInterestEvent": FacilityInterestEvent,
+    "FacilityInterestEventAllOf": FacilityInterestEventAllOf,
+    "FacilityRepaymentEvent": FacilityRepaymentEvent,
+    "FacilityRepaymentEventAllOf": FacilityRepaymentEventAllOf,
+    "FacilityRequest": FacilityRequest,
     "Fee": Fee,
     "FeeAccrual": FeeAccrual,
     "FeeCalculationRequest": FeeCalculationRequest,
+    "FeeDefinition": FeeDefinition,
     "FeeProperties": FeeProperties,
     "FeeRequest": FeeRequest,
     "FeeRule": FeeRule,
     "FeeRuleUpsertRequest": FeeRuleUpsertRequest,
     "FeeRuleUpsertResponse": FeeRuleUpsertResponse,
+    "FeeSizeTier": FeeSizeTier,
+    "FeeStepDown": FeeStepDown,
     "FeeTransactionTemplateSpecification": FeeTransactionTemplateSpecification,
     "FeeType": FeeType,
     "FeeTypeRequest": FeeTypeRequest,
@@ -5709,6 +5894,7 @@ let typeMap: {[index: string]: any} = {
     "FundCalendarEntry": FundCalendarEntry,
     "FundCashStatementLocalCurrency": FundCashStatementLocalCurrency,
     "FundCashStatementRow": FundCashStatementRow,
+    "FundClosing": FundClosing,
     "FundConfiguration": FundConfiguration,
     "FundConfigurationProperties": FundConfigurationProperties,
     "FundConfigurationRequest": FundConfigurationRequest,
@@ -5722,6 +5908,11 @@ let typeMap: {[index: string]: any} = {
     "FundIdListAllOf": FundIdListAllOf,
     "FundInstrument": FundInstrument,
     "FundJournalEntryLine": FundJournalEntryLine,
+    "FundPartner": FundPartner,
+    "FundPartnerBalances": FundPartnerBalances,
+    "FundPartnerUnfundedReconciliation": FundPartnerUnfundedReconciliation,
+    "FundPartnerUnfundedReconciliationLine": FundPartnerUnfundedReconciliationLine,
+    "FundPartnersTotals": FundPartnersTotals,
     "FundPnlBreakdown": FundPnlBreakdown,
     "FundPreviousNAV": FundPreviousNAV,
     "FundProperties": FundProperties,
@@ -5736,6 +5927,8 @@ let typeMap: {[index: string]: any} = {
     "FundStructureMemberRequest": FundStructureMemberRequest,
     "FundStructureNode": FundStructureNode,
     "FundStructureRequest": FundStructureRequest,
+    "FundTerms": FundTerms,
+    "FundTermsVersion": FundTermsVersion,
     "FundValuationPointData": FundValuationPointData,
     "FundValuationRequest": FundValuationRequest,
     "FundValuationSchedule": FundValuationSchedule,
@@ -6148,12 +6341,14 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfDialectId": PagedResourceListOfDialectId,
     "PagedResourceListOfDiaryEntry": PagedResourceListOfDiaryEntry,
     "PagedResourceListOfExecution": PagedResourceListOfExecution,
+    "PagedResourceListOfFacility": PagedResourceListOfFacility,
     "PagedResourceListOfFee": PagedResourceListOfFee,
     "PagedResourceListOfFeeType": PagedResourceListOfFeeType,
     "PagedResourceListOfFund": PagedResourceListOfFund,
     "PagedResourceListOfFundCalendarEntries": PagedResourceListOfFundCalendarEntries,
     "PagedResourceListOfFundCalendarEntry": PagedResourceListOfFundCalendarEntry,
     "PagedResourceListOfFundConfiguration": PagedResourceListOfFundConfiguration,
+    "PagedResourceListOfFundPartner": PagedResourceListOfFundPartner,
     "PagedResourceListOfFundStructure": PagedResourceListOfFundStructure,
     "PagedResourceListOfGeneralLedgerProfileResponse": PagedResourceListOfGeneralLedgerProfileResponse,
     "PagedResourceListOfGetAddressKeyAliasResponse": PagedResourceListOfGetAddressKeyAliasResponse,
@@ -6220,6 +6415,7 @@ let typeMap: {[index: string]: any} = {
     "Participation": Participation,
     "ParticipationRequest": ParticipationRequest,
     "ParticipationSetRequest": ParticipationSetRequest,
+    "PartnershipAccountingConfiguration": PartnershipAccountingConfiguration,
     "PaymentDetailsApplicableEntity": PaymentDetailsApplicableEntity,
     "PaymentDetailsReference": PaymentDetailsReference,
     "PaymentDetailsReferenceResponse": PaymentDetailsReferenceResponse,
@@ -6442,6 +6638,8 @@ let typeMap: {[index: string]: any} = {
     "RecSubmission": RecSubmission,
     "RecSupersededRun": RecSupersededRun,
     "RecUserComment": RecUserComment,
+    "RecallableCapitalExpiryEvent": RecallableCapitalExpiryEvent,
+    "RecallableCapitalExpiryEventAllOf": RecallableCapitalExpiryEventAllOf,
     "RecipeBlock": RecipeBlock,
     "RecipeComposer": RecipeComposer,
     "RecipeValue": RecipeValue,
@@ -6465,6 +6663,7 @@ let typeMap: {[index: string]: any} = {
     "ReconciliationRule": ReconciliationRule,
     "ReconciliationSideConfiguration": ReconciliationSideConfiguration,
     "ReconciliationTransactions": ReconciliationTransactions,
+    "RecyclingTerms": RecyclingTerms,
     "ReferenceData": ReferenceData,
     "ReferenceInstrument": ReferenceInstrument,
     "ReferenceInstrumentAllOf": ReferenceInstrumentAllOf,
@@ -6654,6 +6853,7 @@ let typeMap: {[index: string]: any} = {
     "SecurityWriteOffEventAllOf": SecurityWriteOffEventAllOf,
     "SellEntitlementElection": SellEntitlementElection,
     "SequenceDefinition": SequenceDefinition,
+    "SeriesConfiguration": SeriesConfiguration,
     "SeriesDefinition": SeriesDefinition,
     "SeriesDefinitionRequest": SeriesDefinitionRequest,
     "SeriesIdentifierField": SeriesIdentifierField,
