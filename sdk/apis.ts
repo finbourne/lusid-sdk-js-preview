@@ -13,6 +13,7 @@ import {BlocksApi} from './api/blocksApi';
 import {CalendarsApi} from './api/calendarsApi';
 import {ChartOfAccountsApi} from './api/chartOfAccountsApi';
 import {CheckDefinitionsApi} from './api/checkDefinitionsApi';
+import {CollateralAgreementsApi} from './api/collateralAgreementsApi';
 import {ComplexMarketDataApi} from './api/complexMarketDataApi';
 import {ComplianceApi} from './api/complianceApi';
 import {ConfigurationRecipeApi} from './api/configurationRecipeApi';
@@ -27,6 +28,7 @@ import {CustomEntityTypesApi} from './api/customEntityTypesApi';
 import {CutLabelDefinitionsApi} from './api/cutLabelDefinitionsApi';
 import {DataTypesApi} from './api/dataTypesApi';
 import {DerivedTransactionPortfoliosApi} from './api/derivedTransactionPortfoliosApi';
+import {EligibleCollateralSchedulesApi} from './api/eligibleCollateralSchedulesApi';
 import {EntitiesApi} from './api/entitiesApi';
 import {EntityResolversApi} from './api/entityResolversApi';
 import {ExecutionsApi} from './api/executionsApi';
@@ -55,6 +57,7 @@ import {PersonsApi} from './api/personsApi';
 import {PlacementsApi} from './api/placementsApi';
 import {PortfolioGroupsApi} from './api/portfolioGroupsApi';
 import {PortfoliosApi} from './api/portfoliosApi';
+import {ProcessingGroupApi} from './api/processingGroupApi';
 import {PropertyDefinitionsApi} from './api/propertyDefinitionsApi';
 import {QueryableKeysApi} from './api/queryableKeysApi';
 import {QuotesApi} from './api/quotesApi';
@@ -110,6 +113,7 @@ export class Api {
     public calendars:  CalendarsApi
     public chartOfAccounts:  ChartOfAccountsApi
     public checkDefinitions:  CheckDefinitionsApi
+    public collateralAgreements:  CollateralAgreementsApi
     public complexMarketData:  ComplexMarketDataApi
     public compliance:  ComplianceApi
     public configurationRecipe:  ConfigurationRecipeApi
@@ -124,6 +128,7 @@ export class Api {
     public cutLabelDefinitions:  CutLabelDefinitionsApi
     public dataTypes:  DataTypesApi
     public derivedTransactionPortfolios:  DerivedTransactionPortfoliosApi
+    public eligibleCollateralSchedules:  EligibleCollateralSchedulesApi
     public entities:  EntitiesApi
     public entityResolvers:  EntityResolversApi
     public executions:  ExecutionsApi
@@ -152,6 +157,7 @@ export class Api {
     public placements:  PlacementsApi
     public portfolioGroups:  PortfolioGroupsApi
     public portfolios:  PortfoliosApi
+    public processingGroup:  ProcessingGroupApi
     public propertyDefinitions:  PropertyDefinitionsApi
     public queryableKeys:  QueryableKeysApi
     public quotes:  QuotesApi
