@@ -601,6 +601,8 @@ export * from './delistingEventAllOf';
 export * from './dependencySourceFilter';
 export * from './depositCloseEvent';
 export * from './depositCloseEventAllOf';
+export * from './depositInterestCapitalisationEvent';
+export * from './depositInterestCapitalisationEventAllOf';
 export * from './depositInterestPaymentEvent';
 export * from './depositInterestPaymentEventAllOf';
 export * from './depositRollEvent';
@@ -1096,6 +1098,7 @@ export * from './managementFeeTotals';
 export * from './mappedString';
 export * from './mapping';
 export * from './mappingRule';
+export * from './marginAccounts';
 export * from './marginCalculation';
 export * from './marginItem';
 export * from './marginRounding';
@@ -2861,6 +2864,8 @@ import { DelistingEventAllOf } from './delistingEventAllOf';
 import { DependencySourceFilter } from './dependencySourceFilter';
 import { DepositCloseEvent } from './depositCloseEvent';
 import { DepositCloseEventAllOf } from './depositCloseEventAllOf';
+import { DepositInterestCapitalisationEvent } from './depositInterestCapitalisationEvent';
+import { DepositInterestCapitalisationEventAllOf } from './depositInterestCapitalisationEventAllOf';
 import { DepositInterestPaymentEvent } from './depositInterestPaymentEvent';
 import { DepositInterestPaymentEventAllOf } from './depositInterestPaymentEventAllOf';
 import { DepositRollEvent } from './depositRollEvent';
@@ -3356,6 +3361,7 @@ import { ManagementFeeTotals } from './managementFeeTotals';
 import { MappedString } from './mappedString';
 import { Mapping } from './mapping';
 import { MappingRule } from './mappingRule';
+import { MarginAccounts } from './marginAccounts';
 import { MarginCalculation } from './marginCalculation';
 import { MarginItem } from './marginItem';
 import { MarginRounding } from './marginRounding';
@@ -4739,6 +4745,8 @@ let enumsMap: {[index: string]: any} = {
         "DelistingEventAllOf.InstrumentEventTypeEnum": DelistingEventAllOf.InstrumentEventTypeEnum,
         "DepositCloseEvent.InstrumentEventTypeEnum": DepositCloseEvent.InstrumentEventTypeEnum,
         "DepositCloseEventAllOf.InstrumentEventTypeEnum": DepositCloseEventAllOf.InstrumentEventTypeEnum,
+        "DepositInterestCapitalisationEvent.InstrumentEventTypeEnum": DepositInterestCapitalisationEvent.InstrumentEventTypeEnum,
+        "DepositInterestCapitalisationEventAllOf.InstrumentEventTypeEnum": DepositInterestCapitalisationEventAllOf.InstrumentEventTypeEnum,
         "DepositInterestPaymentEvent.InstrumentEventTypeEnum": DepositInterestPaymentEvent.InstrumentEventTypeEnum,
         "DepositInterestPaymentEventAllOf.InstrumentEventTypeEnum": DepositInterestPaymentEventAllOf.InstrumentEventTypeEnum,
         "DepositRollEvent.InstrumentEventTypeEnum": DepositRollEvent.InstrumentEventTypeEnum,
@@ -5931,6 +5939,8 @@ let typeMap: {[index: string]: any} = {
     "DependencySourceFilter": DependencySourceFilter,
     "DepositCloseEvent": DepositCloseEvent,
     "DepositCloseEventAllOf": DepositCloseEventAllOf,
+    "DepositInterestCapitalisationEvent": DepositInterestCapitalisationEvent,
+    "DepositInterestCapitalisationEventAllOf": DepositInterestCapitalisationEventAllOf,
     "DepositInterestPaymentEvent": DepositInterestPaymentEvent,
     "DepositInterestPaymentEventAllOf": DepositInterestPaymentEventAllOf,
     "DepositRollEvent": DepositRollEvent,
@@ -6418,6 +6428,7 @@ let typeMap: {[index: string]: any} = {
     "MappedString": MappedString,
     "Mapping": Mapping,
     "MappingRule": MappingRule,
+    "MarginAccounts": MarginAccounts,
     "MarginCalculation": MarginCalculation,
     "MarginItem": MarginItem,
     "MarginRounding": MarginRounding,
