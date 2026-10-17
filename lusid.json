@@ -9,7 +9,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "2.0.1698",
+    "version": "2.0.1699",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -167543,56 +167543,58 @@
                 },
                 "displayName": "Daily Custody Reconciliation",
                 "description": "Daily reconciliation of UK equity fund holdings against custodian positions.",
-                "definitionType": "PortfolioContents",
                 "sideNames": {
                   "left": "Investment Portfolios",
                   "right": "Custodian"
                 },
-                "leftPortfolioSources": [
-                  {
-                    "sourceType": "PortfolioGroup",
-                    "id": {
-                      "scope": "Funds",
-                      "code": "UKEquityFunds"
+                "details": {
+                  "leftPortfolioSources": [
+                    {
+                      "sourceType": "PortfolioGroup",
+                      "id": {
+                        "scope": "Funds",
+                        "code": "UKEquityFunds"
+                      }
                     }
-                  }
-                ],
-                "rightPortfolioSources": [],
-                "valuationRecipes": {
-                  "left": {
-                    "scope": "Recipes",
-                    "code": "Default"
-                  },
-                  "right": {
-                    "scope": "Recipes",
-                    "code": "Default"
-                  }
-                },
-                "currencies": {
-                  "left": "GBP",
-                  "right": "USD"
-                },
-                "rulesets": [
-                  {
-                    "recType": "Holding",
-                    "matchingRulesetId": {
-                      "scope": "Recs",
-                      "code": "CustodyHoldingRules"
+                  ],
+                  "rightPortfolioSources": [],
+                  "valuationRecipes": {
+                    "left": {
+                      "scope": "Recipes",
+                      "code": "Default"
                     },
-                    "relationalDataFilter": "custodian eq 'NT'",
-                    "byTaxLots": {
-                      "left": true
+                    "right": {
+                      "scope": "Recipes",
+                      "code": "Default"
                     }
                   },
-                  {
-                    "recType": "InputTransaction",
-                    "matchingRulesetId": {
-                      "scope": "Recs",
-                      "code": "CustodyTransactionRules"
+                  "currencies": {
+                    "left": "GBP",
+                    "right": "USD"
+                  },
+                  "rulesets": [
+                    {
+                      "recType": "Holding",
+                      "matchingRulesetId": {
+                        "scope": "Recs",
+                        "code": "CustodyHoldingRules"
+                      },
+                      "relationalDataFilter": "custodian eq 'NT'",
+                      "byTaxLots": {
+                        "left": true
+                      }
                     },
-                    "relationalDataFilter": "custodian eq 'NT'"
-                  }
-                ],
+                    {
+                      "recType": "InputTransaction",
+                      "matchingRulesetId": {
+                        "scope": "Recs",
+                        "code": "CustodyTransactionRules"
+                      },
+                      "relationalDataFilter": "custodian eq 'NT'"
+                    }
+                  ],
+                  "definitionType": "PortfolioContents"
+                },
                 "reviewConfiguration": {
                   "openExceptions": {
                     "reviewRequirement": "Required"
@@ -167656,56 +167658,58 @@
                 },
                 "displayName": "Daily Custody Reconciliation",
                 "description": "Daily reconciliation of UK equity fund holdings against custodian positions.",
-                "definitionType": "PortfolioContents",
                 "sideNames": {
                   "left": "Investment Portfolios",
                   "right": "Custodian"
                 },
-                "leftPortfolioSources": [
-                  {
-                    "sourceType": "PortfolioGroup",
-                    "id": {
-                      "scope": "Funds",
-                      "code": "UKEquityFunds"
+                "details": {
+                  "leftPortfolioSources": [
+                    {
+                      "sourceType": "PortfolioGroup",
+                      "id": {
+                        "scope": "Funds",
+                        "code": "UKEquityFunds"
+                      }
                     }
-                  }
-                ],
-                "rightPortfolioSources": [],
-                "valuationRecipes": {
-                  "left": {
-                    "scope": "Recipes",
-                    "code": "Default"
-                  },
-                  "right": {
-                    "scope": "Recipes",
-                    "code": "Default"
-                  }
-                },
-                "currencies": {
-                  "left": "GBP",
-                  "right": "USD"
-                },
-                "rulesets": [
-                  {
-                    "recType": "Holding",
-                    "matchingRulesetId": {
-                      "scope": "Recs",
-                      "code": "CustodyHoldingRules"
+                  ],
+                  "rightPortfolioSources": [],
+                  "valuationRecipes": {
+                    "left": {
+                      "scope": "Recipes",
+                      "code": "Default"
                     },
-                    "relationalDataFilter": "custodian eq 'NT'",
-                    "byTaxLots": {
-                      "left": true
+                    "right": {
+                      "scope": "Recipes",
+                      "code": "Default"
                     }
                   },
-                  {
-                    "recType": "InputTransaction",
-                    "matchingRulesetId": {
-                      "scope": "Recs",
-                      "code": "CustodyTransactionRules"
+                  "currencies": {
+                    "left": "GBP",
+                    "right": "USD"
+                  },
+                  "rulesets": [
+                    {
+                      "recType": "Holding",
+                      "matchingRulesetId": {
+                        "scope": "Recs",
+                        "code": "CustodyHoldingRules"
+                      },
+                      "relationalDataFilter": "custodian eq 'NT'",
+                      "byTaxLots": {
+                        "left": true
+                      }
                     },
-                    "relationalDataFilter": "custodian eq 'NT'"
-                  }
-                ],
+                    {
+                      "recType": "InputTransaction",
+                      "matchingRulesetId": {
+                        "scope": "Recs",
+                        "code": "CustodyTransactionRules"
+                      },
+                      "relationalDataFilter": "custodian eq 'NT'"
+                    }
+                  ],
+                  "definitionType": "PortfolioContents"
+                },
                 "reviewConfiguration": {
                   "openExceptions": {
                     "reviewRequirement": "Required"
@@ -167769,56 +167773,58 @@
                 },
                 "displayName": "Daily Custody Reconciliation",
                 "description": "Daily reconciliation of UK equity fund holdings against custodian positions.",
-                "definitionType": "PortfolioContents",
                 "sideNames": {
                   "left": "Investment Portfolios",
                   "right": "Custodian"
                 },
-                "leftPortfolioSources": [
-                  {
-                    "sourceType": "PortfolioGroup",
-                    "id": {
-                      "scope": "Funds",
-                      "code": "UKEquityFunds"
+                "details": {
+                  "leftPortfolioSources": [
+                    {
+                      "sourceType": "PortfolioGroup",
+                      "id": {
+                        "scope": "Funds",
+                        "code": "UKEquityFunds"
+                      }
                     }
-                  }
-                ],
-                "rightPortfolioSources": [],
-                "valuationRecipes": {
-                  "left": {
-                    "scope": "Recipes",
-                    "code": "Default"
-                  },
-                  "right": {
-                    "scope": "Recipes",
-                    "code": "Default"
-                  }
-                },
-                "currencies": {
-                  "left": "GBP",
-                  "right": "USD"
-                },
-                "rulesets": [
-                  {
-                    "recType": "Holding",
-                    "matchingRulesetId": {
-                      "scope": "Recs",
-                      "code": "CustodyHoldingRules"
+                  ],
+                  "rightPortfolioSources": [],
+                  "valuationRecipes": {
+                    "left": {
+                      "scope": "Recipes",
+                      "code": "Default"
                     },
-                    "relationalDataFilter": "custodian eq 'NT'",
-                    "byTaxLots": {
-                      "left": true
+                    "right": {
+                      "scope": "Recipes",
+                      "code": "Default"
                     }
                   },
-                  {
-                    "recType": "InputTransaction",
-                    "matchingRulesetId": {
-                      "scope": "Recs",
-                      "code": "CustodyTransactionRules"
+                  "currencies": {
+                    "left": "GBP",
+                    "right": "USD"
+                  },
+                  "rulesets": [
+                    {
+                      "recType": "Holding",
+                      "matchingRulesetId": {
+                        "scope": "Recs",
+                        "code": "CustodyHoldingRules"
+                      },
+                      "relationalDataFilter": "custodian eq 'NT'",
+                      "byTaxLots": {
+                        "left": true
+                      }
                     },
-                    "relationalDataFilter": "custodian eq 'NT'"
-                  }
-                ],
+                    {
+                      "recType": "InputTransaction",
+                      "matchingRulesetId": {
+                        "scope": "Recs",
+                        "code": "CustodyTransactionRules"
+                      },
+                      "relationalDataFilter": "custodian eq 'NT'"
+                    }
+                  ],
+                  "definitionType": "PortfolioContents"
+                },
                 "reviewConfiguration": {
                   "openExceptions": {
                     "reviewRequirement": "Required"
@@ -167882,56 +167888,58 @@
                 },
                 "displayName": "Daily Custody Reconciliation",
                 "description": "Daily reconciliation of UK equity fund holdings against custodian positions.",
-                "definitionType": "PortfolioContents",
                 "sideNames": {
                   "left": "Investment Portfolios",
                   "right": "Custodian"
                 },
-                "leftPortfolioSources": [
-                  {
-                    "sourceType": "PortfolioGroup",
-                    "id": {
-                      "scope": "Funds",
-                      "code": "UKEquityFunds"
+                "details": {
+                  "leftPortfolioSources": [
+                    {
+                      "sourceType": "PortfolioGroup",
+                      "id": {
+                        "scope": "Funds",
+                        "code": "UKEquityFunds"
+                      }
                     }
-                  }
-                ],
-                "rightPortfolioSources": [],
-                "valuationRecipes": {
-                  "left": {
-                    "scope": "Recipes",
-                    "code": "Default"
-                  },
-                  "right": {
-                    "scope": "Recipes",
-                    "code": "Default"
-                  }
-                },
-                "currencies": {
-                  "left": "GBP",
-                  "right": "USD"
-                },
-                "rulesets": [
-                  {
-                    "recType": "Holding",
-                    "matchingRulesetId": {
-                      "scope": "Recs",
-                      "code": "CustodyHoldingRules"
+                  ],
+                  "rightPortfolioSources": [],
+                  "valuationRecipes": {
+                    "left": {
+                      "scope": "Recipes",
+                      "code": "Default"
                     },
-                    "relationalDataFilter": "custodian eq 'NT'",
-                    "byTaxLots": {
-                      "left": true
+                    "right": {
+                      "scope": "Recipes",
+                      "code": "Default"
                     }
                   },
-                  {
-                    "recType": "InputTransaction",
-                    "matchingRulesetId": {
-                      "scope": "Recs",
-                      "code": "CustodyTransactionRules"
+                  "currencies": {
+                    "left": "GBP",
+                    "right": "USD"
+                  },
+                  "rulesets": [
+                    {
+                      "recType": "Holding",
+                      "matchingRulesetId": {
+                        "scope": "Recs",
+                        "code": "CustodyHoldingRules"
+                      },
+                      "relationalDataFilter": "custodian eq 'NT'",
+                      "byTaxLots": {
+                        "left": true
+                      }
                     },
-                    "relationalDataFilter": "custodian eq 'NT'"
-                  }
-                ],
+                    {
+                      "recType": "InputTransaction",
+                      "matchingRulesetId": {
+                        "scope": "Recs",
+                        "code": "CustodyTransactionRules"
+                      },
+                      "relationalDataFilter": "custodian eq 'NT'"
+                    }
+                  ],
+                  "definitionType": "PortfolioContents"
+                },
                 "reviewConfiguration": {
                   "openExceptions": {
                     "reviewRequirement": "Required"
@@ -168002,56 +168010,58 @@
                   },
                   "displayName": "Daily Custody Reconciliation",
                   "description": "Daily reconciliation of UK equity fund holdings against custodian positions.",
-                  "definitionType": "PortfolioContents",
                   "sideNames": {
                     "left": "Investment Portfolios",
                     "right": "Custodian"
                   },
-                  "leftPortfolioSources": [
-                    {
-                      "sourceType": "PortfolioGroup",
-                      "id": {
-                        "scope": "Funds",
-                        "code": "UKEquityFunds"
+                  "details": {
+                    "leftPortfolioSources": [
+                      {
+                        "sourceType": "PortfolioGroup",
+                        "id": {
+                          "scope": "Funds",
+                          "code": "UKEquityFunds"
+                        }
                       }
-                    }
-                  ],
-                  "rightPortfolioSources": [],
-                  "valuationRecipes": {
-                    "left": {
-                      "scope": "Recipes",
-                      "code": "Default"
-                    },
-                    "right": {
-                      "scope": "Recipes",
-                      "code": "Default"
-                    }
-                  },
-                  "currencies": {
-                    "left": "GBP",
-                    "right": "USD"
-                  },
-                  "rulesets": [
-                    {
-                      "recType": "Holding",
-                      "matchingRulesetId": {
-                        "scope": "Recs",
-                        "code": "CustodyHoldingRules"
+                    ],
+                    "rightPortfolioSources": [],
+                    "valuationRecipes": {
+                      "left": {
+                        "scope": "Recipes",
+                        "code": "Default"
                       },
-                      "relationalDataFilter": "custodian eq 'NT'",
-                      "byTaxLots": {
-                        "left": true
+                      "right": {
+                        "scope": "Recipes",
+                        "code": "Default"
                       }
                     },
-                    {
-                      "recType": "InputTransaction",
-                      "matchingRulesetId": {
-                        "scope": "Recs",
-                        "code": "CustodyTransactionRules"
+                    "currencies": {
+                      "left": "GBP",
+                      "right": "USD"
+                    },
+                    "rulesets": [
+                      {
+                        "recType": "Holding",
+                        "matchingRulesetId": {
+                          "scope": "Recs",
+                          "code": "CustodyHoldingRules"
+                        },
+                        "relationalDataFilter": "custodian eq 'NT'",
+                        "byTaxLots": {
+                          "left": true
+                        }
                       },
-                      "relationalDataFilter": "custodian eq 'NT'"
-                    }
-                  ],
+                      {
+                        "recType": "InputTransaction",
+                        "matchingRulesetId": {
+                          "scope": "Recs",
+                          "code": "CustodyTransactionRules"
+                        },
+                        "relationalDataFilter": "custodian eq 'NT'"
+                      }
+                    ],
+                    "definitionType": "PortfolioContents"
+                  },
                   "reviewConfiguration": {
                     "openExceptions": {
                       "reviewRequirement": "Required"
@@ -168120,56 +168130,58 @@
                   },
                   "displayName": "Daily Custody Reconciliation",
                   "description": "Daily reconciliation of UK equity fund holdings against custodian positions.",
-                  "definitionType": "PortfolioContents",
                   "sideNames": {
                     "left": "Investment Portfolios",
                     "right": "Custodian"
                   },
-                  "leftPortfolioSources": [
-                    {
-                      "sourceType": "PortfolioGroup",
-                      "id": {
-                        "scope": "Funds",
-                        "code": "UKEquityFunds"
+                  "details": {
+                    "leftPortfolioSources": [
+                      {
+                        "sourceType": "PortfolioGroup",
+                        "id": {
+                          "scope": "Funds",
+                          "code": "UKEquityFunds"
+                        }
                       }
-                    }
-                  ],
-                  "rightPortfolioSources": [],
-                  "valuationRecipes": {
-                    "left": {
-                      "scope": "Recipes",
-                      "code": "Default"
-                    },
-                    "right": {
-                      "scope": "Recipes",
-                      "code": "Default"
-                    }
-                  },
-                  "currencies": {
-                    "left": "GBP",
-                    "right": "USD"
-                  },
-                  "rulesets": [
-                    {
-                      "recType": "Holding",
-                      "matchingRulesetId": {
-                        "scope": "Recs",
-                        "code": "CustodyHoldingRules"
+                    ],
+                    "rightPortfolioSources": [],
+                    "valuationRecipes": {
+                      "left": {
+                        "scope": "Recipes",
+                        "code": "Default"
                       },
-                      "relationalDataFilter": "custodian eq 'NT'",
-                      "byTaxLots": {
-                        "left": true
+                      "right": {
+                        "scope": "Recipes",
+                        "code": "Default"
                       }
                     },
-                    {
-                      "recType": "InputTransaction",
-                      "matchingRulesetId": {
-                        "scope": "Recs",
-                        "code": "CustodyTransactionRules"
+                    "currencies": {
+                      "left": "GBP",
+                      "right": "USD"
+                    },
+                    "rulesets": [
+                      {
+                        "recType": "Holding",
+                        "matchingRulesetId": {
+                          "scope": "Recs",
+                          "code": "CustodyHoldingRules"
+                        },
+                        "relationalDataFilter": "custodian eq 'NT'",
+                        "byTaxLots": {
+                          "left": true
+                        }
                       },
-                      "relationalDataFilter": "custodian eq 'NT'"
-                    }
-                  ],
+                      {
+                        "recType": "InputTransaction",
+                        "matchingRulesetId": {
+                          "scope": "Recs",
+                          "code": "CustodyTransactionRules"
+                        },
+                        "relationalDataFilter": "custodian eq 'NT'"
+                      }
+                    ],
+                    "definitionType": "PortfolioContents"
+                  },
                   "reviewConfiguration": {
                     "openExceptions": {
                       "reviewRequirement": "Required"
@@ -168238,56 +168250,58 @@
                   },
                   "displayName": "Daily Custody Reconciliation",
                   "description": "Daily reconciliation of UK equity fund holdings against custodian positions.",
-                  "definitionType": "PortfolioContents",
                   "sideNames": {
                     "left": "Investment Portfolios",
                     "right": "Custodian"
                   },
-                  "leftPortfolioSources": [
-                    {
-                      "sourceType": "PortfolioGroup",
-                      "id": {
-                        "scope": "Funds",
-                        "code": "UKEquityFunds"
+                  "details": {
+                    "leftPortfolioSources": [
+                      {
+                        "sourceType": "PortfolioGroup",
+                        "id": {
+                          "scope": "Funds",
+                          "code": "UKEquityFunds"
+                        }
                       }
-                    }
-                  ],
-                  "rightPortfolioSources": [],
-                  "valuationRecipes": {
-                    "left": {
-                      "scope": "Recipes",
-                      "code": "Default"
-                    },
-                    "right": {
-                      "scope": "Recipes",
-                      "code": "Default"
-                    }
-                  },
-                  "currencies": {
-                    "left": "GBP",
-                    "right": "USD"
-                  },
-                  "rulesets": [
-                    {
-                      "recType": "Holding",
-                      "matchingRulesetId": {
-                        "scope": "Recs",
-                        "code": "CustodyHoldingRules"
+                    ],
+                    "rightPortfolioSources": [],
+                    "valuationRecipes": {
+                      "left": {
+                        "scope": "Recipes",
+                        "code": "Default"
                       },
-                      "relationalDataFilter": "custodian eq 'NT'",
-                      "byTaxLots": {
-                        "left": true
+                      "right": {
+                        "scope": "Recipes",
+                        "code": "Default"
                       }
                     },
-                    {
-                      "recType": "InputTransaction",
-                      "matchingRulesetId": {
-                        "scope": "Recs",
-                        "code": "CustodyTransactionRules"
+                    "currencies": {
+                      "left": "GBP",
+                      "right": "USD"
+                    },
+                    "rulesets": [
+                      {
+                        "recType": "Holding",
+                        "matchingRulesetId": {
+                          "scope": "Recs",
+                          "code": "CustodyHoldingRules"
+                        },
+                        "relationalDataFilter": "custodian eq 'NT'",
+                        "byTaxLots": {
+                          "left": true
+                        }
                       },
-                      "relationalDataFilter": "custodian eq 'NT'"
-                    }
-                  ],
+                      {
+                        "recType": "InputTransaction",
+                        "matchingRulesetId": {
+                          "scope": "Recs",
+                          "code": "CustodyTransactionRules"
+                        },
+                        "relationalDataFilter": "custodian eq 'NT'"
+                      }
+                    ],
+                    "definitionType": "PortfolioContents"
+                  },
                   "reviewConfiguration": {
                     "openExceptions": {
                       "reviewRequirement": "Required"
@@ -168595,56 +168609,58 @@
                   },
                   "displayName": "Daily Custody Reconciliation",
                   "description": "Daily reconciliation of UK equity fund holdings against custodian positions.",
-                  "definitionType": "PortfolioContents",
                   "sideNames": {
                     "left": "Investment Portfolios",
                     "right": "Custodian"
                   },
-                  "leftPortfolioSources": [
-                    {
-                      "sourceType": "PortfolioGroup",
-                      "id": {
-                        "scope": "Funds",
-                        "code": "UKEquityFunds"
+                  "details": {
+                    "leftPortfolioSources": [
+                      {
+                        "sourceType": "PortfolioGroup",
+                        "id": {
+                          "scope": "Funds",
+                          "code": "UKEquityFunds"
+                        }
                       }
-                    }
-                  ],
-                  "rightPortfolioSources": [],
-                  "valuationRecipes": {
-                    "left": {
-                      "scope": "Recipes",
-                      "code": "Default"
-                    },
-                    "right": {
-                      "scope": "Recipes",
-                      "code": "Default"
-                    }
-                  },
-                  "currencies": {
-                    "left": "GBP",
-                    "right": "USD"
-                  },
-                  "rulesets": [
-                    {
-                      "recType": "Holding",
-                      "matchingRulesetId": {
-                        "scope": "Recs",
-                        "code": "CustodyHoldingRules"
+                    ],
+                    "rightPortfolioSources": [],
+                    "valuationRecipes": {
+                      "left": {
+                        "scope": "Recipes",
+                        "code": "Default"
                       },
-                      "relationalDataFilter": "custodian eq 'NT'",
-                      "byTaxLots": {
-                        "left": true
+                      "right": {
+                        "scope": "Recipes",
+                        "code": "Default"
                       }
                     },
-                    {
-                      "recType": "InputTransaction",
-                      "matchingRulesetId": {
-                        "scope": "Recs",
-                        "code": "CustodyTransactionRules"
+                    "currencies": {
+                      "left": "GBP",
+                      "right": "USD"
+                    },
+                    "rulesets": [
+                      {
+                        "recType": "Holding",
+                        "matchingRulesetId": {
+                          "scope": "Recs",
+                          "code": "CustodyHoldingRules"
+                        },
+                        "relationalDataFilter": "custodian eq 'NT'",
+                        "byTaxLots": {
+                          "left": true
+                        }
                       },
-                      "relationalDataFilter": "custodian eq 'NT'"
-                    }
-                  ],
+                      {
+                        "recType": "InputTransaction",
+                        "matchingRulesetId": {
+                          "scope": "Recs",
+                          "code": "CustodyTransactionRules"
+                        },
+                        "relationalDataFilter": "custodian eq 'NT'"
+                      }
+                    ],
+                    "definitionType": "PortfolioContents"
+                  },
                   "reviewConfiguration": {
                     "openExceptions": {
                       "reviewRequirement": "Required"
@@ -168713,56 +168729,58 @@
                   },
                   "displayName": "Daily Custody Reconciliation",
                   "description": "Daily reconciliation of UK equity fund holdings against custodian positions.",
-                  "definitionType": "PortfolioContents",
                   "sideNames": {
                     "left": "Investment Portfolios",
                     "right": "Custodian"
                   },
-                  "leftPortfolioSources": [
-                    {
-                      "sourceType": "PortfolioGroup",
-                      "id": {
-                        "scope": "Funds",
-                        "code": "UKEquityFunds"
+                  "details": {
+                    "leftPortfolioSources": [
+                      {
+                        "sourceType": "PortfolioGroup",
+                        "id": {
+                          "scope": "Funds",
+                          "code": "UKEquityFunds"
+                        }
                       }
-                    }
-                  ],
-                  "rightPortfolioSources": [],
-                  "valuationRecipes": {
-                    "left": {
-                      "scope": "Recipes",
-                      "code": "Default"
-                    },
-                    "right": {
-                      "scope": "Recipes",
-                      "code": "Default"
-                    }
-                  },
-                  "currencies": {
-                    "left": "GBP",
-                    "right": "USD"
-                  },
-                  "rulesets": [
-                    {
-                      "recType": "Holding",
-                      "matchingRulesetId": {
-                        "scope": "Recs",
-                        "code": "CustodyHoldingRules"
+                    ],
+                    "rightPortfolioSources": [],
+                    "valuationRecipes": {
+                      "left": {
+                        "scope": "Recipes",
+                        "code": "Default"
                       },
-                      "relationalDataFilter": "custodian eq 'NT'",
-                      "byTaxLots": {
-                        "left": true
+                      "right": {
+                        "scope": "Recipes",
+                        "code": "Default"
                       }
                     },
-                    {
-                      "recType": "InputTransaction",
-                      "matchingRulesetId": {
-                        "scope": "Recs",
-                        "code": "CustodyTransactionRules"
+                    "currencies": {
+                      "left": "GBP",
+                      "right": "USD"
+                    },
+                    "rulesets": [
+                      {
+                        "recType": "Holding",
+                        "matchingRulesetId": {
+                          "scope": "Recs",
+                          "code": "CustodyHoldingRules"
+                        },
+                        "relationalDataFilter": "custodian eq 'NT'",
+                        "byTaxLots": {
+                          "left": true
+                        }
                       },
-                      "relationalDataFilter": "custodian eq 'NT'"
-                    }
-                  ],
+                      {
+                        "recType": "InputTransaction",
+                        "matchingRulesetId": {
+                          "scope": "Recs",
+                          "code": "CustodyTransactionRules"
+                        },
+                        "relationalDataFilter": "custodian eq 'NT'"
+                      }
+                    ],
+                    "definitionType": "PortfolioContents"
+                  },
                   "reviewConfiguration": {
                     "openExceptions": {
                       "reviewRequirement": "Required"
@@ -168831,56 +168849,58 @@
                   },
                   "displayName": "Daily Custody Reconciliation",
                   "description": "Daily reconciliation of UK equity fund holdings against custodian positions.",
-                  "definitionType": "PortfolioContents",
                   "sideNames": {
                     "left": "Investment Portfolios",
                     "right": "Custodian"
                   },
-                  "leftPortfolioSources": [
-                    {
-                      "sourceType": "PortfolioGroup",
-                      "id": {
-                        "scope": "Funds",
-                        "code": "UKEquityFunds"
+                  "details": {
+                    "leftPortfolioSources": [
+                      {
+                        "sourceType": "PortfolioGroup",
+                        "id": {
+                          "scope": "Funds",
+                          "code": "UKEquityFunds"
+                        }
                       }
-                    }
-                  ],
-                  "rightPortfolioSources": [],
-                  "valuationRecipes": {
-                    "left": {
-                      "scope": "Recipes",
-                      "code": "Default"
-                    },
-                    "right": {
-                      "scope": "Recipes",
-                      "code": "Default"
-                    }
-                  },
-                  "currencies": {
-                    "left": "GBP",
-                    "right": "USD"
-                  },
-                  "rulesets": [
-                    {
-                      "recType": "Holding",
-                      "matchingRulesetId": {
-                        "scope": "Recs",
-                        "code": "CustodyHoldingRules"
+                    ],
+                    "rightPortfolioSources": [],
+                    "valuationRecipes": {
+                      "left": {
+                        "scope": "Recipes",
+                        "code": "Default"
                       },
-                      "relationalDataFilter": "custodian eq 'NT'",
-                      "byTaxLots": {
-                        "left": true
+                      "right": {
+                        "scope": "Recipes",
+                        "code": "Default"
                       }
                     },
-                    {
-                      "recType": "InputTransaction",
-                      "matchingRulesetId": {
-                        "scope": "Recs",
-                        "code": "CustodyTransactionRules"
+                    "currencies": {
+                      "left": "GBP",
+                      "right": "USD"
+                    },
+                    "rulesets": [
+                      {
+                        "recType": "Holding",
+                        "matchingRulesetId": {
+                          "scope": "Recs",
+                          "code": "CustodyHoldingRules"
+                        },
+                        "relationalDataFilter": "custodian eq 'NT'",
+                        "byTaxLots": {
+                          "left": true
+                        }
                       },
-                      "relationalDataFilter": "custodian eq 'NT'"
-                    }
-                  ],
+                      {
+                        "recType": "InputTransaction",
+                        "matchingRulesetId": {
+                          "scope": "Recs",
+                          "code": "CustodyTransactionRules"
+                        },
+                        "relationalDataFilter": "custodian eq 'NT'"
+                      }
+                    ],
+                    "definitionType": "PortfolioContents"
+                  },
                   "reviewConfiguration": {
                     "openExceptions": {
                       "reviewRequirement": "Required"
@@ -169021,56 +169041,58 @@
               "example": {
                 "displayName": "Daily Custody Reconciliation",
                 "description": "Daily reconciliation of UK equity fund holdings against custodian positions.",
-                "definitionType": "PortfolioContents",
                 "sideNames": {
                   "left": "Investment Portfolios",
                   "right": "Custodian"
                 },
-                "leftPortfolioSources": [
-                  {
-                    "sourceType": "PortfolioGroup",
-                    "id": {
-                      "scope": "Funds",
-                      "code": "UKEquityFunds"
+                "details": {
+                  "leftPortfolioSources": [
+                    {
+                      "sourceType": "PortfolioGroup",
+                      "id": {
+                        "scope": "Funds",
+                        "code": "UKEquityFunds"
+                      }
                     }
-                  }
-                ],
-                "rightPortfolioSources": [],
-                "valuationRecipes": {
-                  "left": {
-                    "scope": "Recipes",
-                    "code": "Default"
-                  },
-                  "right": {
-                    "scope": "Recipes",
-                    "code": "Default"
-                  }
-                },
-                "currencies": {
-                  "left": "GBP",
-                  "right": "USD"
-                },
-                "rulesets": [
-                  {
-                    "recType": "Holding",
-                    "matchingRulesetId": {
-                      "scope": "Recs",
-                      "code": "CustodyHoldingRules"
+                  ],
+                  "rightPortfolioSources": [],
+                  "valuationRecipes": {
+                    "left": {
+                      "scope": "Recipes",
+                      "code": "Default"
                     },
-                    "relationalDataFilter": "custodian eq 'NT'",
-                    "byTaxLots": {
-                      "left": true
+                    "right": {
+                      "scope": "Recipes",
+                      "code": "Default"
                     }
                   },
-                  {
-                    "recType": "InputTransaction",
-                    "matchingRulesetId": {
-                      "scope": "Recs",
-                      "code": "CustodyTransactionRules"
+                  "currencies": {
+                    "left": "GBP",
+                    "right": "USD"
+                  },
+                  "rulesets": [
+                    {
+                      "recType": "Holding",
+                      "matchingRulesetId": {
+                        "scope": "Recs",
+                        "code": "CustodyHoldingRules"
+                      },
+                      "relationalDataFilter": "custodian eq 'NT'",
+                      "byTaxLots": {
+                        "left": true
+                      }
                     },
-                    "relationalDataFilter": "custodian eq 'NT'"
-                  }
-                ],
+                    {
+                      "recType": "InputTransaction",
+                      "matchingRulesetId": {
+                        "scope": "Recs",
+                        "code": "CustodyTransactionRules"
+                      },
+                      "relationalDataFilter": "custodian eq 'NT'"
+                    }
+                  ],
+                  "definitionType": "PortfolioContents"
+                },
                 "reviewConfiguration": {
                   "openExceptions": {
                     "reviewRequirement": "Required"
@@ -169130,56 +169152,58 @@
               "example": {
                 "displayName": "Daily Custody Reconciliation",
                 "description": "Daily reconciliation of UK equity fund holdings against custodian positions.",
-                "definitionType": "PortfolioContents",
                 "sideNames": {
                   "left": "Investment Portfolios",
                   "right": "Custodian"
                 },
-                "leftPortfolioSources": [
-                  {
-                    "sourceType": "PortfolioGroup",
-                    "id": {
-                      "scope": "Funds",
-                      "code": "UKEquityFunds"
+                "details": {
+                  "leftPortfolioSources": [
+                    {
+                      "sourceType": "PortfolioGroup",
+                      "id": {
+                        "scope": "Funds",
+                        "code": "UKEquityFunds"
+                      }
                     }
-                  }
-                ],
-                "rightPortfolioSources": [],
-                "valuationRecipes": {
-                  "left": {
-                    "scope": "Recipes",
-                    "code": "Default"
-                  },
-                  "right": {
-                    "scope": "Recipes",
-                    "code": "Default"
-                  }
-                },
-                "currencies": {
-                  "left": "GBP",
-                  "right": "USD"
-                },
-                "rulesets": [
-                  {
-                    "recType": "Holding",
-                    "matchingRulesetId": {
-                      "scope": "Recs",
-                      "code": "CustodyHoldingRules"
+                  ],
+                  "rightPortfolioSources": [],
+                  "valuationRecipes": {
+                    "left": {
+                      "scope": "Recipes",
+                      "code": "Default"
                     },
-                    "relationalDataFilter": "custodian eq 'NT'",
-                    "byTaxLots": {
-                      "left": true
+                    "right": {
+                      "scope": "Recipes",
+                      "code": "Default"
                     }
                   },
-                  {
-                    "recType": "InputTransaction",
-                    "matchingRulesetId": {
-                      "scope": "Recs",
-                      "code": "CustodyTransactionRules"
+                  "currencies": {
+                    "left": "GBP",
+                    "right": "USD"
+                  },
+                  "rulesets": [
+                    {
+                      "recType": "Holding",
+                      "matchingRulesetId": {
+                        "scope": "Recs",
+                        "code": "CustodyHoldingRules"
+                      },
+                      "relationalDataFilter": "custodian eq 'NT'",
+                      "byTaxLots": {
+                        "left": true
+                      }
                     },
-                    "relationalDataFilter": "custodian eq 'NT'"
-                  }
-                ],
+                    {
+                      "recType": "InputTransaction",
+                      "matchingRulesetId": {
+                        "scope": "Recs",
+                        "code": "CustodyTransactionRules"
+                      },
+                      "relationalDataFilter": "custodian eq 'NT'"
+                    }
+                  ],
+                  "definitionType": "PortfolioContents"
+                },
                 "reviewConfiguration": {
                   "openExceptions": {
                     "reviewRequirement": "Required"
@@ -169239,56 +169263,58 @@
               "example": {
                 "displayName": "Daily Custody Reconciliation",
                 "description": "Daily reconciliation of UK equity fund holdings against custodian positions.",
-                "definitionType": "PortfolioContents",
                 "sideNames": {
                   "left": "Investment Portfolios",
                   "right": "Custodian"
                 },
-                "leftPortfolioSources": [
-                  {
-                    "sourceType": "PortfolioGroup",
-                    "id": {
-                      "scope": "Funds",
-                      "code": "UKEquityFunds"
+                "details": {
+                  "leftPortfolioSources": [
+                    {
+                      "sourceType": "PortfolioGroup",
+                      "id": {
+                        "scope": "Funds",
+                        "code": "UKEquityFunds"
+                      }
                     }
-                  }
-                ],
-                "rightPortfolioSources": [],
-                "valuationRecipes": {
-                  "left": {
-                    "scope": "Recipes",
-                    "code": "Default"
-                  },
-                  "right": {
-                    "scope": "Recipes",
-                    "code": "Default"
-                  }
-                },
-                "currencies": {
-                  "left": "GBP",
-                  "right": "USD"
-                },
-                "rulesets": [
-                  {
-                    "recType": "Holding",
-                    "matchingRulesetId": {
-                      "scope": "Recs",
-                      "code": "CustodyHoldingRules"
+                  ],
+                  "rightPortfolioSources": [],
+                  "valuationRecipes": {
+                    "left": {
+                      "scope": "Recipes",
+                      "code": "Default"
                     },
-                    "relationalDataFilter": "custodian eq 'NT'",
-                    "byTaxLots": {
-                      "left": true
+                    "right": {
+                      "scope": "Recipes",
+                      "code": "Default"
                     }
                   },
-                  {
-                    "recType": "InputTransaction",
-                    "matchingRulesetId": {
-                      "scope": "Recs",
-                      "code": "CustodyTransactionRules"
+                  "currencies": {
+                    "left": "GBP",
+                    "right": "USD"
+                  },
+                  "rulesets": [
+                    {
+                      "recType": "Holding",
+                      "matchingRulesetId": {
+                        "scope": "Recs",
+                        "code": "CustodyHoldingRules"
+                      },
+                      "relationalDataFilter": "custodian eq 'NT'",
+                      "byTaxLots": {
+                        "left": true
+                      }
                     },
-                    "relationalDataFilter": "custodian eq 'NT'"
-                  }
-                ],
+                    {
+                      "recType": "InputTransaction",
+                      "matchingRulesetId": {
+                        "scope": "Recs",
+                        "code": "CustodyTransactionRules"
+                      },
+                      "relationalDataFilter": "custodian eq 'NT'"
+                    }
+                  ],
+                  "definitionType": "PortfolioContents"
+                },
                 "reviewConfiguration": {
                   "openExceptions": {
                     "reviewRequirement": "Required"
@@ -169348,56 +169374,58 @@
               "example": {
                 "displayName": "Daily Custody Reconciliation",
                 "description": "Daily reconciliation of UK equity fund holdings against custodian positions.",
-                "definitionType": "PortfolioContents",
                 "sideNames": {
                   "left": "Investment Portfolios",
                   "right": "Custodian"
                 },
-                "leftPortfolioSources": [
-                  {
-                    "sourceType": "PortfolioGroup",
-                    "id": {
-                      "scope": "Funds",
-                      "code": "UKEquityFunds"
+                "details": {
+                  "leftPortfolioSources": [
+                    {
+                      "sourceType": "PortfolioGroup",
+                      "id": {
+                        "scope": "Funds",
+                        "code": "UKEquityFunds"
+                      }
                     }
-                  }
-                ],
-                "rightPortfolioSources": [],
-                "valuationRecipes": {
-                  "left": {
-                    "scope": "Recipes",
-                    "code": "Default"
-                  },
-                  "right": {
-                    "scope": "Recipes",
-                    "code": "Default"
-                  }
-                },
-                "currencies": {
-                  "left": "GBP",
-                  "right": "USD"
-                },
-                "rulesets": [
-                  {
-                    "recType": "Holding",
-                    "matchingRulesetId": {
-                      "scope": "Recs",
-                      "code": "CustodyHoldingRules"
+                  ],
+                  "rightPortfolioSources": [],
+                  "valuationRecipes": {
+                    "left": {
+                      "scope": "Recipes",
+                      "code": "Default"
                     },
-                    "relationalDataFilter": "custodian eq 'NT'",
-                    "byTaxLots": {
-                      "left": true
+                    "right": {
+                      "scope": "Recipes",
+                      "code": "Default"
                     }
                   },
-                  {
-                    "recType": "InputTransaction",
-                    "matchingRulesetId": {
-                      "scope": "Recs",
-                      "code": "CustodyTransactionRules"
+                  "currencies": {
+                    "left": "GBP",
+                    "right": "USD"
+                  },
+                  "rulesets": [
+                    {
+                      "recType": "Holding",
+                      "matchingRulesetId": {
+                        "scope": "Recs",
+                        "code": "CustodyHoldingRules"
+                      },
+                      "relationalDataFilter": "custodian eq 'NT'",
+                      "byTaxLots": {
+                        "left": true
+                      }
                     },
-                    "relationalDataFilter": "custodian eq 'NT'"
-                  }
-                ],
+                    {
+                      "recType": "InputTransaction",
+                      "matchingRulesetId": {
+                        "scope": "Recs",
+                        "code": "CustodyTransactionRules"
+                      },
+                      "relationalDataFilter": "custodian eq 'NT'"
+                    }
+                  ],
+                  "definitionType": "PortfolioContents"
+                },
                 "reviewConfiguration": {
                   "openExceptions": {
                     "reviewRequirement": "Required"
@@ -169468,56 +169496,58 @@
                   },
                   "displayName": "Daily Custody Reconciliation",
                   "description": "Daily reconciliation of UK equity fund holdings against custodian positions.",
-                  "definitionType": "PortfolioContents",
                   "sideNames": {
                     "left": "Investment Portfolios",
                     "right": "Custodian"
                   },
-                  "leftPortfolioSources": [
-                    {
-                      "sourceType": "PortfolioGroup",
-                      "id": {
-                        "scope": "Funds",
-                        "code": "UKEquityFunds"
+                  "details": {
+                    "leftPortfolioSources": [
+                      {
+                        "sourceType": "PortfolioGroup",
+                        "id": {
+                          "scope": "Funds",
+                          "code": "UKEquityFunds"
+                        }
                       }
-                    }
-                  ],
-                  "rightPortfolioSources": [],
-                  "valuationRecipes": {
-                    "left": {
-                      "scope": "Recipes",
-                      "code": "Default"
-                    },
-                    "right": {
-                      "scope": "Recipes",
-                      "code": "Default"
-                    }
-                  },
-                  "currencies": {
-                    "left": "GBP",
-                    "right": "USD"
-                  },
-                  "rulesets": [
-                    {
-                      "recType": "Holding",
-                      "matchingRulesetId": {
-                        "scope": "Recs",
-                        "code": "CustodyHoldingRules"
+                    ],
+                    "rightPortfolioSources": [],
+                    "valuationRecipes": {
+                      "left": {
+                        "scope": "Recipes",
+                        "code": "Default"
                       },
-                      "relationalDataFilter": "custodian eq 'NT'",
-                      "byTaxLots": {
-                        "left": true
+                      "right": {
+                        "scope": "Recipes",
+                        "code": "Default"
                       }
                     },
-                    {
-                      "recType": "InputTransaction",
-                      "matchingRulesetId": {
-                        "scope": "Recs",
-                        "code": "CustodyTransactionRules"
+                    "currencies": {
+                      "left": "GBP",
+                      "right": "USD"
+                    },
+                    "rulesets": [
+                      {
+                        "recType": "Holding",
+                        "matchingRulesetId": {
+                          "scope": "Recs",
+                          "code": "CustodyHoldingRules"
+                        },
+                        "relationalDataFilter": "custodian eq 'NT'",
+                        "byTaxLots": {
+                          "left": true
+                        }
                       },
-                      "relationalDataFilter": "custodian eq 'NT'"
-                    }
-                  ],
+                      {
+                        "recType": "InputTransaction",
+                        "matchingRulesetId": {
+                          "scope": "Recs",
+                          "code": "CustodyTransactionRules"
+                        },
+                        "relationalDataFilter": "custodian eq 'NT'"
+                      }
+                    ],
+                    "definitionType": "PortfolioContents"
+                  },
                   "reviewConfiguration": {
                     "openExceptions": {
                       "reviewRequirement": "Required"
@@ -169586,56 +169616,58 @@
                   },
                   "displayName": "Daily Custody Reconciliation",
                   "description": "Daily reconciliation of UK equity fund holdings against custodian positions.",
-                  "definitionType": "PortfolioContents",
                   "sideNames": {
                     "left": "Investment Portfolios",
                     "right": "Custodian"
                   },
-                  "leftPortfolioSources": [
-                    {
-                      "sourceType": "PortfolioGroup",
-                      "id": {
-                        "scope": "Funds",
-                        "code": "UKEquityFunds"
+                  "details": {
+                    "leftPortfolioSources": [
+                      {
+                        "sourceType": "PortfolioGroup",
+                        "id": {
+                          "scope": "Funds",
+                          "code": "UKEquityFunds"
+                        }
                       }
-                    }
-                  ],
-                  "rightPortfolioSources": [],
-                  "valuationRecipes": {
-                    "left": {
-                      "scope": "Recipes",
-                      "code": "Default"
-                    },
-                    "right": {
-                      "scope": "Recipes",
-                      "code": "Default"
-                    }
-                  },
-                  "currencies": {
-                    "left": "GBP",
-                    "right": "USD"
-                  },
-                  "rulesets": [
-                    {
-                      "recType": "Holding",
-                      "matchingRulesetId": {
-                        "scope": "Recs",
-                        "code": "CustodyHoldingRules"
+                    ],
+                    "rightPortfolioSources": [],
+                    "valuationRecipes": {
+                      "left": {
+                        "scope": "Recipes",
+                        "code": "Default"
                       },
-                      "relationalDataFilter": "custodian eq 'NT'",
-                      "byTaxLots": {
-                        "left": true
+                      "right": {
+                        "scope": "Recipes",
+                        "code": "Default"
                       }
                     },
-                    {
-                      "recType": "InputTransaction",
-                      "matchingRulesetId": {
-                        "scope": "Recs",
-                        "code": "CustodyTransactionRules"
+                    "currencies": {
+                      "left": "GBP",
+                      "right": "USD"
+                    },
+                    "rulesets": [
+                      {
+                        "recType": "Holding",
+                        "matchingRulesetId": {
+                          "scope": "Recs",
+                          "code": "CustodyHoldingRules"
+                        },
+                        "relationalDataFilter": "custodian eq 'NT'",
+                        "byTaxLots": {
+                          "left": true
+                        }
                       },
-                      "relationalDataFilter": "custodian eq 'NT'"
-                    }
-                  ],
+                      {
+                        "recType": "InputTransaction",
+                        "matchingRulesetId": {
+                          "scope": "Recs",
+                          "code": "CustodyTransactionRules"
+                        },
+                        "relationalDataFilter": "custodian eq 'NT'"
+                      }
+                    ],
+                    "definitionType": "PortfolioContents"
+                  },
                   "reviewConfiguration": {
                     "openExceptions": {
                       "reviewRequirement": "Required"
@@ -169704,56 +169736,58 @@
                   },
                   "displayName": "Daily Custody Reconciliation",
                   "description": "Daily reconciliation of UK equity fund holdings against custodian positions.",
-                  "definitionType": "PortfolioContents",
                   "sideNames": {
                     "left": "Investment Portfolios",
                     "right": "Custodian"
                   },
-                  "leftPortfolioSources": [
-                    {
-                      "sourceType": "PortfolioGroup",
-                      "id": {
-                        "scope": "Funds",
-                        "code": "UKEquityFunds"
+                  "details": {
+                    "leftPortfolioSources": [
+                      {
+                        "sourceType": "PortfolioGroup",
+                        "id": {
+                          "scope": "Funds",
+                          "code": "UKEquityFunds"
+                        }
                       }
-                    }
-                  ],
-                  "rightPortfolioSources": [],
-                  "valuationRecipes": {
-                    "left": {
-                      "scope": "Recipes",
-                      "code": "Default"
-                    },
-                    "right": {
-                      "scope": "Recipes",
-                      "code": "Default"
-                    }
-                  },
-                  "currencies": {
-                    "left": "GBP",
-                    "right": "USD"
-                  },
-                  "rulesets": [
-                    {
-                      "recType": "Holding",
-                      "matchingRulesetId": {
-                        "scope": "Recs",
-                        "code": "CustodyHoldingRules"
+                    ],
+                    "rightPortfolioSources": [],
+                    "valuationRecipes": {
+                      "left": {
+                        "scope": "Recipes",
+                        "code": "Default"
                       },
-                      "relationalDataFilter": "custodian eq 'NT'",
-                      "byTaxLots": {
-                        "left": true
+                      "right": {
+                        "scope": "Recipes",
+                        "code": "Default"
                       }
                     },
-                    {
-                      "recType": "InputTransaction",
-                      "matchingRulesetId": {
-                        "scope": "Recs",
-                        "code": "CustodyTransactionRules"
+                    "currencies": {
+                      "left": "GBP",
+                      "right": "USD"
+                    },
+                    "rulesets": [
+                      {
+                        "recType": "Holding",
+                        "matchingRulesetId": {
+                          "scope": "Recs",
+                          "code": "CustodyHoldingRules"
+                        },
+                        "relationalDataFilter": "custodian eq 'NT'",
+                        "byTaxLots": {
+                          "left": true
+                        }
                       },
-                      "relationalDataFilter": "custodian eq 'NT'"
-                    }
-                  ],
+                      {
+                        "recType": "InputTransaction",
+                        "matchingRulesetId": {
+                          "scope": "Recs",
+                          "code": "CustodyTransactionRules"
+                        },
+                        "relationalDataFilter": "custodian eq 'NT'"
+                      }
+                    ],
+                    "definitionType": "PortfolioContents"
+                  },
                   "reviewConfiguration": {
                     "openExceptions": {
                       "reviewRequirement": "Required"
@@ -261800,10 +261834,9 @@
       },
       "CreateRecDefinitionRequest": {
         "required": [
-          "definitionType",
+          "details",
           "displayName",
-          "id",
-          "rulesets"
+          "id"
         ],
         "type": "object",
         "properties": {
@@ -261823,46 +261856,11 @@
             "description": "A description of the rec definition.",
             "nullable": true
           },
-          "definitionType": {
-            "minLength": 1,
-            "type": "string",
-            "description": "What this definition reconciles, naming the kind of dataset that must be present on at least one side. Only PortfolioContents is currently supported. Available values: PortfolioContents, LusidEntity, RelationalData."
-          },
           "sideNames": {
             "$ref": "#/components/schemas/RecDefSideNames"
           },
-          "leftPortfolioSources": {
-            "maxItems": 100,
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/RecDefSource"
-            },
-            "description": "The portfolios, portfolio groups and funds contributing to the left side. Empty when the left side draws on relational data instead, which requires every ruleset to declare relational data for that side. Both sides cannot be empty.",
-            "nullable": true
-          },
-          "rightPortfolioSources": {
-            "maxItems": 100,
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/RecDefSource"
-            },
-            "description": "The portfolios, portfolio groups and funds contributing to the right side. Empty when the right side draws on relational data instead, which requires every ruleset to declare relational data for that side. Both sides cannot be empty.",
-            "nullable": true
-          },
-          "valuationRecipes": {
-            "$ref": "#/components/schemas/RecDefRecipeIds"
-          },
-          "currencies": {
-            "$ref": "#/components/schemas/RecDefCurrencies"
-          },
-          "rulesets": {
-            "maxItems": 10,
-            "minItems": 1,
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/RecDefRuleset"
-            },
-            "description": "The types of reconciliation included in the group, each naming the matching ruleset that drives it. At least one entry is required, and each rec type may appear at most once."
+          "details": {
+            "$ref": "#/components/schemas/RecDefinitionDetails"
           },
           "reviewConfiguration": {
             "$ref": "#/components/schemas/RecReviewConfiguration"
@@ -272313,6 +272311,39 @@
           }
         },
         "additionalProperties": false
+      },
+      "ExternalRecDefinitionDetails": {
+        "required": [
+          "definitionType",
+          "matchingRulesetId"
+        ],
+        "type": "object",
+        "properties": {
+          "matchingRulesetId": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "leftFilter": {
+            "maxLength": 16384,
+            "minLength": 0,
+            "type": "string",
+            "description": "Optional filter over the left dataset's rows, in the dataset's own grammar, e.g. \"Values[custodian] eq 'something'\".",
+            "nullable": true
+          },
+          "rightFilter": {
+            "maxLength": 16384,
+            "minLength": 0,
+            "type": "string",
+            "description": "Optional filter over the right dataset's rows, in the dataset's own grammar.",
+            "nullable": true
+          },
+          "definitionType": {
+            "minLength": 1,
+            "type": "string",
+            "description": "What this definition reconciles, and so which shape of details it carries. PortfolioContents and External are supported; LusidEntity is not yet. Available values: PortfolioContents, LusidEntity, External."
+          }
+        },
+        "additionalProperties": false,
+        "description": "A definition reconciling relational data on both sides, driven by a single External matching ruleset."
       },
       "ExternalRecType": {
         "required": [
@@ -306323,6 +306354,55 @@
         },
         "additionalProperties": false
       },
+      "PortfolioContentsRecDefinitionDetails": {
+        "required": [
+          "definitionType",
+          "leftPortfolioSources",
+          "rightPortfolioSources",
+          "rulesets"
+        ],
+        "type": "object",
+        "properties": {
+          "leftPortfolioSources": {
+            "maxItems": 100,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RecDefSource"
+            },
+            "description": "The portfolios, portfolio groups and funds contributing to the left side. Empty when the left side draws on relational data instead, which requires every ruleset to declare relational data for that side. Both sides cannot be empty."
+          },
+          "rightPortfolioSources": {
+            "maxItems": 100,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RecDefSource"
+            },
+            "description": "The portfolios, portfolio groups and funds contributing to the right side. Empty when the right side draws on relational data instead, which requires every ruleset to declare relational data for that side. Both sides cannot be empty."
+          },
+          "valuationRecipes": {
+            "$ref": "#/components/schemas/RecDefRecipeIds"
+          },
+          "currencies": {
+            "$ref": "#/components/schemas/RecDefCurrencies"
+          },
+          "rulesets": {
+            "maxItems": 10,
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RecDefRuleset"
+            },
+            "description": "The types of reconciliation included in the group, each naming the matching ruleset that drives it. At least one entry is required, and each rec type may appear at most once."
+          },
+          "definitionType": {
+            "minLength": 1,
+            "type": "string",
+            "description": "What this definition reconciles, and so which shape of details it carries. PortfolioContents and External are supported; LusidEntity is not yet. Available values: PortfolioContents, LusidEntity, External."
+          }
+        },
+        "additionalProperties": false,
+        "description": "A definition reconciling the contents of LUSID portfolios on at least one side, with a relational dataset\r\npermitted on the other."
+      },
       "PortfolioDetails": {
         "required": [
           "baseCurrency",
@@ -313432,13 +313512,10 @@
       "RecDefinition": {
         "required": [
           "datePolicy",
-          "definitionType",
+          "details",
           "displayName",
           "id",
-          "leftPortfolioSources",
-          "reviewConfiguration",
-          "rightPortfolioSources",
-          "rulesets"
+          "reviewConfiguration"
         ],
         "type": "object",
         "properties": {
@@ -313455,40 +313532,11 @@
             "description": "A description of the rec definition.",
             "nullable": true
           },
-          "definitionType": {
-            "minLength": 1,
-            "type": "string",
-            "description": "What this definition reconciles, naming the kind of dataset that must be present on at least one side. Only PortfolioContents is currently supported. Available values: PortfolioContents, LusidEntity, RelationalData."
-          },
           "sideNames": {
             "$ref": "#/components/schemas/RecDefSideNames"
           },
-          "leftPortfolioSources": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/RecDefSource"
-            },
-            "description": "The portfolios, portfolio groups and funds contributing to the left side. Empty when the left side draws on relational data instead, which requires every ruleset to declare relational data for that side. Both sides cannot be empty."
-          },
-          "rightPortfolioSources": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/RecDefSource"
-            },
-            "description": "The portfolios, portfolio groups and funds contributing to the right side. Empty when the right side draws on relational data instead, which requires every ruleset to declare relational data for that side. Both sides cannot be empty."
-          },
-          "valuationRecipes": {
-            "$ref": "#/components/schemas/RecDefRecipeIds"
-          },
-          "currencies": {
-            "$ref": "#/components/schemas/RecDefCurrencies"
-          },
-          "rulesets": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/RecDefRuleset"
-            },
-            "description": "The types of reconciliation included in the group, each naming the matching ruleset that drives it. At least one entry is required, and each rec type may appear at most once."
+          "details": {
+            "$ref": "#/components/schemas/RecDefinitionDetails"
           },
           "reviewConfiguration": {
             "$ref": "#/components/schemas/RecReviewConfiguration"
@@ -313522,6 +313570,36 @@
           }
         },
         "additionalProperties": false
+      },
+      "RecDefinitionDetails": {
+        "required": [
+          "definitionType"
+        ],
+        "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/ExternalRecDefinitionDetails"
+          },
+          {
+            "$ref": "#/components/schemas/PortfolioContentsRecDefinitionDetails"
+          }
+        ],
+        "properties": {
+          "definitionType": {
+            "minLength": 1,
+            "type": "string",
+            "description": "What this definition reconciles, and so which shape of details it carries. PortfolioContents and External are supported; LusidEntity is not yet. Available values: PortfolioContents, LusidEntity, External."
+          }
+        },
+        "additionalProperties": false,
+        "description": "Base class for the part of a rec definition whose shape depends on what it reconciles. Polymorphic by\r\ndefinitionType; each supported type has a corresponding inherited class.",
+        "discriminator": {
+          "propertyName": "definitionType",
+          "mapping": {
+            "PortfolioContents": "#/components/schemas/PortfolioContentsRecDefinitionDetails",
+            "External": "#/components/schemas/ExternalRecDefinitionDetails"
+          }
+        }
       },
       "RecDefRecipeIds": {
         "required": [
@@ -314675,6 +314753,11 @@
             "type": "string",
             "description": "The type of rec that the result belongs to (e.g. Holding). Available values: Holding, CashHolding, Valuation, InputTransaction, OutputTransaction, SettlementActivity, External."
           },
+          "externalRecTypeName": {
+            "type": "string",
+            "description": "The client's name for an External rec type, as stamped from the matching ruleset's externalRecType when the run executed. Null for native rec types. Filterable.",
+            "nullable": true
+          },
           "instanceId": {
             "$ref": "#/components/schemas/RecInstanceId"
           },
@@ -314984,7 +315067,7 @@
           "itemType": {
             "minLength": 1,
             "type": "string",
-            "description": "The polymorphic item-type discriminator: Holding, ValuedHolding, Transaction or SettlementActivity. Names the item rather than the rec type: Holding and CashHolding recs produce Holding items, a Valuation rec produces ValuedHolding items, and both transaction rec types produce Transaction items. Available values: SettlementActivity, Holding, Transaction, ValuedHolding."
+            "description": "The polymorphic item-type discriminator: Holding, ValuedHolding, Transaction, SettlementActivity or RelationalDataPoint. Names the item rather than the rec type: Holding and CashHolding recs produce Holding items, a Valuation rec produces ValuedHolding items, both transaction rec types produce Transaction items, and a relational dataset side produces RelationalDataPoint items whatever the rec type. Available values: SettlementActivity, Holding, Transaction, ValuedHolding, RelationalDataPoint."
           },
           "ruleAndAttributeValues": {
             "type": "object",
@@ -315018,6 +315101,9 @@
             "$ref": "#/components/schemas/RecResultHoldingItem"
           },
           {
+            "$ref": "#/components/schemas/RecResultRelationalDataItem"
+          },
+          {
             "$ref": "#/components/schemas/RecResultSettlementActivityItem"
           },
           {
@@ -315028,7 +315114,7 @@
           "itemType": {
             "minLength": 1,
             "type": "string",
-            "description": "The polymorphic item-type discriminator: Holding, ValuedHolding, Transaction or SettlementActivity. Names the item rather than the rec type: Holding and CashHolding recs produce Holding items, a Valuation rec produces ValuedHolding items, and both transaction rec types produce Transaction items. Available values: SettlementActivity, Holding, Transaction, ValuedHolding."
+            "description": "The polymorphic item-type discriminator: Holding, ValuedHolding, Transaction, SettlementActivity or RelationalDataPoint. Names the item rather than the rec type: Holding and CashHolding recs produce Holding items, a Valuation rec produces ValuedHolding items, both transaction rec types produce Transaction items, and a relational dataset side produces RelationalDataPoint items whatever the rec type. Available values: SettlementActivity, Holding, Transaction, ValuedHolding, RelationalDataPoint."
           },
           "ruleAndAttributeValues": {
             "type": "object",
@@ -315056,7 +315142,8 @@
             "Holding": "#/components/schemas/RecResultHoldingItem",
             "ValuedHolding": "#/components/schemas/RecResultHoldingItem",
             "Transaction": "#/components/schemas/RecResultTransactionItem",
-            "SettlementActivity": "#/components/schemas/RecResultSettlementActivityItem"
+            "SettlementActivity": "#/components/schemas/RecResultSettlementActivityItem",
+            "RelationalDataPoint": "#/components/schemas/RecResultRelationalDataItem"
           }
         }
       },
@@ -315119,6 +315206,49 @@
         "additionalProperties": false,
         "description": "One item pairing that established a link between two rec results: the identifiers both results' items carried.\r\nExactly one of holdingId and transactionId is populated; taxLotId only ever accompanies a holdingId, and only\r\nwhere the pairing was established at tax-lot precision."
       },
+      "RecResultRelationalDataItem": {
+        "required": [
+          "itemType",
+          "relationalDataPointUniqueId",
+          "relationalDatasetDefinitionId",
+          "writebackSuggestions"
+        ],
+        "type": "object",
+        "properties": {
+          "relationalDatasetDefinitionId": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "relationalDataPointUniqueId": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The unique id of the relational data point the run read, as minted by the relational dataset store. Opaque: compare it whole, do not parse it."
+          },
+          "itemType": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The polymorphic item-type discriminator: Holding, ValuedHolding, Transaction, SettlementActivity or RelationalDataPoint. Names the item rather than the rec type: Holding and CashHolding recs produce Holding items, a Valuation rec produces ValuedHolding items, both transaction rec types produce Transaction items, and a relational dataset side produces RelationalDataPoint items whatever the rec type. Available values: SettlementActivity, Holding, Transaction, ValuedHolding, RelationalDataPoint."
+          },
+          "ruleAndAttributeValues": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string",
+              "nullable": true
+            },
+            "description": "The core rule, aggregate rule and supplemental attribute values for the item, keyed by name.",
+            "nullable": true
+          },
+          "writebackSuggestions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/WritebackSuggestion"
+            },
+            "description": "The writebacks suggested against this item, as configured by the matching ruleset's writebackConfigurations. Only ever populated on target-side items. Suggestions only: a user is expected to review them before acting. Required, but may be empty.",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "A relational data point item within a rec result: one row of a relational dataset. The dataset and the unique\r\nid of the data point identify the row. All rec types use this item shape."
+      },
       "RecResultReview": {
         "required": [
           "status"
@@ -315164,6 +315294,11 @@
             "minLength": 1,
             "type": "string",
             "description": "The type of rec that this result set belongs to (e.g. Holding). Together with the rec instance, this uniquely identifies the result set. Available values: Holding, CashHolding, Valuation, InputTransaction, OutputTransaction, SettlementActivity, External."
+          },
+          "externalRecTypeName": {
+            "type": "string",
+            "description": "The client's name for an External rec type, as stamped from the matching ruleset's externalRecType when the run executed. Null for native rec types. Filterable.",
+            "nullable": true
           },
           "recInstance": {
             "$ref": "#/components/schemas/RecInstanceSummary"
@@ -315318,7 +315453,7 @@
           "itemType": {
             "minLength": 1,
             "type": "string",
-            "description": "The polymorphic item-type discriminator: Holding, ValuedHolding, Transaction or SettlementActivity. Names the item rather than the rec type: Holding and CashHolding recs produce Holding items, a Valuation rec produces ValuedHolding items, and both transaction rec types produce Transaction items. Available values: SettlementActivity, Holding, Transaction, ValuedHolding."
+            "description": "The polymorphic item-type discriminator: Holding, ValuedHolding, Transaction, SettlementActivity or RelationalDataPoint. Names the item rather than the rec type: Holding and CashHolding recs produce Holding items, a Valuation rec produces ValuedHolding items, both transaction rec types produce Transaction items, and a relational dataset side produces RelationalDataPoint items whatever the rec type. Available values: SettlementActivity, Holding, Transaction, ValuedHolding, RelationalDataPoint."
           },
           "ruleAndAttributeValues": {
             "type": "object",
@@ -315369,7 +315504,7 @@
           "itemType": {
             "minLength": 1,
             "type": "string",
-            "description": "The polymorphic item-type discriminator: Holding, ValuedHolding, Transaction or SettlementActivity. Names the item rather than the rec type: Holding and CashHolding recs produce Holding items, a Valuation rec produces ValuedHolding items, and both transaction rec types produce Transaction items. Available values: SettlementActivity, Holding, Transaction, ValuedHolding."
+            "description": "The polymorphic item-type discriminator: Holding, ValuedHolding, Transaction, SettlementActivity or RelationalDataPoint. Names the item rather than the rec type: Holding and CashHolding recs produce Holding items, a Valuation rec produces ValuedHolding items, both transaction rec types produce Transaction items, and a relational dataset side produces RelationalDataPoint items whatever the rec type. Available values: SettlementActivity, Holding, Transaction, ValuedHolding, RelationalDataPoint."
           },
           "ruleAndAttributeValues": {
             "type": "object",
@@ -334341,9 +334476,8 @@
       },
       "UpdateRecDefinitionRequest": {
         "required": [
-          "definitionType",
-          "displayName",
-          "rulesets"
+          "details",
+          "displayName"
         ],
         "type": "object",
         "properties": {
@@ -334360,46 +334494,11 @@
             "description": "A description of the rec definition.",
             "nullable": true
           },
-          "definitionType": {
-            "minLength": 1,
-            "type": "string",
-            "description": "What this definition reconciles, naming the kind of dataset that must be present on at least one side. Only PortfolioContents is currently supported. Available values: PortfolioContents, LusidEntity, RelationalData."
-          },
           "sideNames": {
             "$ref": "#/components/schemas/RecDefSideNames"
           },
-          "leftPortfolioSources": {
-            "maxItems": 100,
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/RecDefSource"
-            },
-            "description": "The portfolios, portfolio groups and funds contributing to the left side. Empty when the left side draws on relational data instead, which requires every ruleset to declare relational data for that side. Both sides cannot be empty.",
-            "nullable": true
-          },
-          "rightPortfolioSources": {
-            "maxItems": 100,
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/RecDefSource"
-            },
-            "description": "The portfolios, portfolio groups and funds contributing to the right side. Empty when the right side draws on relational data instead, which requires every ruleset to declare relational data for that side. Both sides cannot be empty.",
-            "nullable": true
-          },
-          "valuationRecipes": {
-            "$ref": "#/components/schemas/RecDefRecipeIds"
-          },
-          "currencies": {
-            "$ref": "#/components/schemas/RecDefCurrencies"
-          },
-          "rulesets": {
-            "maxItems": 10,
-            "minItems": 1,
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/RecDefRuleset"
-            },
-            "description": "The types of reconciliation included in the group, each naming the matching ruleset that drives it. At least one entry is required, and each rec type may appear at most once."
+          "details": {
+            "$ref": "#/components/schemas/RecDefinitionDetails"
           },
           "reviewConfiguration": {
             "$ref": "#/components/schemas/RecReviewConfiguration"
@@ -340113,7 +340212,7 @@
           },
           "type": {
             "minLength": 1,
-            "pattern": "^(luminesce-saved-query|lusid-web-rebalance-control-panel|lusid-web-dashboard|lusid-web-dashboard-set|mesa-dashboard|mesa-source-factory|lusid-web-favourites)$",
+            "pattern": "^(luminesce-saved-query|luminesce-multi-query|lusid-web-rebalance-control-panel|lusid-web-rebalance-in-progress|lusid-web-dashboard|lusid-web-dashboard-set|mesa-dashboard|mesa-source-factory|lusid-web-favourites)$",
             "type": "string",
             "description": "The type of the workspace item."
           }
@@ -340147,7 +340246,7 @@
           },
           "type": {
             "minLength": 1,
-            "pattern": "^(luminesce-saved-query|lusid-web-rebalance-control-panel|lusid-web-dashboard|lusid-web-dashboard-set|mesa-dashboard|mesa-source-factory|lusid-web-favourites)$",
+            "pattern": "^(luminesce-saved-query|luminesce-multi-query|lusid-web-rebalance-control-panel|lusid-web-rebalance-in-progress|lusid-web-dashboard|lusid-web-dashboard-set|mesa-dashboard|mesa-source-factory|lusid-web-favourites)$",
             "type": "string",
             "description": "The type of the workspace item."
           }

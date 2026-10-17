@@ -701,6 +701,7 @@ export * from './expandedGroup';
 export * from './expiryEvent';
 export * from './expiryEventAllOf';
 export * from './externalFeeComponentFilter';
+export * from './externalRecDefinitionDetails';
 export * from './externalRecType';
 export * from './facility';
 export * from './facilityCommitmentFeeEvent';
@@ -1408,6 +1409,7 @@ export * from './pnlJournalEntryLine';
 export * from './portfolio';
 export * from './portfolioCashFlow';
 export * from './portfolioCashLadder';
+export * from './portfolioContentsRecDefinitionDetails';
 export * from './portfolioDetails';
 export * from './portfolioEntity';
 export * from './portfolioEntityId';
@@ -1567,6 +1569,7 @@ export * from './recDefRuleset';
 export * from './recDefSideNames';
 export * from './recDefSource';
 export * from './recDefinition';
+export * from './recDefinitionDetails';
 export * from './recExceptionCountByClosureType';
 export * from './recExceptionCountByResultType';
 export * from './recExecution';
@@ -1592,6 +1595,7 @@ export * from './recResultHoldingItem';
 export * from './recResultItem';
 export * from './recResultItemDetails';
 export * from './recResultLinkKey';
+export * from './recResultRelationalDataItem';
 export * from './recResultReview';
 export * from './recResultSet';
 export * from './recResultSetApprovalDecisionRequest';
@@ -2964,6 +2968,7 @@ import { ExpandedGroup } from './expandedGroup';
 import { ExpiryEvent } from './expiryEvent';
 import { ExpiryEventAllOf } from './expiryEventAllOf';
 import { ExternalFeeComponentFilter } from './externalFeeComponentFilter';
+import { ExternalRecDefinitionDetails } from './externalRecDefinitionDetails';
 import { ExternalRecType } from './externalRecType';
 import { Facility } from './facility';
 import { FacilityCommitmentFeeEvent } from './facilityCommitmentFeeEvent';
@@ -3671,6 +3676,7 @@ import { PnlJournalEntryLine } from './pnlJournalEntryLine';
 import { Portfolio } from './portfolio';
 import { PortfolioCashFlow } from './portfolioCashFlow';
 import { PortfolioCashLadder } from './portfolioCashLadder';
+import { PortfolioContentsRecDefinitionDetails } from './portfolioContentsRecDefinitionDetails';
 import { PortfolioDetails } from './portfolioDetails';
 import { PortfolioEntity } from './portfolioEntity';
 import { PortfolioEntityId } from './portfolioEntityId';
@@ -3830,6 +3836,7 @@ import { RecDefRuleset } from './recDefRuleset';
 import { RecDefSideNames } from './recDefSideNames';
 import { RecDefSource } from './recDefSource';
 import { RecDefinition } from './recDefinition';
+import { RecDefinitionDetails } from './recDefinitionDetails';
 import { RecExceptionCountByClosureType } from './recExceptionCountByClosureType';
 import { RecExceptionCountByResultType } from './recExceptionCountByResultType';
 import { RecExecution } from './recExecution';
@@ -3855,6 +3862,7 @@ import { RecResultHoldingItem } from './recResultHoldingItem';
 import { RecResultItem } from './recResultItem';
 import { RecResultItemDetails } from './recResultItemDetails';
 import { RecResultLinkKey } from './recResultLinkKey';
+import { RecResultRelationalDataItem } from './recResultRelationalDataItem';
 import { RecResultReview } from './recResultReview';
 import { RecResultSet } from './recResultSet';
 import { RecResultSetApprovalDecisionRequest } from './recResultSetApprovalDecisionRequest';
@@ -6037,6 +6045,7 @@ let typeMap: {[index: string]: any} = {
     "ExpiryEvent": ExpiryEvent,
     "ExpiryEventAllOf": ExpiryEventAllOf,
     "ExternalFeeComponentFilter": ExternalFeeComponentFilter,
+    "ExternalRecDefinitionDetails": ExternalRecDefinitionDetails,
     "ExternalRecType": ExternalRecType,
     "Facility": Facility,
     "FacilityCommitmentFeeEvent": FacilityCommitmentFeeEvent,
@@ -6723,6 +6732,7 @@ let typeMap: {[index: string]: any} = {
     "Portfolio": Portfolio,
     "PortfolioCashFlow": PortfolioCashFlow,
     "PortfolioCashLadder": PortfolioCashLadder,
+    "PortfolioContentsRecDefinitionDetails": PortfolioContentsRecDefinitionDetails,
     "PortfolioDetails": PortfolioDetails,
     "PortfolioEntity": PortfolioEntity,
     "PortfolioEntityId": PortfolioEntityId,
@@ -6871,6 +6881,7 @@ let typeMap: {[index: string]: any} = {
     "RecDefSideNames": RecDefSideNames,
     "RecDefSource": RecDefSource,
     "RecDefinition": RecDefinition,
+    "RecDefinitionDetails": RecDefinitionDetails,
     "RecExceptionCountByClosureType": RecExceptionCountByClosureType,
     "RecExceptionCountByResultType": RecExceptionCountByResultType,
     "RecExecution": RecExecution,
@@ -6896,6 +6907,7 @@ let typeMap: {[index: string]: any} = {
     "RecResultItem": RecResultItem,
     "RecResultItemDetails": RecResultItemDetails,
     "RecResultLinkKey": RecResultLinkKey,
+    "RecResultRelationalDataItem": RecResultRelationalDataItem,
     "RecResultReview": RecResultReview,
     "RecResultSet": RecResultSet,
     "RecResultSetApprovalDecisionRequest": RecResultSetApprovalDecisionRequest,
