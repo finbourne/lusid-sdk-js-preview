@@ -12,6 +12,7 @@ export * from './aborProperties';
 export * from './aborRequest';
 export * from './abstainElection';
 export * from './acceptEstimateValuationPointResponse';
+export * from './acceptMarginCallRequest';
 export * from './accessControlledAction';
 export * from './accessControlledResource';
 export * from './accessMetadataOperation';
@@ -164,6 +165,8 @@ export * from './barrier';
 export * from './basket';
 export * from './basketAllOf';
 export * from './basketIdentifier';
+export * from './batchAcceptMarginCallsRequest';
+export * from './batchAcceptMarginCallsResponse';
 export * from './batchAdjustHoldingsResponse';
 export * from './batchAmendCustomDataModelMembershipResponse';
 export * from './batchAmendTransactionSettlementInstructionResponse';
@@ -623,6 +626,7 @@ export * from './discountFactorCurveDataAllOf';
 export * from './discountingDependency';
 export * from './discountingDependencyAllOf';
 export * from './discountingMethod';
+export * from './disputeMarginCallRequest';
 export * from './dividendOptionEvent';
 export * from './dividendOptionEventAllOf';
 export * from './dividendReinvestmentEvent';
@@ -1101,8 +1105,16 @@ export * from './mapping';
 export * from './mappingRule';
 export * from './marginAccounts';
 export * from './marginCalculation';
+export * from './marginCall';
+export * from './marginCallKey';
+export * from './marginCallReference';
 export * from './marginItem';
+export * from './marginLine';
 export * from './marginRounding';
+export * from './marginRun';
+export * from './marginRunIssue';
+export * from './marginRunRequest';
+export * from './marginRunShard';
 export * from './marginSettlementLag';
 export * from './markToMarketConventions';
 export * from './marketContext';
@@ -1293,6 +1305,9 @@ export * from './pagedResourceListOfInstrumentEventHolder';
 export * from './pagedResourceListOfInstrumentEventInstruction';
 export * from './pagedResourceListOfItemAndWorkspace';
 export * from './pagedResourceListOfLegalEntity';
+export * from './pagedResourceListOfMarginCall';
+export * from './pagedResourceListOfMarginLine';
+export * from './pagedResourceListOfMarginRun';
 export * from './pagedResourceListOfMatchingRuleset';
 export * from './pagedResourceListOfOrder';
 export * from './pagedResourceListOfOrderBreachHistory';
@@ -1637,6 +1652,7 @@ export * from './reconciliationRule';
 export * from './reconciliationRuleType';
 export * from './reconciliationSideConfiguration';
 export * from './reconciliationTransactions';
+export * from './recordCounterpartyDemandRequest';
 export * from './recyclingTerms';
 export * from './referenceData';
 export * from './referenceInstrument';
@@ -2279,6 +2295,7 @@ import { AborProperties } from './aborProperties';
 import { AborRequest } from './aborRequest';
 import { AbstainElection } from './abstainElection';
 import { AcceptEstimateValuationPointResponse } from './acceptEstimateValuationPointResponse';
+import { AcceptMarginCallRequest } from './acceptMarginCallRequest';
 import { AccessControlledAction } from './accessControlledAction';
 import { AccessControlledResource } from './accessControlledResource';
 import { AccessMetadataOperation } from './accessMetadataOperation';
@@ -2431,6 +2448,8 @@ import { Barrier } from './barrier';
 import { Basket } from './basket';
 import { BasketAllOf } from './basketAllOf';
 import { BasketIdentifier } from './basketIdentifier';
+import { BatchAcceptMarginCallsRequest } from './batchAcceptMarginCallsRequest';
+import { BatchAcceptMarginCallsResponse } from './batchAcceptMarginCallsResponse';
 import { BatchAdjustHoldingsResponse } from './batchAdjustHoldingsResponse';
 import { BatchAmendCustomDataModelMembershipResponse } from './batchAmendCustomDataModelMembershipResponse';
 import { BatchAmendTransactionSettlementInstructionResponse } from './batchAmendTransactionSettlementInstructionResponse';
@@ -2890,6 +2909,7 @@ import { DiscountFactorCurveDataAllOf } from './discountFactorCurveDataAllOf';
 import { DiscountingDependency } from './discountingDependency';
 import { DiscountingDependencyAllOf } from './discountingDependencyAllOf';
 import { DiscountingMethod } from './discountingMethod';
+import { DisputeMarginCallRequest } from './disputeMarginCallRequest';
 import { DividendOptionEvent } from './dividendOptionEvent';
 import { DividendOptionEventAllOf } from './dividendOptionEventAllOf';
 import { DividendReinvestmentEvent } from './dividendReinvestmentEvent';
@@ -3368,8 +3388,16 @@ import { Mapping } from './mapping';
 import { MappingRule } from './mappingRule';
 import { MarginAccounts } from './marginAccounts';
 import { MarginCalculation } from './marginCalculation';
+import { MarginCall } from './marginCall';
+import { MarginCallKey } from './marginCallKey';
+import { MarginCallReference } from './marginCallReference';
 import { MarginItem } from './marginItem';
+import { MarginLine } from './marginLine';
 import { MarginRounding } from './marginRounding';
+import { MarginRun } from './marginRun';
+import { MarginRunIssue } from './marginRunIssue';
+import { MarginRunRequest } from './marginRunRequest';
+import { MarginRunShard } from './marginRunShard';
 import { MarginSettlementLag } from './marginSettlementLag';
 import { MarkToMarketConventions } from './markToMarketConventions';
 import { MarketContext } from './marketContext';
@@ -3560,6 +3588,9 @@ import { PagedResourceListOfInstrumentEventHolder } from './pagedResourceListOfI
 import { PagedResourceListOfInstrumentEventInstruction } from './pagedResourceListOfInstrumentEventInstruction';
 import { PagedResourceListOfItemAndWorkspace } from './pagedResourceListOfItemAndWorkspace';
 import { PagedResourceListOfLegalEntity } from './pagedResourceListOfLegalEntity';
+import { PagedResourceListOfMarginCall } from './pagedResourceListOfMarginCall';
+import { PagedResourceListOfMarginLine } from './pagedResourceListOfMarginLine';
+import { PagedResourceListOfMarginRun } from './pagedResourceListOfMarginRun';
 import { PagedResourceListOfMatchingRuleset } from './pagedResourceListOfMatchingRuleset';
 import { PagedResourceListOfOrder } from './pagedResourceListOfOrder';
 import { PagedResourceListOfOrderBreachHistory } from './pagedResourceListOfOrderBreachHistory';
@@ -3904,6 +3935,7 @@ import { ReconciliationRule } from './reconciliationRule';
 import { ReconciliationRuleType } from './reconciliationRuleType';
 import { ReconciliationSideConfiguration } from './reconciliationSideConfiguration';
 import { ReconciliationTransactions } from './reconciliationTransactions';
+import { RecordCounterpartyDemandRequest } from './recordCounterpartyDemandRequest';
 import { RecyclingTerms } from './recyclingTerms';
 import { ReferenceData } from './referenceData';
 import { ReferenceInstrument } from './referenceInstrument';
@@ -5373,6 +5405,7 @@ let typeMap: {[index: string]: any} = {
     "AborRequest": AborRequest,
     "AbstainElection": AbstainElection,
     "AcceptEstimateValuationPointResponse": AcceptEstimateValuationPointResponse,
+    "AcceptMarginCallRequest": AcceptMarginCallRequest,
     "AccessControlledAction": AccessControlledAction,
     "AccessControlledResource": AccessControlledResource,
     "AccessMetadataOperation": AccessMetadataOperation,
@@ -5520,6 +5553,8 @@ let typeMap: {[index: string]: any} = {
     "Basket": Basket,
     "BasketAllOf": BasketAllOf,
     "BasketIdentifier": BasketIdentifier,
+    "BatchAcceptMarginCallsRequest": BatchAcceptMarginCallsRequest,
+    "BatchAcceptMarginCallsResponse": BatchAcceptMarginCallsResponse,
     "BatchAdjustHoldingsResponse": BatchAdjustHoldingsResponse,
     "BatchAmendCustomDataModelMembershipResponse": BatchAmendCustomDataModelMembershipResponse,
     "BatchAmendTransactionSettlementInstructionResponse": BatchAmendTransactionSettlementInstructionResponse,
@@ -5968,6 +6003,7 @@ let typeMap: {[index: string]: any} = {
     "DiscountFactorCurveDataAllOf": DiscountFactorCurveDataAllOf,
     "DiscountingDependency": DiscountingDependency,
     "DiscountingDependencyAllOf": DiscountingDependencyAllOf,
+    "DisputeMarginCallRequest": DisputeMarginCallRequest,
     "DividendOptionEvent": DividendOptionEvent,
     "DividendOptionEventAllOf": DividendOptionEventAllOf,
     "DividendReinvestmentEvent": DividendReinvestmentEvent,
@@ -6439,8 +6475,16 @@ let typeMap: {[index: string]: any} = {
     "MappingRule": MappingRule,
     "MarginAccounts": MarginAccounts,
     "MarginCalculation": MarginCalculation,
+    "MarginCall": MarginCall,
+    "MarginCallKey": MarginCallKey,
+    "MarginCallReference": MarginCallReference,
     "MarginItem": MarginItem,
+    "MarginLine": MarginLine,
     "MarginRounding": MarginRounding,
+    "MarginRun": MarginRun,
+    "MarginRunIssue": MarginRunIssue,
+    "MarginRunRequest": MarginRunRequest,
+    "MarginRunShard": MarginRunShard,
     "MarginSettlementLag": MarginSettlementLag,
     "MarkToMarketConventions": MarkToMarketConventions,
     "MarketContext": MarketContext,
@@ -6618,6 +6662,9 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfInstrumentEventInstruction": PagedResourceListOfInstrumentEventInstruction,
     "PagedResourceListOfItemAndWorkspace": PagedResourceListOfItemAndWorkspace,
     "PagedResourceListOfLegalEntity": PagedResourceListOfLegalEntity,
+    "PagedResourceListOfMarginCall": PagedResourceListOfMarginCall,
+    "PagedResourceListOfMarginLine": PagedResourceListOfMarginLine,
+    "PagedResourceListOfMarginRun": PagedResourceListOfMarginRun,
     "PagedResourceListOfMatchingRuleset": PagedResourceListOfMatchingRuleset,
     "PagedResourceListOfOrder": PagedResourceListOfOrder,
     "PagedResourceListOfOrderBreachHistory": PagedResourceListOfOrderBreachHistory,
@@ -6948,6 +6995,7 @@ let typeMap: {[index: string]: any} = {
     "ReconciliationRule": ReconciliationRule,
     "ReconciliationSideConfiguration": ReconciliationSideConfiguration,
     "ReconciliationTransactions": ReconciliationTransactions,
+    "RecordCounterpartyDemandRequest": RecordCounterpartyDemandRequest,
     "RecyclingTerms": RecyclingTerms,
     "ReferenceData": ReferenceData,
     "ReferenceInstrument": ReferenceInstrument,

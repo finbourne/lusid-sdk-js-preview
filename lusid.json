@@ -9,7 +9,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "2.0.1705",
+    "version": "2.0.1706",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -26104,6 +26104,1675 @@
           }
         ],
         "x-fbn-apistatus": "EarlyAccess"
+      }
+    },
+    "/api/collateral/$run": {
+      "post": {
+        "tags": [
+          "Collateral"
+        ],
+        "summary": "[EXPERIMENTAL] RunMarginCalculation: Run the margin calculation.",
+        "description": "Value the collateral agreements for a business date in the background and publish their margin calls as a run.\r\nThe run is returned as planned; poll GetMarginRun for its progress, and list its calls as they are published.",
+        "operationId": "RunMarginCalculation",
+        "requestBody": {
+          "description": "The business date to value, and optionally the asAt and the agreements to include.",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/MarginRunRequest"
+              },
+              "example": {
+                "effectiveAt": "2026-09-04",
+                "agreementFilter": "CounterpartyId.Code eq '5493001KJTIIGC8Y1R12'"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MarginRunRequest"
+              },
+              "example": {
+                "effectiveAt": "2026-09-04",
+                "agreementFilter": "CounterpartyId.Code eq '5493001KJTIIGC8Y1R12'"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MarginRunRequest"
+              },
+              "example": {
+                "effectiveAt": "2026-09-04",
+                "agreementFilter": "CounterpartyId.Code eq '5493001KJTIIGC8Y1R12'"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/MarginRunRequest"
+              },
+              "example": {
+                "effectiveAt": "2026-09-04",
+                "agreementFilter": "CounterpartyId.Code eq '5493001KJTIIGC8Y1R12'"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "202": {
+            "description": "The margin run as planned.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MarginRun"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MarginRun"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MarginRun"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      }
+    },
+    "/api/collateral/margincalls": {
+      "get": {
+        "tags": [
+          "Collateral"
+        ],
+        "summary": "[EXPERIMENTAL] ListMarginCalls: List margin calls.",
+        "description": "List the margin calls of one run when a run id is given. Otherwise list the current calls for a business date:\r\nthose of the latest run for the date, with an agreement that run could not value served from the most recent run\r\nthat did. Restricted to the agreements the caller may read.",
+        "operationId": "ListMarginCalls",
+        "parameters": [
+          {
+            "name": "effectiveAt",
+            "in": "query",
+            "description": "The business date, datetime or cut label to list the current margin calls for. Defaults to today if not specified. Ignored when a run id is given.",
+            "schema": {
+              "type": "string",
+              "format": "dateorcutlabel"
+            }
+          },
+          {
+            "name": "runId",
+            "in": "query",
+            "description": "The identifier of the margin run to list the calls of. Lists the current calls for the business date if not specified.",
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "The pagination token to use to continue listing margin calls; this value is returned from the previous call.",
+            "schema": {
+              "maxLength": 500,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\+/]*={0,3}$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "When paginating, limit the results to this number. Defaults to 100 if not specified.",
+            "schema": {
+              "maximum": 5000,
+              "minimum": 1,
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-nullable": true
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Expression to filter the results. The filterable fields are RunId, AgreementId.Scope, AgreementId.Code, Counterparty.Code, Counterparty.IdTypeScope, Counterparty.IdTypeCode, Item, MarginType, Method, Settlement, Direction, Currency, Required, Held, Call, CounterpartyDemand, Difference, MatchStatus, AgreedAmount, DisputedAmount, DisputeOwner, State and Deadline. For example, to find the breaks, specify \"MatchStatus eq 'Break'\". For more information about filtering results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
+            "schema": {
+              "maxLength": 16384,
+              "minLength": 0,
+              "pattern": "^[\\s\\S]*$",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The requested margin calls.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedResourceListOfMarginCall"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedResourceListOfMarginCall"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedResourceListOfMarginCall"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      }
+    },
+    "/api/collateral/margincalls/$batchAccept": {
+      "post": {
+        "tags": [
+          "Collateral"
+        ],
+        "summary": "[EXPERIMENTAL] BatchAcceptMarginCalls: Accept several margin calls.",
+        "description": "Accept each of the given margin calls at its default agreed amount. A call that cannot be accepted is reported\r\nin the response and does not stop the others.",
+        "operationId": "BatchAcceptMarginCalls",
+        "requestBody": {
+          "description": "The margin calls to accept.",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BatchAcceptMarginCallsRequest"
+              },
+              "example": {
+                "calls": [
+                  {
+                    "runId": "20260904-20260904170500000000",
+                    "agreementScope": "Margin",
+                    "agreementCode": "CSA-ACME-2024",
+                    "item": "vm-csa",
+                    "marginType": "VariationMargin",
+                    "direction": "WePost"
+                  },
+                  {
+                    "runId": "20260904-20260904170500000000",
+                    "agreementScope": "Margin",
+                    "agreementCode": "CSA-BETA-2024",
+                    "item": "vm-csa",
+                    "marginType": "VariationMargin",
+                    "direction": "TheyPost"
+                  }
+                ]
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BatchAcceptMarginCallsRequest"
+              },
+              "example": {
+                "calls": [
+                  {
+                    "runId": "20260904-20260904170500000000",
+                    "agreementScope": "Margin",
+                    "agreementCode": "CSA-ACME-2024",
+                    "item": "vm-csa",
+                    "marginType": "VariationMargin",
+                    "direction": "WePost"
+                  },
+                  {
+                    "runId": "20260904-20260904170500000000",
+                    "agreementScope": "Margin",
+                    "agreementCode": "CSA-BETA-2024",
+                    "item": "vm-csa",
+                    "marginType": "VariationMargin",
+                    "direction": "TheyPost"
+                  }
+                ]
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BatchAcceptMarginCallsRequest"
+              },
+              "example": {
+                "calls": [
+                  {
+                    "runId": "20260904-20260904170500000000",
+                    "agreementScope": "Margin",
+                    "agreementCode": "CSA-ACME-2024",
+                    "item": "vm-csa",
+                    "marginType": "VariationMargin",
+                    "direction": "WePost"
+                  },
+                  {
+                    "runId": "20260904-20260904170500000000",
+                    "agreementScope": "Margin",
+                    "agreementCode": "CSA-BETA-2024",
+                    "item": "vm-csa",
+                    "marginType": "VariationMargin",
+                    "direction": "TheyPost"
+                  }
+                ]
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BatchAcceptMarginCallsRequest"
+              },
+              "example": {
+                "calls": [
+                  {
+                    "runId": "20260904-20260904170500000000",
+                    "agreementScope": "Margin",
+                    "agreementCode": "CSA-ACME-2024",
+                    "item": "vm-csa",
+                    "marginType": "VariationMargin",
+                    "direction": "WePost"
+                  },
+                  {
+                    "runId": "20260904-20260904170500000000",
+                    "agreementScope": "Margin",
+                    "agreementCode": "CSA-BETA-2024",
+                    "item": "vm-csa",
+                    "marginType": "VariationMargin",
+                    "direction": "TheyPost"
+                  }
+                ]
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "The calls accepted, and those that could not be.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BatchAcceptMarginCallsResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BatchAcceptMarginCallsResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BatchAcceptMarginCallsResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      }
+    },
+    "/api/collateral/margincalls/{runId}/{agreementScope}/{agreementCode}/{item}/{marginType}/{direction}": {
+      "get": {
+        "tags": [
+          "Collateral"
+        ],
+        "summary": "[EXPERIMENTAL] GetMarginCall: Get a margin call.",
+        "description": "Retrieve one margin call of a run by its business key.",
+        "operationId": "GetMarginCall",
+        "parameters": [
+          {
+            "name": "runId",
+            "in": "path",
+            "description": "The identifier of the margin run.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "agreementScope",
+            "in": "path",
+            "description": "The scope of the call's collateral agreement.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "agreementCode",
+            "in": "path",
+            "description": "The code of the call's collateral agreement.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "item",
+            "in": "path",
+            "description": "The margin item of the call.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "marginType",
+            "in": "path",
+            "description": "The margin type of the call. Currently VariationMargin.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "direction",
+            "in": "path",
+            "description": "Who posts under the call. One of WePost, TheyPost or None.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The requested margin call.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MarginCall"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MarginCall"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MarginCall"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      }
+    },
+    "/api/collateral/margincalls/{runId}/{agreementScope}/{agreementCode}/{item}/{marginType}/{direction}/$accept": {
+      "post": {
+        "tags": [
+          "Collateral"
+        ],
+        "summary": "[EXPERIMENTAL] AcceptMarginCall: Accept a margin call.",
+        "description": "Accept a margin call at the agreed amount: our figure when matched, the counterparty's when within tolerance, or\r\nthe amount given, which is required when the demand breaks tolerance or has not been recorded. Allowed from the\r\ncalculated and disputed states.",
+        "operationId": "AcceptMarginCall",
+        "parameters": [
+          {
+            "name": "runId",
+            "in": "path",
+            "description": "The identifier of the margin run.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "agreementScope",
+            "in": "path",
+            "description": "The scope of the call's collateral agreement.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "agreementCode",
+            "in": "path",
+            "description": "The code of the call's collateral agreement.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "item",
+            "in": "path",
+            "description": "The margin item of the call.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "marginType",
+            "in": "path",
+            "description": "The margin type of the call. Currently VariationMargin.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "direction",
+            "in": "path",
+            "description": "Who posts under the call. One of WePost, TheyPost or None.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The amount to accept, when the default does not apply.",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcceptMarginCallRequest"
+              },
+              "example": {
+                "agreedAmount": 612300
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcceptMarginCallRequest"
+              },
+              "example": {
+                "agreedAmount": 612300
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcceptMarginCallRequest"
+              },
+              "example": {
+                "agreedAmount": 612300
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcceptMarginCallRequest"
+              },
+              "example": {
+                "agreedAmount": 612300
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The accepted margin call.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MarginCall"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MarginCall"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MarginCall"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      }
+    },
+    "/api/collateral/margincalls/{runId}/{agreementScope}/{agreementCode}/{item}/{marginType}/{direction}/$dispute": {
+      "post": {
+        "tags": [
+          "Collateral"
+        ],
+        "summary": "[EXPERIMENTAL] DisputeMarginCall: Dispute a margin call.",
+        "description": "Dispute a margin call: move the agreed amount now and leave the rest of the counterparty's demand in dispute,\r\nwith a reason and an owner. Allowed from the calculated and accepted states.",
+        "operationId": "DisputeMarginCall",
+        "parameters": [
+          {
+            "name": "runId",
+            "in": "path",
+            "description": "The identifier of the margin run.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "agreementScope",
+            "in": "path",
+            "description": "The scope of the call's collateral agreement.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "agreementCode",
+            "in": "path",
+            "description": "The code of the call's collateral agreement.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "item",
+            "in": "path",
+            "description": "The margin item of the call.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "marginType",
+            "in": "path",
+            "description": "The margin type of the call. Currently VariationMargin.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "direction",
+            "in": "path",
+            "description": "Who posts under the call. One of WePost, TheyPost or None.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The amount to move now, the reason and the owner.",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DisputeMarginCallRequest"
+              },
+              "example": {
+                "agreedAmount": 600000,
+                "reason": "Their 10y IRS is valued off a stale curve",
+                "owner": "j.okafor"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DisputeMarginCallRequest"
+              },
+              "example": {
+                "agreedAmount": 600000,
+                "reason": "Their 10y IRS is valued off a stale curve",
+                "owner": "j.okafor"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DisputeMarginCallRequest"
+              },
+              "example": {
+                "agreedAmount": 600000,
+                "reason": "Their 10y IRS is valued off a stale curve",
+                "owner": "j.okafor"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DisputeMarginCallRequest"
+              },
+              "example": {
+                "agreedAmount": 600000,
+                "reason": "Their 10y IRS is valued off a stale curve",
+                "owner": "j.okafor"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "The disputed margin call.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MarginCall"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MarginCall"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MarginCall"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      }
+    },
+    "/api/collateral/margincalls/{runId}/{agreementScope}/{agreementCode}/{item}/{marginType}/{direction}/$recordCounterpartyDemand": {
+      "post": {
+        "tags": [
+          "Collateral"
+        ],
+        "summary": "[EXPERIMENTAL] RecordCounterpartyDemand: Record the counterparty's demand against a margin call.",
+        "description": "Record the counterparty's figure for a margin call and match it to ours: equal is matched, a difference within the\r\nagreement's tolerance is within tolerance, and a larger difference is a break. The call's state is not changed,\r\nexcept that a call already accepted or disputed returns to calculated when its demand changes.",
+        "operationId": "RecordCounterpartyDemand",
+        "parameters": [
+          {
+            "name": "runId",
+            "in": "path",
+            "description": "The identifier of the margin run.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "agreementScope",
+            "in": "path",
+            "description": "The scope of the call's collateral agreement.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "agreementCode",
+            "in": "path",
+            "description": "The code of the call's collateral agreement.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "item",
+            "in": "path",
+            "description": "The margin item of the call.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "marginType",
+            "in": "path",
+            "description": "The margin type of the call. Currently VariationMargin.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "direction",
+            "in": "path",
+            "description": "Who posts under the call. One of WePost, TheyPost or None.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The counterparty's demand.",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RecordCounterpartyDemandRequest"
+              },
+              "example": {
+                "amount": 612300,
+                "receivedAt": "2026-09-04T07:10:00.0000000+00:00",
+                "statementReference": "drive://collateral/inbound/acme-vm-2026-09-04.pdf",
+                "note": "Statement received by email"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RecordCounterpartyDemandRequest"
+              },
+              "example": {
+                "amount": 612300,
+                "receivedAt": "2026-09-04T07:10:00.0000000+00:00",
+                "statementReference": "drive://collateral/inbound/acme-vm-2026-09-04.pdf",
+                "note": "Statement received by email"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RecordCounterpartyDemandRequest"
+              },
+              "example": {
+                "amount": 612300,
+                "receivedAt": "2026-09-04T07:10:00.0000000+00:00",
+                "statementReference": "drive://collateral/inbound/acme-vm-2026-09-04.pdf",
+                "note": "Statement received by email"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RecordCounterpartyDemandRequest"
+              },
+              "example": {
+                "amount": 612300,
+                "receivedAt": "2026-09-04T07:10:00.0000000+00:00",
+                "statementReference": "drive://collateral/inbound/acme-vm-2026-09-04.pdf",
+                "note": "Statement received by email"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "The margin call with the demand matched against it.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MarginCall"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MarginCall"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MarginCall"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      }
+    },
+    "/api/collateral/margincalls/{runId}/{agreementScope}/{agreementCode}/{item}/{marginType}/{direction}/lines": {
+      "get": {
+        "tags": [
+          "Collateral"
+        ],
+        "summary": "[EXPERIMENTAL] ListMarginCallLines: List the margin lines of a call.",
+        "description": "List the holding lines behind one margin call: our side of the figure the counterparty's statement is matched against.",
+        "operationId": "ListMarginCallLines",
+        "parameters": [
+          {
+            "name": "runId",
+            "in": "path",
+            "description": "The identifier of the margin run.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "agreementScope",
+            "in": "path",
+            "description": "The scope of the call's collateral agreement.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "agreementCode",
+            "in": "path",
+            "description": "The code of the call's collateral agreement.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "item",
+            "in": "path",
+            "description": "The margin item of the call.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "marginType",
+            "in": "path",
+            "description": "The margin type of the call. Currently VariationMargin.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "direction",
+            "in": "path",
+            "description": "Who posts under the call. One of WePost, TheyPost or None.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "The pagination token to use to continue listing margin lines; this value is returned from the previous call.",
+            "schema": {
+              "maxLength": 500,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\+/]*={0,3}$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "When paginating, limit the results to this number. Defaults to 100 if not specified.",
+            "schema": {
+              "maximum": 5000,
+              "minimum": 1,
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-nullable": true
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Expression to filter the results. The filterable fields are PortfolioId.Scope, PortfolioId.Code, HoldingId, CustodianAccountScope, CustodianAccountCode, CustodianAccountName, Units, Pv, VariationMargin and CollateralValue. For more information about filtering results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
+            "schema": {
+              "maxLength": 16384,
+              "minLength": 0,
+              "pattern": "^[\\s\\S]*$",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The requested margin lines.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedResourceListOfMarginLine"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedResourceListOfMarginLine"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedResourceListOfMarginLine"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      }
+    },
+    "/api/collateral/runs": {
+      "get": {
+        "tags": [
+          "Collateral"
+        ],
+        "summary": "[EXPERIMENTAL] ListMarginRuns: List margin runs.",
+        "description": "List the margin runs on record, most recent first.",
+        "operationId": "ListMarginRuns",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "The pagination token to use to continue listing margin runs; this value is returned from the previous call.",
+            "schema": {
+              "maxLength": 500,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\+/]*={0,3}$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "When paginating, limit the results to this number. Defaults to 100 if not specified.",
+            "schema": {
+              "maximum": 5000,
+              "minimum": 1,
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-nullable": true
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Expression to filter the results. The filterable fields are Id, EffectiveAt, AsAt, Status, CallCount and LineCount. For example, to find the runs for a business date, specify \"EffectiveAt eq 2026-09-04\". For more information about filtering results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
+            "schema": {
+              "maxLength": 16384,
+              "minLength": 0,
+              "pattern": "^[\\s\\S]*$",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The requested margin runs.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedResourceListOfMarginRun"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedResourceListOfMarginRun"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedResourceListOfMarginRun"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      }
+    },
+    "/api/collateral/runs/{runId}": {
+      "get": {
+        "tags": [
+          "Collateral"
+        ],
+        "summary": "[EXPERIMENTAL] GetMarginRun: Get a margin run.",
+        "description": "Retrieve a margin run with its progress: the status of each shard, the calls and lines published so far, and\r\nanything it could not value.",
+        "operationId": "GetMarginRun",
+        "parameters": [
+          {
+            "name": "runId",
+            "in": "path",
+            "description": "The identifier of the margin run.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The requested margin run.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MarginRun"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MarginRun"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MarginRun"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      }
+    },
+    "/api/collateral/runs/{runId}/$retry": {
+      "post": {
+        "tags": [
+          "Collateral"
+        ],
+        "summary": "[EXPERIMENTAL] RetryMarginRun: Retry a margin run.",
+        "description": "Value the failed shards of a completed margin run again, at the run's asAt. Refused while the run is in progress\r\nor when no shard failed.",
+        "operationId": "RetryMarginRun",
+        "parameters": [
+          {
+            "name": "runId",
+            "in": "path",
+            "description": "The identifier of the margin run.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "The margin run with its failed shards pending again.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MarginRun"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MarginRun"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MarginRun"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      }
+    },
+    "/api/collateral/runs/{runId}/lines": {
+      "get": {
+        "tags": [
+          "Collateral"
+        ],
+        "summary": "[EXPERIMENTAL] ListMarginLines: List the margin lines of a run.",
+        "description": "List the holding lines behind every margin call of a run, restricted to the agreements the caller may read.",
+        "operationId": "ListMarginLines",
+        "parameters": [
+          {
+            "name": "runId",
+            "in": "path",
+            "description": "The identifier of the margin run.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "The pagination token to use to continue listing margin lines; this value is returned from the previous call.",
+            "schema": {
+              "maxLength": 500,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\+/]*={0,3}$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "When paginating, limit the results to this number. Defaults to 100 if not specified.",
+            "schema": {
+              "maximum": 5000,
+              "minimum": 1,
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-nullable": true
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Expression to filter the results. The filterable fields are AgreementId.Scope, AgreementId.Code, Item, PortfolioId.Scope, PortfolioId.Code, HoldingId, CustodianAccountScope, CustodianAccountCode, CustodianAccountName, Units, Pv, VariationMargin and CollateralValue. For more information about filtering results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
+            "schema": {
+              "maxLength": 16384,
+              "minLength": 0,
+              "pattern": "^[\\s\\S]*$",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The requested margin lines.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedResourceListOfMarginLine"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedResourceListOfMarginLine"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedResourceListOfMarginLine"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
       }
     },
     "/api/collateralagreements": {
@@ -238574,6 +240243,19 @@
         "additionalProperties": false,
         "description": "The Valuation Point Data Response for AcceptEstimate called on the Fund and specified date."
       },
+      "AcceptMarginCallRequest": {
+        "type": "object",
+        "properties": {
+          "agreedAmount": {
+            "type": "number",
+            "description": "The amount to accept. Optional when the call is matched or within tolerance, when our call or the counterparty's demand is taken; required when the demand breaks tolerance or has not been recorded.",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Accepts a margin call, at its default agreed amount or the amount given."
+      },
       "AccessControlledAction": {
         "required": [
           "action",
@@ -244856,6 +246538,48 @@
         },
         "additionalProperties": false,
         "description": "Descriptive information that describes a particular basket of instruments. Most commonly required with a CDS Index or similarly defined instrument."
+      },
+      "BatchAcceptMarginCallsRequest": {
+        "required": [
+          "calls"
+        ],
+        "type": "object",
+        "properties": {
+          "calls": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MarginCallKey"
+            },
+            "description": "The calls to accept, each at its default agreed amount. A call that cannot be accepted is reported in failed and does not stop the others."
+          }
+        },
+        "additionalProperties": false,
+        "description": "Accepts several margin calls at their default agreed amounts, reporting the ones that could not be accepted."
+      },
+      "BatchAcceptMarginCallsResponse": {
+        "required": [
+          "failed",
+          "values"
+        ],
+        "type": "object",
+        "properties": {
+          "values": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MarginCall"
+            },
+            "description": "The calls that were accepted."
+          },
+          "failed": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/ErrorDetail"
+            },
+            "description": "The calls that could not be accepted, keyed by call id, with the reason."
+          }
+        },
+        "additionalProperties": false,
+        "description": "The outcome of accepting several margin calls: those accepted, and those refused with the reason."
       },
       "BatchAdjustHoldingsResponse": {
         "type": "object",
@@ -267948,6 +269672,37 @@
           "Invalid"
         ],
         "type": "string"
+      },
+      "DisputeMarginCallRequest": {
+        "required": [
+          "agreedAmount",
+          "reason"
+        ],
+        "type": "object",
+        "properties": {
+          "agreedAmount": {
+            "type": "number",
+            "description": "The amount to move now; the rest of the counterparty's demand is left in dispute.",
+            "format": "double"
+          },
+          "reason": {
+            "maxLength": 1024,
+            "minLength": 0,
+            "pattern": "^[\\s\\S]*$",
+            "type": "string",
+            "description": "Why the call is disputed."
+          },
+          "owner": {
+            "maxLength": 1024,
+            "minLength": 0,
+            "pattern": "^[\\s\\S]*$",
+            "type": "string",
+            "description": "Who owns the dispute. Defaults to the caller if not specified.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Disputes a margin call: moves the agreed amount now and leaves the rest of the demand in dispute."
       },
       "DividendOptionEvent": {
         "allOf": [
@@ -292825,6 +294580,290 @@
         "additionalProperties": false,
         "description": "How the margin requirement for an item is calculated. The method field selects the method and the\r\nremaining fields are the ones that method uses."
       },
+      "MarginCall": {
+        "required": [
+          "agreementId",
+          "call",
+          "currency",
+          "direction",
+          "held",
+          "id",
+          "item",
+          "marginType",
+          "matchStatus",
+          "required",
+          "runId",
+          "state"
+        ],
+        "type": "object",
+        "properties": {
+          "href": {
+            "type": "string",
+            "description": "The URI of this margin call.",
+            "format": "uri",
+            "nullable": true
+          },
+          "id": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The identifier of the call: the run id and the call's business key joined with '/'."
+          },
+          "runId": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The run that produced the call. Filterable."
+          },
+          "agreementId": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "counterparty": {
+            "$ref": "#/components/schemas/CounterpartyIdentifier"
+          },
+          "item": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The margin item of the agreement the call is for. Filterable."
+          },
+          "marginType": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The type of margin called. Currently VariationMargin. Filterable."
+          },
+          "method": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The calculation method of the margin item.",
+            "nullable": true
+          },
+          "settlement": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "Whether the item is settled or collateralised.",
+            "nullable": true
+          },
+          "direction": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "Who posts: WePost, TheyPost or None when the exposure is flat. Filterable."
+          },
+          "currency": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The currency of the call, the agreement's base currency. Filterable."
+          },
+          "required": {
+            "type": "number",
+            "description": "The margin required under the agreement, signed as the call.",
+            "format": "double"
+          },
+          "held": {
+            "type": "number",
+            "description": "The collateral already held against the item, signed as the call.",
+            "format": "double"
+          },
+          "call": {
+            "type": "number",
+            "description": "Our figure for the amount to move: required less held. Filterable.",
+            "format": "double"
+          },
+          "matchTolerance": {
+            "type": "number",
+            "description": "The agreement's match tolerance captured on the call.",
+            "format": "double",
+            "nullable": true
+          },
+          "counterpartyDemand": {
+            "type": "number",
+            "description": "The counterparty's figure for the call, once recorded.",
+            "format": "double",
+            "nullable": true
+          },
+          "difference": {
+            "type": "number",
+            "description": "The counterparty's demand less our call, once recorded.",
+            "format": "double",
+            "nullable": true
+          },
+          "matchStatus": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "How the counterparty's demand compares to our call. One of Unmatched, Matched, WithinTolerance, Break or NotRequired. Filterable."
+          },
+          "demandReceivedAt": {
+            "type": "string",
+            "description": "When the counterparty's demand was received.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "statementReference": {
+            "maxLength": 1024,
+            "minLength": 0,
+            "pattern": "^[\\s\\S]*$",
+            "type": "string",
+            "description": "A reference to the counterparty's statement, such as a Drive path.",
+            "nullable": true
+          },
+          "demandNote": {
+            "maxLength": 1024,
+            "minLength": 0,
+            "pattern": "^[\\s\\S]*$",
+            "type": "string",
+            "description": "A note recorded with the counterparty's demand.",
+            "nullable": true
+          },
+          "agreedAmount": {
+            "type": "number",
+            "description": "The amount agreed to move, once the call is accepted or disputed.",
+            "format": "double",
+            "nullable": true
+          },
+          "disputedAmount": {
+            "type": "number",
+            "description": "The part of the counterparty's demand left in dispute.",
+            "format": "double",
+            "nullable": true
+          },
+          "disputeReason": {
+            "maxLength": 1024,
+            "minLength": 0,
+            "pattern": "^[\\s\\S]*$",
+            "type": "string",
+            "description": "Why the call is disputed.",
+            "nullable": true
+          },
+          "disputeOwner": {
+            "maxLength": 1024,
+            "minLength": 0,
+            "pattern": "^[\\s\\S]*$",
+            "type": "string",
+            "description": "Who owns the dispute.",
+            "nullable": true
+          },
+          "state": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "Where the call is in its lifecycle. One of Calculated, Accepted or Disputed. Filterable."
+          },
+          "deadline": {
+            "type": "string",
+            "description": "The time the call must be agreed by. Empty until agreements carry a notification time.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "supersedes": {
+            "$ref": "#/components/schemas/MarginCallReference"
+          },
+          "carriedFrom": {
+            "$ref": "#/components/schemas/MarginCallReference"
+          },
+          "carriedDisputedAmount": {
+            "type": "number",
+            "description": "The amount left in dispute on the carried call. Informational; not added to this call.",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "A margin call a run produced under a collateral agreement: our figure, the counterparty's demand once recorded\r\nand how they compare, and where the call is in its lifecycle."
+      },
+      "MarginCallKey": {
+        "required": [
+          "agreementCode",
+          "agreementScope",
+          "direction",
+          "item",
+          "marginType",
+          "runId"
+        ],
+        "type": "object",
+        "properties": {
+          "runId": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The run the call belongs to."
+          },
+          "agreementScope": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The scope of the call's collateral agreement."
+          },
+          "agreementCode": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The code of the call's collateral agreement."
+          },
+          "item": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The margin item of the call."
+          },
+          "marginType": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The margin type of the call. Currently VariationMargin."
+          },
+          "direction": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "Who posts under the call: WePost, TheyPost or None."
+          }
+        },
+        "additionalProperties": false,
+        "description": "The parts that identify a margin call: its run and the call's business key."
+      },
+      "MarginCallReference": {
+        "required": [
+          "callId",
+          "runId"
+        ],
+        "type": "object",
+        "properties": {
+          "runId": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The run the referenced call belongs to."
+          },
+          "callId": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The business key of the referenced call."
+          }
+        },
+        "additionalProperties": false,
+        "description": "A pointer to a margin call in another run."
+      },
       "MarginItem": {
         "required": [
           "calculation",
@@ -292878,6 +294917,100 @@
         "additionalProperties": false,
         "description": "One margin arrangement under an agreement, either variation or initial."
       },
+      "MarginLine": {
+        "required": [
+          "agreementId",
+          "instrumentIdentifiers",
+          "item",
+          "runId",
+          "units"
+        ],
+        "type": "object",
+        "properties": {
+          "runId": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The run that produced the line."
+          },
+          "agreementId": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "item": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The margin item the line falls under. Filterable."
+          },
+          "portfolioId": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "holdingId": {
+            "type": "string",
+            "description": "The holding the line was valued from.",
+            "nullable": true
+          },
+          "custodianAccountScope": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The scope of the custodian account the holding sits in, when it has one.",
+            "nullable": true
+          },
+          "custodianAccountCode": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The code of the custodian account the holding sits in, when it has one.",
+            "nullable": true
+          },
+          "custodianAccountName": {
+            "maxLength": 1024,
+            "minLength": 0,
+            "pattern": "^[\\s\\S]*$",
+            "type": "string",
+            "description": "The name of the custodian account, when it has one.",
+            "nullable": true
+          },
+          "instrumentIdentifiers": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string",
+              "nullable": true
+            },
+            "description": "The identifiers of the instrument held."
+          },
+          "units": {
+            "type": "number",
+            "description": "The units held.",
+            "format": "double"
+          },
+          "pv": {
+            "type": "number",
+            "description": "The present value of the holding in the agreement's base currency, when it contributes to exposure.",
+            "format": "double",
+            "nullable": true
+          },
+          "variationMargin": {
+            "type": "number",
+            "description": "The holding's contribution to variation margin, when it contributes to exposure.",
+            "format": "double",
+            "nullable": true
+          },
+          "collateralValue": {
+            "type": "number",
+            "description": "The holding's value as collateral after haircuts, when it is held as collateral.",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "One holding's contribution to a margin call: its exposure, or its value as collateral."
+      },
       "MarginRounding": {
         "required": [
           "amount",
@@ -292904,6 +295037,224 @@
         },
         "additionalProperties": false,
         "description": "The increment margin calls are rounded to, and the direction for deliveries and returns."
+      },
+      "MarginRun": {
+        "required": [
+          "agreements",
+          "asAt",
+          "callCount",
+          "completedShards",
+          "effectiveAt",
+          "failedShards",
+          "id",
+          "issues",
+          "lineCount",
+          "shardCount",
+          "shards",
+          "status"
+        ],
+        "type": "object",
+        "properties": {
+          "href": {
+            "type": "string",
+            "description": "The URI of this margin run.",
+            "format": "uri",
+            "nullable": true
+          },
+          "id": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The identifier of the run: the effective date and the asAt it was valued at. Filterable."
+          },
+          "effectiveAt": {
+            "type": "string",
+            "description": "The business date the run values collateral agreements for. Filterable.",
+            "format": "date-time"
+          },
+          "asAt": {
+            "type": "string",
+            "description": "The asAt datetime the run reads agreements, portfolios and market data at. Filterable.",
+            "format": "date-time"
+          },
+          "status": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The status of the run. One of Pending, Running, Completed or CompletedWithIssues. Filterable."
+          },
+          "agreements": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResourceId"
+            },
+            "description": "The collateral agreements the run covers."
+          },
+          "callCount": {
+            "type": "integer",
+            "description": "The number of margin calls the run has published so far.",
+            "format": "int32"
+          },
+          "lineCount": {
+            "type": "integer",
+            "description": "The number of margin lines the run has published so far.",
+            "format": "int32"
+          },
+          "shardCount": {
+            "type": "integer",
+            "description": "The number of valuation shards the run was planned as.",
+            "format": "int32"
+          },
+          "completedShards": {
+            "type": "integer",
+            "description": "The number of shards that have completed.",
+            "format": "int32"
+          },
+          "failedShards": {
+            "type": "integer",
+            "description": "The number of shards that failed to value.",
+            "format": "int32"
+          },
+          "issues": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MarginRunIssue"
+            },
+            "description": "Agreements the run could not value, or the caller may not calculate margin for, with the reason."
+          },
+          "shards": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MarginRunShard"
+            },
+            "description": "The valuation shards the run is planned as, with their progress."
+          }
+        },
+        "additionalProperties": false,
+        "description": "A margin run: the valuation of the collateral agreements for a business date, planned as shards that report\r\ntheir progress, and the margin calls and lines it has published so far."
+      },
+      "MarginRunIssue": {
+        "required": [
+          "agreements",
+          "detail"
+        ],
+        "type": "object",
+        "properties": {
+          "agreements": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResourceId"
+            },
+            "description": "The collateral agreements the issue concerns."
+          },
+          "detail": {
+            "maxLength": 1024,
+            "minLength": 0,
+            "pattern": "^[\\s\\S]*$",
+            "type": "string",
+            "description": "What prevented the agreements from being valued."
+          },
+          "shardId": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The shard the issue arose in, when it arose while valuing.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Something a margin run could not do for some of its agreements, and why."
+      },
+      "MarginRunRequest": {
+        "required": [
+          "effectiveAt"
+        ],
+        "type": "object",
+        "properties": {
+          "effectiveAt": {
+            "maxLength": 256,
+            "minLength": 0,
+            "pattern": "^[a-zA-Z0-9\\-_\\+:\\.]+$",
+            "type": "string",
+            "description": "The business date, datetime or cut label to value the agreements at.",
+            "format": "dateorcutlabel"
+          },
+          "asAt": {
+            "type": "string",
+            "description": "The asAt datetime to read agreements, portfolios and market data at. Defaults to the current LUSID system datetime if not specified.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "agreementFilter": {
+            "maxLength": 16384,
+            "minLength": 0,
+            "pattern": "^[\\s\\S]*$",
+            "type": "string",
+            "description": "An expression selecting the collateral agreements to run, in the same syntax as listing collateral agreements. Every agreement the caller may calculate margin for is run if not specified.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "A request to value collateral agreements for a business date and publish their margin calls."
+      },
+      "MarginRunShard": {
+        "required": [
+          "agreements",
+          "callCount",
+          "id",
+          "lineCount",
+          "status"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The identifier of the shard within the run."
+          },
+          "recipeId": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "agreements": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResourceId"
+            },
+            "description": "The collateral agreements the shard values."
+          },
+          "status": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The status of the shard. One of Pending, Running, Completed or Failed."
+          },
+          "callCount": {
+            "type": "integer",
+            "description": "The number of margin calls the shard published.",
+            "format": "int32"
+          },
+          "lineCount": {
+            "type": "integer",
+            "description": "The number of margin lines the shard published.",
+            "format": "int32"
+          },
+          "detail": {
+            "maxLength": 1024,
+            "minLength": 0,
+            "pattern": "^[\\s\\S]*$",
+            "type": "string",
+            "description": "Why the shard failed, when it did.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "One valuation shard of a margin run: the agreements it values with one recipe, and how far it has got."
       },
       "MarginSettlementLag": {
         "required": [
@@ -300834,6 +303185,111 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/LegalEntity"
+            }
+          },
+          "href": {
+            "type": "string",
+            "format": "uri",
+            "nullable": true
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PagedResourceListOfMarginCall": {
+        "required": [
+          "values"
+        ],
+        "type": "object",
+        "properties": {
+          "nextPage": {
+            "type": "string",
+            "nullable": true
+          },
+          "previousPage": {
+            "type": "string",
+            "nullable": true
+          },
+          "values": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MarginCall"
+            }
+          },
+          "href": {
+            "type": "string",
+            "format": "uri",
+            "nullable": true
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PagedResourceListOfMarginLine": {
+        "required": [
+          "values"
+        ],
+        "type": "object",
+        "properties": {
+          "nextPage": {
+            "type": "string",
+            "nullable": true
+          },
+          "previousPage": {
+            "type": "string",
+            "nullable": true
+          },
+          "values": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MarginLine"
+            }
+          },
+          "href": {
+            "type": "string",
+            "format": "uri",
+            "nullable": true
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PagedResourceListOfMarginRun": {
+        "required": [
+          "values"
+        ],
+        "type": "object",
+        "properties": {
+          "nextPage": {
+            "type": "string",
+            "nullable": true
+          },
+          "previousPage": {
+            "type": "string",
+            "nullable": true
+          },
+          "values": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MarginRun"
             }
           },
           "href": {
@@ -314653,6 +317109,43 @@
         },
         "additionalProperties": false,
         "description": "Counts for results that are exceptions with an Open status."
+      },
+      "RecordCounterpartyDemandRequest": {
+        "required": [
+          "amount"
+        ],
+        "type": "object",
+        "properties": {
+          "amount": {
+            "type": "number",
+            "description": "The counterparty's figure for the call, signed as the call.",
+            "format": "double"
+          },
+          "receivedAt": {
+            "type": "string",
+            "description": "When the demand was received. Defaults to the current LUSID system datetime if not specified.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "statementReference": {
+            "maxLength": 1024,
+            "minLength": 0,
+            "pattern": "^[\\s\\S]*$",
+            "type": "string",
+            "description": "A reference to the counterparty's statement, such as a Drive path. Optional.",
+            "nullable": true
+          },
+          "note": {
+            "maxLength": 1024,
+            "minLength": 0,
+            "pattern": "^[\\s\\S]*$",
+            "type": "string",
+            "description": "A note to record with the demand. Optional.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "The counterparty's figure for a margin call, to match against ours."
       },
       "RecRequestedResultRevision": {
         "required": [
@@ -340736,6 +343229,10 @@
       "description": "Endpoints for Creating/Reading/Updating/Deleting Check Definitions"
     },
     {
+      "name": "Collateral",
+      "description": "Methods to run the daily margin calculation and work the margin calls it produces."
+    },
+    {
       "name": "Collateral Agreements",
       "description": "Methods to create and manage Collateral Agreement entities."
     },
@@ -341086,6 +343583,7 @@
       "Calendars",
       "Chart Of Accounts",
       "CheckDefinitions",
+      "Collateral",
       "Collateral Agreements",
       "Complex Market Data",
       "Compliance",

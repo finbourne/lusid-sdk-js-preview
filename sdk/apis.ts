@@ -14,6 +14,7 @@ import {CalendarsApi} from './api/calendarsApi';
 import {ChartOfAccountsApi} from './api/chartOfAccountsApi';
 import {CheckDefinitionsApi} from './api/checkDefinitionsApi';
 import {CollateralAgreementsApi} from './api/collateralAgreementsApi';
+import {CollateralApi} from './api/collateralApi';
 import {ComplexMarketDataApi} from './api/complexMarketDataApi';
 import {ComplianceApi} from './api/complianceApi';
 import {ConfigurationRecipeApi} from './api/configurationRecipeApi';
@@ -114,6 +115,7 @@ export class Api {
     public chartOfAccounts:  ChartOfAccountsApi
     public checkDefinitions:  CheckDefinitionsApi
     public collateralAgreements:  CollateralAgreementsApi
+    public collateral:  CollateralApi
     public complexMarketData:  ComplexMarketDataApi
     public compliance:  ComplianceApi
     public configurationRecipe:  ConfigurationRecipeApi
