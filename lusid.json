@@ -9,7 +9,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "2.0.1709",
+    "version": "2.0.1710",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -315934,10 +315934,6 @@
         "description": "Per-side tax-lot granularity for a Holding entry of a rec definition's rulesets."
       },
       "RecDefCurrencies": {
-        "required": [
-          "left",
-          "right"
-        ],
         "type": "object",
         "properties": {
           "left": {
@@ -315945,14 +315941,16 @@
             "minLength": 3,
             "pattern": "^[a-zA-Z]*$",
             "type": "string",
-            "description": "The currency used on the left side of the reconciliation."
+            "description": "The currency used on the left side of the reconciliation. Required when the left side has portfolio sources; must be null when it draws on relational data.",
+            "nullable": true
           },
           "right": {
             "maxLength": 5,
             "minLength": 3,
             "pattern": "^[a-zA-Z]*$",
             "type": "string",
-            "description": "The currency used on the right side of the reconciliation."
+            "description": "The currency used on the right side of the reconciliation. Required when the right side has portfolio sources; must be null when it draws on relational data.",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -316050,10 +316048,6 @@
         }
       },
       "RecDefRecipeIds": {
-        "required": [
-          "left",
-          "right"
-        ],
         "type": "object",
         "properties": {
           "left": {
