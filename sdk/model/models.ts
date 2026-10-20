@@ -1421,6 +1421,7 @@ export * from './placementRequest';
 export * from './placementSetRequest';
 export * from './placementUpdateRequest';
 export * from './pnlJournalEntryLine';
+export * from './populateResultProperty';
 export * from './portfolio';
 export * from './portfolioCashFlow';
 export * from './portfolioCashLadder';
@@ -3704,6 +3705,7 @@ import { PlacementRequest } from './placementRequest';
 import { PlacementSetRequest } from './placementSetRequest';
 import { PlacementUpdateRequest } from './placementUpdateRequest';
 import { PnlJournalEntryLine } from './pnlJournalEntryLine';
+import { PopulateResultProperty } from './populateResultProperty';
 import { Portfolio } from './portfolio';
 import { PortfolioCashFlow } from './portfolioCashFlow';
 import { PortfolioCashLadder } from './portfolioCashLadder';
@@ -6776,6 +6778,7 @@ let typeMap: {[index: string]: any} = {
     "PlacementSetRequest": PlacementSetRequest,
     "PlacementUpdateRequest": PlacementUpdateRequest,
     "PnlJournalEntryLine": PnlJournalEntryLine,
+    "PopulateResultProperty": PopulateResultProperty,
     "Portfolio": Portfolio,
     "PortfolioCashFlow": PortfolioCashFlow,
     "PortfolioCashLadder": PortfolioCashLadder,
