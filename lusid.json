@@ -9,7 +9,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "2.0.1719",
+    "version": "2.0.1720",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -8756,7 +8756,7 @@
           "Allocation Events"
         ],
         "summary": "[EXPERIMENTAL] DeleteAllocationEvent: Delete an Allocation Event.",
-        "description": "Delete an Allocation Event from an effective datetime. The Allocation Event remains retrievable at earlier\r\neffective datetimes.",
+        "description": "Delete an Allocation Event. Given an effective datetime, the Allocation Event is deleted from that datetime\r\nand remains retrievable at earlier effective datetimes. Given none, an Allocation Event that was created\r\nwithout an effective datetime is removed from the beginning of time, so that its code can be reused;\r\notherwise it is deleted from the current LUSID system datetime. Only an Allocation Event that has not been\r\nbooked can be deleted.",
         "operationId": "DeleteAllocationEvent",
         "parameters": [
           {
@@ -8786,7 +8786,7 @@
           {
             "name": "effectiveAt",
             "in": "query",
-            "description": "The effective datetime or cut label from which to delete the Allocation Event. Defaults to the current LUSID system datetime if not specified.",
+            "description": "The effective datetime or cut label from which to delete the Allocation Event. If not specified, an Allocation Event created without an effective datetime is removed from the beginning of time; any other is deleted from the current LUSID system datetime.",
             "schema": {
               "type": "string",
               "format": "dateorcutlabel"
@@ -9156,7 +9156,7 @@
           {
             "name": "effectiveAt",
             "in": "query",
-            "description": "The effective datetime or cut label from which the booking applies. Defaults to the current LUSID system datetime if not specified.",
+            "description": "The effective datetime or cut label at which to read the Allocation Event to book. The booking is recorded on the version in force at that time, from that version's own effective date. Defaults to the current LUSID system datetime if not specified.",
             "schema": {
               "type": "string",
               "format": "dateorcutlabel"
@@ -9718,7 +9718,7 @@
           {
             "name": "effectiveAt",
             "in": "query",
-            "description": "The effective datetime or cut label from which the reallocation applies. Defaults to the current LUSID system datetime if not specified.",
+            "description": "The effective datetime or cut label from which the reallocation applies. If not specified, the version in force now is recomputed in place from its own effective date.",
             "schema": {
               "type": "string",
               "format": "dateorcutlabel"
@@ -10078,7 +10078,7 @@
           {
             "name": "effectiveAt",
             "in": "query",
-            "description": "The effective datetime or cut label from which the receipt applies. Defaults to the current LUSID system datetime if not specified.",
+            "description": "The effective datetime or cut label at which to read the Allocation Event receiving cash. The receipt is recorded on the version in force at that time, from that version's own effective date; the receipt postings are dated by the request. Defaults to the current LUSID system datetime if not specified.",
             "schema": {
               "type": "string",
               "format": "dateorcutlabel"
@@ -10491,7 +10491,7 @@
           {
             "name": "effectiveAt",
             "in": "query",
-            "description": "The effective datetime or cut label from which the reversal applies. Defaults to the current LUSID system datetime if not specified.",
+            "description": "The effective datetime or cut label at which to read the Allocation Event to reverse. The reversed status is recorded on the version in force at that time, from that version's own effective date; the mirror postings are dated by the request. Defaults to the current LUSID system datetime if not specified.",
             "schema": {
               "type": "string",
               "format": "dateorcutlabel"
@@ -10783,7 +10783,7 @@
           {
             "name": "effectiveAt",
             "in": "query",
-            "description": "The effective datetime or cut label from which the unbooking applies. Defaults to the current LUSID system datetime if not specified.",
+            "description": "The effective datetime or cut label at which to read the Allocation Event to unbook. The unbooking is recorded on the version in force at that time, from that version's own effective date. Defaults to the current LUSID system datetime if not specified.",
             "schema": {
               "type": "string",
               "format": "dateorcutlabel"
@@ -74049,7 +74049,7 @@
           "Funds"
         ],
         "summary": "[EARLY ACCESS] GetPartners: [EARLY ACCESS] GetPartners: Get the partners of a partnership fund.",
-        "description": "Lists the register lines of a partnership-accounting fund with each partner's capital balances at the\r\nrequested effective date, together with totals across the whole register.",
+        "description": "Lists the register lines of a partnership-accounting fund with each partner's capital balances at the\r\nrequested effective date, together with totals across the whole register. Committed capital is totalled per\r\ncommitment currency, and each line's share of commitments is of the total in its own currency; amounts in\r\ndifferent currencies are never added together.",
         "operationId": "GetPartners",
         "parameters": [
           {
@@ -281395,7 +281395,7 @@
           },
           "shareOfCommitments": {
             "type": "number",
-            "description": "The partner's committed capital as a decimal fraction of the fund's total commitments.",
+            "description": "The partner's committed capital as a decimal fraction of the fund's total commitments in the same commitment currency.",
             "format": "double"
           },
           "admittedOn": {
@@ -281470,15 +281470,18 @@
       },
       "FundPartnersTotals": {
         "required": [
-          "committed",
+          "committedByCurrency",
           "partnerCount"
         ],
         "type": "object",
         "properties": {
-          "committed": {
-            "type": "number",
-            "description": "The total committed capital across all partners.",
-            "format": "double"
+          "committedByCurrency": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "number",
+              "format": "double"
+            },
+            "description": "The total committed capital across all partners, per commitment currency, keyed by currency code. Commitments in different currencies are not added together."
           },
           "partnerCount": {
             "type": "integer",
@@ -281487,7 +281490,7 @@
           }
         },
         "additionalProperties": false,
-        "description": "Totals across every register line of the fund, independent of paging."
+        "description": "Totals across every register line of the fund, independent of paging. Commitments are totalled per commitment\r\ncurrency; amounts in different currencies are never added together."
       },
       "FundPartnerUnfundedReconciliation": {
         "required": [
