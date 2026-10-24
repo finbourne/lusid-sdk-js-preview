@@ -67,6 +67,7 @@ export * from './aggregationQuery';
 export * from './aggregationType';
 export * from './alias';
 export * from './allocation';
+export * from './allocationBasisRule';
 export * from './allocationEvent';
 export * from './allocationEventBasisDiagnostics';
 export * from './allocationEventBasisWarning';
@@ -240,10 +241,16 @@ export * from './bucket';
 export * from './bucketBorderConfiguration';
 export * from './bucketDefinition';
 export * from './bucketMembership';
+export * from './bucketSeedValue';
+export * from './bucketSeedValueRequest';
+export * from './bucketSetClassSeed';
+export * from './bucketSetClassSeedRequest';
 export * from './bucketSetDefinition';
 export * from './bucketSetNode';
 export * from './bucketSetResult';
 export * from './bucketSetResultBucket';
+export * from './bucketSetSeed';
+export * from './bucketSetSeedRequest';
 export * from './bucketSetShareClassDetails';
 export * from './bucketedCashFlowRequest';
 export * from './bucketedCashFlowResponse';
@@ -1090,6 +1097,7 @@ export * from './loanPrincipalRepaymentEvent';
 export * from './loanPrincipalRepaymentEventAllOf';
 export * from './lockPeriodDiaryEntryRequest';
 export * from './lusidEntityDataset';
+export * from './lusidEntityRecDefinitionDetails';
 export * from './lusidEntityResult';
 export * from './lusidInstrument';
 export * from './lusidProblemDetails';
@@ -2363,6 +2371,7 @@ import { AggregationQuery } from './aggregationQuery';
 import { AggregationType } from './aggregationType';
 import { Alias } from './alias';
 import { Allocation } from './allocation';
+import { AllocationBasisRule } from './allocationBasisRule';
 import { AllocationEvent } from './allocationEvent';
 import { AllocationEventBasisDiagnostics } from './allocationEventBasisDiagnostics';
 import { AllocationEventBasisWarning } from './allocationEventBasisWarning';
@@ -2536,10 +2545,16 @@ import { Bucket } from './bucket';
 import { BucketBorderConfiguration } from './bucketBorderConfiguration';
 import { BucketDefinition } from './bucketDefinition';
 import { BucketMembership } from './bucketMembership';
+import { BucketSeedValue } from './bucketSeedValue';
+import { BucketSeedValueRequest } from './bucketSeedValueRequest';
+import { BucketSetClassSeed } from './bucketSetClassSeed';
+import { BucketSetClassSeedRequest } from './bucketSetClassSeedRequest';
 import { BucketSetDefinition } from './bucketSetDefinition';
 import { BucketSetNode } from './bucketSetNode';
 import { BucketSetResult } from './bucketSetResult';
 import { BucketSetResultBucket } from './bucketSetResultBucket';
+import { BucketSetSeed } from './bucketSetSeed';
+import { BucketSetSeedRequest } from './bucketSetSeedRequest';
 import { BucketSetShareClassDetails } from './bucketSetShareClassDetails';
 import { BucketedCashFlowRequest } from './bucketedCashFlowRequest';
 import { BucketedCashFlowResponse } from './bucketedCashFlowResponse';
@@ -3386,6 +3401,7 @@ import { LoanPrincipalRepaymentEvent } from './loanPrincipalRepaymentEvent';
 import { LoanPrincipalRepaymentEventAllOf } from './loanPrincipalRepaymentEventAllOf';
 import { LockPeriodDiaryEntryRequest } from './lockPeriodDiaryEntryRequest';
 import { LusidEntityDataset } from './lusidEntityDataset';
+import { LusidEntityRecDefinitionDetails } from './lusidEntityRecDefinitionDetails';
 import { LusidEntityResult } from './lusidEntityResult';
 import { LusidInstrument } from './lusidInstrument';
 import { LusidProblemDetails } from './lusidProblemDetails';
@@ -5483,6 +5499,7 @@ let typeMap: {[index: string]: any} = {
     "AggregationQuery": AggregationQuery,
     "Alias": Alias,
     "Allocation": Allocation,
+    "AllocationBasisRule": AllocationBasisRule,
     "AllocationEvent": AllocationEvent,
     "AllocationEventBasisDiagnostics": AllocationEventBasisDiagnostics,
     "AllocationEventBasisWarning": AllocationEventBasisWarning,
@@ -5654,10 +5671,16 @@ let typeMap: {[index: string]: any} = {
     "BucketBorderConfiguration": BucketBorderConfiguration,
     "BucketDefinition": BucketDefinition,
     "BucketMembership": BucketMembership,
+    "BucketSeedValue": BucketSeedValue,
+    "BucketSeedValueRequest": BucketSeedValueRequest,
+    "BucketSetClassSeed": BucketSetClassSeed,
+    "BucketSetClassSeedRequest": BucketSetClassSeedRequest,
     "BucketSetDefinition": BucketSetDefinition,
     "BucketSetNode": BucketSetNode,
     "BucketSetResult": BucketSetResult,
     "BucketSetResultBucket": BucketSetResultBucket,
+    "BucketSetSeed": BucketSetSeed,
+    "BucketSetSeedRequest": BucketSetSeedRequest,
     "BucketSetShareClassDetails": BucketSetShareClassDetails,
     "BucketedCashFlowRequest": BucketedCashFlowRequest,
     "BucketedCashFlowResponse": BucketedCashFlowResponse,
@@ -6486,6 +6509,7 @@ let typeMap: {[index: string]: any} = {
     "LoanPrincipalRepaymentEventAllOf": LoanPrincipalRepaymentEventAllOf,
     "LockPeriodDiaryEntryRequest": LockPeriodDiaryEntryRequest,
     "LusidEntityDataset": LusidEntityDataset,
+    "LusidEntityRecDefinitionDetails": LusidEntityRecDefinitionDetails,
     "LusidEntityResult": LusidEntityResult,
     "LusidInstrument": LusidInstrument,
     "LusidProblemDetails": LusidProblemDetails,
