@@ -124,7 +124,9 @@ export * from './allocationPostingRollUp';
 export * from './allocationReceivable';
 export * from './allocationReceivablesAgeing';
 export * from './allocationRequest';
+export * from './allocationServiceRunAllocation';
 export * from './allocationServiceRunResponse';
+export * from './allocationServiceRunWarning';
 export * from './allocationSetRequest';
 export * from './amendCommitmentEvent';
 export * from './amendCommitmentEventAllOf';
@@ -274,6 +276,8 @@ export * from './cancelScheduleAllOf';
 export * from './cancelSingleHoldingAdjustmentRequest';
 export * from './cancelSwapEvent';
 export * from './cancelSwapEventAllOf';
+export * from './cancelTransferAgencyTransactionRequest';
+export * from './cancelTransferAgencyTransactionsResponse';
 export * from './cancelledOrderResult';
 export * from './cancelledPlacementResult';
 export * from './capFloor';
@@ -1355,6 +1359,7 @@ export * from './pagedResourceListOfTimeline';
 export * from './pagedResourceListOfTransactionTemplate';
 export * from './pagedResourceListOfTransactionTemplateSpecification';
 export * from './pagedResourceListOfTranslationScriptId';
+export * from './pagedResourceListOfValuationAddressKeyTemplate';
 export * from './pagedResourceListOfValuationPointInstrument';
 export * from './pagedResourceListOfValuationPointOverview';
 export * from './pagedResourceListOfVersion';
@@ -1368,6 +1373,8 @@ export * from './pariPassuEventAllOf';
 export * from './partialClosureConstituent';
 export * from './partialDefeasanceEvent';
 export * from './partialDefeasanceEventAllOf';
+export * from './partialRedemptionWithoutReductionOfNominalValueEvent';
+export * from './partialRedemptionWithoutReductionOfNominalValueEventAllOf';
 export * from './participation';
 export * from './participationRequest';
 export * from './participationSetRequest';
@@ -2062,6 +2069,7 @@ export * from './transferAgencyOrderEstimateResult';
 export * from './transferAgencyOrderResult';
 export * from './transferAgencyOrderToEstimate';
 export * from './transferAgencyOrdersResponse';
+export * from './transferAgencyTransactionCancellationResult';
 export * from './transferAgencyTransactionFromOrderResult';
 export * from './transitionEvent';
 export * from './transitionEventAllOf';
@@ -2195,11 +2203,13 @@ export * from './upsertTransferAgencyOrderRequest';
 export * from './upsertTransferAgencyTransactionFromOrderRequest';
 export * from './upsertTransferAgencyTransactionsFromOrdersResponse';
 export * from './upsertTranslationScriptRequest';
+export * from './upsertValuationAddressKeyTemplateRequest';
 export * from './upsertValuationPointRequest';
 export * from './upsertVirtualTransactionOverrideResponse';
 export * from './upsertWithholdingTaxConfigurationRequest';
 export * from './upsertWithholdingTaxRateRequest';
 export * from './user';
+export * from './valuationAddressKeyTemplate';
 export * from './valuationPoint';
 export * from './valuationPointDataQueryParameters';
 export * from './valuationPointDataRequest';
@@ -2428,7 +2438,9 @@ import { AllocationPostingRollUp } from './allocationPostingRollUp';
 import { AllocationReceivable } from './allocationReceivable';
 import { AllocationReceivablesAgeing } from './allocationReceivablesAgeing';
 import { AllocationRequest } from './allocationRequest';
+import { AllocationServiceRunAllocation } from './allocationServiceRunAllocation';
 import { AllocationServiceRunResponse } from './allocationServiceRunResponse';
+import { AllocationServiceRunWarning } from './allocationServiceRunWarning';
 import { AllocationSetRequest } from './allocationSetRequest';
 import { AmendCommitmentEvent } from './amendCommitmentEvent';
 import { AmendCommitmentEventAllOf } from './amendCommitmentEventAllOf';
@@ -2578,6 +2590,8 @@ import { CancelScheduleAllOf } from './cancelScheduleAllOf';
 import { CancelSingleHoldingAdjustmentRequest } from './cancelSingleHoldingAdjustmentRequest';
 import { CancelSwapEvent } from './cancelSwapEvent';
 import { CancelSwapEventAllOf } from './cancelSwapEventAllOf';
+import { CancelTransferAgencyTransactionRequest } from './cancelTransferAgencyTransactionRequest';
+import { CancelTransferAgencyTransactionsResponse } from './cancelTransferAgencyTransactionsResponse';
 import { CancelledOrderResult } from './cancelledOrderResult';
 import { CancelledPlacementResult } from './cancelledPlacementResult';
 import { CapFloor } from './capFloor';
@@ -3659,6 +3673,7 @@ import { PagedResourceListOfTimeline } from './pagedResourceListOfTimeline';
 import { PagedResourceListOfTransactionTemplate } from './pagedResourceListOfTransactionTemplate';
 import { PagedResourceListOfTransactionTemplateSpecification } from './pagedResourceListOfTransactionTemplateSpecification';
 import { PagedResourceListOfTranslationScriptId } from './pagedResourceListOfTranslationScriptId';
+import { PagedResourceListOfValuationAddressKeyTemplate } from './pagedResourceListOfValuationAddressKeyTemplate';
 import { PagedResourceListOfValuationPointInstrument } from './pagedResourceListOfValuationPointInstrument';
 import { PagedResourceListOfValuationPointOverview } from './pagedResourceListOfValuationPointOverview';
 import { PagedResourceListOfVersion } from './pagedResourceListOfVersion';
@@ -3672,6 +3687,8 @@ import { PariPassuEventAllOf } from './pariPassuEventAllOf';
 import { PartialClosureConstituent } from './partialClosureConstituent';
 import { PartialDefeasanceEvent } from './partialDefeasanceEvent';
 import { PartialDefeasanceEventAllOf } from './partialDefeasanceEventAllOf';
+import { PartialRedemptionWithoutReductionOfNominalValueEvent } from './partialRedemptionWithoutReductionOfNominalValueEvent';
+import { PartialRedemptionWithoutReductionOfNominalValueEventAllOf } from './partialRedemptionWithoutReductionOfNominalValueEventAllOf';
 import { Participation } from './participation';
 import { ParticipationRequest } from './participationRequest';
 import { ParticipationSetRequest } from './participationSetRequest';
@@ -4366,6 +4383,7 @@ import { TransferAgencyOrderEstimateResult } from './transferAgencyOrderEstimate
 import { TransferAgencyOrderResult } from './transferAgencyOrderResult';
 import { TransferAgencyOrderToEstimate } from './transferAgencyOrderToEstimate';
 import { TransferAgencyOrdersResponse } from './transferAgencyOrdersResponse';
+import { TransferAgencyTransactionCancellationResult } from './transferAgencyTransactionCancellationResult';
 import { TransferAgencyTransactionFromOrderResult } from './transferAgencyTransactionFromOrderResult';
 import { TransitionEvent } from './transitionEvent';
 import { TransitionEventAllOf } from './transitionEventAllOf';
@@ -4499,11 +4517,13 @@ import { UpsertTransferAgencyOrderRequest } from './upsertTransferAgencyOrderReq
 import { UpsertTransferAgencyTransactionFromOrderRequest } from './upsertTransferAgencyTransactionFromOrderRequest';
 import { UpsertTransferAgencyTransactionsFromOrdersResponse } from './upsertTransferAgencyTransactionsFromOrdersResponse';
 import { UpsertTranslationScriptRequest } from './upsertTranslationScriptRequest';
+import { UpsertValuationAddressKeyTemplateRequest } from './upsertValuationAddressKeyTemplateRequest';
 import { UpsertValuationPointRequest } from './upsertValuationPointRequest';
 import { UpsertVirtualTransactionOverrideResponse } from './upsertVirtualTransactionOverrideResponse';
 import { UpsertWithholdingTaxConfigurationRequest } from './upsertWithholdingTaxConfigurationRequest';
 import { UpsertWithholdingTaxRateRequest } from './upsertWithholdingTaxRateRequest';
 import { User } from './user';
+import { ValuationAddressKeyTemplate } from './valuationAddressKeyTemplate';
 import { ValuationPoint } from './valuationPoint';
 import { ValuationPointDataQueryParameters } from './valuationPointDataQueryParameters';
 import { ValuationPointDataRequest } from './valuationPointDataRequest';
@@ -5170,6 +5190,8 @@ let enumsMap: {[index: string]: any} = {
         "PariPassuEventAllOf.InstrumentEventTypeEnum": PariPassuEventAllOf.InstrumentEventTypeEnum,
         "PartialDefeasanceEvent.InstrumentEventTypeEnum": PartialDefeasanceEvent.InstrumentEventTypeEnum,
         "PartialDefeasanceEventAllOf.InstrumentEventTypeEnum": PartialDefeasanceEventAllOf.InstrumentEventTypeEnum,
+        "PartialRedemptionWithoutReductionOfNominalValueEvent.InstrumentEventTypeEnum": PartialRedemptionWithoutReductionOfNominalValueEvent.InstrumentEventTypeEnum,
+        "PartialRedemptionWithoutReductionOfNominalValueEventAllOf.InstrumentEventTypeEnum": PartialRedemptionWithoutReductionOfNominalValueEventAllOf.InstrumentEventTypeEnum,
         "PaymentInKindEvent.InstrumentEventTypeEnum": PaymentInKindEvent.InstrumentEventTypeEnum,
         "PaymentInKindEventAllOf.InstrumentEventTypeEnum": PaymentInKindEventAllOf.InstrumentEventTypeEnum,
         "PercentCheckStep.ComplianceStepTypeEnum": PercentCheckStep.ComplianceStepTypeEnum,
@@ -5556,7 +5578,9 @@ let typeMap: {[index: string]: any} = {
     "AllocationReceivable": AllocationReceivable,
     "AllocationReceivablesAgeing": AllocationReceivablesAgeing,
     "AllocationRequest": AllocationRequest,
+    "AllocationServiceRunAllocation": AllocationServiceRunAllocation,
     "AllocationServiceRunResponse": AllocationServiceRunResponse,
+    "AllocationServiceRunWarning": AllocationServiceRunWarning,
     "AllocationSetRequest": AllocationSetRequest,
     "AmendCommitmentEvent": AmendCommitmentEvent,
     "AmendCommitmentEventAllOf": AmendCommitmentEventAllOf,
@@ -5704,6 +5728,8 @@ let typeMap: {[index: string]: any} = {
     "CancelSingleHoldingAdjustmentRequest": CancelSingleHoldingAdjustmentRequest,
     "CancelSwapEvent": CancelSwapEvent,
     "CancelSwapEventAllOf": CancelSwapEventAllOf,
+    "CancelTransferAgencyTransactionRequest": CancelTransferAgencyTransactionRequest,
+    "CancelTransferAgencyTransactionsResponse": CancelTransferAgencyTransactionsResponse,
     "CancelledOrderResult": CancelledOrderResult,
     "CancelledPlacementResult": CancelledPlacementResult,
     "CapFloor": CapFloor,
@@ -6754,6 +6780,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfTransactionTemplate": PagedResourceListOfTransactionTemplate,
     "PagedResourceListOfTransactionTemplateSpecification": PagedResourceListOfTransactionTemplateSpecification,
     "PagedResourceListOfTranslationScriptId": PagedResourceListOfTranslationScriptId,
+    "PagedResourceListOfValuationAddressKeyTemplate": PagedResourceListOfValuationAddressKeyTemplate,
     "PagedResourceListOfValuationPointInstrument": PagedResourceListOfValuationPointInstrument,
     "PagedResourceListOfValuationPointOverview": PagedResourceListOfValuationPointOverview,
     "PagedResourceListOfVersion": PagedResourceListOfVersion,
@@ -6767,6 +6794,8 @@ let typeMap: {[index: string]: any} = {
     "PartialClosureConstituent": PartialClosureConstituent,
     "PartialDefeasanceEvent": PartialDefeasanceEvent,
     "PartialDefeasanceEventAllOf": PartialDefeasanceEventAllOf,
+    "PartialRedemptionWithoutReductionOfNominalValueEvent": PartialRedemptionWithoutReductionOfNominalValueEvent,
+    "PartialRedemptionWithoutReductionOfNominalValueEventAllOf": PartialRedemptionWithoutReductionOfNominalValueEventAllOf,
     "Participation": Participation,
     "ParticipationRequest": ParticipationRequest,
     "ParticipationSetRequest": ParticipationSetRequest,
@@ -7432,6 +7461,7 @@ let typeMap: {[index: string]: any} = {
     "TransferAgencyOrderResult": TransferAgencyOrderResult,
     "TransferAgencyOrderToEstimate": TransferAgencyOrderToEstimate,
     "TransferAgencyOrdersResponse": TransferAgencyOrdersResponse,
+    "TransferAgencyTransactionCancellationResult": TransferAgencyTransactionCancellationResult,
     "TransferAgencyTransactionFromOrderResult": TransferAgencyTransactionFromOrderResult,
     "TransitionEvent": TransitionEvent,
     "TransitionEventAllOf": TransitionEventAllOf,
@@ -7563,11 +7593,13 @@ let typeMap: {[index: string]: any} = {
     "UpsertTransferAgencyTransactionFromOrderRequest": UpsertTransferAgencyTransactionFromOrderRequest,
     "UpsertTransferAgencyTransactionsFromOrdersResponse": UpsertTransferAgencyTransactionsFromOrdersResponse,
     "UpsertTranslationScriptRequest": UpsertTranslationScriptRequest,
+    "UpsertValuationAddressKeyTemplateRequest": UpsertValuationAddressKeyTemplateRequest,
     "UpsertValuationPointRequest": UpsertValuationPointRequest,
     "UpsertVirtualTransactionOverrideResponse": UpsertVirtualTransactionOverrideResponse,
     "UpsertWithholdingTaxConfigurationRequest": UpsertWithholdingTaxConfigurationRequest,
     "UpsertWithholdingTaxRateRequest": UpsertWithholdingTaxRateRequest,
     "User": User,
+    "ValuationAddressKeyTemplate": ValuationAddressKeyTemplate,
     "ValuationPoint": ValuationPoint,
     "ValuationPointDataQueryParameters": ValuationPointDataQueryParameters,
     "ValuationPointDataRequest": ValuationPointDataRequest,

@@ -37,6 +37,7 @@ import {FeeTypesApi} from './api/feeTypesApi';
 import {FundConfigurationApi} from './api/fundConfigurationApi';
 import {FundsApi} from './api/fundsApi';
 import {FundStructuresApi} from './api/fundStructuresApi';
+import {FundValuationTemplatesApi} from './api/fundValuationTemplatesApi';
 import {GroupReconciliationsApi} from './api/groupReconciliationsApi';
 import {IdentifierDefinitionsApi} from './api/identifierDefinitionsApi';
 import {InstrumentEventsApi} from './api/instrumentEventsApi';
@@ -138,6 +139,7 @@ export class Api {
     public fundConfiguration:  FundConfigurationApi
     public funds:  FundsApi
     public fundStructures:  FundStructuresApi
+    public fundValuationTemplates:  FundValuationTemplatesApi
     public groupReconciliations:  GroupReconciliationsApi
     public identifierDefinitions:  IdentifierDefinitionsApi
     public instrumentEvents:  InstrumentEventsApi
