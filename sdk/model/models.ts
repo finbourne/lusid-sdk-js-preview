@@ -587,7 +587,9 @@ export * from './dateTimeComplianceParameterAllOf';
 export * from './dateTimeListComplianceParameter';
 export * from './dayMonth';
 export * from './dayOfWeek';
+export * from './dealingEstimates';
 export * from './dealingFlowSummary';
+export * from './dealingFlowValuation';
 export * from './decimalComplianceParameter';
 export * from './decimalComplianceParameterAllOf';
 export * from './decimalList';
@@ -696,6 +698,9 @@ export * from './equityVolSurfaceDataAllOf';
 export * from './errorDetail';
 export * from './estimateTransferAgencyOrderRequest';
 export * from './estimateTransferAgencyOrdersResponse';
+export * from './estimateValuation';
+export * from './estimateValuationDifference';
+export * from './estimateValuationOutcome';
 export * from './estimateVariant';
 export * from './eventDateRange';
 export * from './eventInheritance';
@@ -1623,6 +1628,7 @@ export * from './recResultCounts';
 export * from './recResultDecisionGroup';
 export * from './recResultDecisionUpdate';
 export * from './recResultException';
+export * from './recResultExternalIdentifiersItem';
 export * from './recResultHoldingImpact';
 export * from './recResultHoldingItem';
 export * from './recResultItem';
@@ -1955,6 +1961,12 @@ export * from './stringComparisonType';
 export * from './stringComplianceParameter';
 export * from './stringList';
 export * from './stringListComplianceParameter';
+export * from './stripBond';
+export * from './stripBondAllOf';
+export * from './stripBondCashflowEvent';
+export * from './stripBondCashflowEventAllOf';
+export * from './stripBondModelOptions';
+export * from './stripBondModelOptionsAllOf';
 export * from './structuredResultData';
 export * from './structuredResultDataId';
 export * from './structuredResultDataResult';
@@ -2901,7 +2913,9 @@ import { DateTimeComplianceParameterAllOf } from './dateTimeComplianceParameterA
 import { DateTimeListComplianceParameter } from './dateTimeListComplianceParameter';
 import { DayMonth } from './dayMonth';
 import { DayOfWeek } from './dayOfWeek';
+import { DealingEstimates } from './dealingEstimates';
 import { DealingFlowSummary } from './dealingFlowSummary';
+import { DealingFlowValuation } from './dealingFlowValuation';
 import { DecimalComplianceParameter } from './decimalComplianceParameter';
 import { DecimalComplianceParameterAllOf } from './decimalComplianceParameterAllOf';
 import { DecimalList } from './decimalList';
@@ -3010,6 +3024,9 @@ import { EquityVolSurfaceDataAllOf } from './equityVolSurfaceDataAllOf';
 import { ErrorDetail } from './errorDetail';
 import { EstimateTransferAgencyOrderRequest } from './estimateTransferAgencyOrderRequest';
 import { EstimateTransferAgencyOrdersResponse } from './estimateTransferAgencyOrdersResponse';
+import { EstimateValuation } from './estimateValuation';
+import { EstimateValuationDifference } from './estimateValuationDifference';
+import { EstimateValuationOutcome } from './estimateValuationOutcome';
 import { EstimateVariant } from './estimateVariant';
 import { EventDateRange } from './eventDateRange';
 import { EventInheritance } from './eventInheritance';
@@ -3937,6 +3954,7 @@ import { RecResultCounts } from './recResultCounts';
 import { RecResultDecisionGroup } from './recResultDecisionGroup';
 import { RecResultDecisionUpdate } from './recResultDecisionUpdate';
 import { RecResultException } from './recResultException';
+import { RecResultExternalIdentifiersItem } from './recResultExternalIdentifiersItem';
 import { RecResultHoldingImpact } from './recResultHoldingImpact';
 import { RecResultHoldingItem } from './recResultHoldingItem';
 import { RecResultItem } from './recResultItem';
@@ -4269,6 +4287,12 @@ import { StringComparisonType } from './stringComparisonType';
 import { StringComplianceParameter } from './stringComplianceParameter';
 import { StringList } from './stringList';
 import { StringListComplianceParameter } from './stringListComplianceParameter';
+import { StripBond } from './stripBond';
+import { StripBondAllOf } from './stripBondAllOf';
+import { StripBondCashflowEvent } from './stripBondCashflowEvent';
+import { StripBondCashflowEventAllOf } from './stripBondCashflowEventAllOf';
+import { StripBondModelOptions } from './stripBondModelOptions';
+import { StripBondModelOptionsAllOf } from './stripBondModelOptionsAllOf';
 import { StructuredResultData } from './structuredResultData';
 import { StructuredResultDataId } from './structuredResultDataId';
 import { StructuredResultDataResult } from './structuredResultDataResult';
@@ -5387,6 +5411,12 @@ let enumsMap: {[index: string]: any} = {
         "StringComplianceParameter.ComplianceParameterTypeEnum": StringComplianceParameter.ComplianceParameterTypeEnum,
         "StringList.ReferenceListTypeEnum": StringList.ReferenceListTypeEnum,
         "StringListComplianceParameter.ComplianceParameterTypeEnum": StringListComplianceParameter.ComplianceParameterTypeEnum,
+        "StripBond.InstrumentTypeEnum": StripBond.InstrumentTypeEnum,
+        "StripBondAllOf.InstrumentTypeEnum": StripBondAllOf.InstrumentTypeEnum,
+        "StripBondCashflowEvent.InstrumentEventTypeEnum": StripBondCashflowEvent.InstrumentEventTypeEnum,
+        "StripBondCashflowEventAllOf.InstrumentEventTypeEnum": StripBondCashflowEventAllOf.InstrumentEventTypeEnum,
+        "StripBondModelOptions.ModelOptionsTypeEnum": StripBondModelOptions.ModelOptionsTypeEnum,
+        "StripBondModelOptionsAllOf.ModelOptionsTypeEnum": StripBondModelOptionsAllOf.ModelOptionsTypeEnum,
         "SubHoldingKeyValueEquals.CriterionTypeEnum": SubHoldingKeyValueEquals.CriterionTypeEnum,
         "SubHoldingKeyValueEqualsAllOf.CriterionTypeEnum": SubHoldingKeyValueEqualsAllOf.CriterionTypeEnum,
         "SwapCashFlowEvent.InstrumentEventTypeEnum": SwapCashFlowEvent.InstrumentEventTypeEnum,
@@ -6030,7 +6060,9 @@ let typeMap: {[index: string]: any} = {
     "DateTimeComplianceParameterAllOf": DateTimeComplianceParameterAllOf,
     "DateTimeListComplianceParameter": DateTimeListComplianceParameter,
     "DayMonth": DayMonth,
+    "DealingEstimates": DealingEstimates,
     "DealingFlowSummary": DealingFlowSummary,
+    "DealingFlowValuation": DealingFlowValuation,
     "DecimalComplianceParameter": DecimalComplianceParameter,
     "DecimalComplianceParameterAllOf": DecimalComplianceParameterAllOf,
     "DecimalList": DecimalList,
@@ -6136,6 +6168,9 @@ let typeMap: {[index: string]: any} = {
     "ErrorDetail": ErrorDetail,
     "EstimateTransferAgencyOrderRequest": EstimateTransferAgencyOrderRequest,
     "EstimateTransferAgencyOrdersResponse": EstimateTransferAgencyOrdersResponse,
+    "EstimateValuation": EstimateValuation,
+    "EstimateValuationDifference": EstimateValuationDifference,
+    "EstimateValuationOutcome": EstimateValuationOutcome,
     "EstimateVariant": EstimateVariant,
     "EventDateRange": EventDateRange,
     "EventInheritance": EventInheritance,
@@ -7031,6 +7066,7 @@ let typeMap: {[index: string]: any} = {
     "RecResultDecisionGroup": RecResultDecisionGroup,
     "RecResultDecisionUpdate": RecResultDecisionUpdate,
     "RecResultException": RecResultException,
+    "RecResultExternalIdentifiersItem": RecResultExternalIdentifiersItem,
     "RecResultHoldingImpact": RecResultHoldingImpact,
     "RecResultHoldingItem": RecResultHoldingItem,
     "RecResultItem": RecResultItem,
@@ -7352,6 +7388,12 @@ let typeMap: {[index: string]: any} = {
     "StringComplianceParameter": StringComplianceParameter,
     "StringList": StringList,
     "StringListComplianceParameter": StringListComplianceParameter,
+    "StripBond": StripBond,
+    "StripBondAllOf": StripBondAllOf,
+    "StripBondCashflowEvent": StripBondCashflowEvent,
+    "StripBondCashflowEventAllOf": StripBondCashflowEventAllOf,
+    "StripBondModelOptions": StripBondModelOptions,
+    "StripBondModelOptionsAllOf": StripBondModelOptionsAllOf,
     "StructuredResultData": StructuredResultData,
     "StructuredResultDataId": StructuredResultDataId,
     "StructuredResultDataResult": StructuredResultDataResult,
