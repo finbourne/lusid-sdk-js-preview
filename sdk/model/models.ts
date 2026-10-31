@@ -593,6 +593,7 @@ export * from './dayOfWeek';
 export * from './dealingEstimates';
 export * from './dealingFlowSummary';
 export * from './dealingFlowValuation';
+export * from './dealingLineNotValued';
 export * from './decimalComplianceParameter';
 export * from './decimalComplianceParameterAllOf';
 export * from './decimalList';
@@ -726,6 +727,9 @@ export * from './expiryEventAllOf';
 export * from './externalFeeComponentFilter';
 export * from './externalRecDefinitionDetails';
 export * from './externalRecType';
+export * from './externalTransferAgencyOrderAmount';
+export * from './externalTransferAgencyOrderLine';
+export * from './externalTransferAgencyOrderSource';
 export * from './facility';
 export * from './facilityCommitmentFeeEvent';
 export * from './facilityCommitmentFeeEventAllOf';
@@ -2173,6 +2177,9 @@ export * from './upsertDataQualityRule';
 export * from './upsertDialectRequest';
 export * from './upsertEligibleCollateralScheduleRequest';
 export * from './upsertEntityResolverRequest';
+export * from './upsertExternalTransferAgencyOrderResult';
+export * from './upsertExternalTransferAgencyOrdersRequest';
+export * from './upsertExternalTransferAgencyOrdersResponse';
 export * from './upsertFlowConventionsRequest';
 export * from './upsertFundBookmarkRequest';
 export * from './upsertIndexConventionRequest';
@@ -2922,6 +2929,7 @@ import { DayOfWeek } from './dayOfWeek';
 import { DealingEstimates } from './dealingEstimates';
 import { DealingFlowSummary } from './dealingFlowSummary';
 import { DealingFlowValuation } from './dealingFlowValuation';
+import { DealingLineNotValued } from './dealingLineNotValued';
 import { DecimalComplianceParameter } from './decimalComplianceParameter';
 import { DecimalComplianceParameterAllOf } from './decimalComplianceParameterAllOf';
 import { DecimalList } from './decimalList';
@@ -3055,6 +3063,9 @@ import { ExpiryEventAllOf } from './expiryEventAllOf';
 import { ExternalFeeComponentFilter } from './externalFeeComponentFilter';
 import { ExternalRecDefinitionDetails } from './externalRecDefinitionDetails';
 import { ExternalRecType } from './externalRecType';
+import { ExternalTransferAgencyOrderAmount } from './externalTransferAgencyOrderAmount';
+import { ExternalTransferAgencyOrderLine } from './externalTransferAgencyOrderLine';
+import { ExternalTransferAgencyOrderSource } from './externalTransferAgencyOrderSource';
 import { Facility } from './facility';
 import { FacilityCommitmentFeeEvent } from './facilityCommitmentFeeEvent';
 import { FacilityCommitmentFeeEventAllOf } from './facilityCommitmentFeeEventAllOf';
@@ -4502,6 +4513,9 @@ import { UpsertDataQualityRule } from './upsertDataQualityRule';
 import { UpsertDialectRequest } from './upsertDialectRequest';
 import { UpsertEligibleCollateralScheduleRequest } from './upsertEligibleCollateralScheduleRequest';
 import { UpsertEntityResolverRequest } from './upsertEntityResolverRequest';
+import { UpsertExternalTransferAgencyOrderResult } from './upsertExternalTransferAgencyOrderResult';
+import { UpsertExternalTransferAgencyOrdersRequest } from './upsertExternalTransferAgencyOrdersRequest';
+import { UpsertExternalTransferAgencyOrdersResponse } from './upsertExternalTransferAgencyOrdersResponse';
 import { UpsertFlowConventionsRequest } from './upsertFlowConventionsRequest';
 import { UpsertFundBookmarkRequest } from './upsertFundBookmarkRequest';
 import { UpsertIndexConventionRequest } from './upsertIndexConventionRequest';
@@ -6074,6 +6088,7 @@ let typeMap: {[index: string]: any} = {
     "DealingEstimates": DealingEstimates,
     "DealingFlowSummary": DealingFlowSummary,
     "DealingFlowValuation": DealingFlowValuation,
+    "DealingLineNotValued": DealingLineNotValued,
     "DecimalComplianceParameter": DecimalComplianceParameter,
     "DecimalComplianceParameterAllOf": DecimalComplianceParameterAllOf,
     "DecimalList": DecimalList,
@@ -6204,6 +6219,9 @@ let typeMap: {[index: string]: any} = {
     "ExternalFeeComponentFilter": ExternalFeeComponentFilter,
     "ExternalRecDefinitionDetails": ExternalRecDefinitionDetails,
     "ExternalRecType": ExternalRecType,
+    "ExternalTransferAgencyOrderAmount": ExternalTransferAgencyOrderAmount,
+    "ExternalTransferAgencyOrderLine": ExternalTransferAgencyOrderLine,
+    "ExternalTransferAgencyOrderSource": ExternalTransferAgencyOrderSource,
     "Facility": Facility,
     "FacilityCommitmentFeeEvent": FacilityCommitmentFeeEvent,
     "FacilityCommitmentFeeEventAllOf": FacilityCommitmentFeeEventAllOf,
@@ -7601,6 +7619,9 @@ let typeMap: {[index: string]: any} = {
     "UpsertDialectRequest": UpsertDialectRequest,
     "UpsertEligibleCollateralScheduleRequest": UpsertEligibleCollateralScheduleRequest,
     "UpsertEntityResolverRequest": UpsertEntityResolverRequest,
+    "UpsertExternalTransferAgencyOrderResult": UpsertExternalTransferAgencyOrderResult,
+    "UpsertExternalTransferAgencyOrdersRequest": UpsertExternalTransferAgencyOrdersRequest,
+    "UpsertExternalTransferAgencyOrdersResponse": UpsertExternalTransferAgencyOrdersResponse,
     "UpsertFlowConventionsRequest": UpsertFlowConventionsRequest,
     "UpsertFundBookmarkRequest": UpsertFundBookmarkRequest,
     "UpsertIndexConventionRequest": UpsertIndexConventionRequest,
