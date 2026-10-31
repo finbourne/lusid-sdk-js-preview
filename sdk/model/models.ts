@@ -295,6 +295,8 @@ export * from './capitalInterest';
 export * from './capitalInterestAllOf';
 export * from './capitalInterestTransferEvent';
 export * from './capitalInterestTransferEventAllOf';
+export * from './capitalisationEvent';
+export * from './capitalisationEventAllOf';
 export * from './capletFloorletCashFlowEvent';
 export * from './capletFloorletCashFlowEventAllOf';
 export * from './carryAccrualAmount';
@@ -348,6 +350,7 @@ export * from './changeHistoryAction';
 export * from './changeInterval';
 export * from './changeIntervalWithOrderManagementDetail';
 export * from './changeItem';
+export * from './chargeableGainsTakeOn';
 export * from './chartOfAccounts';
 export * from './chartOfAccountsProperties';
 export * from './chartOfAccountsRequest';
@@ -2621,6 +2624,8 @@ import { CapitalInterest } from './capitalInterest';
 import { CapitalInterestAllOf } from './capitalInterestAllOf';
 import { CapitalInterestTransferEvent } from './capitalInterestTransferEvent';
 import { CapitalInterestTransferEventAllOf } from './capitalInterestTransferEventAllOf';
+import { CapitalisationEvent } from './capitalisationEvent';
+import { CapitalisationEventAllOf } from './capitalisationEventAllOf';
 import { CapletFloorletCashFlowEvent } from './capletFloorletCashFlowEvent';
 import { CapletFloorletCashFlowEventAllOf } from './capletFloorletCashFlowEventAllOf';
 import { CarryAccrualAmount } from './carryAccrualAmount';
@@ -2674,6 +2679,7 @@ import { ChangeHistoryAction } from './changeHistoryAction';
 import { ChangeInterval } from './changeInterval';
 import { ChangeIntervalWithOrderManagementDetail } from './changeIntervalWithOrderManagementDetail';
 import { ChangeItem } from './changeItem';
+import { ChargeableGainsTakeOn } from './chargeableGainsTakeOn';
 import { ChartOfAccounts } from './chartOfAccounts';
 import { ChartOfAccountsProperties } from './chartOfAccountsProperties';
 import { ChartOfAccountsRequest } from './chartOfAccountsRequest';
@@ -4747,6 +4753,8 @@ let enumsMap: {[index: string]: any} = {
         "CapitalInterestAllOf.InstrumentTypeEnum": CapitalInterestAllOf.InstrumentTypeEnum,
         "CapitalInterestTransferEvent.InstrumentEventTypeEnum": CapitalInterestTransferEvent.InstrumentEventTypeEnum,
         "CapitalInterestTransferEventAllOf.InstrumentEventTypeEnum": CapitalInterestTransferEventAllOf.InstrumentEventTypeEnum,
+        "CapitalisationEvent.InstrumentEventTypeEnum": CapitalisationEvent.InstrumentEventTypeEnum,
+        "CapitalisationEventAllOf.InstrumentEventTypeEnum": CapitalisationEventAllOf.InstrumentEventTypeEnum,
         "CapletFloorletCashFlowEvent.InstrumentEventTypeEnum": CapletFloorletCashFlowEvent.InstrumentEventTypeEnum,
         "CapletFloorletCashFlowEventAllOf.InstrumentEventTypeEnum": CapletFloorletCashFlowEventAllOf.InstrumentEventTypeEnum,
         "Cash.InstrumentTypeEnum": Cash.InstrumentTypeEnum,
@@ -5777,6 +5785,8 @@ let typeMap: {[index: string]: any} = {
     "CapitalInterestAllOf": CapitalInterestAllOf,
     "CapitalInterestTransferEvent": CapitalInterestTransferEvent,
     "CapitalInterestTransferEventAllOf": CapitalInterestTransferEventAllOf,
+    "CapitalisationEvent": CapitalisationEvent,
+    "CapitalisationEventAllOf": CapitalisationEventAllOf,
     "CapletFloorletCashFlowEvent": CapletFloorletCashFlowEvent,
     "CapletFloorletCashFlowEventAllOf": CapletFloorletCashFlowEventAllOf,
     "CarryAccrualAmount": CarryAccrualAmount,
@@ -5829,6 +5839,7 @@ let typeMap: {[index: string]: any} = {
     "ChangeInterval": ChangeInterval,
     "ChangeIntervalWithOrderManagementDetail": ChangeIntervalWithOrderManagementDetail,
     "ChangeItem": ChangeItem,
+    "ChargeableGainsTakeOn": ChargeableGainsTakeOn,
     "ChartOfAccounts": ChartOfAccounts,
     "ChartOfAccountsProperties": ChartOfAccountsProperties,
     "ChartOfAccountsRequest": ChartOfAccountsRequest,
