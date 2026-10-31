@@ -9,7 +9,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "2.0.1735",
+    "version": "2.0.1736",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -217792,7 +217792,15 @@
                         "indexation": 125050,
                         "originalCost": 10000,
                         "marketValue1982": 50000,
-                        "rebasingElection": false
+                        "rebasingElection": false,
+                        "additions": [
+                          {
+                            "date": "1990-06-01T00:00:00.0000000+00:00",
+                            "cost": 130908.33,
+                            "indexation": 48500,
+                            "paidCost": 172500
+                          }
+                        ]
                       }
                     }
                   ],
@@ -217854,7 +217862,15 @@
                         "indexation": 125050,
                         "originalCost": 10000,
                         "marketValue1982": 50000,
-                        "rebasingElection": false
+                        "rebasingElection": false,
+                        "additions": [
+                          {
+                            "date": "1990-06-01T00:00:00.0000000+00:00",
+                            "cost": 130908.33,
+                            "indexation": 48500,
+                            "paidCost": 172500
+                          }
+                        ]
                       }
                     }
                   ],
@@ -217916,7 +217932,15 @@
                         "indexation": 125050,
                         "originalCost": 10000,
                         "marketValue1982": 50000,
-                        "rebasingElection": false
+                        "rebasingElection": false,
+                        "additions": [
+                          {
+                            "date": "1990-06-01T00:00:00.0000000+00:00",
+                            "cost": 130908.33,
+                            "indexation": 48500,
+                            "paidCost": 172500
+                          }
+                        ]
                       }
                     }
                   ],
@@ -217978,7 +218002,15 @@
                         "indexation": 125050,
                         "originalCost": 10000,
                         "marketValue1982": 50000,
-                        "rebasingElection": false
+                        "rebasingElection": false,
+                        "additions": [
+                          {
+                            "date": "1990-06-01T00:00:00.0000000+00:00",
+                            "cost": 130908.33,
+                            "indexation": 48500,
+                            "paidCost": 172500
+                          }
+                        ]
                       }
                     }
                   ],
@@ -218180,7 +218212,15 @@
                         "indexation": 125050,
                         "originalCost": 10000,
                         "marketValue1982": 50000,
-                        "rebasingElection": false
+                        "rebasingElection": false,
+                        "additions": [
+                          {
+                            "date": "1990-06-01T00:00:00.0000000+00:00",
+                            "cost": 130908.33,
+                            "indexation": 48500,
+                            "paidCost": 172500
+                          }
+                        ]
                       }
                     }
                   ],
@@ -218242,7 +218282,15 @@
                         "indexation": 125050,
                         "originalCost": 10000,
                         "marketValue1982": 50000,
-                        "rebasingElection": false
+                        "rebasingElection": false,
+                        "additions": [
+                          {
+                            "date": "1990-06-01T00:00:00.0000000+00:00",
+                            "cost": 130908.33,
+                            "indexation": 48500,
+                            "paidCost": 172500
+                          }
+                        ]
                       }
                     }
                   ],
@@ -218304,7 +218352,15 @@
                         "indexation": 125050,
                         "originalCost": 10000,
                         "marketValue1982": 50000,
-                        "rebasingElection": false
+                        "rebasingElection": false,
+                        "additions": [
+                          {
+                            "date": "1990-06-01T00:00:00.0000000+00:00",
+                            "cost": 130908.33,
+                            "indexation": 48500,
+                            "paidCost": 172500
+                          }
+                        ]
                       }
                     }
                   ],
@@ -218366,7 +218422,15 @@
                         "indexation": 125050,
                         "originalCost": 10000,
                         "marketValue1982": 50000,
-                        "rebasingElection": false
+                        "rebasingElection": false,
+                        "additions": [
+                          {
+                            "date": "1990-06-01T00:00:00.0000000+00:00",
+                            "cost": 130908.33,
+                            "indexation": 48500,
+                            "paidCost": 172500
+                          }
+                        ]
                       }
                     }
                   ],
@@ -259324,10 +259388,46 @@
           "rebasingElection": {
             "type": "boolean",
             "nullable": true
+          },
+          "additions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ChargeableGainsTakeOnAddition"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false,
         "description": "Carried-forward chargeable-gains balances for a tax-lot taken on under the UK chargeable gains accounting method"
+      },
+      "ChargeableGainsTakeOnAddition": {
+        "required": [
+          "cost",
+          "date",
+          "indexation"
+        ],
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "cost": {
+            "type": "number",
+            "format": "double"
+          },
+          "indexation": {
+            "type": "number",
+            "format": "double"
+          },
+          "paidCost": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "One acquisition added to a taken-on 1982 holding since 31 March 1982, carried as its own record inside the holding"
       },
       "ChartOfAccounts": {
         "required": [

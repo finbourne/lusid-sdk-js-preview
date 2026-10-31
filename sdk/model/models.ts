@@ -351,6 +351,7 @@ export * from './changeInterval';
 export * from './changeIntervalWithOrderManagementDetail';
 export * from './changeItem';
 export * from './chargeableGainsTakeOn';
+export * from './chargeableGainsTakeOnAddition';
 export * from './chartOfAccounts';
 export * from './chartOfAccountsProperties';
 export * from './chartOfAccountsRequest';
@@ -2687,6 +2688,7 @@ import { ChangeInterval } from './changeInterval';
 import { ChangeIntervalWithOrderManagementDetail } from './changeIntervalWithOrderManagementDetail';
 import { ChangeItem } from './changeItem';
 import { ChargeableGainsTakeOn } from './chargeableGainsTakeOn';
+import { ChargeableGainsTakeOnAddition } from './chargeableGainsTakeOnAddition';
 import { ChartOfAccounts } from './chartOfAccounts';
 import { ChartOfAccountsProperties } from './chartOfAccountsProperties';
 import { ChartOfAccountsRequest } from './chartOfAccountsRequest';
@@ -5854,6 +5856,7 @@ let typeMap: {[index: string]: any} = {
     "ChangeIntervalWithOrderManagementDetail": ChangeIntervalWithOrderManagementDetail,
     "ChangeItem": ChangeItem,
     "ChargeableGainsTakeOn": ChargeableGainsTakeOn,
+    "ChargeableGainsTakeOnAddition": ChargeableGainsTakeOnAddition,
     "ChartOfAccounts": ChartOfAccounts,
     "ChartOfAccountsProperties": ChartOfAccountsProperties,
     "ChartOfAccountsRequest": ChartOfAccountsRequest,
