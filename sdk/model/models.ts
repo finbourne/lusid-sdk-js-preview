@@ -48,6 +48,9 @@ export * from './adjustGlobalCommitmentEventAllOf';
 export * from './adjustHolding';
 export * from './adjustHoldingForDateRequest';
 export * from './adjustHoldingRequest';
+export * from './adjustmentDefinitionRequest';
+export * from './adjustmentDefinitionResponse';
+export * from './adjustmentEntryResponse';
 export * from './aggregateMatchingRule';
 export * from './aggregateNumericTolerance';
 export * from './aggregateRuleValues';
@@ -2386,6 +2389,9 @@ import { AdjustGlobalCommitmentEventAllOf } from './adjustGlobalCommitmentEventA
 import { AdjustHolding } from './adjustHolding';
 import { AdjustHoldingForDateRequest } from './adjustHoldingForDateRequest';
 import { AdjustHoldingRequest } from './adjustHoldingRequest';
+import { AdjustmentDefinitionRequest } from './adjustmentDefinitionRequest';
+import { AdjustmentDefinitionResponse } from './adjustmentDefinitionResponse';
+import { AdjustmentEntryResponse } from './adjustmentEntryResponse';
 import { AggregateMatchingRule } from './aggregateMatchingRule';
 import { AggregateNumericTolerance } from './aggregateNumericTolerance';
 import { AggregateRuleValues } from './aggregateRuleValues';
@@ -5560,6 +5566,9 @@ let typeMap: {[index: string]: any} = {
     "AdjustHolding": AdjustHolding,
     "AdjustHoldingForDateRequest": AdjustHoldingForDateRequest,
     "AdjustHoldingRequest": AdjustHoldingRequest,
+    "AdjustmentDefinitionRequest": AdjustmentDefinitionRequest,
+    "AdjustmentDefinitionResponse": AdjustmentDefinitionResponse,
+    "AdjustmentEntryResponse": AdjustmentEntryResponse,
     "AggregateMatchingRule": AggregateMatchingRule,
     "AggregateNumericTolerance": AggregateNumericTolerance,
     "AggregateRuleValues": AggregateRuleValues,
