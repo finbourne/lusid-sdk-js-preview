@@ -243,9 +243,17 @@ export * from './branchStepRequest';
 export * from './branchStepRequestAllOf';
 export * from './breakCodeSource';
 export * from './bucket';
+export * from './bucketAmounts';
+export * from './bucketBalanceFigures';
 export * from './bucketBorderConfiguration';
+export * from './bucketCashFlowBalance';
+export * from './bucketCashFlowBucket';
+export * from './bucketCashFlowDrillDownResponse';
+export * from './bucketCashFlowSubtotal';
+export * from './bucketCurrencySubtotal';
 export * from './bucketDefinition';
 export * from './bucketMembership';
+export * from './bucketNetOfHaircutBalance';
 export * from './bucketSeedValue';
 export * from './bucketSeedValueRequest';
 export * from './bucketSetClassSeed';
@@ -313,6 +321,8 @@ export * from './cashAllOf';
 export * from './cashAndSecurityOfferElection';
 export * from './cashDependency';
 export * from './cashDependencyAllOf';
+export * from './cashDistributionFromNonEligibleSecuritiesSalesEvent';
+export * from './cashDistributionFromNonEligibleSecuritiesSalesEventAllOf';
 export * from './cashDividendEvent';
 export * from './cashDividendEventAllOf';
 export * from './cashElection';
@@ -381,7 +391,9 @@ export * from './collateral';
 export * from './collateralAgreement';
 export * from './collateralAgreementApplicability';
 export * from './collateralAgreementRequest';
+export * from './collateralFundingTerms';
 export * from './collateralInstrument';
+export * from './collateralOptimisationTerms';
 export * from './commodityCalendarSchedule';
 export * from './commodityCalendarScheduleAllOf';
 export * from './commodityCalendarSwap';
@@ -425,9 +437,20 @@ export * from './complianceRuleTemplate';
 export * from './complianceRuleTemplateEntity';
 export * from './complianceRuleUpsertRequest';
 export * from './complianceRuleUpsertResponse';
+export * from './complianceRuleV3Check';
+export * from './complianceRuleV3CheckBound';
+export * from './complianceRuleV3ComputedFilter';
+export * from './complianceRuleV3DecimalBound';
+export * from './complianceRuleV3DescribeResponse';
+export * from './complianceRuleV3FilterNode';
+export * from './complianceRuleV3GroupResult';
+export * from './complianceRuleV3Measure';
+export * from './complianceRuleV3Response';
+export * from './complianceRuleV3RuleResult';
 export * from './complianceRunConfiguration';
 export * from './complianceRunInfo';
 export * from './complianceRunInfoV2';
+export * from './complianceRunV3Response';
 export * from './complianceStep';
 export * from './complianceStepRequest';
 export * from './complianceStepType';
@@ -772,11 +795,14 @@ export * from './filterStep';
 export * from './filterStepRequest';
 export * from './filteredFundIdList';
 export * from './filteredFundIdListAllOf';
+export * from './filteredPortfolioIdList';
+export * from './filteredPortfolioIdListAllOf';
 export * from './finalisedValuationPoint';
 export * from './finalisedValuationPointAllOf';
 export * from './fixedLeg';
 export * from './fixedLegAllOf';
 export * from './fixedLegAllOfOverrides';
+export * from './fixedPeriodLookbackActivityWindow';
 export * from './fixedSchedule';
 export * from './fixedScheduleAllOf';
 export * from './flexibleDeposit';
@@ -1016,6 +1042,7 @@ export * from './informationalErrorEvent';
 export * from './informationalErrorEventAllOf';
 export * from './informationalEvent';
 export * from './informationalEventAllOf';
+export * from './initialMarginChange';
 export * from './inlineValuationRequest';
 export * from './inlineValuationsReconciliationRequest';
 export * from './inputTransition';
@@ -1147,6 +1174,7 @@ export * from './marginLine';
 export * from './marginRounding';
 export * from './marginRun';
 export * from './marginRunIssue';
+export * from './marginRunOptimisation';
 export * from './marginRunRequest';
 export * from './marginRunShard';
 export * from './marginSettlementLag';
@@ -1217,6 +1245,7 @@ export * from './navSettlementConfigurationCategory';
 export * from './navType';
 export * from './navTypeDefinition';
 export * from './navTypeSelection';
+export * from './nettingRecommendation';
 export * from './newInstrument';
 export * from './nextValueInSequenceResponse';
 export * from './noticeConvention';
@@ -1303,6 +1332,7 @@ export * from './pagedResourceListOfCleardownModuleRule';
 export * from './pagedResourceListOfClosedPeriod';
 export * from './pagedResourceListOfCollateralAgreement';
 export * from './pagedResourceListOfComplianceRuleResponse';
+export * from './pagedResourceListOfComplianceRuleV3Response';
 export * from './pagedResourceListOfComplianceRunInfoV2';
 export * from './pagedResourceListOfComplianceTemplate';
 export * from './pagedResourceListOfCorporateActionSource';
@@ -1343,6 +1373,7 @@ export * from './pagedResourceListOfMarginCall';
 export * from './pagedResourceListOfMarginLine';
 export * from './pagedResourceListOfMarginRun';
 export * from './pagedResourceListOfMatchingRuleset';
+export * from './pagedResourceListOfNettingRecommendation';
 export * from './pagedResourceListOfOrder';
 export * from './pagedResourceListOfOrderBreachHistory';
 export * from './pagedResourceListOfOrderGraphBlock';
@@ -1750,7 +1781,6 @@ export * from './resourceListOfApplicableInstrumentEvent';
 export * from './resourceListOfBlock';
 export * from './resourceListOfBlockAndOrders';
 export * from './resourceListOfCalendarDate';
-export * from './resourceListOfCashFlowDetail';
 export * from './resourceListOfChange';
 export * from './resourceListOfChangeHistory';
 export * from './resourceListOfChangeInterval';
@@ -1875,6 +1905,7 @@ export * from './roundingConvention';
 export * from './rulesInterval';
 export * from './runCheckRequest';
 export * from './runCheckResponse';
+export * from './runComplianceV3Request';
 export * from './scalingMethodology';
 export * from './scenarioDefinition';
 export * from './scenarioDiagnostics';
@@ -1938,6 +1969,7 @@ export * from './shareClassDealingBreakdown';
 export * from './shareClassDefinition';
 export * from './shareClassDetails';
 export * from './shareClassPnlBreakdown';
+export * from './shareClassRoundingConvention';
 export * from './sharesPremiumDividendEvent';
 export * from './sharesPremiumDividendEventAllOf';
 export * from './shiftValueCondition';
@@ -2047,6 +2079,7 @@ export * from './totalReturnSwapAllOf';
 export * from './totalReturnSwapCashFlowEvent';
 export * from './totalReturnSwapCashFlowEventAllOf';
 export * from './touch';
+export * from './tradeReference';
 export * from './tradeTicket';
 export * from './tradeTicketType';
 export * from './tradingConventions';
@@ -2181,6 +2214,7 @@ export * from './upsertCdsFlowConventionsRequest';
 export * from './upsertCollateralAgreementRequest';
 export * from './upsertComplexMarketDataRequest';
 export * from './upsertComplianceRuleRequest';
+export * from './upsertComplianceRuleV3Request';
 export * from './upsertComplianceRunSummaryRequest';
 export * from './upsertComplianceRunSummaryResult';
 export * from './upsertCorporateActionRequest';
@@ -2294,6 +2328,8 @@ export * from './virtualDocumentRow';
 export * from './virtualRow';
 export * from './virtualTransactionOverrideRecord';
 export * from './virtualTransactionOverridesResponse';
+export * from './volCubeOptions';
+export * from './volCubeOptionsAllOf';
 export * from './volSurfaceShiftDefinition';
 export * from './volSurfaceShiftDefinitionAllOf';
 export * from './volSurfaceShiftMode';
@@ -2596,9 +2632,17 @@ import { BranchStepRequest } from './branchStepRequest';
 import { BranchStepRequestAllOf } from './branchStepRequestAllOf';
 import { BreakCodeSource } from './breakCodeSource';
 import { Bucket } from './bucket';
+import { BucketAmounts } from './bucketAmounts';
+import { BucketBalanceFigures } from './bucketBalanceFigures';
 import { BucketBorderConfiguration } from './bucketBorderConfiguration';
+import { BucketCashFlowBalance } from './bucketCashFlowBalance';
+import { BucketCashFlowBucket } from './bucketCashFlowBucket';
+import { BucketCashFlowDrillDownResponse } from './bucketCashFlowDrillDownResponse';
+import { BucketCashFlowSubtotal } from './bucketCashFlowSubtotal';
+import { BucketCurrencySubtotal } from './bucketCurrencySubtotal';
 import { BucketDefinition } from './bucketDefinition';
 import { BucketMembership } from './bucketMembership';
+import { BucketNetOfHaircutBalance } from './bucketNetOfHaircutBalance';
 import { BucketSeedValue } from './bucketSeedValue';
 import { BucketSeedValueRequest } from './bucketSeedValueRequest';
 import { BucketSetClassSeed } from './bucketSetClassSeed';
@@ -2666,6 +2710,8 @@ import { CashAllOf } from './cashAllOf';
 import { CashAndSecurityOfferElection } from './cashAndSecurityOfferElection';
 import { CashDependency } from './cashDependency';
 import { CashDependencyAllOf } from './cashDependencyAllOf';
+import { CashDistributionFromNonEligibleSecuritiesSalesEvent } from './cashDistributionFromNonEligibleSecuritiesSalesEvent';
+import { CashDistributionFromNonEligibleSecuritiesSalesEventAllOf } from './cashDistributionFromNonEligibleSecuritiesSalesEventAllOf';
 import { CashDividendEvent } from './cashDividendEvent';
 import { CashDividendEventAllOf } from './cashDividendEventAllOf';
 import { CashElection } from './cashElection';
@@ -2734,7 +2780,9 @@ import { Collateral } from './collateral';
 import { CollateralAgreement } from './collateralAgreement';
 import { CollateralAgreementApplicability } from './collateralAgreementApplicability';
 import { CollateralAgreementRequest } from './collateralAgreementRequest';
+import { CollateralFundingTerms } from './collateralFundingTerms';
 import { CollateralInstrument } from './collateralInstrument';
+import { CollateralOptimisationTerms } from './collateralOptimisationTerms';
 import { CommodityCalendarSchedule } from './commodityCalendarSchedule';
 import { CommodityCalendarScheduleAllOf } from './commodityCalendarScheduleAllOf';
 import { CommodityCalendarSwap } from './commodityCalendarSwap';
@@ -2778,9 +2826,20 @@ import { ComplianceRuleTemplate } from './complianceRuleTemplate';
 import { ComplianceRuleTemplateEntity } from './complianceRuleTemplateEntity';
 import { ComplianceRuleUpsertRequest } from './complianceRuleUpsertRequest';
 import { ComplianceRuleUpsertResponse } from './complianceRuleUpsertResponse';
+import { ComplianceRuleV3Check } from './complianceRuleV3Check';
+import { ComplianceRuleV3CheckBound } from './complianceRuleV3CheckBound';
+import { ComplianceRuleV3ComputedFilter } from './complianceRuleV3ComputedFilter';
+import { ComplianceRuleV3DecimalBound } from './complianceRuleV3DecimalBound';
+import { ComplianceRuleV3DescribeResponse } from './complianceRuleV3DescribeResponse';
+import { ComplianceRuleV3FilterNode } from './complianceRuleV3FilterNode';
+import { ComplianceRuleV3GroupResult } from './complianceRuleV3GroupResult';
+import { ComplianceRuleV3Measure } from './complianceRuleV3Measure';
+import { ComplianceRuleV3Response } from './complianceRuleV3Response';
+import { ComplianceRuleV3RuleResult } from './complianceRuleV3RuleResult';
 import { ComplianceRunConfiguration } from './complianceRunConfiguration';
 import { ComplianceRunInfo } from './complianceRunInfo';
 import { ComplianceRunInfoV2 } from './complianceRunInfoV2';
+import { ComplianceRunV3Response } from './complianceRunV3Response';
 import { ComplianceStep } from './complianceStep';
 import { ComplianceStepRequest } from './complianceStepRequest';
 import { ComplianceStepType } from './complianceStepType';
@@ -3125,11 +3184,14 @@ import { FilterStep } from './filterStep';
 import { FilterStepRequest } from './filterStepRequest';
 import { FilteredFundIdList } from './filteredFundIdList';
 import { FilteredFundIdListAllOf } from './filteredFundIdListAllOf';
+import { FilteredPortfolioIdList } from './filteredPortfolioIdList';
+import { FilteredPortfolioIdListAllOf } from './filteredPortfolioIdListAllOf';
 import { FinalisedValuationPoint } from './finalisedValuationPoint';
 import { FinalisedValuationPointAllOf } from './finalisedValuationPointAllOf';
 import { FixedLeg } from './fixedLeg';
 import { FixedLegAllOf } from './fixedLegAllOf';
 import { FixedLegAllOfOverrides } from './fixedLegAllOfOverrides';
+import { FixedPeriodLookbackActivityWindow } from './fixedPeriodLookbackActivityWindow';
 import { FixedSchedule } from './fixedSchedule';
 import { FixedScheduleAllOf } from './fixedScheduleAllOf';
 import { FlexibleDeposit } from './flexibleDeposit';
@@ -3369,6 +3431,7 @@ import { InformationalErrorEvent } from './informationalErrorEvent';
 import { InformationalErrorEventAllOf } from './informationalErrorEventAllOf';
 import { InformationalEvent } from './informationalEvent';
 import { InformationalEventAllOf } from './informationalEventAllOf';
+import { InitialMarginChange } from './initialMarginChange';
 import { InlineValuationRequest } from './inlineValuationRequest';
 import { InlineValuationsReconciliationRequest } from './inlineValuationsReconciliationRequest';
 import { InputTransition } from './inputTransition';
@@ -3500,6 +3563,7 @@ import { MarginLine } from './marginLine';
 import { MarginRounding } from './marginRounding';
 import { MarginRun } from './marginRun';
 import { MarginRunIssue } from './marginRunIssue';
+import { MarginRunOptimisation } from './marginRunOptimisation';
 import { MarginRunRequest } from './marginRunRequest';
 import { MarginRunShard } from './marginRunShard';
 import { MarginSettlementLag } from './marginSettlementLag';
@@ -3570,6 +3634,7 @@ import { NavSettlementConfigurationCategory } from './navSettlementConfiguration
 import { NavType } from './navType';
 import { NavTypeDefinition } from './navTypeDefinition';
 import { NavTypeSelection } from './navTypeSelection';
+import { NettingRecommendation } from './nettingRecommendation';
 import { NewInstrument } from './newInstrument';
 import { NextValueInSequenceResponse } from './nextValueInSequenceResponse';
 import { NoticeConvention } from './noticeConvention';
@@ -3656,6 +3721,7 @@ import { PagedResourceListOfCleardownModuleRule } from './pagedResourceListOfCle
 import { PagedResourceListOfClosedPeriod } from './pagedResourceListOfClosedPeriod';
 import { PagedResourceListOfCollateralAgreement } from './pagedResourceListOfCollateralAgreement';
 import { PagedResourceListOfComplianceRuleResponse } from './pagedResourceListOfComplianceRuleResponse';
+import { PagedResourceListOfComplianceRuleV3Response } from './pagedResourceListOfComplianceRuleV3Response';
 import { PagedResourceListOfComplianceRunInfoV2 } from './pagedResourceListOfComplianceRunInfoV2';
 import { PagedResourceListOfComplianceTemplate } from './pagedResourceListOfComplianceTemplate';
 import { PagedResourceListOfCorporateActionSource } from './pagedResourceListOfCorporateActionSource';
@@ -3696,6 +3762,7 @@ import { PagedResourceListOfMarginCall } from './pagedResourceListOfMarginCall';
 import { PagedResourceListOfMarginLine } from './pagedResourceListOfMarginLine';
 import { PagedResourceListOfMarginRun } from './pagedResourceListOfMarginRun';
 import { PagedResourceListOfMatchingRuleset } from './pagedResourceListOfMatchingRuleset';
+import { PagedResourceListOfNettingRecommendation } from './pagedResourceListOfNettingRecommendation';
 import { PagedResourceListOfOrder } from './pagedResourceListOfOrder';
 import { PagedResourceListOfOrderBreachHistory } from './pagedResourceListOfOrderBreachHistory';
 import { PagedResourceListOfOrderGraphBlock } from './pagedResourceListOfOrderGraphBlock';
@@ -4103,7 +4170,6 @@ import { ResourceListOfApplicableInstrumentEvent } from './resourceListOfApplica
 import { ResourceListOfBlock } from './resourceListOfBlock';
 import { ResourceListOfBlockAndOrders } from './resourceListOfBlockAndOrders';
 import { ResourceListOfCalendarDate } from './resourceListOfCalendarDate';
-import { ResourceListOfCashFlowDetail } from './resourceListOfCashFlowDetail';
 import { ResourceListOfChange } from './resourceListOfChange';
 import { ResourceListOfChangeHistory } from './resourceListOfChangeHistory';
 import { ResourceListOfChangeInterval } from './resourceListOfChangeInterval';
@@ -4228,6 +4294,7 @@ import { RoundingConvention } from './roundingConvention';
 import { RulesInterval } from './rulesInterval';
 import { RunCheckRequest } from './runCheckRequest';
 import { RunCheckResponse } from './runCheckResponse';
+import { RunComplianceV3Request } from './runComplianceV3Request';
 import { ScalingMethodology } from './scalingMethodology';
 import { ScenarioDefinition } from './scenarioDefinition';
 import { ScenarioDiagnostics } from './scenarioDiagnostics';
@@ -4291,6 +4358,7 @@ import { ShareClassDealingBreakdown } from './shareClassDealingBreakdown';
 import { ShareClassDefinition } from './shareClassDefinition';
 import { ShareClassDetails } from './shareClassDetails';
 import { ShareClassPnlBreakdown } from './shareClassPnlBreakdown';
+import { ShareClassRoundingConvention } from './shareClassRoundingConvention';
 import { SharesPremiumDividendEvent } from './sharesPremiumDividendEvent';
 import { SharesPremiumDividendEventAllOf } from './sharesPremiumDividendEventAllOf';
 import { ShiftValueCondition } from './shiftValueCondition';
@@ -4400,6 +4468,7 @@ import { TotalReturnSwapAllOf } from './totalReturnSwapAllOf';
 import { TotalReturnSwapCashFlowEvent } from './totalReturnSwapCashFlowEvent';
 import { TotalReturnSwapCashFlowEventAllOf } from './totalReturnSwapCashFlowEventAllOf';
 import { Touch } from './touch';
+import { TradeReference } from './tradeReference';
 import { TradeTicket } from './tradeTicket';
 import { TradeTicketType } from './tradeTicketType';
 import { TradingConventions } from './tradingConventions';
@@ -4534,6 +4603,7 @@ import { UpsertCdsFlowConventionsRequest } from './upsertCdsFlowConventionsReque
 import { UpsertCollateralAgreementRequest } from './upsertCollateralAgreementRequest';
 import { UpsertComplexMarketDataRequest } from './upsertComplexMarketDataRequest';
 import { UpsertComplianceRuleRequest } from './upsertComplianceRuleRequest';
+import { UpsertComplianceRuleV3Request } from './upsertComplianceRuleV3Request';
 import { UpsertComplianceRunSummaryRequest } from './upsertComplianceRunSummaryRequest';
 import { UpsertComplianceRunSummaryResult } from './upsertComplianceRunSummaryResult';
 import { UpsertCorporateActionRequest } from './upsertCorporateActionRequest';
@@ -4647,6 +4717,8 @@ import { VirtualDocumentRow } from './virtualDocumentRow';
 import { VirtualRow } from './virtualRow';
 import { VirtualTransactionOverrideRecord } from './virtualTransactionOverrideRecord';
 import { VirtualTransactionOverridesResponse } from './virtualTransactionOverridesResponse';
+import { VolCubeOptions } from './volCubeOptions';
+import { VolCubeOptionsAllOf } from './volCubeOptionsAllOf';
 import { VolSurfaceShiftDefinition } from './volSurfaceShiftDefinition';
 import { VolSurfaceShiftDefinitionAllOf } from './volSurfaceShiftDefinitionAllOf';
 import { VolSurfaceShiftMode } from './volSurfaceShiftMode';
@@ -4809,6 +4881,8 @@ let enumsMap: {[index: string]: any} = {
         "CashAllOf.InstrumentTypeEnum": CashAllOf.InstrumentTypeEnum,
         "CashDependency.DependencyTypeEnum": CashDependency.DependencyTypeEnum,
         "CashDependencyAllOf.DependencyTypeEnum": CashDependencyAllOf.DependencyTypeEnum,
+        "CashDistributionFromNonEligibleSecuritiesSalesEvent.InstrumentEventTypeEnum": CashDistributionFromNonEligibleSecuritiesSalesEvent.InstrumentEventTypeEnum,
+        "CashDistributionFromNonEligibleSecuritiesSalesEventAllOf.InstrumentEventTypeEnum": CashDistributionFromNonEligibleSecuritiesSalesEventAllOf.InstrumentEventTypeEnum,
         "CashDividendEvent.InstrumentEventTypeEnum": CashDividendEvent.InstrumentEventTypeEnum,
         "CashDividendEventAllOf.InstrumentEventTypeEnum": CashDividendEventAllOf.InstrumentEventTypeEnum,
         "CashFlowEvent.InstrumentEventTypeEnum": CashFlowEvent.InstrumentEventTypeEnum,
@@ -5002,6 +5076,8 @@ let enumsMap: {[index: string]: any} = {
         "FilteredFundIdList.ReferenceListTypeEnum": FilteredFundIdList.ReferenceListTypeEnum,
         "FilteredFundIdListAllOf.NavTypeSelectionEnum": FilteredFundIdListAllOf.NavTypeSelectionEnum,
         "FilteredFundIdListAllOf.ReferenceListTypeEnum": FilteredFundIdListAllOf.ReferenceListTypeEnum,
+        "FilteredPortfolioIdList.ReferenceListTypeEnum": FilteredPortfolioIdList.ReferenceListTypeEnum,
+        "FilteredPortfolioIdListAllOf.ReferenceListTypeEnum": FilteredPortfolioIdListAllOf.ReferenceListTypeEnum,
         "FinalisedValuationPoint.EntryTypeEnum": FinalisedValuationPoint.EntryTypeEnum,
         "FinalisedValuationPoint.FundCalendarEntriesTypeEnum": FinalisedValuationPoint.FundCalendarEntriesTypeEnum,
         "FinalisedValuationPointAllOf.EntryTypeEnum": FinalisedValuationPointAllOf.EntryTypeEnum,
@@ -5526,6 +5602,8 @@ let enumsMap: {[index: string]: any} = {
         "VendorDependencyAllOf.DependencyTypeEnum": VendorDependencyAllOf.DependencyTypeEnum,
         "VendorLibrary": VendorLibrary,
         "VendorModelRule.SupplierEnum": VendorModelRule.SupplierEnum,
+        "VolCubeOptions.MarketDataOptionsTypeEnum": VolCubeOptions.MarketDataOptionsTypeEnum,
+        "VolCubeOptionsAllOf.MarketDataOptionsTypeEnum": VolCubeOptionsAllOf.MarketDataOptionsTypeEnum,
         "VolSurfaceShiftDefinition.ShiftTypeEnum": VolSurfaceShiftDefinition.ShiftTypeEnum,
         "VolSurfaceShiftDefinition.ScenarioShiftTypeEnum": VolSurfaceShiftDefinition.ScenarioShiftTypeEnum,
         "VolSurfaceShiftDefinitionAllOf.ShiftTypeEnum": VolSurfaceShiftDefinitionAllOf.ShiftTypeEnum,
@@ -5783,9 +5861,17 @@ let typeMap: {[index: string]: any} = {
     "BranchStepRequestAllOf": BranchStepRequestAllOf,
     "BreakCodeSource": BreakCodeSource,
     "Bucket": Bucket,
+    "BucketAmounts": BucketAmounts,
+    "BucketBalanceFigures": BucketBalanceFigures,
     "BucketBorderConfiguration": BucketBorderConfiguration,
+    "BucketCashFlowBalance": BucketCashFlowBalance,
+    "BucketCashFlowBucket": BucketCashFlowBucket,
+    "BucketCashFlowDrillDownResponse": BucketCashFlowDrillDownResponse,
+    "BucketCashFlowSubtotal": BucketCashFlowSubtotal,
+    "BucketCurrencySubtotal": BucketCurrencySubtotal,
     "BucketDefinition": BucketDefinition,
     "BucketMembership": BucketMembership,
+    "BucketNetOfHaircutBalance": BucketNetOfHaircutBalance,
     "BucketSeedValue": BucketSeedValue,
     "BucketSeedValueRequest": BucketSeedValueRequest,
     "BucketSetClassSeed": BucketSetClassSeed,
@@ -5853,6 +5939,8 @@ let typeMap: {[index: string]: any} = {
     "CashAndSecurityOfferElection": CashAndSecurityOfferElection,
     "CashDependency": CashDependency,
     "CashDependencyAllOf": CashDependencyAllOf,
+    "CashDistributionFromNonEligibleSecuritiesSalesEvent": CashDistributionFromNonEligibleSecuritiesSalesEvent,
+    "CashDistributionFromNonEligibleSecuritiesSalesEventAllOf": CashDistributionFromNonEligibleSecuritiesSalesEventAllOf,
     "CashDividendEvent": CashDividendEvent,
     "CashDividendEventAllOf": CashDividendEventAllOf,
     "CashElection": CashElection,
@@ -5920,7 +6008,9 @@ let typeMap: {[index: string]: any} = {
     "CollateralAgreement": CollateralAgreement,
     "CollateralAgreementApplicability": CollateralAgreementApplicability,
     "CollateralAgreementRequest": CollateralAgreementRequest,
+    "CollateralFundingTerms": CollateralFundingTerms,
     "CollateralInstrument": CollateralInstrument,
+    "CollateralOptimisationTerms": CollateralOptimisationTerms,
     "CommodityCalendarSchedule": CommodityCalendarSchedule,
     "CommodityCalendarScheduleAllOf": CommodityCalendarScheduleAllOf,
     "CommodityCalendarSwap": CommodityCalendarSwap,
@@ -5963,9 +6053,20 @@ let typeMap: {[index: string]: any} = {
     "ComplianceRuleTemplateEntity": ComplianceRuleTemplateEntity,
     "ComplianceRuleUpsertRequest": ComplianceRuleUpsertRequest,
     "ComplianceRuleUpsertResponse": ComplianceRuleUpsertResponse,
+    "ComplianceRuleV3Check": ComplianceRuleV3Check,
+    "ComplianceRuleV3CheckBound": ComplianceRuleV3CheckBound,
+    "ComplianceRuleV3ComputedFilter": ComplianceRuleV3ComputedFilter,
+    "ComplianceRuleV3DecimalBound": ComplianceRuleV3DecimalBound,
+    "ComplianceRuleV3DescribeResponse": ComplianceRuleV3DescribeResponse,
+    "ComplianceRuleV3FilterNode": ComplianceRuleV3FilterNode,
+    "ComplianceRuleV3GroupResult": ComplianceRuleV3GroupResult,
+    "ComplianceRuleV3Measure": ComplianceRuleV3Measure,
+    "ComplianceRuleV3Response": ComplianceRuleV3Response,
+    "ComplianceRuleV3RuleResult": ComplianceRuleV3RuleResult,
     "ComplianceRunConfiguration": ComplianceRunConfiguration,
     "ComplianceRunInfo": ComplianceRunInfo,
     "ComplianceRunInfoV2": ComplianceRunInfoV2,
+    "ComplianceRunV3Response": ComplianceRunV3Response,
     "ComplianceStep": ComplianceStep,
     "ComplianceStepRequest": ComplianceStepRequest,
     "ComplianceSummaryRuleResult": ComplianceSummaryRuleResult,
@@ -6300,11 +6401,14 @@ let typeMap: {[index: string]: any} = {
     "FilterStepRequest": FilterStepRequest,
     "FilteredFundIdList": FilteredFundIdList,
     "FilteredFundIdListAllOf": FilteredFundIdListAllOf,
+    "FilteredPortfolioIdList": FilteredPortfolioIdList,
+    "FilteredPortfolioIdListAllOf": FilteredPortfolioIdListAllOf,
     "FinalisedValuationPoint": FinalisedValuationPoint,
     "FinalisedValuationPointAllOf": FinalisedValuationPointAllOf,
     "FixedLeg": FixedLeg,
     "FixedLegAllOf": FixedLegAllOf,
     "FixedLegAllOfOverrides": FixedLegAllOfOverrides,
+    "FixedPeriodLookbackActivityWindow": FixedPeriodLookbackActivityWindow,
     "FixedSchedule": FixedSchedule,
     "FixedScheduleAllOf": FixedScheduleAllOf,
     "FlexibleDeposit": FlexibleDeposit,
@@ -6541,6 +6645,7 @@ let typeMap: {[index: string]: any} = {
     "InformationalErrorEventAllOf": InformationalErrorEventAllOf,
     "InformationalEvent": InformationalEvent,
     "InformationalEventAllOf": InformationalEventAllOf,
+    "InitialMarginChange": InitialMarginChange,
     "InlineValuationRequest": InlineValuationRequest,
     "InlineValuationsReconciliationRequest": InlineValuationsReconciliationRequest,
     "InputTransition": InputTransition,
@@ -6669,6 +6774,7 @@ let typeMap: {[index: string]: any} = {
     "MarginRounding": MarginRounding,
     "MarginRun": MarginRun,
     "MarginRunIssue": MarginRunIssue,
+    "MarginRunOptimisation": MarginRunOptimisation,
     "MarginRunRequest": MarginRunRequest,
     "MarginRunShard": MarginRunShard,
     "MarginSettlementLag": MarginSettlementLag,
@@ -6730,6 +6836,7 @@ let typeMap: {[index: string]: any} = {
     "NavSettlementConfigurationCategory": NavSettlementConfigurationCategory,
     "NavType": NavType,
     "NavTypeDefinition": NavTypeDefinition,
+    "NettingRecommendation": NettingRecommendation,
     "NewInstrument": NewInstrument,
     "NextValueInSequenceResponse": NextValueInSequenceResponse,
     "NoticeConvention": NoticeConvention,
@@ -6812,6 +6919,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfClosedPeriod": PagedResourceListOfClosedPeriod,
     "PagedResourceListOfCollateralAgreement": PagedResourceListOfCollateralAgreement,
     "PagedResourceListOfComplianceRuleResponse": PagedResourceListOfComplianceRuleResponse,
+    "PagedResourceListOfComplianceRuleV3Response": PagedResourceListOfComplianceRuleV3Response,
     "PagedResourceListOfComplianceRunInfoV2": PagedResourceListOfComplianceRunInfoV2,
     "PagedResourceListOfComplianceTemplate": PagedResourceListOfComplianceTemplate,
     "PagedResourceListOfCorporateActionSource": PagedResourceListOfCorporateActionSource,
@@ -6852,6 +6960,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfMarginLine": PagedResourceListOfMarginLine,
     "PagedResourceListOfMarginRun": PagedResourceListOfMarginRun,
     "PagedResourceListOfMatchingRuleset": PagedResourceListOfMatchingRuleset,
+    "PagedResourceListOfNettingRecommendation": PagedResourceListOfNettingRecommendation,
     "PagedResourceListOfOrder": PagedResourceListOfOrder,
     "PagedResourceListOfOrderBreachHistory": PagedResourceListOfOrderBreachHistory,
     "PagedResourceListOfOrderGraphBlock": PagedResourceListOfOrderGraphBlock,
@@ -7243,7 +7352,6 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfBlock": ResourceListOfBlock,
     "ResourceListOfBlockAndOrders": ResourceListOfBlockAndOrders,
     "ResourceListOfCalendarDate": ResourceListOfCalendarDate,
-    "ResourceListOfCashFlowDetail": ResourceListOfCashFlowDetail,
     "ResourceListOfChange": ResourceListOfChange,
     "ResourceListOfChangeHistory": ResourceListOfChangeHistory,
     "ResourceListOfChangeInterval": ResourceListOfChangeInterval,
@@ -7366,6 +7474,7 @@ let typeMap: {[index: string]: any} = {
     "RulesInterval": RulesInterval,
     "RunCheckRequest": RunCheckRequest,
     "RunCheckResponse": RunCheckResponse,
+    "RunComplianceV3Request": RunComplianceV3Request,
     "ScenarioDefinition": ScenarioDefinition,
     "ScenarioDiagnostics": ScenarioDiagnostics,
     "ScenarioPreviewAppliedShift": ScenarioPreviewAppliedShift,
@@ -7426,6 +7535,7 @@ let typeMap: {[index: string]: any} = {
     "ShareClassDefinition": ShareClassDefinition,
     "ShareClassDetails": ShareClassDetails,
     "ShareClassPnlBreakdown": ShareClassPnlBreakdown,
+    "ShareClassRoundingConvention": ShareClassRoundingConvention,
     "SharesPremiumDividendEvent": SharesPremiumDividendEvent,
     "SharesPremiumDividendEventAllOf": SharesPremiumDividendEventAllOf,
     "SideConfigurationData": SideConfigurationData,
@@ -7532,6 +7642,7 @@ let typeMap: {[index: string]: any} = {
     "TotalReturnSwapCashFlowEvent": TotalReturnSwapCashFlowEvent,
     "TotalReturnSwapCashFlowEventAllOf": TotalReturnSwapCashFlowEventAllOf,
     "Touch": Touch,
+    "TradeReference": TradeReference,
     "TradeTicket": TradeTicket,
     "TradingConventions": TradingConventions,
     "Transaction": Transaction,
@@ -7659,6 +7770,7 @@ let typeMap: {[index: string]: any} = {
     "UpsertCollateralAgreementRequest": UpsertCollateralAgreementRequest,
     "UpsertComplexMarketDataRequest": UpsertComplexMarketDataRequest,
     "UpsertComplianceRuleRequest": UpsertComplianceRuleRequest,
+    "UpsertComplianceRuleV3Request": UpsertComplianceRuleV3Request,
     "UpsertComplianceRunSummaryRequest": UpsertComplianceRunSummaryRequest,
     "UpsertComplianceRunSummaryResult": UpsertComplianceRunSummaryResult,
     "UpsertCorporateActionRequest": UpsertCorporateActionRequest,
@@ -7770,6 +7882,8 @@ let typeMap: {[index: string]: any} = {
     "VirtualRow": VirtualRow,
     "VirtualTransactionOverrideRecord": VirtualTransactionOverrideRecord,
     "VirtualTransactionOverridesResponse": VirtualTransactionOverridesResponse,
+    "VolCubeOptions": VolCubeOptions,
+    "VolCubeOptionsAllOf": VolCubeOptionsAllOf,
     "VolSurfaceShiftDefinition": VolSurfaceShiftDefinition,
     "VolSurfaceShiftDefinitionAllOf": VolSurfaceShiftDefinitionAllOf,
     "VolatilitySwap": VolatilitySwap,
