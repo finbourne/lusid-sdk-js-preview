@@ -391,6 +391,10 @@ export * from './collateral';
 export * from './collateralAgreement';
 export * from './collateralAgreementApplicability';
 export * from './collateralAgreementRequest';
+export * from './collateralAllocation';
+export * from './collateralAllocationCandidate';
+export * from './collateralAllocationLine';
+export * from './collateralAllocationOverride';
 export * from './collateralFundingTerms';
 export * from './collateralInstrument';
 export * from './collateralOptimisationTerms';
@@ -882,6 +886,8 @@ export * from './fundStructureEdgeTarget';
 export * from './fundStructureMemberRequest';
 export * from './fundStructureNode';
 export * from './fundStructureRequest';
+export * from './fundTaxScope';
+export * from './fundTaxScopeExclusions';
 export * from './fundTerms';
 export * from './fundTermsVersion';
 export * from './fundValuationPointData';
@@ -1175,6 +1181,7 @@ export * from './marginItem';
 export * from './marginLine';
 export * from './marginRounding';
 export * from './marginRun';
+export * from './marginRunAllocation';
 export * from './marginRunIssue';
 export * from './marginRunOptimisation';
 export * from './marginRunRequest';
@@ -1631,6 +1638,7 @@ export * from './quoteId';
 export * from './quoteInstrumentIdType';
 export * from './quoteSeriesId';
 export * from './quoteType';
+export * from './rankMarginCallRequest';
 export * from './rateBreakdownComponent';
 export * from './rateCurveShiftDefinition';
 export * from './rateCurveShiftDefinitionAllOf';
@@ -1640,6 +1648,8 @@ export * from './rawVendorEvent';
 export * from './rawVendorEventAllOf';
 export * from './reOpenPeriodDiaryEntryRequest';
 export * from './realisedGainLoss';
+export * from './realisedGainLossChargeableGains';
+export * from './realisedGainLossMatchedLot';
 export * from './recActivitySinceEffectiveAt';
 export * from './recActivityWindow';
 export * from './recApprovalDecision';
@@ -1686,6 +1696,7 @@ export * from './recResultItem';
 export * from './recResultItemDetails';
 export * from './recResultLinkKey';
 export * from './recResultRelationalDataItem';
+export * from './recResultResourceIdItem';
 export * from './recResultReview';
 export * from './recResultSet';
 export * from './recResultSetApprovalDecisionRequest';
@@ -2782,6 +2793,10 @@ import { Collateral } from './collateral';
 import { CollateralAgreement } from './collateralAgreement';
 import { CollateralAgreementApplicability } from './collateralAgreementApplicability';
 import { CollateralAgreementRequest } from './collateralAgreementRequest';
+import { CollateralAllocation } from './collateralAllocation';
+import { CollateralAllocationCandidate } from './collateralAllocationCandidate';
+import { CollateralAllocationLine } from './collateralAllocationLine';
+import { CollateralAllocationOverride } from './collateralAllocationOverride';
 import { CollateralFundingTerms } from './collateralFundingTerms';
 import { CollateralInstrument } from './collateralInstrument';
 import { CollateralOptimisationTerms } from './collateralOptimisationTerms';
@@ -3273,6 +3288,8 @@ import { FundStructureEdgeTarget } from './fundStructureEdgeTarget';
 import { FundStructureMemberRequest } from './fundStructureMemberRequest';
 import { FundStructureNode } from './fundStructureNode';
 import { FundStructureRequest } from './fundStructureRequest';
+import { FundTaxScope } from './fundTaxScope';
+import { FundTaxScopeExclusions } from './fundTaxScopeExclusions';
 import { FundTerms } from './fundTerms';
 import { FundTermsVersion } from './fundTermsVersion';
 import { FundValuationPointData } from './fundValuationPointData';
@@ -3566,6 +3583,7 @@ import { MarginItem } from './marginItem';
 import { MarginLine } from './marginLine';
 import { MarginRounding } from './marginRounding';
 import { MarginRun } from './marginRun';
+import { MarginRunAllocation } from './marginRunAllocation';
 import { MarginRunIssue } from './marginRunIssue';
 import { MarginRunOptimisation } from './marginRunOptimisation';
 import { MarginRunRequest } from './marginRunRequest';
@@ -4022,6 +4040,7 @@ import { QuoteId } from './quoteId';
 import { QuoteInstrumentIdType } from './quoteInstrumentIdType';
 import { QuoteSeriesId } from './quoteSeriesId';
 import { QuoteType } from './quoteType';
+import { RankMarginCallRequest } from './rankMarginCallRequest';
 import { RateBreakdownComponent } from './rateBreakdownComponent';
 import { RateCurveShiftDefinition } from './rateCurveShiftDefinition';
 import { RateCurveShiftDefinitionAllOf } from './rateCurveShiftDefinitionAllOf';
@@ -4031,6 +4050,8 @@ import { RawVendorEvent } from './rawVendorEvent';
 import { RawVendorEventAllOf } from './rawVendorEventAllOf';
 import { ReOpenPeriodDiaryEntryRequest } from './reOpenPeriodDiaryEntryRequest';
 import { RealisedGainLoss } from './realisedGainLoss';
+import { RealisedGainLossChargeableGains } from './realisedGainLossChargeableGains';
+import { RealisedGainLossMatchedLot } from './realisedGainLossMatchedLot';
 import { RecActivitySinceEffectiveAt } from './recActivitySinceEffectiveAt';
 import { RecActivityWindow } from './recActivityWindow';
 import { RecApprovalDecision } from './recApprovalDecision';
@@ -4077,6 +4098,7 @@ import { RecResultItem } from './recResultItem';
 import { RecResultItemDetails } from './recResultItemDetails';
 import { RecResultLinkKey } from './recResultLinkKey';
 import { RecResultRelationalDataItem } from './recResultRelationalDataItem';
+import { RecResultResourceIdItem } from './recResultResourceIdItem';
 import { RecResultReview } from './recResultReview';
 import { RecResultSet } from './recResultSet';
 import { RecResultSetApprovalDecisionRequest } from './recResultSetApprovalDecisionRequest';
@@ -6014,6 +6036,10 @@ let typeMap: {[index: string]: any} = {
     "CollateralAgreement": CollateralAgreement,
     "CollateralAgreementApplicability": CollateralAgreementApplicability,
     "CollateralAgreementRequest": CollateralAgreementRequest,
+    "CollateralAllocation": CollateralAllocation,
+    "CollateralAllocationCandidate": CollateralAllocationCandidate,
+    "CollateralAllocationLine": CollateralAllocationLine,
+    "CollateralAllocationOverride": CollateralAllocationOverride,
     "CollateralFundingTerms": CollateralFundingTerms,
     "CollateralInstrument": CollateralInstrument,
     "CollateralOptimisationTerms": CollateralOptimisationTerms,
@@ -6492,6 +6518,8 @@ let typeMap: {[index: string]: any} = {
     "FundStructureMemberRequest": FundStructureMemberRequest,
     "FundStructureNode": FundStructureNode,
     "FundStructureRequest": FundStructureRequest,
+    "FundTaxScope": FundTaxScope,
+    "FundTaxScopeExclusions": FundTaxScopeExclusions,
     "FundTerms": FundTerms,
     "FundTermsVersion": FundTermsVersion,
     "FundValuationPointData": FundValuationPointData,
@@ -6781,6 +6809,7 @@ let typeMap: {[index: string]: any} = {
     "MarginLine": MarginLine,
     "MarginRounding": MarginRounding,
     "MarginRun": MarginRun,
+    "MarginRunAllocation": MarginRunAllocation,
     "MarginRunIssue": MarginRunIssue,
     "MarginRunOptimisation": MarginRunOptimisation,
     "MarginRunRequest": MarginRunRequest,
@@ -7213,6 +7242,7 @@ let typeMap: {[index: string]: any} = {
     "QuoteDependencyAllOf": QuoteDependencyAllOf,
     "QuoteId": QuoteId,
     "QuoteSeriesId": QuoteSeriesId,
+    "RankMarginCallRequest": RankMarginCallRequest,
     "RateBreakdownComponent": RateBreakdownComponent,
     "RateCurveShiftDefinition": RateCurveShiftDefinition,
     "RateCurveShiftDefinitionAllOf": RateCurveShiftDefinitionAllOf,
@@ -7220,6 +7250,8 @@ let typeMap: {[index: string]: any} = {
     "RawVendorEventAllOf": RawVendorEventAllOf,
     "ReOpenPeriodDiaryEntryRequest": ReOpenPeriodDiaryEntryRequest,
     "RealisedGainLoss": RealisedGainLoss,
+    "RealisedGainLossChargeableGains": RealisedGainLossChargeableGains,
+    "RealisedGainLossMatchedLot": RealisedGainLossMatchedLot,
     "RecActivitySinceEffectiveAt": RecActivitySinceEffectiveAt,
     "RecActivityWindow": RecActivityWindow,
     "RecApprovalDecision": RecApprovalDecision,
@@ -7266,6 +7298,7 @@ let typeMap: {[index: string]: any} = {
     "RecResultItemDetails": RecResultItemDetails,
     "RecResultLinkKey": RecResultLinkKey,
     "RecResultRelationalDataItem": RecResultRelationalDataItem,
+    "RecResultResourceIdItem": RecResultResourceIdItem,
     "RecResultReview": RecResultReview,
     "RecResultSet": RecResultSet,
     "RecResultSetApprovalDecisionRequest": RecResultSetApprovalDecisionRequest,

@@ -9,7 +9,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "2.0.1746",
+    "version": "2.0.1747",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -27204,6 +27204,148 @@
         "x-fbn-apistatus": "Experimental"
       }
     },
+    "/api/collateral/margincalls/{runId}/{agreementScope}/{agreementCode}/{item}/{marginType}/{direction}/$allocation": {
+      "get": {
+        "tags": [
+          "Collateral"
+        ],
+        "summary": "[EXPERIMENTAL] GetMarginCallAllocation: [EXPERIMENTAL] GetMarginCallAllocation: Get the collateral proposed for a margin call.",
+        "description": "Retrieve the assets the run's allocation pass proposes to deliver for the call, or to take back for a return, with\r\nevery holding it considered and either its rank or the constraint that excluded it. Each line carries what a\r\ntransaction moving it needs: the instrument, the portfolio and custodian account, the units, the price and the\r\nconsideration. Not found until the run's allocation pass has completed, or when the call moves no collateral of ours.",
+        "operationId": "GetMarginCallAllocation",
+        "parameters": [
+          {
+            "name": "runId",
+            "in": "path",
+            "description": "The identifier of the margin run.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "agreementScope",
+            "in": "path",
+            "description": "The scope of the call's collateral agreement.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "agreementCode",
+            "in": "path",
+            "description": "The code of the call's collateral agreement.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "item",
+            "in": "path",
+            "description": "The margin item of the call.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "marginType",
+            "in": "path",
+            "description": "The margin type of the call. One of VariationMargin or InitialMargin.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "direction",
+            "in": "path",
+            "description": "Who posts under the call. One of WePost, TheyPost or None.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The collateral proposed for the margin call.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CollateralAllocation"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CollateralAllocation"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CollateralAllocation"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      }
+    },
     "/api/collateral/margincalls/{runId}/{agreementScope}/{agreementCode}/{item}/{marginType}/{direction}/$dispute": {
       "post": {
         "tags": [
@@ -27491,6 +27633,225 @@
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/MarginExplanation"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      }
+    },
+    "/api/collateral/margincalls/{runId}/{agreementScope}/{agreementCode}/{item}/{marginType}/{direction}/$rank": {
+      "post": {
+        "tags": [
+          "Collateral"
+        ],
+        "summary": "[EXPERIMENTAL] RankMarginCall: [EXPERIMENTAL] RankMarginCall: Rank the collateral for a margin call again, with the caller's choices.",
+        "description": "Value the call's agreement as of now for the run's business date and rank its free, eligible holdings for the\r\ncall again, keeping the assets and units the caller chose. Each choice is validated against the agreement's\r\nconstraints and kept with its reason when it fails one; the rest of the call is filled from the ranking, cheapest\r\nfirst, unless fillRemainder is false. Nothing is stored: the result is what to book, for the caller to decide on.",
+        "operationId": "RankMarginCall",
+        "parameters": [
+          {
+            "name": "runId",
+            "in": "path",
+            "description": "The identifier of the margin run.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "agreementScope",
+            "in": "path",
+            "description": "The scope of the call's collateral agreement.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "agreementCode",
+            "in": "path",
+            "description": "The code of the call's collateral agreement.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "item",
+            "in": "path",
+            "description": "The margin item of the call.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "marginType",
+            "in": "path",
+            "description": "The margin type of the call. One of VariationMargin or InitialMargin.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "direction",
+            "in": "path",
+            "description": "Who posts under the call. One of WePost, TheyPost or None.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The assets the caller chose, and whether to fill the rest.",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RankMarginCallRequest"
+              },
+              "example": {
+                "overrides": [
+                  {
+                    "instrumentId": "CCY_USD",
+                    "portfolioId": {
+                      "scope": "Funds",
+                      "code": "GlobalMacro"
+                    },
+                    "units": 200000
+                  }
+                ],
+                "fillRemainder": true
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RankMarginCallRequest"
+              },
+              "example": {
+                "overrides": [
+                  {
+                    "instrumentId": "CCY_USD",
+                    "portfolioId": {
+                      "scope": "Funds",
+                      "code": "GlobalMacro"
+                    },
+                    "units": 200000
+                  }
+                ],
+                "fillRemainder": true
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RankMarginCallRequest"
+              },
+              "example": {
+                "overrides": [
+                  {
+                    "instrumentId": "CCY_USD",
+                    "portfolioId": {
+                      "scope": "Funds",
+                      "code": "GlobalMacro"
+                    },
+                    "units": 200000
+                  }
+                ],
+                "fillRemainder": true
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RankMarginCallRequest"
+              },
+              "example": {
+                "overrides": [
+                  {
+                    "instrumentId": "CCY_USD",
+                    "portfolioId": {
+                      "scope": "Funds",
+                      "code": "GlobalMacro"
+                    },
+                    "units": 200000
+                  }
+                ],
+                "fillRemainder": true
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The collateral ranked for the margin call.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CollateralAllocation"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CollateralAllocation"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CollateralAllocation"
                 }
               }
             }
@@ -79495,6 +79856,176 @@
         "x-fbn-apistatus": "EarlyAccess"
       }
     },
+    "/api/funds/{scope}/{code}/tax/scope": {
+      "get": {
+        "tags": [
+          "Funds"
+        ],
+        "summary": "[EARLY ACCESS] GetFundTaxScope: [EARLY ACCESS] GetFundTaxScope: Get the UK chargeable-gains tax scope of a fund.",
+        "description": "Returns the fund's portfolios within the UK chargeable-gains regime and the exclusions the regime's figures\r\napply. A fund portfolio is in scope when its own details elect the regime. A NAV type that elects the regime\r\nputs its derived portfolio for each fund portfolio in scope, since that is where the fund accounts for the\r\nholdings under the election.",
+        "operationId": "GetFundTaxScope",
+        "parameters": [
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope of the Fund.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "code",
+            "in": "path",
+            "description": "The code of the Fund. Together with the scope this uniquely identifies the Fund.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "effectiveAt",
+            "in": "query",
+            "description": "The effective datetime or cut label at which to read the tax scope. Defaults to the current LUSID system datetime if not specified.",
+            "schema": {
+              "type": "string",
+              "format": "dateorcutlabel"
+            }
+          },
+          {
+            "name": "asAt",
+            "in": "query",
+            "description": "The asAt datetime at which to read the tax scope. Defaults to returning the latest version if not specified.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The tax scope of the requested Fund.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FundTaxScope"
+                },
+                "example": {
+                  "href": "http://example.com",
+                  "portfolios": [
+                    {
+                      "scope": "PortfolioScope",
+                      "code": "LifeFundPortfolio"
+                    }
+                  ],
+                  "exclusions": {
+                    "instrumentTypes": [
+                      "Currency",
+                      "Bond"
+                    ],
+                    "leafOutcomes": [],
+                    "appliedInFigures": true
+                  },
+                  "effectiveAt": "2024-06-30T00:00:00.0000000+00:00",
+                  "asAt": "2025-01-15T00:00:00.0000000+00:00"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FundTaxScope"
+                },
+                "example": {
+                  "href": "http://example.com",
+                  "portfolios": [
+                    {
+                      "scope": "PortfolioScope",
+                      "code": "LifeFundPortfolio"
+                    }
+                  ],
+                  "exclusions": {
+                    "instrumentTypes": [
+                      "Currency",
+                      "Bond"
+                    ],
+                    "leafOutcomes": [],
+                    "appliedInFigures": true
+                  },
+                  "effectiveAt": "2024-06-30T00:00:00.0000000+00:00",
+                  "asAt": "2025-01-15T00:00:00.0000000+00:00"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FundTaxScope"
+                },
+                "example": {
+                  "href": "http://example.com",
+                  "portfolios": [
+                    {
+                      "scope": "PortfolioScope",
+                      "code": "LifeFundPortfolio"
+                    }
+                  ],
+                  "exclusions": {
+                    "instrumentTypes": [
+                      "Currency",
+                      "Bond"
+                    ],
+                    "leafOutcomes": [],
+                    "appliedInFigures": true
+                  },
+                  "effectiveAt": "2024-06-30T00:00:00.0000000+00:00",
+                  "asAt": "2025-01-15T00:00:00.0000000+00:00"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "EarlyAccess"
+      }
+    },
     "/api/funds/{scope}/{code}/valuationPointOverview": {
       "get": {
         "tags": [
@@ -85867,7 +86398,7 @@
           "Funds"
         ],
         "summary": "[EARLY ACCESS] QueryCashStatementLocalCurrency: [EXPERIMENTAL] QueryCashStatementLocalCurrency: Query the local-currency cash statement for a Fund valuation point.",
-        "description": "Returns settled cash movements with a running balance in local currency for the specified Fund\r\nvaluation point period. The cash statement is derived from Journal Entry Lines filtered to\r\nsettled cash (HoldType='B', SourceType=LusidTransaction). Use the DisplayMode parameter on the\r\nrequest body to choose between ShowReversal (full reversal/TrueUp detail) and Consolidated\r\n(collapses system-generated zero-net reversal/TrueUp pairs into SystemCorrection rows). Base\r\ncurrency columns are out of scope for this variant and are not returned.",
+        "description": "Returns settled cash movements with a running balance in local currency for the specified Fund\r\nvaluation point period. The cash statement is derived from Journal Entry Lines filtered to\r\nsettled cash (HoldType='B', SourceType=LusidTransaction). Use the DisplayMode parameter on the\r\nrequest body to choose between ShowReversal (full reversal/TrueUp detail) and Consolidated\r\n(collapses each transaction's system-generated reversal/TrueUp rows into a single SystemCorrection\r\nrow carrying their net cashflow, while user-entered rows are always shown individually). Base\r\ncurrency columns are out of scope for this variant and are not returned.",
         "operationId": "QueryCashStatementLocalCurrency",
         "parameters": [
           {
@@ -190296,6 +190827,560 @@
         "x-fbn-apistatus": "Experimental"
       }
     },
+    "/api/returns/{scope}/{code}/{entityType}/{entityScope}/{entityCode}": {
+      "post": {
+        "tags": [
+          "Aggregated returns"
+        ],
+        "summary": "[EXPERIMENTAL] UpsertReturns: Upsert Returns",
+        "description": "Update or insert returns stored under the returns series against the specified entity. Stored\r\n            returns take precedence over a calculation in the aggregated returns of that entity.",
+        "operationId": "UpsertReturns",
+        "parameters": [
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope of the Returns.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "code",
+            "in": "path",
+            "description": "The code of the Returns.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "entityType",
+            "in": "path",
+            "description": "The type of the entity the Returns are stored against: 'Portfolio' or 'PortfolioGroup'. Available values: Portfolio, PortfolioGroup.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entityScope",
+            "in": "path",
+            "description": "The scope of the entity.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "entityCode",
+            "in": "path",
+            "description": "The code of the entity.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "This contains the Returns which need to be upsert.",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/PerformanceReturn"
+                }
+              },
+              "example": [
+                {
+                  "effectiveAt": "2019-11-28T00:00:00.0000000+00:00",
+                  "rateOfReturn": 0.1,
+                  "openingMarketValue": 500,
+                  "closingMarketValue": 550,
+                  "period": "Daily"
+                },
+                {
+                  "effectiveAt": "2019-11-29T00:00:00.0000000+00:00",
+                  "rateOfReturn": -0.2,
+                  "openingMarketValue": 550,
+                  "closingMarketValue": 440,
+                  "period": "Daily"
+                }
+              ]
+            },
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/PerformanceReturn"
+                }
+              },
+              "example": [
+                {
+                  "effectiveAt": "2019-11-28T00:00:00.0000000+00:00",
+                  "rateOfReturn": 0.1,
+                  "openingMarketValue": 500,
+                  "closingMarketValue": 550,
+                  "period": "Daily"
+                },
+                {
+                  "effectiveAt": "2019-11-29T00:00:00.0000000+00:00",
+                  "rateOfReturn": -0.2,
+                  "openingMarketValue": 550,
+                  "closingMarketValue": 440,
+                  "period": "Daily"
+                }
+              ]
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/PerformanceReturn"
+                }
+              },
+              "example": [
+                {
+                  "effectiveAt": "2019-11-28T00:00:00.0000000+00:00",
+                  "rateOfReturn": 0.1,
+                  "openingMarketValue": 500,
+                  "closingMarketValue": 550,
+                  "period": "Daily"
+                },
+                {
+                  "effectiveAt": "2019-11-29T00:00:00.0000000+00:00",
+                  "rateOfReturn": -0.2,
+                  "openingMarketValue": 550,
+                  "closingMarketValue": 440,
+                  "period": "Daily"
+                }
+              ]
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/PerformanceReturn"
+                }
+              },
+              "example": [
+                {
+                  "effectiveAt": "2019-11-28T00:00:00.0000000+00:00",
+                  "rateOfReturn": 0.1,
+                  "openingMarketValue": 500,
+                  "closingMarketValue": 550,
+                  "period": "Daily"
+                },
+                {
+                  "effectiveAt": "2019-11-29T00:00:00.0000000+00:00",
+                  "rateOfReturn": -0.2,
+                  "openingMarketValue": 550,
+                  "closingMarketValue": 440,
+                  "period": "Daily"
+                }
+              ]
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "The version of the entity that contains the newly updated or inserted Returns.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpsertReturnsResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpsertReturnsResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpsertReturnsResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      },
+      "get": {
+        "tags": [
+          "Aggregated returns"
+        ],
+        "summary": "[EXPERIMENTAL] GetReturns: Get Returns",
+        "description": "Get the Returns stored under the returns series against the specified entity.",
+        "operationId": "GetReturns",
+        "parameters": [
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope of the Returns.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "code",
+            "in": "path",
+            "description": "The code of the Returns.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "entityType",
+            "in": "path",
+            "description": "The type of the entity the Returns are stored against: 'Portfolio' or 'PortfolioGroup'. Available values: Portfolio, PortfolioGroup.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entityScope",
+            "in": "path",
+            "description": "The scope of the entity.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "entityCode",
+            "in": "path",
+            "description": "The code of the entity.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "fromEffectiveAt",
+            "in": "query",
+            "description": "The start date from which to get the Returns.",
+            "schema": {
+              "type": "string",
+              "format": "dateorcutlabel"
+            }
+          },
+          {
+            "name": "toEffectiveAt",
+            "in": "query",
+            "description": "The end date from which to get the Returns.",
+            "schema": {
+              "type": "string",
+              "format": "dateorcutlabel"
+            }
+          },
+          {
+            "name": "period",
+            "in": "query",
+            "description": "The period for which to show the Returns. Default value: Daily. Available values: Daily, Monthly.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "asAt",
+            "in": "query",
+            "description": "The asAt datetime at which to retrieve the Returns. Defaults to the latest.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The Returns on the given time period.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceListOfPerformanceReturn"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceListOfPerformanceReturn"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceListOfPerformanceReturn"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      }
+    },
+    "/api/returns/{scope}/{code}/{entityType}/{entityScope}/{entityCode}/$delete": {
+      "delete": {
+        "tags": [
+          "Aggregated returns"
+        ],
+        "summary": "[EXPERIMENTAL] DeleteReturns: Delete Returns",
+        "description": "Cancel the Returns stored under the returns series against the specified entity inside the window.",
+        "operationId": "DeleteReturns",
+        "parameters": [
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope of the Returns.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "code",
+            "in": "path",
+            "description": "The code of the Returns.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "entityType",
+            "in": "path",
+            "description": "The type of the entity the Returns are stored against: 'Portfolio' or 'PortfolioGroup'. Available values: Portfolio, PortfolioGroup.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entityScope",
+            "in": "path",
+            "description": "The scope of the entity.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "entityCode",
+            "in": "path",
+            "description": "The code of the entity.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "fromEffectiveAt",
+            "in": "query",
+            "description": "The start date from which to delete the Returns.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "dateorcutlabel"
+            }
+          },
+          {
+            "name": "toEffectiveAt",
+            "in": "query",
+            "description": "The end date from which to delete the Returns.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "dateorcutlabel"
+            }
+          },
+          {
+            "name": "period",
+            "in": "query",
+            "description": "The period of the Returns to be deleted. Default value: Daily. Available values: Daily, Monthly.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The successfully deleted Returns data along with any failures",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeletedEntityResponse"
+                },
+                "example": {
+                  "asAt": "2018-03-05T10:10:10.0000000+00:00"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeletedEntityResponse"
+                },
+                "example": {
+                  "asAt": "2018-03-05T10:10:10.0000000+00:00"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeletedEntityResponse"
+                },
+                "example": {
+                  "asAt": "2018-03-05T10:10:10.0000000+00:00"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      }
+    },
     "/api/scenarios": {
       "post": {
         "tags": [
@@ -253024,7 +254109,7 @@
             "maxLength": 64,
             "minLength": 1,
             "type": "string",
-            "description": "The rec type whose results this item targets (e.g. Holding). Available values: Holding, CashHolding, Valuation, InputTransaction, OutputTransaction, SettlementActivity, External, Instrument, LegalEntity."
+            "description": "The rec type whose results this item targets (e.g. Holding). Available values: Holding, CashHolding, Valuation, InputTransaction, OutputTransaction, SettlementActivity, External, Instrument, LegalEntity, Portfolio."
           },
           "recResultId": {
             "maxLength": 256,
@@ -253132,7 +254217,7 @@
             "maxLength": 64,
             "minLength": 1,
             "type": "string",
-            "description": "The rec type whose results this item targets (e.g. Holding). Available values: Holding, CashHolding, Valuation, InputTransaction, OutputTransaction, SettlementActivity, External, Instrument, LegalEntity."
+            "description": "The rec type whose results this item targets (e.g. Holding). Available values: Holding, CashHolding, Valuation, InputTransaction, OutputTransaction, SettlementActivity, External, Instrument, LegalEntity, Portfolio."
           },
           "recResultIds": {
             "type": "array",
@@ -257405,7 +258490,7 @@
             "minLength": 1,
             "pattern": "^[a-zA-Z0-9\\-_]+$",
             "type": "string",
-            "description": "The scope in which the share class instrument lies. Absent where the instrument has not been resolved.",
+            "description": "The scope in which the share class instrument lies, or the fund's instrument scope where the instrument has not been resolved.",
             "nullable": true
           },
           "shortCode": {
@@ -264354,6 +265439,22 @@
             "description": "A set of properties to decorate onto the Collateral Agreement. Filterable.",
             "nullable": true
           },
+          "notificationCutLabel": {
+            "maxLength": 256,
+            "minLength": 0,
+            "pattern": "^[a-zA-Z0-9\\-_\\+:\\.]+$",
+            "type": "string",
+            "description": "The cut label giving the time of day by which collateral we deliver under a margin call must settle. Each run resolves it on the business date and records it as the call's deadline; the allocation excludes assets that cannot settle by it. Optional.",
+            "nullable": true
+          },
+          "returnNotificationCutLabel": {
+            "maxLength": 256,
+            "minLength": 0,
+            "pattern": "^[a-zA-Z0-9\\-_\\+:\\.]+$",
+            "type": "string",
+            "description": "The cut label giving the time of day by which collateral the counterparty delivers, or returns to us, must settle. Recorded as the deadline of the calls they post under. Optional.",
+            "nullable": true
+          },
           "links": {
             "type": "array",
             "items": {
@@ -264498,10 +265599,413 @@
             "description": "The effective datetime from which the Collateral Agreement applies. Defaults to the beginning of time if not specified, so that the agreement is visible at every effective datetime.",
             "format": "date-time",
             "nullable": true
+          },
+          "notificationCutLabel": {
+            "maxLength": 256,
+            "minLength": 0,
+            "pattern": "^[a-zA-Z0-9\\-_\\+:\\.]+$",
+            "type": "string",
+            "description": "The cut label giving the time of day by which collateral we deliver under a margin call must settle. Each run resolves it on the business date and records it as the call's deadline; the allocation excludes assets that cannot settle by it. Optional.",
+            "nullable": true
+          },
+          "returnNotificationCutLabel": {
+            "maxLength": 256,
+            "minLength": 0,
+            "pattern": "^[a-zA-Z0-9\\-_\\+:\\.]+$",
+            "type": "string",
+            "description": "The cut label giving the time of day by which collateral the counterparty delivers, or returns to us, must settle. Recorded as the deadline of the calls they post under. Optional.",
+            "nullable": true
           }
         },
         "additionalProperties": false,
         "description": "The request used to create a Collateral Agreement."
+      },
+      "CollateralAllocation": {
+        "required": [
+          "allocation",
+          "asAt",
+          "baseCurrency",
+          "callId",
+          "candidates",
+          "carryPerDay",
+          "coveredAmount",
+          "direction",
+          "inventorySource",
+          "requiredAmount",
+          "runId"
+        ],
+        "type": "object",
+        "properties": {
+          "runId": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The run the call belongs to."
+          },
+          "callId": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The business key of the call within the run: agreement scope and code, item, margin type and direction joined with '/'."
+          },
+          "direction": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "Whether the collateral is delivered to the counterparty or recalled from it. One of Deliver or Recall."
+          },
+          "inventorySource": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "Where the holdings were read from: RunStore for the proposal the run made, Live for a ranking against the holdings as they stand now."
+          },
+          "asAt": {
+            "type": "string",
+            "description": "The asAt the holdings and terms were read at.",
+            "format": "date-time"
+          },
+          "agreementId": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "item": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The margin item of the call.",
+            "nullable": true
+          },
+          "counterparty": {
+            "$ref": "#/components/schemas/CounterpartyIdentifier"
+          },
+          "businessDate": {
+            "type": "string",
+            "description": "The business date of the call, which a transaction for a line trades on.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "deadline": {
+            "type": "string",
+            "description": "When the movement must have settled under the agreement's cut label. Null when the agreement sets none.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "marginAccount": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The code of the custodian account the item names for collateral we post, which a delivery moves assets into and a recall moves them out of. Null when the item names none.",
+            "nullable": true
+          },
+          "baseCurrency": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The agreement's base currency, which every amount is in."
+          },
+          "requiredAmount": {
+            "type": "number",
+            "description": "The collateral value to deliver, or for a recall the excess to take back.",
+            "format": "double"
+          },
+          "coveredAmount": {
+            "type": "number",
+            "description": "The collateral value of the lines chosen: below the requirement when the inventory ran out, above it when a lot could not be split.",
+            "format": "double"
+          },
+          "carryPerDay": {
+            "type": "number",
+            "description": "What the chosen lines cost the fund a day to leave locked up, in the base currency.",
+            "format": "double"
+          },
+          "allCashCarryPerDay": {
+            "type": "number",
+            "description": "What covering the whole call in base-currency cash would cost a day. Null when the cash rate is unavailable or for a recall.",
+            "format": "double",
+            "nullable": true
+          },
+          "candidates": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CollateralAllocationCandidate"
+            },
+            "description": "Every holding considered, ranked ones first by rank, then the excluded with the constraint that excluded them."
+          },
+          "allocation": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CollateralAllocationLine"
+            },
+            "description": "The assets chosen, cheapest first, each with what a transaction moving it needs."
+          }
+        },
+        "additionalProperties": false,
+        "description": "Which of our assets to move for a margin call and why: every holding considered, with its rank or the constraint\r\nthat excluded it, and the lines chosen cheapest first, each carrying what a transaction moving it needs. Amounts\r\nare in the agreement's base currency."
+      },
+      "CollateralAllocationCandidate": {
+        "required": [
+          "assetKind",
+          "instrumentId",
+          "instrumentIdentifiers",
+          "lotSize",
+          "portfolioId",
+          "unitsFree"
+        ],
+        "type": "object",
+        "properties": {
+          "instrumentId": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The LUSID instrument identifier of the asset, or CCY_ and the currency code for cash."
+          },
+          "instrumentIdentifiers": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string",
+              "nullable": true
+            },
+            "description": "The instrument identifiers a transaction for the line is booked against."
+          },
+          "portfolioId": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "custodianAccount": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "assetKind": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "Cash or Security."
+          },
+          "currency": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The currency the asset is denominated in, when known.",
+            "nullable": true
+          },
+          "unitsFree": {
+            "type": "number",
+            "description": "Units not in a margin account and not promised to an earlier call of the run.",
+            "format": "double"
+          },
+          "lotSize": {
+            "type": "number",
+            "description": "The smallest number of units the asset is delivered in.",
+            "format": "double"
+          },
+          "price": {
+            "type": "number",
+            "description": "The market value per unit in the base currency, before any haircut. Null when the asset could not be priced.",
+            "format": "double",
+            "nullable": true
+          },
+          "eligibilitySeq": {
+            "type": "integer",
+            "description": "The one-based position of the schedule row that admits the asset. Null when no row does.",
+            "format": "int32",
+            "nullable": true
+          },
+          "valuationPercentage": {
+            "type": "number",
+            "description": "The fraction of market value the schedule row counts as collateral.",
+            "format": "double",
+            "nullable": true
+          },
+          "fxHaircut": {
+            "type": "number",
+            "description": "The further fraction deducted because the asset is not in the base currency. Zero when it is.",
+            "format": "double",
+            "nullable": true
+          },
+          "effectiveValuePerUnit": {
+            "type": "number",
+            "description": "Price times the valuation percentage, less the FX haircut: what one unit counts for as collateral.",
+            "format": "double",
+            "nullable": true
+          },
+          "opportunityRate": {
+            "type": "number",
+            "description": "The annual rate the fund gives up by locking the asset up: funding less the agreement's cash interest for cash, the lending fee it would otherwise earn for a security.",
+            "format": "double",
+            "nullable": true
+          },
+          "costPerUnitOfValue": {
+            "type": "number",
+            "description": "The ranking key: the annual cost of one unit of collateral value from this asset.",
+            "format": "double",
+            "nullable": true
+          },
+          "concentrationCap": {
+            "type": "number",
+            "description": "The collateral value the schedule's concentration limit still allows from the asset's group. Null when the row sets no limit.",
+            "format": "double",
+            "nullable": true
+          },
+          "settlementDate": {
+            "type": "string",
+            "description": "When the movement would settle under the agreement's settlement lag, counting weekdays.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "rank": {
+            "type": "integer",
+            "description": "The asset's position in the ranking, cheapest first. Null when excluded.",
+            "format": "int32",
+            "nullable": true
+          },
+          "exclusionReason": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The constraint the asset failed, when it did. One of NotEligible, NoFreeUnits, MissingPrice, MissingRate, MissesDeadline, BelowMinimumLot or ConcentrationExhausted. Null when it passed.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "One holding the allocation considered for a margin call, with its figures as far as they could be computed and\r\neither its rank or the constraint that excluded it."
+      },
+      "CollateralAllocationLine": {
+        "required": [
+          "boundBy",
+          "collateralValue",
+          "instrumentId",
+          "instrumentIdentifiers",
+          "portfolioId",
+          "units"
+        ],
+        "type": "object",
+        "properties": {
+          "instrumentId": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The LUSID instrument identifier of the asset, or CCY_ and the currency code for cash."
+          },
+          "instrumentIdentifiers": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string",
+              "nullable": true
+            },
+            "description": "The instrument identifiers a transaction for the line is booked against."
+          },
+          "portfolioId": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "custodianAccount": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "currency": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The currency the asset is denominated in, when known.",
+            "nullable": true
+          },
+          "units": {
+            "type": "number",
+            "description": "The units to move.",
+            "format": "double"
+          },
+          "price": {
+            "type": "number",
+            "description": "The market value per unit in the base currency, before any haircut. Null when the asset could not be priced.",
+            "format": "double",
+            "nullable": true
+          },
+          "consideration": {
+            "type": "number",
+            "description": "Units times price in the base currency: what a transaction for the line settles. Null when the asset could not be priced.",
+            "format": "double",
+            "nullable": true
+          },
+          "effectiveValuePerUnit": {
+            "type": "number",
+            "description": "Price times the valuation percentage, less the FX haircut: what one unit counts for as collateral.",
+            "format": "double",
+            "nullable": true
+          },
+          "collateralValue": {
+            "type": "number",
+            "description": "The collateral value the line covers: units times the effective value per unit.",
+            "format": "double"
+          },
+          "costPerUnitOfValue": {
+            "type": "number",
+            "description": "The ranking key: the annual cost of one unit of collateral value from this asset.",
+            "format": "double",
+            "nullable": true
+          },
+          "settlementDate": {
+            "type": "string",
+            "description": "When the movement would settle under the agreement's settlement lag, counting weekdays.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "boundBy": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "Which limit decided the units. One of RemainingRequirement, FreeUnits, ConcentrationCap, LotRounding or Override."
+          },
+          "exclusionReason": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The constraint the asset failed, when it did. One of NotEligible, NoFreeUnits, MissingPrice, MissingRate, MissesDeadline, BelowMinimumLot or ConcentrationExhausted. Null when it passed.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "One asset chosen for a margin call, with what a transaction moving it needs: the instrument, the portfolio and\r\naccount it leaves, the units, the price and the consideration. An override that fails a constraint is kept with\r\nits exclusion reason and covers nothing."
+      },
+      "CollateralAllocationOverride": {
+        "required": [
+          "instrumentId",
+          "portfolioId",
+          "units"
+        ],
+        "type": "object",
+        "properties": {
+          "instrumentId": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The LUSID instrument identifier of the asset to move, or CCY_ and the currency code for cash."
+          },
+          "portfolioId": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "units": {
+            "type": "number",
+            "description": "The units to move.",
+            "format": "double"
+          },
+          "custodianAccount": {
+            "$ref": "#/components/schemas/ResourceId"
+          }
+        },
+        "additionalProperties": false,
+        "description": "An asset and the units of it a user chooses to move for a margin call, validated against the agreement's\r\nconstraints as the allocation is."
       },
       "CollateralFundingTerms": {
         "required": [
@@ -264523,10 +266027,18 @@
             "type": "integer",
             "description": "The number of days in the year the funding rate accrues over. Either 360 or 365.",
             "format": "int32"
+          },
+          "defaultLendingFee": {
+            "maximum": 1,
+            "minimum": 0,
+            "type": "number",
+            "description": "The annual lending fee, as a fraction, assumed forgone on a security with no fee quote of its own when collateral is ranked. Between 0 and 1. A security with no fee at all cannot be ranked. Optional.",
+            "format": "double",
+            "nullable": true
           }
         },
         "additionalProperties": false,
-        "description": "What margin posted under the agreement costs us: the annual rate it is funded at and the basis it accrues on."
+        "description": "What margin posted under the agreement costs us: the annual rate it is funded at, the basis it accrues on and the\r\nlending fee assumed forgone on a security with no fee quote of its own when collateral is ranked."
       },
       "CollateralInstrument": {
         "required": [
@@ -271081,7 +272593,7 @@
           "recType": {
             "minLength": 1,
             "type": "string",
-            "description": "The type of reconciliation to perform. External reconciles non-native data on both sides, described by the datasetSchemas and the externalRecType. Available values: Holding, CashHolding, Valuation, InputTransaction, OutputTransaction, SettlementActivity, External, Instrument, LegalEntity."
+            "description": "The type of reconciliation to perform. External reconciles non-native data on both sides, described by the datasetSchemas and the externalRecType. Available values: Holding, CashHolding, Valuation, InputTransaction, OutputTransaction, SettlementActivity, External, Instrument, LegalEntity, Portfolio."
           },
           "externalRecType": {
             "$ref": "#/components/schemas/ExternalRecType"
@@ -280038,7 +281550,7 @@
           },
           "fxHaircut": {
             "type": "number",
-            "description": "The further fraction deducted when the asset's currency is not the agreement's base currency, so that the effective valuation percentage is ValuationPercentage * (1 - FxHaircut). At least 0 and less than 1. Not allowed for a BaseCurrencyCash selector. Optional.",
+            "description": "The further fraction deducted when the asset's currency is not the agreement's base currency, so that the effective valuation percentage is ValuationPercentage - FxHaircut. At least 0 and less than the valuationPercentage. Not allowed for a BaseCurrencyCash selector. Optional.",
             "format": "double",
             "nullable": true
           },
@@ -280051,6 +281563,20 @@
           "maxResidualMaturityYears": {
             "type": "number",
             "description": "The exclusive upper bound of the residual maturity in years that the row applies to. Only allowed for an Instrument selector. Optional.",
+            "format": "double",
+            "nullable": true
+          },
+          "concentrationGroup": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The group the row's assets count towards for a concentration limit, for example 'sovereign' or 'issuer'. Rows naming the same group share one limit. Required when a concentrationLimit is set. Optional.",
+            "nullable": true
+          },
+          "concentrationLimit": {
+            "type": "number",
+            "description": "The largest fraction of the collateral held plus the call that assets of the row's concentration group may make up, for example 0.3 for 30%. Greater than 0 and at most 1. Required when a concentrationGroup is set. Optional.",
             "format": "double",
             "nullable": true
           }
@@ -280091,7 +281617,7 @@
           },
           "fxHaircut": {
             "type": "number",
-            "description": "The further fraction deducted when the asset's currency is not the agreement's base currency, so that the effective valuation percentage is ValuationPercentage * (1 - FxHaircut). At least 0 and less than 1. Not allowed for a BaseCurrencyCash selector. Optional.",
+            "description": "The further fraction deducted when the asset's currency is not the agreement's base currency, so that the effective valuation percentage is ValuationPercentage - FxHaircut. At least 0 and less than the valuationPercentage. Not allowed for a BaseCurrencyCash selector. Optional.",
             "format": "double",
             "nullable": true
           },
@@ -280104,6 +281630,20 @@
           "maxResidualMaturityYears": {
             "type": "number",
             "description": "The exclusive upper bound of the residual maturity in years that the row applies to. Only allowed for an Instrument selector. Optional.",
+            "format": "double",
+            "nullable": true
+          },
+          "concentrationGroup": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The group the row's assets count towards for a concentration limit, for example 'sovereign' or 'issuer'. Rows naming the same group share one limit. Required when a concentrationLimit is set. Optional.",
+            "nullable": true
+          },
+          "concentrationLimit": {
+            "type": "number",
+            "description": "The largest fraction of the collateral held plus the call that assets of the row's concentration group may make up, for example 0.3 for 30%. Greater than 0 and at most 1. Required when a concentrationGroup is set. Optional.",
             "format": "double",
             "nullable": true
           }
@@ -290365,6 +291905,82 @@
         },
         "additionalProperties": false,
         "description": "The request used to create a Fund Structure."
+      },
+      "FundTaxScope": {
+        "required": [
+          "asAt",
+          "effectiveAt",
+          "exclusions",
+          "portfolios"
+        ],
+        "type": "object",
+        "properties": {
+          "href": {
+            "type": "string",
+            "description": "The specific Uniform Resource Identifier (URI) for this resource at the requested effective and asAt datetime.",
+            "format": "uri",
+            "nullable": true
+          },
+          "portfolios": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResourceId"
+            },
+            "description": "The portfolios within the UK chargeable-gains regime. A fund portfolio is in scope when its own details elect the regime. A NAV type that elects the regime puts its derived portfolio for each fund portfolio in scope."
+          },
+          "exclusions": {
+            "$ref": "#/components/schemas/FundTaxScopeExclusions"
+          },
+          "effectiveAt": {
+            "type": "string",
+            "description": "The effective datetime at which the tax scope was read.",
+            "format": "date-time"
+          },
+          "asAt": {
+            "type": "string",
+            "description": "The asAt datetime at which the tax scope was read.",
+            "format": "date-time"
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "The UK chargeable-gains tax scope of a fund at a point in time: the portfolios inside the regime and what the\r\nregime's figures leave out."
+      },
+      "FundTaxScopeExclusions": {
+        "required": [
+          "appliedInFigures",
+          "instrumentTypes",
+          "leafOutcomes"
+        ],
+        "type": "object",
+        "properties": {
+          "instrumentTypes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Instrument types that stay on the portfolio's ordinary accounting method rather than being pooled, by name."
+          },
+          "leafOutcomes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Disposal-leg outcomes the configured regime options disapply. Empty under the standard options."
+          },
+          "appliedInFigures": {
+            "type": "boolean",
+            "description": "Whether the engine enforces these exclusions when building the pooled lots and gains."
+          }
+        },
+        "additionalProperties": false,
+        "description": "What the UK chargeable-gains figures leave out of the pooled computation."
       },
       "FundTerms": {
         "required": [
@@ -303054,7 +304670,7 @@
           "entityType": {
             "minLength": 1,
             "type": "string",
-            "description": "The type of LUSID entity to reconcile, which is also the rec type of the results. Supported types: Instrument, LegalEntity. Must equal the reconciliationType of the matching ruleset. Available values: Holding, CashHolding, Valuation, InputTransaction, OutputTransaction, SettlementActivity, External, Instrument, LegalEntity."
+            "description": "The type of LUSID entity to reconcile, which is also the rec type of the results. Supported types: Instrument, LegalEntity, Portfolio. Must equal the reconciliationType of the matching ruleset. Available values: Holding, CashHolding, Valuation, InputTransaction, OutputTransaction, SettlementActivity, External, Instrument, LegalEntity, Portfolio."
           },
           "matchingRulesetId": {
             "$ref": "#/components/schemas/ResourceId"
@@ -304072,6 +305688,14 @@
           "explainAvailable": {
             "type": "boolean",
             "description": "Whether the working behind the call's required amount was stored, so that the call can be explained. Only an initial-margin call can be explained, and only when the run stored its working."
+          },
+          "proposedAllocation": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CollateralAllocationLine"
+            },
+            "description": "The assets the allocation pass proposes to deliver for the call, or to take back for a return, cheapest first. Null until the run's allocation pass has completed, or when the call moves no collateral of ours.",
+            "nullable": true
           }
         },
         "additionalProperties": false,
@@ -304679,10 +306303,44 @@
           },
           "optimisation": {
             "$ref": "#/components/schemas/MarginRunOptimisation"
+          },
+          "allocation": {
+            "$ref": "#/components/schemas/MarginRunAllocation"
           }
         },
         "additionalProperties": false,
         "description": "A margin run: the valuation of the collateral agreements for a business date, planned as shards that report\r\ntheir progress, and the margin calls and lines it has published so far."
+      },
+      "MarginRunAllocation": {
+        "required": [
+          "allocatedCallCount",
+          "status"
+        ],
+        "type": "object",
+        "properties": {
+          "status": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "How far the allocation pass got. One of Pending, Completed, Skipped or Failed."
+          },
+          "allocatedCallCount": {
+            "type": "integer",
+            "description": "How many calls the pass proposed collateral for.",
+            "format": "int32"
+          },
+          "detail": {
+            "maxLength": 1024,
+            "minLength": 0,
+            "pattern": "^[\\s\\S]*$",
+            "type": "string",
+            "description": "Which calls the pass could not allocate and why, or why it failed. Null when every call that moves our collateral was allocated.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "How far the allocation pass over a run's base calls got: whether it ran, how many calls it proposed collateral\r\nfor, and what it left out."
       },
       "MarginRunIssue": {
         "required": [
@@ -305599,7 +307257,7 @@
           "recType": {
             "minLength": 1,
             "type": "string",
-            "description": "The type of reconciliation to perform. External reconciles non-native data on both sides, described by the datasetSchemas and the externalRecType. Available values: Holding, CashHolding, Valuation, InputTransaction, OutputTransaction, SettlementActivity, External, Instrument, LegalEntity."
+            "description": "The type of reconciliation to perform. External reconciles non-native data on both sides, described by the datasetSchemas and the externalRecType. Available values: Holding, CashHolding, Valuation, InputTransaction, OutputTransaction, SettlementActivity, External, Instrument, LegalEntity, Portfolio."
           },
           "externalRecType": {
             "$ref": "#/components/schemas/ExternalRecType"
@@ -325507,6 +327165,26 @@
         ],
         "type": "string"
       },
+      "RankMarginCallRequest": {
+        "type": "object",
+        "properties": {
+          "overrides": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CollateralAllocationOverride"
+            },
+            "description": "The assets and units the user chose, each validated against the agreement's constraints and kept with its reason when it fails one. Optional.",
+            "nullable": true
+          },
+          "fillRemainder": {
+            "type": "boolean",
+            "description": "Whether to fill what the overrides leave uncovered from the ranking, cheapest first. Defaults to true.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Ranks a margin call's collateral again against the holdings as they stand now, keeping the assets the user chose."
+      },
       "RateBreakdownComponent": {
         "required": [
           "dividendRate",
@@ -325930,9 +327608,80 @@
             },
             "description": "The sub-holding key properties of the holding this record was realised against, identifying the allocation slice it belongs to.",
             "nullable": true
+          },
+          "chargeableGains": {
+            "$ref": "#/components/schemas/RealisedGainLossChargeableGains"
           }
         },
         "additionalProperties": false
+      },
+      "RealisedGainLossChargeableGains": {
+        "type": "object",
+        "properties": {
+          "chargeableGain": {
+            "$ref": "#/components/schemas/CurrencyAndAmount"
+          },
+          "indexationAllowance": {
+            "$ref": "#/components/schemas/CurrencyAndAmount"
+          },
+          "indexationAllowanceTaken": {
+            "$ref": "#/components/schemas/CurrencyAndAmount"
+          },
+          "proceeds": {
+            "$ref": "#/components/schemas/CurrencyAndAmount"
+          },
+          "gainOnOriginalCost": {
+            "$ref": "#/components/schemas/CurrencyAndAmount"
+          },
+          "gainOnMarketValue1982": {
+            "$ref": "#/components/schemas/CurrencyAndAmount"
+          },
+          "basis": {
+            "type": "string",
+            "description": "Available values: IndexedCost, MarketValue1982, OriginalCost, NilGain.",
+            "nullable": true
+          },
+          "matchRule": {
+            "type": "string",
+            "description": "Available values: SameDay, TenDay, Section210B, Section104Pool, Holding1982, Holding1965.",
+            "nullable": true
+          },
+          "matchedLot": {
+            "$ref": "#/components/schemas/RealisedGainLossMatchedLot"
+          },
+          "marketValue1965": {
+            "$ref": "#/components/schemas/CurrencyAndAmount"
+          },
+          "reversed": {
+            "type": "boolean"
+          },
+          "taxTreatment": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "The UK chargeable-gains figures the engine worked for a realised-gain/loss leg: the chargeable gain, the\r\nindexation allowance and the part of it taken, the proceeds the leg was worked on, both sides of the s.35\r\nkink test on a 1982 holding, the basis and identification rule the leg was matched under, the lot it was\r\nmatched against, whether its transaction stands reversed, and the treatment applied. All amounts are in\r\nthe portfolio currency."
+      },
+      "RealisedGainLossMatchedLot": {
+        "type": "object",
+        "properties": {
+          "originalCost": {
+            "$ref": "#/components/schemas/CurrencyAndAmount"
+          },
+          "purchaseDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "role": {
+            "type": "string",
+            "description": "Available values: DayLot, Section104Pool, Holding1982, Holding1965, FutureAcquisition.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "The lot a realised chargeable-gains leg was matched against: its cost in the portfolio currency, the date of the\r\nacquisition that opened it and its chargeable-gains role."
       },
       "RecActivitySinceEffectiveAt": {
         "required": [
@@ -326290,7 +328039,7 @@
           },
           "entityType": {
             "type": "string",
-            "description": "The entity within the dataset. Required when type is PortfolioContents, in which case it is one of: Holding, Valuation, Transaction, OutputTransaction, SettlementActivity. Required when type is LusidEntity, in which case it is Instrument or LegalEntity. Must be omitted when type is RelationalData. Available values: Holding, Valuation, Transaction, OutputTransaction, SettlementActivity, Instrument, LegalEntity.",
+            "description": "The entity within the dataset. Required when type is PortfolioContents, in which case it is one of: Holding, Valuation, Transaction, OutputTransaction, SettlementActivity. Required when type is LusidEntity, in which case it is Instrument, LegalEntity or Portfolio. Must be omitted when type is RelationalData. Available values: Holding, Valuation, Transaction, OutputTransaction, SettlementActivity, Instrument, LegalEntity, Portfolio.",
             "nullable": true
           },
           "relationalDatasetDefinitionId": {
@@ -326531,7 +328280,7 @@
           "recType": {
             "minLength": 1,
             "type": "string",
-            "description": "The type of reconciliation this entry configures. Must be valid for the definitionType, and must match the reconciliationType of the referenced matching ruleset. Available values: Holding, CashHolding, Valuation, InputTransaction, OutputTransaction, SettlementActivity, External, Instrument, LegalEntity."
+            "description": "The type of reconciliation this entry configures. Must be valid for the definitionType, and must match the reconciliationType of the referenced matching ruleset. Available values: Holding, CashHolding, Valuation, InputTransaction, OutputTransaction, SettlementActivity, External, Instrument, LegalEntity, Portfolio."
           },
           "matchingRulesetId": {
             "$ref": "#/components/schemas/ResourceId"
@@ -326912,7 +328661,7 @@
           "recType": {
             "minLength": 1,
             "type": "string",
-            "description": "The rec type of the linked result. Always differs from this result's rec type. Available values: Holding, CashHolding, Valuation, InputTransaction, OutputTransaction, SettlementActivity, External, Instrument, LegalEntity."
+            "description": "The rec type of the linked result. Always differs from this result's rec type. Available values: Holding, CashHolding, Valuation, InputTransaction, OutputTransaction, SettlementActivity, External, Instrument, LegalEntity, Portfolio."
           },
           "linkedBy": {
             "$ref": "#/components/schemas/RecLinkedBy"
@@ -327694,7 +329443,7 @@
           "recType": {
             "minLength": 1,
             "type": "string",
-            "description": "The type of rec that the result belongs to (e.g. Holding). Available values: Holding, CashHolding, Valuation, InputTransaction, OutputTransaction, SettlementActivity, External, Instrument, LegalEntity."
+            "description": "The type of rec that the result belongs to (e.g. Holding). Available values: Holding, CashHolding, Valuation, InputTransaction, OutputTransaction, SettlementActivity, External, Instrument, LegalEntity, Portfolio."
           },
           "externalRecTypeName": {
             "type": "string",
@@ -328011,7 +329760,7 @@
           "itemType": {
             "minLength": 1,
             "type": "string",
-            "description": "The polymorphic item-type discriminator: Holding, ValuedHolding, Transaction, SettlementActivity, RelationalDataPoint or the entity type of a LusidEntity rec. Names the item rather than the rec type: Holding and CashHolding recs produce Holding items, a Valuation rec produces ValuedHolding items, both transaction rec types produce Transaction items, and a relational dataset side produces RelationalDataPoint items whatever the rec type. A LusidEntity rec produces items of its entity type, for example Instrument items. Available values: SettlementActivity, Holding, Transaction, ValuedHolding, RelationalDataPoint, Instrument, LegalEntity."
+            "description": "The polymorphic item-type discriminator: Holding, ValuedHolding, Transaction, SettlementActivity, RelationalDataPoint or the entity type of a LusidEntity rec. Names the item rather than the rec type: Holding and CashHolding recs produce Holding items, a Valuation rec produces ValuedHolding items, both transaction rec types produce Transaction items, and a relational dataset side produces RelationalDataPoint items whatever the rec type. A LusidEntity rec produces items of its entity type, for example Instrument items. Available values: SettlementActivity, Holding, Transaction, ValuedHolding, RelationalDataPoint, Instrument, LegalEntity, Portfolio."
           },
           "ruleAndAttributeValues": {
             "type": "object",
@@ -328113,7 +329862,7 @@
           "itemType": {
             "minLength": 1,
             "type": "string",
-            "description": "The polymorphic item-type discriminator: Holding, ValuedHolding, Transaction, SettlementActivity, RelationalDataPoint or the entity type of a LusidEntity rec. Names the item rather than the rec type: Holding and CashHolding recs produce Holding items, a Valuation rec produces ValuedHolding items, both transaction rec types produce Transaction items, and a relational dataset side produces RelationalDataPoint items whatever the rec type. A LusidEntity rec produces items of its entity type, for example Instrument items. Available values: SettlementActivity, Holding, Transaction, ValuedHolding, RelationalDataPoint, Instrument, LegalEntity."
+            "description": "The polymorphic item-type discriminator: Holding, ValuedHolding, Transaction, SettlementActivity, RelationalDataPoint or the entity type of a LusidEntity rec. Names the item rather than the rec type: Holding and CashHolding recs produce Holding items, a Valuation rec produces ValuedHolding items, both transaction rec types produce Transaction items, and a relational dataset side produces RelationalDataPoint items whatever the rec type. A LusidEntity rec produces items of its entity type, for example Instrument items. Available values: SettlementActivity, Holding, Transaction, ValuedHolding, RelationalDataPoint, Instrument, LegalEntity, Portfolio."
           },
           "ruleAndAttributeValues": {
             "type": "object",
@@ -328153,6 +329902,9 @@
             "$ref": "#/components/schemas/RecResultRelationalDataItem"
           },
           {
+            "$ref": "#/components/schemas/RecResultResourceIdItem"
+          },
+          {
             "$ref": "#/components/schemas/RecResultSettlementActivityItem"
           },
           {
@@ -328163,7 +329915,7 @@
           "itemType": {
             "minLength": 1,
             "type": "string",
-            "description": "The polymorphic item-type discriminator: Holding, ValuedHolding, Transaction, SettlementActivity, RelationalDataPoint or the entity type of a LusidEntity rec. Names the item rather than the rec type: Holding and CashHolding recs produce Holding items, a Valuation rec produces ValuedHolding items, both transaction rec types produce Transaction items, and a relational dataset side produces RelationalDataPoint items whatever the rec type. A LusidEntity rec produces items of its entity type, for example Instrument items. Available values: SettlementActivity, Holding, Transaction, ValuedHolding, RelationalDataPoint, Instrument, LegalEntity."
+            "description": "The polymorphic item-type discriminator: Holding, ValuedHolding, Transaction, SettlementActivity, RelationalDataPoint or the entity type of a LusidEntity rec. Names the item rather than the rec type: Holding and CashHolding recs produce Holding items, a Valuation rec produces ValuedHolding items, both transaction rec types produce Transaction items, and a relational dataset side produces RelationalDataPoint items whatever the rec type. A LusidEntity rec produces items of its entity type, for example Instrument items. Available values: SettlementActivity, Holding, Transaction, ValuedHolding, RelationalDataPoint, Instrument, LegalEntity, Portfolio."
           },
           "ruleAndAttributeValues": {
             "type": "object",
@@ -328194,7 +329946,8 @@
             "SettlementActivity": "#/components/schemas/RecResultSettlementActivityItem",
             "RelationalDataPoint": "#/components/schemas/RecResultRelationalDataItem",
             "Instrument": "#/components/schemas/RecResultExternalIdentifiersItem",
-            "LegalEntity": "#/components/schemas/RecResultExternalIdentifiersItem"
+            "LegalEntity": "#/components/schemas/RecResultExternalIdentifiersItem",
+            "Portfolio": "#/components/schemas/RecResultResourceIdItem"
           }
         }
       },
@@ -328282,7 +330035,7 @@
           "itemType": {
             "minLength": 1,
             "type": "string",
-            "description": "The polymorphic item-type discriminator: Holding, ValuedHolding, Transaction, SettlementActivity, RelationalDataPoint or the entity type of a LusidEntity rec. Names the item rather than the rec type: Holding and CashHolding recs produce Holding items, a Valuation rec produces ValuedHolding items, both transaction rec types produce Transaction items, and a relational dataset side produces RelationalDataPoint items whatever the rec type. A LusidEntity rec produces items of its entity type, for example Instrument items. Available values: SettlementActivity, Holding, Transaction, ValuedHolding, RelationalDataPoint, Instrument, LegalEntity."
+            "description": "The polymorphic item-type discriminator: Holding, ValuedHolding, Transaction, SettlementActivity, RelationalDataPoint or the entity type of a LusidEntity rec. Names the item rather than the rec type: Holding and CashHolding recs produce Holding items, a Valuation rec produces ValuedHolding items, both transaction rec types produce Transaction items, and a relational dataset side produces RelationalDataPoint items whatever the rec type. A LusidEntity rec produces items of its entity type, for example Instrument items. Available values: SettlementActivity, Holding, Transaction, ValuedHolding, RelationalDataPoint, Instrument, LegalEntity, Portfolio."
           },
           "ruleAndAttributeValues": {
             "type": "object",
@@ -328304,6 +330057,54 @@
         },
         "additionalProperties": false,
         "description": "A relational data point item within a rec result: one row of a relational dataset. The dataset and the unique\r\nid of the data point identify the row. All rec types use this item shape. Also holds the display name of the\r\ndataset."
+      },
+      "RecResultResourceIdItem": {
+        "required": [
+          "entityUniqueId",
+          "id",
+          "itemType",
+          "writebackSuggestions"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "entityUniqueId": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The unique id of the entity the run read. It identifies the entity across scopes."
+          },
+          "entityDisplayName": {
+            "type": "string",
+            "description": "The display name of the entity, as it stood at the dates the run read its side.",
+            "nullable": true
+          },
+          "itemType": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The polymorphic item-type discriminator: Holding, ValuedHolding, Transaction, SettlementActivity, RelationalDataPoint or the entity type of a LusidEntity rec. Names the item rather than the rec type: Holding and CashHolding recs produce Holding items, a Valuation rec produces ValuedHolding items, both transaction rec types produce Transaction items, and a relational dataset side produces RelationalDataPoint items whatever the rec type. A LusidEntity rec produces items of its entity type, for example Instrument items. Available values: SettlementActivity, Holding, Transaction, ValuedHolding, RelationalDataPoint, Instrument, LegalEntity, Portfolio."
+          },
+          "ruleAndAttributeValues": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string",
+              "nullable": true
+            },
+            "description": "The core rule, aggregate rule and supplemental attribute values for the item, keyed by name.",
+            "nullable": true
+          },
+          "writebackSuggestions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/WritebackSuggestion"
+            },
+            "description": "The writebacks suggested against this item, as configured by the matching ruleset's writebackConfigurations. Only ever populated on target-side items. Suggestions only: a user is expected to review them before acting. Required, but may be empty.",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "An item within a rec result for one LUSID entity that a scope and a code identify: one entity on a side of a\r\nLusidEntity rec. The itemType is the entity type. The entity unique id identifies it. The item also holds the\r\ndisplay name of the entity."
       },
       "RecResultReview": {
         "required": [
@@ -328349,7 +330150,7 @@
           "recType": {
             "minLength": 1,
             "type": "string",
-            "description": "The type of rec that this result set belongs to (e.g. Holding). Together with the rec instance, this uniquely identifies the result set. Available values: Holding, CashHolding, Valuation, InputTransaction, OutputTransaction, SettlementActivity, External, Instrument, LegalEntity."
+            "description": "The type of rec that this result set belongs to (e.g. Holding). Together with the rec instance, this uniquely identifies the result set. Available values: Holding, CashHolding, Valuation, InputTransaction, OutputTransaction, SettlementActivity, External, Instrument, LegalEntity, Portfolio."
           },
           "externalRecTypeName": {
             "type": "string",
@@ -328544,7 +330345,7 @@
           "itemType": {
             "minLength": 1,
             "type": "string",
-            "description": "The polymorphic item-type discriminator: Holding, ValuedHolding, Transaction, SettlementActivity, RelationalDataPoint or the entity type of a LusidEntity rec. Names the item rather than the rec type: Holding and CashHolding recs produce Holding items, a Valuation rec produces ValuedHolding items, both transaction rec types produce Transaction items, and a relational dataset side produces RelationalDataPoint items whatever the rec type. A LusidEntity rec produces items of its entity type, for example Instrument items. Available values: SettlementActivity, Holding, Transaction, ValuedHolding, RelationalDataPoint, Instrument, LegalEntity."
+            "description": "The polymorphic item-type discriminator: Holding, ValuedHolding, Transaction, SettlementActivity, RelationalDataPoint or the entity type of a LusidEntity rec. Names the item rather than the rec type: Holding and CashHolding recs produce Holding items, a Valuation rec produces ValuedHolding items, both transaction rec types produce Transaction items, and a relational dataset side produces RelationalDataPoint items whatever the rec type. A LusidEntity rec produces items of its entity type, for example Instrument items. Available values: SettlementActivity, Holding, Transaction, ValuedHolding, RelationalDataPoint, Instrument, LegalEntity, Portfolio."
           },
           "ruleAndAttributeValues": {
             "type": "object",
@@ -328615,7 +330416,7 @@
           "itemType": {
             "minLength": 1,
             "type": "string",
-            "description": "The polymorphic item-type discriminator: Holding, ValuedHolding, Transaction, SettlementActivity, RelationalDataPoint or the entity type of a LusidEntity rec. Names the item rather than the rec type: Holding and CashHolding recs produce Holding items, a Valuation rec produces ValuedHolding items, both transaction rec types produce Transaction items, and a relational dataset side produces RelationalDataPoint items whatever the rec type. A LusidEntity rec produces items of its entity type, for example Instrument items. Available values: SettlementActivity, Holding, Transaction, ValuedHolding, RelationalDataPoint, Instrument, LegalEntity."
+            "description": "The polymorphic item-type discriminator: Holding, ValuedHolding, Transaction, SettlementActivity, RelationalDataPoint or the entity type of a LusidEntity rec. Names the item rather than the rec type: Holding and CashHolding recs produce Holding items, a Valuation rec produces ValuedHolding items, both transaction rec types produce Transaction items, and a relational dataset side produces RelationalDataPoint items whatever the rec type. A LusidEntity rec produces items of its entity type, for example Instrument items. Available values: SettlementActivity, Holding, Transaction, ValuedHolding, RelationalDataPoint, Instrument, LegalEntity, Portfolio."
           },
           "ruleAndAttributeValues": {
             "type": "object",
@@ -338205,7 +340006,7 @@
             "minLength": 1,
             "pattern": "^[a-zA-Z0-9\\-_]+$",
             "type": "string",
-            "description": "LUSID's internal unique instrument identifier, resolved from the share class' instrument identifiers",
+            "description": "LUSID's internal unique instrument identifier, resolved from the share class' instrument identifiers. Absent where no instrument was resolved for the share class: a fund defined with inline share classes resolves none, whether or not it created their instruments.",
             "nullable": true
           },
           "instrumentScope": {
@@ -338213,7 +340014,7 @@
             "minLength": 1,
             "pattern": "^[a-zA-Z0-9\\-_]+$",
             "type": "string",
-            "description": "The scope in which the share class instrument lies.",
+            "description": "The scope in which the share class instrument lies, or the fund's instrument scope where no instrument was resolved for the share class.",
             "nullable": true
           },
           "shortCode": {
@@ -348422,7 +350223,7 @@
           "recType": {
             "minLength": 1,
             "type": "string",
-            "description": "The type of reconciliation to perform. External reconciles non-native data on both sides, described by the datasetSchemas and the externalRecType. Available values: Holding, CashHolding, Valuation, InputTransaction, OutputTransaction, SettlementActivity, External, Instrument, LegalEntity."
+            "description": "The type of reconciliation to perform. External reconciles non-native data on both sides, described by the datasetSchemas and the externalRecType. Available values: Holding, CashHolding, Valuation, InputTransaction, OutputTransaction, SettlementActivity, External, Instrument, LegalEntity, Portfolio."
           },
           "externalRecType": {
             "$ref": "#/components/schemas/ExternalRecType"
@@ -349268,6 +351069,22 @@
             "type": "string",
             "description": "The effective datetime or cut label from which the change applies. Defaults to the current LUSID system datetime if not specified.",
             "format": "date-time",
+            "nullable": true
+          },
+          "notificationCutLabel": {
+            "maxLength": 256,
+            "minLength": 0,
+            "pattern": "^[a-zA-Z0-9\\-_\\+:\\.]+$",
+            "type": "string",
+            "description": "The cut label giving the time of day by which collateral we deliver under a margin call must settle. Each run resolves it on the business date and records it as the call's deadline; the allocation excludes assets that cannot settle by it. Optional.",
+            "nullable": true
+          },
+          "returnNotificationCutLabel": {
+            "maxLength": 256,
+            "minLength": 0,
+            "pattern": "^[a-zA-Z0-9\\-_\\+:\\.]+$",
+            "type": "string",
+            "description": "The cut label giving the time of day by which collateral the counterparty delivers, or returns to us, must settle. Recorded as the deadline of the calls they post under. Optional.",
             "nullable": true
           }
         },
