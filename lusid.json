@@ -9,7 +9,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "2.0.1749",
+    "version": "2.0.1750",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -42130,6 +42130,202 @@
         "x-fbn-apistatus": "Experimental"
       }
     },
+    "/api/compliance/v3/runs/$pretrade": {
+      "post": {
+        "tags": [
+          "Compliance"
+        ],
+        "summary": "[EXPERIMENTAL] RunComplianceV3PreTrade: [EXPERIMENTAL] Run V3 compliance rules pre-trade against a portfolio group.",
+        "description": "Use this endpoint to run one or more V3 compliance rules against a portfolio group including its live\r\norder flow (pre-trade), valuing holdings with the supplied recipe, and return each rule's result.",
+        "operationId": "RunComplianceV3PreTrade",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RunComplianceV3Request"
+              },
+              "example": {
+                "ruleIds": [
+                  {
+                    "scope": "ComplianceV3",
+                    "code": "EquityConcentration"
+                  }
+                ],
+                "portfolioGroupId": {
+                  "scope": "ComplianceV3",
+                  "code": "GlobalEquity"
+                },
+                "recipeId": {
+                  "scope": "ComplianceV3",
+                  "code": "Default"
+                },
+                "evaluationMode": "PerPortfolio"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RunComplianceV3Request"
+              },
+              "example": {
+                "ruleIds": [
+                  {
+                    "scope": "ComplianceV3",
+                    "code": "EquityConcentration"
+                  }
+                ],
+                "portfolioGroupId": {
+                  "scope": "ComplianceV3",
+                  "code": "GlobalEquity"
+                },
+                "recipeId": {
+                  "scope": "ComplianceV3",
+                  "code": "Default"
+                },
+                "evaluationMode": "PerPortfolio"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RunComplianceV3Request"
+              },
+              "example": {
+                "ruleIds": [
+                  {
+                    "scope": "ComplianceV3",
+                    "code": "EquityConcentration"
+                  }
+                ],
+                "portfolioGroupId": {
+                  "scope": "ComplianceV3",
+                  "code": "GlobalEquity"
+                },
+                "recipeId": {
+                  "scope": "ComplianceV3",
+                  "code": "Default"
+                },
+                "evaluationMode": "PerPortfolio"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RunComplianceV3Request"
+              },
+              "example": {
+                "ruleIds": [
+                  {
+                    "scope": "ComplianceV3",
+                    "code": "EquityConcentration"
+                  }
+                ],
+                "portfolioGroupId": {
+                  "scope": "ComplianceV3",
+                  "code": "GlobalEquity"
+                },
+                "recipeId": {
+                  "scope": "ComplianceV3",
+                  "code": "Default"
+                },
+                "evaluationMode": "PerPortfolio"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The result of each V3 compliance rule that was run pre-trade.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ComplianceRunV3Response"
+                },
+                "example": {
+                  "ruleResults": [
+                    {
+                      "ruleId": {
+                        "scope": "ComplianceV3",
+                        "code": "EquityConcentration"
+                      },
+                      "status": "Passed",
+                      "results": []
+                    }
+                  ]
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ComplianceRunV3Response"
+                },
+                "example": {
+                  "ruleResults": [
+                    {
+                      "ruleId": {
+                        "scope": "ComplianceV3",
+                        "code": "EquityConcentration"
+                      },
+                      "status": "Passed",
+                      "results": []
+                    }
+                  ]
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ComplianceRunV3Response"
+                },
+                "example": {
+                  "ruleResults": [
+                    {
+                      "ruleId": {
+                        "scope": "ComplianceV3",
+                        "code": "EquityConcentration"
+                      },
+                      "status": "Passed",
+                      "results": []
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      }
+    },
     "/api/conventions/credit/conventions": {
       "get": {
         "tags": [
@@ -70299,6 +70495,10 @@
                   "diaryEntry": "DiaryEntryMarch2018",
                   "holidayCalendars": [],
                   "valuationDateTimes": []
+                },
+                "recipeId": {
+                  "scope": "Finbourne-Examples",
+                  "code": "SupplementaryReportingRecipe"
                 }
               }
             },
@@ -70340,6 +70540,10 @@
                   "diaryEntry": "DiaryEntryMarch2018",
                   "holidayCalendars": [],
                   "valuationDateTimes": []
+                },
+                "recipeId": {
+                  "scope": "Finbourne-Examples",
+                  "code": "SupplementaryReportingRecipe"
                 }
               }
             },
@@ -70381,6 +70585,10 @@
                   "diaryEntry": "DiaryEntryMarch2018",
                   "holidayCalendars": [],
                   "valuationDateTimes": []
+                },
+                "recipeId": {
+                  "scope": "Finbourne-Examples",
+                  "code": "SupplementaryReportingRecipe"
                 }
               }
             },
@@ -70422,6 +70630,10 @@
                   "diaryEntry": "DiaryEntryMarch2018",
                   "holidayCalendars": [],
                   "valuationDateTimes": []
+                },
+                "recipeId": {
+                  "scope": "Finbourne-Examples",
+                  "code": "SupplementaryReportingRecipe"
                 }
               }
             }
@@ -76102,6 +76314,13 @@
                   "portfolioCode": "portfolioCode1",
                   "transactionId": "transactionId1",
                   "navActivityAdjustmentType": "PortfolioTransaction"
+                },
+                {
+                  "asAt": "2024-01-01T00:00:00.0000000+00:00",
+                  "corporateActionSourceScope": "corporateActionSourceScope1",
+                  "corporateActionSourceCode": "corporateActionSourceCode1",
+                  "instrumentEventId": "instrumentEventId1",
+                  "navActivityAdjustmentType": "InstrumentEventActivity"
                 }
               ]
             },
@@ -76119,6 +76338,13 @@
                   "portfolioCode": "portfolioCode1",
                   "transactionId": "transactionId1",
                   "navActivityAdjustmentType": "PortfolioTransaction"
+                },
+                {
+                  "asAt": "2024-01-01T00:00:00.0000000+00:00",
+                  "corporateActionSourceScope": "corporateActionSourceScope1",
+                  "corporateActionSourceCode": "corporateActionSourceCode1",
+                  "instrumentEventId": "instrumentEventId1",
+                  "navActivityAdjustmentType": "InstrumentEventActivity"
                 }
               ]
             },
@@ -76136,6 +76362,13 @@
                   "portfolioCode": "portfolioCode1",
                   "transactionId": "transactionId1",
                   "navActivityAdjustmentType": "PortfolioTransaction"
+                },
+                {
+                  "asAt": "2024-01-01T00:00:00.0000000+00:00",
+                  "corporateActionSourceScope": "corporateActionSourceScope1",
+                  "corporateActionSourceCode": "corporateActionSourceCode1",
+                  "instrumentEventId": "instrumentEventId1",
+                  "navActivityAdjustmentType": "InstrumentEventActivity"
                 }
               ]
             },
@@ -76153,6 +76386,13 @@
                   "portfolioCode": "portfolioCode1",
                   "transactionId": "transactionId1",
                   "navActivityAdjustmentType": "PortfolioTransaction"
+                },
+                {
+                  "asAt": "2024-01-01T00:00:00.0000000+00:00",
+                  "corporateActionSourceScope": "corporateActionSourceScope1",
+                  "corporateActionSourceCode": "corporateActionSourceCode1",
+                  "instrumentEventId": "instrumentEventId1",
+                  "navActivityAdjustmentType": "InstrumentEventActivity"
                 }
               ]
             }
@@ -76478,6 +76718,14 @@
                   "portfolioCode": "portfolioCode1",
                   "transactionId": "transactionId1",
                   "navActivityAdjustmentType": "PortfolioTransactionAdjustment"
+                },
+                {
+                  "navActivityAdjustmentSource": "Undefined",
+                  "asAt": "2024-01-01T00:00:00.0000000+00:00",
+                  "corporateActionSourceScope": "corporateActionSourceScope1",
+                  "corporateActionSourceCode": "corporateActionSourceCode1",
+                  "instrumentEventId": "instrumentEventId1",
+                  "navActivityAdjustmentType": "InstrumentEventActivityAdjustment"
                 }
               ]
             },
@@ -76496,6 +76744,14 @@
                   "portfolioCode": "portfolioCode1",
                   "transactionId": "transactionId1",
                   "navActivityAdjustmentType": "PortfolioTransactionAdjustment"
+                },
+                {
+                  "navActivityAdjustmentSource": "Undefined",
+                  "asAt": "2024-01-01T00:00:00.0000000+00:00",
+                  "corporateActionSourceScope": "corporateActionSourceScope1",
+                  "corporateActionSourceCode": "corporateActionSourceCode1",
+                  "instrumentEventId": "instrumentEventId1",
+                  "navActivityAdjustmentType": "InstrumentEventActivityAdjustment"
                 }
               ]
             },
@@ -76514,6 +76770,14 @@
                   "portfolioCode": "portfolioCode1",
                   "transactionId": "transactionId1",
                   "navActivityAdjustmentType": "PortfolioTransactionAdjustment"
+                },
+                {
+                  "navActivityAdjustmentSource": "Undefined",
+                  "asAt": "2024-01-01T00:00:00.0000000+00:00",
+                  "corporateActionSourceScope": "corporateActionSourceScope1",
+                  "corporateActionSourceCode": "corporateActionSourceCode1",
+                  "instrumentEventId": "instrumentEventId1",
+                  "navActivityAdjustmentType": "InstrumentEventActivityAdjustment"
                 }
               ]
             },
@@ -76532,6 +76796,14 @@
                   "portfolioCode": "portfolioCode1",
                   "transactionId": "transactionId1",
                   "navActivityAdjustmentType": "PortfolioTransactionAdjustment"
+                },
+                {
+                  "navActivityAdjustmentSource": "Undefined",
+                  "asAt": "2024-01-01T00:00:00.0000000+00:00",
+                  "corporateActionSourceScope": "corporateActionSourceScope1",
+                  "corporateActionSourceCode": "corporateActionSourceCode1",
+                  "instrumentEventId": "instrumentEventId1",
+                  "navActivityAdjustmentType": "InstrumentEventActivityAdjustment"
                 }
               ]
             }
@@ -80430,6 +80702,572 @@
           }
         ],
         "x-fbn-apistatus": "EarlyAccess"
+      }
+    },
+    "/api/funds/{scope}/{code}/taxcostrecords": {
+      "post": {
+        "tags": [
+          "Funds"
+        ],
+        "summary": "[EXPERIMENTAL] UpsertTaxCostRecords: [EXPERIMENTAL] UpsertTaxCostRecords: Upsert Tax Cost Records for a specified Fund.",
+        "description": "Create or update Tax Cost Records for the given Fund. Each record is keyed by its code; a record with an\r\nexisting code is replaced in full.",
+        "operationId": "UpsertTaxCostRecords",
+        "parameters": [
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope of the Fund.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "code",
+            "in": "path",
+            "description": "The code of the Fund. Together with the scope this uniquely identifies the Fund.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The Tax Cost Records to upsert, keyed by the code of each record.",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": {
+                  "$ref": "#/components/schemas/TaxCostRecordRequest"
+                }
+              },
+              "example": {
+                "TaxCostRecordCode": {
+                  "portfolioScope": "PortfolioScope",
+                  "portfolioCode": "PortfolioCode",
+                  "instrumentIdentifier": "LUID_00003D4X",
+                  "navTypeCode": "DefaultNavType",
+                  "taxCost": 1250.5,
+                  "carriedForwardAmount": 75.25,
+                  "effectivePeriodEnd": "2024-12-31T00:00:00.0000000+00:00",
+                  "sourceValuationPointId": "VP-2024-12-31"
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": {
+                  "$ref": "#/components/schemas/TaxCostRecordRequest"
+                }
+              },
+              "example": {
+                "TaxCostRecordCode": {
+                  "portfolioScope": "PortfolioScope",
+                  "portfolioCode": "PortfolioCode",
+                  "instrumentIdentifier": "LUID_00003D4X",
+                  "navTypeCode": "DefaultNavType",
+                  "taxCost": 1250.5,
+                  "carriedForwardAmount": 75.25,
+                  "effectivePeriodEnd": "2024-12-31T00:00:00.0000000+00:00",
+                  "sourceValuationPointId": "VP-2024-12-31"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": {
+                  "$ref": "#/components/schemas/TaxCostRecordRequest"
+                }
+              },
+              "example": {
+                "TaxCostRecordCode": {
+                  "portfolioScope": "PortfolioScope",
+                  "portfolioCode": "PortfolioCode",
+                  "instrumentIdentifier": "LUID_00003D4X",
+                  "navTypeCode": "DefaultNavType",
+                  "taxCost": 1250.5,
+                  "carriedForwardAmount": 75.25,
+                  "effectivePeriodEnd": "2024-12-31T00:00:00.0000000+00:00",
+                  "sourceValuationPointId": "VP-2024-12-31"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "object",
+                "additionalProperties": {
+                  "$ref": "#/components/schemas/TaxCostRecordRequest"
+                }
+              },
+              "example": {
+                "TaxCostRecordCode": {
+                  "portfolioScope": "PortfolioScope",
+                  "portfolioCode": "PortfolioCode",
+                  "instrumentIdentifier": "LUID_00003D4X",
+                  "navTypeCode": "DefaultNavType",
+                  "taxCost": 1250.5,
+                  "carriedForwardAmount": 75.25,
+                  "effectivePeriodEnd": "2024-12-31T00:00:00.0000000+00:00",
+                  "sourceValuationPointId": "VP-2024-12-31"
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "The Tax Cost Records upserted and any that failed, keyed by the record code.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpsertTaxCostRecordsResponse"
+                },
+                "example": {
+                  "successes": {
+                    "TaxCostRecordCode": {
+                      "taxCostRecordCode": "TaxCostRecordCode",
+                      "portfolioScope": "PortfolioScope",
+                      "portfolioCode": "PortfolioCode",
+                      "instrumentIdentifier": "LUID_00003D4X",
+                      "navTypeCode": "DefaultNavType",
+                      "taxCost": 1250.5,
+                      "carriedForwardAmount": 75.25,
+                      "effectivePeriodEnd": "2024-12-31T00:00:00.0000000+00:00",
+                      "sourceValuationPointId": "VP-2024-12-31"
+                    }
+                  },
+                  "failed": {
+                    "FailedTaxCostRecordCode": {
+                      "id": "FailedTaxCostRecordCode",
+                      "type": "ExampleFailure",
+                      "detail": "One or more problems occurred."
+                    }
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpsertTaxCostRecordsResponse"
+                },
+                "example": {
+                  "successes": {
+                    "TaxCostRecordCode": {
+                      "taxCostRecordCode": "TaxCostRecordCode",
+                      "portfolioScope": "PortfolioScope",
+                      "portfolioCode": "PortfolioCode",
+                      "instrumentIdentifier": "LUID_00003D4X",
+                      "navTypeCode": "DefaultNavType",
+                      "taxCost": 1250.5,
+                      "carriedForwardAmount": 75.25,
+                      "effectivePeriodEnd": "2024-12-31T00:00:00.0000000+00:00",
+                      "sourceValuationPointId": "VP-2024-12-31"
+                    }
+                  },
+                  "failed": {
+                    "FailedTaxCostRecordCode": {
+                      "id": "FailedTaxCostRecordCode",
+                      "type": "ExampleFailure",
+                      "detail": "One or more problems occurred."
+                    }
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpsertTaxCostRecordsResponse"
+                },
+                "example": {
+                  "successes": {
+                    "TaxCostRecordCode": {
+                      "taxCostRecordCode": "TaxCostRecordCode",
+                      "portfolioScope": "PortfolioScope",
+                      "portfolioCode": "PortfolioCode",
+                      "instrumentIdentifier": "LUID_00003D4X",
+                      "navTypeCode": "DefaultNavType",
+                      "taxCost": 1250.5,
+                      "carriedForwardAmount": 75.25,
+                      "effectivePeriodEnd": "2024-12-31T00:00:00.0000000+00:00",
+                      "sourceValuationPointId": "VP-2024-12-31"
+                    }
+                  },
+                  "failed": {
+                    "FailedTaxCostRecordCode": {
+                      "id": "FailedTaxCostRecordCode",
+                      "type": "ExampleFailure",
+                      "detail": "One or more problems occurred."
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      },
+      "get": {
+        "tags": [
+          "Funds"
+        ],
+        "summary": "[EXPERIMENTAL] ListTaxCostRecords: [EXPERIMENTAL] ListTaxCostRecords: List Tax Cost Records for a specified Fund.",
+        "description": "List all the Tax Cost Records matching a particular criteria.",
+        "operationId": "ListTaxCostRecords",
+        "parameters": [
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope of the Fund.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "code",
+            "in": "path",
+            "description": "The code of the Fund. Together with the scope this uniquely identifies the Fund.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "effectiveAt",
+            "in": "query",
+            "description": "The effective datetime or cut label at which to list the Tax Cost Records. Defaults to the current LUSID\r\n            system datetime if not specified.",
+            "schema": {
+              "type": "string",
+              "format": "dateorcutlabel"
+            }
+          },
+          {
+            "name": "asAt",
+            "in": "query",
+            "description": "The asAt datetime at which to list the Tax Cost Records. Defaults to returning the latest version of each record if not specified.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "x-nullable": true
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "The pagination token to use to continue listing Tax Cost Records; this\r\n            value is returned from the previous call. If a pagination token is provided, the filter, effectiveAt\r\n            and asAt fields must not have changed since the original request.",
+            "schema": {
+              "maxLength": 500,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\+/]*={0,3}$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "When paginating, limit the results to this number. Defaults to 100 if not specified.",
+            "schema": {
+              "maximum": 5000,
+              "minimum": 1,
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-nullable": true
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Expression to filter the results.\r\n            For example, to filter on the portfolio code, specify \"portfolioCode eq 'MyPortfolio'\". For more information about filtering\r\n            results, see https://support.lusid.com/docs/filtering-information-retrieved-from-lusid.",
+            "schema": {
+              "maxLength": 16384,
+              "minLength": 0,
+              "pattern": "^[\\s\\S]*$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "sortBy",
+            "in": "query",
+            "description": "A list of field names to sort by, each suffixed by \" ASC\" or \" DESC\"",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The requested Tax Cost Records.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedResourceListOfTaxCostRecord"
+                },
+                "example": {
+                  "values": [
+                    {
+                      "taxCostRecordCode": "TaxCostRecordCode",
+                      "portfolioScope": "PortfolioScope",
+                      "portfolioCode": "PortfolioCode",
+                      "instrumentIdentifier": "LUID_00003D4X",
+                      "navTypeCode": "DefaultNavType",
+                      "taxCost": 1250.5,
+                      "carriedForwardAmount": 75.25,
+                      "effectivePeriodEnd": "2024-12-31T00:00:00.0000000+00:00",
+                      "sourceValuationPointId": "VP-2024-12-31"
+                    }
+                  ],
+                  "links": []
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedResourceListOfTaxCostRecord"
+                },
+                "example": {
+                  "values": [
+                    {
+                      "taxCostRecordCode": "TaxCostRecordCode",
+                      "portfolioScope": "PortfolioScope",
+                      "portfolioCode": "PortfolioCode",
+                      "instrumentIdentifier": "LUID_00003D4X",
+                      "navTypeCode": "DefaultNavType",
+                      "taxCost": 1250.5,
+                      "carriedForwardAmount": 75.25,
+                      "effectivePeriodEnd": "2024-12-31T00:00:00.0000000+00:00",
+                      "sourceValuationPointId": "VP-2024-12-31"
+                    }
+                  ],
+                  "links": []
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PagedResourceListOfTaxCostRecord"
+                },
+                "example": {
+                  "values": [
+                    {
+                      "taxCostRecordCode": "TaxCostRecordCode",
+                      "portfolioScope": "PortfolioScope",
+                      "portfolioCode": "PortfolioCode",
+                      "instrumentIdentifier": "LUID_00003D4X",
+                      "navTypeCode": "DefaultNavType",
+                      "taxCost": 1250.5,
+                      "carriedForwardAmount": 75.25,
+                      "effectivePeriodEnd": "2024-12-31T00:00:00.0000000+00:00",
+                      "sourceValuationPointId": "VP-2024-12-31"
+                    }
+                  ],
+                  "links": []
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
+      }
+    },
+    "/api/funds/{scope}/{code}/taxcostrecords/{taxCostRecordCode}": {
+      "delete": {
+        "tags": [
+          "Funds"
+        ],
+        "summary": "[EXPERIMENTAL] DeleteTaxCostRecord: [EXPERIMENTAL] DeleteTaxCostRecord: Delete a Tax Cost Record.",
+        "description": "Delete the given Tax Cost Record.",
+        "operationId": "DeleteTaxCostRecord",
+        "parameters": [
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope of the Fund.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "code",
+            "in": "path",
+            "description": "The code of the Fund. Together with the scope this uniquely identifies the Fund.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          },
+          {
+            "name": "taxCostRecordCode",
+            "in": "path",
+            "description": "The code of the Tax Cost Record to be deleted.",
+            "required": true,
+            "schema": {
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "^[a-zA-Z0-9\\-_]+$",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The datetime that the Tax Cost Record was deleted",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeletedEntityResponse"
+                },
+                "example": {
+                  "asAt": "2018-03-05T10:10:10.0000000+00:00"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeletedEntityResponse"
+                },
+                "example": {
+                  "asAt": "2018-03-05T10:10:10.0000000+00:00"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeletedEntityResponse"
+                },
+                "example": {
+                  "asAt": "2018-03-05T10:10:10.0000000+00:00"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The details of the input related failure",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidValidationProblemDetails"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": []
+          }
+        ],
+        "x-fbn-apistatus": "Experimental"
       }
     },
     "/api/funds/{scope}/{code}/valuationPointOverview": {
@@ -125811,6 +126649,16 @@
               "pattern": "^[a-zA-Z0-9\\-_]+$",
               "type": "string"
             }
+          },
+          {
+            "name": "cancelAndCorrect",
+            "in": "query",
+            "description": "Whether to re-allocate allocations that already have booked transactions or to skip them.\r\nThe transactions booked against the re-allocated allocations are cancelled, and a subsequent call to\r\nBookTransactions books corrected ones.\r\nDefaults to false, which leaves allocations with booked transactions untouched.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            },
+            "x-nullable": true
           }
         ],
         "requestBody": {
@@ -126291,6 +127139,16 @@
               "pattern": "^[a-zA-Z0-9\\-_]+$",
               "type": "string"
             }
+          },
+          {
+            "name": "cancelAndCorrect",
+            "in": "query",
+            "description": "Whether to cancel the transactions booked against this placement's allocations once the run has re-split the\r\nfull executed quantity by the weights. A subsequent call to BookTransactions then books corrected ones.\r\nDefaults to true. Set to false to leave the booked transactions in place.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            },
+            "x-nullable": true
           }
         ],
         "requestBody": {
@@ -265552,7 +266410,7 @@
               },
               "isNonStandard": {
                 "type": "boolean",
-                "description": "By default IsNonStandard is false, and the contract follows the IMM convention: the roll and payment\r\nfrequencies must be 3M or 6M, and the start and maturity dates are rolled onto IMM dates\r\n(the 20th of March, June, September or December).\r\nIf IsNonStandard=true, the premium schedule uses the stated start and maturity dates. The payment\r\nfrequency can be any whole number of days, weeks, months, quarters, half-years or years, for example\r\n1W, 1M or 4M. Term (T) and business-day (BD) frequencies are not accepted. The payment dates roll back\r\nfrom the maturity, so a term that is not a whole number of payment periods has a short first period."
+                "description": "By default IsNonStandard is false, and the contract follows the IMM convention: the roll and payment\r\nfrequencies must be 3M or 6M, and the start and maturity dates are rolled onto IMM dates\r\n(the 20th of March, June, September or December).\r\nIf IsNonStandard=true, the premium schedule uses the stated start and maturity dates. The payment\r\nfrequency can be any whole number of days, weeks, months, quarters, half-years or years, for example\r\n1W, 1M or 4M. Term (T) and business-day (BD) frequencies are not accepted. The payment dates are\r\ngenerated as for a fixed leg with a short front stub: backwards from the maturity, so a term that is not\r\na whole number of payment periods has a short first period. When the roll convention is a day of the\r\nmonth (1 to 30) or EndOfMonth, each payment date falls on that day and the final period runs from the\r\nlast roll date to the maturity, for example a CDS on ABS paying on the 25th. Payments are adjusted to the\r\nfollowing business day. IMM and nth-weekday roll conventions are not accepted."
               },
               "protectionDetailSpecification": {
                 "$ref": "#/components/schemas/CdsProtectionDetailSpecification"
@@ -269749,10 +270607,11 @@
                   "PortfolioSettlementInstruction",
                   "InstrumentActivity",
                   "QuoteActivity",
-                  "ComplexMarketDataActivity"
+                  "ComplexMarketDataActivity",
+                  "InstrumentEventActivity"
                 ],
                 "type": "string",
-                "description": "The type of the entity being applied, for example a PortfolioTransaction. Available values: PortfolioTransaction, PortfolioSettlementInstruction, InstrumentActivity, QuoteActivity, ComplexMarketDataActivity."
+                "description": "The type of the entity being applied, for example a PortfolioTransaction. Available values: PortfolioTransaction, PortfolioSettlementInstruction, InstrumentActivity, QuoteActivity, ComplexMarketDataActivity, InstrumentEventActivity."
               }
             }
           }
@@ -269802,10 +270661,11 @@
                   "PortfolioSettlementInstructionAdjustment",
                   "InstrumentActivityAdjustment",
                   "QuoteActivityAdjustment",
-                  "ComplexMarketDataActivityAdjustment"
+                  "ComplexMarketDataActivityAdjustment",
+                  "InstrumentEventActivityAdjustment"
                 ],
                 "type": "string",
-                "description": "The type of the entity being applied, for example a PortfolioTransaction. Available values: PortfolioTransactionAdjustment, PortfolioSettlementInstructionAdjustment, InstrumentActivityAdjustment, QuoteActivityAdjustment, ComplexMarketDataActivityAdjustment."
+                "description": "The type of the entity being applied, for example a PortfolioTransaction. Available values: PortfolioTransactionAdjustment, PortfolioSettlementInstructionAdjustment, InstrumentActivityAdjustment, QuoteActivityAdjustment, ComplexMarketDataActivityAdjustment, InstrumentEventActivityAdjustment."
               }
             }
           }
@@ -276830,7 +277690,7 @@
               },
               "isNonStandard": {
                 "type": "boolean",
-                "description": "By default IsNonStandard is false, and the contract follows the IMM convention: the roll and payment\r\nfrequencies must be 3M or 6M, and the start and maturity dates are rolled onto IMM dates\r\n(the 20th of March, June, September or December).\r\nIf IsNonStandard=true, the premium schedule uses the stated start and maturity dates. The payment\r\nfrequency can be any whole number of days, weeks, months, quarters, half-years or years, for example\r\n1W, 1M or 4M. Term (T) and business-day (BD) frequencies are not accepted. The payment dates roll back\r\nfrom the maturity, so a term that is not a whole number of payment periods has a short first period."
+                "description": "By default IsNonStandard is false, and the contract follows the IMM convention: the roll and payment\r\nfrequencies must be 3M or 6M, and the start and maturity dates are rolled onto IMM dates\r\n(the 20th of March, June, September or December).\r\nIf IsNonStandard=true, the premium schedule uses the stated start and maturity dates. The payment\r\nfrequency can be any whole number of days, weeks, months, quarters, half-years or years, for example\r\n1W, 1M or 4M. Term (T) and business-day (BD) frequencies are not accepted. The payment dates are\r\ngenerated as for a fixed leg with a short front stub: backwards from the maturity, so a term that is not\r\na whole number of payment periods has a short first period. When the roll convention is a day of the\r\nmonth (1 to 30) or EndOfMonth, each payment date falls on that day and the final period runs from the\r\nlast roll date to the maturity, for example a CDS on ABS paying on the 25th. Payments are adjusted to the\r\nfollowing business day. IMM and nth-weekday roll conventions are not accepted."
               },
               "protectionDetailSpecification": {
                 "$ref": "#/components/schemas/CdsProtectionDetailSpecification"
@@ -279779,6 +280639,41 @@
         },
         "additionalProperties": false,
         "description": "Specification for retrieving a decorated compliance run summary, optionally restricted to a\r\nset of portfolios and/or portfolio groups."
+      },
+      "DeemedDisposal": {
+        "required": [
+          "enabled"
+        ],
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "description": "Whether the Nav Type books a deemed disposal at period close. When true, in-scope holdings are treated as sold and immediately re-acquired at market value, realising their unrealised gain."
+          },
+          "costBase": {
+            "type": "string",
+            "description": "The cost the deemed disposal realises against: Book or Tax. Defaults to Book. Book: rebases book cost to base value and posts the movement as realised FX; it moves the portfolio's cost, so it is only valid on the primary Nav Type. Tax: writes a tax cost equal to market value and spreads the deemed gain since the prior tax cost. Available values: Book, Tax.",
+            "nullable": true
+          },
+          "holdingsFilter": {
+            "maxLength": 16384,
+            "minLength": 0,
+            "pattern": "^[\\s\\S]*$",
+            "type": "string",
+            "description": "An optional filter selecting which holdings are deemed disposed of at period close. Omit it for the cost base's default: under Book, every non-base-currency monetary item (cash, receivables, payables, accruals). Tax has no default yet, so set a filter.",
+            "nullable": true
+          },
+          "transactionTypeCode": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "An optional transaction type, in the Nav Type's transaction type scope, that the deemed disposal transactions are booked with. Omit it to use the domain default deemed disposal transaction type.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Settings for the deemed disposal a NAV type books at period close. When enabled, the in-scope holdings are\r\ntreated as sold and immediately re-acquired at market value, realising their unrealised gain against the\r\nchosen cost base."
       },
       "DeleteAccountsResponse": {
         "type": "object",
@@ -294630,6 +295525,9 @@
           },
           "corporateActionSourceId": {
             "$ref": "#/components/schemas/ResourceId"
+          },
+          "recipeId": {
+            "$ref": "#/components/schemas/ResourceId"
           }
         },
         "additionalProperties": false,
@@ -301974,10 +302872,11 @@
                   "PortfolioSettlementInstruction",
                   "InstrumentActivity",
                   "QuoteActivity",
-                  "ComplexMarketDataActivity"
+                  "ComplexMarketDataActivity",
+                  "InstrumentEventActivity"
                 ],
                 "type": "string",
-                "description": "The type of the entity being applied, for example a PortfolioTransaction. Available values: PortfolioTransaction, PortfolioSettlementInstruction, InstrumentActivity, QuoteActivity, ComplexMarketDataActivity."
+                "description": "The type of the entity being applied, for example a PortfolioTransaction. Available values: PortfolioTransaction, PortfolioSettlementInstruction, InstrumentActivity, QuoteActivity, ComplexMarketDataActivity, InstrumentEventActivity."
               }
             }
           }
@@ -302028,10 +302927,11 @@
                   "PortfolioSettlementInstructionAdjustment",
                   "InstrumentActivityAdjustment",
                   "QuoteActivityAdjustment",
-                  "ComplexMarketDataActivityAdjustment"
+                  "ComplexMarketDataActivityAdjustment",
+                  "InstrumentEventActivityAdjustment"
                 ],
                 "type": "string",
-                "description": "The type of the entity being applied, for example a PortfolioTransaction. Available values: PortfolioTransactionAdjustment, PortfolioSettlementInstructionAdjustment, InstrumentActivityAdjustment, QuoteActivityAdjustment, ComplexMarketDataActivityAdjustment."
+                "description": "The type of the entity being applied, for example a PortfolioTransaction. Available values: PortfolioTransactionAdjustment, PortfolioSettlementInstructionAdjustment, InstrumentActivityAdjustment, QuoteActivityAdjustment, ComplexMarketDataActivityAdjustment, InstrumentEventActivityAdjustment."
               }
             }
           }
@@ -302446,6 +303346,126 @@
         "discriminator": {
           "propertyName": "instrumentEventType"
         }
+      },
+      "InstrumentEventActivity": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/NavActivityAdjustment"
+          },
+          {
+            "required": [
+              "asAt",
+              "corporateActionSourceCode",
+              "corporateActionSourceScope",
+              "instrumentEventId",
+              "navActivityAdjustmentType"
+            ],
+            "type": "object",
+            "properties": {
+              "asAt": {
+                "type": "string",
+                "description": "The asAt time for which the adjustment is being applied.",
+                "format": "date-time"
+              },
+              "corporateActionSourceScope": {
+                "maxLength": 64,
+                "minLength": 1,
+                "pattern": "^[a-zA-Z0-9\\-_]+$",
+                "type": "string",
+                "description": "The scope of the corporate action source that the instrument event belongs to."
+              },
+              "corporateActionSourceCode": {
+                "maxLength": 64,
+                "minLength": 1,
+                "pattern": "^[a-zA-Z0-9\\-_]+$",
+                "type": "string",
+                "description": "The code of the corporate action source that the instrument event belongs to."
+              },
+              "instrumentEventId": {
+                "maxLength": 64,
+                "minLength": 1,
+                "pattern": "^[a-zA-Z0-9\\-_]+$",
+                "type": "string",
+                "description": "The Id of the instrument event being adjusted."
+              },
+              "navActivityAdjustmentType": {
+                "enum": [
+                  "PortfolioTransaction",
+                  "PortfolioSettlementInstruction",
+                  "InstrumentActivity",
+                  "QuoteActivity",
+                  "ComplexMarketDataActivity",
+                  "InstrumentEventActivity"
+                ],
+                "type": "string",
+                "description": "The type of the entity being applied, for example a PortfolioTransaction. Available values: PortfolioTransaction, PortfolioSettlementInstruction, InstrumentActivity, QuoteActivity, ComplexMarketDataActivity, InstrumentEventActivity."
+              }
+            }
+          }
+        ]
+      },
+      "InstrumentEventActivityAdjustment": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/NavActivityAdjustmentResponse"
+          },
+          {
+            "required": [
+              "asAt",
+              "corporateActionSourceCode",
+              "corporateActionSourceScope",
+              "instrumentEventId",
+              "navActivityAdjustmentSource",
+              "navActivityAdjustmentType"
+            ],
+            "type": "object",
+            "properties": {
+              "navActivityAdjustmentSource": {
+                "minLength": 1,
+                "type": "string",
+                "description": "The post closed activity source of the given entity, for example Manual. Available values: Undefined, Manual, Auto."
+              },
+              "asAt": {
+                "type": "string",
+                "description": "The asAt time for which the adjustment is being applied.",
+                "format": "date-time"
+              },
+              "corporateActionSourceScope": {
+                "maxLength": 64,
+                "minLength": 1,
+                "pattern": "^[a-zA-Z0-9\\-_]+$",
+                "type": "string",
+                "description": "The scope of the corporate action source that the instrument event belongs to."
+              },
+              "corporateActionSourceCode": {
+                "maxLength": 64,
+                "minLength": 1,
+                "pattern": "^[a-zA-Z0-9\\-_]+$",
+                "type": "string",
+                "description": "The code of the corporate action source that the instrument event belongs to."
+              },
+              "instrumentEventId": {
+                "maxLength": 64,
+                "minLength": 1,
+                "pattern": "^[a-zA-Z0-9\\-_]+$",
+                "type": "string",
+                "description": "The Id of the instrument event being adjusted."
+              },
+              "navActivityAdjustmentType": {
+                "enum": [
+                  "PortfolioTransactionAdjustment",
+                  "PortfolioSettlementInstructionAdjustment",
+                  "InstrumentActivityAdjustment",
+                  "QuoteActivityAdjustment",
+                  "ComplexMarketDataActivityAdjustment",
+                  "InstrumentEventActivityAdjustment"
+                ],
+                "type": "string",
+                "description": "The type of the entity being applied, for example a PortfolioTransaction. Available values: PortfolioTransactionAdjustment, PortfolioSettlementInstructionAdjustment, InstrumentActivityAdjustment, QuoteActivityAdjustment, ComplexMarketDataActivityAdjustment, InstrumentEventActivityAdjustment."
+              }
+            }
+          }
+        ]
       },
       "InstrumentEventConfiguration": {
         "type": "object",
@@ -305905,6 +306925,9 @@
           },
           "scenarioDiagnostics": {
             "$ref": "#/components/schemas/ScenarioDiagnostics"
+          },
+          "recipeProvenance": {
+            "$ref": "#/components/schemas/RecipeProvenance"
           },
           "links": {
             "type": "array",
@@ -311790,10 +312813,11 @@
               "PortfolioSettlementInstruction",
               "InstrumentActivity",
               "QuoteActivity",
-              "ComplexMarketDataActivity"
+              "ComplexMarketDataActivity",
+              "InstrumentEventActivity"
             ],
             "type": "string",
-            "description": "The type of the entity being applied, for example a PortfolioTransaction. Available values: PortfolioTransaction, PortfolioSettlementInstruction, InstrumentActivity, QuoteActivity, ComplexMarketDataActivity."
+            "description": "The type of the entity being applied, for example a PortfolioTransaction. Available values: PortfolioTransaction, PortfolioSettlementInstruction, InstrumentActivity, QuoteActivity, ComplexMarketDataActivity, InstrumentEventActivity."
           }
         },
         "additionalProperties": false,
@@ -311813,10 +312837,11 @@
               "PortfolioSettlementInstructionAdjustment",
               "InstrumentActivityAdjustment",
               "QuoteActivityAdjustment",
-              "ComplexMarketDataActivityAdjustment"
+              "ComplexMarketDataActivityAdjustment",
+              "InstrumentEventActivityAdjustment"
             ],
             "type": "string",
-            "description": "The type of the entity being applied, for example a PortfolioTransaction. Available values: PortfolioTransactionAdjustment, PortfolioSettlementInstructionAdjustment, InstrumentActivityAdjustment, QuoteActivityAdjustment, ComplexMarketDataActivityAdjustment."
+            "description": "The type of the entity being applied, for example a PortfolioTransaction. Available values: PortfolioTransactionAdjustment, PortfolioSettlementInstructionAdjustment, InstrumentActivityAdjustment, QuoteActivityAdjustment, ComplexMarketDataActivityAdjustment, InstrumentEventActivityAdjustment."
           }
         },
         "additionalProperties": false,
@@ -311830,7 +312855,8 @@
           "PortfolioSettlementInstructionAdjustment",
           "InstrumentActivityAdjustment",
           "QuoteActivityAdjustment",
-          "ComplexMarketDataActivityAdjustment"
+          "ComplexMarketDataActivityAdjustment",
+          "InstrumentEventActivityAdjustment"
         ],
         "type": "string",
         "description": "Discriminator for NavActivityAdjustmentResponse"
@@ -311841,7 +312867,8 @@
           "PortfolioSettlementInstruction",
           "InstrumentActivity",
           "QuoteActivity",
-          "ComplexMarketDataActivity"
+          "ComplexMarketDataActivity",
+          "InstrumentEventActivity"
         ],
         "type": "string",
         "description": "Discriminator for NavActivityAdjustment"
@@ -312188,6 +313215,9 @@
             "type": "string",
             "description": "The chargeable gains regime the Nav Type's derived portfolio is elected into. This can be: Default or UkChargeableGains. Omit it, or supply Default, to leave the derived portfolio inheriting its parent portfolio's regime. Under UkChargeableGains, in-scope holdings in the derived portfolio are depleted under the UK chargeable gains rules regardless of the Nav Type's accounting method; it requires the Fund's base currency to be GBP. Available values: Default, UkChargeableGains.",
             "nullable": true
+          },
+          "deemedDisposal": {
+            "$ref": "#/components/schemas/DeemedDisposal"
           }
         },
         "additionalProperties": false
@@ -312332,6 +313362,9 @@
             "type": "string",
             "description": "The chargeable gains regime the Nav Type's derived portfolio is elected into. This can be: Default or UkChargeableGains. Omit it, or supply Default, to leave the derived portfolio inheriting its parent portfolio's regime. Under UkChargeableGains, in-scope holdings in the derived portfolio are depleted under the UK chargeable gains rules regardless of the Nav Type's accounting method; it requires the Fund's base currency to be GBP. Available values: Default, UkChargeableGains.",
             "nullable": true
+          },
+          "deemedDisposal": {
+            "$ref": "#/components/schemas/DeemedDisposal"
           }
         },
         "additionalProperties": false
@@ -318550,6 +319583,41 @@
         },
         "additionalProperties": false
       },
+      "PagedResourceListOfTaxCostRecord": {
+        "required": [
+          "values"
+        ],
+        "type": "object",
+        "properties": {
+          "nextPage": {
+            "type": "string",
+            "nullable": true
+          },
+          "previousPage": {
+            "type": "string",
+            "nullable": true
+          },
+          "values": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TaxCostRecord"
+            }
+          },
+          "href": {
+            "type": "string",
+            "format": "uri",
+            "nullable": true
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "PagedResourceListOfTimeline": {
         "required": [
           "values"
@@ -324558,10 +325626,11 @@
                   "PortfolioSettlementInstruction",
                   "InstrumentActivity",
                   "QuoteActivity",
-                  "ComplexMarketDataActivity"
+                  "ComplexMarketDataActivity",
+                  "InstrumentEventActivity"
                 ],
                 "type": "string",
-                "description": "The type of the entity being applied, for example a PortfolioTransaction. Available values: PortfolioTransaction, PortfolioSettlementInstruction, InstrumentActivity, QuoteActivity, ComplexMarketDataActivity."
+                "description": "The type of the entity being applied, for example a PortfolioTransaction. Available values: PortfolioTransaction, PortfolioSettlementInstruction, InstrumentActivity, QuoteActivity, ComplexMarketDataActivity, InstrumentEventActivity."
               }
             }
           }
@@ -324620,10 +325689,11 @@
                   "PortfolioSettlementInstructionAdjustment",
                   "InstrumentActivityAdjustment",
                   "QuoteActivityAdjustment",
-                  "ComplexMarketDataActivityAdjustment"
+                  "ComplexMarketDataActivityAdjustment",
+                  "InstrumentEventActivityAdjustment"
                 ],
                 "type": "string",
-                "description": "The type of the entity being applied, for example a PortfolioTransaction. Available values: PortfolioTransactionAdjustment, PortfolioSettlementInstructionAdjustment, InstrumentActivityAdjustment, QuoteActivityAdjustment, ComplexMarketDataActivityAdjustment."
+                "description": "The type of the entity being applied, for example a PortfolioTransaction. Available values: PortfolioTransactionAdjustment, PortfolioSettlementInstructionAdjustment, InstrumentActivityAdjustment, QuoteActivityAdjustment, ComplexMarketDataActivityAdjustment, InstrumentEventActivityAdjustment."
               }
             }
           }
@@ -324714,10 +325784,11 @@
                   "PortfolioSettlementInstruction",
                   "InstrumentActivity",
                   "QuoteActivity",
-                  "ComplexMarketDataActivity"
+                  "ComplexMarketDataActivity",
+                  "InstrumentEventActivity"
                 ],
                 "type": "string",
-                "description": "The type of the entity being applied, for example a PortfolioTransaction. Available values: PortfolioTransaction, PortfolioSettlementInstruction, InstrumentActivity, QuoteActivity, ComplexMarketDataActivity."
+                "description": "The type of the entity being applied, for example a PortfolioTransaction. Available values: PortfolioTransaction, PortfolioSettlementInstruction, InstrumentActivity, QuoteActivity, ComplexMarketDataActivity, InstrumentEventActivity."
               }
             }
           }
@@ -324776,10 +325847,11 @@
                   "PortfolioSettlementInstructionAdjustment",
                   "InstrumentActivityAdjustment",
                   "QuoteActivityAdjustment",
-                  "ComplexMarketDataActivityAdjustment"
+                  "ComplexMarketDataActivityAdjustment",
+                  "InstrumentEventActivityAdjustment"
                 ],
                 "type": "string",
-                "description": "The type of the entity being applied, for example a PortfolioTransaction. Available values: PortfolioTransactionAdjustment, PortfolioSettlementInstructionAdjustment, InstrumentActivityAdjustment, QuoteActivityAdjustment, ComplexMarketDataActivityAdjustment."
+                "description": "The type of the entity being applied, for example a PortfolioTransaction. Available values: PortfolioTransactionAdjustment, PortfolioSettlementInstructionAdjustment, InstrumentActivityAdjustment, QuoteActivityAdjustment, ComplexMarketDataActivityAdjustment, InstrumentEventActivityAdjustment."
               }
             }
           }
@@ -329459,10 +330531,11 @@
                   "PortfolioSettlementInstruction",
                   "InstrumentActivity",
                   "QuoteActivity",
-                  "ComplexMarketDataActivity"
+                  "ComplexMarketDataActivity",
+                  "InstrumentEventActivity"
                 ],
                 "type": "string",
-                "description": "The type of the entity being applied, for example a PortfolioTransaction. Available values: PortfolioTransaction, PortfolioSettlementInstruction, InstrumentActivity, QuoteActivity, ComplexMarketDataActivity."
+                "description": "The type of the entity being applied, for example a PortfolioTransaction. Available values: PortfolioTransaction, PortfolioSettlementInstruction, InstrumentActivity, QuoteActivity, ComplexMarketDataActivity, InstrumentEventActivity."
               }
             }
           }
@@ -329518,10 +330591,11 @@
                   "PortfolioSettlementInstructionAdjustment",
                   "InstrumentActivityAdjustment",
                   "QuoteActivityAdjustment",
-                  "ComplexMarketDataActivityAdjustment"
+                  "ComplexMarketDataActivityAdjustment",
+                  "InstrumentEventActivityAdjustment"
                 ],
                 "type": "string",
-                "description": "The type of the entity being applied, for example a PortfolioTransaction. Available values: PortfolioTransactionAdjustment, PortfolioSettlementInstructionAdjustment, InstrumentActivityAdjustment, QuoteActivityAdjustment, ComplexMarketDataActivityAdjustment."
+                "description": "The type of the entity being applied, for example a PortfolioTransaction. Available values: PortfolioTransactionAdjustment, PortfolioSettlementInstructionAdjustment, InstrumentActivityAdjustment, QuoteActivityAdjustment, ComplexMarketDataActivityAdjustment, InstrumentEventActivityAdjustment."
               }
             }
           }
@@ -331171,6 +332245,21 @@
         },
         "additionalProperties": false,
         "description": "Recipe composer is an object used to dynamically compose Configuration Recipe from atomic operations."
+      },
+      "RecipeProvenance": {
+        "type": "object",
+        "properties": {
+          "recipeId": {
+            "$ref": "#/components/schemas/ResourceId"
+          },
+          "source": {
+            "type": "string",
+            "description": "Where the recipe came from. 'NavType' when it is the recipe on the nominated NAV type's definition;\r\n'Request' when the request named a recipeId that replaced it for pricing in that request only.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "The recipe a fund valuation was priced with, and where it came from. Absent when the fund has no portfolios\r\nat the effective date, as nothing is priced and no recipe is resolved."
       },
       "RecipeValue": {
         "type": "object",
@@ -346950,6 +348039,158 @@
         "additionalProperties": false,
         "description": "The instrument static the decision tree reads. A missing flag is a missing input, not a false."
       },
+      "TaxCostRecord": {
+        "required": [
+          "carriedForwardAmount",
+          "effectivePeriodEnd",
+          "instrumentIdentifier",
+          "portfolioCode",
+          "portfolioScope",
+          "taxCost"
+        ],
+        "type": "object",
+        "properties": {
+          "href": {
+            "type": "string",
+            "description": "The specific Uniform Resource Identifier (URI) for this resource at the requested effective and asAt datetime.",
+            "format": "uri",
+            "nullable": true
+          },
+          "taxCostRecordCode": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The code of the Tax Cost Record, unique within the Fund.",
+            "nullable": true
+          },
+          "portfolioScope": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The scope of the portfolio the holding belongs to."
+          },
+          "portfolioCode": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The code of the portfolio the holding belongs to."
+          },
+          "instrumentIdentifier": {
+            "maxLength": 50,
+            "minLength": 0,
+            "type": "string",
+            "description": "The LUSID instrument identifier (LUID) of the holding the tax cost applies to."
+          },
+          "navTypeCode": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The code of the NAV type the tax cost applies to. Optional; omit for the fund's primary NAV type.",
+            "nullable": true
+          },
+          "taxCost": {
+            "type": "number",
+            "description": "The tax cost of the holding at the effective period end, in the fund's base currency.",
+            "format": "double"
+          },
+          "carriedForwardAmount": {
+            "type": "number",
+            "description": "The amount carried forward into the next tax period, in the fund's base currency.",
+            "format": "double"
+          },
+          "effectivePeriodEnd": {
+            "type": "string",
+            "description": "The end date of the tax period the record applies to.",
+            "format": "date-time"
+          },
+          "sourceValuationPointId": {
+            "maxLength": 50,
+            "minLength": 0,
+            "type": "string",
+            "description": "The identifier of the valuation point the record was derived from. Optional; omit for externally supplied records.",
+            "nullable": true
+          },
+          "version": {
+            "$ref": "#/components/schemas/Version"
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TaxCostRecordRequest": {
+        "required": [
+          "carriedForwardAmount",
+          "effectivePeriodEnd",
+          "instrumentIdentifier",
+          "portfolioCode",
+          "portfolioScope",
+          "taxCost"
+        ],
+        "type": "object",
+        "properties": {
+          "portfolioScope": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The scope of the portfolio the holding belongs to."
+          },
+          "portfolioCode": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The code of the portfolio the holding belongs to."
+          },
+          "instrumentIdentifier": {
+            "maxLength": 256,
+            "minLength": 1,
+            "type": "string",
+            "description": "The LUSID instrument identifier (LUID) of the holding the tax cost applies to."
+          },
+          "navTypeCode": {
+            "maxLength": 64,
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\-_]+$",
+            "type": "string",
+            "description": "The code of the NAV type the tax cost applies to. Optional; omit for the fund's primary NAV type.",
+            "nullable": true
+          },
+          "taxCost": {
+            "type": "number",
+            "description": "The tax cost of the holding at the effective period end, in the fund's base currency.",
+            "format": "double"
+          },
+          "carriedForwardAmount": {
+            "type": "number",
+            "description": "The amount carried forward into the next tax period, in the fund's base currency.",
+            "format": "double"
+          },
+          "effectivePeriodEnd": {
+            "type": "string",
+            "description": "The end date of the tax period the record applies to.",
+            "format": "date-time"
+          },
+          "sourceValuationPointId": {
+            "maxLength": 256,
+            "minLength": 1,
+            "type": "string",
+            "description": "The identifier of the valuation point the record was derived from. Optional; omit for externally supplied records.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "TaxExceptionItem": {
         "required": [
           "category",
@@ -356169,6 +357410,35 @@
         },
         "additionalProperties": false
       },
+      "UpsertTaxCostRecordsResponse": {
+        "type": "object",
+        "properties": {
+          "successes": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/TaxCostRecord"
+            },
+            "description": "The Tax Cost Records that were successfully upserted, keyed by the code supplied in the request.",
+            "nullable": true
+          },
+          "failed": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/ErrorDetail"
+            },
+            "description": "The Tax Cost Records that failed to upsert, keyed by the code supplied in the request, with the reason for each failure.",
+            "nullable": true
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "UpsertTaxTreatmentOverrideRequest": {
         "required": [
           "treatment"
@@ -357017,7 +358287,7 @@
             "items": {
               "type": "string"
             },
-            "description": "Collection of types of Post Close Activities which added this instrument. Available values: PortfolioTransaction, PortfolioSettlementInstruction, InstrumentActivity, QuoteActivity, ComplexMarketDataActivity.",
+            "description": "Collection of types of Post Close Activities which added this instrument. Available values: PortfolioTransaction, PortfolioSettlementInstruction, InstrumentActivity, QuoteActivity, ComplexMarketDataActivity, InstrumentEventActivity.",
             "nullable": true
           },
           "properties": {

@@ -634,6 +634,7 @@ export * from './decimalListAllOf';
 export * from './decimalListComplianceParameter';
 export * from './decoratedComplianceRunSummary';
 export * from './decoratedComplianceRunSummaryRequest';
+export * from './deemedDisposal';
 export * from './deleteAccountsResponse';
 export * from './deleteCustodianAccountsResponse';
 export * from './deleteDataQualityRule';
@@ -1071,6 +1072,10 @@ export * from './instrumentDefinitionFormat';
 export * from './instrumentDeleteModes';
 export * from './instrumentEntity';
 export * from './instrumentEvent';
+export * from './instrumentEventActivity';
+export * from './instrumentEventActivityAdjustment';
+export * from './instrumentEventActivityAdjustmentAllOf';
+export * from './instrumentEventActivityAllOf';
 export * from './instrumentEventConfiguration';
 export * from './instrumentEventEntity';
 export * from './instrumentEventHolder';
@@ -1418,6 +1423,7 @@ export * from './pagedResourceListOfSequenceDefinition';
 export * from './pagedResourceListOfStagedModification';
 export * from './pagedResourceListOfStagedModificationsRequestedChangeInterval';
 export * from './pagedResourceListOfStagingRuleSet';
+export * from './pagedResourceListOfTaxCostRecord';
 export * from './pagedResourceListOfTimeline';
 export * from './pagedResourceListOfTransactionTemplate';
 export * from './pagedResourceListOfTransactionTemplateSpecification';
@@ -1721,6 +1727,7 @@ export * from './recallableCapitalExpiryEvent';
 export * from './recallableCapitalExpiryEventAllOf';
 export * from './recipeBlock';
 export * from './recipeComposer';
+export * from './recipeProvenance';
 export * from './recipeValue';
 export * from './recombineStep';
 export * from './recommendedSortBy';
@@ -2081,6 +2088,8 @@ export * from './taxClassificationException';
 export * from './taxClassificationExceptionRecord';
 export * from './taxClassificationFieldVersion';
 export * from './taxClassificationInputs';
+export * from './taxCostRecord';
+export * from './taxCostRecordRequest';
 export * from './taxExceptionItem';
 export * from './taxExceptionRootCause';
 export * from './taxPortfolioSyncStatus';
@@ -2304,6 +2313,7 @@ export * from './upsertSingleStructuredDataResponse';
 export * from './upsertStructuredDataResponse';
 export * from './upsertStructuredResultDataRequest';
 export * from './upsertSubscriptionRequest';
+export * from './upsertTaxCostRecordsResponse';
 export * from './upsertTaxTreatmentOverrideRequest';
 export * from './upsertTransactionPropertiesResponse';
 export * from './upsertTransferAgencyOrderRequest';
@@ -3057,6 +3067,7 @@ import { DecimalListAllOf } from './decimalListAllOf';
 import { DecimalListComplianceParameter } from './decimalListComplianceParameter';
 import { DecoratedComplianceRunSummary } from './decoratedComplianceRunSummary';
 import { DecoratedComplianceRunSummaryRequest } from './decoratedComplianceRunSummaryRequest';
+import { DeemedDisposal } from './deemedDisposal';
 import { DeleteAccountsResponse } from './deleteAccountsResponse';
 import { DeleteCustodianAccountsResponse } from './deleteCustodianAccountsResponse';
 import { DeleteDataQualityRule } from './deleteDataQualityRule';
@@ -3494,6 +3505,10 @@ import { InstrumentDefinitionFormat } from './instrumentDefinitionFormat';
 import { InstrumentDeleteModes } from './instrumentDeleteModes';
 import { InstrumentEntity } from './instrumentEntity';
 import { InstrumentEvent } from './instrumentEvent';
+import { InstrumentEventActivity } from './instrumentEventActivity';
+import { InstrumentEventActivityAdjustment } from './instrumentEventActivityAdjustment';
+import { InstrumentEventActivityAdjustmentAllOf } from './instrumentEventActivityAdjustmentAllOf';
+import { InstrumentEventActivityAllOf } from './instrumentEventActivityAllOf';
 import { InstrumentEventConfiguration } from './instrumentEventConfiguration';
 import { InstrumentEventEntity } from './instrumentEventEntity';
 import { InstrumentEventHolder } from './instrumentEventHolder';
@@ -3841,6 +3856,7 @@ import { PagedResourceListOfSequenceDefinition } from './pagedResourceListOfSequ
 import { PagedResourceListOfStagedModification } from './pagedResourceListOfStagedModification';
 import { PagedResourceListOfStagedModificationsRequestedChangeInterval } from './pagedResourceListOfStagedModificationsRequestedChangeInterval';
 import { PagedResourceListOfStagingRuleSet } from './pagedResourceListOfStagingRuleSet';
+import { PagedResourceListOfTaxCostRecord } from './pagedResourceListOfTaxCostRecord';
 import { PagedResourceListOfTimeline } from './pagedResourceListOfTimeline';
 import { PagedResourceListOfTransactionTemplate } from './pagedResourceListOfTransactionTemplate';
 import { PagedResourceListOfTransactionTemplateSpecification } from './pagedResourceListOfTransactionTemplateSpecification';
@@ -4144,6 +4160,7 @@ import { RecallableCapitalExpiryEvent } from './recallableCapitalExpiryEvent';
 import { RecallableCapitalExpiryEventAllOf } from './recallableCapitalExpiryEventAllOf';
 import { RecipeBlock } from './recipeBlock';
 import { RecipeComposer } from './recipeComposer';
+import { RecipeProvenance } from './recipeProvenance';
 import { RecipeValue } from './recipeValue';
 import { RecombineStep } from './recombineStep';
 import { RecommendedSortBy } from './recommendedSortBy';
@@ -4504,6 +4521,8 @@ import { TaxClassificationException } from './taxClassificationException';
 import { TaxClassificationExceptionRecord } from './taxClassificationExceptionRecord';
 import { TaxClassificationFieldVersion } from './taxClassificationFieldVersion';
 import { TaxClassificationInputs } from './taxClassificationInputs';
+import { TaxCostRecord } from './taxCostRecord';
+import { TaxCostRecordRequest } from './taxCostRecordRequest';
 import { TaxExceptionItem } from './taxExceptionItem';
 import { TaxExceptionRootCause } from './taxExceptionRootCause';
 import { TaxPortfolioSyncStatus } from './taxPortfolioSyncStatus';
@@ -4727,6 +4746,7 @@ import { UpsertSingleStructuredDataResponse } from './upsertSingleStructuredData
 import { UpsertStructuredDataResponse } from './upsertStructuredDataResponse';
 import { UpsertStructuredResultDataRequest } from './upsertStructuredResultDataRequest';
 import { UpsertSubscriptionRequest } from './upsertSubscriptionRequest';
+import { UpsertTaxCostRecordsResponse } from './upsertTaxCostRecordsResponse';
 import { UpsertTaxTreatmentOverrideRequest } from './upsertTaxTreatmentOverrideRequest';
 import { UpsertTransactionPropertiesResponse } from './upsertTransactionPropertiesResponse';
 import { UpsertTransferAgencyOrderRequest } from './upsertTransferAgencyOrderRequest';
@@ -5307,6 +5327,10 @@ let enumsMap: {[index: string]: any} = {
         "InstrumentActivityAllOf.NavActivityAdjustmentTypeEnum": InstrumentActivityAllOf.NavActivityAdjustmentTypeEnum,
         "InstrumentDeleteModes": InstrumentDeleteModes,
         "InstrumentEvent.InstrumentEventTypeEnum": InstrumentEvent.InstrumentEventTypeEnum,
+        "InstrumentEventActivity.NavActivityAdjustmentTypeEnum": InstrumentEventActivity.NavActivityAdjustmentTypeEnum,
+        "InstrumentEventActivityAdjustment.NavActivityAdjustmentTypeEnum": InstrumentEventActivityAdjustment.NavActivityAdjustmentTypeEnum,
+        "InstrumentEventActivityAdjustmentAllOf.NavActivityAdjustmentTypeEnum": InstrumentEventActivityAdjustmentAllOf.NavActivityAdjustmentTypeEnum,
+        "InstrumentEventActivityAllOf.NavActivityAdjustmentTypeEnum": InstrumentEventActivityAllOf.NavActivityAdjustmentTypeEnum,
         "InstrumentEventType": InstrumentEventType,
         "InstrumentLeg.InstrumentTypeEnum": InstrumentLeg.InstrumentTypeEnum,
         "InstrumentLegAllOf.InstrumentTypeEnum": InstrumentLegAllOf.InstrumentTypeEnum,
@@ -6313,6 +6337,7 @@ let typeMap: {[index: string]: any} = {
     "DecimalListComplianceParameter": DecimalListComplianceParameter,
     "DecoratedComplianceRunSummary": DecoratedComplianceRunSummary,
     "DecoratedComplianceRunSummaryRequest": DecoratedComplianceRunSummaryRequest,
+    "DeemedDisposal": DeemedDisposal,
     "DeleteAccountsResponse": DeleteAccountsResponse,
     "DeleteCustodianAccountsResponse": DeleteCustodianAccountsResponse,
     "DeleteDataQualityRule": DeleteDataQualityRule,
@@ -6743,6 +6768,10 @@ let typeMap: {[index: string]: any} = {
     "InstrumentDefinitionFormat": InstrumentDefinitionFormat,
     "InstrumentEntity": InstrumentEntity,
     "InstrumentEvent": InstrumentEvent,
+    "InstrumentEventActivity": InstrumentEventActivity,
+    "InstrumentEventActivityAdjustment": InstrumentEventActivityAdjustment,
+    "InstrumentEventActivityAdjustmentAllOf": InstrumentEventActivityAdjustmentAllOf,
+    "InstrumentEventActivityAllOf": InstrumentEventActivityAllOf,
     "InstrumentEventConfiguration": InstrumentEventConfiguration,
     "InstrumentEventEntity": InstrumentEventEntity,
     "InstrumentEventHolder": InstrumentEventHolder,
@@ -7075,6 +7104,7 @@ let typeMap: {[index: string]: any} = {
     "PagedResourceListOfStagedModification": PagedResourceListOfStagedModification,
     "PagedResourceListOfStagedModificationsRequestedChangeInterval": PagedResourceListOfStagedModificationsRequestedChangeInterval,
     "PagedResourceListOfStagingRuleSet": PagedResourceListOfStagingRuleSet,
+    "PagedResourceListOfTaxCostRecord": PagedResourceListOfTaxCostRecord,
     "PagedResourceListOfTimeline": PagedResourceListOfTimeline,
     "PagedResourceListOfTransactionTemplate": PagedResourceListOfTransactionTemplate,
     "PagedResourceListOfTransactionTemplateSpecification": PagedResourceListOfTransactionTemplateSpecification,
@@ -7365,6 +7395,7 @@ let typeMap: {[index: string]: any} = {
     "RecallableCapitalExpiryEventAllOf": RecallableCapitalExpiryEventAllOf,
     "RecipeBlock": RecipeBlock,
     "RecipeComposer": RecipeComposer,
+    "RecipeProvenance": RecipeProvenance,
     "RecipeValue": RecipeValue,
     "RecombineStep": RecombineStep,
     "RecommendedSortBy": RecommendedSortBy,
@@ -7714,6 +7745,8 @@ let typeMap: {[index: string]: any} = {
     "TaxClassificationExceptionRecord": TaxClassificationExceptionRecord,
     "TaxClassificationFieldVersion": TaxClassificationFieldVersion,
     "TaxClassificationInputs": TaxClassificationInputs,
+    "TaxCostRecord": TaxCostRecord,
+    "TaxCostRecordRequest": TaxCostRecordRequest,
     "TaxExceptionItem": TaxExceptionItem,
     "TaxExceptionRootCause": TaxExceptionRootCause,
     "TaxPortfolioSyncStatus": TaxPortfolioSyncStatus,
@@ -7930,6 +7963,7 @@ let typeMap: {[index: string]: any} = {
     "UpsertStructuredDataResponse": UpsertStructuredDataResponse,
     "UpsertStructuredResultDataRequest": UpsertStructuredResultDataRequest,
     "UpsertSubscriptionRequest": UpsertSubscriptionRequest,
+    "UpsertTaxCostRecordsResponse": UpsertTaxCostRecordsResponse,
     "UpsertTaxTreatmentOverrideRequest": UpsertTaxTreatmentOverrideRequest,
     "UpsertTransactionPropertiesResponse": UpsertTransactionPropertiesResponse,
     "UpsertTransferAgencyOrderRequest": UpsertTransferAgencyOrderRequest,
