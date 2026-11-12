@@ -245,16 +245,12 @@ export * from './branchStepRequestAllOf';
 export * from './breakCodeSource';
 export * from './bucket';
 export * from './bucketAmounts';
-export * from './bucketBalanceFigures';
 export * from './bucketBorderConfiguration';
-export * from './bucketCashFlowBalance';
 export * from './bucketCashFlowBucket';
 export * from './bucketCashFlowDrillDownResponse';
-export * from './bucketCashFlowSubtotal';
 export * from './bucketCurrencySubtotal';
 export * from './bucketDefinition';
 export * from './bucketMembership';
-export * from './bucketNetOfHaircutBalance';
 export * from './bucketSeedValue';
 export * from './bucketSeedValueRequest';
 export * from './bucketSetClassSeed';
@@ -634,7 +630,6 @@ export * from './decimalListAllOf';
 export * from './decimalListComplianceParameter';
 export * from './decoratedComplianceRunSummary';
 export * from './decoratedComplianceRunSummaryRequest';
-export * from './deemedDisposal';
 export * from './deleteAccountsResponse';
 export * from './deleteCustodianAccountsResponse';
 export * from './deleteDataQualityRule';
@@ -704,6 +699,7 @@ export * from './economics';
 export * from './editTransferRequest';
 export * from './editTransferResponse';
 export * from './effectiveRange';
+export * from './electionProrationRate';
 export * from './electionSpecification';
 export * from './eligibilityCalculation';
 export * from './eligibleCollateralAssetSelector';
@@ -870,6 +866,7 @@ export * from './fundPartner';
 export * from './fundPartnerBalances';
 export * from './fundPartnerUnfundedReconciliation';
 export * from './fundPartnerUnfundedReconciliationLine';
+export * from './fundPartnerUnfundedReconciliationWarning';
 export * from './fundPartnersTotals';
 export * from './fundPnlBreakdown';
 export * from './fundPreviousNAV';
@@ -2678,16 +2675,12 @@ import { BranchStepRequestAllOf } from './branchStepRequestAllOf';
 import { BreakCodeSource } from './breakCodeSource';
 import { Bucket } from './bucket';
 import { BucketAmounts } from './bucketAmounts';
-import { BucketBalanceFigures } from './bucketBalanceFigures';
 import { BucketBorderConfiguration } from './bucketBorderConfiguration';
-import { BucketCashFlowBalance } from './bucketCashFlowBalance';
 import { BucketCashFlowBucket } from './bucketCashFlowBucket';
 import { BucketCashFlowDrillDownResponse } from './bucketCashFlowDrillDownResponse';
-import { BucketCashFlowSubtotal } from './bucketCashFlowSubtotal';
 import { BucketCurrencySubtotal } from './bucketCurrencySubtotal';
 import { BucketDefinition } from './bucketDefinition';
 import { BucketMembership } from './bucketMembership';
-import { BucketNetOfHaircutBalance } from './bucketNetOfHaircutBalance';
 import { BucketSeedValue } from './bucketSeedValue';
 import { BucketSeedValueRequest } from './bucketSeedValueRequest';
 import { BucketSetClassSeed } from './bucketSetClassSeed';
@@ -3067,7 +3060,6 @@ import { DecimalListAllOf } from './decimalListAllOf';
 import { DecimalListComplianceParameter } from './decimalListComplianceParameter';
 import { DecoratedComplianceRunSummary } from './decoratedComplianceRunSummary';
 import { DecoratedComplianceRunSummaryRequest } from './decoratedComplianceRunSummaryRequest';
-import { DeemedDisposal } from './deemedDisposal';
 import { DeleteAccountsResponse } from './deleteAccountsResponse';
 import { DeleteCustodianAccountsResponse } from './deleteCustodianAccountsResponse';
 import { DeleteDataQualityRule } from './deleteDataQualityRule';
@@ -3137,6 +3129,7 @@ import { Economics } from './economics';
 import { EditTransferRequest } from './editTransferRequest';
 import { EditTransferResponse } from './editTransferResponse';
 import { EffectiveRange } from './effectiveRange';
+import { ElectionProrationRate } from './electionProrationRate';
 import { ElectionSpecification } from './electionSpecification';
 import { EligibilityCalculation } from './eligibilityCalculation';
 import { EligibleCollateralAssetSelector } from './eligibleCollateralAssetSelector';
@@ -3303,6 +3296,7 @@ import { FundPartner } from './fundPartner';
 import { FundPartnerBalances } from './fundPartnerBalances';
 import { FundPartnerUnfundedReconciliation } from './fundPartnerUnfundedReconciliation';
 import { FundPartnerUnfundedReconciliationLine } from './fundPartnerUnfundedReconciliationLine';
+import { FundPartnerUnfundedReconciliationWarning } from './fundPartnerUnfundedReconciliationWarning';
 import { FundPartnersTotals } from './fundPartnersTotals';
 import { FundPnlBreakdown } from './fundPnlBreakdown';
 import { FundPreviousNAV } from './fundPreviousNAV';
@@ -5957,16 +5951,12 @@ let typeMap: {[index: string]: any} = {
     "BreakCodeSource": BreakCodeSource,
     "Bucket": Bucket,
     "BucketAmounts": BucketAmounts,
-    "BucketBalanceFigures": BucketBalanceFigures,
     "BucketBorderConfiguration": BucketBorderConfiguration,
-    "BucketCashFlowBalance": BucketCashFlowBalance,
     "BucketCashFlowBucket": BucketCashFlowBucket,
     "BucketCashFlowDrillDownResponse": BucketCashFlowDrillDownResponse,
-    "BucketCashFlowSubtotal": BucketCashFlowSubtotal,
     "BucketCurrencySubtotal": BucketCurrencySubtotal,
     "BucketDefinition": BucketDefinition,
     "BucketMembership": BucketMembership,
-    "BucketNetOfHaircutBalance": BucketNetOfHaircutBalance,
     "BucketSeedValue": BucketSeedValue,
     "BucketSeedValueRequest": BucketSeedValueRequest,
     "BucketSetClassSeed": BucketSetClassSeed,
@@ -6337,7 +6327,6 @@ let typeMap: {[index: string]: any} = {
     "DecimalListComplianceParameter": DecimalListComplianceParameter,
     "DecoratedComplianceRunSummary": DecoratedComplianceRunSummary,
     "DecoratedComplianceRunSummaryRequest": DecoratedComplianceRunSummaryRequest,
-    "DeemedDisposal": DeemedDisposal,
     "DeleteAccountsResponse": DeleteAccountsResponse,
     "DeleteCustodianAccountsResponse": DeleteCustodianAccountsResponse,
     "DeleteDataQualityRule": DeleteDataQualityRule,
@@ -6404,6 +6393,7 @@ let typeMap: {[index: string]: any} = {
     "EditTransferRequest": EditTransferRequest,
     "EditTransferResponse": EditTransferResponse,
     "EffectiveRange": EffectiveRange,
+    "ElectionProrationRate": ElectionProrationRate,
     "ElectionSpecification": ElectionSpecification,
     "EligibilityCalculation": EligibilityCalculation,
     "EligibleCollateralAssetSelector": EligibleCollateralAssetSelector,
@@ -6568,6 +6558,7 @@ let typeMap: {[index: string]: any} = {
     "FundPartnerBalances": FundPartnerBalances,
     "FundPartnerUnfundedReconciliation": FundPartnerUnfundedReconciliation,
     "FundPartnerUnfundedReconciliationLine": FundPartnerUnfundedReconciliationLine,
+    "FundPartnerUnfundedReconciliationWarning": FundPartnerUnfundedReconciliationWarning,
     "FundPartnersTotals": FundPartnersTotals,
     "FundPnlBreakdown": FundPnlBreakdown,
     "FundPreviousNAV": FundPreviousNAV,
