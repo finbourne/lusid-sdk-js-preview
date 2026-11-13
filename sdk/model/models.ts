@@ -420,6 +420,10 @@ export * from './complexMarketDataActivityAdjustmentAllOf';
 export * from './complexMarketDataActivityAllOf';
 export * from './complexMarketDataId';
 export * from './complianceBreachedOrderInfo';
+export * from './complianceComparison';
+export * from './complianceComparisonOperand';
+export * from './complianceGroupKey';
+export * from './complianceKeyUsed';
 export * from './complianceParameter';
 export * from './complianceParameterType';
 export * from './complianceRule';
@@ -1694,6 +1698,7 @@ export * from './recResult';
 export * from './recResultAssignmentUpdate';
 export * from './recResultCountByReviewStatus';
 export * from './recResultCounts';
+export * from './recResultCustomEntityItem';
 export * from './recResultDecisionGroup';
 export * from './recResultDecisionUpdate';
 export * from './recResultException';
@@ -1873,6 +1878,7 @@ export * from './resourceListOfString';
 export * from './resourceListOfTaxClassification';
 export * from './resourceListOfTaxClassificationExceptionRecord';
 export * from './resourceListOfTaxExceptionItem';
+export * from './resourceListOfTaxProvision';
 export * from './resourceListOfTaxRuleSet';
 export * from './resourceListOfTransaction';
 export * from './resourceListOfTransactionFeeType';
@@ -2090,6 +2096,8 @@ export * from './taxCostRecordRequest';
 export * from './taxExceptionItem';
 export * from './taxExceptionRootCause';
 export * from './taxPortfolioSyncStatus';
+export * from './taxProvision';
+export * from './taxProvisionMovement';
 export * from './taxRule';
 export * from './taxRuleSet';
 export * from './taxSyncStatus';
@@ -2850,6 +2858,10 @@ import { ComplexMarketDataActivityAdjustmentAllOf } from './complexMarketDataAct
 import { ComplexMarketDataActivityAllOf } from './complexMarketDataActivityAllOf';
 import { ComplexMarketDataId } from './complexMarketDataId';
 import { ComplianceBreachedOrderInfo } from './complianceBreachedOrderInfo';
+import { ComplianceComparison } from './complianceComparison';
+import { ComplianceComparisonOperand } from './complianceComparisonOperand';
+import { ComplianceGroupKey } from './complianceGroupKey';
+import { ComplianceKeyUsed } from './complianceKeyUsed';
 import { ComplianceParameter } from './complianceParameter';
 import { ComplianceParameterType } from './complianceParameterType';
 import { ComplianceRule } from './complianceRule';
@@ -4124,6 +4136,7 @@ import { RecResult } from './recResult';
 import { RecResultAssignmentUpdate } from './recResultAssignmentUpdate';
 import { RecResultCountByReviewStatus } from './recResultCountByReviewStatus';
 import { RecResultCounts } from './recResultCounts';
+import { RecResultCustomEntityItem } from './recResultCustomEntityItem';
 import { RecResultDecisionGroup } from './recResultDecisionGroup';
 import { RecResultDecisionUpdate } from './recResultDecisionUpdate';
 import { RecResultException } from './recResultException';
@@ -4303,6 +4316,7 @@ import { ResourceListOfString } from './resourceListOfString';
 import { ResourceListOfTaxClassification } from './resourceListOfTaxClassification';
 import { ResourceListOfTaxClassificationExceptionRecord } from './resourceListOfTaxClassificationExceptionRecord';
 import { ResourceListOfTaxExceptionItem } from './resourceListOfTaxExceptionItem';
+import { ResourceListOfTaxProvision } from './resourceListOfTaxProvision';
 import { ResourceListOfTaxRuleSet } from './resourceListOfTaxRuleSet';
 import { ResourceListOfTransaction } from './resourceListOfTransaction';
 import { ResourceListOfTransactionFeeType } from './resourceListOfTransactionFeeType';
@@ -4520,6 +4534,8 @@ import { TaxCostRecordRequest } from './taxCostRecordRequest';
 import { TaxExceptionItem } from './taxExceptionItem';
 import { TaxExceptionRootCause } from './taxExceptionRootCause';
 import { TaxPortfolioSyncStatus } from './taxPortfolioSyncStatus';
+import { TaxProvision } from './taxProvision';
+import { TaxProvisionMovement } from './taxProvisionMovement';
 import { TaxRule } from './taxRule';
 import { TaxRuleSet } from './taxRuleSet';
 import { TaxSyncStatus } from './taxSyncStatus';
@@ -6125,6 +6141,10 @@ let typeMap: {[index: string]: any} = {
     "ComplexMarketDataActivityAllOf": ComplexMarketDataActivityAllOf,
     "ComplexMarketDataId": ComplexMarketDataId,
     "ComplianceBreachedOrderInfo": ComplianceBreachedOrderInfo,
+    "ComplianceComparison": ComplianceComparison,
+    "ComplianceComparisonOperand": ComplianceComparisonOperand,
+    "ComplianceGroupKey": ComplianceGroupKey,
+    "ComplianceKeyUsed": ComplianceKeyUsed,
     "ComplianceParameter": ComplianceParameter,
     "ComplianceRule": ComplianceRule,
     "ComplianceRuleBreakdown": ComplianceRuleBreakdown,
@@ -7356,6 +7376,7 @@ let typeMap: {[index: string]: any} = {
     "RecResultAssignmentUpdate": RecResultAssignmentUpdate,
     "RecResultCountByReviewStatus": RecResultCountByReviewStatus,
     "RecResultCounts": RecResultCounts,
+    "RecResultCustomEntityItem": RecResultCustomEntityItem,
     "RecResultDecisionGroup": RecResultDecisionGroup,
     "RecResultDecisionUpdate": RecResultDecisionUpdate,
     "RecResultException": RecResultException,
@@ -7532,6 +7553,7 @@ let typeMap: {[index: string]: any} = {
     "ResourceListOfTaxClassification": ResourceListOfTaxClassification,
     "ResourceListOfTaxClassificationExceptionRecord": ResourceListOfTaxClassificationExceptionRecord,
     "ResourceListOfTaxExceptionItem": ResourceListOfTaxExceptionItem,
+    "ResourceListOfTaxProvision": ResourceListOfTaxProvision,
     "ResourceListOfTaxRuleSet": ResourceListOfTaxRuleSet,
     "ResourceListOfTransaction": ResourceListOfTransaction,
     "ResourceListOfTransactionFeeType": ResourceListOfTransactionFeeType,
@@ -7741,6 +7763,8 @@ let typeMap: {[index: string]: any} = {
     "TaxExceptionItem": TaxExceptionItem,
     "TaxExceptionRootCause": TaxExceptionRootCause,
     "TaxPortfolioSyncStatus": TaxPortfolioSyncStatus,
+    "TaxProvision": TaxProvision,
+    "TaxProvisionMovement": TaxProvisionMovement,
     "TaxRule": TaxRule,
     "TaxRuleSet": TaxRuleSet,
     "TaxSyncStatus": TaxSyncStatus,
