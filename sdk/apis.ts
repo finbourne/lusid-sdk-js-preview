@@ -28,6 +28,7 @@ import {CustomEntityDefinitionsApi} from './api/customEntityDefinitionsApi';
 import {CustomEntityTypesApi} from './api/customEntityTypesApi';
 import {CutLabelDefinitionsApi} from './api/cutLabelDefinitionsApi';
 import {DataTypesApi} from './api/dataTypesApi';
+import {DeemedDisposalDefinitionsApi} from './api/deemedDisposalDefinitionsApi';
 import {DerivedTransactionPortfoliosApi} from './api/derivedTransactionPortfoliosApi';
 import {EligibleCollateralSchedulesApi} from './api/eligibleCollateralSchedulesApi';
 import {EntitiesApi} from './api/entitiesApi';
@@ -131,6 +132,7 @@ export class Api {
     public customEntityTypes:  CustomEntityTypesApi
     public cutLabelDefinitions:  CutLabelDefinitionsApi
     public dataTypes:  DataTypesApi
+    public deemedDisposalDefinitions:  DeemedDisposalDefinitionsApi
     public derivedTransactionPortfolios:  DerivedTransactionPortfoliosApi
     public eligibleCollateralSchedules:  EligibleCollateralSchedulesApi
     public entities:  EntitiesApi
