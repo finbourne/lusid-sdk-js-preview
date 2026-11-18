@@ -17,6 +17,7 @@ import {CollateralAgreementsApi} from './api/collateralAgreementsApi';
 import {CollateralApi} from './api/collateralApi';
 import {ComplexMarketDataApi} from './api/complexMarketDataApi';
 import {ComplianceApi} from './api/complianceApi';
+import {CompositePortfoliosApi} from './api/compositePortfoliosApi';
 import {ConfigurationRecipeApi} from './api/configurationRecipeApi';
 import {ConventionsApi} from './api/conventionsApi';
 import {CorporateActionSourcesApi} from './api/corporateActionSourcesApi';
@@ -121,6 +122,7 @@ export class Api {
     public collateral:  CollateralApi
     public complexMarketData:  ComplexMarketDataApi
     public compliance:  ComplianceApi
+    public compositePortfolios:  CompositePortfoliosApi
     public configurationRecipe:  ConfigurationRecipeApi
     public conventions:  ConventionsApi
     public corporateActionSources:  CorporateActionSourcesApi

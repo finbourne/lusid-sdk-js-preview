@@ -359,6 +359,7 @@ export * from './cdsProtectionDetailSpecification';
 export * from './cdxCreditEvent';
 export * from './cdxCreditEventAllOf';
 export * from './change';
+export * from './changeCompositePortfolioMembershipRequest';
 export * from './changeEvent';
 export * from './changeEventAllOf';
 export * from './changeHistory';
@@ -481,6 +482,7 @@ export * from './compositeBreakdownRequest';
 export * from './compositeBreakdownResponse';
 export * from './compositeDispersion';
 export * from './compositeDispersionResponse';
+export * from './compositePortfolioConstituentRequest';
 export * from './compounding';
 export * from './configurationRecipe';
 export * from './consentAndExchangeElection';
@@ -523,6 +525,7 @@ export * from './createCalendarRequest';
 export * from './createCheckDefinitionRequest';
 export * from './createClosedPeriodRequest';
 export * from './createComplianceTemplateRequest';
+export * from './createCompositePortfolioRequest';
 export * from './createCorporateActionSourceRequest';
 export * from './createCustomDataModelRequest';
 export * from './createCustomEntityTypeRequest';
@@ -1337,7 +1340,9 @@ export * from './overrideVirtualTransactionsRequest';
 export * from './oversubscribeElection';
 export * from './packAccount';
 export * from './packPostingRule';
+export * from './packRegisterDelta';
 export * from './packTransactionType';
+export * from './packTypeContract';
 export * from './package';
 export * from './packageRequest';
 export * from './packageSetRequest';
@@ -1479,6 +1484,8 @@ export * from './partnershipAccountingConfiguration';
 export * from './partnershipAccountingValuationPointData';
 export * from './partnershipAllocationProblem';
 export * from './partnershipConfigPack';
+export * from './partnershipTypeCheckResult';
+export * from './partnershipTypeDifference';
 export * from './partyTerms';
 export * from './paymentDetailsApplicableEntity';
 export * from './paymentDetailsReference';
@@ -1563,6 +1570,7 @@ export * from './portfolioTransactionDataset';
 export * from './portfolioTransactionResult';
 export * from './portfolioType';
 export * from './portfolioWeight';
+export * from './portfolioWithWarnings';
 export * from './portfolioWithoutHref';
 export * from './portfoliosReconciliationRequest';
 export * from './postCloseActivitiesRequest';
@@ -1781,6 +1789,7 @@ export * from './referenceListType';
 export * from './referencePortfolioConstituent';
 export * from './referencePortfolioConstituentRequest';
 export * from './referencePortfolioWeightType';
+export * from './registerDeltaMovement';
 export * from './relatedEntity';
 export * from './relation';
 export * from './relationDefinition';
@@ -2837,6 +2846,7 @@ import { CdsProtectionDetailSpecification } from './cdsProtectionDetailSpecifica
 import { CdxCreditEvent } from './cdxCreditEvent';
 import { CdxCreditEventAllOf } from './cdxCreditEventAllOf';
 import { Change } from './change';
+import { ChangeCompositePortfolioMembershipRequest } from './changeCompositePortfolioMembershipRequest';
 import { ChangeEvent } from './changeEvent';
 import { ChangeEventAllOf } from './changeEventAllOf';
 import { ChangeHistory } from './changeHistory';
@@ -2959,6 +2969,7 @@ import { CompositeBreakdownRequest } from './compositeBreakdownRequest';
 import { CompositeBreakdownResponse } from './compositeBreakdownResponse';
 import { CompositeDispersion } from './compositeDispersion';
 import { CompositeDispersionResponse } from './compositeDispersionResponse';
+import { CompositePortfolioConstituentRequest } from './compositePortfolioConstituentRequest';
 import { Compounding } from './compounding';
 import { ConfigurationRecipe } from './configurationRecipe';
 import { ConsentAndExchangeElection } from './consentAndExchangeElection';
@@ -3001,6 +3012,7 @@ import { CreateCalendarRequest } from './createCalendarRequest';
 import { CreateCheckDefinitionRequest } from './createCheckDefinitionRequest';
 import { CreateClosedPeriodRequest } from './createClosedPeriodRequest';
 import { CreateComplianceTemplateRequest } from './createComplianceTemplateRequest';
+import { CreateCompositePortfolioRequest } from './createCompositePortfolioRequest';
 import { CreateCorporateActionSourceRequest } from './createCorporateActionSourceRequest';
 import { CreateCustomDataModelRequest } from './createCustomDataModelRequest';
 import { CreateCustomEntityTypeRequest } from './createCustomEntityTypeRequest';
@@ -3815,7 +3827,9 @@ import { OverrideVirtualTransactionsRequest } from './overrideVirtualTransaction
 import { OversubscribeElection } from './oversubscribeElection';
 import { PackAccount } from './packAccount';
 import { PackPostingRule } from './packPostingRule';
+import { PackRegisterDelta } from './packRegisterDelta';
 import { PackTransactionType } from './packTransactionType';
+import { PackTypeContract } from './packTypeContract';
 import { Package } from './package';
 import { PackageRequest } from './packageRequest';
 import { PackageSetRequest } from './packageSetRequest';
@@ -3957,6 +3971,8 @@ import { PartnershipAccountingConfiguration } from './partnershipAccountingConfi
 import { PartnershipAccountingValuationPointData } from './partnershipAccountingValuationPointData';
 import { PartnershipAllocationProblem } from './partnershipAllocationProblem';
 import { PartnershipConfigPack } from './partnershipConfigPack';
+import { PartnershipTypeCheckResult } from './partnershipTypeCheckResult';
+import { PartnershipTypeDifference } from './partnershipTypeDifference';
 import { PartyTerms } from './partyTerms';
 import { PaymentDetailsApplicableEntity } from './paymentDetailsApplicableEntity';
 import { PaymentDetailsReference } from './paymentDetailsReference';
@@ -4041,6 +4057,7 @@ import { PortfolioTransactionDataset } from './portfolioTransactionDataset';
 import { PortfolioTransactionResult } from './portfolioTransactionResult';
 import { PortfolioType } from './portfolioType';
 import { PortfolioWeight } from './portfolioWeight';
+import { PortfolioWithWarnings } from './portfolioWithWarnings';
 import { PortfolioWithoutHref } from './portfolioWithoutHref';
 import { PortfoliosReconciliationRequest } from './portfoliosReconciliationRequest';
 import { PostCloseActivitiesRequest } from './postCloseActivitiesRequest';
@@ -4259,6 +4276,7 @@ import { ReferenceListType } from './referenceListType';
 import { ReferencePortfolioConstituent } from './referencePortfolioConstituent';
 import { ReferencePortfolioConstituentRequest } from './referencePortfolioConstituentRequest';
 import { ReferencePortfolioWeightType } from './referencePortfolioWeightType';
+import { RegisterDeltaMovement } from './registerDeltaMovement';
 import { RelatedEntity } from './relatedEntity';
 import { Relation } from './relation';
 import { RelationDefinition } from './relationDefinition';
@@ -6161,6 +6179,7 @@ let typeMap: {[index: string]: any} = {
     "CdxCreditEvent": CdxCreditEvent,
     "CdxCreditEventAllOf": CdxCreditEventAllOf,
     "Change": Change,
+    "ChangeCompositePortfolioMembershipRequest": ChangeCompositePortfolioMembershipRequest,
     "ChangeEvent": ChangeEvent,
     "ChangeEventAllOf": ChangeEventAllOf,
     "ChangeHistory": ChangeHistory,
@@ -6279,6 +6298,7 @@ let typeMap: {[index: string]: any} = {
     "CompositeBreakdownResponse": CompositeBreakdownResponse,
     "CompositeDispersion": CompositeDispersion,
     "CompositeDispersionResponse": CompositeDispersionResponse,
+    "CompositePortfolioConstituentRequest": CompositePortfolioConstituentRequest,
     "Compounding": Compounding,
     "ConfigurationRecipe": ConfigurationRecipe,
     "ConsentAndExchangeElection": ConsentAndExchangeElection,
@@ -6321,6 +6341,7 @@ let typeMap: {[index: string]: any} = {
     "CreateCheckDefinitionRequest": CreateCheckDefinitionRequest,
     "CreateClosedPeriodRequest": CreateClosedPeriodRequest,
     "CreateComplianceTemplateRequest": CreateComplianceTemplateRequest,
+    "CreateCompositePortfolioRequest": CreateCompositePortfolioRequest,
     "CreateCorporateActionSourceRequest": CreateCorporateActionSourceRequest,
     "CreateCustomDataModelRequest": CreateCustomDataModelRequest,
     "CreateCustomEntityTypeRequest": CreateCustomEntityTypeRequest,
@@ -7108,7 +7129,9 @@ let typeMap: {[index: string]: any} = {
     "OversubscribeElection": OversubscribeElection,
     "PackAccount": PackAccount,
     "PackPostingRule": PackPostingRule,
+    "PackRegisterDelta": PackRegisterDelta,
     "PackTransactionType": PackTransactionType,
+    "PackTypeContract": PackTypeContract,
     "Package": Package,
     "PackageRequest": PackageRequest,
     "PackageSetRequest": PackageSetRequest,
@@ -7250,6 +7273,8 @@ let typeMap: {[index: string]: any} = {
     "PartnershipAccountingValuationPointData": PartnershipAccountingValuationPointData,
     "PartnershipAllocationProblem": PartnershipAllocationProblem,
     "PartnershipConfigPack": PartnershipConfigPack,
+    "PartnershipTypeCheckResult": PartnershipTypeCheckResult,
+    "PartnershipTypeDifference": PartnershipTypeDifference,
     "PartyTerms": PartyTerms,
     "PaymentDetailsApplicableEntity": PaymentDetailsApplicableEntity,
     "PaymentDetailsReference": PaymentDetailsReference,
@@ -7331,6 +7356,7 @@ let typeMap: {[index: string]: any} = {
     "PortfolioTransactionDataset": PortfolioTransactionDataset,
     "PortfolioTransactionResult": PortfolioTransactionResult,
     "PortfolioWeight": PortfolioWeight,
+    "PortfolioWithWarnings": PortfolioWithWarnings,
     "PortfolioWithoutHref": PortfolioWithoutHref,
     "PortfoliosReconciliationRequest": PortfoliosReconciliationRequest,
     "PostCloseActivitiesRequest": PostCloseActivitiesRequest,
@@ -7536,6 +7562,7 @@ let typeMap: {[index: string]: any} = {
     "ReferenceListResponse": ReferenceListResponse,
     "ReferencePortfolioConstituent": ReferencePortfolioConstituent,
     "ReferencePortfolioConstituentRequest": ReferencePortfolioConstituentRequest,
+    "RegisterDeltaMovement": RegisterDeltaMovement,
     "RelatedEntity": RelatedEntity,
     "Relation": Relation,
     "RelationDefinition": RelationDefinition,
