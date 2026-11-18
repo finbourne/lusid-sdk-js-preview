@@ -515,6 +515,7 @@ export * from './corporateActionTransition';
 export * from './corporateActionTransitionComponent';
 export * from './corporateActionTransitionComponentRequest';
 export * from './corporateActionTransitionRequest';
+export * from './correctPostingModuleRuleVersionRequest';
 export * from './counterpartyAgreement';
 export * from './counterpartyIdentifier';
 export * from './counterpartyRiskInformation';
@@ -1045,6 +1046,7 @@ export * from './indexModelOptions';
 export * from './indexModelOptionsAllOf';
 export * from './indexProjectionDependency';
 export * from './indexProjectionDependencyAllOf';
+export * from './indicativeAmountMetric';
 export * from './industryClassifier';
 export * from './inflationConvexityOptions';
 export * from './inflationCurveData';
@@ -1115,6 +1117,8 @@ export * from './instrumentSearchProperty';
 export * from './instrumentType';
 export * from './interestPaymentEvent';
 export * from './interestPaymentEventAllOf';
+export * from './interestPaymentWithPrincipalEvent';
+export * from './interestPaymentWithPrincipalEventAllOf';
 export * from './interestRateSwap';
 export * from './interestRateSwapAllOf';
 export * from './interestRateSwaption';
@@ -1170,6 +1174,7 @@ export * from './loanInterestCapitalisationEvent';
 export * from './loanInterestCapitalisationEventAllOf';
 export * from './loanInterestRepaymentEvent';
 export * from './loanInterestRepaymentEventAllOf';
+export * from './loanOptions';
 export * from './loanPeriod';
 export * from './loanPrincipalRepaymentEvent';
 export * from './loanPrincipalRepaymentEventAllOf';
@@ -1272,6 +1277,7 @@ export * from './navReportEventAllOf';
 export * from './navSettlementConfiguration';
 export * from './navSettlementConfigurationCategory';
 export * from './navType';
+export * from './navTypeCatchUp';
 export * from './navTypeDefinition';
 export * from './navTypeSelection';
 export * from './nettingRecommendation';
@@ -1680,6 +1686,7 @@ export * from './rateCurveShiftScale';
 export * from './rawVendorEvent';
 export * from './rawVendorEventAllOf';
 export * from './reOpenPeriodDiaryEntryRequest';
+export * from './reactivatedNavTypesResponse';
 export * from './realisedGainLoss';
 export * from './realisedGainLossChargeableGains';
 export * from './realisedGainLossMatchedLot';
@@ -1942,6 +1949,7 @@ export * from './resultValueString';
 export * from './resultValueStringAllOf';
 export * from './resultValueType';
 export * from './retainElection';
+export * from './returnMetric';
 export * from './returnZeroPvOptions';
 export * from './returnsEntity';
 export * from './returnsMetric';
@@ -3002,6 +3010,7 @@ import { CorporateActionTransition } from './corporateActionTransition';
 import { CorporateActionTransitionComponent } from './corporateActionTransitionComponent';
 import { CorporateActionTransitionComponentRequest } from './corporateActionTransitionComponentRequest';
 import { CorporateActionTransitionRequest } from './corporateActionTransitionRequest';
+import { CorrectPostingModuleRuleVersionRequest } from './correctPostingModuleRuleVersionRequest';
 import { CounterpartyAgreement } from './counterpartyAgreement';
 import { CounterpartyIdentifier } from './counterpartyIdentifier';
 import { CounterpartyRiskInformation } from './counterpartyRiskInformation';
@@ -3532,6 +3541,7 @@ import { IndexModelOptions } from './indexModelOptions';
 import { IndexModelOptionsAllOf } from './indexModelOptionsAllOf';
 import { IndexProjectionDependency } from './indexProjectionDependency';
 import { IndexProjectionDependencyAllOf } from './indexProjectionDependencyAllOf';
+import { IndicativeAmountMetric } from './indicativeAmountMetric';
 import { IndustryClassifier } from './industryClassifier';
 import { InflationConvexityOptions } from './inflationConvexityOptions';
 import { InflationCurveData } from './inflationCurveData';
@@ -3602,6 +3612,8 @@ import { InstrumentSearchProperty } from './instrumentSearchProperty';
 import { InstrumentType } from './instrumentType';
 import { InterestPaymentEvent } from './interestPaymentEvent';
 import { InterestPaymentEventAllOf } from './interestPaymentEventAllOf';
+import { InterestPaymentWithPrincipalEvent } from './interestPaymentWithPrincipalEvent';
+import { InterestPaymentWithPrincipalEventAllOf } from './interestPaymentWithPrincipalEventAllOf';
 import { InterestRateSwap } from './interestRateSwap';
 import { InterestRateSwapAllOf } from './interestRateSwapAllOf';
 import { InterestRateSwaption } from './interestRateSwaption';
@@ -3657,6 +3669,7 @@ import { LoanInterestCapitalisationEvent } from './loanInterestCapitalisationEve
 import { LoanInterestCapitalisationEventAllOf } from './loanInterestCapitalisationEventAllOf';
 import { LoanInterestRepaymentEvent } from './loanInterestRepaymentEvent';
 import { LoanInterestRepaymentEventAllOf } from './loanInterestRepaymentEventAllOf';
+import { LoanOptions } from './loanOptions';
 import { LoanPeriod } from './loanPeriod';
 import { LoanPrincipalRepaymentEvent } from './loanPrincipalRepaymentEvent';
 import { LoanPrincipalRepaymentEventAllOf } from './loanPrincipalRepaymentEventAllOf';
@@ -3759,6 +3772,7 @@ import { NavReportEventAllOf } from './navReportEventAllOf';
 import { NavSettlementConfiguration } from './navSettlementConfiguration';
 import { NavSettlementConfigurationCategory } from './navSettlementConfigurationCategory';
 import { NavType } from './navType';
+import { NavTypeCatchUp } from './navTypeCatchUp';
 import { NavTypeDefinition } from './navTypeDefinition';
 import { NavTypeSelection } from './navTypeSelection';
 import { NettingRecommendation } from './nettingRecommendation';
@@ -4167,6 +4181,7 @@ import { RateCurveShiftScale } from './rateCurveShiftScale';
 import { RawVendorEvent } from './rawVendorEvent';
 import { RawVendorEventAllOf } from './rawVendorEventAllOf';
 import { ReOpenPeriodDiaryEntryRequest } from './reOpenPeriodDiaryEntryRequest';
+import { ReactivatedNavTypesResponse } from './reactivatedNavTypesResponse';
 import { RealisedGainLoss } from './realisedGainLoss';
 import { RealisedGainLossChargeableGains } from './realisedGainLossChargeableGains';
 import { RealisedGainLossMatchedLot } from './realisedGainLossMatchedLot';
@@ -4429,6 +4444,7 @@ import { ResultValueString } from './resultValueString';
 import { ResultValueStringAllOf } from './resultValueStringAllOf';
 import { ResultValueType } from './resultValueType';
 import { RetainElection } from './retainElection';
+import { ReturnMetric } from './returnMetric';
 import { ReturnZeroPvOptions } from './returnZeroPvOptions';
 import { ReturnsEntity } from './returnsEntity';
 import { ReturnsMetric } from './returnsMetric';
@@ -5448,6 +5464,8 @@ let enumsMap: {[index: string]: any} = {
         "InstrumentType": InstrumentType,
         "InterestPaymentEvent.InstrumentEventTypeEnum": InterestPaymentEvent.InstrumentEventTypeEnum,
         "InterestPaymentEventAllOf.InstrumentEventTypeEnum": InterestPaymentEventAllOf.InstrumentEventTypeEnum,
+        "InterestPaymentWithPrincipalEvent.InstrumentEventTypeEnum": InterestPaymentWithPrincipalEvent.InstrumentEventTypeEnum,
+        "InterestPaymentWithPrincipalEventAllOf.InstrumentEventTypeEnum": InterestPaymentWithPrincipalEventAllOf.InstrumentEventTypeEnum,
         "InterestRateSwap.InstrumentTypeEnum": InterestRateSwap.InstrumentTypeEnum,
         "InterestRateSwapAllOf.InstrumentTypeEnum": InterestRateSwapAllOf.InstrumentTypeEnum,
         "InterestRateSwaption.InstrumentTypeEnum": InterestRateSwaption.InstrumentTypeEnum,
@@ -6331,6 +6349,7 @@ let typeMap: {[index: string]: any} = {
     "CorporateActionTransitionComponent": CorporateActionTransitionComponent,
     "CorporateActionTransitionComponentRequest": CorporateActionTransitionComponentRequest,
     "CorporateActionTransitionRequest": CorporateActionTransitionRequest,
+    "CorrectPostingModuleRuleVersionRequest": CorrectPostingModuleRuleVersionRequest,
     "CounterpartyAgreement": CounterpartyAgreement,
     "CounterpartyIdentifier": CounterpartyIdentifier,
     "CounterpartyRiskInformation": CounterpartyRiskInformation,
@@ -6850,6 +6869,7 @@ let typeMap: {[index: string]: any} = {
     "IndexModelOptionsAllOf": IndexModelOptionsAllOf,
     "IndexProjectionDependency": IndexProjectionDependency,
     "IndexProjectionDependencyAllOf": IndexProjectionDependencyAllOf,
+    "IndicativeAmountMetric": IndicativeAmountMetric,
     "IndustryClassifier": IndustryClassifier,
     "InflationConvexityOptions": InflationConvexityOptions,
     "InflationCurveData": InflationCurveData,
@@ -6917,6 +6937,8 @@ let typeMap: {[index: string]: any} = {
     "InstrumentSearchProperty": InstrumentSearchProperty,
     "InterestPaymentEvent": InterestPaymentEvent,
     "InterestPaymentEventAllOf": InterestPaymentEventAllOf,
+    "InterestPaymentWithPrincipalEvent": InterestPaymentWithPrincipalEvent,
+    "InterestPaymentWithPrincipalEventAllOf": InterestPaymentWithPrincipalEventAllOf,
     "InterestRateSwap": InterestRateSwap,
     "InterestRateSwapAllOf": InterestRateSwapAllOf,
     "InterestRateSwaption": InterestRateSwaption,
@@ -6972,6 +6994,7 @@ let typeMap: {[index: string]: any} = {
     "LoanInterestCapitalisationEventAllOf": LoanInterestCapitalisationEventAllOf,
     "LoanInterestRepaymentEvent": LoanInterestRepaymentEvent,
     "LoanInterestRepaymentEventAllOf": LoanInterestRepaymentEventAllOf,
+    "LoanOptions": LoanOptions,
     "LoanPeriod": LoanPeriod,
     "LoanPrincipalRepaymentEvent": LoanPrincipalRepaymentEvent,
     "LoanPrincipalRepaymentEventAllOf": LoanPrincipalRepaymentEventAllOf,
@@ -7066,6 +7089,7 @@ let typeMap: {[index: string]: any} = {
     "NavSettlementConfiguration": NavSettlementConfiguration,
     "NavSettlementConfigurationCategory": NavSettlementConfigurationCategory,
     "NavType": NavType,
+    "NavTypeCatchUp": NavTypeCatchUp,
     "NavTypeDefinition": NavTypeDefinition,
     "NettingRecommendation": NettingRecommendation,
     "NewInstrument": NewInstrument,
@@ -7456,6 +7480,7 @@ let typeMap: {[index: string]: any} = {
     "RawVendorEvent": RawVendorEvent,
     "RawVendorEventAllOf": RawVendorEventAllOf,
     "ReOpenPeriodDiaryEntryRequest": ReOpenPeriodDiaryEntryRequest,
+    "ReactivatedNavTypesResponse": ReactivatedNavTypesResponse,
     "RealisedGainLoss": RealisedGainLoss,
     "RealisedGainLossChargeableGains": RealisedGainLossChargeableGains,
     "RealisedGainLossMatchedLot": RealisedGainLossMatchedLot,
@@ -7713,6 +7738,7 @@ let typeMap: {[index: string]: any} = {
     "ResultValueString": ResultValueString,
     "ResultValueStringAllOf": ResultValueStringAllOf,
     "RetainElection": RetainElection,
+    "ReturnMetric": ReturnMetric,
     "ReturnZeroPvOptions": ReturnZeroPvOptions,
     "ReturnsEntity": ReturnsEntity,
     "ReturnsMetric": ReturnsMetric,
