@@ -2,6 +2,7 @@ import localVarRequest from 'request';
 
 export * from './a2BBreakdown';
 export * from './a2BCategory';
+export * from './a2BCorrectionCause';
 export * from './a2BDataRecord';
 export * from './a2BMovementRecord';
 export * from './abor';
@@ -508,6 +509,7 @@ export * from './conversionEventAllOf';
 export * from './coreAttributeOptionalityTolerance';
 export * from './coreDateTolerance';
 export * from './coreMatchingRule';
+export * from './coreMatchingSetTolerance';
 export * from './coreRuleValues';
 export * from './coreStringCrossTolerance';
 export * from './corporateAction';
@@ -2501,6 +2503,7 @@ export type RequestFile = string | Buffer | fs.ReadStream | RequestDetailedFile;
 
 import { A2BBreakdown } from './a2BBreakdown';
 import { A2BCategory } from './a2BCategory';
+import { A2BCorrectionCause } from './a2BCorrectionCause';
 import { A2BDataRecord } from './a2BDataRecord';
 import { A2BMovementRecord } from './a2BMovementRecord';
 import { Abor } from './abor';
@@ -3007,6 +3010,7 @@ import { ConversionEventAllOf } from './conversionEventAllOf';
 import { CoreAttributeOptionalityTolerance } from './coreAttributeOptionalityTolerance';
 import { CoreDateTolerance } from './coreDateTolerance';
 import { CoreMatchingRule } from './coreMatchingRule';
+import { CoreMatchingSetTolerance } from './coreMatchingSetTolerance';
 import { CoreRuleValues } from './coreRuleValues';
 import { CoreStringCrossTolerance } from './coreStringCrossTolerance';
 import { CorporateAction } from './corporateAction';
@@ -5853,6 +5857,7 @@ let enumsMap: {[index: string]: any} = {
 let typeMap: {[index: string]: any} = {
     "A2BBreakdown": A2BBreakdown,
     "A2BCategory": A2BCategory,
+    "A2BCorrectionCause": A2BCorrectionCause,
     "A2BDataRecord": A2BDataRecord,
     "A2BMovementRecord": A2BMovementRecord,
     "Abor": Abor,
@@ -6350,6 +6355,7 @@ let typeMap: {[index: string]: any} = {
     "CoreAttributeOptionalityTolerance": CoreAttributeOptionalityTolerance,
     "CoreDateTolerance": CoreDateTolerance,
     "CoreMatchingRule": CoreMatchingRule,
+    "CoreMatchingSetTolerance": CoreMatchingSetTolerance,
     "CoreRuleValues": CoreRuleValues,
     "CoreStringCrossTolerance": CoreStringCrossTolerance,
     "CorporateAction": CorporateAction,
