@@ -1803,6 +1803,7 @@ export * from './referencePortfolioConstituent';
 export * from './referencePortfolioConstituentRequest';
 export * from './referencePortfolioWeightType';
 export * from './registerDeltaMovement';
+export * from './registryLine';
 export * from './relatedEntity';
 export * from './relation';
 export * from './relationDefinition';
@@ -2435,6 +2436,7 @@ export * from './versionedResourceListOfTransactionSettlementInstruction';
 export * from './versionedResourceListOfTrialBalance';
 export * from './versionedResourceListWithPostBodiesOfSettlementInstructionWithTransactionToSettlementInstructionQuery';
 export * from './versionedResourceListWithWarningsOfPortfolioHolding';
+export * from './versionedResourceListWithWarningsOfRegistryLine';
 export * from './virtualDocument';
 export * from './virtualDocumentRow';
 export * from './virtualRow';
@@ -4304,6 +4306,7 @@ import { ReferencePortfolioConstituent } from './referencePortfolioConstituent';
 import { ReferencePortfolioConstituentRequest } from './referencePortfolioConstituentRequest';
 import { ReferencePortfolioWeightType } from './referencePortfolioWeightType';
 import { RegisterDeltaMovement } from './registerDeltaMovement';
+import { RegistryLine } from './registryLine';
 import { RelatedEntity } from './relatedEntity';
 import { Relation } from './relation';
 import { RelationDefinition } from './relationDefinition';
@@ -4936,6 +4939,7 @@ import { VersionedResourceListOfTransactionSettlementInstruction } from './versi
 import { VersionedResourceListOfTrialBalance } from './versionedResourceListOfTrialBalance';
 import { VersionedResourceListWithPostBodiesOfSettlementInstructionWithTransactionToSettlementInstructionQuery } from './versionedResourceListWithPostBodiesOfSettlementInstructionWithTransactionToSettlementInstructionQuery';
 import { VersionedResourceListWithWarningsOfPortfolioHolding } from './versionedResourceListWithWarningsOfPortfolioHolding';
+import { VersionedResourceListWithWarningsOfRegistryLine } from './versionedResourceListWithWarningsOfRegistryLine';
 import { VirtualDocument } from './virtualDocument';
 import { VirtualDocumentRow } from './virtualDocumentRow';
 import { VirtualRow } from './virtualRow';
@@ -7606,6 +7610,7 @@ let typeMap: {[index: string]: any} = {
     "ReferencePortfolioConstituent": ReferencePortfolioConstituent,
     "ReferencePortfolioConstituentRequest": ReferencePortfolioConstituentRequest,
     "RegisterDeltaMovement": RegisterDeltaMovement,
+    "RegistryLine": RegistryLine,
     "RelatedEntity": RelatedEntity,
     "Relation": Relation,
     "RelationDefinition": RelationDefinition,
@@ -8221,6 +8226,7 @@ let typeMap: {[index: string]: any} = {
     "VersionedResourceListOfTrialBalance": VersionedResourceListOfTrialBalance,
     "VersionedResourceListWithPostBodiesOfSettlementInstructionWithTransactionToSettlementInstructionQuery": VersionedResourceListWithPostBodiesOfSettlementInstructionWithTransactionToSettlementInstructionQuery,
     "VersionedResourceListWithWarningsOfPortfolioHolding": VersionedResourceListWithWarningsOfPortfolioHolding,
+    "VersionedResourceListWithWarningsOfRegistryLine": VersionedResourceListWithWarningsOfRegistryLine,
     "VirtualDocument": VirtualDocument,
     "VirtualDocumentRow": VirtualDocumentRow,
     "VirtualRow": VirtualRow,
